@@ -84,7 +84,7 @@ class CommonController extends CI_Controller
 		}
 		$models[$name] = 'loaded';
 
-		$modelFile = $this->appInfos[$appCode]['path'] . 'models/' . $model . '.php';
+		$modelFile = $this->appInfos[$appCode]['path'] . 'models/' . strtolower($model) . '.php';
 		if (!file_exists($modelFile)) {
 			exit('model do not exist');
 		}
