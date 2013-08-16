@@ -72,25 +72,26 @@ class SitePage extends Custom_AdminController
 
 		$sourceFile = $sourceCacheDir . $currentInfo['id'] . '.html';
 
-		//if (!file_exists($sourceFile)) {
-			$content = $this->curl_get_contents($sourceFile);//file_get_contents($currentInfo['pageurl']);
+		if (!file_exists($sourceFile)) {
+			$content = $this->curl_get_contents($currentInfo['pageurl']);//$sourceFile);//file_get_contents($currentInfo['pageurl']);
 			file_put_contents($sourceFile, $content);
-		///}
+		}
 
 		$this->_spiderFiles($sourceFile, $currentInfo);
 		exit('spider page finish');
 	}
 
 	protected function curl_get_contents($url)
-{
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-  $data = curl_exec($ch);
-  curl_close($ch);
-  return $data;
-}
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        $data = curl_exec($ch);
+        var_dump($data); var_dump($url);
+        curl_close($ch);
+        return $data;
+    }
 
 	/**
 	 * Down the files of page
@@ -163,14 +164,16 @@ class SitePage extends Custom_AdminController
 		$pattern4 = "@url\(.*'(?P<images>.*)'.*\)@Us";
 		$pattern5 = '@url\(.*"(?P<images>.*)".*\)@Us';
 		$pattern6 = '@url\((?P<images>.*)\)@Us';
+		$pattern7 = "@<link.*href='(?P<css>.*\.css)'.*>@Us";
 		preg_match_all($pattern, $content, $url);
 		preg_match_all($pattern2, $content, $url2);
 		preg_match_all($pattern3, $content, $url3);
 		preg_match_all($pattern4, $content, $url4);
 		preg_match_all($pattern5, $content, $url5);
 		preg_match_all($pattern6, $content, $url6);
+		preg_match_all($pattern7, $content, $url7);
 
-		$data = array_merge($url['url'], $url2['url'], $url3['css'], $url4['images'], $url5['images'], $url6['images']);
+		$data = array_merge($url['url'], $url2['url'], $url3['css'], $url4['images'], $url5['images'], $url6['images'], $url7['css']);
 		$data = array_unique($data);
 
 		foreach ($data as $url) {
@@ -179,11 +182,11 @@ class SitePage extends Custom_AdminController
 			$urlfull = ((strpos($url, 'http') !== 0) && !empty($pageInfo['baseurl'])) ? $pageInfo['baseurl'] . $url : $url;
 			$localFile = 'sitePage/' . $pageInfo['site_id'] . '/' . str_replace('http://', '/', $urlfull);
 			$info['url'] = $url;
-			$info['urlfull'] = $urlfull;
+			$info['urlfull'] = str_replace('../', '/', $urlfull);
 			$info['site_id'] = $pageInfo['site_id'];
 			$info['page_id'] = $pageInfo['id'];
-			$info['urllocal'] = $this->uploadUrl . $localFile;
-			$info['pathlocal'] = $this->uploadPath . $localFile;
+			$info['urllocal'] = str_replace('../', '/', $this->uploadUrl . $localFile);
+			$info['pathlocal'] = str_replace('../', '/', $this->uploadPath . $localFile);
 
 			$this->currentModel->addInfo($info, 'site_file', true);
 		}
