@@ -7,6 +7,8 @@ applications/passport/config/config.php
 applications/passport/cache
 applications/shop/config/config.php
 applications/shop/cache
+applications/51jiansh/config/config.php
+applications/51jiansh/cache
 applications/third/config/config.php
 applications/third/cache
 applications/spider/config/config.php
