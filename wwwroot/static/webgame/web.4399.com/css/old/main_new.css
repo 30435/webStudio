@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+#news{border:1px solid #F8BE63;display:inline;float:right;height:220px;position:relative;width:702px;padding:8px 8px 0;background:#fffdf8;}
+.new{float:right;width:355px;margin-top:35px;}
+.new li{height:24px;line-height:24px;overflow:hidden;}
+.new span{color:#999999;font-family:Verdana;font-size:11px;float:right;}
+.new li.m_news{ text-align:center; font-size:14px; line-height:28px; height:28px; font-weight:bold; border-bottom:1px dashed #CCCCCC; margin-bottom:4px;}
+.new li.m_news a{ color:#C63800}
+#news .more{position:absolute;right:2px;top:12px;display:block; width:57px; height:21px;line-height:21px;text-align:center;}
+#news a.more:hover{text-decoration:none;}
+
+/*新闻banner*/
+#news h3{position:absolute;left:355px;top:10px;width:355px;height:25px;font-size:14px;background: url("http://pic.my4399.com/images/base/index_02.gif") repeat-x scroll 0 bottom transparent;}
+#news h3 a{font-size:12px;display:inline-block;width:71px;height:25px;line-height:24px;text-align:center;margin-left:3px;position:relative;cursor:pointer;}
+#news h3 a:hover{text-decoration:none;}
+#news h3 .n1{color:#FF7400;background:url(http://pic.my4399.com/images/base/button.gif) -177px -267px;}
+#news h3 .n2{background:url(http://pic.my4399.com/images/base/button.gif) -177px -292px;font-weight:normal;}
+
+/*游戏列表*/
+#games{float:right;width:720px;margin-top:5px;}
+#topnew {background:url("http://pic.my4399.com/images/base/button.gif");color:#FF7400;font-size:12px;font-weight:bold;height:35px;width:720px;line-height:33px;text-indent:50px;overflow:hidden}
+#topnew a{color:#FF7400; display:block;}
+#games h4 a{color:#C63800;}
+#games .new{ position:absolute; top:-26px; left:250px; width:27px; height:13px; overflow:hidden; text-indent:-1000px; background:url(http://pic.my4399.com/images/test/new2.gif); line-height:1px;}
+/*热门游戏*/
+.gamehot{background:url("http://pic.my4399.com/images/test/g_bg.png") 0 0;height:138px;width:349px;padding:9px 0 0 9px;margin-bottom:5px; overflow:hidden; position:relative;}
+/*推荐游戏*/
+.gametj{background:url("http://pic.my4399.com/images/test/g_bg.png") 0 -147px;height:138px;width:349px;padding:9px 0 0 9px; margin-bottom:5px;overflow:hidden; position:relative;}
+.gamehot h4,.gametj h4{color:#AE2019;display:block;float:left;font-size:14px;line-height:25px;margin-top:5px; height:28px;}
+.gamehot p,.gametj p{float:left;width:156px; height:60px; overflow:hidden;}
+.gamehot em,.gametj em{color:#999999;display:block;float:left;font-style:normal;line-height:28px;margin:8px 0 0 5px;}
+.gamehot a.hotbut,.gametj a.hotbut{background:url("http://pic.my4399.com/images/test/button.gif") -273px -267px;display:block;float:left;height:29px;margin:3px 0 0 63px;text-indent:-3000px;width:96px;}
+.gamehot a.hotbut:hover,.gametj a.hotbut:hover{background:url("http://pic.my4399.com/images/test/button.gif") -273px -296px;}
+.gamehot span,.gametj span{ color:#7D7D7D;}
+
+/*游戏封面*/
+#games .yxyz{background:url(http://pic.my4399.com/images/games/yxyz_s.jpg);}
+#games .mcsd{background:url(http://pic.my4399.com/images/games/mcsd_s.jpg);}
+#games .hhsh{background:url(http://pic.my4399.com/images/games/hhsh_s.jpg);}
+#games .asqx{background:url(http://pic.my4399.com/images/games/asqx_s.jpg);}
+#games .ygfs{background:url(http://pic.my4399.com/images/games/ygfs_s.jpg);}
+#games .zjcq{background:url(http://pic.my4399.com/images/games/zjcq_s.jpg);}
+#games .mccq{background:url(http://pic.my4399.com/images/games/mccq_s.jpg);}
+#games .jtxm{background:url(http://pic.my4399.com/images/games/jtxm_s.jpg);}
+#games .rxsg{background:url(http://pic.my4399.com/images/games/rxsg_s.jpg);}
+#games .hlzj{background:url(http://pic.my4399.com/images/games/hlzj_s.jpg);}
+#games .zy  {background:url(http://pic.my4399.com/images/games/zy_s.jpg);}
+#games .astd{background:url(http://pic.my4399.com/images/games/astd_s.jpg);}
+#games .frg{background:url(http://pic.my4399.com/images/games/frg_s.jpg);}
+#games .tm{background:url(http://pic.my4399.com/images/games/tm_s.jpg);}
+#games .ygfs{background:url(http://pic.my4399.com/images/games/ygfs_s.jpg);}
+#games .jhl{background:url(http://pic.my4399.com/images/games/jhl_s.jpg);}
+#games .jqdg{background:url(http://pic.my4399.com/images/games/jqdg_s.jpg);}
+#games .dhcq{background:url(http://pic.my4399.com/images/games/dhcq_s.jpg);}
+#games .cyfx{background:url(http://pic.my4399.com/images/games/cyfx_s.jpg);}
+#games .dtzl2{background:url(http://pic.my4399.com/images/games/dtzl2_s.jpg);}
+
+/*次主要游戏*/
+.game{height:110px;padding:16px 0 0 6px;width:228px;margin-bottom:5px;overflow:hidden;position:relative;}
+.game h4{color:#AE2019;display:inline;float:left;font-size:14px;height:20px;line-height:20px;margin:0 0 0 112px;padding:3px 0;}
+.game p{display:inline;float:left;height:55px;margin-left:112px;width:121px;}
+.game p img{margin:-1px 0 0 0}
+a.g_link{position:absolute;left:0;top:0;width:120px;height:93px;}
+
+.m12{margin-right:9px;float:left;}
+
+.game a.gamean{background:url("http://pic.my4399.com/images/base/button.gif") 0 -267px;color:#485559;display:inline;float:left;height:22px;line-height:22px;margin-left:6px;text-align:center;text-decoration:none;width:66px;}
+.game a.gamean:hover{background:url("http://pic.my4399.com/images/base/button.gif") 0 -292px;}
+.game a.gamean2{background:url("http://pic.my4399.com/images/base/button.gif") 0 -317px;color:#485559;display:inline;float:left;height:22px;line-height:22px;margin-left:8px;text-align:center;text-decoration:none;width:66px;}
+.game a.gamean2:hover{background:url("http://pic.my4399.com/images/base/button.gif") 0 -342px;}
+
+/*服务器列表*/
+.fwq_g{float:right;width:718px;border:1px solid #E0E0E0;min-height:578px;height:auto !important; height:578px;overflow:visible;overflow-x:hidden; background:#fff; margin-top:5px;}
+.fwq_g h1{height:27px;font-size:12px;text-indent:24px;line-height:27px; background:url(http://pic.my4399.com/images/base/banner.gif) -1px -232px;}
+.fwq_g ul{padding-left:13px; margin-top:20px;}
+.fwq_g ul li{float:left;line-height:26px; height:26px;background:#FFFDE3 url("http://pic.my4399.com/images/base/icon.png") no-repeat 7px -143px;border:1px solid #E2BFA3; width:190px; margin:0 10px 7px 0; padding:0 10px 0 22px;overflow:hidden;}
+.fwq_g ul .hot,.fwq_g ul .hot a{color:#C63800; font-weight:bold;}
+.fwq_g ul li span{float:right;} 
+
+/*底部游戏中心入口*/
+#Entry{background:url("http://pic.my4399.com/images/base/button.gif") 0 -38px;width:720px;height:31px;line-height:31px;color:#BB5400; clear:both;}
+#Entry a{display:block;float:right;width:100px;width:180px;height:31px;overflow:hidden;text-indent:-1000px;}
+
+/*其他游戏*/
+/*#other{background:url("http://pic.my4399.com/images/base/button.gif") 0 bottom;width:670px;height:42px;line-height:18px; clear:both; padding:7px 20px 0 30px; color:#C97314;}*/
+#other {background:#FFFFFF;border: 1px solid #DBDBDB;clear: both;color: #C97314;line-height: 18px;padding: 10px 25px;width: 668px;}
+#other a{margin:0 6px; color:#BB5400;}
+
+/*推荐大图*/
+#gameL{	float:right;width:723px;height:233px;display: inline;position:relative;right:-3px;top:-3px;overflow:hidden;}
+#gameL .title{float:right;width:386px; color:#666; padding:25px 25px 0 0; height:120px; overflow:hidden;}
+#gameL .title b{font-size:20px; color:#771208; font-family: "黑体"; font-weight:normal; margin-right:15px;}
+#gameL .title em{color:#e53922; margin-left:15px; font-style:normal}
+#gameL .title h1{display:inline;font-weight:normal; font-size:12px;}
+#gameL .title p{padding-top:5px; color:#333}
+#gameL .news{float:right; width:380px; height:22px;color:#e53922; overflow:hidden;}
+#gameL .news a{color:#C63800;}
+#gameL .shop{float: right; width:385px; height:40px; padding:8px 32px 0 0; font-size:13px;}
+#gameL .shop a{margin:11px 0 0 4px; display:block; float:left; width:71px; text-align:center;}
+#gameL .shop a.Start{float:right; margin:0;  width:130px; height:40px; text-indent:-3300px}
+
+.frxzL{background:url(http://pic.my4399.com/images/games/frxzL.jpg)}
+.ddtL{background:url(http://pic.my4399.com/images/games/ddtL.jpg)}
+.mhxxL{background:url(http://pic.my4399.com/images/games/mhxxL.jpg)}
+.mcsdL{background:url(http://pic.my4399.com/images/games/mcsdL.jpg)}
+.yjjhL{background:url(http://pic.my4399.com/images/games/yjjhL.jpg)}
+.yxyzL{background:url(http://pic.my4399.com/images/games/yxyzL.jpg)}
+.hhshL{background:url(http://pic.my4399.com/images/games/hhshL.jpg)}
+.asqxL{background:url(http://pic.my4399.com/images/games/asqxL.jpg)}
+.zjcqL{background:url(http://pic.my4399.com/images/games/zjcqL.jpg)}
+.jtxmL{background:url(http://pic.my4399.com/images/games/jtxmL.jpg)}
+.mccqL{background:url(http://pic.my4399.com/images/games/mccqL.jpg)}
+.astdL{background:url(http://pic.my4399.com/images/games/astdL.jpg)}
+.rxsgL{background:url(http://pic.my4399.com/images/games/rxsgL.jpg)}
+.hlzjL{background:url(http://pic.my4399.com/images/games/hlzjL.jpg)}
+.zyL{background:url(http://pic.my4399.com/images/games/zyL.jpg)}
+.astdL{background:url(http://pic.my4399.com/images/games/astdL.jpg)}
+.ftxyL{background:url(http://pic.my4399.com/images/games/ftxyL.jpg)}
+.plsmL{background:url(http://pic.my4399.com/images/games/plsmL.jpg)}
+.yzhL{background:url(http://pic.my4399.com/images/games/yzhL.jpg)}
+.dfxxL{background:url(http://pic.my4399.com/images/games/dfxxL.jpg)}
+.tdyxL{background:url(http://pic.my4399.com/images/games/tdyxL.jpg)}
+.dtzlL{background:url(http://pic.my4399.com/images/games/dtzlL.jpg)}
+.wlzbL{background:url(http://pic.my4399.com/images/games/wlzbL.jpg)}
+.frgL{background:url(http://pic.my4399.com/images/games/frgL.jpg)}
+.tmL{background:url(http://pic.my4399.com/images/games/tmL.jpg)}
+.ygfsL{background:url(http://pic.my4399.com/images/games/ygfsL.jpg)}
+.jhlL{background:url(http://pic.my4399.com/images/games/jhlL.jpg)}
+.jqdgL{background:url(http://pic.my4399.com/images/games/jqdgL.jpg)}
+.dhcqL{background:url(http://pic.my4399.com/images/games/dhcqL.jpg)}
+.cyfxL{background:url(http://pic.my4399.com/images/games/cyfxL.jpg)}
+.dtzl2L{background:url(http://pic.my4399.com/images/games/dtzl2L.jpg)}
+
+
+
+/*活动中心*/
+#hd_tj{float:right;width:720px; height:230px;background:url(http://pic.my4399.com/images/base/banner.gif);}
+#hd_tj h3{height:27px;font-size:12px;text-indent:38px;line-height:33px; overflow:hidden;}
+#hd_tj ul{padding:8px 0 0 20px;}
+#hd_tj li{float:left; width:220px; margin-right:10px;}
+#hd_tj li div{width:216px; border:1px solid #ccc; text-align:center;padding-top:5px; margin-bottom:5px;}
+#hd_tj li div a{font-weight:bold;line-height:26px;color:#C63800;} 
+#hd_tj li div img{border-bottom:1px solid #E0E0E0; padding-bottom:5px;} 
+#hd_tj li p{line-height:18px; color:#666;}
+#hd_tj li p b{padding-right:5px; color:#555;}
+
+#hd{float:right;width:718px; height:540px;margin-top:7px; border:1px solid #E0E0E0; overflow:hidden;}
+#hd h1{height:27px;font-size:12px;text-indent:24px;line-height:27px; background:url(http://pic.my4399.com/images/base/banner.gif) -1px -232px;}
+
+.s_game {padding:20px 0 10px 13px; border:1px solid #ddd; position:relative; margin:25px auto 12px; width:669px;}
+.s_game div{font-weight:bold;font-size:14px; position:absolute; top:-13px; left:26px; padding:5px; background:#fff; }
+.s_game a{overflow:hidden;display:inline-block;width:70px; height:30px; text-align:center; line-height:28px;background:url("http://pic.my4399.com/images/base/button.gif") -378px -354px; margin:2px 6px; }
+.s_game a:hover{background:url("http://pic.my4399.com/images/base/button.gif") -378px -384px;text-decoration:none;color:#000;}
+.s_game a.s,.s_game a.s:hover{background:url("http://pic.my4399.com/images/base/button.gif") -87px -368px; color:#fff;}
+
+/*资讯中心*/
+#zx{float:right;width:718px;border:1px solid #E0E0E0;min-height:777px;height:auto !important; height:777px;overflow:visible;overflow-x:hidden; background:#fff;}
+#zx h2,#zx .dh{height:27px;font-size:12px;text-indent:24px;line-height:27px; background:url(http://pic.my4399.com/images/base/banner.gif) -1px -232px;}
+#zx h1{color:#CF1104;font-family:"微软雅黑";font-size:20px;line-height:40px;text-align:center;margin-top:20px;}
+#zx .msg{width:670px; margin:0 auto 10px;border-bottom:1px solid #D0D0D0;color:#666;line-height:35px;text-align:center;}
+#zx .content{font-size:13px;line-height:24px;overflow:hidden;width:670px; margin:auto;}
+#zx .content img{display:block; margin:10px auto; }
+#zx .content .tishi{border-top:1px solid #D0D0D0; padding-top:15px; margin-top:15px;}
+#zx .content .tishi a{text-decoration:underline; color:#C63800;}
+#zx .content .tishi a:hover{text-decoration:none;}
+#zx .s2{width:348px; float:left; overflow:hidden;}
+#zx .ban1{width:677px;line-height:25px; border-bottom:1px solid #FF7B05; margin:0 0 10px 19px;}
+#zx .ban2{width:329px; line-height:25px; border-bottom:1px solid #FF7B05; margin:10px 0 10px 19px;}
+#zx .ban1 h3,#zx .ban2 h3{display:inline-block;border-bottom:1px solid #FF7B05;font-size:12px;width:65px;background:url(http://pic.my4399.com/images/base/icon.png) no-repeat 5px -114px;padding-left:24px;color: #C63800;}
+#zx .ban1 .more,#zx .ban2 .more{float:right; padding-right:5px;}
+
+/*新闻列表*/
+.n_list{padding:0 0 0 22px; width:696px; clear:both;}
+.n_list li {border-bottom:1px solid #EEEEEE;height:28px;line-height:28px;overflow:hidden; float:left; width:320px;  margin-right:28px;}
+.n_list em{float:right; font-style:normal;}
+.n_list .gameb {background:url("http://pic.my4399.com/images/base/button.gif") 0 -368px;display:inline;float:left;height:17px;line-height:17px;margin:6px 5px 0 0;overflow:hidden;text-align:center;width:66px;overflow:hidden;}
+.n_list .gamea{background:url("http://pic.my4399.com/images/base/button.gif") 0 -385px;display:inline;float:left;height:17px;line-height:17px;margin:6px 5px 0 0;overflow:hidden;text-align:center;width:66px;overflow:hidden;}
+.n_list .gameb a,.n_list .gamea a{color:#FFFFFF;}
+
+/*分页码*/
+.pages {padding-top:20px;text-align:center;vertical-align:middle;}
+.pages a{border:1px solid #CCCCCC;color:#333;display:inline-block;margin:1px;padding:0 5px; font-family:Arial;}
+.pages a:hover{border:1px solid #FF964D;color:#f30; background:#F8F8F8; text-decoration:none;}
+.pages span.disabled {border:1px solid #EEEEEE;color:#999999;display:inline-block;margin:1px;padding:0 5px;font-family:Arial;}
+
+.r0{ width:720px; float:right;}
