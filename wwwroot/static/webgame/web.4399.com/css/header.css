@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;}
+body{font-size:12px;background:#fff url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/bg.png) repeat-x 0 0;line-height:20px;color:#454545; font-family:"宋体"}
+img{border:0;}
+a{color:#454545;text-decoration:none;blr:expression(this.onFocus=this.blur());outline:none;cursor:pointer;}
+a:hover{color:#C63800;text-decoration:underline;}
+ul,li{list-style:none;}
+.clear{clear:both;}
+.l{float:left;}
+.r{float:right;margin:0;padding:0;}
+a.red{ color:#C63800;}
+
+/*顶栏*/
+#topban{height:30px;line-height:30px; }
+#topban .tmid{width:960px;height:30px;margin:auto;position:relative; z-index:1000;}
+#g_box{position:absolute;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/g_box.png) -728px 0; width:364px;top:23px; right:0;}
+#g_box .g_box_bg{padding:18px 0 0 18px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/g_box.png) no-repeat 0 0;width:346px;}
+#g_box a{float:left;width:104px;height:30px;line-height:24px;margin-right:8px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/index_08.gif) no-repeat; text-indent:36px;position:relative;display:block;overflow:hidden;}
+#g_box a:hover{text-decoration:none; color:#f00;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/index_08.gif) no-repeat 0 -36px;}
+#g_box .g_box_bg2{width:364px;height:12px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/g_box.png)  -364px 0; float:left; overflow:hidden;}
+#g_box span{position:absolute; left:12px; top:4px; display:block; width:16px; height:18px; overflow:hidden; background-image:url("http://upload.ci.com/sitePage/1//pic.my4399.com/newimg/common_top.png");}
+
+.guild{float:right;text-align:right;width:650px;}
+.t_tit{float:left;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/icon.png) no-repeat 2px 6px;padding-left:21px;}
+.guild .ic1{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/icon.png) no-repeat 0 -23px; display:inline-block; padding:0 8px 0 18px;float:left;}
+.guild .ic1 b{ font-weight:normal;}
+.guild .ic2{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/icon.png) no-repeat 0 -54px; display:block;padding:0 10px 0 18px;float:left;}
+.guild .ic3{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/icon.png) no-repeat 0 -84px; display:block;padding:0 10px 0 18px;float:left;}
+.guild .ic4{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -579px -264px; display:block; width:141px;  text-align:left; text-indent:8px; float:right; overflow:hidden;line-height: 28px;}
+.guild a.ic4:hover{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -579px -327px;text-decoration:none; color:#666;}
+.guild .ic04,.guild a.ic04:hover{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -579px -327px;display:block;width:141px;text-align:left;text-indent:8px;float:right;overflow:hidden;color:#666;text-decoration:none;line-height: 28px;}
+.guild .ic5{ width:85px; height:21px; background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/vv.png); display:inline-block; line-height:21px; float:left; text-align:center; margin:4px 4px 0 0; }
+
+#header{width:960px;height:162px;margin:auto;}
+#logo,#logo_pay{ width:226px;height:61px;float:left; padding-top:25px; }
+#header #logo_pay{ height:55px;padding-top:25px; }
+/*
+#logo,#logo_pay{ width:153px;height:68px;float:left; padding-top:5px; }
+#header #logo_pay{ height:75px;padding-top:5px; }
+*/
+#logo_2013{display:none}
+#msg{float:right;width:680px;height:86px;overflow:hidden;}
+
+/*导航*/
+.nav{height:38px;width:925px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/top.png);padding:0 0 0 35px;}
+.nav ul li{float:left;font-size:14px;font-weight:bold;}
+.current0{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -177px -325px;width:74px;text-indent:14px; height:34px; margin-top:4px;line-height:34px;}
+.current{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -177px -359px;width:94px;text-indent:14px;height:34px; margin-top:4px; line-height:34px;}
+.current a,.current0 a{color:#000;display:block;}
+.current a:hover,.current0 a:hover{text-decoration:none; color:#000;}
+.nor{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/index_01.png) no-repeat 0 0;color:#fff;width:94px;text-indent:20px; line-height:38px;}
+.nor0{color:#fff;width:74px;text-indent:14px;line-height:38px;}
+.nor a,.nor0 a{color:#fff; display:block;}
+.nor a:hover{color:#316AC5;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/top.png) no-repeat 0 -76px; text-decoration:none; color:#fff;}
+.nor0 a:hover{color:#316AC5;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/top.png) no-repeat -98px -76px; text-decoration:none; color:#fff;}
+/*热门推荐*/
+.hot{width:960px;height:38px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/top.png) 0 -38px;position:relative;}
+.tj{display:inline;float:left;height:22px;margin:10px 0 0 39px;}
+.tj h1{display:inline;font-size:12px;font-weight:normal;}
+.tj a{padding-right:8px;}
+.tj a b{color:#C63800;}
+
+#tips{float:right;font-size:12px;height:24px;line-height:24px;margin-top:5px;padding-right:90px;text-align:right;}
+#tips span{color:#C63800;font-family:"http://upload.ci.com/sitePage/1//web.4399.com/Arial Black",Gadget,sans-serif;font-size:18px;padding:0 4px;}
+#tips a.join{position:absolute;display:block;width:72px;height:22px;background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -87px -317px;text-align:center;
+overflow:hidden;text-indent:-1000px;top:7px;right:12px;}
+#tips a.join:hover{background:url(http://upload.ci.com/sitePage/1//pic.my4399.com/images/base/button.gif) -87px -339px;}
+/**/
+.backTop{background:url(http://upload.ci.com/sitePage/1//webpic.my4399.com/zxy/new/image/r.jpg) no-repeat -721px -102px; width:22px;  height:76px; position:fixed;  top:500px; left:50%; z-index:10000; margin-left:490px;}
+
+/*尾部*/
+#footer {border-top:1px solid #CCCCCC;clear:both;color:#444444;margin:15px auto 0;padding:15px 0 20px;text-align:center;width:960px;}
+/*新加平台logo*/
+.logo2{ width:270px; height:86px; margin-left:-47px; float:left; position:relative; z-index:1000;}

@@ -11,6 +11,8 @@ applications/third/config/config.php
 applications/third/cache
 applications/spider/config/config.php
 applications/spider/cache
+applications/webgame/config/config.php
+applications/webgame/cache
 applications/mhome/config/config.php
 applications/mhome/cache
 wwwroot/static/common/ckeditor/config.js
