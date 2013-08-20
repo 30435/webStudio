@@ -1,5 +1,5 @@
 <?php
 
-define('BASEPATH', 'd:/web/www/github/cistructure/library/CodeIgniter/'); // Path to the system folder
-define('BASEPATH_EXT', 'd:/web/www/github/cistructure/library/CodeIgniterExt/');
-define('BASEPATH_APP', 'd:/web/www/github/cistructure/applications/');
+define('BASEPATH', 'e:/www/webStudio/library/CodeIgniter/'); // Path to the system folder
+define('BASEPATH_EXT', 'e:/www/webStudio/library/CodeIgniterExt/');
+define('BASEPATH_APP', 'e:/www/webStudio/applications/');

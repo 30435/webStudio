@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'ganwanROESG';
+$config['encryption_key'] = 'wstudioROESG';
 
 /*
 |--------------------------------------------------------------------------
@@ -265,7 +265,7 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "gw_";
+$config['cookie_prefix']	= "wstudio_";
 $config['cookie_domain']	= ".ci.com";
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
