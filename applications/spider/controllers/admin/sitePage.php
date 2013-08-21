@@ -88,7 +88,7 @@ class SitePage extends Custom_AdminController
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         $data = curl_exec($ch);
-        var_dump($data); var_dump($url);
+        //var_dump($data); var_dump($url);
         curl_close($ch);
         return $data;
     }
@@ -160,7 +160,7 @@ class SitePage extends Custom_AdminController
 		$content = htmlspecialchars_decode(file_get_contents($sourceFile));
 		$pattern = '@src=.*"(?P<url>.*)".*@Us';
 		$pattern2 = "@src=.*'(?P<url>.*)'.*@Us";
-		$pattern3 = '@<link.*href="(?P<css>.*\.css)".*>@Us';
+		$pattern3 = '@<link.*type="text/css".*href="(?P<css>.*)".*>@Us';
 		$pattern4 = "@url\(.*'(?P<images>.*)'.*\)@Us";
 		$pattern5 = '@url\(.*"(?P<images>.*)".*\)@Us';
 		$pattern6 = '@url\((?P<images>.*)\)@Us';
@@ -175,10 +175,14 @@ class SitePage extends Custom_AdminController
 
 		$data = array_merge($url['url'], $url2['url'], $url3['css'], $url4['images'], $url5['images'], $url6['images'], $url7['css']);
 		$data = array_unique($data);
+		var_dump($data);
 
 		foreach ($data as $url) {
 			$info = array();
 			$url = trim($url);
+			$url = str_replace("'", '', $url);
+			$url = str_replace('"', '', $url);
+			$url = strpos($url, '?') !== false ? substr($url, 0, strpos($url, '?')) : $url;
 			$urlfull = ((strpos($url, 'http') !== 0) && !empty($pageInfo['baseurl'])) ? $pageInfo['baseurl'] . $url : $url;
 			$localFile = 'sitePage/' . $pageInfo['site_id'] . '/' . str_replace('http://', '/', $urlfull);
 			$info['url'] = $url;
