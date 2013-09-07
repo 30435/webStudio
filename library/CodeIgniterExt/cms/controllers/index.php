@@ -5,11 +5,11 @@ class CmsIndex extends Custom_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->frontController = array('controller' => $this);
 	}
 
 	public function index()
 	{
-		//var_dump($this->categoryInfos);
 		$this->load->view('index');
 	}
 
@@ -18,7 +18,7 @@ class CmsIndex extends Custom_Controller
 		$this->_initModel();
 
 		$template = !empty($this->currentCategoryInfo['template']) ? $this->currentCategoryInfo['template'] : 'list';
-		$this->load->view($template);
+		$this->load->view($template, $this->frontController);
 	}
 	
 	public function getCmsInfos($pageSize, $fields, $where = array(), $order = array(), $withPage = false)
@@ -51,7 +51,11 @@ class CmsIndex extends Custom_Controller
 	 */
 	public function show()
 	{
-		$this->_initModel();
+		$id = $this->input->get_post('id');
+		list($catid, $id) = explode('_', $id);
+
+		$_GET['id'] = $id;
+		$this->_initModel($catid);
 		$this->currentInfo = $this->_getInfoById();
 		$this->load->view('show');
 	}

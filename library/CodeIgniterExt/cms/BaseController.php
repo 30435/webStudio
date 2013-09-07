@@ -21,19 +21,6 @@ class Base_Controller extends CommonController
 		$this->modelInfos = $this->categoryModel->modelInfos;
 	}
 
-    /**
-     * Get the category infos
-     *
-     * @return array the category Infos
-     */
-    protected function _getCategoryInfos($parentid = 0, $getAll = false)
-    {
-		$this->_loadModel($this->appCode, 'categoryModel');
-        $categoryInfos = $this->categoryModel->getAllInfos('', $keyField = 'id');
-
-    	return $categoryInfos;
-    }
-
 	/**
 	 * Get the settings of the passport application
 	 *
@@ -49,9 +36,9 @@ class Base_Controller extends CommonController
 	 * 
 	 * @return void
 	 */
-	protected function _initModel()
+	protected function _initModel($catid = 0)
 	{
-		$this->catid = $this->input->get_post('catid');
+		$this->catid = empty($catid) ? $this->input->get_post('catid') : $catid;
 		
 		$this->currentCategoryInfo = isset($this->categoryInfos[$this->catid]) ? $this->categoryInfos[$this->catid] : false;
 		

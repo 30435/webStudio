@@ -258,6 +258,7 @@ class CustomTree
 			$effected = '';
 		}
 		$placeholder = '<ul><li><span class="placeholder"></span></li></ul>';
+		!isset($this->str) && $this->str = '';
 		if (! $recursion)
 			$this->str .= '<ul' . $effected . '  class="' . $style . '">';
 		foreach ( $child as $id => $a ) {

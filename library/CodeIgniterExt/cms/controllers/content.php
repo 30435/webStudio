@@ -245,6 +245,7 @@ abstract class CmsContent extends Custom_AdminController
 		if ($this->form_validation->run() == false) {
 			$this->load->view('cms/spage');
 		} else {
+			var_dump($this->fieldChanges);
 			foreach ($this->fieldChanges as $field) {
 				$data[$field] = $this->input->post($field);
 			}
@@ -276,7 +277,7 @@ abstract class CmsContent extends Custom_AdminController
 		if ($isWrite) {
 			$info['username'] = $this->userInfo['username'];
 			$info['updatetime'] = $this->time;
-			$info['description'] = empty($info['description']) ? substr(trim(strip_tags($info['content'])), 0, 255) : $info['description'];
+			//$info['description'] = empty($info['description']) ? substr(trim(strip_tags($info['content'])), 0, 255) : $info['description'];
 
 		}
 		return $info;

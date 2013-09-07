@@ -130,7 +130,7 @@ class AdminController extends Custom_Controller
 
 			$appUrl = $this->appInfos[$info['app_code']]['url'];
 			$appUrl = empty($appUrl) ? $this->baseUrl : $appUrl;
-			$url = $appUrl . '/admin/' . $info['controller'] . '/' . $info['method'] . '/';
+			$url = $appUrl . 'admin/' . $info['controller'] . '/' . $info['method'] . '/';
 			$info['url'] = $url;
 			$menuInfos[$info['id']] = $info;
 			if ($info['app_code'] == $this->appCode 

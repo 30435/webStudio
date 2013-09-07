@@ -26,8 +26,12 @@ class CommonController extends CI_Controller
 		$this->appCode = APPCODE;
 		$this->appInfos = $this->_getAppInfos();
 		$this->currentApp = $this->appInfos[$this->appCode];
-		
+//var_dump($this->appInfos);		
 		$this->load->library('session');
+
+		$this->metaDatas = array('title' => 'kids开发团队', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
+		$this->testUsers = array();
+		//var_dump($this->metaInfos);
 		//$this->loginedUserInfo = $this->_checkUserLogin();
 
 		//$this->_checkIp();
@@ -52,6 +56,27 @@ class CommonController extends CI_Controller
 	}
 
 	/**
+	 * Check the checkcode 
+	 *
+	 * @return string 
+	 */
+	public function isValidCode()
+	{
+		$this->load->library('session');
+		$targetCheckCode = $this->session->userdata('checkcode');
+		$checkCode = $this->input->get_post('checkcode');
+//echo $checkCode . '--' . $targetCheckCode;
+		$isValid = $checkCode == $targetCheckCode ? true : false;
+		$isAjax = $this->input->get('isajax');
+		if ($isAjax == 'yes') {
+			$resultStr = $isValid ? 'yes' : 'no';
+			echo $resultStr;
+			exit();
+		}
+		return $isValid;
+	}
+
+	/**
 	 * Init the current model
 	 * 
 	 * @return void
@@ -73,7 +98,7 @@ class CommonController extends CI_Controller
 	 * @param string $appCode
 	 * @param string $model
 	 */
-	protected function _loadModel($appCode, $model, $name = '')
+	public function _loadModel($appCode, $model, $name = '')
 	{
 		static $models = array();
 
@@ -177,7 +202,8 @@ class CommonController extends CI_Controller
 		}
 
 		$where = array('username' => $username);
-		$userInfo = $this->memberModel->getInfo($where);
+		//$this->_loadModel('passport', 'memberModel');
+		$userInfo = $this->getUserInfo($where); //$this->memberModel->getInfo($where);
 		if (empty($userInfo) || $userInfo['userid'] != $userid || $userInfo['username'] != $username) {
 			return false;
 		}
@@ -554,5 +580,74 @@ class CommonController extends CI_Controller
 		$remoteContent = file_get_contents($url);
 		file_put_contents($localFile, $remoteContent);
 		return true;
+	}
+
+	/**
+	 * Get the logined user money info
+	 *
+	 * @return false | array
+	 */
+	public function _getMoneyInfo($username, $isLock = false)
+	{
+		$where = array('username' => $username);
+		$this->_loadModel('pay', 'member_payModel');
+		$info = $this->member_payModel->getInfo($where);
+
+		if ($isLock) {
+			$data =  array('locktime' => $this->time);
+			$this->member_payModel->editInfo($data, $where);
+
+			$info = $this->time - $info['locktime'] < 30 ? array() : $info;
+		}
+		return $info;
+	}
+
+	/**
+	 * Get the user info
+	 *
+	 * @param string $where
+	 */
+	public function getUserInfo($where)
+	{
+		$this->_loadModel('passport', 'memberModel');
+		$userInfo = $this->memberModel->getInfo($where);
+		return $userInfo;
+	}
+
+	/**
+	 * Get the webgame infos 
+	 *
+	 */
+	protected function _getWebgameInfos()
+	{
+		$this->_loadModel('webgame', 'webgameModel');
+		$infos = $this->webgameModel->getAllInfos('', 'code', array(), array(array('listorder', 'asc')));
+		return $infos;
+	}
+
+    /**
+     * Get the category infos
+     *
+     * @return array the category Infos
+     */
+    protected function _getCategoryInfos($parentid = 0, $getAll = false)
+    {
+		$this->_loadModel('webgame', 'categoryModel');
+        $categoryInfos = $this->categoryModel->getAllInfos('', $keyField = 'id');
+
+    	return $categoryInfos;
+    }
+
+	/**
+	 * Get the infos 
+	 *
+	 */
+	public function _getFrontInfos($appCode, $table, $page = 1, $pageSize = 15,  $where = array(), $order = array(),$fields = '*', $keyField = '') //($appCode, $table, $keyField, $page = 1, $pageSize = 15, $where = array(), $order = array())
+	{
+		$model = $table . 'Model';
+
+		$this->_loadModel($appCode, $model);
+		$infos = $this->$model->getInfos($table, $where, $order, $page, $pageSize, $fields, $keyField);
+		return $infos;
 	}
 }
