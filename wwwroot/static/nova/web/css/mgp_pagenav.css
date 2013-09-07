@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/*分页码*/
+.mgp_pagenav{ clear:both; display:block; height:26px; overflow:hidden; margin:0px auto; text-align:center}
+.mgp_pagenav a,
+.mgp_pagenav span{ display:inline-block; padding:0 7px; height:24px; margin:0 2px; font-size:14px; line-height:22px; line-height:24px\9; text-align:center; vertical-align:middle; border:1px solid #B3B3B3; background:url(../images/page_nav.png) repeat-x 0px -78px;
+-moz-border-radius:2px 2px 2px 2px;	-khtml-border-radius:2px 2px 2px 2px; -webkit-border-radius:2px 2px 2px 2px; border-radius:2px 2px 2px 2px;}
+.mgp_pagenav a:hover{ color:#FF6501; border-color:#FF6501; text-decoration:none;}
+.mgp_pagenav .page_prev,
+.mgp_pagenav .page_next{ display:inline-block; width:52px; height:26px; line-height:24px; line-height:28px\9; font-size:12px; border:0; padding:0; overflow:hidden; background-repeat:no-repeat;}
+.mgp_pagenav a.page_prev,
+.mgp_pagenav a.page_next{ color:#FFFFFF; text-decoration:none; background-position:0px 0px}
+.mgp_pagenav a.page_prev:hover,
+.mgp_pagenav a.page_next:hover{ color:#FFFFFF; text-decoration:none; background-position:0px -26px}
+.mgp_pagenav span.page_prev,
+.mgp_pagenav span.page_next{ color:#CCC; background-position:0px -52px}
+.mgp_pagenav .page_cur{ position:relative; text-decoration:none; color:#FFF; border:1px solid #1885D3; background-color:#1A84DA; background-position:0px -102px;}
+.mgp_pagenav .page_break{ margin:0; padding:0 5px; border:none; background:none; color:#666;}
+
+.mgp_pages .page_prev,
+.mgp_pages .page_next{background:url(../images/page_icon.png) no-repeat;}
+.mgp_pages{ clear:both; height:20px; line-height:18px; text-align:center; color:#666;}
+.mgp_pages span,.mgp_pages a{ display:inline-block; width:20px; margin:0 2px; color:#333;}
+.mgp_pages a:hover{ color:#FF6501; text-decoration:none; }
+.mgp_pages .page_prev,
+.mgp_pages .page_next{ display:inline-block; width:18px; height:20px; vertical-align:middle;}
+.mgp_pages span.page_prev{ background-position:left 0px;}
+.mgp_pages a.page_prev{background-position:left -40px;}
+.mgp_pages a.page_prev:hover{ background-position:left -80px;}
+.mgp_pages span.page_next{ background-position:right -20px;}
+.mgp_pages a.page_next{ background-position:right -60px;}
+.mgp_pages a.page_next:hover{ background-position:right -100px;}
+.mgp_pages .page_cur{ font-weight:bold; color:#FD6D01;}

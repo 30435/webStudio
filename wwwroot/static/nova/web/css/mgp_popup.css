@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/*弹出层*/
+.mgp_popup{ width:498px; border:1px solid #51A6F3; font:12px/1.5 Verdana; -moz-box-shadow:0 2px 10px #666666; -webkit-box-shadow:0 2px 10px #666666;-khtml-box-shadow:0 2px 10px #666666; box-shadow:0 2px 10px #666666; background:#FFF;}
+.popup_hd,.popup_bd,.popup_op,.popup_hd i,.popup_close a,.popup_btn,.popup_btn span,.popup_more i,.msg_icon{  background:url(../images/mgp_popup.png) no-repeat; _background-image:url(../images/mgp_popup_ie6.png);}
+.popup_hd{ position:relative; height:27px; background-repeat:repeat-x; background-position:0px -130px;}
+.popup_hd h2{ float:left; margin:0; padding:0; text-indent:55px; font:bold 12px/26px 'Lucida Grande','\5fae\8f6f\96c5\9ed1'; color:#FFF; text-shadow:-1px 0 #2685D1,0 1px #2685D1,1px 0 #2685D1,0 -1px #2685D1;}
+.popup_icon{ position:absolute; left:6px; top:-16px; width:43px; height:42px; background-position:0px 0px;}
+.popup_close{ position:absolute; right:-6px; top:-6px; _right:-1px; _top:-1px;}
+.popup_close a{ display:block; width:30px; height:33px; _width:31px; _height:28px; outline:none; text-indent:-999em; overflow:hidden; background-position:-125px -45px;} 
+.popup_close a:hover{ background-position:-160px -45px;}
+.popup_bd{ background-repeat:repeat-x; background-position:0px -205px;}
+.popup_bd p{ margin:0;}
+.popup_op{ background-repeat:repeat-x; background-position:0px -157px; height:37px; padding-top:11px; text-align:center;}
+.popup_btn{ display:inline-block; height:25px; margin:0 7px; line-height:22px; line-height:24px\9; overflow:hidden; font-weight:bold; padding-left:21px; background-position:left -80px}
+.popup_btn span{ display:inline-block; height:25px; color:#FFF; font-weight:bold; padding-right:21px; vertical-align:top; cursor:pointer; background-position:right -80px}
+.popup_btn:hover{ text-decoration:none; background-position:left -105px;}
+.popup_btn:hover span{ background-position:right -105px}
+.popup_more{ color:#0663B1;}
+.popup_more:hover{ color:#FF6501 !important;}
+.popup_more i{ display:inline-block; width:10px; height:7px; margin-left:2px; *vertical-align:middle; overflow:hidden; background-position:-200px -50px;}
+/*弹出层：消息框*/
+.popup_msg{ width:362px;}
+.popup_msg .popup_icon{ width:43px; height:42px; background-position:0px 0px;}
+.msg_box{ position:relative; padding:27px 20px 25px 57px; zoom:1;} 
+.msg_box .msg_icon{ position:absolute; left:30px; top:25px; width:23px; height:23px;} 
+.msg_text{ margin:0; font:14px/20px Tohoma; color:#333;} 
+.msg_text a{ color:#0071C7; text-decoration:none;} 
+.msg_text a:hover{ color:#0071C7; text-decoration:underline;} 
+.msg_text em{ font-style:normal; color:#FF6501;}
+.msg_text p{ margin:10px 0 0; font:12px/20px Tohoma;}
+.msg_box .icon{ display:inline-block;  background-repeat:no-repeat;} 
+.msg_box .i_suc{ background-position:0px -50px;} 
+.msg_box .i_tip{ background-position:-25px -50px;} 
+.msg_box .i_war{ background-position:-50px -50px;} 
+.msg_box .i_que{ background-position:-75px -50px;} 
+.msg_box .i_err{ background-position:-100px -50px;} 
+/*弹出层：通知框*/
+.popup_tips{ width:258px; position:fixed; _position:absolute; z-index:20; right:10px; bottom:0px;}
+.popup_tips .popup_icon{ left:3px; width:51px; height:42px; background-position:-110px 0px;}
+.popup_tips .popup_hd h2{ text-indent:59px;}
+.popup_tips .popup_op{ height:28px; text-align:right; padding:8px 15px 0 0;}
+.tips_box{  height:82px; overflow:hidden; padding:15px 15px 10px;} 
+.tips_box a,
+.tips_box a:hover{ text-decoration:none; color:#333 !important;}
+.tips_text{ font:12px/20px Tahoma; color:#333; margin-top:-4px; word-break:break-all; word-wrap:break-word;} 
+.tips_text_title{ margin-bottom:10px; text-align:center; color:#FF6501;}
+.tips_text_title a,
+.tips_text_title a:hover{ color:#FF6501; text-decoration:none;}
+.tips_text_con{text-indent:25px; display:block;}
+.tips_box strong,
+.tips_text strong{ font-weight:bold; color:#FF6501 !important;} 
+.tips_pic{ float:left; width:80px; height:80px; margin-right:10px; text-align:center; border:1px solid #BED7E8;}
+/*弹出层：弹出面板*/
+.popup_panel{ width:498px;}
+.popup_panel .popup_icon{ width:42px; height:42px; background-position:-55px 0px;}
+/*气泡提示*/
+.mgp_bubble{ position:absolute; text-align:left; border:1px solid #DBC095; background-color:#FFF799;}
+.mgp_bubble .bubble_bd{ padding:5px 5px 5px 8px; color:#834E00;}
+.mgp_bubble .bubble_bd strong{ color:#EB6100;}
+.mgp_bubble .bubble_close{ position:absolute; top:5px; right:5px; width:12px; height:12px; text-align:center; line-height:11px; color:#FFF; _font-size:11px; font-weight:bold; background:#AC6A00; _line-height:14px; overflow:hidden;}
+.mgp_bubble .bubble_close:hover{ color:#FFF; text-decoration:none;}
+.mgp_bubble .bubble_arrow,
+.mgp_bubble .bubble_arrow .arrow_in{ position:absolute; width:0px; height:0px; line-height:0px; font-size:0px; border-width:0 8px 8px; border-style:dashed dashed solid; border-color:transparent transparent #FFF799;}
+.mgp_bubble .bubble_arrow{ left:6px; top:-9px; border-color:transparent transparent #DBC095;}
+.mgp_bubble .bubble_arrow .arrow_in{ top:1px; left:-8px; border-color:transparent transparent #FFF799;}
+.mgp_bubble .bubble_arrow_bottom,
+.mgp_bubble .bubble_arrow_bottom .arrow_in{ position:absolute; width:0px; height:0px; line-height:0px; font-size:0px; border-width:8px 8px 0; border-style:solid dashed dashed dashed ; border-color:#FFF799 transparent transparent transparent ;}
+.mgp_bubble .bubble_arrow_bottom{ left:6px; bottom:-9px; border-color: #DBC095 transparent transparent transparent;}
+.mgp_bubble .bubble_arrow_bottom .arrow_in{ top:-9px; left:-8px; border-color:#FFF799 transparent transparent transparent ;}
+
+/*游戏浮层*/
+.mgp_floater{ position:absolute; left:850px; top:700px; z-index:3001; width:120px; background-color:#fff; border:1px solid #bed7e8;-webkit-box-shadow:3px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow:3px 3px rgba(0, 0, 0, 0.2);box-shadow:3px 3px rgba(0, 0, 0, 0.2); display:none;}
+.mgp_floater .floater_game{ width:118px; padding:10px 0 3px; line-height:16px; }
+.mgp_floater .floater_game img{ display:block; width:77px; height:78px; margin:0 auto;}
+.mgp_floater .floater_game a{ display:block; outline:none;}
+.mgp_floater .floater_game span{ display:block; padding:2px 10px; text-align:center;}
+.mgp_floater .floater_info{ width:118px; height:51px;}
+.mgp_floater .floater_info ul{ position:relative; z-index:1; padding:6px 0 0 0; margin:0 7px; background:url(../images/line_x760.png) 0 top no-repeat;}
+.mgp_floater .floater_info li{ clear:both; height:16px; padding-left:5px; overflow:hidden;}
+.mgp_floater .floater_info label,.mgp_floater .floater_info span{ float:left;}
+.mgp_floater .floater_info em{ float:left; height:16px; margin:-2px 0 0 0; margin-top:-4px\9; font-weight:bold; color:#FF6501; font-size:14px;}
+.floater_right{-webkit-box-shadow:-3px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow:-3px 3px rgba(0, 0, 0, 0.2);box-shadow:-3px 3px rgba(0, 0, 0, 0.2);}
+.floater_right .arrow_left,
+.floater_right .arrow_left_in{border-width:8px 0 8px 8px; border-style:dashed dashed dashed solid; border-color:transparent transparent transparent #bed7e8; top:50%; left:auto; right:-9px; margin-top:-8px;}
+.floater_right .arrow_left_in{ border-left-color:#fff; right:-8px;}
+
+/*弹出小黄条*/
+.mgp_hint{ width:auto; padding:8px 10px; color:#834e00; background:#fff799; border:1px solid #dbc095; 
+ -webkit-box-shadow:2px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow:2px 2px rgba(0, 0, 0, 0.2); position:absolute;}
+.icon_hint_suc,
+.icon_hint_err{ display:inline-block; width:12px; height:15px; margin-right:2px; vertical-align:-3px; *+vertical-align:!important;
+ background-image:url(../images/icon_hint.png); background-repeat:no-repeat;}
+.icon_hint_suc{ background-position:0 2px;}
+.icon_hint_err{ background-position:0 -15px;}
+

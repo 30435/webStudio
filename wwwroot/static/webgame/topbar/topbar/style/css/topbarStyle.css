@@ -1,0 +1,223 @@
+.topbar_outer {
+	background:url(../images/bg_split.png) 0 -194px repeat-x;
+	height:41px;
+	position:relative;
+	z-index:5;
+	width:100%;
+	font:12px/1.5 helvetica,arial,sans-serif
+}
+.topbar_wrap {
+	width:980px;
+	overflow:hidden;
+	margin:0 auto
+}
+.ico_hot {
+	background:url(../images/bg_split.png) 0 0 no-repeat
+}
+.topbar_logo {
+	background:url(../images/bg_split.png) 0 0 no-repeat;
+	display:inline;
+	width:102px;
+	height:32px;
+	text-indent:-9999px;
+	margin:4px 0 0 0px;
+	float:left
+}
+.topbar_nav {
+	float:left;
+	margin:0px 0 0 9px;
+	padding-top:1px;
+	line-height:21px;
+	position:relative;
+	display:inline;
+	width:650px;
+	white-space:nowrap
+}
+.topbar_nav a {
+	float:left;
+	padding:0 5px;
+	height:21px;
+	display:inline;
+	text-decoration:none;
+	font-size:12px;
+	margin-top:10px;
+	color:#444;
+	line-height:20px;
+	*line-height:21px;
+	overflow:hidden
+}
+.topbar_nav a:hover {
+	border:1px solid #ccc;
+	text-decoration:none;
+	margin-top:9px;
+	padding:0 4px;
+	color:#000;
+	border-radius:3px
+}
+.topbar_nav a.hot {
+	color:#f60;
+	overflow:visible;
+	position:relative
+}
+.topbar_nav a.hot:hover {
+	color:#f30
+}
+.topbar_nav a img{
+	display: inline-block;
+	float: left;
+	margin: 2px 4px 2px 1px; 
+	width: 16px;
+	height: 16px;	
+}
+.topbar_nav .new {
+	position:absolute;
+	right:-17px;
+	top:-23px;
+}
+.topbar_nav .hl {
+	color:#FF8400
+}
+.topbar_all {
+	color:#f60;
+	height:20px;
+	width:66px;
+	height:41px;
+	display:block;
+	float:left
+}
+.topbar_all span {
+	cursor:pointer;
+	width:40px;
+	height:20px;
+	line-height:18px;
+	*line-height:20px;
+	margin:11px auto 0;
+	display:block;
+	background:url(../images/bg_split.png) 30px -65px no-repeat
+}
+.topbar_open {
+	color:#fff;
+	background:url(../images/bg_split.png) -36px -30px no-repeat
+}
+.topbar_open span {
+	background:url(../images/bg_split.png) 30px -90px no-repeat
+}
+.topbar_nav a .ico_hot {
+	background-position:0 0;
+	display:inline-block;
+	width:23px;
+	height:13px;
+	right:2px;
+	top:-9px;
+	position:absolute
+}
+.topbar_nav a:hover .ico_hot {
+	right:1px
+}
+.topbar_reg {
+	float:right;
+	margin-top:11px;
+}
+.topbar_reg a {
+	color:#666;
+	text-decoration:none;
+}
+.topbar_reg .divide {
+	color:#999;
+	padding:0 7px;
+	cursor:default;
+	font-style:normal;
+}
+.topbar_reg .divide_new {
+	color:#999;
+	padding:0;
+	_margin: 0 0 0 -2px;
+	cursor:default;
+	font-style:normal;
+}
+.topbar_reg a:hover {
+	color:#000;
+	text-decoration:none
+}
+.game_list {
+	width:100%;
+	overflow:hidden;
+	display:none;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-ms-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+.game_list_show{
+	margin-top: 0;
+}
+.game_list_top,.game_list_bott,.game_list_cont {
+	width:100%;
+	height:19px;
+	background:url(../images/bg_split.png) repeat 0 -302px
+}
+.game_list_cont {
+	height:auto;
+	overflow:hidden;
+	background:url(../images/game_list_bg.jpg) repeat;
+	position:relative
+}
+.game_list_point {
+	margin:0 auto;
+	background:#ccc;
+	height:19px;
+	width:940px;
+	background:url(../images/bg_split.png) no-repeat 730px -280px
+}
+.game_list_bott {
+	background-position:left 20px;
+	height:20px
+}
+.game_list_cont ul {
+	width:940px;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	z-index:2;
+	padding:0;
+	list-style:none
+}
+.game_list_cont ul li {
+	float:left;
+	height:87px;
+	width:94px;
+	font-size:12px
+}
+.game_list_cont ul li a {
+	display:block;
+	width:100%;
+	height:81px;
+	color:#fff;
+	overflow:hidden;
+	outline:none;
+	text-decoration:none
+}
+.game_list_cont ul li a:hover {
+	text-decoration:none;
+	background:url(../images/bg_split.png) 12px -113px no-repeat
+}
+.game_list_cont ul li a span {
+	display:block;
+	width:100%;
+	text-align:center;
+	margin-top:3px;
+	position:relative;
+	z-index:2
+}
+.game_list_cont ul li a span.text_stroke {
+	z-index:1;
+	color:#000;
+	margin-top:-16px
+}
+.game_list_cont ul li a img {
+	width:50px;
+	height:50px;
+	display:block;
+	margin:5px auto 0;
+}

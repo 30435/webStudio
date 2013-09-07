@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* Pay CSS Document */
+
+
+.card_frmshow {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0E0;
+    padding: 10px 10px 40px;
+    position: relative;
+    text-align: center;
+}
+.card_frmshow a.btn_off {
+    background: url("http://res.61.com/images/pay/card_frmshow.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+.card_frmshow a.btn_next {
+    background: url("http://res.61.com/images/pay/card_frmshow.gif") no-repeat scroll 0 -30px transparent;
+    bottom: 0;
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+.card_frmshow a.btn_next_gray {
+    background: url("http://res.61.com/images/pay/card_frmshow.gif") no-repeat scroll 0 -60px transparent;
+    bottom: 0;
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+.card_frmshow a.btn_pre {
+    background: url("http://res.61.com/images/pay/card_frmshow.gif") no-repeat scroll 0 -90px transparent;
+    bottom: 0;
+    display: block;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 150px;
+}
+.card_frmshow a.btn_pre_gray {
+    background: url("http://res.61.com/images/pay/card_frmshow.gif") no-repeat scroll 0 -120px transparent;
+    bottom: 0;
+    display: block;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 150px;
+}
+
+/*米米卡展示*/
+.card_show					{width:730px;float:right;}
+.card_nav					{width:680px;border:1px #e0e0e0 solid;padding:10px 15px;margin:0 auto;background:#fafafa;}
+.card_nav li				{list-style-type:none;border-bottom:1px #d4d4d4 dashed;padding:5px 0;}
+.card_nav li.noline			{border-bottom:none;}
+.card_nav li a				{color:#353535;margin:0 2px;padding:3px 6px;line-height:25px; }
+.card_nav li a:hover		{color:#ff6600; text-decoration:none;}
+.card_nav li a.on			{background:#fd940b;color:#ffffff;}
+.card_nav li .nav_title		{float:left;width:80px;text-align:right;font-weight:bold;}
+.card_nav li .nav_list		{float:right;width:580px;}
+.card_list					{width:730px;height:auto;}
+.card_list li				{list-style-type:none;float:left;width:162px;height:185px;padding:3px;text-align:center;margin:10px 6px;display:inline;}
+.card_list li .list_img		{border:1px #e0e0e0 solid;width:162px;height:162px;}
+.card_list li .list_img img	{vertical-align:middle;width:160px;height:160px; text-align:center;}
+.card_list li .list_text	{line-height:28px;}
+.card_list li .list_text a	{color:#353535;}
+.card_list li .list_text a:hover	{color:#ff6600; text-decoration:none;}
+.card_frmshow				{padding:10px 10px 40px 10px;background:#ffffff;border:1px #e0e0e0 solid;position:relative;text-align:center;}
+.card_frmshow a.btn_off		{display:block;width:30px;height:30px;background:url(http://support-res.61.com/pay/images/common/card_frmshow.gif) no-repeat 0 0;position:absolute;right:0;top:0;}
+.card_frmshow a.btn_next	{display:block;width:150px;height:30px;background:url(http://support-res.61.com/pay/images/common/card_frmshow.gif) no-repeat 0 -30px;position:absolute;right:0;bottom:0;}
+.card_frmshow a.btn_next_gray{display:block;width:150px;height:30px;background:url(http://support-res.61.com/pay/images/common/card_frmshow.gif) no-repeat 0 -60px;position:absolute;right:0;bottom:0;}
+.card_frmshow a.btn_pre		{display:block;width:150px;height:30px;background:url(http://support-res.61.com/pay/images/common/card_frmshow.gif) no-repeat 0 -90px;position:absolute;left:0;bottom:0;}
+.card_frmshow a.btn_pre_gray{display:block;width:150px;height:30px;background:url(http://support-res.61.com/pay/images/common/card_frmshow.gif) no-repeat 0 -120px;position:absolute;left:0;bottom:0;}
+
+
+/*弹出框*/
+.boxy-wrapper { position: absolute; }
+.boxy-wrapper.fixed { position: fixed; }
+
+  /* Modal */
+
+  .boxy-modal-blackout { position: absolute; background-color: black; left: 0; top: 0; }
+
+  /* Border */
+
+  .boxy-wrapper { empty-cells: show; }
+
+	/* Title bar */
+
+	.boxy-wrapper .title-bar { background-color: black; padding: 6px; position: relative; }
+	  .boxy-wrapper .title-bar.dragging { cursor: move; }
+	    .boxy-wrapper .title-bar h2 { font-size: 12px; color: white; line-height: 1; margin: 0; padding: 0; font-weight: normal; }
+	    .boxy-wrapper .title-bar .close { color: white; position: absolute; top: 6px; right: 6px; font-size: 90%; line-height: 1; }
+
+	/* Content Region */
+
+	.boxy-inner { background-color: white; padding: 0;  border:1px solid #cfcfcf; border-radius:2px; }
+	.boxy-content { padding: 0px; }
+
+	/* Question Boxes */
+
+    .boxy-wrapper .question { width: 350px; min-height: 80px; }
+    .boxy-wrapper .answers { text-align: right; }
+
+/* 弹出框 */
+
+.alter_box                      {width:400px;}
+.alter_box .top                 {position:relative;width:400px;height:32px; background:url(../images/common_v2/repeat_box.png) repeat-x 0 -2px; border-radius:2px 2px 0 0;}
+.alter_box .top .left_corner    {display:none;}
+.alter_box .top .right_corner   {display:none;}
+.alter_box .top .inner          {width:380px;height:32px;padding:0 10px;}
+.alter_box .top .inner h2       {line-height:32px;float:left;color:#ffffff;font-size:14px;font-weight:bold;color:#333;}
+.alter_box .top .inner a.off    {display:block; position:absolute; top:6px; right:6px; width:18px; height:18px; background:url(../images/common_v2/sprite_global.png) no-repeat -242px -74px;}
+.alter_box .top .inner a.off:hover{background-position:-260px -74px}
+.alter_box .body                {width:400px; padding:20px;}
+.alter_box .bottom              {width:400px;height:5px;overflow:hidden;}
+.alter_box .pop_list{display:block; margin-bottom:20px;}
+.alter_box .pop_list li{display:block; position:relative; line-height:28px; padding-left:140px; zoom:1;}
+.alter_box .pop_list li label{display:block; position:absolute; top:0; left:0; width:130px; text-align:right;}
+.alter_box .pop_list .txt{width:210px; height:26px; *line-height:26px; line-height:26px\0; padding:0 4px; border:1px solid #aaa; border-radius:3px; vertical-align:middle;}
+.alter_box .pop_list .txt_num{font-size:16px; font-family:"Microsoft Yahei","simhei";}
+.alter_box .pop_list .txt_verifi{width:45px;}
+.alter_box .pop_list .img_verifi{display:inline-block; *display:inline; zoom:1; vertical-align:middle;}
+.alter_box .pop_list .img_verifi img,
+.alter_box .pop_list .img_verifi .link_verifi{margin-right:6px; vertical-align:middle; color:#f60;}
+.alter_box .pop_list .link{padding:0;}
+.alter_box .pop_btns{width:100%; text-align:center; _padding-bottom:2px;}
+.alter_box .pop_btns .ui_btn_small_em{margin-right:40px;}
+.alter_box .pop_tips{margin-bottom:20px; text-align:center;}
+.alter_box .pop_tips .error{margin-bottom:8px; font-size:14px; font-weight:bold; color:#c00;}
+.game_box
+{
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom:10px;
+}
+.game_box h2{
+width: 100px;
+float: left;
+       font-size: 16px;
+       font-family: "微软雅黑";
+         font-weight: normal;
+         line-height:50px;
+}
+.game_box .search_box{
+float:right;
+}
+.search_box .search_area{
+height: 30px;
+width: 300px;
+float: left;
+border: rgb(235, 197, 168) solid 1px;
+background: #fff;
+position: relative;
+          z-index: 300;
+          margin-top:10px;
+}
+.search_area .search{
+background: #fff;
+display: inline;
+float: left;
+width: 200px;
+}
+#search_input{
+border: 0 none;
+color: #999999;
+       font-size: 12px;
+       line-height: 26px;
+padding: 2px 5px;
+         *padding:0 5px;
+height: 26px;
+        vertical-align: middle;
+width: 232px;
+background:#fff;
+}
+#search_btn{
+background: #f0f0f0;
+border: none;
+border-left: 1px solid #d9d9d9;
+color: #333;
+float: right;
+cursor: pointer;
+font-family: "微软雅黑";
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+width: 55px;
+}
+.search_box .hot_game{
+float: left;
+line-height: 50px;
+height: 50px;
+font-size: 12px;
+color:#666;
+      margin-left:25px;
+}
+.hot_game a{
+color:#f60;
+      margin-right:5px;
+}
+.search_box .select_game{
+width: 245px;
+position: absolute;
+z-index: 200;
+top: 31px;
+left: -1px;
+background: #fff;
+border: 1px solid rgb(235, 197, 168);
+border-top: none;
+border-bottom:none;
+display:none;
+}
+.search_box .select_game ul li {
+    border-bottom: 1px solid rgb(235, 197, 168);
+}
+.search_box .select_game ul li a {
+display: block;
+padding: 5px;
+color:#666;
+}
+.search_box .select_game ul li a:hover {
+color:#f60;
+}
+.mole-coupon-box{
+	position:relative;
+	height:28px;
+	width:82px;
+	margin-right:20px;
+	float:left;
+}
+.mole-coupon-box .mole-coupon{
+	float:left;
+	width:80px;
+	height:27px;
+	background:url(http://support-res.61.com/pay/images/common/mole_coupon.png) no-repeat -20px 0;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	color:#FF6600;
+	line-height:25px;
+	text-decoration:none;
+	cursor: pointer;
+}
+.mole-coupon-box .mole-coupon-gray{
+	float:left;
+	width:80px;
+	height:27px;
+	background:url(http://support-res.61.com/pay/images/common/mole_coupon.png) no-repeat -20px -33px;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	color:#999;
+	line-height:25px;
+	text-decoration:none;
+	cursor: default;
+}
+.mole-coupon-box .checked{
+	display:none;
+	position:absolute;
+	top:-5px;
+	left:-5px;
+	height:17px;
+	width:17px;
+	background:url(http://support-res.61.com/pay/images/common/mole_coupon.png) no-repeat 0 -5px;
+}
+.mole-coupon-box .count{
+	display:none;
+	position:absolute;
+	bottom:-5px;
+	right:-5px;
+	height:16px;
+	width:16px;
+	line-height:16px;
+	text-align:center;
+	font-size: 11px;
+	color:#FF6600;
+    font-weight: bold;
+	background:url(http://support-res.61.com/pay/images/common/mole_coupon.png) no-repeat 0 -38px;
+}
+.mole-coupon-box .coupon-type{
+	display:none;
+}
+.coupon-tip{
+	color:#009900;
+	float: left;
+	font-size:14px;
+	display:none;
+}
+.coupon-ball{
+    background: url("http://support-res.61.com/pay/images/common/lahm_grow.png") no-repeat scroll 0 -128px transparent;
+    line-height: 25px;
+    list-style-type: none;
+    padding-left: 12px;
+	color:#FF6600;
+}
+.form_list_li .row          {clear:both;height:25px;*height:27px;padding:2px 0 0 0;}

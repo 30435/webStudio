@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*评论列表*/
+.mgp_comment{ position:relative; width:100%; zoom:1;}
+.mgp_comment *{ padding:0px; margin:0;}
+.mgp_comment em{ font-style:normal;}
+.comment{ border-top:1px dotted #CED7E1; zoom:1;}
+.comment_empty{ height:123px; line-height:122px; padding:0 0 0 287px; background:url(../images/wording_big_04.png) no-repeat 125px center;}
+.comment_floor{ padding-bottom:5px; border:1px dotted #CED7E1; border-width:0 0 1px;}
+.comment_hot{ border:0; margin-bottom:10px;}
+.comment_hot .comment{ border:none;}
+.comment_hot .comment_floor{ margin-top:8px; border:1px solid #f8e6c6;
+ background:#fffded url(../images/mgp_comments_hot.png) left top no-repeat;}
+.comment_content,
+.comment_publish{ zoom:1;}
+.comment_content:after,
+.comment_publish:after{ content:'';display:block;clear:both;height:0;visibility:hidden;}
+.comment_content h3,
+.comment_publish h3{ height:20px; font:bold 14px/20px 'Lucida Grande','\5fae\8f6f\96c5\9ed1'; color:#333333;}
+.comment_total{ position:absolute; right:0px; top:0px; width:500px; text-align:right; padding-top:3px\9;}
+.comment_total button,
+.comment_content button,
+.comment_publish button{ display:inline-block; border:none; cursor:pointer; text-indent:-999em; vertical-align:middle; 
+ background:transparent url(../images/mgp_comments_spt.png) no-repeat; overflow:hidden;} 
+.comment_total button,
+.comment .replybox button{ width:68px; height:23px; margin-left:18px;  background-position:0 -32px;}
+.comment_total button:hover,
+.comment .replybox button:hover{ background-position:0 -56px;}
+.comment_publish button{ width:92px; height:31px; margin-left:12px; background-position:0 -81px;}
+.comment_publish button:hover{ background-position:0 -114px;}
+.comment_total span{ font-weight:bold; color:#ff6501;}
+.comment_page{ margin:20px 0; position:relative; zoom:1;}
+/*评论框*/
+.comment_hd{ padding:8px 10px 5px 16px;}
+.comment_bd{ padding:0 5px 5px; }
+.comment_bd p{ padding:3px 10px 0 10px;line-height:25px; text-align:left; zoom:1;word-wrap: break-word; font-size:14px; display:block;}
+.comment_bd p img{ vertical-align:-6px;}
+.comment_ft{ padding:3px 0; padding:3px 0 1px\0; text-align:right; font-size:12px; line-height:14px;}
+.comment_ft span{ margin-right:10px;}
+.comment_ft a{ padding:5px 5px; color:#0071C7; outline:none;}
+.comment_ft .op_reply{ position:relative;}
+.comment_ft .op_reply_on{ padding:4px 4px 4px; border:1px solid #C3DCEB; border-bottom:0px; background:#EEF9FF;}
+.comment .c_floor{ float:right; color:#808080;}
+.comment .c_region{ color:#959595;}
+.comment .c_waiting{ color:#FF6501;}
+.comment .c_author{ color:#333333;}
+.comment .c_pubtime{ float:right; color:#959595;}
+.comment .c_support{ padding-left:12px; background:url(../images/mgp_comments_spt.png) no-repeat -80px -30px; 
+ *background-position:-80px -25px;}
+.comment .c_support em{ color:#FF6501;}
+.citation{ padding:3px 3px 0; border:1px solid #C3DCEB; background:#EEF9FF;}
+.citation_hd{ padding:8px 10px 0;}
+.citation_bd{ padding:0 10px 10px;}
+.citation_bd p{ padding:3px 0px 0px;}
+.comment_pic img{ background:#fff; padding:1px; border:#b5d2ed solid 1px; overflow:hidden; }
+.comment_bd .comment_pic_b img,
+.citation_bd .comment_pic_b img{cursor:url("../cursor_minify.cur"), pointer!important;}
+
+/*回复评论表单*/
+.comment .replybox{ width:698px; height:150px; margin:0 10px 0 auto; background:#EEF9FF; border:1px solid #c3dceb; text-align:left;}
+.comment .replybox .comment_form{ float:none; width:100%;}
+.comment .replybox textarea{ width:668px; height:75px; border:1px solid #c3dceb; margin:5px 5px 3px 5px;padding:5px 10px 0 8px; line-height:22px;} 
+.comment .replybox .emotionbox{ width:495px; margin:0 0 0 auto;}
+.comment .replybox .submit{ width:310px; margin:0 5px 0 auto;}
+/*发表评论表单*/
+.comment_publish{}
+.publish_bd{ height:250px; padding:6px 0 0 3px;}
+.comment_form{ float:left; width:495px;}
+.comment_form textarea{ display:block; width:475px; height:157px; border:1px solid #e5cdb0; margin-bottom:5px; padding:5px 8px 0 8px; font-size:14px; line-height:22px; color:#666;}
+.comment_form .submit{ clear:both; width:490px; height:32px; overflow:hidden; margin:8px 5px 0 auto; text-align:right; color:#959595;}
+.comment_form .submit p{ display:inline;}
+.comment_form .submit p em{ padding:0 5px; font:20px/32px 'Lucida Grande','\5fae\8f6f\96c5\9ed1',Tahoma,Arial; vertical-align:-10%;}
+.comment_tips{ float:left; width:245px; padding:0 0 0 10px;  line-height:22px;}
+.comment_tips span{ display:block; width:49px; height:22px; padding-bottom:6px; text-align:center; line-height:20px; line-height:24px\9;}
+.comment_tips ol{ padding-left:20px;}
+.comment_tips li{ list-style:decimal; line-height:21px;} 
+/*表情*/
+.emotionbox{ position:relative; zoom:1;}
+.emotionbox li{ float:left; width:26px; height:26px; overflow:hidden;}
+.emotionbox a{ display:block; height:24px; margin:1px; outline:none;}
+.emotionbox a:hover{ margin:0px; height:24px; border:1px solid #06C;}
+.emotion_full,
+.emotion_list a{ background:url(../images/mgp_comments_emotion.png) no-repeat 0px 0px;}
+.emotion_list{ height:26px; overflow:hidden; background-color:transparent;}
+.emotion_full{ position:absolute; right:4px; top:-195px; width:392px; height:182px; padding:3px; border:1px solid #999; background-color:#FFF;}
+.emotion_list li{ margin:0 2px 0 1px;}
+.emotion_list span{ display:block; width:26px; height:26px; cursor:pointer; background:transparent url(../images/mgp_comments_emotion.png) no-repeat -400px -162px;}
+.emotion_list .emotion100{ background-position:-4px -4px;}
+.emotion_list .emotion101{ background-position:-30px -4px;}
+.emotion_list .emotion102{ background-position:-56px -4px;}
+.emotion_list .emotion103{ background-position:-82px -4px;}
+.emotion_list .emotion104{ background-position:-106px -4px;}
+.emotion_list .emotion105{ background-position:-135px -4px;}
+.emotion_list .emotion106{ background-position:-160px -4px;}
+.emotion_list .emotion107{ background-position:-186px -4px;}
+.emotion_list .emotion108{ background-position:-212px -4px;}
+.emotion_list .emotion109{ background-position:-238px -4px;}
+.emotion_list .emotion110{ background-position:-264px -4px;}
+.emotion_list .emotion111{ background-position:-290px -4px;}
+.emotion_list .emotion112{ background-position:-316px -4px;}
+.emotion_list .emotion113{ background-position:-342px -4px;}
+.emotion_list .emotion114{ background-position:-368px -4px;}
+.emotion_list .emotion115{ background-position:-4px -30px;}
+
+.comment_total{ right:14px; top:7px;}
+.comment_content{ border:1px solid #BED7E8; padding:7px 14px 0; background:#FFFFFF url(../images/box_x.png) repeat-x scroll 0px -285px}
+.comment_publish{ border:1px solid #E5CDB0; padding:7px 14px 0; background:#FFFDED; margin-top:-1px;}
+.comment_publish .publish_bd{ height:246px;}
+.comment_content h3,
+.comment_publish h3{ height:20px; padding-left:12px; font:bold 14px 'Lucida Grande','\5fae\8f6f\96c5\9ed1'; color:#333333; line-height:23px\9; overflow:hidden;
+ background:url(../images/box_x.png) 0 4px no-repeat;}
+.comment_content h3{ margin:0 0 10px -3px;}
+.comment_tips span{ display:block; width:49px; height:22px; padding-bottom:6px; text-align:center; line-height:20px; line-height:23px\9; background:url(../images/mgp_comments_spt.png) 0 0 no-repeat;}
+
+/*作品回复*/
+.reply_zp{ margin:15px 15px 15px 25px; background-color:#eef9ff; border:1px #c3dceb solid;}
+.reply_hd{ padding:8px 10px 0; text-align:left;}
+.reply_hd .c_pubtime{ padding-right:28px;}
+.reply_bd{ padding:0 10px 10px;}
+.reply_bd p{ display:block; font-size:14px; line-height:25px; padding:3px 10px 0 0;text-align:left;word-wrap:break-word;}
+.reply_bd p img{ vertical-align:-6px;}
+.reply_zp .comment_ft{ padding:0 0 10px 0; position:relative;}
+.reply_zp .comment_ft span{ margin-right:5px;}
+.reply_zp .comment_ft .reply_support_hint{ width:auto; padding:8px 10px; color:#834e00; background:#fff799; border:1px solid #dbc095; 
+ -webkit-box-shadow:2px 2px rgba(0, 0, 0, 0.2); -moz-box-shadow:2px 2px rgba(0, 0, 0, 0.2); position:absolute; right:15px; top:16px; _right:30px; *top:20px;}
+.reply_zp_more{ margin:15px 15px 30px 25px; background-color:#d5f0fb; border:1px #c3dceb solid;}
+.reply_zp_more p{ font-size:14px; padding:9px 0; text-align:center;}
+.reply_zp_more p a{ color:#1e7193; zoom:1;}
+.reply_zp_more p a:hover{ color:#1e7193; text-decoration:underline;}
+.i_reply_more{ display:inline-block; width:12px; height:8px; margin-left:5px; vertical-align:0; *+vertical-align:4px!important; _vertical-align:6px; background:url(../images/mgp_comments_spt.png) -80px -66px no-repeat; overflow:hidden;}
+.i_support_war{ display:inline-block; width:12px; height:15px; margin-right:2px; vertical-align:-3px; *+vertical-align:!important;
+ background:url(../images/mgp_comments_spt.png) -80px -48px no-repeat;}
