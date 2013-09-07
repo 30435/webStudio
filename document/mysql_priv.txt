@@ -1,0 +1,5 @@
+GRANT ALL PRIVILEGES ON kids_bbs.* TO user_bbs@'192.168.0.%' IDENTIFIED BY 'bbsuser';
+GRANT ALL PRIVILEGES ON kids_passport.* TO user_bbs@'192.168.0.%' IDENTIFIED BY 'passportuser';
+GRANT ALL PRIVILEGES ON kids_pay.* TO user_bbs@'192.168.0.%' IDENTIFIED BY 'payuser';
+GRANT ALL PRIVILEGES ON kids_ucserver.* TO user_bbs@'192.168.0.%' IDENTIFIED BY 'ucserveruser';
+GRANT ALL PRIVILEGES ON kids_webgame.* TO user_bbs@'192.168.0.%' IDENTIFIED BY 'webgameuser';

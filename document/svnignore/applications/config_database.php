@@ -5,9 +5,9 @@ return array(
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'studio_passport',
+		'database' => 'kids_passport',
 		'dbdriver' => 'mysql',
-		'dbprefix' => 'sp_',
+		'dbprefix' => 'kp_',
 		'pconnect' => FALSE,
 		'db_debug' => TRUE,
 		'cache_on' => FALSE,
@@ -19,13 +19,13 @@ return array(
 		'stricton' => FALSE,
 	),
 
-	'spider' => array(
+	'pay' => array(
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'studio_spider',
+		'database' => 'kids_pay',
 		'dbdriver' => 'mysql',
-		'dbprefix' => 'ss_',
+		'dbprefix' => 'kp_',
 		'pconnect' => FALSE,
 		'db_debug' => TRUE,
 		'cache_on' => FALSE,
@@ -37,13 +37,13 @@ return array(
 		'stricton' => FALSE,
 	),
 
-	'51jiansh' => array(
+	'webgame' => array(
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'database' => 'studio_51jiansh',
+		'database' => 'kids_webgame',
 		'dbdriver' => 'mysql',
-		'dbprefix' => 's5_',
+		'dbprefix' => 'kw_',
 		'pconnect' => FALSE,
 		'db_debug' => TRUE,
 		'cache_on' => FALSE,

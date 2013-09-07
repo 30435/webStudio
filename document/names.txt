@@ -1,0 +1,32 @@
+wwwroot/bbs            bbs.kids.com
+wwwroot/passport       passport.kids.com
+wwwroot/pay            pay.kids.com
+wwwroot/static         static.kids.com
+wwwroot/ucserver       uscerver.kids.com
+wwwroot/uploadfile     upload.kids.com
+wwwroot/webgame        webgame.kids.com
+wwwroot/webgame/nova   nova.kids.com
+wwwroot/webgame/seer   seer.kids.com
+wwwroot/webgame/shenxd shenxd.kids.com
+
+cp kidsDepart/wwwroot/config.php new/wwwroot/
+cp kidsDepart/applications/config_* new/applications/
+cp kidsDepart/applications/passport/uc_client/config.php new/applications/passport/uc_client/
+cp kidsDepart/applications/passport/config/config.php new/applications/passport/config/
+cp kidsDepart/applications/pay/config/config.php new/applications/pay/config/
+cp kidsDepart/applications/webgame/config/config.php new/applications/webgame/config/
+cp kidsDepart/wwwroot/ucserver/data/config.inc.php new/wwwroot/ucserver/data/
+cp kidsDepart/wwwroot/bbs/config/config_*.php new/wwwroot/bbs/config/
+cp kidsDepart/wwwroot/static/common/ckeditor/config.js new/wwwroot/static/common/ckeditor/
+
+cp kidsDepart/wwwroot/uploadfile/ new/wwwroot/ -r
+cp kidsDepart/wwwroot/ucserver/data/ new/wwwroot/ucserver/ -r
+cp kidsDepart/wwwroot/bbs/config new/wwwroot/bbs/ -r
+cp kidsDepart/wwwroot/bbs/data new/wwwroot/bbs -r
+cp kidsDepart/wwwroot/bbs/uc_client/data/ new/wwwroot/bbs/uc_client/ -r
+cp kidsDepart/wwwroot/bbs/uc_server/data/ new/wwwroot/bbs/uc_server/ -r
+cp kidsDepart/applications/passport/cache/ new/applications/passport/ -r
+cp kidsDepart/applications/pay/cache/ new/applications/pay/ -r
+cp kidsDepart/applications/webgame/cache/ new/applications/webgame/ -r
+cp kidsDepart/applications/passport/uc_client/data new/applications/uc_client/ -r
+

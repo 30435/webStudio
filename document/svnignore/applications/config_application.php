@@ -5,19 +5,19 @@ return array(
 	'passport' => array(
 		'code' => 'passport',
 		'name' => '用户中心',
-		'url' => 'http://passport.ci.com',
+		'url' => 'http://passport.kids.com',
 		'path' => $applicationBasePath . '/passport/',
 	),
-	'spider' => array(
-		'code' => 'spider',
-		'name' => '采集系统',
-		'url' => 'http://spider.ci.com',
-		'path' => $applicationBasePath . '/spider/',
+	'pay' => array(
+		'code' => 'pay',
+		'name' => '支付平台',
+		'url' => 'http://pay.kids.com',
+		'path' => $applicationBasePath . '/pay/',
 	),
-	'51jiansh' => array(
-		'code' => '51jiansh',
-		'name' => '我要健身',
-		'url' => 'http://51jiansh.ci.com',
-		'path' => $applicationBasePath . '/51jiansh/',
+	'webgame' => array(
+		'code' => 'webgame',
+		'name' => '网页游戏',
+		'url' => 'http://webgame.kids.com',
+		'path' => $applicationBasePath . '/webgame/',
 	),
 );

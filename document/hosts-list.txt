@@ -1,0 +1,24 @@
+192.168.0.116:90  bbs.nova.com
+192.168.0.116:91  nova.nova.com
+192.168.0.116:92  passport.nova.com
+192.168.0.116:93  pay.nova.com
+192.168.0.116:94  seer.nova.com
+192.168.0.116:95  shenxd.nova.com
+192.168.0.116:96  static.nova.com
+192.168.0.116:97  upload.nova.com
+192.168.0.116:98  uscerver.nova.com
+192.168.0.116:99  webgame.nova.com
+
+192.168.0.116 passport.nova.com
+192.168.0.116 pay.nova.com
+192.168.0.116 www.nova.com
+192.168.0.116 upload.nova.com
+192.168.0.116 static.nova.com
+192.168.0.116 ucserver.nova.com
+192.168.0.116 bbs.nova.com
+192.168.0.116 nova.nova.com
+192.168.0.116 shenxd.nova.com
+192.168.0.116 seer.nova.com
+
+
+http://ucserver.nova.com:98/test.html
