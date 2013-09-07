@@ -39,6 +39,17 @@ class Custom_Controller extends CommonController
 	{
 
 	}
+	
+	/**
+	 * Get the username for register
+	 *
+	 * @return string 
+	 */
+	public function getUsername()
+	{
+		$username = date('d') . str_pad(mt_rand(1, 99999), 4, '0', STR_PAD_LEFT);
+		return $username;
+	}
 }
 
 class Custom_AdminController extends AdminController

@@ -7,9 +7,11 @@ class Index extends Custom_Controller
 		parent::__construct();
 
 		$needLoginMethods = array('index');
+
 		if (in_array($this->method, $needLoginMethods) && empty($this->loginedUserInfo)) {
 			redirect('index/login');
 		}
+		$this->categoryInfos = $this->_getCategoryInfos();
 	}
 
 	public function index()
@@ -48,28 +50,28 @@ class Index extends Custom_Controller
 			$userInfo = $this->memberModel->getInfo($where);
 			
 			$statusInfos = array('-1' => '用户不存在！', '-2' => '密码不正确！', '-3' => '验证问题回答错误！');
-			if ($this->settings['ucserver']) {
-				list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password);
-				if ($ucInfo['userid'] <= 0) {
-					if ($ucInfo['userid'] == -2) {
-						$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
-					}
-					$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : '帐号被锁定！';
-					$this->_messageInfo($message, $this->baseUrl . 'index/login');
-				}
-				if (empty($userInfo) && $ucInfo['userid'] > 0) {
-					$userInfo['username'] = $ucInfo['username'];
-					$userInfo['email'] = $ucInfo['email'];
-					$passwordInfos = $this->_getPassword($ucInfo['password']);
 
-					$userInfo['password'] = $passwordInfos['password'];
-					$userInfo['encrypt'] = $passwordInfos['encrypt'];
-					$userInfo['regip'] = $this->input->ip_address();
-					$userInfo['regdate'] = $this->time;
-					$userInfo['ucserver_id'] = $ucInfo['userid'];
-					$this->memberModel->addInfo($userInfo);
+			list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password);
+			if ($ucInfo['userid'] <= 0) {
+				if ($ucInfo['userid'] == -2) {
+					$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
 				}
+				$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : '帐号被锁定！';
+				$this->_messageInfo($message, $this->baseUrl . 'index/login');
 			}
+			if (empty($userInfo) && $ucInfo['userid'] > 0) {
+				$userInfo['username'] = $ucInfo['username'];
+				$userInfo['email'] = $ucInfo['email'];
+				$passwordInfos = $this->_getPassword($ucInfo['password']);
+
+				$userInfo['password'] = $passwordInfos['password'];
+				$userInfo['encrypt'] = $passwordInfos['encrypt'];
+				$userInfo['regip'] = $this->input->ip_address();
+				$userInfo['regdate'] = $this->time;
+				$userInfo['ucserver_id'] = $ucInfo['userid'];
+				$this->memberModel->addInfo($userInfo);
+			}
+
 
 			if (empty($userInfo)) {
 				$message = $statusInfos['-1'];
@@ -78,15 +80,6 @@ class Index extends Custom_Controller
 
 			if ($userInfo['islock']) {
 				$this->_messageInfo('帐号被锁定！', $this->baseUrl . 'index/login');
-			}
-
-			if (empty($this->settings['ucserver'])) {
-				$currentPassword = $this->_getPassword($password, $userInfo['encrypt']);
-				$checkPassword = ($userInfo['password'] == $currentPassword) ? true : false;
-				$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), $checkPassword, $this->ip);
-				if ($checkPassword === false) {
-					$this->_showMessage('密码错误！', $this->baseUrl . 'index/login');
-				}
 			}
 
 			$updateInfo = array('lastloginip' => $this->ip, 'lastlogintime' => $this->time, 'loginnum' => $userInfo['loginnum'] + 1);
@@ -119,70 +112,54 @@ class Index extends Custom_Controller
 	public function logout()
 	{
 		$synlogoutstr = '';	//同步退出js代码
-		$xianlfcID = $this->uri->segment(4); //segment(4)得到数值 segment(3)得到字段
-		$shenxiandaoID = $this->uri->segment(4); //segment(4)得到数值 segment(3)得到字段
 		$this->input->set_cookie(array('name' => 'encrypt', 'value' => ''));
 		$this->input->set_cookie(array('name' => '_userid', 'value' => ''));
 		$this->input->set_cookie(array('name' => '_username', 'value' => ''));
 
-		if($xianlfcID ==1) {
-			$urlll=$this->applicationInfos[2]['domain'].'/xianlfc/';
-			echo "<SCRIPT LANGUAGE='JavaScript'>";      
-			echo "location.href='$urlll'";
-			echo "</SCRIPT>"; 
-		}elseif($shenxiandaoID==11){
-			$urlll=$this->applicationInfos[2]['domain'].'/shenxiandao/';
-			echo "<SCRIPT LANGUAGE='JavaScript'>";      
-			echo "location.href='$urlll'";
-			echo "</SCRIPT>"; 
-		}else{
-			$this->_messageInfo('退出成功！', $this->appInfos['passport']['url']);
-		}
+		$this->_messageInfo('退出成功！' . $synlogoutstr, $this->baseUrl);
 	}
 
 	/**
 	 * Register a member
 	 *
-	 * @param  boolean $isSpread
 	 * @return vaoid
 	 */
-	public function register($isSpread = false)
+	public function register()
 	{
-		if (!empty($this->loginedUserInfo) && empty($isSpread)) {
+		if (!empty($this->loginedUserInfo)) {
 			$this->_messageInfo('您已登录！', $this->baseUrl);
 		}
 		if(empty($this->settings['allowregister'])) {
 		}
 
-		$this->form_validation->set_rules('username', 'name', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('password', 'name', 'trim|required|xss_clean');
 		header("Cache-control: private");
 		if ($this->form_validation->run() == false) {
-			$this->registerInfos = array(
-				'username' => array('name' => '用户名', 'type' => 'text', 'infos' => '用户名为4-30字符。'),
-				'password' => array('name' => '密码', 'type' => 'password', 'infos' => '密码由6-16位数字或字母组成，区分大小写。'),
-				'password2' => array('name' => '确认密码', 'type' => 'password', 'infos' => '请再次输入密码。'),
-				'email' => array('name' => '邮箱', 'type' => 'text', 'infos' => '请输入你常用的邮箱。'),
-				'truename' => array('name' => '真实姓名', 'type' => 'text', 'infos' => '请输入你的真实姓名。'),
-				'idcard' => array('name' => '身份证号', 'type' => 'text', 'infos' => '请输入你真实的身份证号。'),
-				//'seccode' => array('name' => '验证码', 'type' => 'text', 'infos' => '请输入下面图片里显示的字符。'),
-			);
-
 			$this->load->view('register');
 		} else {
-			$fields = array('username', 'email', 'truename', 'idcard');
-			$userInfo = array();
+			$fields = array();
+			$this->input->post('haveUsername') == 'yes' && $fields[] = 'username';
+			$this->input->post('haveEmail') == 'yes' && $fields[] = 'email';
+			$this->input->post('haveRealName') == 'yes' && $fields = array_merge($fields, array('truename', 'idcard'));
+
 			foreach ($fields as $field) {
 				$userInfo[$field] = $this->input->post($field);
 			}
-			$checkUsername = $this->checkUsername();
+			$userInfo['userid'] = $this->getUsername();
+			if (empty($userInfo['username'])) {
+				$userInfo['username'] = $userInfo['userid'];
+			} 
+			var_dump($userInfo);
+
+			/*$checkUsername = $this->checkUsername();
 			if ($checkUsername['status'] == 'error') {
 				$this->_messageInfo($checkUsername['message'], $this->applicationInfos[1]['domain'] . 'index/register');
-			}
+			}*/
 
 			$userid= uc_user_register($userInfo['username'], $this->input->post('password'), $userInfo['email']);
 			$userid = intval($userid);
 			if ($userid <= 0) {
-				$this->_messageInfo('注册失败，请重新注册！' . $userid, $this->applicationInfos[1]['domain']);
+				$this->_messageInfo('注册失败，请重新注册！' . $userid, $this->baseUrl . 'index/register');
 			} else {
 				$passwordInfos = $this->_getPassword($this->input->post('password'));
 
@@ -199,10 +176,8 @@ class Index extends Custom_Controller
 
 				$where = array('username' => $userInfo['username']);
 				$userInfo = $this->memberModel->getInfo($where);
-				$synloginCode = '';
-				if ($this->settings['ucserver']) {
-					//$synloginCode = uc_user_synlogin($userInfo['userid']);
-				}
+				$synloginCode = ''; //uc_user_synlogin($userInfo['userid']);
+
 				$setCookieTime = $this->input->post('setcookietime');
 				$cookieTime = empty($setCookieTime) ? $this->time + 86400 : $this->time + 864000;
 
@@ -216,47 +191,6 @@ class Index extends Custom_Controller
 				$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 				$this->_messageInfo('恭喜，注册成功！' . $synloginCode, $this->applicationInfos[2]["domain"]);
 			}
-		}
-	}
-
-	/**
-	 * Check username for jsons
-	 *
-	 * @return string | int
-	 */
-	public function checkUsername()
-	{
-		$username = $this->input->post('username');
-		$username = empty($username) ? $this->input->get('username') : $username;
-		$requireType = $this->input->post('require_type');
-		$requireType = empty($requireType) ? $this->input->get('require_type') : $requireType;
-
-		$statusInfo = array(
-			'-1' => '字符串长度有误，4-30个字符',
-			'-2' => '存在非法字符！',
-			'-3' => '用户已存在！',
-		);
-		$result = uc_user_checkname($username);
-
-		if ($result > 0) {
-			$returnInfo['status'] = 'ok';
-			$returnInfo['message'] = '';
-		} else if (in_array($result, array_keys($statusInfo))) {
-			$returnInfo['status'] = 'error';
-			$returnInfo['message'] = $statusInfo[$result];
-		} else {
-			$returnInfo['status'] = 'error';
-			$returnInfo['message'] = '未知错误！';
-		}
-
-		if ($requireType == 'isjsonp') {
-			echo $this->_jsonp($returnInfo);
-			exit();
-		} else if ($requireType == 'common') {
-			echo $returnInfo['status'] == 'ok' ? 'ok' : $returnInfo['message'];
-			exit();
-		} else {
-			return $returnInfo;
 		}
 	}
 	
@@ -287,5 +221,66 @@ class Index extends Custom_Controller
 		echo $result;
 		exit();
 	}
+	/**
+	 * Check username exist
+	 *
+	 * @return void
+	 */
+	public function getUserid()
+	{
+		$username = $this->input->get('username');
+		$username = urldecode(iconv('gbk', 'utf-8', $username));
 
+		if (empty($username)) {
+			$userid = 0;
+		} else {
+
+			$where = array('username' => $username);
+			$userInfo = $this->memberModel->getInfo($where);
+			$userid = empty($userInfo['userid']) ? 0 : $userInfo['userid'];
+		}
+		$data['userid'] = $userid;
+		echo $this->_jsonp($data);
+		exit();
+	}
+
+	/**
+	 * Edit the password
+	 *
+	 */
+	public function editpwd()
+	{
+		if (empty($this->loginedUserInfo)) {
+			$this->_messageInfo('您还没有登录！', $this->baseUrl);
+		}
+		
+		$this->form_validation->set_rules('password', 'passport', 'trim|required|xss_clean');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('editpwd');
+		} else {
+			$oldpassword = $this->input->post('oldpassword');
+			$password = $this->input->post('password');
+			$password2 = $this->input->post('password2');
+
+			if (empty($oldpassword) || empty($password) || empty($password2) || ($password != $password2)) {
+				$this->_messageInfo('输入信息有误，请重新输入！', $this->baseUrl . 'index/editpwd');
+			}
+
+			$result = uc_user_edit($this->loginedUserInfo['username'], $oldpassword, $password, 0, 0);
+			if ($result === 1) {
+				$data = array('password' => $this->_getPassword($password, $this->loginedUserInfo['encrypt']));
+				$where = array('userid =' => $this->loginedUserInfo['userid']);
+
+				$editResult = $this->memberModel->editInfo($data, $where);
+				if ($editResult) {
+					$this->_messageInfo('密码修改成功，请重新登陆！', $this->baseUrl);
+				} else {
+					$this->_messageInfo('密码修改异常，请重新修改！', $this->baseUrl . 'index/editpwd');
+				}
+			} else {
+				$str = $result == -1 ? '旧密码错误！' : '密码修改失败！';
+				$this->_messageInfo($str, $this->baseUrl . 'index/editpwd');
+			}
+		}
+	}
 }

@@ -1,31 +1,4 @@
-<?php
-define('UC_CLIENT_VERSION', '1.5.2');	//note UCenter 版本标识
-define('UC_CLIENT_RELEASE', '20101001');
-
-define('API_DELETEUSER', 1);		//note 用户删除 API 接口开关
-define('API_RENAMEUSER', 1);		//note 用户改名 API 接口开关
-define('API_GETTAG', 1);		//note 获取标签 API 接口开关
-define('API_SYNLOGIN', 1);		//note 同步登录 API 接口开关
-define('API_SYNLOGOUT', 1);		//note 同步登出 API 接口开关
-define('API_UPDATEPW', 1);		//note 更改用户密码 开关
-define('API_UPDATEBADWORDS', 1);	//note 更新关键字列表 开关
-define('API_UPDATEHOSTS', 1);		//note 更新域名解析缓存 开关
-define('API_UPDATEAPPS', 1);		//note 更新应用列表 开关
-define('API_UPDATECLIENT', 1);		//note 更新客户端缓存 开关
-define('API_UPDATECREDIT', 1);		//note 更新用户积分 开关
-define('API_GETCREDITSETTINGS', 1);	//note 向 UCenter 提供积分设置 开关
-define('API_GETCREDIT', 1);		//note 获取用户的某项积分 开关
-define('API_UPDATECREDITSETTINGS', 1);	//note 更新应用积分设置 开关
-
-define('API_RETURN_SUCCEED', '1');
-define('API_RETURN_FAILED', '-1');
-define('API_RETURN_FORBIDDEN', '-2');
-
-//error_reporting(0);
-//set_magic_quotes_runtime(0);
-
-defined('MAGIC_QUOTES_GPC') || define('MAGIC_QUOTES_GPC', get_magic_quotes_gpc());
-//require_once FCPATH.'./config.inc.php';
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Api extends Custom_Controller
 {
@@ -33,333 +6,193 @@ class Api extends Custom_Controller
 	{
 		parent::__construct();
 		
-		if (!$this->settings['ucserver']) {
-			exit('0');
-		}
-		
-		
+		ini_set('display_errors', 1);
+		error_reporting(0);	
 	}
 	
-	function index()
+	/**
+	 * The enter function
+	 */
+	public function index()
 	{
-	    
+		$token = str_replace(' ', '+', $this->input->get('token'));
+		if (empty($token)) {
+			exit('Param Error!');
+		}
+
+		parse_str(uc_authcode($token, 'DECODE', 'novagame'), $infos);
+		$validActions = array('login', 'register');
+		if (!isset($infos['action']) || !in_array($infos['action'], $validActions)) {
+			exit('Action Error!');
+		}
+
+		$this->$infos['action']($infos);
+	}
+
+	/**
+	 * register through the game
+	 *
+	 */
+	public function register($infos)
+	{
+		$datas = array('status' => false, 'code' => 'EXCEPTION', 'msg' => 'EXCEPTION');
+		$password = $infos['password'];
+		$password2 = $infos['password2'];
+		$seccode = $infos['seccode'];
+		$email = $infos['email'];
+
+		if (empty($password) || empty($password2) || empty($seccode)) {
+			$datas['code'] = $datas['msg'] = 'INFO EMPTY';
+			exit(json_encode($datas));
+		}
+		if ($password != $password2) {
+			$datas['code'] = $datas['msg'] = 'PASSWORD NO EQUAL';
+			exit(json_encode($datas));
+		}
+		$this->load->library('session');
+		$currentSeccode = $this->session->userdata('checkcode');
+		if ($seccode != $currentSeccode) {
+			//$datas['code'] = $datas['msg'] = 'SECCODE ERROR';
+			//exit(json_encode($datas));
+		}
+		$this->session->unset_userdata('checkcode');
+		$userInfo['username'] = $this->getUsername();
+
+		/*$checkUsername = $this->checkUsername();
+		if ($checkUsername['status'] == 'error') {
+			$this->_messageInfo($checkUsername['message'], $this->applicationInfos[1]['domain'] . 'index/register');
+		}*/
+
+		$userid= uc_user_register($userInfo['username'], $password, $email);
+		$userid = intval($userid);
+		if ($userid <= 0) {
+			$datas['code'] = $datas['msg'] = 'SERVER_ERROR';
+			exit(json_encode($datas));
+		} else {
+			$passwordInfos = $this->_getPassword($password);
+
+			$userInfo['userid'] = $userInfo['username'];
+			$userInfo['password'] = $passwordInfos['password'];
+			$userInfo['encrypt'] = $passwordInfos['encrypt'];
+			$userInfo['regip'] = $this->input->ip_address();
+			$userInfo['regdate'] = $this->time;
+			$userInfo['ucserver_id'] = $userid;
+
+			$addUser = $this->memberModel->addInfo($userInfo);
+			if (empty($addUser)) {
+				$datas['code'] = $datas['msg'] = 'SERVER2_ERROR';
+				exit(json_encode($datas));
+			}
+
+			$where = array('username' => $userInfo['username']);
+			$userInfo = $this->memberModel->getInfo($where);
+			$synloginCode = '';
+			if ($this->settings['ucserver']) {
+				//$synloginCode = uc_user_synlogin($userInfo['userid']);
+			}
+			$setCookieTime = $this->input->post('setcookietime');
+			$cookieTime = empty($setCookieTime) ? $this->time + 86400 : $this->time + 864000;
+
+			$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $this->input->post('password');
+			//echo $encryptString;
+			$encryptKey = $this->_getEncryptKey();
+			$encrypt = $this->encrypt->encode($encryptString, $encryptKey);
+
+			$this->input->set_cookie(array('name' => 'encrypt', 'value' => $encrypt, 'expire' => $cookieTime));
+			$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
+			$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
+			
+			$datas['status'] = true;
+			$datas['username'] = $userInfo['username'];
+			$datas['code'] = $datas['msg'] = 'SUCCESSFUL';
+			exit(json_encode($datas));
+		}
 	}
 	
-	function uc(){
-	    
+	/**
+	 * login through the game
+	 *
+	 */
+	public function login($infos)
+	{
+		$datas['status'] = false;
+		$datas['code']   = 'PASSWD_OR_AID_WRONG';
+		$datas['msg']    = 'PASSWD_OR_AID_WRONG';
 
+		$username = $infos['username'];
+		$password = $infos['password'];
 
-	    parse_str($_SERVER['QUERY_STRING'], $_GET);
-	    
-	    $_DCACHE = $get = $post = array();
-
-		$code = @urldecode($_GET['code']);
-		$code = str_replace(' ', '+', $code);
-
-		//echo '53dbkMVZ%2B2ZbChO7kpFZF7sarzKTLULqFRyTNXhBiWPZhHUE%2Bk%2FOSVGoT8ETXvWC0NvZDyswu%2Bs';
-
-		parse_str(uc_authcode($code, 'DECODE', UC_KEY), $get);
-
-		if(MAGIC_QUOTES_GPC) {
-			$get = _stripslashes($get);
-		}
-		//print_r($get);
-		$timestamp = time();
-		if($timestamp - $get['time'] > 3600) {
-			//exit('Authracation has expiried');
-		}
-		if(empty($get)) {
-			exit('Invalid Request');
-		}
-		$action = $get['action'];
-		//require_once FCPATH.'./uc_client/lib/xml.class.php';
-		if(in_array($action, array('test', 'deleteuser', 'renameuser', 'gettag', 'synlogin', 'synlogout',
-		 'updatepw', 'updatebadwords', 'updatehosts', 'updateapps', 'updateclient', 'updatecredit', 'getcreditsettings',
-		 'updatecreditsettings'))) {
-			$uc_note = new uc_note();
-			exit($uc_note->$get['action']($get, $post));
-		} else {
-			exit(API_RETURN_FAILED);
-		}
-	}
-}
-
-class uc_note {
-
-	var $dbconfig = '';
-	var $db = '';
-	var $tablepre = '';
-	var $appdir = '';
-	var $CI;
-
-	function _serialize($arr, $htmlon = 0) {
-		if(!function_exists('xml_serialize')) {
-			include_once FCPATH.'./uc_client/lib/xml.class.php';
-		}
-		return xml_serialize($arr, $htmlon);
-	}
-
-	function uc_note() {
-	    $this->appdir = FCPATH;
-	    $this->dbconfig = $this->appdir.'./config.inc.php';
-	    $this->CI = & get_instance();
-		/*
-		$this->appdir = substr(dirname(__FILE__), 0, -3);
-		$this->dbconfig = $this->appdir.'./config.inc.php';
-		$this->db = $GLOBALS['db'];
-		$this->tablepre = $GLOBALS['tablepre'];
-		*/
-	}
-
-	function test($get, $post) {
-
-		return API_RETURN_SUCCEED;
-	}
-
-	function deleteuser($get, $post) {
-		$uids = $get['ids'];
-		!API_DELETEUSER && exit(API_RETURN_FORBIDDEN);
-
-		return API_RETURN_SUCCEED;
-	}
-
-	function renameuser($get, $post) {
-		$uid = $get['uid'];
-		$usernameold = $get['oldusername'];
-		$usernamenew = $get['newusername'];
-		if(!API_RENAMEUSER) {
-			return API_RETURN_FORBIDDEN;
+		if (empty($username) || empty($password)) {
+			$data['code'] = $data['msg'] = 'INFO EMPTY';
+			exit(json_encode($datas));
 		}
 
-		return API_RETURN_SUCCEED;
-	}
+		$this->load->model('timesModel');
+		/*$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
+		if ($remainMinute > 0) {
+			$datas['code'] = 'PASSWD_WRONG_TIMES';
+			$datas['msg'] = 'PASSWD_WRONG_TIMES';
+			exit(json_encode($datas));
+		}*/
 
-	function gettag($get, $post) {
-		$name = $get['id'];
-		if(!API_GETTAG) {
-			return API_RETURN_FORBIDDEN;
-		}
+		list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password);
+
+
+		$statusInfos = array('-1' => 'USER_NO_EXIST', '-2' => 'PASSWD_WRONG', '-3' => 'WRONG_');
+
 		
-		$return = array();
-		return $this->_serialize($return, 1);
-	}
-
-	function synlogin($get, $post) {
-		$uid = $get['uid'];
-		$username = $get['username'];
-		if(!API_SYNLOGIN) {
-		    return API_RETURN_FORBIDDEN;
-		}
-		
-		header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
-		
-		/*你站点的登录处理，通常记录用户登录session*/
-		//登录处理
-		$user = $this->CI->users_model->get_row($uid);
-		if($user) {
-			$data['user_name'] = $user->user_name;
-			$data['password'] = $user->password;
-			$this->CI->users_model->login($data);
-		}
-		
-	}
-
-	function synlogout($get, $post) {
-		if(!API_SYNLOGOUT) {
-			return API_RETURN_FORBIDDEN;
-		}
-		
-		//note 同步登出 API 接口
-		header('P3P: CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"');
-		
-		/*你站点的登出处理，通常删除用户登录session*/
-		//删除session
-		$this->CI->session->sess_destroy();
-
-	}
-
-	function updatepw($get, $post) {
-		if(!API_UPDATEPW) {
-			return API_RETURN_FORBIDDEN;
-		}
-		$username = $get['username'];
-		$password = $get['password'];
-		
-		return API_RETURN_SUCCEED;
-	}
-
-	function updatebadwords($get, $post) {
-		if(!API_UPDATEBADWORDS) {
-			return API_RETURN_FORBIDDEN;
-		}
-		$cachefile = $this->appdir.'./uc_client/data/cache/badwords.php';
-		$fp = fopen($cachefile, 'w');
-		$data = array();
-		if(is_array($post)) {
-			foreach($post as $k => $v) {
-				$data['findpattern'][$k] = $v['findpattern'];
-				$data['replace'][$k] = $v['replacement'];
+		if ($ucInfo['userid'] <= 0) {
+			if ($ucInfo['userid'] == -2) {
+				$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
 			}
+			$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : 'OTHER_ERROR';
+			$datas['code'] = $datas['msg'] = $message;
+			exit(json_encode($datas));
 		}
-		$s = "<?php\r\n";
-		$s .= '$_CACHE[\'badwords\'] = '.var_export($data, TRUE).";\r\n";
-		fwrite($fp, $s);
-		fclose($fp);
-		return API_RETURN_SUCCEED;
-	}
 
-	function updatehosts($get, $post) {
-		if(!API_UPDATEHOSTS) {
-			return API_RETURN_FORBIDDEN;
+		$where = array('username' => $username);
+		$userInfo = $this->memberModel->getInfo($where);
+
+		if (empty($userInfo) && $ucInfo['userid'] > 0) {
+			$userInfo['username'] = $ucInfo['username'];
+			$userInfo['email'] = $ucInfo['email'];
+			$passwordInfos = $this->_getPassword($ucInfo['password']);
+
+			$userInfo['password'] = $passwordInfos['password'];
+			$userInfo['encrypt'] = $passwordInfos['encrypt'];
+			$userInfo['regip'] = $this->input->ip_address();
+			$userInfo['regdate'] = $this->time;
+			$userInfo['ucserver_id'] = $ucInfo['userid'];
+			$this->memberModel->addInfo($userInfo);
 		}
-		$cachefile = $this->appdir.'./uc_client/data/cache/hosts.php';
-		$fp = fopen($cachefile, 'w');
-		$s = "<?php\r\n";
-		$s .= '$_CACHE[\'hosts\'] = '.var_export($post, TRUE).";\r\n";
-		fwrite($fp, $s);
-		fclose($fp);
-		return API_RETURN_SUCCEED;
-	}
 
-	function updateapps($get, $post) {
-		if(!API_UPDATEAPPS) {
-			return API_RETURN_FORBIDDEN;
+		if (empty($userInfo)) {
+			$datas['code'] = $datas['msg'] = $statusInfos['-1'];
+			exit(json_encode($datas));
 		}
-		$UC_API = $post['UC_API'];
 
-		//note 写 app 缓存文件
-		$cachefile = $this->appdir.'./uc_client/data/cache/apps.php';
-		$fp = fopen($cachefile, 'w');
-		$s = "<?php\r\n";
-		$s .= '$_CACHE[\'apps\'] = '.var_export($post, TRUE).";\r\n";
-		fwrite($fp, $s);
-		fclose($fp);
+		/*if ($userInfo['islock']) {
+			$this->_messageInfo('帐号被锁定！', $this->baseUrl . 'index/login');
+		}*/
 
-		//note 写配置文件
-		if(is_writeable($this->appdir.'./config.inc.php')) {
-			$configfile = trim(file_get_contents($this->appdir.'./config.inc.php'));
-			$configfile = substr($configfile, -2) == '?>' ? substr($configfile, 0, -2) : $configfile;
-			$configfile = preg_replace("/define\('UC_API',\s*'.*?'\);/i", "define('UC_API', '$UC_API');", $configfile);
-			$fp = @fopen($this->appdir.'./config.inc.php', 'w');
-			if($fp) {
-				@fwrite($fp, trim($configfile));
-				@fclose($fp);
-			}
-		}
-	
-		return API_RETURN_SUCCEED;
+		$updateInfo = array('lastloginip' => $this->ip, 'lastlogintime' => $this->time, 'loginnum' => $userInfo['loginnum'] + 1);
+		$this->memberModel->editInfo($updateInfo, $where);
+
+		$setCookieTime = $this->input->post('setcookietime');
+		$cookieTime = empty($setCookieTime) ? $this->time + 86400 : $this->time + 864000;
+
+		$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $password;
+		//echo $encryptString;
+		$encryptKey = $this->_getEncryptKey();
+		$encrypt = $this->encrypt->encode($encryptString, $encryptKey);
+
+		$this->input->set_cookie(array('name' => 'encrypt', 'value' => $encrypt, 'expire' => $cookieTime));
+		$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
+		$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
+
+		$datas['status'] = true;
+		$datas['code'] = $datas['msg'] = 'SUCCESS';
+		exit(json_encode($datas));
+		//$this->_messageInfo('登录成功！' . $synloginCode, $this->applicationInfos[2]['domain']);
 	}
-
-	function updateclient($get, $post) {
-		if(!API_UPDATECLIENT) {
-			return API_RETURN_FORBIDDEN;
-		}
-		$cachefile = $this->appdir.'./uc_client/data/cache/settings.php';
-		$fp = fopen($cachefile, 'w');
-		$s = "<?php\r\n";
-		$s .= '$_CACHE[\'settings\'] = '.var_export($post, TRUE).";\r\n";
-		fwrite($fp, $s);
-		fclose($fp);
-		return API_RETURN_SUCCEED;
-	}
-
-	function updatecredit($get, $post) {
-		if(!API_UPDATECREDIT) {
-			return API_RETURN_FORBIDDEN;
-		}
-		$credit = $get['credit'];
-		$amount = $get['amount'];
-		$uid = $get['uid'];
-		return API_RETURN_SUCCEED;
-	}
-
-	function getcredit($get, $post) {
-		if(!API_GETCREDIT) {
-			return API_RETURN_FORBIDDEN;
-		}
-	}
-
-	function getcreditsettings($get, $post) {
-		if(!API_GETCREDITSETTINGS) {
-			return API_RETURN_FORBIDDEN;
-		}
-		$credits = array();
-		return $this->_serialize($credits);
-	}
-
-	function updatecreditsettings($get, $post) {
-		if(!API_UPDATECREDITSETTINGS) {
-			return API_RETURN_FORBIDDEN;
-		}
-		return API_RETURN_SUCCEED;
-	}
-}
-
-//note 使用该函数前需要 require_once $this->appdir.'./config.inc.php';
-function _setcookie($var, $value, $life = 0, $prefix = 1) {
-	global $cookiepre, $cookiedomain, $cookiepath, $timestamp, $_SERVER;
-	setcookie(($prefix ? $cookiepre : '').$var, $value,
-		$life ? $timestamp + $life : 0, $cookiepath,
-		$cookiedomain, $_SERVER['SERVER_PORT'] == 443 ? 1 : 0);
-}
-
-function _authcode($string, $operation = 'DECODE', $key = '', $expiry = 0) {
-	$ckey_length = 4;
-
-	$key = md5($key ? $key : UC_KEY);
-	$keya = md5(substr($key, 0, 16));
-	$keyb = md5(substr($key, 16, 16));
-	$keyc = $ckey_length ? ($operation == 'DECODE' ? substr($string, 0, $ckey_length): substr(md5(microtime()), -$ckey_length)) : '';
-
-	$cryptkey = $keya.md5($keya.$keyc);
-	$key_length = strlen($cryptkey);
-
-	$string = $operation == 'DECODE' ? base64_decode(substr($string, $ckey_length)) : sprintf('%010d', $expiry ? $expiry + time() : 0).substr(md5($string.$keyb), 0, 16).$string;
-	$string_length = strlen($string);
-
-	$result = '';
-	$box = range(0, 255);
-
-	$rndkey = array();
-	for($i = 0; $i <= 255; $i++) {
-		$rndkey[$i] = ord($cryptkey[$i % $key_length]);
-	}
-
-	for($j = $i = 0; $i < 256; $i++) {
-		$j = ($j + $box[$i] + $rndkey[$i]) % 256;
-		$tmp = $box[$i];
-		$box[$i] = $box[$j];
-		$box[$j] = $tmp;
-	}
-
-	for($a = $j = $i = 0; $i < $string_length; $i++) {
-		$a = ($a + 1) % 256;
-		$j = ($j + $box[$a]) % 256;
-		$tmp = $box[$a];
-		$box[$a] = $box[$j];
-		$box[$j] = $tmp;
-		$result .= chr(ord($string[$i]) ^ ($box[($box[$a] + $box[$j]) % 256]));
-	}
-
-	if($operation == 'DECODE') {
-		if((substr($result, 0, 10) == 0 || substr($result, 0, 10) - time() > 0) && substr($result, 10, 16) == substr(md5(substr($result, 26).$keyb), 0, 16)) {
-			return substr($result, 26);
-		} else {
-				return '';
-			}
-	} else {
-		return $keyc.str_replace('=', '', base64_encode($result));
-	}
-
-}
-
-function _stripslashes($string) {
-	if(is_array($string)) {
-		foreach($string as $key => $val) {
-			$string[$key] = _stripslashes($val);
-		}
-	} else {
-		$string = stripslashes($string);
-	}
-	return $string;
 }

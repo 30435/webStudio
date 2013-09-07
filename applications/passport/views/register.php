@@ -1,191 +1,125 @@
-<?php $this->load->view('sshop/header'); ?>
-<script src="<?php echo $this->staticUrl; ?>common/script/member.js" type="text/javascript" language="javascript"></script>
-<div id="bd">
-	<div class="block950 block1">
-		<div class="usBox">
-			<div class="usBox_2 clearfix">
-				<div class="logtitle3"></div>
-				<form style="width:400px;float:left;" onsubmit="return register();" name="registerform" method="post" id="registerform" action="<?php echo $this->baseUrl; ?>index/register/">
-					<table width="100%" cellspacing="3" cellpadding="5" border="0" align="left">
-						<tbody>
-							<tr>
-								<td width="33%" align="right">用户名</td>
-								<td width="87%">
-									<input type="text" class="inputBg" name="username" value="" id="regusername" onBlur="checkusername(this.value);" size="25">
-									<input type="hidden" id="username" value="no" />
-									<span style="color:#FF0000" id="usernamenote"> * </span>
-								</td>
-							</tr>
-							<tr>
-								<td align="right">email</td>
-								<td>
-									<input type="text" class="inputBg" name="email" value="" id="regemail" onBlur="checkemail(this.value);" size="25" />
-									<input type="hidden" id="email" value="no" />
-									<span style="color:#FF0000" id="emailnote"> * </span>
-								</td>
-							</tr>
-							<tr>
-								<td align="right">密码</td>
-								<td>
-									<input type="password" style="width:179px;" class="inputBg" name="password" value="" id="regpassword" onBlur="checkpassword(this.value);" />
-									<input type="hidden" id="password" value="no" />
-									<span id="passwordnote" style="color:#FF0000"> * </span>
-								</td>
-							</tr>
-							<!--<tr>
-								<td align="right">密码强度</td>
-								<td>
-									<table width="145" cellspacing="0" cellpadding="1" border="0">
-										<tbody>
-											<tr align="center">
-												<td width="33%" id="pwd_lower">
-													弱
-												</td>
-												<td width="33%" id="pwd_middle">
-													中
-												</td>
-												<td width="33%" id="pwd_high">
-													强
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>-->
-							<tr>
-								<td align="right">确认密码</td>
-								<td>
-									<input type="password" style="width:179px;" class="inputBg" name="password2" value="" id="regpassword2" onBlur="checkpassword2(this.value);" />
-									<input type="hidden" id="password2" value="no" />
-									<span id="password2note" style="color:#FF0000"> * </span>
-								</td>
-							</tr>
-							<!--<tr>
-								<td align="right" id="extend_field5i">
-									手机
-								</td>
-								<td>
-									<input type="text" class="inputBg" size="25" name="extend_field5">
-									<span style="color:#FF0000">
-										*
-									</span>
-								</td>
-							</tr>
-							<tr>
-								<td align="right">
-									密码提示问题
-								</td>
-								<td>
-									<select name="sel_question">
-										<option value="0">
-											请选择密码提示问题
-										</option>
-										<option value="friend_birthday">
-											我最好朋友的生日？
-										</option>
-										<option value="old_address">
-											我儿时居住地的地址？
-										</option>
-										<option value="motto">
-											我的座右铭是？
-										</option>
-										<option value="favorite_movie">
-											我最喜爱的电影？
-										</option>
-										<option value="favorite_song">
-											我最喜爱的歌曲？
-										</option>
-										<option value="favorite_food">
-											我最喜爱的食物？
-										</option>
-										<option value="interest">
-											我最大的爱好？
-										</option>
-										<option value="favorite_novel">
-											我最喜欢的小说？
-										</option>
-										<option value="favorite_equipe">
-											我最喜欢的运动队？
-										</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td align="right">
-									密码问题答案
-								</td>
-								<td>
-									<input type="text" maxlengt="20" class="inputBg" size="25" name="passwd_answer">
-								</td>
-							</tr>-->
-							<tr>
-								<td>
-									&nbsp;
-								</td>
-								<td>
-									<label>
-										<input type="checkbox" checked="checked" value="1" name="agreement">
-										我已看过并接受《
-										<a target="_blank" style="color:blue" href="/article.php?cat_id=-1">
-											用户协议
-										</a>
-										》
-									</label>
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;</td>
-								<td align="left">
-									<input type="hidden" value="act_register" name="act">
-									<input type="hidden" value="" name="">
-									<input type="submit" class="us_Submit_reg" value="" name="Submit">
-								</td>
-							</tr>
-							<tr>
-								<td>&nbsp;</td>
-								<td align="left">
-									<a rel="nofollow" class="f6" href="/user.php?act=qpassword_name">密码问题找回密码</a>
-									<a rel="nofollow" class="f6" href="/user.php?act=get_password">注册邮件找回密码</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</form>
-				<div style="float:left; width:410px;  border:1px solid #A10000; margin:0 0 0 60px;">
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									会员必读：
-								</td>
-							</tr>
-							<tr>
-								<td>
-									1、注册就成为UPSEX爱向上会员
-								</td>
-							</tr>
-							<tr>
-								<td>
-									2、成为会员后，立即送500积分（相当于5元现金），购买时可以抵用现金
-								</td>
-							</tr>
-							<tr>
-								<td>
-									3、会员每购买一次产品都得到相应的会员积分，积分越多现金抵用越多
-								</td>
-							</tr>
-							<tr>
-								<td>
-									4、成为会员可享受UPSEX爱向上带给您的丰富活动
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
+<?php echo $this->load->view('header'); ?>
+<script language="javascript" type="text/javascript">
+setNav(1);
+selectFast();
+selectNoRealName();
+</script>
+<div class="min-body">
+    <div class="min-content back">
+    <form autocomplete="off" id="registerForm" name="registerForm" method="post" action="<?php echo $this->baseUrl . 'index/register/'; ?>" >
+        <input type="hidden" id="haveEmail" name="haveEmail" value="no" />
+		<input type="hidden" id="haveUsername" name="haveUsername" value="no" />
+        <input type="hidden" id="haveRealName" name="haveRealName" value="no" />
+        <div class='new-nav'>
+            <ul id="usenamelist">
+                <li><a href="javascript: selectFast(); void(0);" class="nav-box cur" id="selectFast" hidefocus="true"><span class='title'><i class="spmm"></i>知金号</span><span class='tip'>自动分配帐号，快速注册</span></a></li>
+				<li><a class="nav-box " href="javascript: selectSelf(); void(0);" id="selectSelf"><span class="title"><i class="spself"></i>自定义<i class="new"></i></span><span class="tip">用喜欢的字符注册，简单好记</span></a></li>
+                <li><a href="javascript: selectEmail(); void(0);" class="nav-box" id="selectEmail" hidefocus="true"><span class='title'><i class='spemail'></i>邮箱帐号</span><span class='tip'>用邮箱地址注册，便于记忆</span></a></li>
+            </ul>
+        </div>
+        <div class="reg-box" style="width:700px;overflow:hidden;float:left;margin-left:20px;">
+        <div class="reg-top">
+			<span class="fright f14" style="margin-right: 50px;" id="selectRealNameBar">建议你进行<a href="javascript: selectRealName(); void(0);" class="green no-underline">实名注册</a></span>
+			<span class="fright f14" style="margin-right: 50px; display: none;" id="selectNoRealNameBar">您也可以<a href="javascript: selectNoRealName(); void(0);" class="green no-underline">不实名注册</a></span>
+			<span class="fleft fb" id="J_quick_tip">快速注册知金号，开始快乐之旅</span>
 		</div>
-	</div>
-	<div class="blank">
-	</div>
+        <div style="position:relative;"></div>
+
+		<div id="registerWithUsername" style="display:none">
+		<div id="usernamenote" class="comm-error ps-error"><span></span></div>
+		<div class="reg-row">
+            <label class="label">自定义帐号：</label>
+            <div class="reg-div">
+                <span id="J_pwd_tip" class="reg-span">自定义帐号由6-20个字符组成，可用数字、字母、下划线</span>
+                <input type="text" name="username" id="username" class="reg-input" onMouseDown="$('#username').css('opacity','1');" onBlur="checkusername(this.value);" />
+				<input type="hidden" id="usernametip" value="no" />
+            </div>
+       </div>
+	   </div>
+
+		<div id="registerWithEmail" style="display: none">
+		<div class="comm-error ps-error" id="emailnote"><span id="emailnote"></span></div>
+        <div class="reg-row">
+            <label class="label">注册邮箱：</label>
+            <div class="reg-div">
+                <span class="reg-span" id="J_pwd_tip">请输入你的常用邮箱</span>
+                <input type="text" class="reg-input" id="email" name="email" onMouseDown="$('#email').css('opacity','1');" onBlur="checkemail(this.value);"/>
+				<input type="hidden" id="emailtip" value="no" />
+            </div>
+        </div>
+        <div class="select-email" id="select_email" style="margin-left: 207px;margin-top: -25px;"></div>
+		</div>
+
+        <div class="comm-error ps-error" id="passwordnote" style="margin-top:-28px;"><span></span></div>
+        <div class="reg-row">
+            <label class="label">设置密码：</label>
+            <div class="reg-div">
+				<span class="reg-span" id="J_pwd_tip">密码由6-16个字符组成，可用数字、字母下划线</span>
+				<input type="password" class="reg-input" onMouseDown="$('#password').css('opacity','1');" id="password" name="password" onBlur="checkpassword(this.value);" />
+				<input type="hidden" id="passwordtip" value="no" />
+			</div>
+        </div>
+        <!--<div class="reg-row"  id="J_safe_box" style="margin-left: 103px;"><i id="J_safe_level" class="fleft safe-none">&nbsp;&nbsp;</i></div>-->
+        <div class="comm-error ps-error"id="password2note"><span></span></div>
+        <div class="reg-row" style="margin-bottom:30px;">
+            <label class="label">确认密码：</label>
+            <div class="reg-div">
+				<span class="reg-span">请再次输入密码</span>
+				<input type="password" style="line-height:34px;" onMouseDown="$('#password2').css('opacity','1');" class="reg-input" name="cfmpwd" id="password2" onBlur="checkpassword2(this.value);" />
+				<input type="hidden" id="password2tip" value="no" />
+			</div>
+        </div>
+
+		<div id="registerWithRealName" style="display: none">
+        <div class="reg-row">
+            <label class="label">真实姓名：</label>
+            <div class="reg-div">
+                <input type="text" class="reg-input" maxlength="5" id="truename" name="truename" value=""/>
+            </div>
+        </div>
+        <div class="comm-error ps-error" style="margin-left:227px" id="J_error_idnumber" ><span></span></div>
+        <div class="reg-row">
+            <label class="label">身份证号：</label>
+            <div class="reg-div">
+                <input type="text" class="reg-input" name="idcard" id="idcard" value=""/>
+            </div>
+        </div>
+        <div class="reg-tip"><span>请一定要准确填写自己的身份证号，如果没有，可以向爸爸妈妈借看下！</span></div>
+		</div>
+
+        <div class="comm-error ps-error"id="seccodenote"><span></span></div>
+        <div class="rsess-row">
+            <label class="label">验证码：</label>
+            <div class="reg-div"><input name=seccode type="text" id="seccode" size="6" maxlength="4" onBlur="checkseccode(this.value);" class="reg-sec"/></div>
+            <div class="reg-img pointer" id="seccode_img_tip">
+				<img style="width:100px;" src="<?php echo $this->baseUrl; ?>admin/index/checkcode" onClick="this.src=this.src+'/'+Math.random()"  id="seccode_img" alt="换一张"/>
+				<a href="javascript:document.getElementById('seccode_img').src='<?php echo $this->baseUrl; ?>admin/index/checkcode'+'/'+Math.random();void(0);" id="J_change_sess" class="gray f12">换一个</a>
+			</div>
+        </div>
+
+        <div class="comm-error ps-error" style="margin-left:198px;*margin-left:0px;" id="J_error_agree"><span></span></div>
+        <div class="check-row">
+            <div id="J_check_box" class="check"><input type="hidden" id="J_agree" name="agree" value='1' class="reg-check"/></div>
+            <span class="gray che-span">我已阅读并同意《<a href="http://www.61.com/about/service.html" class="fb gray no-underline">淘米网服务条款</a>》</span>
+        </div>
+        <div id="J_submit" class="reg-botton pointer"><span class="f16b" onclick="register();">立即注册</span></div>
+        </div>
+    </form>
+    </div>
 </div>
-<?php $this->load->view('sshop/footer'); ?>
+<div class="foot-img"></div>
+<div class="alter-box" id="J_alter_email" style="width:400px;">
+	<div class="top">
+        <div class="inner" style="float:left;"><span>验证注册邮箱</span></div>
+        <a class="off" href="javascript:void(null);" id="close_btn"></a>
+    </div>
+    <div class="body">
+        <div class="reg-box" style="margin-left:20px;margin-top:0;">
+            <p class="rs-tip">请进入你的邮箱<span id="J_review_email" class="orange"></span>,继续完成注册。<br/>如果发现邮箱不正确，点此<a class="orange no-underline" href="javascript:void(null);" id="J_change_email" >更换邮箱</a></p>
+	        <input type="hidden" id="J_email_url">
+	        <div id="J_app_email_btn" class="a-botton pointer" style="margin-left:110px;margin-top:20px;"><span class="f14">立即进入邮箱</span></div>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->load->view('footer'); ?>
