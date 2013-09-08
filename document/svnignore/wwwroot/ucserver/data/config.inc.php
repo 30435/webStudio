@@ -2,9 +2,9 @@
 define('UC_DBHOST', 'localhost');
 define('UC_DBUSER', 'root');
 define('UC_DBPW', '');
-define('UC_DBNAME', 'kids_ucserver');
+define('UC_DBNAME', 'studio_ucserver');
 define('UC_DBCHARSET', 'utf8');
-define('UC_DBTABLEPRE', 'ku_');
+define('UC_DBTABLEPRE', 'su_');
 define('UC_COOKIEPATH', '/');
 define('UC_COOKIEDOMAIN', '');
 define('UC_DBCONNECT', 0);

@@ -1,5 +1,5 @@
 <?php
 
-define('BASEPATH', 'e:/www/kidsDepart/library/CodeIgniter/'); // Path to the system folder
-define('BASEPATH_EXT', 'e:/www/kidsDepart/library/CodeIgniterExt/');
-define('BASEPATH_APP', 'e:/www/kidsDepart/applications/');
+define('BASEPATH', 'd:/web/www/webStudio/library/CodeIgniter/'); // Path to the system folder
+define('BASEPATH_EXT', 'd:/web/www/webStudio/library/CodeIgniterExt/');
+define('BASEPATH_APP', 'd:/web/www/webStudio/applications/');

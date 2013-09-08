@@ -6,9 +6,9 @@ define('UC_CONNECT', 'mysql');
 define('UC_DBHOST', 'localhost');
 define('UC_DBUSER', 'root');
 define('UC_DBPW', '');
-define('UC_DBNAME', 'kids_ucserver');
+define('UC_DBNAME', 'studio_ucserver');
 define('UC_DBCHARSET', 'utf8');
-define('UC_DBTABLEPRE', '`kids_ucserver`.ku_');
+define('UC_DBTABLEPRE', '`studio_ucserver`.su_');
 define('UC_DBCONNECT', 0);
 
 define('UC_CHARSET', 'utf-8');
