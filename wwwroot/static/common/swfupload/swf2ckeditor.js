@@ -1,7 +1,6 @@
 function flashupload(uploadid, name, textareaid, funcName, args, module, catid, authkey) {
 	var args = args ? '&args='+args : '';
 	var setting = '&module='+module+'&catid='+catid+'&authkey='+authkey;
-	alert('http://passport.ci.com/attachment/swfupload?'+args+setting);
 	
 	window.top.art.dialog(
 		{title:name,id:uploadid,iframe:'http://passport.ci.com/attachment/swfupload?'+args+setting,width:'500',height:'420'}, 

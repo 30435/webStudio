@@ -15,22 +15,22 @@ abstract class CmsNewModel extends CommonModel
 	protected function _fieldInfos()
 	{
 		$fieldInfos['fields'] = array(
-			'id' => array('name' => 'å†…å®¹ID'),
-			'catid' => array('name' => 'æ‰€å±žæ ç›®'),
-			'title' => array('name' => 'æ ‡é¢˜'),
-			'thumb' => array('name' => 'ç¼©ç•¥å›¾'),
-			'keywords' => array('name' => 'å…³é”®å­—'),
-			'description' => array('name' => 'æè¿°'),
-			'url' => array('name' => 'å†…å®¹URL'),
-			'listorder' => array('name' => 'æŽ’åº'),
-			'content' => array('name' => 'å†…å®¹'),
-			'editor' => array('name' => 'ç¼–è¾‘'),
-			'username' => array('name' => 'ç®¡ç†å‘˜å¸å·'),
-			'copyfrom' => array('name' => 'æ¥æº'),
-			'template' => array('name' => 'æ¨¡æ¿'),
-			'status' => array('name' => 'çŠ¶æ€'),
-			'inputtime' => array('name' => 'å½•å…¥æ—¶é—´'),
-			'updatetime' => array('name' => 'æ›´æ–°æ—¶é—´'),
+			'id' => array('name' => 'ÄÚÈÝID'),
+			'catid' => array('name' => 'ËùÊôÀ¸Ä¿'),
+			'title' => array('name' => '±êÌâ'),
+			'thumb' => array('name' => 'ËõÂÔÍ¼'),
+			'keywords' => array('name' => '¹Ø¼ü×Ö'),
+			'description' => array('name' => 'ÃèÊö'),
+			'url' => array('name' => 'ÄÚÈÝURL'),
+			'listorder' => array('name' => 'ÅÅÐò'),
+			'content' => array('name' => 'ÄÚÈÝ'),
+			'editor' => array('name' => '±à¼­'),
+			'username' => array('name' => '¹ÜÀíÔ±ÕÊºÅ'),
+			'copyfrom' => array('name' => 'À´Ô´'),
+			'template' => array('name' => 'Ä£°å'),
+			'status' => array('name' => '×´Ì¬'),
+			'inputtime' => array('name' => 'Â¼ÈëÊ±¼ä'),
+			'updatetime' => array('name' => '¸üÐÂÊ±¼ä'),
 		);
 		$fieldInfos['fieldList'] = array('id', 'catid', 'title', 'url', 'listorder', 'username', 'updatetime', 'inputtime');
 		$fieldInfos['fieldChanges'] = array('catid', 'title', 'thumb', 'template', 'copyfrom', 'description', 'keywords', 'content');

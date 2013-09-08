@@ -19,3 +19,4 @@ wwwroot/bbs/config/
 wwwroot/bbs/uc_server/data/
 wwwroot/bbs/uc_client/data/
 wwwroot/uploadfile/
+*.svn
