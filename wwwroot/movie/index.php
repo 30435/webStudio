@@ -1,4 +1,4 @@
 <?php
-define('APPCODE', '51jiansh');
+define('APPCODE', 'movie');
 chdir(dirname(__DIR__));
 include 'init.php';
