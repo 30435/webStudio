@@ -8,6 +8,19 @@ class Custom_Controller extends Base_Controller
 	{
 		parent::__construct();
 	}
+
+	/**
+     * Get the category infos
+     *
+     * @return array the category Infos
+     */
+    protected function _getCategoryInfos($parentid = 0, $getAll = false)
+    {
+		$this->_loadModel($this->appCode, 'categoryModel');
+        $categoryInfos = $this->categoryModel->getAllInfos('', $keyField = 'id');
+
+    	return $categoryInfos;
+    }
 }
 
 require_once BASEPATH_EXT . 'cms/BaseAdminController.php';
