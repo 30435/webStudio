@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 �?09 �?06 �?12:03
+-- 生成日期: 2013 �?09 �?06 �?12:03
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_category`
+-- 表的结构 `kw_category`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_category` (
+CREATE TABLE IF NOT EXISTS `kw_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
@@ -48,10 +48,10 @@ CREATE TABLE IF NOT EXISTS `sm_category` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
--- 转存表中的数据 `sm_category`
+-- 转存表中的数据 `kw_category`
 --
 
-INSERT INTO `sm_category` (`id`, `catname`, `catdir`, `parentdir`, `image`, `parentid`, `modelid`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `urlrule`, `ishtml`) VALUES
+INSERT INTO `kw_category` (`id`, `catname`, `catdir`, `parentdir`, `image`, `parentid`, `modelid`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `urlrule`, `ishtml`) VALUES
 (1, '公司信息', 'ourinfo', '/', '', 0, 1, 'http://webgame.kids.com/index/category?catid=1', 0, '公司信息相关的栏目', '0', '', '', '', 'biglist_html', 1),
 (2, '关于我们', 'gywm', 'ourinfo/', '', 1, 1, 'http://webgame.kids.com/index/category?catid=2', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
 (3, '员工关怀', 'yggh', 'ourinfo/', '', 1, 1, 'http://webgame.kids.com/index/category?catid=3', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
@@ -78,10 +78,10 @@ INSERT INTO `sm_category` (`id`, `catname`, `catdir`, `parentdir`, `image`, `par
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_member`
+-- 表的结构 `kw_member`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_member` (
+CREATE TABLE IF NOT EXISTS `kw_member` (
   `userid` int(10) unsigned NOT NULL COMMENT '用户ID',
   `webgame_code` char(10) NOT NULL,
   `server_id` smallint(5) NOT NULL COMMENT '游戏服务器ID',
@@ -98,10 +98,10 @@ CREATE TABLE IF NOT EXISTS `sm_member` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_new`
+-- 表的结构 `kw_new`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_new` (
+CREATE TABLE IF NOT EXISTS `kw_new` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '新闻类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -127,10 +127,10 @@ CREATE TABLE IF NOT EXISTS `sm_new` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- 转存表中的数据 `sm_new`
+-- 转存表中的数据 `kw_new`
 --
 
-INSERT INTO `sm_new` (`id`, `catid`, `title`, `thumb`, `keywords`, `description`, `url`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`) VALUES
+INSERT INTO `kw_new` (`id`, `catid`, `title`, `thumb`, `keywords`, `description`, `url`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`) VALUES
 (1, 7, '发生的发生的发生的发生地方', 'http://upload.kids.com/passport2013/0828/20130828182405772.jpg', 'have keyword', '是打发士大夫', 'http://webgame.kids.com/index/show?id=7_1', 0, 1, 0, 'wangcanliang', '', '<p>\r\n	阿萨德发生的发生的发生的发生的发生的发生<img alt="" src="http://upload.kids.com/content/img/2013082881061.png" style="width: 19px; height: 19px;" /></p>\r\n', '', 1377687614, 1377689102, 0, ''),
 (2, 7, '阿萨德法师打发', 'http://upload.kids.com/passport2013/0828/20130828182405772.jpg', '等等', '阿士大夫', 'http://webgame.kids.com/index/show?id=7_2', 0, 1, 0, 'wangcanliang', '', '<p>\r\n	阿士大夫撒旦法是否打算打发士大夫</p>\r\n', '', 1378089020, 1378089020, 0, ''),
 (3, 7, '娃儿安慰安慰法萨芬', 'http://upload.kids.com/passport2013/0828/20130828182405772.jpg', 'have keyword', '', 'http://webgame.kids.com/index/show?id=7_3', 0, 1, 0, 'wangcanliang', '', '<p>\r\n	阿萨德法师打发十分大叔的发生的发生发的</p>\r\n', '', 1378089029, 1378089029, 0, ''),
@@ -145,10 +145,10 @@ INSERT INTO `sm_new` (`id`, `catid`, `title`, `thumb`, `keywords`, `description`
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_picture`
+-- 表的结构 `kw_picture`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_picture` (
+CREATE TABLE IF NOT EXISTS `kw_picture` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -175,10 +175,10 @@ CREATE TABLE IF NOT EXISTS `sm_picture` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_position`
+-- 表的结构 `kw_position`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_position` (
+CREATE TABLE IF NOT EXISTS `kw_position` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
@@ -187,10 +187,10 @@ CREATE TABLE IF NOT EXISTS `sm_position` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_position_gory`
+-- 表的结构 `kw_position_gory`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_position_gory` (
+CREATE TABLE IF NOT EXISTS `kw_position_gory` (
   `posid` int(11) NOT NULL COMMENT '推荐位ID',
   `newid` int(11) NOT NULL COMMENT '新闻ID'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -198,10 +198,10 @@ CREATE TABLE IF NOT EXISTS `sm_position_gory` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_server`
+-- 表的结构 `kw_server`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_server` (
+CREATE TABLE IF NOT EXISTS `kw_server` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '游戏服务器ID',
   `webgame_code` char(10) NOT NULL COMMENT '所属游戏代码',
   `name` varchar(50) NOT NULL COMMENT '游戏服务器名称',
@@ -217,10 +217,10 @@ CREATE TABLE IF NOT EXISTS `sm_server` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- 转存表中的数据 `sm_server`
+-- 转存表中的数据 `kw_server`
 --
 
-INSERT INTO `sm_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `server_status`, `time_start`, `server_mark`, `start_maintain`, `end_maintain`, `url_maintain`) VALUES
+INSERT INTO `kw_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `server_status`, `time_start`, `server_mark`, `start_maintain`, `end_maintain`, `url_maintain`) VALUES
 (1, 'shenxd', '神仙道1服', 2, '1', 1, 2013, '1', 1378453380, 1379144580, ''),
 (2, 'shenxd', '神仙道2服', 66, '1', 1, 2013, '2', 1378280640, 1378453440, 'as'),
 (3, 'www', '网游1服', 4, '1', 1, 2013, 'a', 1378453440, 1378539840, '');
@@ -228,10 +228,10 @@ INSERT INTO `sm_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `se
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_spage`
+-- 表的结构 `kw_spage`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_spage` (
+CREATE TABLE IF NOT EXISTS `kw_spage` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '单网页资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -244,10 +244,10 @@ CREATE TABLE IF NOT EXISTS `sm_spage` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- 转存表中的数据 `sm_spage`
+-- 转存表中的数据 `kw_spage`
 --
 
-INSERT INTO `sm_spage` (`id`, `catid`, `title`, `username`, `content`, `template`, `inputtime`, `updatetime`) VALUES
+INSERT INTO `kw_spage` (`id`, `catid`, `title`, `username`, `content`, `template`, `inputtime`, `updatetime`) VALUES
 (1, 3, '为武器而非v', 'wangcanliang', '<p>\r\n	阿萨德法师法师打发士大夫</p>\r\n', '', 0, 1377688049),
 (2, 4, '发生的发生的发生的发生地方', 'wangcanliang', '<p>\r\n	阿萨德发生的发生的发生的发生的发生地方<img alt="" src="http://upload.kids.com/content/img/2013082827531.png" style="width: 19px; height: 19px;" /><img alt="" src="http://upload.kids.com/content/img/2013082865051.png" style="width: 50px; height: 51px;" /></p>\r\n', '', 0, 1377688092),
 (3, 6, '777', 'wangcanliang', '<p>\r\n	阿萨德法师打发</p>\r\n', '', 0, 1377688069),
@@ -259,10 +259,10 @@ INSERT INTO `sm_spage` (`id`, `catid`, `title`, `username`, `content`, `template
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_webgame`
+-- 表的结构 `kw_webgame`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_webgame` (
+CREATE TABLE IF NOT EXISTS `kw_webgame` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '游戏ID',
   `code` char(10) NOT NULL COMMENT '游戏代码',
   `name` varchar(50) NOT NULL COMMENT '游戏名称',
@@ -289,10 +289,10 @@ CREATE TABLE IF NOT EXISTS `sm_webgame` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
--- 转存表中的数据 `sm_webgame`
+-- 转存表中的数据 `kw_webgame`
 --
 
-INSERT INTO `sm_webgame` (`id`, `code`, `name`, `description`, `brief`, `pic_small`, `pic_middle`, `pic_big`, `url_home`, `url_server`, `url_bbs`, `coin_name`, `coin_unit`, `coin_rate`, `listorder`, `ispay`, `webgame_type`, `webgame_status`, `url_maintain`, `start_maintain`, `end_maintain`) VALUES
+INSERT INTO `kw_webgame` (`id`, `code`, `name`, `description`, `brief`, `pic_small`, `pic_middle`, `pic_big`, `url_home`, `url_server`, `url_bbs`, `coin_name`, `coin_unit`, `coin_rate`, `listorder`, `ispay`, `webgame_type`, `webgame_status`, `url_maintain`, `start_maintain`, `end_maintain`) VALUES
 (1, 'nova', '诺瓦奇兵', '诺瓦奇兵，倾心打造，经典儿童游戏', NULL, 'http://upload.kids.com/passport2013/0905/20130905144330972.jpg', 'http://upload.kids.com/passport2013/0905/20130905144418890.jpg', 'http://upload.kids.com/passport2013/0905/20130905144425525.jpg', 'http://nova.kids.com/', '', '', '瓦币', '个', 10, 1, '1', 1, '1', 'http://nova.kids.com/', 1377164880, 1377769680),
 (2, 'navo', '娜喔', '娜喔游戏是我们公司用三年时间打造的一款牛到不行的游戏', NULL, 'http://upload.kids.com/passport2013/0828/20130828182801991.jpg', 'http://upload.kids.com/passport2013/0828/20130828182810323.png', 'http://upload.kids.com/passport2013/0828/20130828182818206.png', 'http://navo.kids.com/', '', '', '窝窝币', '个', 100, 2, '1', 1, '1', '', 1377426360, 1377858360),
 (3, 'self', '自主占位1', '正在精心打造，敬请期待', NULL, 'http://upload.kids.com/passport2013/0828/20130828182405772.jpg', 'http://upload.kids.com/passport2013/0828/20130828182415985.jpg', 'http://upload.kids.com/passport2013/0828/20130828182438223.png', 'http://nova.kids.com/', '', '', '瓦币3', '个', 10, 1, '1', 1, '1', 'http://nova.kids.com/', 1377164880, 1377769680),

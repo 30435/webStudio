@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'studioROESG';
+$config['encryption_key'] = 'ganwanROESG';
 
 /*
 |--------------------------------------------------------------------------
@@ -265,8 +265,8 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "studio_";
-$config['cookie_domain']	= ".ci.com";
+$config['cookie_prefix']	= "kids_";
+$config['cookie_domain']	= ".kids.com";
 $config['cookie_path']		= "/";
 $config['cookie_secure']	= FALSE;
 
