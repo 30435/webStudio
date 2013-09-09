@@ -9,6 +9,7 @@ class Custom_Controller extends Base_Controller
 		parent::__construct();
 
 		$this->webgameInfos = $this->_getWebgameInfos();
+		$this->frontController = array('controller' => $this);
 	}
 }
 

@@ -142,45 +142,48 @@ abstract class CmsCategory extends Custom_AdminController
 	protected function _formatInfo($info, $isWrite = false)
 	{
 		$this->_initInfo($info['parentid'], $info['modelid'], $info['template'], $info['urlrule']);
-		if($isWrite){
-			$this->_get_predir($info['parentid']);
-			$info['parentdir']=implode('/',self::$dir_array).'/';
+
+		if ($isWrite) {
+			if (!empty($info['bind_domain']) {
+				$info['bind_domain'] = $info['parentid'] == 0 ? $info['bind_domain'] : '';
 		}
 
 		return $info;
 	}
 
-    /**
-	 * 插入之后执行的操作
+	/**
+	 * Do some operations after adding an info 
 	 *
-	 * @return  void
+	 * @return void
 	 */
-	protected function _after_insert()
+	protected function _afterAdd($info)
 	{
-        $cat_id=$this->currentDb->insert_id();
-        $data['url']=$this->baseUrl.'index/cat/'.$cat_id;
-        $this->currentDb->where('id',$cat_id);
-        $this->currentDb->update($this->table, $data);
+        $catId = $this->currentModel->currentDb->insert_id();
+
+		$tree = new CustomTree($this->categoryInfos);
+		$parentdir = $bindDomain = '';
+		$this->_getParentInfos($info['parentid'], $parentdir, $bindDomain);
+		$data['parentdir'] = $parentdir;
+		$ishtml = $info['ishtml'];
+		if ($ishtml) {
+			$data['url'] = empty($bindDomain) ? $this->baseUrl . $parentdir . '.html' : $bindDomain . $parentdir . '.html';
+		} else {
+			$data['url'] = empty($bindDomain) ? $this->baseUrl . 'index/category?catid=' . $catId : $bindDomain . 'category?catid=' . $catId;
+		}
+
+		$where = array('id =' => $catId);
+		$this->currentModel->editInfo($data, $where);
 	}
 
-	protected static $dir_array=array();
-    /**
-	 * 获得当前目录的上级目录
-	 *
-	 * @param string $pid 当前栏目的父ID
-	 * return void
-	 */
-	protected  function _get_predir($pid)
+	protected  function _getParentInfos($pid, & $parentdir, & $bindDomain)
 	{
-		if($pid=='0'){
-			return;
+		if (!isset($this->categoryInfos[$pid])) {
+			return ;
+		} else {
+			$parentdir = $this->categoryInfos[$pid]['catdir'] . '/' . $parentdir;
+			$bindDomain = isset($this->categoryInfos[$pid]['bind_domain']) && $this->categoryInfos[$pid]['parentid'] == 0 ? $this->categoryInfos[$pid]['bind_domain'] : '';
 		}
-		$ele=$this->categoryInfos[$pid];
-		array_unshift(self::$dir_array,$ele['catdir']);
 
-		if($ele['parentid']!='0'){
-			$this->_get_predir($ele['parentid']);
-		}
-		return;
+		$ppid = $this->_getParentInfos($this->categoryInfos[$pid]['parentid'], $parentdir, $bindDomain);
 	}
 }

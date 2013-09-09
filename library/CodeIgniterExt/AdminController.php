@@ -25,7 +25,7 @@ class AdminController extends Custom_Controller
 		$this->privInfos = $this->_getPrivInfos($this->roleInfo['id']);
 		//var_dump($this->privInfos);
 		$this->menuInfos = $this->_getMenuInfos();		
-		//var_dump($this->menuInfos);
+		//var_dump($this->menuInfos); exit();
 		$havePriv = $this->_checkPriv();
 		if (empty($havePriv)) {
 			$this->_showMessage('您没有执行该操作的权限！');
@@ -151,7 +151,7 @@ class AdminController extends Custom_Controller
 	protected function _getPrivInfos($roleId)
 	{
 		$this->_loadModel('passport', 'admin/privilegeModel');
-		$infos = $this->privilegeModel->getAllInfos('', 'id', array('role_id' => $roleId));
+		$infos = $this->privilegeModel->getAllInfos('', 'menu_id', array('role_id' => $roleId));
 
 		$privInfos = array();
 		foreach ($infos as $info) {
@@ -273,6 +273,7 @@ class AdminController extends Custom_Controller
 			$info = $this->_formatInfo($info, true);
 			$addResult = $this->currentModel->addInfo($info);
             if ($addResult === true) {
+				$this->_afterAdd($info);
             	$this->_writeLog($info, 'add');
             }
 
@@ -280,6 +281,14 @@ class AdminController extends Custom_Controller
 			$this->_showMessage($message);
 		}
 	}
+
+	/**
+	 * Do some operations after adding an info 
+	 *
+	 * @return void
+	 */
+	protected function _afterAdd($info)
+	{}
 	
 	/**
 	 * Eidt a info
@@ -360,12 +369,21 @@ class AdminController extends Custom_Controller
 		
 		$deleteResult = $this->currentModel->deleteInfo(array('id' => $this->id));
 		if ($deleteResult) {
+			$this->_afterDelete();
 			$this->_writeLog($info, 'delete');
 		}
 		
 		$message = $this->appMenus[$this->method]['name'] . $this->lang->line('seccessful');
 		$this->_showMessage($message);
 	}
+
+	/**
+	 * Do some operations after deleting an info
+	 *
+	 * return void
+	 */
+	protected function _afterDelete()
+	{}
 
 	/**
 	 * Delete multi infos

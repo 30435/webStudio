@@ -5,7 +5,6 @@ class CmsIndex extends Custom_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->frontController = array('controller' => $this);
 	}
 
 	public function index()

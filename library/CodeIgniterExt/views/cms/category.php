@@ -67,9 +67,8 @@
   <div class="col-tab">
     <ul class="tabBut cu-li">
       <li id="tab_setting_1" class="on" onclick="SwapTab('setting','on','',5,1);">基本选项</li>
-      <li id="tab_setting_2" onclick="SwapTab('setting','on','',5,2);">生成HTML设置</li>
-      <li id="tab_setting_3" onclick="SwapTab('setting','on','',5,3);">模板设置</li>
-      <li id="tab_setting_4" onclick="SwapTab('setting','on','',5,4);">SEO 设置</li>
+      <li id="tab_setting_2" onclick="SwapTab('setting','on','',5,2);">静态化和模板设置</li>
+      <li id="tab_setting_3" onclick="SwapTab('setting','on','',5,3);">SEO 设置</li>
     </ul>
   <?php
 	echo validation_errors();
@@ -94,6 +93,11 @@
 	    <tr>
           <th><?php echo $this->fieldInfos['catdir']['name']; ?>:</th>
           <td><input type="text" name="catdir" id="catdir" class="input-text" value="<?php if (isset($this->currentInfo['catdir'])) echo $this->currentInfo['catdir']; ?>"></td>
+        </tr>
+	    <tr>
+          <th><?php echo $this->fieldInfos['bind_domain']['name']; ?>:</th>
+          <td><input type="text" name="bind_domain" id="bind_domain" class="input-text" value="<?php if (isset($this->currentInfo['bind_domain'])) echo $this->currentInfo['bind_domain']; ?>" size="100px" /></td>
+		  <div id="tip" class="onShow">只对一级目录有效！</div>
         </tr>
 	    <tr>
           <th><?php echo $this->fieldInfos['image']['name']; ?>:</th>
@@ -122,21 +126,13 @@
           <th width="200"><?php echo $this->fieldInfos['urlrule']['name']; ?>:</th>
           <td id="page_template"><select name="urlrule" id="urlrule"><?php echo $this->selectUrlrule; ?></select></td>
         </tr>
+		<tr>
+          <th width="200"><?php echo $this->fieldInfos['template']['name']; ?>:</th>
+          <td id="page_template"><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>
+        </tr>
       </table>
     </div>
     <div id="div_setting_3" class="contentList pad-10 hidden">
-      <table width="100%" class="table_form ">
-		<tr>
-          <th width="200"><?php echo $this->fieldInfos['template']['name']; ?>:</th>
-          <td id="page_template"><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>
-        </tr>
-		<tr>
-          <th width="200"><?php echo $this->fieldInfos['template']['name']; ?>:</th>
-          <td id="page_template"><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>
-        </tr>
-      </table>
-    </div>
-    <div id="div_setting_4" class="contentList pad-10 hidden">
       <table width="100%" class="table_form ">
 	    <tr>
           <th width="200"><strong><?php echo $this->fieldInfos['meta_title']['name']; ?>:</strong></th>

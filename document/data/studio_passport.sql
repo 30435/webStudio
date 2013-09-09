@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.8.2
 -- http://www.phpmyadmin.net
 --
--- 主机: 127.0.0.1
--- 生成日期: 2013 年 09 月 08 日 11:32
--- 服务器版本: 5.5.27
--- PHP 版本: 5.4.7
+-- 主机: localhost
+-- 生成日期: 2013 �?09 �?09 �?07:54
+-- 服务器版本: 5.6.11
+-- PHP 版本: 5.5.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_manager` (
 --
 
 INSERT INTO `sp_admin_manager` (`id`, `username`, `truename`, `password`, `roleid`, `email`, `encrypt`, `createtime`, `loginnum`, `lastip`, `lasttime`, `islock`, `handpay_key`, `handpay_en`) VALUES
-(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 130, '127.0.0.1', 1378626271, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
+(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 131, '127.0.0.1', 1378705114, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
 (2, 'wangcan', 'wang', '37bbc5485e0993f7caf024ef545d5d5c', 2, 'eee@test.com', 'g9dYGv', 1364371358, 3, '127.0.0.1', 1362981487, '1', '', '');
 
 -- --------------------------------------------------------
@@ -73,16 +73,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- 转存表中的数据 `sp_admin_managerlog`
---
-
-INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_name`, `menu_id`, `menu_name`, `data`, `data_old`, `logtype`, `ip`, `inputtime`) VALUES
-(1, 1, 'wangcanliang', 1, '超级管理员', '26', '编辑', 'a:2:{i:1;s:1:"7";i:2;s:1:"0";}', 'a:0:{}', 'listorder', '127.0.0.1', 1378627406),
-(2, 1, 'wangcanliang', 1, '超级管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"支付管理";s:8:"parentid";s:1:"6";s:8:"app_code";s:3:"pay";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"1";}', 'a:10:{s:2:"id";s:3:"120";s:4:"name";s:12:"支付报表";s:8:"parentid";s:1:"6";s:8:"app_code";s:3:"pay";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1378630979),
-(3, 1, 'wangcanliang', 1, '超级管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"支付报表";s:8:"parentid";s:1:"6";s:8:"app_code";s:3:"pay";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"1";}', 'a:10:{s:2:"id";s:3:"121";s:4:"name";s:12:"支付管理";s:8:"parentid";s:1:"6";s:8:"app_code";s:3:"pay";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1378630999);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -119,8 +110,8 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (5, '网页游戏', 0, 'webgame', '', '', '', 5, '0', '1'),
 (6, '支付模块', 0, 'pay', '', '', '', 6, '0', '1'),
 (7, '采集系统', 0, 'spider', '', '', '', 7, '0', '1'),
-(8, '最爱电影', 0, 'movie', '', '', '', 8, '0', '1'),
-(9, '淘宝商城', 0, 'tbshop', '', '', '', 9, '0', '1'),
+(8, '测试站点', 0, 'movie', '', '', '', 8, '0', '1'),
+(9, '测试站点2', 0, 'tbshop', '', '', '', 9, '0', '1'),
 (10, '儿童教育', 0, 'kidsedu', '', '', '', 10, '0', '1'),
 (11, '管理员信息', 1, 'passport', '', '', '', 0, '0', '1'),
 (12, '修改个人信息', 11, 'passport', 'manager', 'editm', '', 0, '0', '1'),
@@ -427,6 +418,35 @@ CREATE TABLE IF NOT EXISTS `sp_attachment` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `sp_linkurl`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_linkurl` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `linkurl_type` char(8) NOT NULL DEFAULT '',
+  `name` varchar(50) NOT NULL DEFAULT '',
+  `url` varchar(255) NOT NULL DEFAULT '',
+  `logo` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `username` varchar(30) NOT NULL DEFAULT '',
+  `listorder` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `linkurl_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `add_time` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `sp_linkurl`
+--
+
+INSERT INTO `sp_linkurl` (`id`, `linkurl_type`, `name`, `url`, `logo`, `description`, `username`, `listorder`, `linkurl_status`, `add_time`) VALUES
+(1, 'nova', '友情链接1', 'http://abc.com', 'http://upload.kids.com/passport2013/0902/20130902141706112.png', '暗室逢灯', '', 2, 1, 1378081920),
+(2, 'nova', '网页游戏', 'http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack', '', '', '', 66, 1, 1378536060),
+(3, 'web', '淘米游戏样式style', 'http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack', '', '', '', 444, 0, 1378622460);
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `sp_member`
 --
 
@@ -464,6 +484,67 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sp_poster`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_poster` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `space_id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `ad_type` varchar(10) NOT NULL,
+  `start_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `end_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `add_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `listorder` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `ad_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `url` varchar(200) NOT NULL,
+  `url_ext` varchar(200) NOT NULL,
+  `pic` varchar(200) NOT NULL,
+  `pic_ext` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `spaceid` (`space_id`,`ad_status`,`listorder`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- 转存表中的数据 `sp_poster`
+--
+
+INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `ad_type`, `start_time`, `end_time`, `add_time`, `listorder`, `ad_status`, `url`, `url_ext`, `pic`, `pic_ext`) VALUES
+(1, '幻灯广告1', 1, 'image', 0, 0, 0, 1, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165118385.png', ''),
+(2, '首页幻灯广告2', 1, '0', 0, 0, 0, 0, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165158554.jpg', ''),
+(3, '首页幻灯广告3', 1, 'image', 0, 0, 0, 4, 1, 'http://www.163.com/special/0077450P/login_frame.html', '', 'http://upload.kids.com/passport2013/0829/20130829165231318.png', ''),
+(4, '幻灯广告4', 1, 'image', 0, 0, 0, 1, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165118385.png', ''),
+(5, '首页幻灯广告5', 1, '0', 0, 0, 0, 0, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165158554.jpg', ''),
+(6, '首页幻灯广告6', 1, 'image', 0, 0, 0, 4, 1, 'http://www.163.com/special/0077450P/login_frame.html', '', 'http://upload.kids.com/passport2013/0829/20130829165231318.png', '');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sp_poster_space`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_poster_space` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` char(50) NOT NULL,
+  `space_type` char(30) NOT NULL,
+  `width` smallint(4) unsigned NOT NULL DEFAULT '0',
+  `height` smallint(4) unsigned NOT NULL DEFAULT '0',
+  `description` char(100) NOT NULL,
+  `space_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `disabled` (`space_status`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `sp_poster_space`
+--
+
+INSERT INTO `sp_poster_space` (`id`, `name`, `space_type`, `width`, `height`, `description`, `space_status`) VALUES
+(1, '首页幻灯广告', 'imagelist', 400, 500, '首页幻灯图片广告列表', 0);
 
 -- --------------------------------------------------------
 
