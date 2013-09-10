@@ -9,32 +9,25 @@ class CommonController extends CI_Controller
 		$this->load->add_package_path(BASEPATH_EXT, true);
 		$this->load->helper(array('html', 'url'));
 		$this->load->library('encrypt');
-		
-		$this->baseUrl = base_url();
+	
 		$this->module = trim($this->router->directory, '/');
 		$this->controller = $this->router->class;
 		$this->method = $this->router->method;
 		
 		$this->time = time();
 		$this->ip = $this->input->ip_address();
-		$this->configPublic = $this->_getConfigPublic();
-		$this->staticUrl = isset($this->configPublic['customStaticUrl']) ? $this->configPublic['customStaticUrl'] : '';
-		$this->uploadUrl = isset($this->configPublic['customUploadUrl']) ? $this->configPublic['customUploadUrl'] : '';
-		$this->uploadPath = isset($this->configPublic['upload_path']) ? $this->configPublic['upload_path'] : '';
-		$this->frontDomain = isset($this->configPublic['frontDomain']) ? $this->configPublic['frontDomain'] : '';
+		$configPublic = $this->_getConfigPublic();
+		$this->staticUrl = isset($configPublic['customStaticUrl']) ? $configPublic['customStaticUrl'] : '';
+		$this->uploadUrl = isset($configPublic['customUploadUrl']) ? $configPublic['customUploadUrl'] : '';
+		$this->uploadPath = isset($configPublic['upload_path']) ? $configPublic['upload_path'] : '';
+		$this->frontDomain = isset($configPublic['frontDomain']) ? $configPublic['frontDomain'] : '';
 
-		$this->appCode = APPCODE;
 		$this->appInfos = $this->_getAppInfos();
-		$this->currentApp = $this->appInfos[$this->appCode];
-//var_dump($this->appInfos);		
+		$this->baseUrl = $this->appInfos[APPCODE]['url'];		
 		$this->load->library('session');
 
 		$this->metaDatas = array('title' => 'kids开发团队', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
 		$this->testUsers = array();
-		//var_dump($this->metaInfos);
-		//$this->loginedUserInfo = $this->_checkUserLogin();
-
-		//$this->_checkIp();
 	}
 	
 	/**
@@ -86,7 +79,7 @@ class CommonController extends CI_Controller
 		$this->fieldInfos = array();
 		$this->fieldChanges = array();
 		if (!empty($model)) {
-			$this->_loadModel($this->appCode, $model, 'currentModel');
+			$this->_loadModel(APPCODE, $model, 'currentModel');
 			$this->fieldInfos = isset($this->currentModel->fieldInfos['fields']) ? $this->currentModel->fieldInfos['fields'] : array();
 			$this->fieldChanges = isset($this->currentModel->fieldInfos['fieldChanges']) ? $this->currentModel->fieldInfos['fieldChanges'] : array();
 		}

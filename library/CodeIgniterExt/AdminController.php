@@ -18,7 +18,7 @@ class AdminController extends Custom_Controller
 		
 		$isLogin = $this->_checkAdmin();
 		if (empty($isLogin)) {
-			redirect($this->currentApplication['url'] . '/admin/index/login');
+			redirect($this->appInfos['passport']['url'] . '/admin/index/login');
 			exit();
 		}
 
@@ -100,7 +100,7 @@ class AdminController extends Custom_Controller
 	private function _checkPriv()
 	{
 		$ignorePrivMethods = array('index', 'curpos', 'leftmenu', 'main');
-		if ($this->appCode == 'passport' && $this->controller == 'index' && in_array($this->method, $ignorePrivMethods)) {
+		if (APPCODE == 'passport' && $this->controller == 'index' && in_array($this->method, $ignorePrivMethods)) {
 			return true;
 		}
 		if ($this->method == 'ckeditorUpload') {
@@ -133,7 +133,7 @@ class AdminController extends Custom_Controller
 			$url = $appUrl . 'admin/' . $info['controller'] . '/' . $info['method'] . '/';
 			$info['url'] = $url;
 			$menuInfos[$info['id']] = $info;
-			if ($info['app_code'] == $this->appCode 
+			if ($info['app_code'] == APPCODE 
 				&& $info['controller'] == $this->controller && $info['method'] == $this->method ) {
                 $this->currentMenu = $info;
 			}

@@ -14,7 +14,7 @@
 <script type="text/javascript">
 var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";
 var webgameUrl = "<?php echo $this->appInfos['webgame']['url']; ?>";
-var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
+var payUrl = "<?php echo $this->baseUrl; ?>";
 </script>
 </head>
 <body>
@@ -28,7 +28,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 				<li>(<span class="uid_account"><?php echo $this->loginedUserInfo['username']; ?></span>)<a class="head_top" title="我的充值中心" href="<?php echo $this->baseUrl; ?>index/myaccount"> 我的充值中心 </a><span>|</span></li>
 				<li><a href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/">安全退出</a><span>|</span></li>
 			<? } else { ?>
-				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>">登录</a><span>|</span></li>
+				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>index/login/">登录</a><span>|</span></li>
 			<? } ?>
 				<li><a href="/" target="_blank">意见反馈</a><span>|</span></li>
 				<li><a href="###"  hidefocus="true" style="cursor:pointer;" onclick="addBookmark();">收藏本站</a></li>

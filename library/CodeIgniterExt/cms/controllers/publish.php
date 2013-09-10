@@ -23,7 +23,7 @@ abstract class CmsPublish extends Custom_AdminController
 		$this->load->helper('file');
 
 		$staticContent = $this->load->view('index', $this->frontController, true);
-		$file = BASEPATH_WWWROOT . $this->appCode . '/index.html';
+		$file = BASEPATH_WWWROOT . APPCODE . '/index.html';
 		file_exists($file) && @unlink($file);
 		write_file($file, $staticContent);
 	}
@@ -38,7 +38,7 @@ abstract class CmsPublish extends Custom_AdminController
 		$this->load->helper('file');
 
 		$staticContent = $this->load->view('index', $this->frontController, true);
-		$file = BASEPATH_WWWROOT . $this->appCode . '/index.html';
+		$file = BASEPATH_WWWROOT . APPCODE . '/index.html';
 		file_exists($file) && @unlink($file);
 		write_file($file, $staticContent);
 	}
@@ -53,7 +53,7 @@ abstract class CmsPublish extends Custom_AdminController
 		$this->load->helper('file');
 
 		$staticContent = $this->load->view('index', $this->frontController, true);
-		$file = BASEPATH_WWWROOT . $this->appCode . '/index.html';
+		$file = BASEPATH_WWWROOT . APPCODE . '/index.html';
 		file_exists($file) && @unlink($file);
 		write_file($file, $staticContent);
 	}

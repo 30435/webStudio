@@ -6,12 +6,11 @@ class Attachment extends Custom_Controller
 	{
 		parent::__construct();
 
-		$this->_loadModel($this->appCode, 'attachmentModel');
+		$this->_loadModel(APPCODE, 'attachmentModel');
 		//var_dump($this->attachmentModel);
 		$this->params = array(
 			'uploadPath' => $this->uploadPath,
 			'attachmentModel' => $this->attachmentModel,
-			'appCode' => $this->appCode,
 		);
 		
 		/*$this->userid = param::get_cookie('userid') ? param::get_cookie('userid') : param::get_cookie('_userid');

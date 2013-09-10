@@ -27,7 +27,7 @@ class Custom_Controller extends CommonController
 	 */
 	protected function _getPaymentInfos()
 	{
-		$this->_loadModel($this->appCode, 'paymentModel');
+		$this->_loadModel(APPCODE, 'paymentModel');
 		$infos = $this->paymentModel->getAllInfos('', 'code', array(), array(array('listorder', 'asc')));
 		return $infos;
 	}

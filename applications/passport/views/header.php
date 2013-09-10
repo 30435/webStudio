@@ -10,7 +10,7 @@
 <link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/style.css" />
 <link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/member.css" />
 <script type="text/javascript">
-var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";
+var passportUrl = "<?php echo $this->baseUrl; ?>";
 var webgameUrl = "<?php echo $this->appInfos['webgame']['url']; ?>";
 var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 </script>
@@ -52,14 +52,14 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 <div class="top-logo">
     <div class="top">
 		<div class="f14 red gonggao-notice" id="J_notice"><i class='gonggao-icon'></i><span class="gonggao-close">x</span><a class="show-tip" href="/user/showNoticePage">中国雅虎邮箱将停止服务,使用雅虎邮箱的淘米用户请尽快修改，点击查看详情。</a></div>
-        <div class="logo"><a href="<?php echo $this->baseurl; ?>" hidefocus="true"><img src="<?php echo $this->staticUrl; ?>passport/images/logo.png"alt="图片未能显示"/></a></div>
+        <div class="logo"><a href="<?php echo $this->baseUrl; ?>" hidefocus="true"><img src="<?php echo $this->staticUrl; ?>passport/images/logo.png"alt="图片未能显示"/></a></div>
         <div class="top-right">
 			<span class="top-link">
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a> |
-				<a href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/">安全退出</a> |
+				<a href="<?php echo $this->baseUrl; ?>index/logout/">安全退出</a> |
 			<? } else { ?>
-				<a id="login" href="<?php echo $this->baseUrl; ?>">登录</a>　|　
+				<a id="login" href="<?php echo $this->baseUrl; ?>index/login/">登录</a>　|　
 			<? } ?>
 				<a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>　| 
 				<a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a>
@@ -88,11 +88,11 @@ $(".gonggao-close").click(function() {
 </script>
 <div class="top-bar">
 	<ul class="in-bar">
-		<li class="bar"><a href="<?php echo $this->appInfos['passport']['url']; ?>" id="account_index" class="no-underline" hidefocus="true"><span class="spanout-bar">首页</span></a></li>
-        <?php if (empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->appInfos['passport']['url']; ?>index/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li><?php } ?>
-        <li class="bar"><a href="<?php echo $this->appInfos['passport']['url']; ?>index/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
-        <li class="bar"><a href="<?php echo $this->appInfos['passport']['url']; ?>index/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
-        <?php if (!empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->appInfos['passport']['url']; ?>index/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li><?php } ?>
+		<li class="bar"><a href="<?php echo $this->baseUrl; ?>" id="account_index" class="no-underline" hidefocus="true"><span class="spanout-bar">首页</span></a></li>
+        <?php if (empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl; ?>index/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li><?php } ?>
+        <li class="bar"><a href="<?php echo $this->baseUrl; ?>index/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
+        <li class="bar"><a href="<?php echo $this->baseUrl; ?>index/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
+        <?php if (!empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl; ?>index/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li><?php } ?>
         <!--<li class="bar"><a href="/appeal" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
         <li class="bar"><a href="/classroom" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>-->
 	</ul>

@@ -19,7 +19,7 @@ class Custom_Controller extends Base_Controller
      */
     protected function _getCategoryInfos($parentid = 0, $getAll = false)
     {
-		$this->_loadModel($this->appCode, 'categoryModel');
+		$this->_loadModel(APPCODE, 'categoryModel');
         $categoryInfos = $this->categoryModel->getAllInfos('', $keyField = 'id');
 
     	return $categoryInfos;

@@ -8,7 +8,6 @@ class attachmenttool
 	 */
 	public function __construct($params = array())
 	{
-		$this->appCode = isset($params['appCode']) ? $params['appCode'] : '';;
 		$this->uploadRoot = isset($params['uploadPath']) ? $params['uploadPath'] : '';
 		$this->attachmentModel = isset($params['attachmentModel']) ? $params['attachmentModel'] : '';
 		$this->uploadFunc = 'copy';
@@ -168,7 +167,7 @@ class attachmenttool
 	protected function _getSavePath($path = '')
 	{
 		//$this->uploadRoot = 'd:\web\www\github\cishop\wwwroot\uploadfile\\';
-		$path = empty($path) ? $this->appCode : $path;
+		$path = empty($path) ? APPCODE : $path;
 		$savePath = $this->uploadRoot . $path . date('Y/md/');
 
 		if (!is_dir($this->uploadRoot)) {

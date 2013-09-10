@@ -29,7 +29,7 @@ margin-left:-280px;position:absolute;width:560px; overflow:visible;}
 <body onLoad="javascript:document.myform.username.focus();">
 <div class="login_box" id="login_bg">
   <div class="login_iptbox">
-    <form name="myform" method="post" action="<?php echo $this->baseUrl; ?>index.php/admin/index/login/">
+    <form name="myform" method="post" action="<?php echo $this->baseUrl; ?>admin/index/login/">
       <input type="submit" class="login_tj_btn" value="" name="dosubmit">
       <label><?php echo $this->lang->line('admin_username'); ?>:</label>
       <input type="text" value="" class="ipt" name="username">
@@ -38,7 +38,7 @@ margin-left:-280px;position:absolute;width:560px; overflow:visible;}
       <label><?php echo $this->lang->line('admin_checkcode'); ?>:</label>
       <input type="text" onFocus="document.getElementById('yzm').style.display='block'" class="ipt ipt_reg" name="checkcode">
       <div class="yzm" id="yzm">
-	  <img src="<?php echo $this->baseUrl; ?>index.php/admin/index/checkcode" onClick="this.src=this.src+'/'+Math.random()" id="code_img"><br>
+	  <img src="<?php echo $this->baseUrl; ?>admin/index/checkcode" onClick="this.src=this.src+'/'+Math.random()" id="code_img"><br>
         <a href="javascript:document.getElementById('code_img').src='<?php echo $this->baseUrl; ?>admin/index/checkcode'+'/'+Math.random();void(0);"><?php echo $this->lang->line('admin_changecode'); ?>:</a>
 	  </div>
     </form>

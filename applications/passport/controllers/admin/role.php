@@ -114,7 +114,7 @@ class Role extends Custom_AdminController
 			$this->load->view('admin/role_priv');
 		} else {
 			$menuIds = $this->input->post('menuids');
-			$this->_loadModel($this->appCode, 'admin/privilegeModel');
+			$this->_loadModel(APPCODE, 'admin/privilegeModel');
 			$where = array('role_id' => $this->roleId);
 			$this->privilegeModel->deleteInfo($where);
 

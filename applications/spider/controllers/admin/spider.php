@@ -7,7 +7,7 @@ class Spider extends Custom_AdminController
 	{
 		parent::__construct();
 
-		$this->_loadModel($this->appCode, 'spiderModel');
+		$this->_loadModel(APPCODE, 'spiderModel');
 
 		$jobId = $this->input->get_post('id');
 		$this->currentJob = $this->spiderModel->getInfo(array('id =' => $jobId), 'job');
@@ -16,13 +16,13 @@ class Spider extends Custom_AdminController
 		}
 
 		$this->siteId = $this->currentJob['site_id'];
-		$baseCacheDir = $this->currentApp['path'] . 'cache/';
+		$baseCacheDir = $this->appInfos['spider']['path'] . 'cache/';
 		$this->currentDay = date('Ymd', $this->time);
 
 		$this->cacheDirs = array(
 			'glist' => $baseCacheDir . $this->siteId . '/',
 			'gpage' => $baseCacheDir . $this->siteId . '/',
-			'file' => $this->uploadPath . $this->appCode . '/' . $this->siteId . '/' . $this->currentDay . '/'
+			'file' => $this->uploadPath . APPCODE . '/' . $this->siteId . '/' . $this->currentDay . '/'
 		);
 		foreach ($this->cacheDirs as $cacheDir) {
 			$this->_makeDir($cacheDir);

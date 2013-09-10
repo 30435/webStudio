@@ -9,7 +9,7 @@ class Index extends Custom_Controller
 		$needLoginMethods = array('index');
 
 		if (in_array($this->method, $needLoginMethods) && empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您还没登录，请先登录！', $this->appInfos['passport']['url'] . 'index/login');
+			$this->_messageInfo('您还没登录，请先登录！', $this->baseUrl . 'index/login');
 		}
 		$this->categoryInfos = $this->_getCategoryInfos();
 	}
@@ -251,7 +251,7 @@ class Index extends Custom_Controller
 	public function editpwd()
 	{
 		if (empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您还没有登录！', $this->baseUrl);
+			$this->_messageInfo('您还没有登录！', $this->baseUrl . 'index/login/');
 		}
 		
 		$this->form_validation->set_rules('password', 'passport', 'trim|required|xss_clean');
@@ -273,7 +273,7 @@ class Index extends Custom_Controller
 
 				$editResult = $this->memberModel->editInfo($data, $where);
 				if ($editResult) {
-					$this->_messageInfo('密码修改成功，请重新登陆！', $this->baseUrl);
+					$this->_messageInfo('密码修改成功，请重新登陆！', $this->baseUrl . 'index/login/');
 				} else {
 					$this->_messageInfo('密码修改异常，请重新修改！', $this->baseUrl . 'index/editpwd');
 				}

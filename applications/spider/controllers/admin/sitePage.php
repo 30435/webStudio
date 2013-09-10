@@ -13,7 +13,7 @@ class SitePage extends Custom_AdminController
 		$this->siteInfos = $this->currentModel->getAllInfos('site', 'id');
 		$this->operationMenus = array('spider', 'downFile', 'localPage', 'edit', 'delete');
 
-		$this->baseCacheDir = $this->currentApp['path'] . 'cache/';
+		$this->baseCacheDir = $this->appInfos['spider']['path'] . 'cache/';
 	}
 
 	/**

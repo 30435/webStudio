@@ -95,7 +95,7 @@ class frontpay extends Custom_Controller
 			'account_status' => '0',
 		);
 
-		$this->_loadModel($this->appCode, 'accountModel');
+		$this->_loadModel(APPCODE, 'accountModel');
 		$this->accountModel->addInfo($insertInfo);
 		$this->_updateUserMoney($orderInfo['money'], $orderInfo['username'], $orderInfo['getuserid']);
 		echo '1';

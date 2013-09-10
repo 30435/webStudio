@@ -28,7 +28,7 @@ class Index extends Custom_Controller
 			$this->moneyInfo = $this->_getMoneyInfo($this->loginedUserInfo['username']);
 		}
 
-		$this->_loadModel($this->appCode, 'paymonthModel');
+		$this->_loadModel(APPCODE, 'paymonthModel');
 		$this->paymonthInfos = $this->paymonthModel->getAllInfos('paymonth', 'id', array(), array(array('listorder', 'desc')));
 	}
 
