@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 �?09 �?06 �?12:04
+-- 生成日期: 2013 �?09 �?10 �?05:54
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `kids_ucserver`
+-- 数据库: `studio_ucserver`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_admins`
+-- 表的结构 `su_admins`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_admins` (
+CREATE TABLE IF NOT EXISTS `su_admins` (
   `uid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `username` char(15) NOT NULL DEFAULT '',
   `allowadminsetting` tinyint(1) NOT NULL DEFAULT '0',
@@ -48,10 +48,10 @@ CREATE TABLE IF NOT EXISTS `ku_admins` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_applications`
+-- 表的结构 `su_applications`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_applications` (
+CREATE TABLE IF NOT EXISTS `su_applications` (
   `appid` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `type` varchar(16) NOT NULL DEFAULT '',
   `name` varchar(20) NOT NULL DEFAULT '',
@@ -71,20 +71,20 @@ CREATE TABLE IF NOT EXISTS `ku_applications` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- 转存表中的数据 `ku_applications`
+-- 转存表中的数据 `su_applications`
 --
 
-INSERT INTO `ku_applications` (`appid`, `type`, `name`, `url`, `authkey`, `ip`, `viewprourl`, `apifilename`, `charset`, `dbcharset`, `synlogin`, `recvnote`, `extra`, `tagtemplates`, `allowips`) VALUES
+INSERT INTO `su_applications` (`appid`, `type`, `name`, `url`, `authkey`, `ip`, `viewprourl`, `apifilename`, `charset`, `dbcharset`, `synlogin`, `recvnote`, `extra`, `tagtemplates`, `allowips`) VALUES
 (1, 'DISCUZX', 'kids bbs!', 'http://bbs.kids.com', 'Lby2Abx741Fdl5qfk3m76f56aciae751n5408ef9Dc3a66EcJbje63rcG5U6WdW8', '', '', 'uc.php', 'utf-8', 'utf8', 1, 1, '', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="template"><![CDATA[<a href="{url}" target="_blank">{subject}</a>]]></item>\r\n	<item id="fields">\r\n		<item id="subject"><![CDATA[标题]]></item>\r\n		<item id="uid"><![CDATA[用户 ID]]></item>\r\n		<item id="username"><![CDATA[发帖者]]></item>\r\n		<item id="dateline"><![CDATA[日期]]></item>\r\n		<item id="url"><![CDATA[主题地址]]></item>\r\n	</item>\r\n</root>', ''),
 (2, 'OTHER', 'ci平台', 'http://passport.kids.com/api/index', '776frojkxvPD2dshIXcw2QwlldZca7ryEwZfw+dFQGRB9X4IcjSa', '', '', 'uc.php', '', '', 1, 1, 'a:1:{s:7:"apppath";s:0:"";}', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="template"><![CDATA[]]></item>\r\n</root>', '');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_badwords`
+-- 表的结构 `su_badwords`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_badwords` (
+CREATE TABLE IF NOT EXISTS `su_badwords` (
   `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `admin` varchar(15) NOT NULL DEFAULT '',
   `find` varchar(255) NOT NULL DEFAULT '',
@@ -97,10 +97,10 @@ CREATE TABLE IF NOT EXISTS `ku_badwords` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_domains`
+-- 表的结构 `su_domains`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_domains` (
+CREATE TABLE IF NOT EXISTS `su_domains` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `domain` char(40) NOT NULL DEFAULT '',
   `ip` char(15) NOT NULL DEFAULT '',
@@ -110,10 +110,10 @@ CREATE TABLE IF NOT EXISTS `ku_domains` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_failedlogins`
+-- 表的结构 `su_failedlogins`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_failedlogins` (
+CREATE TABLE IF NOT EXISTS `su_failedlogins` (
   `ip` char(15) NOT NULL DEFAULT '',
   `count` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `lastupdate` int(10) unsigned NOT NULL DEFAULT '0',
@@ -123,10 +123,10 @@ CREATE TABLE IF NOT EXISTS `ku_failedlogins` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_feeds`
+-- 表的结构 `su_feeds`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_feeds` (
+CREATE TABLE IF NOT EXISTS `su_feeds` (
   `feedid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `appid` varchar(30) NOT NULL DEFAULT '',
   `icon` varchar(30) NOT NULL DEFAULT '',
@@ -156,10 +156,10 @@ CREATE TABLE IF NOT EXISTS `ku_feeds` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_friends`
+-- 表的结构 `su_friends`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_friends` (
+CREATE TABLE IF NOT EXISTS `su_friends` (
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `friendid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `direction` tinyint(1) NOT NULL DEFAULT '0',
@@ -174,10 +174,10 @@ CREATE TABLE IF NOT EXISTS `ku_friends` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_mailqueue`
+-- 表的结构 `su_mailqueue`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_mailqueue` (
+CREATE TABLE IF NOT EXISTS `su_mailqueue` (
   `mailid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `touid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `tomail` varchar(32) NOT NULL,
@@ -198,20 +198,20 @@ CREATE TABLE IF NOT EXISTS `ku_mailqueue` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_memberfields`
+-- 表的结构 `su_memberfields`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_memberfields` (
+CREATE TABLE IF NOT EXISTS `su_memberfields` (
   `uid` mediumint(8) unsigned NOT NULL,
   `blacklist` text NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `ku_memberfields`
+-- 转存表中的数据 `su_memberfields`
 --
 
-INSERT INTO `ku_memberfields` (`uid`, `blacklist`) VALUES
+INSERT INTO `su_memberfields` (`uid`, `blacklist`) VALUES
 (1, ''),
 (2, ''),
 (3, ''),
@@ -269,15 +269,17 @@ INSERT INTO `ku_memberfields` (`uid`, `blacklist`) VALUES
 (55, ''),
 (56, ''),
 (57, ''),
-(58, '');
+(58, ''),
+(59, ''),
+(60, '');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_members`
+-- 表的结构 `su_members`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_members` (
+CREATE TABLE IF NOT EXISTS `su_members` (
   `uid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `username` char(15) NOT NULL DEFAULT '',
   `password` char(32) NOT NULL DEFAULT '',
@@ -293,13 +295,13 @@ CREATE TABLE IF NOT EXISTS `ku_members` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
--- 转存表中的数据 `ku_members`
+-- 转存表中的数据 `su_members`
 --
 
-INSERT INTO `ku_members` (`uid`, `username`, `password`, `email`, `myid`, `myidkey`, `regip`, `regdate`, `lastloginip`, `lastlogintime`, `salt`, `secques`) VALUES
+INSERT INTO `su_members` (`uid`, `username`, `password`, `email`, `myid`, `myidkey`, `regip`, `regdate`, `lastloginip`, `lastlogintime`, `salt`, `secques`) VALUES
 (1, 'aaaaaa', '823ac4c6ba00a8a3e5679deba20f4190', '', '', '', '127.0.0.1', 1378366376, 0, 0, '8bf03f', ''),
 (2, '0641497', '3ca8d703fad377c94dadd6b10de795d9', '', '', '', '127.0.0.1', 1378444670, 0, 0, 'e06c10', ''),
 (3, '0684970', 'be5d7e5fc9401c9bc18fbdb554d73b63', '', '', '', '127.0.0.1', 1378444754, 0, 0, '28f9b5', ''),
@@ -357,15 +359,17 @@ INSERT INTO `ku_members` (`uid`, `username`, `password`, `email`, `myid`, `myidk
 (55, '0696358', '20ace1be392340634726e0f00306d0fa', '', '', '', '127.0.0.1', 1378446948, 0, 0, '40064a', ''),
 (56, '0655605', '7d9966373be5f1d8ac94ab5a9d5161cd', '', '', '', '127.0.0.1', 1378446948, 0, 0, '40fa0a', ''),
 (57, '0696578', '5cc2a4df94d2c9e498a5156b42f0e3f9', '', '', '', '127.0.0.1', 1378455636, 0, 0, '4984a2', ''),
-(58, '063899', '2f07ac0aeae3e05586b38ecefc590e86', '', '', '', '127.0.0.1', 1378455636, 0, 0, '4a6b1d', '');
+(58, '063899', '2f07ac0aeae3e05586b38ecefc590e86', '', '', '', '127.0.0.1', 1378455636, 0, 0, '4a6b1d', ''),
+(59, '1075260', 'bd4405feb31c24b8aa5093244c5fc5fb', '', '', '', '127.0.0.1', 1378778726, 0, 0, '6811d5', ''),
+(60, '108406', '41ff66431b01a8c0d37c5571e1aede87', '', '', '', '127.0.0.1', 1378778726, 0, 0, '690595', '');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_mergemembers`
+-- 表的结构 `su_mergemembers`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_mergemembers` (
+CREATE TABLE IF NOT EXISTS `su_mergemembers` (
   `appid` smallint(6) unsigned NOT NULL,
   `username` char(15) NOT NULL,
   PRIMARY KEY (`appid`,`username`)
@@ -374,10 +378,10 @@ CREATE TABLE IF NOT EXISTS `ku_mergemembers` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_newpm`
+-- 表的结构 `su_newpm`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_newpm` (
+CREATE TABLE IF NOT EXISTS `su_newpm` (
   `uid` mediumint(8) unsigned NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -385,10 +389,10 @@ CREATE TABLE IF NOT EXISTS `ku_newpm` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_notelist`
+-- 表的结构 `su_notelist`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_notelist` (
+CREATE TABLE IF NOT EXISTS `su_notelist` (
   `noteid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `operation` char(32) NOT NULL,
   `closed` tinyint(4) NOT NULL DEFAULT '0',
@@ -406,10 +410,10 @@ CREATE TABLE IF NOT EXISTS `ku_notelist` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
--- 转存表中的数据 `ku_notelist`
+-- 转存表中的数据 `su_notelist`
 --
 
-INSERT INTO `ku_notelist` (`noteid`, `operation`, `closed`, `totalnum`, `succeednum`, `getdata`, `postdata`, `dateline`, `pri`, `app1`, `app2`) VALUES
+INSERT INTO `su_notelist` (`noteid`, `operation`, `closed`, `totalnum`, `succeednum`, `getdata`, `postdata`, `dateline`, `pri`, `app1`, `app2`) VALUES
 (1, 'updateapps', 1, 0, 0, '', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="1">\r\n		<item id="appid"><![CDATA[1]]></item>\r\n		<item id="type"><![CDATA[DISCUZX]]></item>\r\n		<item id="name"><![CDATA[kids bbs!]]></item>\r\n		<item id="url"><![CDATA[http://bbs.kids.com]]></item>\r\n		<item id="ip"><![CDATA[]]></item>\r\n		<item id="charset"><![CDATA[utf-8]]></item>\r\n		<item id="synlogin"><![CDATA[1]]></item>\r\n		<item id="extra"><![CDATA[]]></item>\r\n	</item>\r\n	<item id="UC_API"><![CDATA[http://ucserver.kids.com]]></item>\r\n</root>', 0, 0, 0, 0),
 (2, 'updatepw', 1, 1, 1, 'username=aaaaaaaa&password=', '', 1378362370, 0, 1, 0),
 (3, 'updatepw', 1, 1, 1, 'username=aaaaaaaa&password=', '', 1378362371, 0, 1, 0),
@@ -424,10 +428,10 @@ INSERT INTO `ku_notelist` (`noteid`, `operation`, `closed`, `totalnum`, `succeed
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_indexes`
+-- 表的结构 `su_pm_indexes`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_indexes` (
+CREATE TABLE IF NOT EXISTS `su_pm_indexes` (
   `pmid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`pmid`),
@@ -437,10 +441,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_indexes` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_lists`
+-- 表的结构 `su_pm_lists`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_lists` (
+CREATE TABLE IF NOT EXISTS `su_pm_lists` (
   `plid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `pmtype` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -458,10 +462,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_lists` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_members`
+-- 表的结构 `su_pm_members`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_members` (
+CREATE TABLE IF NOT EXISTS `su_pm_members` (
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `isnew` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -477,10 +481,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_members` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_0`
+-- 表的结构 `su_pm_messages_0`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_0` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_0` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -495,10 +499,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_0` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_1`
+-- 表的结构 `su_pm_messages_1`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_1` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_1` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -513,10 +517,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_1` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_2`
+-- 表的结构 `su_pm_messages_2`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_2` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_2` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -531,10 +535,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_2` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_3`
+-- 表的结构 `su_pm_messages_3`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_3` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_3` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -549,10 +553,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_3` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_4`
+-- 表的结构 `su_pm_messages_4`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_4` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_4` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -567,10 +571,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_4` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_5`
+-- 表的结构 `su_pm_messages_5`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_5` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_5` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -585,10 +589,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_5` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_6`
+-- 表的结构 `su_pm_messages_6`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_6` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_6` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -603,10 +607,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_6` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_7`
+-- 表的结构 `su_pm_messages_7`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_7` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_7` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -621,10 +625,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_7` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_8`
+-- 表的结构 `su_pm_messages_8`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_8` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_8` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -639,10 +643,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_8` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_pm_messages_9`
+-- 表的结构 `su_pm_messages_9`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_pm_messages_9` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_9` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -657,10 +661,10 @@ CREATE TABLE IF NOT EXISTS `ku_pm_messages_9` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_protectedmembers`
+-- 表的结构 `su_protectedmembers`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_protectedmembers` (
+CREATE TABLE IF NOT EXISTS `su_protectedmembers` (
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `username` char(15) NOT NULL DEFAULT '',
   `appid` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -670,29 +674,29 @@ CREATE TABLE IF NOT EXISTS `ku_protectedmembers` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `ku_protectedmembers`
+-- 转存表中的数据 `su_protectedmembers`
 --
 
-INSERT INTO `ku_protectedmembers` (`uid`, `username`, `appid`, `dateline`, `admin`) VALUES
+INSERT INTO `su_protectedmembers` (`uid`, `username`, `appid`, `dateline`, `admin`) VALUES
 (2, 'kidsadmin', 0, 1377851696, '');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_settings`
+-- 表的结构 `su_settings`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_settings` (
+CREATE TABLE IF NOT EXISTS `su_settings` (
   `k` varchar(32) NOT NULL DEFAULT '',
   `v` text NOT NULL,
   PRIMARY KEY (`k`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `ku_settings`
+-- 转存表中的数据 `su_settings`
 --
 
-INSERT INTO `ku_settings` (`k`, `v`) VALUES
+INSERT INTO `su_settings` (`k`, `v`) VALUES
 ('accessemail', ''),
 ('censoremail', ''),
 ('censorusername', ''),
@@ -723,10 +727,10 @@ INSERT INTO `ku_settings` (`k`, `v`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_sqlcache`
+-- 表的结构 `su_sqlcache`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_sqlcache` (
+CREATE TABLE IF NOT EXISTS `su_sqlcache` (
   `sqlid` char(6) NOT NULL DEFAULT '',
   `data` char(100) NOT NULL,
   `expiry` int(10) unsigned NOT NULL,
@@ -737,10 +741,10 @@ CREATE TABLE IF NOT EXISTS `ku_sqlcache` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_tags`
+-- 表的结构 `su_tags`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_tags` (
+CREATE TABLE IF NOT EXISTS `su_tags` (
   `tagname` char(20) NOT NULL,
   `appid` smallint(6) unsigned NOT NULL DEFAULT '0',
   `data` mediumtext,
@@ -751,10 +755,10 @@ CREATE TABLE IF NOT EXISTS `ku_tags` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ku_vars`
+-- 表的结构 `su_vars`
 --
 
-CREATE TABLE IF NOT EXISTS `ku_vars` (
+CREATE TABLE IF NOT EXISTS `su_vars` (
   `name` char(32) NOT NULL DEFAULT '',
   `value` char(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`name`)

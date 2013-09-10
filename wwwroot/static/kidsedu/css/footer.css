@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*底部*/
+.footer{width:960px;margin:15px auto 0 auto;text-align:center;line-height:23px;padding-bottom:20px;color:#818181;}
+.footer .hot{height:14px;padding-left:179px;overflow:hidden;}
+.footer .hot img{float:left;}
+.footer p{line-height:normal;height:23px;overflow:hidden;}
+.footer a{margin:0 11px;color:#818181;}
+.footer img{vertical-align:middle;}

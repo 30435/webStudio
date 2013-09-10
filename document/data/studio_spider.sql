@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.5.8.2
 -- http://www.phpmyadmin.net
 --
--- 主机: 127.0.0.1
--- 生成日期: 2013 �?08 �?20 �?12:53
+-- 主机: localhost
+-- 生成日期: 2013 �?09 �?10 �?05:54
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- 数据库: `studio_spider`
 --
-CREATE DATABASE IF NOT EXISTS `studio_spider` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `studio_spider`;
 
 -- --------------------------------------------------------
 

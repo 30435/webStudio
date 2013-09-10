@@ -12,6 +12,11 @@ class Index extends Custom_Controller
 		parent::__construct();
 
 		$this->loginedUserInfo = $this->_checkUserLogin();
+		$needLoginMethods = array('mypay', 'myaccount', 'mypaymonth', 'mypaypwd');
+
+		if (in_array($this->method, $needLoginMethods) && empty($this->loginedUserInfo)) {
+			$this->_messageInfo('您还没登录，请先登录！', $this->appInfos['passport']['url'] . 'index/login');
+		}
 		foreach ($this->paymentInfos as $code => $paymentInfo) {
 			if ($paymentInfo['payment_status'] == '0' && !in_array($this->loginedUserInfo['username'], $this->testUsers) && $this->method != 'respond') {
 				unset($this->paymentInfos[$code]);

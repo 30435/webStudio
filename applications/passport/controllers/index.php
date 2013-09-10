@@ -9,7 +9,7 @@ class Index extends Custom_Controller
 		$needLoginMethods = array('index');
 
 		if (in_array($this->method, $needLoginMethods) && empty($this->loginedUserInfo)) {
-			redirect('index/login');
+			$this->_messageInfo('您还没登录，请先登录！', $this->appInfos['passport']['url'] . 'index/login');
 		}
 		$this->categoryInfos = $this->_getCategoryInfos();
 	}

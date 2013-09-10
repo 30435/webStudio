@@ -40,7 +40,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 			<li <?php if ($this->method == 'index') echo 'class="cur"' ?>><a href="/"><span>米币充值</span></a></li>
 			<li <?php if ($this->method == 'monthpay') echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/paymonth"><span>游戏包月</span></a></li>
 			<li <?php if ($this->method == 'exchange') echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/exchange"><span>游戏币兑换</span></a></li>
-			<li <?php if ($this->method == 'myaccount') echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值中心</span></a></li>
+			<li <?php if (in_array($this->method, array('myaccount', 'mypay', 'mypaymonth', 'mypaypwd'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值</span></a></li>
 		</ul>
 	</div>
 </div>
