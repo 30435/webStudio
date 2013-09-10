@@ -142,9 +142,7 @@
 </div>
 
 
-<script src="http://static.kids.com/common/script/jquery-1.8.0.min.js" type="text/javascript"></script> 
-
-
+<script src="<?php echo $this->staticUrl; ?>common/script/jquery-1.8.0.min.js" type="text/javascript"></script> 
 <script type="text/javascript">
 $.fn.Slider = function(settings){
 	settings = jQuery.extend({

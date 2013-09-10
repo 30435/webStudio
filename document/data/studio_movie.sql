@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 08:13:17
+-- 生成日期: 2013-09-10 08:08:40
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `studio_kidsedu`
+-- 数据库: `studio_movie`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sk_category`
+-- 表的结构 `sm_category`
 --
 
-CREATE TABLE IF NOT EXISTS `sk_category` (
+CREATE TABLE IF NOT EXISTS `sm_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
@@ -51,10 +51,10 @@ CREATE TABLE IF NOT EXISTS `sk_category` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sk_new`
+-- 表的结构 `sm_new`
 --
 
-CREATE TABLE IF NOT EXISTS `sk_new` (
+CREATE TABLE IF NOT EXISTS `sm_new` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '新闻类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -82,10 +82,10 @@ CREATE TABLE IF NOT EXISTS `sk_new` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sk_picture`
+-- 表的结构 `sm_picture`
 --
 
-CREATE TABLE IF NOT EXISTS `sk_picture` (
+CREATE TABLE IF NOT EXISTS `sm_picture` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -112,10 +112,10 @@ CREATE TABLE IF NOT EXISTS `sk_picture` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sk_spage`
+-- 表的结构 `sm_spage`
 --
 
-CREATE TABLE IF NOT EXISTS `sk_spage` (
+CREATE TABLE IF NOT EXISTS `sm_spage` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '单网页资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',

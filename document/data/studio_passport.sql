@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.8.2
+-- version 4.0.6
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 �?09 �?10 �?05:54
+-- 生成日期: 2013-09-10 08:16:52
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -73,19 +73,14 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- 转存表中的数据 `sp_admin_managerlog`
 --
 
 INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_name`, `menu_id`, `menu_name`, `data`, `data_old`, `logtype`, `ip`, `inputtime`) VALUES
-(1, 1, 'wangcanliang', 1, '超级管理员', '28', '添加角色', 'a:4:{s:4:"name";s:9:"管理员";s:11:"description";s:0:"";s:9:"listorder";s:0:"";s:6:"status";s:1:"1";}', 'a:0:{}', 'add', '127.0.0.1', 1378707355),
-(2, 1, 'wangcanliang', 1, '超级管理员', '20', '编辑管理员', 'a:7:{s:8:"username";s:7:"wangcan";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:6:"islock";s:1:"1";s:10:"createtime";i:1378707398;s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:7:"encrypt";s:6:"SEQ7TW";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"37bbc5485e0993f7caf024ef545d5d5c";s:6:"roleid";s:1:"2";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"g9dYGv";s:10:"createtime";s:10:"1364371358";s:8:"loginnum";s:1:"3";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1362981487";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1378707398),
-(3, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:14:{s:7:"catname";s:12:"诺瓦奇兵";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:6:"catdir";s:4:"nova";s:5:"image";s:0:"";s:11:"description";s:18:"诺瓦奇兵资讯";s:6:"ishtml";s:1:"1";s:8:"template";s:8:"list_big";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:12:"biglist_html";s:11:"bind_domain";s:19:"http://nova.ci.com/";}', 'a:17:{s:2:"id";s:1:"8";s:7:"catname";s:12:"诺瓦奇兵";s:6:"catdir";s:4:"nova";s:9:"parentdir";s:1:"/";s:5:"image";s:0:"";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:0:"";s:3:"url";s:46:"http://webgame.kids.com/index/category?catid=8";s:9:"listorder";s:1:"0";s:11:"description";s:18:"诺瓦奇兵资讯";s:8:"template";s:8:"list_big";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:12:"biglist_html";s:6:"ishtml";s:1:"1";}', 'edit', '127.0.0.1', 1378719466),
-(4, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:14:{s:7:"catname";s:12:"新闻公告";s:8:"parentid";s:1:"8";s:7:"modelid";s:1:"2";s:6:"catdir";s:4:"xwgg";s:5:"image";s:0:"";s:11:"description";s:12:"诺瓦新闻";s:6:"ishtml";s:1:"1";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:19:"http://nova.ci.com/";}', 'a:17:{s:2:"id";s:1:"9";s:7:"catname";s:12:"新闻公告";s:6:"catdir";s:4:"xwgg";s:9:"parentdir";s:5:"nova/";s:5:"image";s:0:"";s:8:"parentid";s:1:"8";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:0:"";s:3:"url";s:46:"http://webgame.kids.com/index/category?catid=9";s:9:"listorder";s:1:"0";s:11:"description";s:12:"诺瓦新闻";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1378720044),
-(5, 2, 'wangcan', 3, '管理员', '116', '编辑游戏', 'a:19:{s:4:"name";s:12:"诺瓦奇兵";s:4:"code";s:4:"nova";s:12:"webgame_type";s:1:"1";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:19:"http://nova.ci.com/";s:10:"url_server";s:0:"";s:7:"url_bbs";s:0:"";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:11:"description";s:48:"诺瓦奇兵，倾心打造，经典儿童游戏";s:9:"pic_small";s:62:"http://upload.kids.com/passport2013/0905/20130905144330972.jpg";s:10:"pic_middle";s:62:"http://upload.kids.com/passport2013/0905/20130905144418890.jpg";s:7:"pic_big";s:62:"http://upload.kids.com/passport2013/0905/20130905144425525.jpg";s:9:"coin_name";s:6:"瓦币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:1377164880;s:12:"end_maintain";i:1377769680;s:12:"url_maintain";s:21:"http://nova.kids.com/";}', 'a:21:{s:2:"id";s:1:"1";s:4:"code";s:4:"nova";s:4:"name";s:12:"诺瓦奇兵";s:11:"description";s:48:"诺瓦奇兵，倾心打造，经典儿童游戏";s:5:"brief";N;s:9:"pic_small";s:62:"http://upload.kids.com/passport2013/0905/20130905144330972.jpg";s:10:"pic_middle";s:62:"http://upload.kids.com/passport2013/0905/20130905144418890.jpg";s:7:"pic_big";s:62:"http://upload.kids.com/passport2013/0905/20130905144425525.jpg";s:8:"url_home";s:21:"http://nova.kids.com/";s:10:"url_server";s:0:"";s:7:"url_bbs";s:0:"";s:9:"coin_name";s:6:"瓦币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:12:"webgame_type";s:1:"1";s:14:"webgame_status";s:1:"1";s:12:"url_maintain";s:21:"http://nova.kids.com/";s:14:"start_maintain";s:10:"1377164880";s:12:"end_maintain";s:10:"1377769680";}', 'edit', '127.0.0.1', 1378775403),
-(6, 2, 'wangcan', 3, '管理员', '116', '编辑游戏', 'a:19:{s:4:"name";s:13:"自主占位1";s:4:"code";s:4:"self";s:12:"webgame_type";s:1:"1";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:19:"http://nova.ci.com/";s:10:"url_server";s:0:"";s:7:"url_bbs";s:0:"";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:11:"description";s:33:"正在精心打造，敬请期待";s:9:"pic_small";s:62:"http://upload.kids.com/passport2013/0828/20130828182405772.jpg";s:10:"pic_middle";s:62:"http://upload.kids.com/passport2013/0828/20130828182415985.jpg";s:7:"pic_big";s:62:"http://upload.kids.com/passport2013/0828/20130828182438223.png";s:9:"coin_name";s:7:"瓦币3";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:1377164880;s:12:"end_maintain";i:1377769680;s:12:"url_maintain";s:21:"http://nova.kids.com/";}', 'a:21:{s:2:"id";s:1:"3";s:4:"code";s:4:"self";s:4:"name";s:13:"自主占位1";s:11:"description";s:33:"正在精心打造，敬请期待";s:5:"brief";N;s:9:"pic_small";s:62:"http://upload.kids.com/passport2013/0828/20130828182405772.jpg";s:10:"pic_middle";s:62:"http://upload.kids.com/passport2013/0828/20130828182415985.jpg";s:7:"pic_big";s:62:"http://upload.kids.com/passport2013/0828/20130828182438223.png";s:8:"url_home";s:21:"http://nova.kids.com/";s:10:"url_server";s:0:"";s:7:"url_bbs";s:0:"";s:9:"coin_name";s:7:"瓦币3";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:12:"webgame_type";s:1:"1";s:14:"webgame_status";s:1:"1";s:12:"url_maintain";s:21:"http://nova.kids.com/";s:14:"start_maintain";s:10:"1377164880";s:12:"end_maintain";s:10:"1377769680";}', 'edit', '127.0.0.1', 1378777788);
+(1, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"4";}', 'a:10:{s:2:"id";s:2:"15";s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"0";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1378793797);
 
 -- --------------------------------------------------------
 
@@ -129,7 +124,7 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (12, '修改个人信息', 11, 'passport', 'manager', 'editm', '', 0, '0', '1'),
 (13, '修改密码', 11, 'passport', 'manager', 'editp', '', 0, '0', '1'),
 (14, '操作记录', 11, 'passport', 'managerlog', 'listinfom', '', 0, '0', '1'),
-(15, '查看日志', 11, 'passport', 'managerlog', 'viewm', '', 0, '0', '1'),
+(15, '查看日志', 11, 'passport', 'managerlog', 'viewm', '', 0, '0', '4'),
 (16, '管理员设置', 2, 'passport', '', '', '', 0, '0', '1'),
 (17, '管理员操作日志', 2, 'passport', '', '', '', 1, '0', '0'),
 (18, '管理员管理', 16, 'passport', 'manager', 'listinfo', '', 0, '0', '1'),
@@ -587,16 +582,7 @@ CREATE TABLE IF NOT EXISTS `sp_linkurl` (
   `linkurl_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `add_time` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- 转存表中的数据 `sp_linkurl`
---
-
-INSERT INTO `sp_linkurl` (`id`, `linkurl_type`, `name`, `url`, `logo`, `description`, `username`, `listorder`, `linkurl_status`, `add_time`) VALUES
-(1, 'nova', '友情链接1', 'http://abc.com', 'http://upload.kids.com/passport2013/0902/20130902141706112.png', '暗室逢灯', '', 2, 1, 1378081920),
-(2, 'nova', '网页游戏', 'http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack', '', '', '', 66, 1, 1378536060),
-(3, 'web', '淘米游戏样式style', 'http://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack', '', '', '', 444, 0, 1378622460);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -637,16 +623,7 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   `active_over_day` int(7) NOT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1075261 ;
-
---
--- 转存表中的数据 `sp_member`
---
-
-INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `pwd_strong`, `encrypt`, `avatar`, `email`, `truename`, `gender`, `msn`, `telephone`, `get_username`, `address`, `qq`, `birthday`, `postcode`, `mobile`, `idcard`, `regip`, `regdate`, `loginnum`, `lastloginip`, `lastlogintime`, `active`, `active_7`, `active_over`, `active_day`, `active_7_day`, `active_over_day`) VALUES
-(1, 'aaaaaa', 1, 'f580167671c2342b1eb9fb9bca9ba81d', '1', 'xZZnSD', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378776432, 3, '127.0.0.1', 1378778713, '1', '1', '1', 0, 0, 0),
-(1075260, '1075260', 59, 'c1ae10739c94c674ba5bbbdb1708891f', '1', 'cWMVy3', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378778726, 0, '0', 0, '1', '1', '1', 0, 0, 0),
-(108406, '108406', 60, 'e130d94ed684c5436fca9a826074f13f', '1', 'Qmkqzb', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378778726, 1, '127.0.0.1', 1378778728, '1', '1', '1', 0, 0, 0);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -670,19 +647,7 @@ CREATE TABLE IF NOT EXISTS `sp_poster` (
   `pic_ext` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `spaceid` (`space_id`,`ad_status`,`listorder`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
-
---
--- 转存表中的数据 `sp_poster`
---
-
-INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `ad_type`, `start_time`, `end_time`, `add_time`, `listorder`, `ad_status`, `url`, `url_ext`, `pic`, `pic_ext`) VALUES
-(1, '幻灯广告1', 1, 'image', 0, 0, 0, 1, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165118385.png', ''),
-(2, '首页幻灯广告2', 1, '0', 0, 0, 0, 0, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165158554.jpg', ''),
-(3, '首页幻灯广告3', 1, 'image', 0, 0, 0, 4, 1, 'http://www.163.com/special/0077450P/login_frame.html', '', 'http://upload.kids.com/passport2013/0829/20130829165231318.png', ''),
-(4, '幻灯广告4', 1, 'image', 0, 0, 0, 1, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165118385.png', ''),
-(5, '首页幻灯广告5', 1, '0', 0, 0, 0, 0, 1, '', '', 'http://upload.kids.com/passport2013/0829/20130829165158554.jpg', ''),
-(6, '首页幻灯广告6', 1, 'image', 0, 0, 0, 4, 1, 'http://www.163.com/special/0077450P/login_frame.html', '', 'http://upload.kids.com/passport2013/0829/20130829165231318.png', '');
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -700,14 +665,7 @@ CREATE TABLE IF NOT EXISTS `sp_poster_space` (
   `space_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `disabled` (`space_status`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- 转存表中的数据 `sp_poster_space`
---
-
-INSERT INTO `sp_poster_space` (`id`, `name`, `space_type`, `width`, `height`, `description`, `space_status`) VALUES
-(1, '首页幻灯广告', 'imagelist', 400, 500, '首页幻灯图片广告列表', 0);
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
