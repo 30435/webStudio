@@ -3,7 +3,7 @@
 
 /*表单内容*/
 .formContent{padding-top:20px;}
-.formContent h3{height:38px;line-height:38px;padding-left:35px;margin-bottom:25px;border-bottom:1px solid #ddd;background:url(http://image1.jmw.com.cn/user/images/admin_personal/admin_21.gif) 10px center no-repeat;}
+.formContent h3{height:38px;line-height:38px;padding-left:35px;margin-bottom:25px;border-bottom:1px solid #ddd;background:url(../images/admin_21.gif) 10px center no-repeat;}
 .formContent p{height:auto !important;height:40px;min-height:40px;line-height:30px;display:block;margin-bottom:5px;}
 .formContent p:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
 .formContent p em,.formContent input,.formContent p select,.formContent p font,.formContent p label{float:left;margin:3px 10px 0 0;font-size:12px;}

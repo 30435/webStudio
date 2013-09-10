@@ -19,4 +19,9 @@ class Index extends CmsIndex
 	{
 		$this->load->view('index1', $this->frontController);
 	}
+
+	public function show()
+	{
+		$this->load->view('show', $this->frontController);
+	}
 }

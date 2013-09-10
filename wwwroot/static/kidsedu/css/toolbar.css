@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0;margin:0}
+.topToolbar_box,.topToolbar_iframe{width:960px;height:31px;}
+.topToolbar{width:948px;height:31px;line-height:30px;padding:0 5px;font-family:宋体;font-size:12px;color:#555;border-left:1px solid #ccc;border-right:1px solid #ccc;background:url(../images/t_1.jpg) repeat-x;}
+.topToolbar_box .topToolbar{position:fixed !important;/*FF IE7*/ position:absolute;/*IE6*/top:0;_top:expression(eval(document.documentElement.scrollTop));z-index:1010;}
+.topToolbar_iframe{position:absolute;left:0;top:0;z-index:-1;filter:alpha(opacity=0);opacity:0;}
+.topToolbar a{color:#555;text-decoration:none}
+.topToolbar a:hover{color:#e90101;text-decoration:underline;}
+.topToolbar ul{list-style:none;}
+.topToolbar em,.topToolbar i{font-style:normal;}
+
+.secWrap .topToolbar_box,.secWrap .topToolbar_iframe{width:1000px;}
+.secWrap .topToolbar{width:988px;}
+
+/*图标*/
+.topToolbar i{float:left;width:14px;height:14px;display:block;margin:8px 5px 0 0;font-size:0;overflow:hidden;}
+.topToolbar i.ico1{background:url(../images/sprites.gif) left 0 no-repeat;}
+.topToolbar i.ico2{background:url(../images/sprites.gif) -15px 0 no-repeat;}
+.topToolbar i.ico3{background:url(../images/sprites.gif) -30px 0 no-repeat;}
+.topToolbar i.ico4{background:url(../images/sprites.gif) -46px 0 no-repeat;}
+.topToolbar i.ico5{background:url(../images/sprites.gif) -16px -15px no-repeat;}
+.topToolbar i.ico6{background:url(../images/sprites.gif) 0 -15px no-repeat;}
+.topToolbar i.ico7{width:11px;height:9px;margin:10px 2px 0 2px;background:url(../images/sprites.gif) -32px -15px no-repeat;}
+.topToolbar i.ico8{width:7px;height:4px;margin:13px 0 0 8px;background:url(../images/sprites.gif) -44px -20px no-repeat;}
+
+.topToolbar .ShowMore{position:relative;z-index:499;}
+
+/*站点链接*/
+.siteLink{float:left;}
+.siteLink li{padding:0 10px;white-space:nowrap;background:url(../images/t_9.gif) right center  no-repeat;}
+.siteLink li,.siteLink li a{float:left;}
+.siteLink li.ShowMore{background:none;}
+
+/*登录*/
+.loginReg{float:right;}
+.loginReg span,.loginReg a{float:left;margin-right:5px}
+.loginReg a{color:#2758B2;text-decoration:underline;}
+.loginReg a:hover{color:#e90101;text-decoration:none;}
+.loginReg a.loginBtn{width:50px;height:22px;margin-top:4px;background:url(../images/sprites.gif) 0 -30px no-repeat;}
+.loginReg a.loginBtn:hover{filter:alpha(opacity=85);opacity:0.85}
+
+/*登录后状态*/
+.userStatus{float:right;}
+.userStatus li,.userStatus li a{float:left;}
+.userStatus li{padding:0 10px;white-space:nowrap;}
+.userStatus li em{color:#000;}
+.userStatus li span{color:#f00;}
+.userStatus li.ShowMore{background:url(../images/t_9.gif) right center no-repeat;}
+.userStatus li.ShowMore.nl{background:none;}
+
+/*二级链接*/
+.topToolbar li.ShowMore a:hover{text-decoration:none;}
+.topToolbar li.ShowMore .SubLink{display:none;padding:5px 10px;position:absolute;top:30px;right:-1px;z-index:500;border:1px solid #ccc;border-top:0;background:#fff;}
+.topToolbar li.ShowMore .SubLink a{float:none;height:22px;line-height:22px;display:block;}
+.topToolbar li.ShowMore .SubLink a:hover{text-decoration:underline;}
+.topToolbar li.ShowMore.Over{border:1px solid #ccc;border-top:0;border-bottom:0;background:#fff;}
+.topToolbar li.ShowMore.Over .SubLink{display:block;}
+.topToolbar li.ShowMore.Over .ico8{background:url(../images/sprites.gif) -44px -15px no-repeat;}
+/*hack*/
+.siteLink li.ShowMore.Over{margin-left:-1px;}
+.userStatus li.ShowMore.Over{margin-left:-2px;}
+.userStatus li.ShowMore .SubLink{*right:-2px;}
+.userStatus li.ShowMore.nl .SubLink{*right:-1px;}
+#subLink1,#subLink3,#subLink5{width:50px;}
+#subLink2,#subLink4{width:74px;}
+
