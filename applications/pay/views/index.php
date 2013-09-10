@@ -50,6 +50,36 @@
 							<span id="username2noteRight"></span>
 						</div>
 					</li>
+<li class="form_list_li">
+                <label class="lbl">  充值的服务器：</label>
+                <div class="txt_wrap">
+                    <select class="slt txt_error" name="server_id" id="server_id" style="display: inline-block;">
+                        
+                        <option selected="selected" value="">请选择服务器</option>
+                                                    <option title="【1-4】积木岛" value="1">【1-4】积木岛</option>
+                                                    <option title="【5-10】弹王宫殿" value="5">【5-10】弹王宫殿</option>
+                                                    <option title="【11-22】新纪元" value="11">【11-22】新纪元</option>
+                                                    <option title="【23-44】喜气洋洋" value="23">【23-44】喜气洋洋</option>
+                                                    <option title="【45-54】银梭破空" value="45">【45-54】银梭破空</option>
+                                                    <option title="【55-57】普天同庆" value="55">【55-57】普天同庆</option>
+                                                    <option title="【58】迷情古堡" value="58">【58】迷情古堡</option>
+                                                    <option title="【59】穿越战场" value="59">【59】穿越战场</option>
+                                                    <option title="【60】梦幻彩虹" value="60">【60】梦幻彩虹</option>
+                                                    <option title="【61】外来星客" value="61">【61】外来星客</option>
+                                                    <option title="【62】弹弹卫士" value="62">【62】弹弹卫士</option>
+                                                    <option title="【63】深海迷宫" value="63">【63】深海迷宫</option>
+                                            </select>
+                <div class="txt_tips"><i class="ico ico_error_16"></i><span>请选择服务器</span><i class="txt_tips_r"></i></div></div>
+            </li>
+
+<li style="" class="form_list_li">
+                <label class="lbl"> 充值的角色名：</label>
+                <div class="txt_wrap">
+                <select class="slt txt_error" name="role_id" id="role_id" style="display: inline-block;"><option></option></select>
+                <div class="txt_tips"><i class="ico ico_error_16"></i><span>该服务器没有你的角色哦</span><i class="txt_tips_r"></i></div></div>
+                <span id="role_name" nonick="1"></span>
+            </li>
+
 					<li class="form_list_li">
 						<label class="lbl">充值诺币数：</label>
 						<div class="txt_wrap">

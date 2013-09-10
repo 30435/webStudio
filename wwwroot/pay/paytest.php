@@ -64,7 +64,7 @@ $returnParams = array(
     	);
 
 $code = $_GET['code'];
-$link = '<form action="http://pay.kids.com/frontpay/respond?code=' . $code . '" method="POST">';
+$link = '<form action="http://pay.ci.com/frontpay/respond?code=' . $code . '" method="POST">';
 foreach ($returnParams as $param) {
 	@$value = $_REQUEST[$param['value']];
 	$link .= $param['name'] . '<input type="text" name="' . $param['key'] . '" value="' . $value . '" /><br />';

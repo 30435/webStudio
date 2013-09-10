@@ -11,7 +11,7 @@ class YeepayBase extends PayCommon
 
     	//$this->sentApiUrl = 'https://www.yeepay.com/app-merchant-proxy/node'; // Formal api url
     	//$this->sentApiUrl = 'http://tech.yeepay.com:8080/robot/debug.action'; // Test api url
-    	$this->sentApiUrl = 'http://pay.kids.com/paytest.php?code=yeepay';
+    	$this->sentApiUrl = 'http://pay.ci.com/paytest.php?code=yeepay';
     	
     	$this->returnParams = array(
     		array('key' => 'r0_Cmd', 'name' => '辅助参数1', 'value' => 'p0_Cmd'),

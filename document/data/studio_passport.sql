@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 08:16:52
+-- 生成日期: 2013-09-10 14:00:22
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -73,14 +73,26 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- 转存表中的数据 `sp_admin_managerlog`
 --
 
 INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_name`, `menu_id`, `menu_name`, `data`, `data_old`, `logtype`, `ip`, `inputtime`) VALUES
-(1, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"4";}', 'a:10:{s:2:"id";s:2:"15";s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"0";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1378793797);
+(1, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"4";}', 'a:10:{s:2:"id";s:2:"15";s:4:"name";s:12:"查看日志";s:8:"parentid";s:2:"11";s:8:"app_code";s:8:"passport";s:10:"controller";s:10:"managerlog";s:6:"method";s:5:"viewm";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"0";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1378793797),
+(2, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:12:"诺瓦奇兵";s:4:"code";s:4:"nova";s:12:"webgame_type";s:1:"1";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:19:"http://nova.ci.com/";s:10:"url_server";s:19:"http://nova.ci.com/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:11:"description";s:66:"知金教育倾情奉献，最好的儿童网游，寓教于游。";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910141912626.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910141919705.jpg";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910141925472.jpg";s:9:"coin_name";s:6:"诺币";s:9:"coin_unit";s:3:"枚";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794012),
+(3, 2, 'wangcan', 3, '管理员', '59', '添加版位', 'a:6:{s:4:"name";s:12:"幻灯广告";s:10:"space_type";s:6:"fixure";s:5:"width";s:0:"";s:6:"height";s:0:"";s:11:"description";s:0:"";s:12:"space_status";s:1:"1";}', 'a:0:{}', 'add', '127.0.0.1', 1378794106),
+(4, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:13:"幻灯广告1";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:20:"http://www.baidu.com";s:7:"url_ext";s:0:"";s:8:"add_time";s:17:"2013-09-10  14:21";s:10:"start_time";s:17:"2013-09-10  14:21";s:8:"end_time";s:17:"2013-09-29  14:21";s:9:"listorder";s:2:"66";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142240992.jpg";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794168),
+(5, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:12:"网页游戏";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:18:"http://www.163.com";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"2";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142311290.jpg";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794202),
+(6, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:13:"测试站点2";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:16:"http://weibo.com";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"2";s:9:"ad_status";s:1:"0";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142358994.jpg";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794241),
+(7, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:9:"管理员";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:23:"http://passport.ci.com/";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"8";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142445635.png";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794294),
+(8, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:12:"幻灯广告";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:15:"http://abc.com/";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"9";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142529332.jpg";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794333),
+(9, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"赛尔号";s:4:"code";s:4:"seer";s:12:"webgame_type";s:1:"2";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:19:"http://seer.ci.com/";s:10:"url_server";s:19:"http://seer.ci.com/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"2";s:5:"ispay";s:1:"1";s:11:"description";s:93:"知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143505676.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143545206.png";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143551723.png";s:9:"coin_name";s:6:"金币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794992),
+(10, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"神仙道";s:4:"code";s:6:"shenxd";s:12:"webgame_type";s:1:"3";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:21:"http://shenxd.ci.com/";s:10:"url_server";s:28:"http://shenxd.ci.com/server/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"5";s:5:"ispay";s:1:"1";s:11:"description";s:0:"";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143739823.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143746964.jpg";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143751644.jpg";s:9:"coin_name";s:6:"水晶";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:3:"100";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378795152),
+(11, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包月";s:5:"money";s:2:"10";s:4:"unit";s:1:"2";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144500693.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795503),
+(12, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包年";s:5:"money";s:2:"50";s:4:"unit";s:1:"1";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144532119.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795535),
+(13, 2, 'wangcan', 3, '管理员', '113', '添加服务器', 'a:10:{s:4:"name";s:13:"神仙道1服";s:11:"server_mark";s:1:"3";s:12:"webgame_code";s:6:"shenxd";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:13:"server_status";s:1:"1";s:10:"time_start";s:0:"";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378810611);
 
 -- --------------------------------------------------------
 
@@ -216,8 +228,8 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (104, '生成内容页', 91, 'webgame', 'publish', 'content', '', 0, '1', '1'),
 (105, '生成首页', 91, 'webgame', 'publish', 'index', '', 0, '1', '1'),
 (106, '更新URL页', 91, 'webgame', 'publish', 'url', '', 0, '1', '1'),
-(107, '游戏帐号报表', 88, 'webgame', 'member', 'report', '', 0, '1', '2'),
-(108, '游戏帐号明细', 88, 'webgame', 'member', 'listinfo', '', 4, '1', '1'),
+(107, '游戏帐号报表', 88, 'webgame', 'member_webgame', 'report', '', 0, '1', '2'),
+(108, '游戏帐号明细', 88, 'webgame', 'member_webgame', 'listinfo', '', 4, '1', '1'),
 (109, '复制服务器', 88, 'webgame', 'server', 'copy', '', 0, '1', '3'),
 (110, '删除服务器', 88, 'webgame', 'server', 'delete', '', 0, '1', '3'),
 (111, '编辑服务器', 88, 'webgame', 'server', 'edit', '', 0, '1', '3'),
@@ -562,7 +574,33 @@ CREATE TABLE IF NOT EXISTS `sp_attachment` (
   `authcode` char(32) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `authcode` (`authcode`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+
+--
+-- 转存表中的数据 `sp_attachment`
+--
+
+INSERT INTO `sp_attachment` (`id`, `app_code`, `catid`, `contentid`, `file_name`, `file_path`, `file_size`, `file_ext`, `isimage`, `isthumb`, `downloads`, `userid`, `username`, `uploadtime`, `uploadip`, `status`, `authcode`) VALUES
+(1, '', 0, 0, 'navo2.jpg', 'passport2013/0910/20130910141912626.jpg', 220469, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(2, '', 0, 0, 'navo2.jpg', 'passport2013/0910/20130910141919705.jpg', 220469, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(3, '', 0, 0, 'navo2.jpg', 'passport2013/0910/20130910141925472.jpg', 220469, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(4, '', 0, 0, '1ebc1fc27f2a9bc75613ba1c9096859a.jpg', 'passport2013/0910/20130910142240992.jpg', 78630, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(5, '', 0, 0, '2012092896369.jpg', 'passport2013/0910/20130910142311290.jpg', 246837, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(6, '', 0, 0, '2012122400068.jpg', 'passport2013/0910/20130910142358994.jpg', 218866, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(7, '', 0, 0, '2013012947865.png', 'passport2013/0910/20130910142445635.png', 257154, 'png', 0, 0, 0, 0, '', 0, '', 0, ''),
+(8, '', 0, 0, '2012092691310.jpg', 'passport2013/0910/20130910142529332.jpg', 358073, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(9, '', 0, 0, 'QQ图片20130905144255.jpg', 'passport2013/0910/20130910143505676.jpg', 62110, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(10, '', 0, 0, 'QQ图片20130905144308.jpg', 'passport2013/0910/20130910143514632.jpg', 207182, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(11, '', 0, 0, 'QQ图片20130905144308.jpg', 'passport2013/0910/20130910143520311.jpg', 207182, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(12, '', 0, 0, '2013010691620.jpg', 'passport2013/0910/20130910143536811.jpg', 219665, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(13, '', 0, 0, '2012101190770.png', 'passport2013/0910/20130910143545206.png', 246267, 'png', 0, 0, 0, 0, '', 0, '', 0, ''),
+(14, '', 0, 0, '2012101137321.png', 'passport2013/0910/20130910143551723.png', 286266, 'png', 0, 0, 0, 0, '', 0, '', 0, ''),
+(15, '', 0, 0, 'sxd.jpg', 'passport2013/0910/20130910143739823.jpg', 67788, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(16, '', 0, 0, 'sxd.jpg', 'passport2013/0910/20130910143746964.jpg', 67788, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(17, '', 0, 0, 'sxd.jpg', 'passport2013/0910/20130910143751644.jpg', 67788, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(18, '', 0, 0, 'QQ图片20130905144255.jpg', 'passport2013/0910/20130910144500693.jpg', 62110, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(19, '', 0, 0, 'QQ图片20130905144308.jpg', 'passport2013/0910/20130910144532119.jpg', 207182, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(20, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0910/20130910152355374.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -615,15 +653,20 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   `loginnum` int(8) NOT NULL COMMENT '登录次数',
   `lastloginip` char(15) NOT NULL DEFAULT '0' COMMENT '最后一次登录IP',
   `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后一次登录时间',
-  `active` enum('1','0') NOT NULL COMMENT '当天活跃标识，0：活跃；1：不活跃',
-  `active_7` enum('1','0') NOT NULL COMMENT '7天内活跃标识，0：活跃；1：不活跃',
-  `active_over` enum('1','0') NOT NULL COMMENT '7天后活跃标识，0：活跃；1：不活跃',
-  `active_day` int(7) NOT NULL,
-  `active_7_day` int(7) NOT NULL,
-  `active_over_day` int(7) NOT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1089693 ;
+
+--
+-- 转存表中的数据 `sp_member`
+--
+
+INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `pwd_strong`, `encrypt`, `avatar`, `email`, `truename`, `gender`, `msn`, `telephone`, `get_username`, `address`, `qq`, `birthday`, `postcode`, `mobile`, `idcard`, `regip`, `regdate`, `loginnum`, `lastloginip`, `lastlogintime`) VALUES
+(1089692, '1089692', 1, '542666faae27ef5b977a701af4e86b19', '1', '2NlgqY', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378800835, 0, '0', 0),
+(1065112, '1065112', 2, '514c59761aeaba4fbe7cc788577fc515', '1', 'l4IZ1m', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 0, '0', 0),
+(104760, '104760', 3, '1218a4b526c794480d28eefb08047400', '1', 'pdgEsz', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 1, '127.0.0.1', 1378801341),
+(1062753, '1062753', 4, 'e521f1e8065594e421b3b708878b14c1', '1', 'Zxinxa', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 0, '0', 0),
+(1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', '1', 'BK7Sng', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256);
 
 -- --------------------------------------------------------
 
@@ -647,7 +690,18 @@ CREATE TABLE IF NOT EXISTS `sp_poster` (
   `pic_ext` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `spaceid` (`space_id`,`ad_status`,`listorder`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- 转存表中的数据 `sp_poster`
+--
+
+INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `ad_type`, `start_time`, `end_time`, `add_time`, `listorder`, `ad_status`, `url`, `url_ext`, `pic`, `pic_ext`) VALUES
+(1, '幻灯广告1', 1, 'image', 2013, 2013, 2013, 66, 1, 'http://www.baidu.com', '', 'http://upload.ci.com/passport2013/0910/20130910142240992.jpg', ''),
+(2, '网页游戏', 1, 'image', 0, 0, 0, 2, 1, 'http://www.163.com', '', 'http://upload.ci.com/passport2013/0910/20130910142311290.jpg', ''),
+(3, '测试站点2', 1, 'image', 0, 0, 0, 2, 0, 'http://weibo.com', '', 'http://upload.ci.com/passport2013/0910/20130910142358994.jpg', ''),
+(4, '管理员', 1, 'image', 0, 0, 0, 8, 1, 'http://passport.ci.com/', '', 'http://upload.ci.com/passport2013/0910/20130910142445635.png', ''),
+(5, '幻灯广告', 1, 'image', 0, 0, 0, 9, 1, 'http://abc.com/', '', 'http://upload.ci.com/passport2013/0910/20130910142529332.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -665,7 +719,14 @@ CREATE TABLE IF NOT EXISTS `sp_poster_space` (
   `space_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `disabled` (`space_status`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `sp_poster_space`
+--
+
+INSERT INTO `sp_poster_space` (`id`, `name`, `space_type`, `width`, `height`, `description`, `space_status`) VALUES
+(1, '幻灯广告', 'fixure', 0, 0, '', 1);
 
 -- --------------------------------------------------------
 

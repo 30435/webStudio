@@ -1,12 +1,12 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Member extends Custom_AdminController
+class Member_webgame extends Custom_AdminController
 {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->_initCurrentModel('memberModel');
+		$this->_initCurrentModel('member_webgameModel');
 
 		$this->logType = array('add' => '增加信息', 'edit' => '编辑信息', 'listorder' => '信息排序', 'delete' => '删除信息', 'deletemul' => '删除多条信息');
 		$this->showCurrent = false;

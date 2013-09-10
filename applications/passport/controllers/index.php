@@ -148,8 +148,7 @@ class Index extends Custom_Controller
 			$userInfo['userid'] = $this->getUsername();
 			if (empty($userInfo['username'])) {
 				$userInfo['username'] = $userInfo['userid'];
-			} 
-			var_dump($userInfo);
+			}
 
 			/*$checkUsername = $this->checkUsername();
 			if ($checkUsername['status'] == 'error') {

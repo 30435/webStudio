@@ -9,7 +9,19 @@ class Custom_Controller extends Base_Controller
 		parent::__construct();
 
 		$this->webgameInfos = $this->_getWebgameInfos();
+		$this->serverInfos = $this->_getServerInfos();
 		$this->frontController = array('controller' => $this);
+	}
+
+	/**
+	 * Get the server infos 
+	 *
+	 */
+	protected function _getServerInfos()
+	{
+		$this->_loadModel('webgame', 'serverModel');
+		$infos = $this->serverModel->getAllInfos('', 'id', array(), array(array('listorder', 'asc')));
+		return $infos;
 	}
 }
 

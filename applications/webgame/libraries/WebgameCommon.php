@@ -49,7 +49,7 @@ class WebgameCommon
 	 */
 	public function getPlayUrl()
 	{
-		$loginIp = rtrim($this->serverInfo['enter_login'], '/');
+		$loginIp = rtrim($this->configInfo['enter_login'], '/');
 		$loginKey = empty($this->configInfo['isCommon']) ? $this->configInfo[$this->serverInfo['id']]['keyLogin'] : $this->configInfo['commonKeyLogin'];
 		$playUrl = $this->_getPlayUrl($loginIp, $loginKey);
 

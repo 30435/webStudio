@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 08:09:40
+-- 生成日期: 2013-09-10 14:00:28
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -51,7 +51,18 @@ CREATE TABLE IF NOT EXISTS `sp_account` (
   `handpay_manager` tinyint(4) DEFAULT NULL COMMENT '手工支付管理员账号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `orderid` (`orderid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- 转存表中的数据 `sp_account`
+--
+
+INSERT INTO `sp_account` (`id`, `orderid`, `orderid_plat`, `payment_code`, `pay_type`, `webgame_code`, `server_id`, `server_role`, `pay_userid`, `get_userid`, `get_username`, `mobile`, `payment_rate`, `money`, `money_valid_middle`, `money_valid`, `account_time`, `day`, `account_time_valid`, `account_data`, `account_status`, `handpay_manager`) VALUES
+(1, '2013091030992', '', 'yeepay', '1', '', 0, NULL, 1089692, 1089692, '1089692', '', 0.3, 3.00, 0.00, 0.00, 1378800849, '20130910', 0, '', '0', NULL),
+(2, '2013091097972', '', 'yeepay', '1', '', 0, NULL, 1089692, 1089692, '1089692', '', 0.3, 3.00, 3.00, 2.10, 1378800932, '20130910', 1378800977, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"3";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013091097972";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"5dcc18b4cb08c47fc8d64d51e6f5f550";}', '1', NULL),
+(3, '2013091031501', '', 'alipay', '1', '', 0, NULL, 1089692, 1089692, '1089692', '', 0, 7.00, 0.00, 0.00, 1378800994, '20130910', 0, '', '0', NULL),
+(4, '2013091090875', '', 'alipay', '1', '', 0, NULL, 1089692, 1089692, '1089692', '', 0, 8.00, 0.00, 0.00, 1378801153, '20130910', 0, '', '0', NULL),
+(5, '2013091035924', '', 'yeepay', '1', '', 0, NULL, 1089692, 1089692, '1089692', '', 0.3, 5.00, 5.00, 3.50, 1378811214, '20130910', 1378811215, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"5";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013091035924";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"f8e1e2ed3b98a69486077451cafae812";}', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -108,6 +119,13 @@ CREATE TABLE IF NOT EXISTS `sp_member_pay` (
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `sp_member_pay`
+--
+
+INSERT INTO `sp_member_pay` (`userid`, `username`, `money`, `want_money`, `want_times`, `valid_money_middle`, `valid_money`, `valid_times`, `lasttime_account`, `pay_times`, `pay_money`, `lasttime_pay`, `unusual_money`) VALUES
+(1089692, '1089692', 5.6, 26, 5, 8, 5.6, 2, 1378811215, 0, 0, 0, '0.00');
 
 -- --------------------------------------------------------
 
@@ -174,7 +192,15 @@ CREATE TABLE IF NOT EXISTS `sp_paymonth` (
   `thumb` varchar(100) NOT NULL COMMENT '图标',
   `listorder` tinyint(3) unsigned NOT NULL COMMENT '排序',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `sp_paymonth`
+--
+
+INSERT INTO `sp_paymonth` (`id`, `name`, `money`, `unit`, `thumb`, `listorder`) VALUES
+(1, '诺瓦包月', 10, '2', 'http://upload.ci.com/passport2013/0910/20130910144500693.jpg', 2),
+(2, '诺瓦包年', 50, '1', 'http://upload.ci.com/passport2013/0910/20130910144532119.jpg', 2);
 
 -- --------------------------------------------------------
 

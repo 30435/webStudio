@@ -1,9 +1,9 @@
 <?php
-class MemberModel extends CommonModel 
+class Member_webgameModel extends CommonModel 
 {
 	public function __construct($data = '')
 	{
-		$this->table = 'member';
+		$this->table = 'member_webgame';
 		parent::__construct($data);		
 	}
 		

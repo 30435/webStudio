@@ -2,11 +2,11 @@
 
 class frontgame extends Custom_Controller
 {
-
 	public function __construct()
 	{
 		parent::__construct();
-
+		
+		$this->loginedUserInfo = $this->_checkUserLogin();
 		$this->urlForward = $this->baseUrl;
 	}
 
@@ -19,208 +19,127 @@ class frontgame extends Custom_Controller
 	{	
 		$this->userid = $this->loginedUserInfo['userid'];
 		if (empty($this->userid)) {
-			$this->_messageInfo('请先登录！', $this->applicationInfos[1]['domain']);  //跳转到主页面
+			$this->_messageInfo('请先登录！', $this->appInfos['passport']['url'] . 'index/login/');  //跳转到主页面
 		}
 		
 		$this->username = $this->loginedUserInfo['username'];
 		$isTestUser = in_array($this->username, $this->testUsers) ? true : false;
 
-		$code = strval($this->uri->segment(3));
-		$webgameInfo = $this->_checkWebgame($code, $isTestUser);
+		$webgameCode = $this->input->get('code');
+		$this->webgameInfo = $this->_checkWebgame($webgameCode, $isTestUser);
 		
-		$serverId = intval($this->uri->segment(4));
-		$serverInfo = $this->_checkServer($serverId, $webgameInfo, $isTestUser);
-
-		$this->currentServerInfo = $serverInfo;
+		$serverId = $this->input->get('serverid');
+		$this->serverInfo = $this->_checkServer($serverId, $this->webgameInfo);
 		$params = array(
 			'userid' => $this->userid,
-			'username' => $this->username,
-			'channel_code' => $this->loginedUserInfo['channel_code'],
-			'resource_id' => $this->loginedUserInfo['resource_id'],
-			'subinfo' => $this->loginedUserInfo['subinfo'],				
-			'webgameInfo' => $webgameInfo,
-			'serverInfo' => $serverInfo,
+			'username' => $this->username,			
+			'webgameInfo' => $this->webgameInfo,
+			'serverInfo' => $this->serverInfo,
 			'regdate' => $this->loginedUserInfo['regdate'],
 		);
-
-		$this->headerTitle =$webgameInfo['name'].' | 敢玩游戏网 | 敢玩游戏 敢拼天下 www.ganwan.com';
-		$this->load->library($code, $params);
-
-		$playUrl = $this->$code->getPlayUrl();
+		$this->load->library($webgameCode, $params);
+		$playUrl = $this->$webgameCode->getPlayUrl();
 		if (empty($playUrl)) {
 			$this->_messageInfo('游戏服务器有误，请重新连接！', $this->baseUrl);
 		}
 
 		$this->_updateWebgameInfo($params);
-		$this->playurl=$playUrl;
-		$this->code=$code;
+		$this->playurl = $playUrl;
 		$this->load->view('playgame');
 	}
 	
-	protected function _checkWebgame($code, $isTestUser)
+	protected function _checkWebgame($webgameCode, $isTestUser)
 	{
-		$webgameInfo = $this->webgameInfos[$code];
-		$webgameStatus = !empty($webgameInfo['code_status']) ? $webgameInfo['code_status'] : '';
+		$webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
+		if (empty($webgameInfo) || $webgameInfo['webgame_type'] != 3) {
+			$this->_messageInfo('游戏有误！', $this->baseUrl);
+		}
 
-		if (((empty($webgameInfo) || empty($webgameStatus))) && empty($isTestUser)) {
-			$this->_messageInfo('游戏代码有误！', $this->applicationInfos[2]['domain']);  //跳转到主页面
+		if (in_array($this->username, $this->testUsers)) {
+			return $webgameInfo;
 		}
-		if ($webgameStatus === '3' && empty($isTestUser)) {
-			if (!empty($webgameInfo['maintain_url'])) {
-				redirect($webgameInfo['maintain_url']);
-			} else {
-				$this->_messageInfo('游戏即将开放！', $this->applicationInfos[2]['domain']);  //跳转到主页面
-			}
-		}
-		$this->_checkWebgameStatus($webgameStatus,$webgameInfo,$isTestUser);
 
-		return $webgameInfo;
-	}
-	
-	protected function _checkWebgameStatus($webgameStatus,$webgameInfo,$isTestUser){
-		$urls = '';
-		$status = '';
-		$mess = $this->game_status_arr[$webgameStatus];
-		if(!empty($isTestUser)){
-			return true;
-		}
-		if($webgameStatus === '4'){
-			//如果  开始时间 和结束时间都不为空
-			if(!empty($webgameInfo['starttime']) && !empty($webgameInfo['endtime'])){
-				//判断当前时间收否在  规定的时间范围内
-				if(($this->time >= $webgameInfo['starttime']) && ($this->time <= $webgameInfo['endtime'])){
-					//如果在范围内  提示错误
-					$urls = !empty($webgameInfo['maintain_url']) ? 'y' : 'n';
-					
-				}elseif($this->time > $webgameInfo['endtime']){	//判断当前时间是否大于结束时间，如果大于证明已经维护把状态调整为1
-					$status = 1;
-				}else{
-					//  及不在 范围内  也不大于结束时间   说明是小与开始时间  可以正常玩游戏
+		$webgameStatus = $webgameInfo['webgame_status'];
+		switch ($webgameStatus) {
+			case '0':
+				$this->_messageInfo('游戏已关闭', $this->baseUrl);
+				break;
+			case '1':
+			case '2':
+				return $webgameInfo;
+				break;
+			case '3':
+				$this->_messageInfo('即将开启，敬请期待！', $this->baseUrl);
+				break;
+			case '4':
+				$urlMaintain = !empty($webgameInfo['url_maintain']) ? $webgameInfo['url_maintain'] : $this->baseUrl;
+				if ($this->time >= $webgameInfo['start_maintain'] && $this->time <= $webgameInfo['end_maintain']) {
+					$this->_messageInfo('游戏正在维护中，将于' . date('Y-m-d H:i:s', $webgameInfo['end_maintain']) . '开启!', $urlMainmain);
 				}
-			}elseif(!empty($webgameInfo['endtime'])){		//如果只有结束时间	
-				if($this->time <= $webgameInfo['endtime']){	//是否小于结束时间   小于说明正在维护
-					$urls = !empty($webgameInfo['maintain_url']) ? 'y' : 'n';
-				}else{
-					//恢复状态 
-					$status = 1;
-				}
-			}else{	//没有时间  或只有 开始时间
-				$urls = !empty($webgameInfo['maintain_url']) ? 'y' : 'n';
-			}
-			
-			if($urls == 'y'){
-				redirect($webgameInfo['maintain_url']);
-			}elseif($urls == 'n'){
-				$this->_messageInfo($mess,$this->applicationInfos[2]['domain']);
-			}else{
-			
-			}
-			
-			if($status == 1){
-				$this->currentDb->where('code',$webgameInfo['code']);
-				$table = 'webgame';
-				$data = array(
-					'status'=>'1',
-					'starttime'=>0,
-					'endtime'=>0
-				);
-				$this->currentDb->update($table,$data);
-			}
+
+				$data['webgame_status'] = '1';
+				$where = array('code =' => $webgameInfo['code']);
+				$this->_loadModel(APPCODE, 'webgameModel');
+				$this->webgameModel->editInfo($data, $where);
+				return $webgameInfo;
+				break;
+			default:
+				$this->_messageInfo('游戏信息有误！', $this->baseUrl);
 		}
 	}
+
 	/**
 	 * Get the serverInfo for user to play a game
 	 *
 	 * @param  int $serverId
 	 * @return boolean | array
 	 */
-	protected function _checkServer($serverId, $webgameInfo, $isTestUser)
+	protected function _checkServer($serverId, $webgameInfo)
 	{
 		$serverInfo = false;
 		$serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
-
 		if (empty($serverInfo)) {
-			$memberTable = 'member';
-			$query = $this->currentDb->select('serverid')->from($memberTable)
-				->where(array('username' => $this->loginedUserInfo['username'], 'webgame_code' => $webgameInfo['code']))->order_by('lasttime', 'desc');
-			$query = $this->currentDb->get();
-			$userInfo = $query->row_array();
-			if (!empty($userInfo)) {
-				$serverInfo = isset($this->serverInfos[$userInfo['serverid']]) ? $this->serverInfos[$userInfo['serverid']] : false;
-			}
+			$this->_messageInfo('游戏服务器不存在！', $webgameInfo['url_home']);
 		}
-		if (empty($serverInfo)) {
-			$defaultServerId = $webgameInfo['default_serverid'];
-
-			if (!empty($defaultServerId)) {
-				$serverInfo = isset($this->serverInfos[$defaultServerId]) ? $this->serverInfos[$defaultServerId] : false;
-			}
+		if (in_array($this->username, $this->testUsers)) {
+			return $serverInfo;
 		}
-
-		$serverStatus = $this->_checkServerStatus($serverInfo,$isTestUser);
+		
+		$serverStatus = $serverInfo['server_status'];
 		$statusInfo = array('0' => '服务器已关闭', '1' => '', '2' => '服务器正在维护', '3' => '服务器即将开放', '4' => '服务器爆满,请到最新开放的服务器玩游戏');
-		$message = isset($statusInfo[$serverStatus]) ? $statusInfo[$serverStatus] : '请指定有效的游戏服务器！';
-		if (!empty($message) && empty($isTestUser)) {
-			if (!empty($serverInfo['maintain_url'])) {
-				redirect($serverInfo['maintain_url']);
-			} else {
-				$this->_messageInfo($message, $webgameInfo['url_server']);
-			}
-		}
-		return $serverInfo;
-	}
-	
-	protected function _checkServerStatus($serverInfo,$isTestUser)
-	{
-		$server_table = 'server';
-		$data['status'] = 1;
-		$data['starttime'] = 0;
-		$data['endtime'] = 0;
-		if(!empty($isTestUser)){
-			return true;
-		}
-		$serverStatus = isset($serverInfo['status']) ? $serverInfo['status'] : 'no';
-		
-		if ($serverStatus == '2') {
-			$starttime = $serverInfo['starttime'];
-			$endtime = $serverInfo['endtime'];
+		switch ($serverStatus) {
+			case '1':
+				return $serverInfo;
+				break;
+			case '3':
+				if (isset($serverInfo['time_start']) && $this->time > $serverInfo['time_start']) {
+					$data['server_status'] = '1';
+					$where = array('id =' => $serverId);
+					$this->_loadModel(APPCODE, 'serverModel');
+					$this->webgameModel->editInfo($data, $where);
+					return $serverInfo;
+				}
+				$this->_messageInfo($statusInfo[$serverStatus], $webgameInfo['url_home']);
+				break;
+			case '0':
+			case '4':
+				$this->_messageInfo($statusInfo[$serverStatus], $webgameInfo['url_home']);
+				break;
+			case '2':
+				$urlMaintain = !empty($serverInfo['url_maintain']) ? $serverInfo['url_maintain'] : $this->baseUrl;
+				if ($this->time >= $serverInfo['start_maintain'] && $this->time <= $serverInfo['end_maintain']) {
+					$this->_messageInfo('服务器正在维护中，将于' . date('Y-m-d H:i:s', $serverInfo['end_maintain']) . '开启!', $urlMainmain);
+				}
 
-			if(!empty($starttime) && !empty($endtime)){		//开始时间和结束时间都不为空
-				if($this->time > $starttime && $this->time < $endtime){		//判断当前时间 是否在维护时间区间
-					
-				}elseif($this->time > $endtime){	//如果当前时间大于结束时间   说明已经维护过    修改服务器状态
-					$serverStatus = 1;
-					$this->currentDb->where('id',$serverInfo['id']);
-					$this->currentDb->update($server_table,$data);
-					
-				}elseif($this->time < $starttime){	//如果当前时间  小于 开始时间   说明还没又维护   可以玩游戏  但是不修改服务器状态
-					$serverStatus = 1;
-				}else{	
-					
-				}
-			//	$serverStatus = ($this->time < $starttime || $this->time > $endtime) ? '1' : $serverStatus;
-			}elseif(!empty($endtime)){			//只有结束时间
-				if($this->time > $endtime){	//如果当前时间大于结束时间   说明已经维护过    修改服务器状态
-					$serverStatus = 1;
-					$this->currentDb->where('id',$serverInfo['id']);
-					$this->currentDb->update($server_table,$data);
-				}
-			}else{		//开始和结束 时间都为空   或 只有开始时间
-				
-			}
+				$data['server_status'] = '1';
+				$where = array('id =' => $serverId);
+				$this->_loadModel(APPCODE, 'serverModel');
+				$this->webgameModel->editInfo($data, $where);
+				return $serverInfo;
+				break;
+			default:
+				$this->_messageInfo('服务器信息有误！', $this->baseUrl);
 		}
-		if ($serverStatus == '3') {
-			$serverOnTime = $serverInfo['server_on_time'];
-			
-			if($this->time >= $serverOnTime){
-				$serverStatus = 1;
-				$this->currentDb->where('id',$serverInfo['id']);
-				$this->currentDb->update($server_table,$data);
-			}
-			//$serverStatus = $this->time >= $serverOnTime ? '1' : $serverStatus;
-		}
-		
-		return $serverStatus;
 	}
 
 	/**
@@ -230,11 +149,11 @@ class frontgame extends Custom_Controller
 	 */
 	protected function _updateWebgameInfo($params, $isPay = false)
 	{
-		$memberTable = 'member';
-		$query = $this->currentDb->get_where($memberTable, array('username' => $params['username'], 'serverid' => $params['serverInfo']['id']));
-		$userInfo = $query->row_array();
+		$this->_loadModel(APPCODE, 'member_webgameModel');
+		$where = array('username' => $params['username'], 'server_id' => $params['serverInfo']['id']);
+		$userInfo = $this->member_webgameModel->getInfo($where);
 
-		$table = 'record';
+		$this->_loadModel(APPCODE, 'recordModel');
 		$recordType = empty($isPay) ? '0' : '1';
 		$activeTime = $this->time - $params['regdate'];
 		$activeDay = ceil($activeTime / 86400);
@@ -258,9 +177,6 @@ class frontgame extends Custom_Controller
 			'serverid' => $params['serverInfo']['id'],
 			'userid' => $params['userid'],
 			'username' => $params['username'],
-			'channel_code' => $params['channel_code'],
-			'subinfo' => $params['subinfo'],
-			'resource_id' => $params['resource_id'],
 			'inputtime' => $this->time,
 			'day' => date('Ymd', $this->time),
 			'active_time' => $activeTime,
@@ -270,7 +186,7 @@ class frontgame extends Custom_Controller
 			'record_type' => $recordType,
 		);
 		$data = array_merge($data, $dataExt);
-		$this->currentDb->insert($table, $data);
+		$this->recordModel->addInfo($data);
 
 		if ($isPay) {
 			$data = array(
@@ -282,79 +198,21 @@ class frontgame extends Custom_Controller
 		} else {
 			$data = array(
 				'play_num' => isset($userInfo['play_num']) ? $userInfo['play_num'] + 1 : 1,
-				'lasttime_enter' => $this->time,
+				'lasttime_login' => $this->time,
 				'lasttime' => $this->time,
 			);
 		}
-		$data = array_merge($data, $dataExt);
 		if (empty($userInfo)) {
 			$data['username'] = $params['username'];
-			$data['channel_code'] = $params['channel_code'];
 			$data['webgame_code'] = $params['webgameInfo']['code'];
-			$data['serverid'] = $params['serverInfo']['id'];
+			$data['server_id'] = $params['serverInfo']['id'];
 			$data['userid'] = $params['userid'];
 			$data['firsttime'] =$data['lasttime'] =  $this->time;
-			$this->currentDb->insert($memberTable, $data);
+			$this->member_webgameModel->addInfo($data);
 		} else {
-			$this->currentDb->where(array('username' => $params['username'], 'serverid' => $params['serverInfo']['id']));
-			$this->currentDb->update($memberTable, $data);
+			$where = array('username' => $params['username'], 'server_id' => $params['serverInfo']['id']);
+			$this->member_webgameModel->editInfo($data, $where);
 		}
-	}
-
-	/**
-	 * 玩过游戏
-	 *
-	 * @return void
-	 */
-	public function myWebgame()
-	{
-		if (empty($this->loginedUserInfo)) {
-			$returnArray = array();
-		} else {
-			$memberTable = 'member';
-			$username = $this->loginedUserInfo['username'];
-			$userInfos = $this->currentDb->order_by('lasttime desc')->get_where($memberTable, array('username' => $username))->result_array();
-			$playedServers = array();
-			//用来保存游戏代码
-			$temp_recorder=array();
-
-			foreach ($userInfos as $userInfo) {
-				$playedServers[] = $userInfo['serverid'];
-			}
-
-			if (empty($playedServers)) {
-				$myWebgameInfos['nogame'] = "您没有玩过的游戏!";
-			} else {
-				$counter=0;
-				foreach($userInfos as $v){
-					if(count($temp_recorder)>1) break;
-					if (in_array($v['serverid'], $playedServers)&& in_array($v['webgame_code'],$this->recommand_game_arr)) {
-						if(!in_array($v['webgame_code'],$temp_recorder)){
-							array_push($temp_recorder,$v['webgame_code']);
-						}else{
-							continue;
-						}
-						@$server=$this->serverInfos[$v['serverid']];
-						$game_1=$this->webgameInfos[$v['webgame_code']];
-						//unset($game['key_login'],$game['key_pay'],$game['pic_middle'],$game['pic_big'],$game['coin_name'],$game['coin_rate'],$game['url_home'],$game['url_server'],$game['type'],$game['show_position'],$game['ispay'],
-								//$game['status'],$game['coin_unit'],$game['description'],$game['card_desc'],$game['brief'],$game['listorder'],$game['url_bbs']);
-						$game['code'] = $game_1['code'];
-						$game['name'] = $game_1['name'];
-						$game['serverName'] = $server['name'];
-						$game['serverId'] = $v['serverid'];
-						$game['picsmall'] = $this->publicConfig['customUploadUrl'].$game_1['pic_small'];
-						//unset($game['pic_small']);
-						$myWebgameInfos[] = $game;
-					}
-
-				}
-
-			}
-			$returnArray['my'] = $myWebgameInfos;
-			//$returnArray['rec'] = $recWebgames;
-		}
-		echo $this->_jsonp($returnArray);
-		return ;
 	}
 
 	/**
@@ -456,45 +314,6 @@ class frontgame extends Custom_Controller
 		}
 	}
 	
-	//支付返勇气币
-	protected function _payRebateCourage($userInfo,$money,$webgameInfo,$serverInfo,$params){
-		$this->courage_money = floor($money/5);
-		if($this->courage_money <=0 ){
-			return;
-		}
-		$pay = $this->_loadDatabase('pay');
-		$courage_detail_table = 'courage_detail';
-			
-		$detail_data = array(
-				'userid'=>$userInfo['userid'],
-				'username'=>$userInfo['username'],
-				'gettime' =>time(),
-				'courage_money'=>$this->courage_money,
-				'source'=>3,
-				'state'=>1,
-				'webgame_code'=>$webgameInfo['code'],
-				'serverid'=>$serverInfo['id'],
-				'reason'=>$params['orderid']
-		);
-		$pay->insert($courage_detail_table,$detail_data);
-	
-		$member_courage = 'member_courage';
-		$query = $pay->where('userid',$userInfo['userid'])->get($member_courage);
-		@$result = $query->row_array();
-	
-		$courage_data['courage'] = isset($result['courage']) ? $result['courage']+$this->courage_money : $this->courage_money;
-		$courage_data['all_courage'] = isset($result['all_courage']) ? $result['all_courage'] + $this->courage_money : $this->courage_money;
-	
-		if(!empty($result)){
-			$pay->where('userid',$userInfo['userid']);
-			$pay->update($member_courage,$courage_data);
-		}else{
-			$courage_data['userid'] = $userInfo['userid'];
-			$courage_data['username'] = $userInfo['username'];
-			$pay->insert($member_courage,$courage_data);
-		}
-	}
-	
 	/**
 	 * 记录并统计支付信息
 	 *
@@ -578,29 +397,6 @@ class frontgame extends Custom_Controller
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 *支付 游戏 选择
-	 *
-	 * @return void
-	 */
-	public function getWebgame()
-	{
-		//$infos = array_chunk($this->webgameInfos, 3, true);
-		$payWebgames = array();
-		$currentUser = isset($this->loginedUserInfo['username']) ? $this->loginedUserInfo['username'] : '';
-		foreach ($this->webgameInfos as $webgameCode => $webgameInfo) {
-			if($webgameInfo['ispay'] == 1 || in_array($currentUser, $this->testUsers)) {
-				unset($webgameInfo['key_login'],$webgameInfo['card_desc'],$webgameInfo['brief'],$webgameInfo['description'],$webgameInfo['pic_small'],$webgameInfo['pic_middle'],$webgameInfo['pic_big']);
-				$payWebgames[$webgameCode] = $webgameInfo;
-			}
-		}
-		$data['webgame'] = $payWebgames;
-		$data['mygame'] = array();//$infos[1];
-
-		echo $this->_jsonp($data);
-		return ;
 	}
 
 	/**
@@ -689,77 +485,6 @@ class frontgame extends Custom_Controller
 		$this->load->library($webgameCode, $params);
 		$serverUser = $this->$webgameCode->getServerUser();
 		$data = empty($serverUser) ? array('user' => 'no') : array('user' => 'yes', 'userCount' => count($serverUser), 'webgameCode' => $serverInfo['webgame_code'], 'userInfo' => $serverUser);
-
-		echo $this->_jsonp($data);
-		return ;
-	}
-
-	/**
-	 * 支付 服务器选择
-	 *
-	 * @return void
-	 */
-	public function getServer()
-	{
-		$webgame = strval($this->uri->segment(3));
-		if (empty($webgame)) {
-			//echo 'no';
-			//exit();
-		}
-		$serverInfos = array();
-		$currentUser = isset($this->loginedUserInfo['username']) ? $this->loginedUserInfo['username'] : '';
-		foreach ($this->serverInfos as $serverInfo) {
-			if ($serverInfo['webgame_code'] == $webgame && $serverInfo['status'] == '1' && $serverInfo['ispay'] == '1') {
-				$serverInfos[] = $serverInfo;
-			}
-			if (in_array($currentUser, $this->testUsers) && $serverInfo['status'] == '3') {
-				$serverInfos[] = $serverInfo;
-			}
-		}
-		$data['server'] = $serverInfos;
-		echo $this->_jsonp($data);
-		//echo $result;/**/
-		return ;
-	}
-
-	/**
-	 * The interface of webplat application
-	 *
-	 * @return void
-	 */
-	public function newServers()
-	{
-		$serverInfos = array();
-		$i = 0;
-		foreach ($this->serverInfos as $serverInfo) {
-			if (($serverInfo['status'] == 1 || $serverInfo['status'] == 3)) {
-				$serverInfos[$serverInfo['id']] = $serverInfo['server_on_time'];
-				$i++;
-			}
-		}
-		//print_r($serverInfos);
-		arsort($serverInfos);
-		$serverInfos=array_chunk($serverInfos,10,true);
-		$serverInfos=$serverInfos[0];
-		//print_r($serverInfos);die;
-		$data = array();
-		$i = 1;
-		foreach ($serverInfos as $serverId => $serverOnTime) {
-			$currentServer = $this->serverInfos[$serverId];
-			$webgameCode = $currentServer['webgame_code'];
-			$currentWebgame = $this->webgameInfos[$webgameCode];
-
-			$data[$i]['serverid'] = $serverId;
-			$data[$i]['webgameCode'] = $webgameCode;
-			$data[$i]['website'] = $currentWebgame['url_home'];
-			$data[$i]['urlServer'] = $currentWebgame['url_server'];
-			$data[$i]['name'] = $currentWebgame['name'];
-			$data[$i]['serverNum'] =trim($currentServer['name']);
-
-			$data[$i]['date'] = date('m-d', $serverOnTime);
-			$data[$i]['time'] = date('H:i', $serverOnTime);
-			$i++;
-		}
 
 		echo $this->_jsonp($data);
 		return ;

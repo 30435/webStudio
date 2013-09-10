@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 08:10:15
+-- 生成日期: 2013-09-10 14:00:38
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -79,10 +79,10 @@ INSERT INTO `sw_category` (`id`, `catname`, `catdir`, `parentdir`, `image`, `par
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sw_member`
+-- 表的结构 `sw_member_webgame`
 --
 
-CREATE TABLE IF NOT EXISTS `sw_member` (
+CREATE TABLE IF NOT EXISTS `sw_member_webgame` (
   `userid` int(10) unsigned NOT NULL COMMENT '用户ID',
   `webgame_code` char(10) NOT NULL,
   `server_id` smallint(5) NOT NULL COMMENT '游戏服务器ID',
@@ -95,6 +95,13 @@ CREATE TABLE IF NOT EXISTS `sw_member` (
   `lasttime_pay` int(10) NOT NULL,
   `lasttime` int(10) unsigned NOT NULL COMMENT '最后一次玩游戏的时间'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `sw_member_webgame`
+--
+
+INSERT INTO `sw_member_webgame` (`userid`, `webgame_code`, `server_id`, `username`, `play_num`, `pay_num`, `pay_money`, `firsttime`, `lasttime_login`, `lasttime_pay`, `lasttime`) VALUES
+(1089692, 'shenxd', 1, '1089692', 12, 0, 0, 1378814227, 1378814231, 0, 1378814231);
 
 -- --------------------------------------------------------
 
@@ -160,6 +167,58 @@ CREATE TABLE IF NOT EXISTS `sw_picture` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `sw_record`
+--
+
+CREATE TABLE IF NOT EXISTS `sw_record` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '玩游戏记录ID',
+  `webgame_code` char(10) NOT NULL COMMENT '游戏代码',
+  `serverid` smallint(5) unsigned NOT NULL COMMENT '网游服务器ID',
+  `userid` int(8) NOT NULL COMMENT '用户ID',
+  `username` char(32) NOT NULL,
+  `channel_code` varchar(64) NOT NULL,
+  `inputtime` int(10) NOT NULL COMMENT '产生记录的时间',
+  `day` char(9) NOT NULL,
+  `active_time` int(10) unsigned NOT NULL,
+  `active_day` int(8) unsigned NOT NULL,
+  `active_nat_time` int(10) unsigned NOT NULL,
+  `active_nat_day` int(8) unsigned NOT NULL,
+  `three_mark` tinyint(1) NOT NULL,
+  `seven_mark` tinyint(1) NOT NULL,
+  `ten_mark` tinyint(1) NOT NULL,
+  `seven_pay_mark` tinyint(1) NOT NULL,
+  `ten_pay_mark` tinyint(1) NOT NULL,
+  `active_vday` int(8) unsigned NOT NULL,
+  `record_type` enum('1','0') NOT NULL COMMENT '记录类型，0：进入游戏，1：为游戏充值',
+  PRIMARY KEY (`id`),
+  KEY `day_active` (`day`,`active_day`),
+  KEY `active` (`active_day`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- 转存表中的数据 `sw_record`
+--
+
+INSERT INTO `sw_record` (`id`, `webgame_code`, `serverid`, `userid`, `username`, `channel_code`, `inputtime`, `day`, `active_time`, `active_day`, `active_nat_time`, `active_nat_day`, `three_mark`, `seven_mark`, `ten_mark`, `seven_pay_mark`, `ten_pay_mark`, `active_vday`, `record_type`) VALUES
+(1, 'shenxd', 1, 1089692, '1089692', '', 1378814000, '20130910', 13165, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(2, 'shenxd', 1, 1089692, '1089692', '', 1378814027, '20130910', 13192, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(3, 'shenxd', 1, 1089692, '1089692', '', 1378814145, '20130910', 13310, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(4, 'shenxd', 1, 1089692, '1089692', '', 1378814227, '20130910', 13392, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(5, 'shenxd', 1, 1089692, '1089692', '', 1378814228, '20130910', 13393, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(6, 'shenxd', 1, 1089692, '1089692', '', 1378814229, '20130910', 13394, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(7, 'shenxd', 1, 1089692, '1089692', '', 1378814229, '20130910', 13394, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(8, 'shenxd', 1, 1089692, '1089692', '', 1378814229, '20130910', 13394, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(9, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(10, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(11, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(12, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(13, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(14, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(15, 'shenxd', 1, 1089692, '1089692', '', 1378814231, '20130910', 13396, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `sw_server`
 --
 
@@ -176,7 +235,14 @@ CREATE TABLE IF NOT EXISTS `sw_server` (
   `end_maintain` int(10) NOT NULL COMMENT '维护结束时间',
   `url_maintain` varchar(200) NOT NULL COMMENT '维护跳转地址',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `sw_server`
+--
+
+INSERT INTO `sw_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `server_status`, `time_start`, `server_mark`, `start_maintain`, `end_maintain`, `url_maintain`) VALUES
+(1, 'shenxd', '神仙道1服', 1, '1', 1, 0, '3', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -239,7 +305,16 @@ CREATE TABLE IF NOT EXISTS `sw_webgame` (
   `end_maintain` int(10) NOT NULL COMMENT '维护结束时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `sw_webgame`
+--
+
+INSERT INTO `sw_webgame` (`id`, `code`, `name`, `description`, `brief`, `pic_small`, `pic_middle`, `pic_big`, `url_home`, `url_server`, `url_bbs`, `coin_name`, `coin_unit`, `coin_rate`, `listorder`, `ispay`, `webgame_type`, `webgame_status`, `url_maintain`, `start_maintain`, `end_maintain`) VALUES
+(1, 'nova', '诺瓦奇兵', '知金教育倾情奉献，最好的儿童网游，寓教于游。', NULL, 'http://upload.ci.com/passport2013/0910/20130910141912626.jpg', 'http://upload.ci.com/passport2013/0910/20130910141919705.jpg', 'http://upload.ci.com/passport2013/0910/20130910141925472.jpg', 'http://nova.ci.com/', 'http://nova.ci.com/', 'http://bbs.ci.com/', '诺币', '枚', 10, 1, '1', 1, '1', '', 0, 0),
+(2, 'seer', '赛尔号', '知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！', NULL, 'http://upload.ci.com/passport2013/0910/20130910143505676.jpg', 'http://upload.ci.com/passport2013/0910/20130910143545206.png', 'http://upload.ci.com/passport2013/0910/20130910143551723.png', 'http://seer.ci.com/', 'http://seer.ci.com/', 'http://bbs.ci.com/', '金币', '个', 10, 2, '1', 2, '1', '', 0, 0),
+(3, 'shenxd', '神仙道', '', NULL, 'http://upload.ci.com/passport2013/0910/20130910143739823.jpg', 'http://upload.ci.com/passport2013/0910/20130910143746964.jpg', 'http://upload.ci.com/passport2013/0910/20130910143751644.jpg', 'http://shenxd.ci.com/', 'http://shenxd.ci.com/server/', 'http://bbs.ci.com/', '水晶', '个', 100, 5, '1', 3, '1', '', 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
