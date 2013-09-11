@@ -30,7 +30,7 @@ echo $allnum; var_dump($data);
 $i = 1;
 foreach ($data as $file) {
 	$file = str_replace('"', '', $file); $fileDeal = str_replace("'", '', $file);
-	$url = strpos($file, 'http') ? $file : $downInfos['urlpre'] . basename($file);
+	$url = strpos($file, 'ttp:') ? $file : $downInfos['urlpre'] . str_replace('..', '', $file);
 	$localFile = $downInfos['localpre'] . basename($file);
 
 	if ($isDown) {
