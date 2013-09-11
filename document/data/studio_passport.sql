@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 14:00:22
+-- 生成日期: 2013-09-11 11:24:37
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_manager` (
 
 INSERT INTO `sp_admin_manager` (`id`, `username`, `truename`, `password`, `roleid`, `email`, `encrypt`, `createtime`, `loginnum`, `lastip`, `lasttime`, `islock`, `handpay_key`, `handpay_en`) VALUES
 (1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 131, '127.0.0.1', 1378705114, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
-(2, 'wangcan', 'wang', '3b7bdee72acc991e195b29abf6ee2471', 3, 'eee@test.com', 'SEQ7TW', 1378707398, 7, '127.0.0.1', 1378774946, '1', '', '');
+(2, 'wangcan', 'wang', '3b7bdee72acc991e195b29abf6ee2471', 3, 'eee@test.com', 'SEQ7TW', 1378707398, 9, '127.0.0.1', 1378881383, '1', '', '');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- 转存表中的数据 `sp_admin_managerlog`
@@ -92,7 +92,8 @@ INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_n
 (10, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"神仙道";s:4:"code";s:6:"shenxd";s:12:"webgame_type";s:1:"3";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:21:"http://shenxd.ci.com/";s:10:"url_server";s:28:"http://shenxd.ci.com/server/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"5";s:5:"ispay";s:1:"1";s:11:"description";s:0:"";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143739823.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143746964.jpg";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143751644.jpg";s:9:"coin_name";s:6:"水晶";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:3:"100";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378795152),
 (11, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包月";s:5:"money";s:2:"10";s:4:"unit";s:1:"2";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144500693.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795503),
 (12, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包年";s:5:"money";s:2:"50";s:4:"unit";s:1:"1";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144532119.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795535),
-(13, 2, 'wangcan', 3, '管理员', '113', '添加服务器', 'a:10:{s:4:"name";s:13:"神仙道1服";s:11:"server_mark";s:1:"3";s:12:"webgame_code";s:6:"shenxd";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:13:"server_status";s:1:"1";s:10:"time_start";s:0:"";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378810611);
+(13, 2, 'wangcan', 3, '管理员', '113', '添加服务器', 'a:10:{s:4:"name";s:13:"神仙道1服";s:11:"server_mark";s:1:"3";s:12:"webgame_code";s:6:"shenxd";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:13:"server_status";s:1:"1";s:10:"time_start";s:0:"";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378810611),
+(14, 2, 'wangcan', 3, '管理员', '99', '删除内容', 'a:18:{s:2:"id";s:1:"1";s:5:"catid";s:1:"7";s:5:"title";s:15:"方法gggggeeee";s:5:"thumb";s:1:"0";s:8:"keywords";s:1:"0";s:11:"description";s:0:"";s:3:"url";s:0:"";s:9:"listorder";s:1:"0";s:6:"status";s:1:"1";s:6:"islink";s:1:"0";s:8:"username";s:7:"wangcan";s:8:"copyfrom";s:0:"";s:7:"content";s:43:"<p>\r\n	发撒是打发士大夫eeeeeee</p>\r\n";s:8:"template";s:1:"0";s:9:"inputtime";s:10:"1378867286";s:10:"updatetime";s:10:"1378881419";s:4:"fbak";s:1:"0";s:9:"seo_title";s:0:"";}', 'a:0:{}', 'delete', '127.0.0.1', 1378884749);
 
 -- --------------------------------------------------------
 
@@ -574,7 +575,7 @@ CREATE TABLE IF NOT EXISTS `sp_attachment` (
   `authcode` char(32) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `authcode` (`authcode`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
 
 --
 -- 转存表中的数据 `sp_attachment`
@@ -600,7 +601,13 @@ INSERT INTO `sp_attachment` (`id`, `app_code`, `catid`, `contentid`, `file_name`
 (17, '', 0, 0, 'sxd.jpg', 'passport2013/0910/20130910143751644.jpg', 67788, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
 (18, '', 0, 0, 'QQ图片20130905144255.jpg', 'passport2013/0910/20130910144500693.jpg', 62110, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
 (19, '', 0, 0, 'QQ图片20130905144308.jpg', 'passport2013/0910/20130910144532119.jpg', 207182, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
-(20, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0910/20130910152355374.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, '');
+(20, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0910/20130910152355374.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(21, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0911/20130911113510484.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(22, '', 0, 0, 'QQ图片20130905144255.jpg', 'passport2013/0911/20130911163359465.jpg', 62110, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(23, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0911/20130911163559221.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(24, '', 0, 0, 'lgz.jpg', 'passport2013/0911/20130911163649869.jpg', 95006, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(25, '', 0, 0, 'QQ图片20130905144255.jpg', 'passport2013/0911/20130911163649114.jpg', 62110, 'jpg', 0, 0, 0, 0, '', 0, '', 0, ''),
+(26, '', 0, 0, 'QQ图片20130905144237.jpg', 'passport2013/0911/20130911165102242.jpg', 58070, 'jpg', 0, 0, 0, 0, '', 0, '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -655,7 +662,7 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后一次登录时间',
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1089693 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1193560 ;
 
 --
 -- 转存表中的数据 `sp_member`
@@ -666,7 +673,8 @@ INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `pwd_s
 (1065112, '1065112', 2, '514c59761aeaba4fbe7cc788577fc515', '1', 'l4IZ1m', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 0, '0', 0),
 (104760, '104760', 3, '1218a4b526c794480d28eefb08047400', '1', 'pdgEsz', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 1, '127.0.0.1', 1378801341),
 (1062753, '1062753', 4, 'e521f1e8065594e421b3b708878b14c1', '1', 'Zxinxa', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 0, '0', 0),
-(1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', '1', 'BK7Sng', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256);
+(1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', '1', 'BK7Sng', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256),
+(1193559, 'aaaaaa', 6, '6dceefbc8399e41b5fae06839a8bdc2f', '1', 'JFAkWH', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378863829, 0, '0', 0);
 
 -- --------------------------------------------------------
 
