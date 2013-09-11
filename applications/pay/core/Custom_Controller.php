@@ -17,6 +17,10 @@ class Custom_Controller extends CommonController
 
 		$this->paymentInfos = $this->_getPaymentInfos();
 		$this->webgameInfos = $this->_getWebgameInfos();
+		$this->_loadModel(APPCODE, 'paymonthModel');
+		$this->paymonthInfos = $this->paymonthModel->getAllInfos('paymonth', 'id', array(), array(array('listorder', 'desc')));
+		$this->_loadModel('webgame', 'serverModel');
+		$this->serverInfos = $this->serverModel->getAllInfos('server', 'id', array(), array(array('listorder', 'desc')));
 		$this->load->library('form_validation');
 	}
 

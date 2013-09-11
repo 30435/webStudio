@@ -47,52 +47,14 @@
 .radio-label{ border-top:1px solid #e4e2e2; border-left:1px solid #e4e2e2}
 .radio-label td{ border-right:1px solid #e4e2e2; border-bottom:1px solid #e4e2e2;background:#f6f9fd}
 </style>
-<?php if ($this->method == 'add') { ?>
-<script type="text/javascript">
-<!--
-$(function(){
-	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
-	$("#username").formValidator({onshow:"请输入用户名",onfocus:"用户名应该为2-20位之间"}).inputValidator({min:2,max:20,onerror:"用户名应该为2-20位之间"}).ajaxValidator({
-	    type : "get",
-		url : "",
-		data :"action=checkExist",
-		datatype : "html",
-		async:'false',
-		success : function(data){	
-            if( data == "1" ) {
-                return true;
-			} else {
-                return false;
-			}
-		},
-		buttons: $("#dosubmit"),
-		onerror : "用户已存在。",
-		onwait : "请稍候..."
-	});
-	$("#password").formValidator({onshow:"请输入密码",onfocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onerror:"密码应该为6-20位之间"});
-	$("#passwordConfirm").formValidator({onshow:"请输入确认密码",onfocus:"请输入两次密码不同。",oncorrect:"密码输入一致"}).compareValidator({desid:"password",operateor:"=",onerror:"请输入两次密码不同。"});
-	$("#email").formValidator({onshow:"请输入E-mail",onfocus:"E-mail格式错误",oncorrect:"E-mail格式正确"}).regexValidator({regexp:"email",datatype:"enum",onerror:"E-mail格式错误"});
-})
-//-->
-</script>
-<?php } else if ($this->method == 'edit') { ?>
-<script type="text/javascript">
-  $(document).ready(function() {
-	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
-	$("#password").formValidator({empty:true,onshow:"不修改密码请留空。",onfocus:"密码应该为6-20位之间"}).inputValidator({min:6,max:20,onerror:"密码应该为6-20位之间"});
-	$("#pwdconfirm").formValidator({empty:true,onshow:"不修改密码请留空。",onfocus:"请输入两次密码不同。",oncorrect:"密码输入一致"}).compareValidator({desid:"password",operateor:"=",onerror:"请输入两次密码不同。"});
-	$("#email").formValidator({onshow:"请输入E-mail",onfocus:"E-mail格式错误",oncorrect:"E-mail格式正确"}).regexValidator({regexp:"email",datatype:"enum",onerror:"E-mail格式错误"});
-  })
-</script>
-<?php } ?>
 <script type="text/javascript">
 <!--
 $(function(){
   $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
-  $("#code").formValidator({onshow:"请输入2-10为小写字母的游戏代码",onfocus:"请输入游戏代码"}).regexValidator({regexp:"^[a-z]{2,10}$",onerror:"2-10个小写字母"}).inputValidator({min:1,onerror:"请输入游戏代码"}).ajaxValidator({
+  $("#code").formValidator({onshow:"请输入2-10为小写字母的支付方式代码",onfocus:"请输入支付方式代码"}).regexValidator({regexp:"^[a-z]{2,10}$",onerror:"2-10个小写字母"}).inputValidator({min:1,onerror:"请输入支付方式代码"}).ajaxValidator({
 	type : "get",
 	url : "",
-	data :"action=checkCode",
+	data :"action=checkExist",
 	datatype : "html",
 	cached:false,
 	getdata:{id:'id'},
@@ -100,9 +62,9 @@ $(function(){
 	cached:false,
 	success : function(data){	
 		if( data == "1" ){return true;}else{return false;}
-	},buttons: $("#dosubmit"),onerror : "游戏代码已存在",onwait : "正在连接，请稍候。"}
+	},buttons: $("#dosubmit"),onerror : "支付方式代码已存在",onwait : "正在连接，请稍候。"}
   );
-  $("#name").formValidator({onshow:"请输入游戏名称",onfocus:"游戏名称不能为空。"}).inputValidator({min:1,max:999,onerror:"游戏名称不能为空。"});
+  $("#name").formValidator({onshow:"请输入支付方式名称",onfocus:"支付方式名称不能为空。"}).inputValidator({min:1,max:999,onerror:"支付方式名称不能为空。"});
 })
 //-->
 </script>

@@ -30,7 +30,7 @@
 						<!--<div class="link_info_wrap"><a class="link_info" href="/service/nonoservice"><span>详细</span></a><span class="ui_tips ui_tips_t"><span>详细</span><i>◆</i></span></div>-->
 					</div>
 					<div class="service_price"><?php echo $paymonthInfo['money']; ?>元/<?php echo $paymonthInfo['unit']; ?></div>
-					<div class="service_btns"><a class="ui_btn_small_em" href="/nono/nonopay"><span>立即开通</span></a><a class="ui_btn_small" href="/nonof/nonopay"><span>给好友开通</span></a></div>
+					<div class="service_btns"><a class="ui_btn_small_em" href="<?php echo $this->baseUrl . '?paymonth=' . $paymonthInfo['id']; ?>"><span>立即开通</span></a><!--<a class="ui_btn_small" href="<?php echo $this->baseUrl . '?paymonth=' . $paymonthInfo['id']; ?>"><span>给好友开通</span></a></div>-->
 				</li>
 			<?php } ?>	
 			</ul>

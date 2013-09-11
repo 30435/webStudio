@@ -10,6 +10,21 @@ function setPayment(paymentStr) //paymentCode, paymentName, description)
 	$("#payTypeSelect").show();
 }
 
+function setWebgame(webgameStr)
+{
+	$("#paytoType").text(webgameStr.name + ' ' + webgameStr.coin_name);
+	if (webgameStr.webgame_type == '3')	{
+		$("#webgameInfo").show();
+	}
+}
+
+function setPaymonth(paymonthStr)
+{
+	$("#paytoType").text(paymonthStr.name);
+	$("#moneyInfo").hide();
+	$("#paymonthInfo").show();
+}
+
 function checkusername(username)
 {
 	if (username == '') {

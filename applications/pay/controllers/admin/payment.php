@@ -31,7 +31,7 @@ class Payment extends Custom_AdminController
 	 */
 	public function add()
 	{
-		//$this->_checkExist('username');
+		$this->_checkExist('code');
 		$this->_add();
 	}
 

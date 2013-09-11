@@ -26,7 +26,7 @@
                     <li>
                         <div class="service_img_wrap"><div class="service_img"><img width="36" height="36" src="<?php echo $webgameInfo['pic_middle']; ?>"></div><h5><?php echo $webgameInfo['name']; ?></h5></div>
                         <div class="service_price"><?php echo $webgameInfo['coin_rate'] . $webgameInfo['coin_unit'] . $webgameInfo['coin_name']; ?>/诺币</div>
-                        <div class="service_btns"><a class="ui_btn_small_em" href="<?php echo $this->baseUrl; ?>index/index?webgameCode=<?php $webgameInfo['code']; ?>"><span>立即兑换</span></a></div>
+                        <div class="service_btns"><a class="ui_btn_small_em" href="<?php echo $this->baseUrl . '?scode=' . $webgameInfo['code']; ?>"><span>立即兑换</span></a></div>
                     </li>
 				<?php } ?>
                 </ul>

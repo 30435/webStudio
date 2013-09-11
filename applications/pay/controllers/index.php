@@ -27,9 +27,6 @@ class Index extends Custom_Controller
 		if (!empty($this->loginedUserInfo)) {
 			$this->moneyInfo = $this->_getMoneyInfo($this->loginedUserInfo['username']);
 		}
-
-		$this->_loadModel(APPCODE, 'paymonthModel');
-		$this->paymonthInfos = $this->paymonthModel->getAllInfos('paymonth', 'id', array(), array(array('listorder', 'desc')));
 	}
 
 	/**
@@ -39,15 +36,22 @@ class Index extends Custom_Controller
 	 */
 	public function index()
 	{	
-		$codeServerParam = $this->input->get('scode');
-		$midParam = explode('_', $codeServerParam);
-		$this->webgameCode = (isset($midParam[0]) && !empty($midParam[0])) ? $midParam[0] : '';
-		$this->serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
+		$paymonthId = $this->input->get('paymonth');
+		$this->paymonthInfo = isset($this->paymonthInfos[$paymonthId]) ? $this->paymonthInfos[$paymonthId] : false;
+
+		if (empty($this->paymontInfo)) {
+			$codeServerParam = $this->input->get('scode');
+			$midParam = explode('_', $codeServerParam);
+			$webgameCode = (isset($midParam[0]) && !empty($midParam[0])) ? $midParam[0] : '';
+			$this->webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
+			$serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
+			$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
+		}
 
 		$paymentCode = $this->input->get('pcode');
 		$paymentCode = in_array($paymentCode, array_keys($this->paymentInfos)) ? $paymentCode : 'yeepay';
 		if ($paymentCode == 'myself') {
-			$paymentCode = (isset($moneyInfo['money']) && $moneyInfo['money'] > 0) ? $paymentCode : 'yeepay';
+			$paymentCode = (isset($this->moneyInfo['money']) && $this->moneyInfo['money'] > 0) ? $paymentCode : 'yeepay';
 		}
 		$this->showPayment = json_encode($this->paymentInfos[$paymentCode]);
 
