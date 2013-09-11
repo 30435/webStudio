@@ -1,0 +1,442 @@
+/*-----------------------------------------------------------------------------------------------
+主题:ganwan.com
+
+版本:1.0
+
+作者:班亚南
+
+修改日期：2012-9-7
+-------------------------------------------------------------------------------------------------*/
+/* = base - 网站样式重定义与网站公用的原子
+-------------------------------------------------------------------------------------------------*/
+@import url(../styles/base.css);
+/* = public - 网站公用样式
+-------------------------------------------------------------------------------------------------*/
+@import url(../styles/public.css);
+/* 首页右边 */
+.right_box {
+	width: 762px;
+	margin: 3px 0 0 0;
+	overflow:hidden;
+}
+/* 焦点图 */
+
+#focus {
+	width: 311px;
+	height: 265px;
+	position: relative;
+	float: left;
+	background: #62BAAC;
+}
+#bimg {
+ filter: progid:DXImageTransform.Microsoft.Fade ( duration=0.5, overlap=1.0 );
+	overflow: hidden;
+	height: 263px;
+}
+#bimg img {
+	width: 309px;
+	height: 263px;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+#info {
+	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+}
+#simg {
+	padding: 0 0 0 205px;
+}
+#simg div {
+	font-size: 12px;
+	background: #AF2D2F;
+	border: 1px solid #C52525;
+	float: left;
+	width: 18px;
+	cursor: pointer;
+	color: #fff;
+	line-height: 18px;
+	height: 18px;
+	text-align: center;
+	margin: 0 0 0 3px;
+	display: inline;
+}
+#simg .f1 {
+	background: #6D6D6D;
+	border: 1px solid #8A8A88;
+}
+.dis {
+	display: block;
+}
+.undis {
+	display: none
+}
+.lkff {
+	width: 180px
+}
+#font_hd {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	bottom: 0px;
+}
+#font_hd td {
+	overflow: hidden;
+	height: 25px
+}
+.pic {
+	overflow: hidden
+}
+.pic .dis a {
+	display: block;
+	font-size: 262px;
+	VERTICaL-align: middle;
+	overflow: hidden;
+	width: 309px;
+	font-FaMILY: arial;
+	height: 265px;
+	text-align: center
+}
+.pic .dis a img {
+	max-width: 309px;
+	vertical-align: middle;
+}
+#font_hd td a {
+	font-size: 12px;
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+	color: #FFF;
+	text-align: left;
+	text-indent: 2em
+}
+/* 新闻 */
+.right_news {
+	width: 444px;
+	border: 1px solid #44E7CA;
+	float: right;
+	height: 265px;
+	background: #62BAAC;
+	overflow: hidden;
+}
+.right_news_hd {
+	height: 35px;
+	line-height: 35px;
+}
+.ul li a.news_active {
+	width: 96px;
+	height: 31px;
+	line-height: 31px;
+	background-position: -25px -147px;
+	display: block;
+	color: #63BBAD !important;
+}
+.ul {
+	width: 444px;
+	height: 31px;
+	line-height: 31px;
+	margin: 4px 1px 0 1px;
+	float: left;
+	position: relative;
+}
+.ul li {
+	width: 96px;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0 0 0 25px;
+}
+.ul li a {
+	color: #FFF !important;
+}
+.ul .wh50 {
+	float: right;
+	padding: 0 10px 0 0;
+}
+.right_news_bd {
+	width: 442px;
+	background: #ECFEFE;
+	margin: 0 1px;
+}
+.right_news_bd ul {
+	width: auto;
+	height: 229px;
+	position: relative;
+}
+.right_news_bd li {
+	height: 28px;
+	line-height: 28px;
+	float: left;
+	width: 422px;
+	margin: 0 10px;
+	display: inline;
+	background: url(../img/bdr.jpg) repeat-x 0 bottom;
+}
+.right_news_bd li a {
+	display: block;
+	float: left;
+}
+.right_news_bd li span {
+	float: right;
+}
+.news_listbg {
+	background: url(../img/listbg.jpg) no-repeat left center;
+	padding: 0 5px 0 20px;
+}
+.news_hdlbg, .news_hdrbg {
+	width: 11px !important;
+	height: 12px !important;
+	position: absolute;
+	top: -4px;
+	margin: 0 !important;
+	overflow: hidden;
+}
+.news_hdlbg {
+	background-position: 0 -147px;
+	left: 0px;
+}
+.news_hdrbg {
+	background-position: -11px -147px;
+	-right: 5px;
+	right: 2px;
+}
+.bdlbg, .bdrbg, .hdlbg, .hdrbg {
+	width: 9px;
+	height: 10px;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+}
+.hdlbg {
+	left: 0;
+	top: 0;
+	background-position: 0 -160px;
+}
+.hdrbg {
+	right: 0;
+	top: 0;
+	background-position: -9px -160px;
+}
+.bdlbg {
+	left: 0;
+	bottom: 0;
+	background-position: 0 -170px;
+}
+.bdrbg {
+	bottom: 0;
+	right: 0;
+	background-position: -9px -170px;
+}
+.news_hand {
+	width: 525px;
+	height: 120px;
+	border: 1px solid #44E7CA;
+	padding:1px;
+	background: #63B9AC;
+	position: relative;
+	float:left;
+	display:inline;
+}
+.news_hand_bd{
+	background:#ECFEFE;
+	height:120px;
+}
+.news_hand li {
+	width: 168px;
+	height: 76px;
+	border: 1px solid #5CC4AD;
+	position: relative;
+	float: left;
+	top: 28px;
+	background: #E1FFFF;
+	margin: 0 0 0 4px;
+	display: inline;
+}
+.news_hand li img {
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+}
+.news_hand strong {
+	padding: 15px 0 0 15px;
+	font-size: 16px;
+	display: block;
+	float: left;
+	color: #225B48 !important;
+	font-weight:normal
+}
+.news_hand_btn {
+	width: 63px;
+	height: 18px;
+	line-height: 18px;
+	display: block;
+	background-position: 0 -182px;
+	margin: 40px 0 0 12px;
+	;
+}
+/* 游戏资料 */
+.game_strategy{
+	width:525px;
+	border: 1px solid #44E7CA;
+	background:#61B9AB;
+	margin:3px 0 0 0;
+	height:206px;
+	overflow:hidden;
+	padding:1px;
+	float:left;
+	display:inline;
+}
+.game_strategy_bd{
+	padding:10px 15px 0 15px;
+	height:160px;
+	background:#ECFEFE;
+}
+.game_strategy_bd span{
+	display:block;
+	width:77px;
+	height:26px;
+	line-height:26px;
+	padding:0 0 0 17px;
+	background-position:0 -202px;
+	color:#516C65 !important;
+	float:left;
+	margin:5px 10px 0 0;
+	display:inline;
+}
+.game_strategy_bd li{
+	clear:both;
+	height:36px;
+	line-height:36px;
+	overflow:hidden;
+}
+.game_strategy_bd li a{
+	width:65px;
+	text-align:center;
+	float:left;
+}
+/* 服务器列表 */
+.game_list{
+	width:228px;
+	height:334px;
+	float:right;
+	background:#61B9AB;
+	position:relative;
+	margin:-123px 0 0 0;
+	overflow:hidden;
+}
+.game_list_hd{
+	height:18px;
+	line-height:18px;
+	background:#EBFDFD;
+	margin:0 1px;
+	padding:10px 20px;
+	position:relative;
+	overflow:hidden;
+}
+.enter{
+	display:block;
+	position:absolute;
+	right:25px;
+	top:10px;
+	*top:12px;
+	width:36px;
+	height:18px;
+	line-height:18px;
+	text-align:center;
+	background-position:-58px -126px;
+	color:#FDFAC5 !important
+}
+.game_list_bd{
+	background:#EBFDFD;
+	margin:0 1px;
+	overflow:hidden;
+	width:226px;
+}
+.game_list_bd li{
+	height:32px;
+	line-height:32px;
+	margin:0 10px;
+	float:left;
+	display:inline;
+	width:206px;
+	background:url(../img/bdr.jpg) repeat-x left bottom;
+}
+.game_list_bd li a{
+	display:block;
+	float:left;
+	background:url(../img/game_listbg.jpg) no-repeat left center;
+	padding:0 0 0 15px;
+}
+.game_list_bd li span{
+	float:right;
+	color:#E70017;
+}
+.game_list p{
+	height:35px;
+	line-height:35px;
+	padding:0 10px 0 0;
+	background:#EBFDFD;
+	margin:0 1px;
+}
+/* 游戏攻略-论坛热点 */
+.list{
+	width:377px;
+	height:242px;
+	background:#62BAAC;
+	float:left;
+	overflow:hidden;
+}
+.list_bd{
+	width:376px;
+	height:193px;
+	background:#ECFEFE;
+	float:left;
+	margin:0 1px;
+	padding:12px 0 0 0;
+}
+.list_bd li{
+	height:25px;
+	line-height:25px;
+	margin:0 10px;
+	background:url(../img/bdr.jpg) repeat-x left bottom;
+}
+.list_bd li a{
+	display:block;
+	background:url(../img/list_bg.jpg) no-repeat 0 center;
+	padding:0 0 0 15px;
+	float:left;
+}
+.list_bd li span{
+	float:right;
+}
+/* 游戏美图 */
+.zntj,.img{
+	width:760px;
+	background:#62BAAC;
+}
+.zntjli{background:#ECFEFE;
+	margin:0 1px; padding:10px;}
+.zntjli a{ margin:0 10px;}
+.img_bd{
+	height:130px;
+	background:#ECFEFE;
+	margin:0 1px;
+}
+.img_bd li{
+	width:189px;
+	float:left;
+	text-align:center;
+	padding:20px 0 0 0;
+}
+.img_bd li img{
+	border:3px solid #62BAAC
+}

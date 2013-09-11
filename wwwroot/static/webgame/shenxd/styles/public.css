@@ -1,0 +1,307 @@
+/* = 整站公用
+-------------------------------------------------------------------------------------------------*/
+body {
+	background: url(../img/bodybg.jpg) no-repeat top center #093631;
+}
+.grid_1007 {
+	width: 1007px;
+	margin: 0 auto;
+}
+#content {
+	width: 1007px;
+	margin: 282px auto 0 auto;
+}
+.home, .news, .strategy, .service, .recharge, .bbs, .logo {
+	height: 104px;
+	display: block;
+	background: url(../img/navbg.png) no-repeat
+}
+.right {
+	width: 762px;
+	float: right;
+	position: relative;
+	top: -10px;
+	right: 0;
+}
+/* 背景 */
+
+.desktop, .index, .collect, .login_recharge, .register, .login_game, .QQ, .weibo,.ul li a.news_active,.news_hdlbg,.news_hdrbg,.bdlbg,.bdrbg,.news_hand_btn,.hdlbg,.hdrbg,.game_strategy_bd span,.enter{
+	background: url(../img/icon.png) no-repeat;
+}
+/* = 网站页眉
+-------------------------------------------------------------------------------------------------*/
+#header {
+	height: 157px;
+}
+.site_nav {
+	height: 42px;
+	line-height: 42px;
+	background: url(../img/site_navbg.jpg) repeat-x;
+}
+.site_nav_left {
+	width: 540px;
+	float: left;
+}
+.recommend_game a {
+	padding: 0 8px;
+	background: url(../img/abg.jpg) no-repeat center right;
+}
+.ganwan_logo {
+	float: left;
+	padding: 2px 0
+}
+.site_nav_right {
+	width: 442px;
+	float: right;
+}
+.site_nav_right a {
+	display: block;
+	float: left;
+}
+.site_nav_right span {
+	width: 12px;
+	height: 12px;
+	display: block;
+	float: left;
+	margin: 15px 3px 0 10px
+}
+.desktop {
+	background-position: 0 0;
+}
+.index {
+	background-position: -15px 0;
+}
+.collect {
+	background-position: -31px 0;
+}
+/* 导航 */
+.nav {
+	width: 1027px;
+	background: url(../img/navbg.png) no-repeat;
+	position: relative;
+}
+.nav ul {
+	width: 1027px;
+	position: relative;
+	left: 1px;
+	top: 4px;
+}
+.nav li {
+	float: left;
+}
+.home {
+	width: 122px;
+	background-position: 0 0;
+}
+.news {
+	width: 128px;
+	background-position: -122px 0
+}
+.strategy {
+	width: 107px !important;
+	background-position: -250px 0;
+}
+.logo {
+	width: 281px;
+	height: 104px;
+	background-position: -357px 0;
+}
+.service {
+	width: 121px;
+	background-position: -638px 0;
+}
+.recharge {
+	width: 132px !important;
+	background-position: -759px 0;
+}
+.bbs {
+	width: 126px !important;
+	background-position: -891px 0;
+}
+/* = 网站左侧
+-------------------------------------------------------------------------------------------------*/
+.left {
+	width: 242px;
+	float: left;
+	position: relative;
+	top: -201px;
+	left: 0;
+}
+.start {
+	width: 240px;
+	height: 194px;
+	position: relative;
+	z-index: 2;
+}
+.start img {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+}
+.login {
+	width: 240px;
+	height: 265px;
+	position: relative;
+	border: 1px solid #44E7CA;
+	background: #62BAAC
+}
+.login_bd {
+	width: 202px;
+	margin: 11px auto 0 auto;
+}
+.login_bd strong {
+	color: #FFF;
+	float: left;
+	display: block;
+	line-height: 26px;
+}
+.login_bd p {
+	width: 100%;
+	float: left;
+	padding: 10px 0 0 0;
+}
+.login_bd span{
+	float: left;
+	padding: 10px 0 0 20px;
+}
+.login_bd span a {
+	padding:0 10px 0 0;
+}
+.login_recharge {
+	width: 202px;
+	height: 59px;
+	display: block;
+	margin: 0 auto;
+	background-position: 0 -13px;
+}
+.login_bd label {
+	float: left;
+	padding: 0 0 0 40px;
+	color: #FFF;
+}
+.login_bd label .fl {
+	margin: 3px 5px 0 0
+}
+.login_bd p a {
+	color: #FFF !important;
+}
+.register, .login_game {
+	width: 97px;
+	height: 34px;
+	line-height: 34px;
+	display: block;
+	text-align: center;
+	margin: 10px 0 0 0;
+}
+.register {
+	background-position: 0 -73px;
+	float: left;
+}
+.login_game {
+	background-position: -97px -73px;
+	color: #FFF !important;
+	float: right;
+}
+.QQ, .weibo {
+	height: 16px;
+	display: block;
+	padding: 0 0 0 25px;
+	text-decoration: underline;
+	color: #FFF !important;
+	margin: 10px 0 0 0;
+}
+.QQ {
+	float: left;
+	background-position: 0 -108px;
+}
+.weibo {
+	float: right;
+	background-position: -91px -108px;
+}
+/* 公用 */
+.left_box {
+	background: #62BAAC;
+	margin: 3px 0 0 0;
+}
+.hd {
+	background: url(../img/hdbg.png) no-repeat 10px center;
+	padding: 0 0 0 30px;
+	font-size: 16px;
+	color: #FFF;
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+}
+.hd a{
+	font-size:12px;
+	color:#FFF !important;
+	position:absolute;
+	right:5px;
+	top:2px;
+}
+.left_box_bd {
+	width: 238px;
+	float: left;
+	background: #ECFEFE;
+	margin:1px;
+	color: #506B64 !important;
+	display:inline;
+}
+.left_box_bd .introduce {
+	padding: 9px 5px;
+	height: 279px;
+	line-height: 230%;
+	position: relative;
+	width:228px;
+}
+.left_box_bd .introduce img {
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+}
+.left_box_bd p {
+	width: 208px;
+	line-height: 18px;
+	padding: 10px 15px 0 15px;
+	float: left;
+}
+.announcement {
+	background: url(../img/bdr.jpg) repeat-x left top;
+	margin: 20px 20px 0 20px;
+	float: left;
+	display: inline;
+	padding:0 0 20px 0;
+	position:relative;
+}
+.announcement img{
+	position:absolute;
+	left:-57px;
+	bottom:10px;
+}
+.announcement h4 {
+	font-size: 14px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+.announcement p {
+	width: auto;
+	padding: 0 16px;
+}
+/* = 网站页脚
+-------------------------------------------------------------------------------------------------*/
+#footer {
+	height: 295px;
+	background: url(../img/footer.jpg) no-repeat center top;
+	color: #526B65 !important
+}
+#footer p {
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+}
+#footer p a {
+	background: url(../img/abg.png) no-repeat right center;
+	padding: 0 10px;
+	color: #526B65 !important
+}
