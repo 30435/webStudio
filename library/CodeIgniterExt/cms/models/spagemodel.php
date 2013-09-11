@@ -16,15 +16,14 @@ abstract class CmsSpageModel extends CommonModel
 	protected function _fieldInfos()
 	{
 		$fieldInfos['fields'] = array(
-			'id' => array('name' => 'ÄÚÈÝID'),
-			'catid' => array('name' => 'ËùÊôÀ¸Ä¿'),
-			'title' => array('name' => '¸¸¼¶²Ëµ¥'),
-			'content' => array('name' => 'ÄÚÈÝ'),
-			'editor' => array('name' => '±à¼­'),
-			'username' => array('name' => '¹ÜÀíÔ±ÕÊºÅ'),
-			'updatetime' => array('name' => '¸üÐÂÊ±¼ä'),
-			'status' => array('name' => '×´Ì¬'),
-			'inputtime' => array('name' => 'Â¼ÈëÊ±¼ä')
+			'id' => array('name' => 'å†…å®¹ID'),
+			'catid' => array('name' => 'æ‰€å±žæ ç›®'),
+			'title' => array('name' => 'æ ‡é¢˜'),
+			'content' => array('name' => 'å†…å®¹'),
+			'username' => array('name' => 'ç¼–è¾‘è´¦å·'),
+			'updatetime' => array('name' => 'æ›´æ–°æ—¶é—´'),
+			'status' => array('name' => 'çŠ¶æ€'),
+			'inputtime' => array('name' => 'å½•å…¥æ—¶é—´')
 		);
 		$fieldInfos['fieldChanges'] = array('title', 'username', 'content');
 		

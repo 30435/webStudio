@@ -26,6 +26,8 @@ abstract class CmsPublish extends Custom_AdminController
 		$file = BASEPATH_WWWROOT . APPCODE . '/index.html';
 		file_exists($file) && @unlink($file);
 		write_file($file, $staticContent);
+
+		$this->_showMessage('更新首页成功！', '', '');
 	}
 
 	/**
@@ -33,7 +35,7 @@ abstract class CmsPublish extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	public function index()
+	public function category()
 	{
 		$this->load->helper('file');
 
@@ -48,7 +50,22 @@ abstract class CmsPublish extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	public function index()
+	public function content()
+	{
+		$this->load->helper('file');
+
+		$staticContent = $this->load->view('index', $this->frontController, true);
+		$file = BASEPATH_WWWROOT . APPCODE . '/index.html';
+		file_exists($file) && @unlink($file);
+		write_file($file, $staticContent);
+	}
+	
+	/**
+	 * Create the index html
+	 *
+	 * @return void
+	 */
+	public function url()
 	{
 		$this->load->helper('file');
 

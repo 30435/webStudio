@@ -111,7 +111,7 @@
 </div>
 </form>
 </div>
-<script language="javascript" type="text/javascript" src="http://localhost/php9/statics/js/cookie.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/cookie.js"></script>
 <script type="text/javascript"> 
 <!--
 function push() {

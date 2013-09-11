@@ -10,12 +10,10 @@ abstract class CmsContent extends Custom_AdminController
 		$this->template = 'cms/' . $this->controller;
 
 		$this->showSubnav = false;
-		$this->categoryInfos = $this->_getCategoryInfos();
 		
 		$this->ckeditor = new CKEditor ();
 		$this->ckeditor->basePath = $this->staticUrl . 'common/ckeditor/';
 		$this->ckeditor->returnOutput = true;
-		
 	}
 
 	/**
@@ -44,8 +42,6 @@ abstract class CmsContent extends Custom_AdminController
 		$strs2 = "<span class='folder'>\$catname</span>";
 
 		$this->categoryStr = $tree->get_treeview(0, 'category_tree', $strs, $strs2 );
-		//echo $this->categorys;
-
 		$this->load->view('cms/subcat');
 	}
 
@@ -73,6 +69,7 @@ abstract class CmsContent extends Custom_AdminController
 	 */
 	public function view()
 	{
+		$this->_initModel();
 		$this->template = 'cms/content_change';
 		$this->_view();
 	}
@@ -166,8 +163,8 @@ abstract class CmsContent extends Custom_AdminController
 	 */
 	public function delete()
 	{
-				$this->_initModel();
-				$this->urlForward = $this->urlForward . '?catid=' . $this->catid;
+		$this->_initModel();
+		$this->urlForward = $this->urlForward . '?catid=' . $this->catid;
 		$this->_delete ();
 	}
 
@@ -202,13 +199,17 @@ abstract class CmsContent extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($currentCatid = 0)
+	protected function _initInfo($currentCatid = 0, $currentPosition = '', $currentCopyfrom = '', $currentTemplate = '')
 	{
 		$currentCatid = empty($currentCatid) ? $this->catid : $currentCatid;
 
 		$format = "<option value='\$id' \$selected>\$spacer\$catname</option>";
-		$tree = new CustomTree ( $this->categoryInfos );
+		$tree = new CustomTree($this->categoryInfos);
 		$this->selectCategory = $tree->getTree(0, $format, $currentCatid);
+
+		$this->selectPosition = $this->_getSelectElement($this->fieldInfos['position']['infos'], 'key', 'value', $currentPosition, true);
+		$this->selectCopyfrom = $this->_getSelectElement($this->fieldInfos['copyfrom']['infos'], 'key', 'value', $currentCopyfrom, true);
+		$this->selectTemplate = $this->_getSelectElement($this->fieldInfos['template']['infos'], 'key', 'value', $currentTemplate, true);
 	}
 
 	/**
@@ -240,27 +241,26 @@ abstract class CmsContent extends Custom_AdminController
 	protected function _spage()
 	{
 		$info = $this->currentModel->getInfo(array('catid' => $this->catid));
-		$this->currentInfo = $this->_formatInfo($info);
-
+		
 		if ($this->form_validation->run() == false) {
+			$this->currentInfo = $this->_formatInfo($info);
 			$this->load->view('cms/spage');
 		} else {
-			var_dump($this->fieldChanges);
 			foreach ($this->fieldChanges as $field) {
 				$data[$field] = $this->input->post($field);
 			}
-			$data = $this->_formatInfo($data, true);
+			$data['username'] = $this->userInfo['username'];
+			$data['updatetime'] = $this->time;
 
 			if (empty($info)) {
-				$data ['catid'] = $this->catid;
+				$data['catid'] = $this->catid;
 				$this->currentModel->addInfo($data);
 			} else {
 				$where = array('catid' => $this->catid);
 				$this->currentModel->editInfo($data, $where);
 			}
 
-			$message = $this->appMenus [$this->method] ['name'] . $this->lang->line ( 'seccessful' );
-			$this->_showMessage ( $message, $this->urlFoward . '?catid=' . $this->catid );
+			$this->_showMessage('信息编辑成功！', $this->urlForward = $this->urlForward . '?catid=' . $this->catid);
 		}
 	}
 
@@ -274,11 +274,11 @@ abstract class CmsContent extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
+		$this->_initInfo($info['catid'], $info['position'], $info['copyfrom'], $info['template']);
 		if ($isWrite) {
 			$info['username'] = $this->userInfo['username'];
 			$info['updatetime'] = $this->time;
 			//$info['description'] = empty($info['description']) ? substr(trim(strip_tags($info['content'])), 0, 255) : $info['description'];
-
 		}
 		return $info;
 	}

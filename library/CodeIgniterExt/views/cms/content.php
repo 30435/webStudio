@@ -1,4 +1,5 @@
 <?php $this->load->view('header_admin') ?>
+<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/cookie.js"></script>
 <div id="closeParentTime" style="display:none"></div>
 <SCRIPT LANGUAGE="JavaScript">
 <!--
@@ -26,7 +27,7 @@ function closeParent() {
     <a class="add fb" href="javascript:;" onclick=javascript:openwinx("<?php echo $this->appMenus['add']['url'] . '?catid=' . $this->catid; ?>",'')><em><?php echo $this->appMenus['add']['name']; ?></em></a>　
     <a href="<?php echo $this->appMenus['listinfo']['url'] . '?catid=' . $this->catid; ?>" class=on><em><?php echo $this->appMenus['listinfo']['name']; ?></em></a>
   </div>
-  <div id="searchid" style="display:none">
+  <div id="searchid" style="">
   <form name="searchform" action="" method="get" >
     <input type="hidden" value="content" name="m">
     <input type="hidden" value="content" name="c">
@@ -40,15 +41,10 @@ function closeParent() {
       <tr>
 		<td>
 		  <div class="explain-col">
-            添加时间：<link rel="stylesheet" type="text/css" href="http://localhost/php9/statics/js/calendar/jscal2.css"/>
-			<link rel="stylesheet" type="text/css" href="http://localhost/php9/statics/js/calendar/border-radius.css"/>
-			<link rel="stylesheet" type="text/css" href="http://localhost/php9/statics/js/calendar/win2k.css"/>
-			<script type="text/javascript" src="http://localhost/php9/statics/js/calendar/calendar.js"></script>
-			<script type="text/javascript" src="http://localhost/php9/statics/js/calendar/lang/en.js"></script>
-			<input type="text" name="start_time" id="start_time" value="" size="10" class="date" readonly>&nbsp;
+			添加时间：<input type="text" readonly="" class="date input-text" size="10" value="" id="start_time" name="start_time">&nbsp;
 			<script type="text/javascript">
 				Calendar.setup({
-				weekNumbers: false,
+				weekNumbers: true,
 				inputField : "start_time",
 				trigger    : "start_time",
 				dateFormat: "%Y-%m-%d",
@@ -56,11 +52,10 @@ function closeParent() {
 				minuteStep: 1,
 				onSelect   : function() {this.hide();}
 				});
-            </script>- &nbsp;
-			<input type="text" name="end_time" id="end_time" value="" size="10" class="date" readonly>&nbsp;
+			</script>-<input type="text" readonly="" class="date input-text" size="10" value="" id="end_time" name="end_time">&nbsp;
 			<script type="text/javascript">
 				Calendar.setup({
-				weekNumbers: false,
+				weekNumbers: true,
 				inputField : "end_time",
 				trigger    : "end_time",
 				dateFormat: "%Y-%m-%d",
@@ -68,7 +63,7 @@ function closeParent() {
 				minuteStep: 1,
 				onSelect   : function() {this.hide();}
 				});
-            </script>				
+			</script>				
 			<select name="posids">
 			  <option value='' selected>全部</option>
 			  <option value="1" >推荐</option>
@@ -119,7 +114,7 @@ function closeParent() {
 			  $menu = $this->appMenus[$operationMenu];
 			  $menuUrl = $menu['url'] . '?catid=' . $this->catid . '&id=' . $info['id'];
 			  $menuUrl = ($operationMenu == 'delete') ? 'javascript:confirmurl("' . $menuUrl . '", "确认要删除 『 ' . $info['username'] . '』 吗？");' : $menuUrl;
-			  $menuUrl = ($operationMenu == 'edit') ? 'javascript:openwinx("' . $menuUrl . '", "");' : $menuUrl;
+			  $menuUrl = in_array($operationMenu, array('edit', 'view')) ? 'javascript:openwinx("' . $menuUrl . '", "");' : $menuUrl;
 		  ?>
     	  <a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
     	  <?php } ?>
@@ -141,7 +136,6 @@ function closeParent() {
 </div>
 </form>
 </div>
-<script language="javascript" type="text/javascript" src="http://localhost/php9/statics/js/cookie.js"></script>
 <script type="text/javascript"> 
 <!--
 function push() {

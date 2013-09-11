@@ -32,7 +32,7 @@ function closeParent() {
     <div style='overflow-y:auto;overflow-x:hidden' class='scrolltable'>
       <table width="100%" cellspacing="0" class="table_form contentWrap">
         <tr>
-	      <th width="80"> <?php echo 'title';?></th>
+	      <th width="80"> <?php echo $this->fieldInfos['title']['name'];?></th>
           <td>
 		    <input type="text" style="width:400px;" name="title" id="title" value="<?php if (isset($this->currentInfo['title'])) echo $this->currentInfo['title']; ?>" style="color:<?php if (isset($this->currentInfo['style'])) echo $this->currentInfo['style']; ?>" class="measure-input " onBlur="$.post('api.php?op=get_keywords&number=3&sid='+Math.random()*5, {data:$('#title').val()}, function(data){if(data && $('#keywords').val()=='') $('#keywords').val(data); })"/>
 		    <input type="hidden" name="style_color" id="style_color" value="<?php if (isset($this->currentInfo['style_color'])) echo $this->currentInfo['style_color']; ?>">
@@ -42,11 +42,7 @@ function closeParent() {
 		  </td>
         </tr>
         <tr>
-          <th width="80"> <?php echo 'keywords';?>	  </th>
-          <td><input type="text" name="keywords" id="keywords" value="<?php if (isset($this->currentInfo['keywords'])) echo $this->currentInfo['keywords']; ?>" size="50">  <?php echo 'explode_keywords';?></td>
-        </tr>
-        <tr>
-          <th width="80"><?php echo 'content';?></th>
+          <th width="80"><?php echo $this->fieldInfos['content']['name']; ?></th>
           <td>
             <?php 			
 				$contentAuto= isset($this->currentInfo['content']) ? $this->currentInfo['content'] : '';
@@ -60,7 +56,7 @@ function closeParent() {
     <div class="btn">
       <input type="hidden" name="catid" value="<?php echo $this->catid;?>" />
       <input type="hidden" name="edit" value="<?php echo 'title' ? 1 : 0;?>" />
-      <input type="submit" class="button" name="dosubmit" value="<?php echo 'submit';?>" />
+      <input type="submit" class="button" name="dosubmit" value="提交" />
     </div> 
   </div>
   </form>

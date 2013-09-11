@@ -18,7 +18,7 @@ class AdminController extends Custom_Controller
 		
 		$isLogin = $this->_checkAdmin();
 		if (empty($isLogin)) {
-			redirect($this->appInfos['passport']['url'] . '/admin/index/login');
+			redirect($this->appInfos['passport']['url'] . 'admin/index/login');
 			exit();
 		}
 

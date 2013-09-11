@@ -39,7 +39,6 @@ class Base_Controller extends CommonController
 	protected function _initModel($catid = 0)
 	{
 		$this->catid = empty($catid) ? $this->input->get_post('catid') : $catid;
-		
 		$this->currentCategoryInfo = isset($this->categoryInfos[$this->catid]) ? $this->categoryInfos[$this->catid] : false;
 		
 		if (empty($this->currentCategoryInfo)) {
@@ -49,7 +48,6 @@ class Base_Controller extends CommonController
 		$modelid = isset($this->currentCategoryInfo['modelid']) ? $this->currentCategoryInfo['modelid'] : false;
 		$this->modelInfo = isset($this->modelInfos[$modelid]) ? $this->modelInfos[$modelid] : false;
 		if (empty($this->modelInfo)) {
-			//exit($modelid);
 			$this->_showMessage('Ä£ÐÍ´íÎó£¡');
 		}
 		$this->_initCurrentModel($this->modelInfo['table']);
