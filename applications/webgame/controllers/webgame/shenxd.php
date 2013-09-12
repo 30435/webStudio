@@ -11,11 +11,6 @@ class shenxd extends Index
 	public function __construct() {
 		parent::__construct ();
 
-		
-	}
-
-	public function index()
-	{
-		$this->load->view('seer/seer1');
+		$this->templatePre = 'shenxd/';
 	}
 }

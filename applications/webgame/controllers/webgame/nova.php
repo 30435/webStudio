@@ -8,7 +8,8 @@ require dirname(dirname(__FILE__)) . '/index.php';
  */
 class nova extends Index
 {
-	public function __construct() {
+	public function __construct()
+	{
 		parent::__construct ();
 
 		

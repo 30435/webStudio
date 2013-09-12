@@ -18,9 +18,8 @@ class seer extends Index
 		$this->load->view('seer/seer1');
 	}
 
-	public function seer()
+	public function seer1()
 	{
 		$this->load->view('seer/seer');
 	}
-
 }

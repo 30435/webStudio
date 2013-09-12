@@ -1,23 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php echo doctype(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>赛尔号|2125赛尔号|赛尔号最新攻略秘籍</title>
-<meta name="Keywords" content="赛尔号,2125赛尔号,赛尔号小游戏"/> 
-<meta name="Description" content="赛尔号官方网站，2125赛尔号太空探险虚拟飞船,化身勇敢的机器人赛尔,2125赛尔号精灵大全,最新赛尔号攻略秘籍,赛尔号精灵融合公式,赛尔号每天最新攻略任务秘籍。"/>
-<link rel="canonical" href="http://www.2125.com/" />
-<link type="image/ico" rel="shortcut icon" href="http://www.2125.com/favicon.ico" />
-<link type="text/css" rel="stylesheet" href="http://res.2125.com/css/comm/global_v0422.css?v=201301232028"  />
-<link type="text/css" rel="stylesheet" href="http://res.2125.com/css/gw/seer.css?v=201301232028"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title><?php echo $this->metaDatas['title']; ?></title>
+<meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
+<meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
+
+<link type="image/ico" rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/seer/css/style.css?v=201301232028"  />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/seer/css/seer.css?v=201301232028"/>
 </head>
-<body>
-
 <body style="background:#fff;">
-
 <div id="header_3">
 	<div class="top-container">
 		<h1>
-			<a class="logo" target="_blank" href="http://www.2125.com" hidefocus="true" title="点击回到2125首页"><img width="137" height="37" src="http://upload.ci.com/sitePage/1//res.2125.com/images/comm/topbar_v2012/2125logo.png?date=20120119"/></a>
+			<a class="logo" target="_blank" href="<?php echo $this->baseUrl; ?>" hidefocus="true" title="<?php echo $this->metaDatas['title']; ?>">
+				<img width="137" height="37" src="<?php echo $this->staticUrl; ?>webgame/topbar/images/topbar_v2012/2125logo.png?date=20120119"/>
+			</a>
 		</h1>
 		<span class="divide"></span>
 		<div class="product-area">
@@ -34,7 +33,10 @@
 		<span class="divide"></span>
 		<div class="topserve-area">
 			<div class="serve-hrefs">
-				<a onclick="addFav();" href="javascript:;" class="serve-href href-fav">收藏</a><a href="http://pay.61.com/nono/nonopay" class="serve-href href-pay" target="_blank">充值</a><a href="http://miba.2125.com/thread/l/?fid=2" class="serve-href href-miba" target="_blank">米吧</a><a href="http://service.61.com/" class="serve-href href-service" id="last-serve-href" target="_blank">客服</a>
+				<a onclick="addFav();" href="javascript:;" class="serve-href href-fav">收藏</a>
+				<a href="http://pay.61.com/nono/nonopay" class="serve-href href-pay" target="_blank">充值</a>
+				<a href="http://miba.2125.com/thread/l/?fid=2" class="serve-href href-miba" target="_blank">米吧</a>
+				<a href="http://service.61.com/" class="serve-href href-service" id="last-serve-href" target="_blank">客服</a>
 			</div>
 			<div class="topevent-speaker-contain">
 				<ul id="webtop_product_news" class="topevent-speaker">
@@ -68,7 +70,7 @@ function addFav()
 	<div class="box_inner">
 		<div style="width:956px; height:559px; overflow:hidden; margin:0pt auto;">
 			<div id="iframe_seer" style="margin-left:-28px;margin-top:-61px;">
-				<iframe id="frm" src="http://upload.ci.com/sitePage/1//seer.61.com/?tmcid=29" width="1010" height="620" frameborder="0" scrolling="no"></iframe>
+				<iframe id="frm" src="http://seer.61.com/?tmcid=29" width="1010" height="620" frameborder="0" scrolling="no"></iframe>
 			</div>
 
 		</div>
