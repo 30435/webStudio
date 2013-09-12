@@ -12,21 +12,12 @@ class nova extends Index
 	{
 		parent::__construct ();
 
-		
-	}
-
-	public function index()
-	{
-		$this->load->view('nova/nova', $this->frontController);
+		$this->currentWebgameInfo = $this->webgameInfos['nova'];
+		$this->templatePre = 'nova/';
 	}
 
 	public function novasub()
 	{
 		$this->load->view('nova/novasub', $this->frontController);
-	}
-
-	public function test()
-	{
-		echo 'ssssssss';
 	}
 }

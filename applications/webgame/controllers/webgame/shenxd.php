@@ -11,6 +11,7 @@ class shenxd extends Index
 	public function __construct() {
 		parent::__construct ();
 
+		$this->currentWebgameInfo = $this->webgameInfos['shenxd'];
 		$this->templatePre = 'shenxd/';
 	}
 }

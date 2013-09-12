@@ -18,7 +18,6 @@
 	<div class="main">
 		<div class="left classify">
 			<ul>
-
 	        	<li <?php if ($this->catid == 2) echo 'class="on"'; ?>><a href="<?php echo $this->categoryInfos[2]['url']; ?>"><?php echo $this->categoryInfos[2]['catname']; ?></a></li>
 				<li <?php if ($this->catid == 3) echo 'class="on"'; ?>><a href="<?php echo $this->categoryInfos[3]['url']; ?>"><?php echo $this->categoryInfos[3]['catname']; ?></a></li>
 				<li <?php if ($this->catid == 4) echo 'class="on"'; ?>><a href="<?php echo $this->categoryInfos[4]['url']; ?>"><?php echo $this->categoryInfos[4]['catname']; ?></a></li>

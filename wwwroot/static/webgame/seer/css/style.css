@@ -64,15 +64,15 @@ body			{ color:#333;font:12px/1.5 helvetica,arial,sans-serif;background:url(../i
 #header_2 .rgame      { line-height:30px; float:right; color:#2d2d2d; font-family:Simsun; padding-right:20px;}
 #header_2 .share_tool { float:left; width:147px; height:21px; padding-top:5px;}
 
-#header_3             	{ height:50px; background:url(../images/topbar_v2012/topbar.png) repeat-x #fff; width:100%; overflow:hidden;}
+#header_3             	{ height:50px; background:url(../images/topbar.png) repeat-x #fff; width:100%; overflow:hidden;}
 #header_3 .top-container{ width:980px; margin:0 auto;}
 #header_3 .logo       	{ float:left; padding-top:5px; padding-left:15px;}
-#header_3 .divide		{ float:left; display:inline; background:url(../images/topbar_v2012/topbar.png) no-repeat 0 -100px; width:2px; height:34px; margin:7px 30px;}
+#header_3 .divide		{ float:left; display:inline; background:url(../images/topbar.png) no-repeat 0 -100px; width:2px; height:34px; margin:7px 30px;}
 #header_3 .product-area { width:428px; display:inline-block; float:left;}
 	.product-area .product-tab	{ height:28px; overflow:hidden;}
 		.product-tab .product-tab-li	{ display:inline; float:left; margin:3px 5px 0 0;}
 			.product-tab .product-tab-li#list-mr0	{ margin-right:0; }
-		.product-tab .product-tab-list 	{ display:block; cursor:pointer; width:81px; height:20px; background:url(../images/topbar_v2012/topbar.png) no-repeat 0 -75px; padding-top:5px; text-align:center; color:#333; }
+		.product-tab .product-tab-list 	{ display:block; cursor:pointer; width:81px; height:20px; background:url(../images/topbar.png) no-repeat 0 -75px; padding-top:5px; text-align:center; color:#333; }
 			.product-tab .product-tab-list.list-on,.product-tab .product-tab-list:hover	{ text-decoration:none; background-position:0 -50px; color:#fff;}
 	.product-area .product-hrefs{ height:22px; overflow:hidden; padding-top:2px;}
 		.product-hrefs img				{ margin-left:-4px;}
@@ -81,10 +81,10 @@ body			{ color:#333;font:12px/1.5 helvetica,arial,sans-serif;background:url(../i
 #header_3 .topserve-area{ width:224px; float:left;}
 	.topserve-area .serve-hrefs	{ height:15px; padding:5px 10px; border-bottom:1px solid #b4b4b4; overflow:hidden;}
 		.serve-hrefs .serve-href		{ float:left; height:15px; line-height:15px; padding-left:20px; margin-right:8px; display:inline; width:24px;}
-			.serve-href.href-fav			{ background:url(../images/topbar_v2012/topbar.png) no-repeat -81px -51px;}
-			.serve-href.href-pay			{ background:url(../images/topbar_v2012/topbar.png) no-repeat -81px -66px;}
-			.serve-href.href-miba			{ background:url(../images/topbar_v2012/topbar.png) no-repeat -81px -81px;}
-			.serve-href.href-service		{ background:url(../images/topbar_v2012/topbar.png) no-repeat -81px -96px;}
+			.serve-href.href-fav			{ background:url(../images/topbar.png) no-repeat -81px -51px;}
+			.serve-href.href-pay			{ background:url(../images/topbar.png) no-repeat -81px -66px;}
+			.serve-href.href-miba			{ background:url(../images/topbar.png) no-repeat -81px -81px;}
+			.serve-href.href-service		{ background:url(../images/topbar.png) no-repeat -81px -96px;}
 			.serve-href#last-serve-href		{ margin-right:0;}
 	.topserve-area .topevent-speaker-contain	{ height:20px; border-top:1px solid #fdfafa; overflow:hidden; position:relative;}
 		.topevent-speaker-contain .topevent-speaker	{ position:absolute; height:100px; width:200px; top:0; left:10px;}
@@ -92,16 +92,16 @@ body			{ color:#333;font:12px/1.5 helvetica,arial,sans-serif;background:url(../i
 
 /*New Header added by clement 2012-05-03*/
 .body_pt40				{ padding-top:40px;}
-#header_4             	{ top:0 !important; position:absolute; left:0; height:40px; background:url(../images/topbar_v2012/topbar_v0503.png) repeat-x #fff; min-width:980px; width:100%; overflow: visible;}
+#header_4             	{ top:0 !important; position:absolute; left:0; height:40px; background:url(../images/topbar_v0503.png) repeat-x #fff; min-width:980px; width:100%; overflow: visible;}
 #header_4 .top-container{ width:980px; margin:0 auto; position:relative; z-index:100;}
 #header_4 .logo       	{ float:left; padding-top:2px; height:34px;}
-#header_4 .divide		{ float:left; display:inline; background:url(../images/topbar_v2012/topbar_v0503.png) no-repeat 0 -124px; width:1px; height:36px; margin:1px 4px 0 11px;}
+#header_4 .divide		{ float:left; display:inline; background:url(../images/topbar_v0503.png) no-repeat 0 -124px; width:1px; height:36px; margin:1px 4px 0 11px;}
 #header_4 .product-ad	{ float:left; margin-right:7px; display:inline; width:174px; height:38px;}
 #header_4 .webtop-login-area 		{ float:right; width:470px; margin-right:10px}
 	.webtop-speaker					{ float:left; width:210px; height:20px; line-height:20px; margin-top:9px; overflow:hidden; }
 		.webtop-speaker-list  		{ width:300px; overflow:hidden;}
 			.webtop-speaker-option 	{ float:left; width:300px;}
-			.webtop-speaker-link	{ display:block; color:#ff7f01; white-space:nowrap; overflow:hidden; width:288px; height:20px; background:url(../images/topbar_v2012/topbar_v0503.png) no-repeat -83px -165px; padding-left:18px;}
+			.webtop-speaker-link	{ display:block; color:#ff7f01; white-space:nowrap; overflow:hidden; width:288px; height:20px; background:url(../images/topbar_v0503.png) no-repeat -83px -165px; padding-left:18px;}
 	.webtop-login					{ float:right; width:260px; text-align:right; overflow:hidden; color:#666; height:20px; padding-top:9px;font-size:0px;line-height:0px}
 	.webtop-login a,.webtop-login span{display:inline-block;font-size:12px;line-height:20px}
 		.webtop-login-link			{ color:#666; cursor: pointer;}
@@ -112,7 +112,7 @@ body			{ color:#333;font:12px/1.5 helvetica,arial,sans-serif;background:url(../i
 #header_4 .webtop-follow-link:hover { text-decoration:none;}
 	#header_4 .follow-qzone			{ margin-left:4px; padding-top:2px; width:66px; height:30px;}
 	#header_4 .follow-weibo			{ width:66px; height:30px;}
-#header_4 .webtop-expand-link		{ float:right; cursor: default; margin:9px 0 0 3px; color:#666; width:83px; height:31px; padding:1px 0 0 4px; background:url(../images/topbar_v2012/topbar_v0503.png) no-repeat -13px -82px;}
+#header_4 .webtop-expand-link		{ float:right; cursor: default; margin:9px 0 0 3px; color:#666; width:83px; height:31px; padding:1px 0 0 4px; background:url(../images/topbar_v0503.png) no-repeat -13px -82px;}
 	.webtop-expand-link.expanded	{ background-position:-13px -103px;}
 #header_4 .webtop-expand-area 		{ position:absolute; display:none; clear:both; z-index:1500; border:5px solid #eee; border-top:0; right:0; top:40px; background:#fff; width:522px; }
 	.webtop-expand-field			{ display:block; width:522px; padding:6px 0; border-bottom:1px dashed #999; overflow:hidden;}

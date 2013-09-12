@@ -144,7 +144,7 @@ body                { background:#fff;}
 
 /***涓€у绾竐nd***/
 .jinglingBox                  {width:978px; margin:8px auto 0;}
-.jinglingBox .jl_title        {width:978px; height:35px; background:url(../images/jl_frame.png) no-repeat;}
+.jinglingBox .jl_title        {width:978px; height:45px; background:url(../images/jl_frame.png) no-repeat;}
 .jinglingBox .jl_title .back  { display:inline; width:85px; height:20px; float:right; background:url(../images/back.jpg) no-repeat; margin:13px 15px 0 0; overflow:hidden;}
 .jinglingBox .jl_title p      { width:600px; height:30px; padding-top:5px; color:#092949; line-height:30px; font-family:arial; font-weight:bold;padding-left:220px; float:left;}
 .jinglingBox .jl_title p a    { color:#092949; padding:0 4px; text-decoration:underline; }

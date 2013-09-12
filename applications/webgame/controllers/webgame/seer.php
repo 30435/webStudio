@@ -11,15 +11,8 @@ class seer extends Index
 	public function __construct() 
 	{
 		parent::__construct ();
-	}
+		$this->currentWebgameInfo = $this->webgameInfos['seer'];
 
-	public function index()
-	{
-		$this->load->view('seer/seer1');
-	}
-
-	public function seer1()
-	{
-		$this->load->view('seer/seer');
+		$this->templatePre = 'seer/';
 	}
 }
