@@ -8,21 +8,10 @@ function setPayment(paymentStr) //paymentCode, paymentName, description)
 	$("#paymentCode").val(paymentStr.code);
 	$("#paymentRate").val(paymentStr.rate);
 	$("#payTypeSelect").show();
-}
 
-function setWebgame(webgameStr)
-{
-	$("#paytoType").text(webgameStr.name + ' ' + webgameStr.coin_name);
-	if (webgameStr.webgame_type == '3')	{
-		$("#webgameInfo").show();
+	if (paymentStr.code == 'myself') {
+		$('#payButton').attr('href', 'javascript: payChange();void(0);');
 	}
-}
-
-function setPaymonth(paymonthStr)
-{
-	$("#paytoType").text(paymonthStr.name);
-	$("#moneyInfo").hide();
-	$("#paymonthInfo").show();
 }
 
 function checkusername(username)
@@ -50,6 +39,8 @@ function checkusername(username)
 					$("#usernamevalid").val("yes");
 					$("#usernamenote").hide();
 					$("#usernamenoteRight").html('<i class="ico ico_success_16"></i>');
+					var serverId = $("#serverId").val();
+					checkServerUser(username, serverId);
 				}
 			}
 		});
@@ -88,7 +79,6 @@ function checkmoney(money)
 		$("#moneyShow").text(money);
 	}
 	
-	
 	return true;
 }
 
@@ -112,9 +102,7 @@ function paysubmit()
 	var elems = new Array('username', 'username2');
 	for (var i = 0; i < elems.length; i++) {
 		var validvalue = $("#" + elems[i] + 'valid').val();
-		//先检查当前的值
 		var cur_val = $("#" + elems[i]).val();
-		//alert(validvalue);
 		if (validvalue == 'yes') {
 			continue;
 		} else if (validvalue == 'no'|| cur_val =='') {
@@ -148,18 +136,32 @@ function paysubmit()
 
 function payChange()
 {
-	var webgameCode = $('#webgameCode').val();
-	var serverCode = $('#serverCode').val();
-	var serverRole = $('#serverRole').val();
-	var username = $('#username').val();
-	var userid = $('#getuserid').val();
-	var confirmusername = $('#confirmusername').val();
+	var elems = new Array('username', 'username2');
+	for (var i = 0; i < elems.length; i++) {
+		var validvalue = $("#" + elems[i] + 'valid').val();
+		var cur_val = $("#" + elems[i]).val();
+		if (validvalue == 'yes') {
+			continue;
+		} else if (validvalue == 'no'|| cur_val =='') {
+			$("#dosubmit").val("");
+			$("#" + elems[i]).val("");
+			$("#" + elems[i]).focus();
+			$("#" + elems[i] + 'note').show().children('span').text('请输入有效信息！');
+			return false;
+		}
+	}
+
 	var money = $('#money').val();
-//alert(webgameCode + '--' + serverCode + '--' + username + '--' + confirmusername + '--' + money);
-	var checkChangeMoney = checkmoneychange(money)
-	if (checkChangeMoney == false) {
-		alert('请指定有效的金额');
+	var checkmoneyResult = checkmoney(money);
+	if (checkmoneyResult == false) {
+		$('#moneynote').show().children('span').text("请输入1到50000的整数");
 		return ;
+	}
+
+	var payType = $("#payType").val();
+	switch (payType) {
+		case 'topaymonth':
+				
 	}
 	
 	$('#webgamenote').val('');
@@ -175,20 +177,6 @@ function payChange()
 		return false;
 	}
 
-	var elems = new Array('username', 'confirmusername');//, 'ordermoney');//, 'mobile');
-	for (var i = 0; i < elems.length; i++) {
-		validvalue = $("#" + elems[i] + 'valid').val();
-		//alert(validvalue);
-		if (validvalue == 'yes') {
-			continue;
-		} else if (validvalue == 'no') {
-			$("#dosubmit").val("");
-			$("#" + elems[i]).val("");
-			$("#" + elems[i]).focus();
-			$("#" + elems[i] + 'note').html('<b style="color:#cc0000">请输入有效信息！</b>');
-			return false;
-		}
-	}
 	var serverUser = $('#serverUser').val();
 	if (serverUser == 'no') {
 		$("#usernamenote").html('<font style="color:#cc0000; left:180px;top:0;">没有创建游戏角色</font>');	
@@ -199,14 +187,68 @@ function payChange()
 		$("#serverrolenote").html('<font style="color:#cc0000; float:left; margin-left:5px;">请选择游戏角色</font>');	
 		return false;
 	}	
-	$("#c_webgameCode").val(webgameCode);
-	$("#c_serverId").val(serverCode);
-	$("#c_serverRole").val(serverRole);
-	$("#c_username").val(username);
-	$("#c_money").val(money);
-	$("#c_userid").val(userid);
+
 	$("#changeForm").submit();
 	return ;
+}
+
+function checkserver(serverId)
+{
+	$("#serverId").val(serverId);
+	var username = $("#username").val();
+	checkServerUser(username, serverId);
+}
+
+function checkServerUser(username, serverId)
+{
+	if (serverId == '' || username == '') {
+		return ;
+	}
+	$.ajax({
+       	type: "get",		//使用get方法访问后台  
+       	dataType: "jsonp",	//返回json格式的数据  
+		jsonp:"callback",
+       	url: webgameUrl + 'frontgame/getServerUser/',	//要访问的后台地址  
+		data:{"serverId": serverId, "username": username},
+		async: false,
+       	success: function(data){
+			alert(data);
+			var userExist = data.user;
+			$("#server").hide();
+			if (userExist == 'yes') {
+				$("#usernamenote").html("<font style='color:#009900; left:180px;top:0;'>有效帐号！</font>");
+				$("#serverUser").val("yes");
+
+				if (data.webgameCode == 'shenq' && data.userCount >= 1) {
+					var roleStr ='<li>'
+						+ '<strong style="height:30px; line-height:24px">游戏角色：</strong><label>'
+						+ '<select name="serverRole" id="serverRole" class="wh174" style="float:left; margin-top:3px;">';
+					$.each(data.userInfo, function(i, v) {
+						roleStr += '<option value="' + i + '">' + v.nickName + '</option>';
+					});
+					roleStr += '</select></label><span id="serverrolenote"></span></li>';
+					if (data.userCount > 1) {
+						$("#haveRole").val("yes");
+					} else {
+						$("#haveRole").val("no");
+					}
+					
+					$("#selectRole").html(roleStr);
+					$("#selectRole").show();
+				} else {
+					$("#haveRole").val('no');
+					$("#selectRole").html('');
+					$("#selectRole").hide();
+				}
+			} else {
+				$("#haveRole").val('no');
+				$("#selectRole").html('');
+				$("#selectRole").hide();
+				$('#serverIdnote').show().children('span').text("您还没有在改服务器创建角色");
+				$("#serverUser").val("no");
+			}
+       	}		     
+	}); 
 }
 
 function confirmPay()

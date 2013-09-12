@@ -30,29 +30,68 @@ class Index extends Custom_Controller
 	}
 
 	/**
-	 * Display the index page of the pay
+	 * Account to user
 	 *
 	 * @return void
 	 */
 	public function index()
-	{	
+	{
+		$this->payType = 'touser';
+		unset($this->paymentInfos['myself']);
+
+		$this->_showForm();
+	}
+
+	/**
+	 * Display the index page of the pay
+	 *
+	 * @return void
+	 */
+	public function towebgame()
+	{
+		$this->payType = 'towebgame';
+		$codeServerParam = $this->input->get('scode');
+		$midParam = explode('_', $codeServerParam);
+		$webgameCode = (isset($midParam[0]) && !empty($midParam[0])) ? $midParam[0] : '';
+		$this->webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
+		$serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
+		$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
+
+		if (empty($this->webgameInfo)) {
+			$this->_messageInfo('游戏选择有误！', $this->baseUrl . 'index/exchange');
+		}
+
+		$this->_showForm();
+	}
+
+	/**
+	 * Pay for a paymonth
+	 *
+	 * @return void
+	 */
+	public function topaymonth()
+	{
+		$this->payType = 'topaymonth';
 		$paymonthId = $this->input->get('paymonth');
 		$this->paymonthInfo = isset($this->paymonthInfos[$paymonthId]) ? $this->paymonthInfos[$paymonthId] : false;
-
-		if (empty($this->paymontInfo)) {
-			$codeServerParam = $this->input->get('scode');
-			$midParam = explode('_', $codeServerParam);
-			$webgameCode = (isset($midParam[0]) && !empty($midParam[0])) ? $midParam[0] : '';
-			$this->webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
-			$serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
-			$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
+		$this->webgamePaymonthInfos = array();
+		foreach ($this->paymonthInfos as $paymonthInfo) {
+			if ($paymonthInfo['webgame_code'] == $this->paymonthInfo['webgame_code']) {
+				$this->webgamePaymonthInfos[] = $paymonthInfo;
+			}
+		}
+		if (empty($this->paymonthInfo)) {
+			$this->_messageInfo('包月类型有误！', $this->baseUrl . 'index/paymonth');
 		}
 
+		$this->_showForm();
+	}
+
+	protected function _showForm()
+	{
 		$paymentCode = $this->input->get('pcode');
 		$paymentCode = in_array($paymentCode, array_keys($this->paymentInfos)) ? $paymentCode : 'yeepay';
-		if ($paymentCode == 'myself') {
-			$paymentCode = (isset($this->moneyInfo['money']) && $this->moneyInfo['money'] > 0) ? $paymentCode : 'yeepay';
-		}
+
 		$this->showPayment = json_encode($this->paymentInfos[$paymentCode]);
 
 		$this->load->view('index');

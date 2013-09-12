@@ -60,9 +60,9 @@ class Paymonth extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($unit = 0)
+	protected function _initInfo($webgameCode = '')
 	{
-		$this->selectUnit = $this->_getSelectElement($this->fieldInfos['unit']['infos'], 'key', 'value', $unit, true);
+		$this->selectWebgameCode = $this->_getSelectElement($this->webgameInfos, 'code', 'name', $webgameCode, true);
 	}
 
 	/**
@@ -75,7 +75,7 @@ class Paymonth extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['unit']);
+		$this->_initInfo($info['webgame_code']);
 		return $info;
 	}
 		
@@ -89,7 +89,7 @@ class Paymonth extends Custom_AdminController
 	{
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				$info['unit'] = !empty($this->fieldInfos['unit']['infos'][$info['unit']]['value']) ? $this->fieldInfos['unit']['infos'][$info['unit']]['value'] : $info['unit'];
+				$info['webgame_code'] = !empty($this->webgameInfos[$info['webgame_code']]['name']) ? $this->webgameInfos[$info['webgame_code']]['name'] : $info['webgame_code'];
 
 				$infos[$key] = $info;
 			}

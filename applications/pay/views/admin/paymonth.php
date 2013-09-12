@@ -15,7 +15,9 @@
 		  <th><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['id']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['webgame_code']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['money']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['month']['name']; ?></th>
 		  <th class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -26,7 +28,9 @@
 		  <td align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['name']; ?></td>
+		  <td align="center"><?php echo $info['webgame_code']; ?></td>
 		  <td align="center"><?php echo $info['money']; ?></td>
+		  <td align="center"><?php echo $info['month']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -61,17 +65,21 @@ document.domain='<?php echo $this->frontDomain; ?>';
 	    <th><?php echo $this->fieldInfos['name']['name']; ?>：</th>
 		<td class="y-bg"><input type="text" class="input-text" name="name" value="<?php if (isset($this->currentInfo['name'])) echo $this->currentInfo['name']; ?>" id="name"  size="30"/></td>
 	  </tr>
+ 	  <tr>
+	    <th><?php echo $this->fieldInfos['webgame_code']['name']; ?>：</th>
+		<td class="y-bg"><select name="webgame_code" id="webgame_code"><?php echo $this->selectWebgameCode; ?></select></td>
+	  </tr>
 	  <tr>
 	    <th><?php echo $this->fieldInfos['money']['name']; ?>：</th>
 		<td class="y-bg"><input type="text" class="input-text" name="money" value="<?php if (isset($this->currentInfo['money'])) echo $this->currentInfo['money']; ?>" id="money"  size="30"/></td>
 	  </tr>
+ 	  <tr>
+	    <th><?php echo $this->fieldInfos['month']['name']; ?>：</th>
+		<td class="y-bg"><input type="text" class="input-text" name="month" value="<?php if (isset($this->currentInfo['month'])) echo $this->currentInfo['month']; ?>" id="month"  size="30"/></td>
+	  </tr>
 	  <tr>
 	    <th><?php echo $this->fieldInfos['listorder']['name']; ?>：</th>
 		<td class="y-bg"><input type="text" class="input-text" name="listorder" value="<?php if (isset($this->currentInfo['listorder'])) echo $this->currentInfo['listorder']; ?>" id="listorder"  size="30"/></td>
-	  </tr>
- 	  <tr>
-	    <th><?php echo $this->fieldInfos['unit']['name']; ?>：</th>
-		<td class="y-bg"><select name="unit" id="unit"><?php echo $this->selectUnit; ?></select></td>
 	  </tr>
 	  <tr>
         <th><?php echo $this->fieldInfos['thumb']['name']; ?>:</th>

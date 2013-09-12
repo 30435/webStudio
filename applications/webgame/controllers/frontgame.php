@@ -444,10 +444,10 @@ class frontgame extends Custom_Controller
 	 */
 	public function getServerUser()
 	{	
-		/*$data = array('user' => 'yes');
-		echo $this->_jsonp($data);
-		return ;
-		*/
+		//$data = array('user' => 'yes');
+		//echo $this->_jsonp($data);
+		//return ;
+		
 		$username = $this->input->get('username');
 		$serverId = $this->input->get('serverId');
 		$serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : '';
@@ -458,15 +458,12 @@ class frontgame extends Custom_Controller
 			return ;
 		}
 		
-		if($username==$this->loginedUserInfo['username']){
-			$puserid=$this->loginedUserInfo['userid'];
+		if ($username == $this->loginedUserInfo['username']) {
+			$puserid = $this->loginedUserInfo['userid'];
 		}else{
-			$payUserInfos=$this->_getUserByUsername($username);
-			//var_dump($payUserInfos);
+			$payUserInfos = $this->_getUserByUsername($username);
 			$puserid=isset($payUserInfos['userid'])?$payUserInfos['userid']:0;
 		}
-		
-		
 
 		$webgameCode = $serverInfo['webgame_code'];
 		$webgameInfo = $this->webgameInfos[$webgameCode];

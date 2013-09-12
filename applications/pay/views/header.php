@@ -31,15 +31,15 @@ var payUrl = "<?php echo $this->baseUrl; ?>";
 				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>index/login/">登录</a><span>|</span></li>
 			<? } ?>
 				<li><a href="/" target="_blank">意见反馈</a><span>|</span></li>
-				<li><a href="###"  hidefocus="true" style="cursor:pointer;" onclick="addBookmark();">收藏本站</a></li>
+				<li><a href="javascript: addBookmark(); void(0);"  hidefocus="true" style="cursor:pointer;">收藏本站</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="nav">
 		<ul class="nav_list">
-			<li <?php if ($this->method == 'index') echo 'class="cur"' ?>><a href="/"><span>米币充值</span></a></li>
-			<li <?php if ($this->method == 'monthpay') echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/paymonth"><span>游戏包月</span></a></li>
-			<li <?php if ($this->method == 'exchange') echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/exchange"><span>游戏币兑换</span></a></li>
+			<li <?php if ($this->method == 'index') echo 'class="cur"' ?>><a href="/"><span>诺币充值</span></a></li>
+			<li <?php if (in_array($this->method, array('topaymonth', 'paymonth'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/paymonth"><span>游戏包月</span></a></li>
+			<li <?php if (in_array($this->method, array('towebgame', 'exchange'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/exchange"><span>游戏币兑换</span></a></li>
 			<li <?php if (in_array($this->method, array('myaccount', 'mypay', 'mypaymonth', 'mypaypwd'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值</span></a></li>
 		</ul>
 	</div>

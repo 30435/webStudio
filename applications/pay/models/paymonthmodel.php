@@ -14,19 +14,16 @@ class PaymonthModel extends CommonModel
 	 */
 	protected function _fieldInfos()
 	{
-		$unitInfos = array(
-			'1' => array('key' => '1', 'value' => '年'),
-			'2' => array('key' => '2', 'value' => '月'),
-		);
 		$fieldInfos['fields'] = array(
 			'id' => array('name' => '包月服务ID'),
+			'webgame_code' => array('name' => '所属游戏'),
 			'name' => array('name' => '名称'),
 			'money' => array('name' => '费用'),
-			'unit' => array('name' => '单位', 'infos' => $unitInfos),
+			'month' => array('name' => '月数'),
 			'thumb' => array('name' => '图标'),
 			'listorder' => array('name' => '排序'),
 		);
-		$fieldInfos['fieldChanges'] = array('name', 'money', 'unit', 'thumb', 'listorder');
+		$fieldInfos['fieldChanges'] = array('name', 'money', 'month', 'thumb', 'listorder', 'webgame_code');
 		
 		return $fieldInfos;
 	}
