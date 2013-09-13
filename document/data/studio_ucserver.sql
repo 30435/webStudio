@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-10 08:10:01
+-- 生成日期: 2013-09-13 13:11:21
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -207,6 +207,21 @@ CREATE TABLE IF NOT EXISTS `su_memberfields` (
   PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- 转存表中的数据 `su_memberfields`
+--
+
+INSERT INTO `su_memberfields` (`uid`, `blacklist`) VALUES
+(1, ''),
+(2, ''),
+(3, ''),
+(4, ''),
+(5, ''),
+(6, ''),
+(7, ''),
+(8, ''),
+(9, '');
+
 -- --------------------------------------------------------
 
 --
@@ -229,7 +244,22 @@ CREATE TABLE IF NOT EXISTS `su_members` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- 转存表中的数据 `su_members`
+--
+
+INSERT INTO `su_members` (`uid`, `username`, `password`, `email`, `myid`, `myidkey`, `regip`, `regdate`, `lastloginip`, `lastlogintime`, `salt`, `secques`) VALUES
+(1, '1089692', '86e221e2967dc7ff4c926e04f268124b', '', '', '', '127.0.0.1', 1378800835, 0, 0, '3bb209', ''),
+(2, '1065112', 'be263e48fd00ae78868748bb9b18ca9e', '', '', '', '127.0.0.1', 1378801338, 0, 0, 'a5f44d', ''),
+(3, '104760', 'b697855731e79d7bc1c452870c227011', '', '', '', '127.0.0.1', 1378801338, 0, 0, 'a6cf11', ''),
+(4, '1062753', 'ac2c43195ac5e73c35f035176a610e3e', '', '', '', '127.0.0.1', 1378811253, 0, 0, '56b03a', ''),
+(5, '1023032', '890ccab736983a4212bd56118318f774', '', '', '', '127.0.0.1', 1378811253, 0, 0, '578ee5', ''),
+(6, 'aaaaaa', '38a3d3326e8a9cd35fd4c179f23dffc0', '', '', '', '127.0.0.1', 1378863829, 0, 0, '5916e7', ''),
+(7, 'bbbbbb', '39893139c87f5a575a35ee03fde0c39b', '', '', '', '127.0.0.1', 1378979837, 0, 0, 'd8e952', ''),
+(8, '1386195', 'd3aede17b9d061d78737d5e11d75d426', '', '', '', '127.0.0.1', 1379064838, 0, 0, '6eecec', ''),
+(9, '1391331', 'c5b460092cd5e9005f58fe18a9c82e27', '', '', '', '127.0.0.1', 1379064839, 0, 0, '71641b', '');
 
 -- --------------------------------------------------------
 
