@@ -161,32 +161,23 @@ function payChange()
 	var payType = $("#payType").val();
 	switch (payType) {
 		case 'topaymonth':
-				
+			break;
+		case 'towebgame':
+			var webgameCode = $("#webgameCode").val();
+			var serverId = $("#serverId").val();
+			if (webgameCode == '' || serverId == 0)	{
+				$('#serverIdnote').show().children('span').text("游戏信息有误！");
+				return ;
+			}
+			
+			checkServerUser(username, serverId);
+			var serverUser = $("#serverUser").val();
+			if (serverUser == "no")	{
+				return ;
+			}
+			$("#serverIdnote").hide();
+			break;
 	}
-	
-	$('#webgamenote').val('');
-	$('#servernote').html('');
-	if (webgameCode == '') {
-		$('#webgamenote').html('<b style="color:#cc0000">请选择游戏！</b>');
-		$("#webgameName").focus();
-		return false;
-	}
-	if (serverCode < 1) {
-		$("#serverName").focus();
-		$('#servernote').html('<b style="color:#cc0000">请选择服务器！</b>');
-		return false;
-	}
-
-	var serverUser = $('#serverUser').val();
-	if (serverUser == 'no') {
-		$("#usernamenote").html('<font style="color:#cc0000; left:180px;top:0;">没有创建游戏角色</font>');	
-		return false;
-	}
-	var haveRole = $('#haveRole').val();
-	if (haveRole == 'yes' && serverRole == '') {
-		$("#serverrolenote").html('<font style="color:#cc0000; float:left; margin-left:5px;">请选择游戏角色</font>');	
-		return false;
-	}	
 
 	$("#changeForm").submit();
 	return ;
@@ -201,6 +192,7 @@ function checkserver(serverId)
 
 function checkServerUser(username, serverId)
 {
+	alert(username);
 	if (serverId == '' || username == '') {
 		return ;
 	}
@@ -212,38 +204,12 @@ function checkServerUser(username, serverId)
 		data:{"serverId": serverId, "username": username},
 		async: false,
        	success: function(data){
-			alert(data);
 			var userExist = data.user;
 			$("#server").hide();
 			if (userExist == 'yes') {
-				$("#usernamenote").html("<font style='color:#009900; left:180px;top:0;'>有效帐号！</font>");
+				//$("#usernamenote").html("<font style='color:#009900; left:180px;top:0;'>有效帐号！</font>");
 				$("#serverUser").val("yes");
-
-				if (data.webgameCode == 'shenq' && data.userCount >= 1) {
-					var roleStr ='<li>'
-						+ '<strong style="height:30px; line-height:24px">游戏角色：</strong><label>'
-						+ '<select name="serverRole" id="serverRole" class="wh174" style="float:left; margin-top:3px;">';
-					$.each(data.userInfo, function(i, v) {
-						roleStr += '<option value="' + i + '">' + v.nickName + '</option>';
-					});
-					roleStr += '</select></label><span id="serverrolenote"></span></li>';
-					if (data.userCount > 1) {
-						$("#haveRole").val("yes");
-					} else {
-						$("#haveRole").val("no");
-					}
-					
-					$("#selectRole").html(roleStr);
-					$("#selectRole").show();
-				} else {
-					$("#haveRole").val('no');
-					$("#selectRole").html('');
-					$("#selectRole").hide();
-				}
 			} else {
-				$("#haveRole").val('no');
-				$("#selectRole").html('');
-				$("#selectRole").hide();
 				$('#serverIdnote').show().children('span').text("您还没有在改服务器创建角色");
 				$("#serverUser").val("no");
 			}

@@ -1,6 +1,54 @@
 <?php echo $this->load->view('header'); ?>
+
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/themes/Default/js/theme.js" type="text/javascript" charset="UTF-8"></script>
+<link href="<?php echo $this->staticUrl; ?>common/formvalidator/themes/Default/style/style.css" type="text/css" />
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/jquery.artDialog.js"></script>
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/pay.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.formValidator.initConfig({formID:"form1",theme:"Default",submitOnce:true,
+		onError:function(msg,obj,errorlist){
+			$("#errorlist").empty();
+			$.map(errorlist,function(msg){
+				$("#errorlist").append("<li>" + msg + "</li>")
+			});
+			alert(msg);
+		},
+		ajaxPrompt : '有数据正在异步验证，请稍等...'
+	});
+
+	$("#username").formValidator({onShow:"请输入用户名,只有输入\"maodong\"才是对的",onFocus:"用户名至少5个字符,最多10个字符",onCorrect:"该用户名可以注册"}).inputValidator({min:5,max:10,onError:"你输入的用户名非法,请确认"})//.regexValidator({regExp:"username",dataType:"enum",onError:"用户名格式不正确"})
+	    .ajaxValidator({
+		dataType : "jsonp",
+		async : false,
+		jsonp:"callback",
+		url : passportUrl + 'index/getUserid/',
+		success : function(data){
+			var userid = parseInt(data.userid);
+			if (userid == 0) {
+				$("#getuserid").val(userid);
+				//$("#usernamevalid").val("yes");
+				//$("#usernamenote").hide();
+				//$("#usernamenoteRight").html('<i class="ico ico_success_16"></i>');
+				//var serverId = $("#serverId").val();
+				//checkServerUser(username, serverId);
+				return true;
+			}
+			return "该用户名不可用，请更换用户名";
+		},
+		buttons: $("#button"),
+		error: function(jqXHR, textStatus, errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);},
+		onError : "该用户名不可用，请更换用户名",
+		onWait : "正在对用户名进行合法性校验，请稍候..."
+	}).defaultPassed();
+	$("#username2").formValidator({onShow:"输再次输入用户名",onFocus:"至少1个长度",onCorrect:"用户名一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复用户名两边不能有空符号"},onError:"重复用户名不能为空,请确认"}).compareValidator({desID:"username",operateor:"=",onError:"2次用户名不一致,请确认"});
+	$("#money").formValidator({onShow:"请输入金额",onFocus:"只能输入1-5000之间的数字哦",onCorrect:"恭喜你,你输对了"}).inputValidator({min:1,max:99,type:"value",onErrorMin:"你输入的值必须大于等于1",onError:"金额必须在1-5000之间，请确认"});
+});
+
+</script>
+
 <div class="container cf">
 	<?php if ($this->payType == 'towebgame') { ?>
 	<div class="ui_step ui_step_on_1">
@@ -45,25 +93,21 @@
 				<input type="hidden" name="serverId" id="serverId" value="<?php if (isset($this->serverInfo['money'])) echo $this->serverInfo['id']; ?>" />
 				<input type="hidden" name="paymonthId" id="paymonthId" value="<?php if (isset($this->paymonthInfo['id'])) echo $this->paymonthInfo['id']; ?>" />
 				<input type="hidden" name="payuserid" id="payuserid" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
-				<input type="hidden" name="money" id="money" value="<?php if (isset($this->paymonthInfo['money'])) echo $this->paymonthInfo['money']; ?>"/>
+				
 				<ul class="form_list">
 					<li class="form_list_li">
 						<label class="lbl">充值的诺瓦号：</label>
 						<div class="txt_wrap">
-							<input  class="txt txt_num" name="username" id="username" onblur="checkusername(this.value)" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>" maxlength="20"/>
+							<input  class="txt txt_num" name="username" id="username" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>" maxlength="15"/>
 							<input type="hidden" name="get_userid" id="getuserid" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
-							<input type="hidden" id="usernamevalid" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo 'yes'; } else { echo 'no'; }?>">
-							<div class="txt_tips" id="usernamenote" style="display:none;"><i class="ico ico_error_16"></i><span>帐号不存在或被冻结</span><i class="txt_tips_r"></i></div>
-							<span id="usernamenoteRight"></span>
+							<div class="txt_tips"><span id="usernameTip"></span></div>
 						</div>
 					</li>
 					<li class="form_list_li">
 						<label class="lbl">确认充值的诺瓦号：</label>
 						<div class="txt_wrap">
-							<input value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>"  name="username2" id="musername2" onblur="checkusername2(this.value)" class="txt txt_num" maxlength="20" />
-							<input type="hidden" id="username2valid" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo 'yes'; } else { echo 'no'; }?>">
-							<div class="txt_tips" id="username2note" style="display:none;"><i class="ico ico_error_16"></i><span></span><i class="txt_tips_r"></i></div>
-							<span id="username2noteRight"></span>
+							<input value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>"  name="username2" id="username2" class="txt txt_num" maxlength="15" />
+							<div class="txt_tips"><span id="username2Tip"></span></div>
 						</div>
 					</li>
 
@@ -104,8 +148,8 @@
 					<li class="form_list_li" id="moneyInfo">
 						<label class="lbl">充值诺币数：</label>
 						<div class="txt_wrap">
-							<input type="text" maxlength="4" onblur="checkmoney(this.value)" class="txt txt_num" style="width:175px;"><span id="moneynoteRight"></span> 诺币
-							<div class="txt_tips" id="moneynote" style="display:none;"><i class="ico ico_error_16"></i><span>该项不能为空</span><i class="txt_tips_r"></i></div>
+							<input type="text" maxlength="15" class="txt txt_num" name="money" id="money" style="width:175px;">
+							<div class="txt_tips"><span id="moneyTip"></span></div>
 						</div>
 					</li>
 					<?php } ?>

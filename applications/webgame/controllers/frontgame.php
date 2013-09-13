@@ -444,9 +444,9 @@ class frontgame extends Custom_Controller
 	 */
 	public function getServerUser()
 	{	
-		//$data = array('user' => 'yes');
-		//echo $this->_jsonp($data);
-		//return ;
+		$data = array('user' => 'yes');
+		echo $this->_jsonp($data);
+		return ;
 		
 		$username = $this->input->get('username');
 		$serverId = $this->input->get('serverId');

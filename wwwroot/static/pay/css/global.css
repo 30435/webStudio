@@ -322,10 +322,10 @@ button.ui_btn_large_grey span{_margin-bottom:-1px;}
 
 /* form - module */
 .form{margin-bottom:50px;}
-.form_list_li{display:block; position:relative; /*width:450px;*/ line-height:28px; padding-left:150px; _padding-bottom:2px; margin-bottom:10px; zoom:1; font-size:14px;}
+.form_list_li{display:block; position:relative; /*width:450px;*/ line-height:28px; padding-left:150px; _padding-bottom:2px; margin-bottom:25px; zoom:1; font-size:14px;}
 .form_list_li .txt_wrap,
 .form_list_li .slt_wrap{position:relative;}
-.form_list_li .txt{width:210px; height:26px; *line-height:26px; line-height:26px\0; padding:0 4px; /*margin-right:6px;*/ border:1px solid #aaa; border-radius:3px; vertical-align:middle;}
+.form_list_li .txt{width:170px; height:26px; *line-height:26px; line-height:26px\0; padding:0 4px; /*margin-right:6px;*/ border:1px solid #aaa; border-radius:3px; vertical-align:middle;}
 .form_list_li .txt:hover{border-color:#666;}
 .form_list_li .txt_num{font-size:16px; font-family:"Microsoft Yahei","simhei";}
 .form_list_li .txt:focus{border-color:#f80; box-shadow:0 0 2px #ffaa49;}
@@ -339,7 +339,7 @@ button.ui_btn_large_grey span{_margin-bottom:-1px;}
 .form_list_li .slt:focus{border-color:#f80; box-shadow:0 0 2px #ffaa49;}
 .form_list_li .slt_error{border-color:#c00 !important; box-shadow:0 0 2px #eacfcf !important; background-color:#ffe2e2 !important;}
 .form_list_li .slt_auto{width:auto;}
-.form_list_li .slt_wrap .txt_tips{*top:-4px;}
+.form_list_li .slt_wrap {*top:-4px;}
 .form_list_li .checkbox_wrap,
 .form_list_li .radio_wrap{margin-bottom:4px; white-space:nowrap;}
 .radio_wrap .radio-pattern{float:left;width:180px;zoom:1;}
@@ -351,8 +351,7 @@ button.ui_btn_large_grey span{_margin-bottom:-1px;}
 .radio_wrap .coupon{display:inline-block; *display:inline; zoom:1; position:relative; height:26px; padding:0 7px 0 8px; background:url(../images/common_v2/bg_form_coupon.png) no-repeat left top;}
 .radio_wrap .coupon_r{display:block; position:absolute; top:0; right:0; width:1px; height:26px; background:url(../images/common_v2/bg_form_coupon.png) no-repeat right top; overflow:hidden;}
 
-.form_list_li .txt_tips{position:absolute; top:1px; _top:2px; left:220px; height:28px; line-height:28px; padding:0 5px 0 10px; color:#c00; background:url(../images/common_v2/bg_form_txt_tips.png) no-repeat left top; zoom:1; white-space:nowrap; font-size:12px;}
-.form_list_li .txt_tips span{vertical-align:middle; zoom:1; white-space:nowrap;}
+.form_list_li .txt_tips{position:absolute; top:1px; _top:2px; left:160px; height:28px; line-height:28px; padding:0 5px 0 10px; color:#c00; zoom:1; white-space:nowrap; font-size:12px;}
 .form_list_li .txt_tips_r{display:block; position:absolute; top:0; right:-3px; width:3px; height:28px; background:url(../images/common_v2/bg_form_txt_tips.png) no-repeat right top; overflow:hidden;}
 .form_list_li .txt_explain{display:inline-block; *display:inline; zoom:1; color:#999; font-size:12px;}
 
