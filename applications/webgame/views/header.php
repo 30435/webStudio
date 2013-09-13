@@ -1,10 +1,9 @@
 <?php echo doctype(); ?>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title><?php echo $this->metaDatas['title']; ?></title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
-<link href="http://www.2125.com/" rel="canonical">
 <link href="<?echo $this->staticUrl; ?>favicon.ico" rel="shortcut icon" type="image/ico">
 <link href="<?php echo $this->staticUrl; ?>webgame/common/css/comm/global_v0422.css?v=201308201554" rel="stylesheet" type="text/css">
 <link href="<?php echo $this->staticUrl; ?>webgame/common/css/game/webgame_v0609.css?v=201308201554" rel="stylesheet" type="text/css">

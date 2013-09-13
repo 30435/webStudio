@@ -1,16 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $this->metaDatas['title']; ?></title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
+<meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
+<link href="<?php echo $this->staticUrl; ?>favicon.ico" rel="shortcut icon" type="image/ico">
 <link href="<?php echo $this->staticUrl; ?>webgame/shenxd/styles/page.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="script/picshow.js"></script>
-<title>神仙道</title>
+<script type="text/javascript" src="<?php echo $this->staticUrl; ?>webgame/shenxd/script/picshow.js"></script>
 </head>
 <body>
 <div id="header">
     <div class="site_nav">
         <ul class="grid_1007">
-            <li class="site_nav_left"><strong class="ganwan_logo"><a href="#"><img src="img/ganwan_logo.png" /></a></strong><span class="recommend_game"><span class="red pl10">推荐游戏:</span><a  href="#">凡人修真2</a><a  href="#">醉西游</a><a  href="#">仙落凡尘</a><a  href="#">英雄远征</a><a  href="#" class="bgnone">神曲</a></span></li>
+            <li class="site_nav_left">
+				<strong class="ganwan_logo"><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>"><img src="<?php echo $this->staticUrl; ?>webgame/shenxd/img/ganwan_logo.png" /></a></strong>
+				<span class="recommend_game"><span class="red pl10">推荐游戏:</span>
+				<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { ?>
+					<a href="<?php echo $webgameInfo['url_home']; ?>"><?php echo $webgameInfo['name']; ?></a>
+				<?php } ?>
+				</span>
+			</li>
             <li class="site_nav_right">
                 <p class="fr"><a href="#"><span class="desktop"></span>把ganwan网页游戏放到桌面</a><a href="#"><span class="index"></span>设为首页</a><a href="#"><span class="collect"></span>加入收藏</a></p>
             </li>
@@ -18,13 +28,13 @@
     </div>
     <div class="nav grid_1007">
         <ul>
-            <li><a href="#" class="home"></a></li>
-            <li><a href="#" class="news	"></a></li>
-            <li><a href="#" class="strategy"></a></li>
-            <li><a href="#" class="logo"></a></li>
-            <li><a href="#" class="service"></a></li>
-            <li><a href="#" class="recharge"></a></li>
-            <li><a href="#" class="bbs"></a></li>
+            <li><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>" class="home"></a></li>
+            <li><a href="<?php echo $this->categoryInfos[20]['url']; ?>" class="news"></a></li>
+            <li><a href="<?php echo $this->categoryInfos[20]['url']; ?>" class="strategy"></a></li>
+            <li><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>" class="logo"></a></li>
+            <li><a href="<?php echo $this->currentWebgameInfo['url_server']; ?>" class="service"></a></li>
+            <li><a href="<?php echo $this->appInfos['pay']['url'] . 'index/exchange?scode=' . $this->currentWebgameInfo['code']; ?>" class="recharge"></a></li>
+            <li><a href="<?php echo $this->appInfos['bbs']['url']; ?>" class="bbs"></a></li>
         </ul>
     </div>
 </div>
@@ -66,15 +76,7 @@
         <div class="left_box bd hg335">
             <h3 class="hd">游戏介绍</h3>
             <div class="left_box_bd">
-                <p class="introduce"> 《神仙道》以仙侠为题材，玩家将自身融
-                    入一个全新的武侠世界。游戏中包括武圣、
-                    飞羽、剑灵、将星、术士5种职业，蜀山、
-                    昆仑两大门派。每个职业门派都有自己的
-                    特色和相应的绝招。37wan神仙道中各种
-                    丰富多样的游戏系统和丰富感人的剧情，
-                    一路斩妖除魔、经历众多冒险关卡。这些
-                    游戏元素都将让玩家在一个刺激好玩仙侠
-                    世界里享受游戏的乐趣。 <img src="img/adbg.jpg" /></p>
+                <p class="introduce"><?php echo $this->currentWebgameInfo['description']; ?> <img src="img/adbg.jpg" /></p>
             </div>
         </div>
         <!--END 游戏介绍结束-->
@@ -248,6 +250,6 @@
     <p>粤ICP备12058124号-1 | 粤网文[2012]0432-064号 | 深圳市浩天投资有限公司</p>
 </div>
 <!--END 底部结束--> 
-<script type="text/javascript" src="script/picshow.js"></script>
+<script type="text/javascript" src="<?php echo $this->staticUrl; ?>webgame/shenxd/script/picshow.js"></script>
 </body>
 </html>
