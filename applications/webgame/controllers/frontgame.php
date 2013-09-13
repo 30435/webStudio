@@ -224,8 +224,10 @@ class frontgame extends Custom_Controller
 	{
 		$this->load->library('session');
 		$payInfos = $this->session->userdata('payInfos');
-		$this->session->unset_userdata('payInfos');
+		//$this->session->unset_userdata('payInfos');
 
+var_dump($payInfos);
+exit();
 		$username = isset($payInfos['username']) ? $payInfos['username'] : '';
 		$money = isset($payInfos['money']) ? $payInfos['money'] : 0;
 		$moneyValidMiddle = !empty($payInfos['moneyValidMiddle']) ? $payInfos['moneyValidMiddle'] : $money;
@@ -291,12 +293,7 @@ class frontgame extends Custom_Controller
 			$gameCoin .= ($moneyMid - $money) > 0 ? '   (剩余' . ($moneyMid - $money) . '金币)' : '';
 			$this->_getHeader();
 			$this->_getFooter();
-			
-			//如果不是勇气币支付    返勇气币
-			if($payType == 'respond' || $payType == 'ischange'){
-				$this->_payRebateCourage($userInfo,$money,$webgameInfo,$serverInfo,$params);
-			}
-			
+
 			$this->payResult = true;
 			$this->message = '支付成功！';
 			$this->resultInfo = array(
@@ -397,44 +394,6 @@ class frontgame extends Custom_Controller
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 * The interface of webplat application
-	 *
-	 * @return void
-	 */
-	public function getPoint()
-	{
-		$webgameCode = $this->input->get('webgameCode');
-		$serverId = $this->input->get('serverId');
-
-		$data[] = array();
-		$webgameInfo = $this->webgameInfos[$webgameCode];
-		$serverInfo = $this->serverInfos[$serverId];
-		if (empty($webgameInfo)) {
-			$data['webgameInfo'] = array('code' => 'no', 'name' => 'no');
-			$data['serverInfo'] = array('code' => 'no', 'name' => 'no');
-		} else {
-			$data['webgameInfo'] = array(
-				'code' => $webgameInfo['code'],
-				'name' => $webgameInfo['name'],
-				'coinName' => $webgameInfo['coin_name'],
-				'coinUnit' => $webgameInfo['coin_unit'],
-				'coinRate' => $webgameInfo['coin_rate'],
-				'courageRate' => $webgameInfo['courage_rate']
-			);
-
-			$serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : array();
-			if (empty($serverInfo) || $serverInfo['webgame_code'] != $webgameCode) {
-				$serverId = $webgameInfo['default_serverid'];
-				$serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : array();
-			}
-			$data['serverInfo'] = empty($serverInfo) ? array('id' => 'no', 'name' => 'no') : array('id' => $serverInfo['id'], 'name' => $serverInfo['name']);
-		}
-
-		echo $this->_jsonp($data);
-		return ;
 	}
 
 	/**

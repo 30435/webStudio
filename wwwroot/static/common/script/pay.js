@@ -10,76 +10,8 @@ function setPayment(paymentStr) //paymentCode, paymentName, description)
 	$("#payTypeSelect").show();
 
 	if (paymentStr.code == 'myself') {
-		$('#payButton').attr('href', 'javascript: payChange();void(0);');
+		//$('#payButton').attr('href', 'javascript: payChange();void(0);');
 	}
-}
-
-function checkusername(username)
-{
-	if (username == '') {
-		$('#usernamenote').show().children('span').text('请输入账号');
-		$("#usernamevalid").val("no");
-		return false;
-	} else {
-		$.ajax({
-			type: "get",		//使用get方法访问后台  
-			dataType: "jsonp",	//返回json格式的数据  
-			jsonp:"callback",
-			url: passportUrl + 'index/getUserid/?username=' + username,	//要访问的后台地址  
-			//data:{"opp":"main"},
-			async: false,
-			success: function(html) {
-				var userid = parseInt(html.userid);
-				if (userid < 1) {
-					$('#usernamenote').show().children('span').text("帐号不存在");
-					//$('#username').val('');
-					$("#usernamevalid").val("no");
-				} else {
-					$("#getuserid").val(userid);
-					$("#usernamevalid").val("yes");
-					$("#usernamenote").hide();
-					$("#usernamenoteRight").html('<i class="ico ico_success_16"></i>');
-					var serverId = $("#serverId").val();
-					checkServerUser(username, serverId);
-				}
-			}
-		});
-	}
-}
-
-function checkusername2(username2)
-{
-	var username = $("#username").val();
-
-	if (username != username2) {
-		$('#username2note').show().children('span').text("您输入的账户不一致");
-		$("#username2valid").val("no");
-		return false;
-	} else {
-		$('#username2note').hide();
-		$('#username2noteRight').html('<i class="ico ico_success_16"></i>');
-		$("#username2valid").val("yes");
-		return true;
-	}
-}
-
-function checkmoney(money)
-{
-	var numberPattern = "^[1-9]*[1-9][0-9]*$";//^((\\d+)|(0+))$";
-	var isNumber = money.match(numberPattern);
-	if (isNumber == null || isNaN(money) || Number(money) < 1 || Number(money) > 50000) {
-		$('#moneynote').show().children('span').text("请输入1到50000的整数");
-		$("#money").val();
-		$("#moneyShow").text(0);
-		return false;
-	} else {
-		$("#money").val(money);
-		$('#moneynote').hide()
-		$('#moneynoteRight').html('<i class="ico ico_success_16"></i>');
-		$("#moneyShow").text(money);
-	}
-	
-	return true;
 }
 
 function paysubmit()
@@ -91,28 +23,7 @@ function paysubmit()
 	var payuserid = $('#payuserid').val();
 	var confirmusername = $('#confirmusername').val();
 	var money = $('#money').val();
-	var checkmoneyResult = checkmoney(money);
-	if (checkmoneyResult == false) {
-		$('#moneynote').show().children('span').text("请输入1到50000的整数");
-		return ;
-	}
 
-	//alert(username + '--' + confirmusername + '--' + money + '--' + paymentCode + '--' + '--' + getuserid + '--' + payuserid);
-	
-	var elems = new Array('username', 'username2');
-	for (var i = 0; i < elems.length; i++) {
-		var validvalue = $("#" + elems[i] + 'valid').val();
-		var cur_val = $("#" + elems[i]).val();
-		if (validvalue == 'yes') {
-			continue;
-		} else if (validvalue == 'no'|| cur_val =='') {
-			$("#dosubmit").val("");
-			$("#" + elems[i]).val("");
-			$("#" + elems[i]).focus();
-			$("#" + elems[i] + 'note').show().children('span').text('请输入有效信息！');
-			return false;
-		}
-	}
 	//alert("paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&getuserid=' + getuserid + '&payuserid=' + payuserid + '&money=' + money);
 	$.ajax({
 		type: "post", 
@@ -183,18 +94,13 @@ function payChange()
 	return ;
 }
 
-function checkserver(serverId)
+function checkServerUser()
 {
-	$("#serverId").val(serverId);
 	var username = $("#username").val();
-	checkServerUser(username, serverId);
-}
+	var serverId = $("#serverId").val();
 
-function checkServerUser(username, serverId)
-{
-	alert(username);
 	if (serverId == '' || username == '') {
-		return ;
+		return true;
 	}
 	$.ajax({
        	type: "get",		//使用get方法访问后台  
@@ -205,16 +111,19 @@ function checkServerUser(username, serverId)
 		async: false,
        	success: function(data){
 			var userExist = data.user;
-			$("#server").hide();
 			if (userExist == 'yes') {
-				//$("#usernamenote").html("<font style='color:#009900; left:180px;top:0;'>有效帐号！</font>");
 				$("#serverUser").val("yes");
 			} else {
-				$('#serverIdnote').show().children('span').text("您还没有在改服务器创建角色");
 				$("#serverUser").val("no");
 			}
        	}		     
-	}); 
+	});
+	var serverUser = $("#serverUser").val();
+	if (serverUser == "yes") {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 function confirmPay()
@@ -254,29 +163,6 @@ function confirmPay()
 		cache: false
 	}); 
 	return ;
-}
-
-function checkmobile(mobile)
-{
-	//mobile = $("#mobile").val();
-	if (mobile=='') {
-		$('#mobilenote').html("<b style='color:#cc0000'>请输入有效的手机号！</b>");
-		$("#mobilevalid").val("no");
-		return false;
-	}
-
-	mobileReg = /^([0-9]{11})?$/;
-	checkResult = mobile.search(mobileReg);
-
-	if (checkResult == -1) {
-		$('#mobilenote').html("<b style='color:#cc0000'>请输入的手机号无效！</b>");
-		$("#mobilevalid").val("no");
-		return false;
-	}else{
-		$('#mobilenote').html("<b style='color:#009900'>手机号有效！</b>");
-		$("#mobilevalid").val("yes");
-		return true;	
-	}
 }
 
 function selectBankCode(bankCode)

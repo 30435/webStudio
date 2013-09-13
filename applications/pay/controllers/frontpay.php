@@ -177,41 +177,33 @@ class frontpay extends Custom_Controller
 	}
 
 	/**
-	 * 用户游戏币兑换功能
+	 * Pay for webgame
 	 *
 	 * @return void
 	 */
-	public function change()
+	public function change($payType = '', $infos = array())
 	{
-		$webgameCode = $this->input->post('c_webgameCode');
-		$serverId = $this->input->post('c_serverId');
-		$username = $this->input->post('c_username');
-		$money = $this->input->post('c_money');
-		$userid = $this->input->post('c_userid');
-		$serverRole = $this->input->post('c_serverRole');
-		if (empty($webgameCode) || empty($serverId) || empty($username) || $money <= 0) {
-			$this->_messageInfo('参数有误！');
+		$payType = empty($payType) ? $this->input->post('payType') : $payType;
+		$payFields = array(
+			'topaymonth' => array('username', 'money', 'paymonthId', 'payUserid'),
+			'towebgame' => array('username', 'money', 'webgameCode', 'serverId', 'payUserid'),
+		);
+		if (!isset($payFields[$payType])) {
+			exit('paytype error'); //$this->_messageInfo('支付类型有误！', $this->baseUrl);
 		}
 
-		$moneyInfo = $this->_getMoneyInfo($this->loginedUserInfo['username']);
-		$currentMoney = isset($moneyInfo['money']) ? $moneyInfo['money'] : 0;
-		if ($currentMoney < $money) {
-			$this->_messageInfo('兑换额度超出了您的余额！');
+		$payInfos['payType'] = $payType;
+		$payInfos['accountId'] = isset($infos['accountId']) ? $infos['accountId'] : false;
+		foreach ($payFields[$payType] as $payField) {
+			$payInfos[$payField] = isset($infos[$payField]) ? $infos[$payField] : $this->input->post($payField);
+			if ($payField != 'payUserid' && empty($payInfos[$payField])) {
+				exit($payField . ' empty');//$this->_messageInfo('信息 ' . $payField . ' 不能为空', $this->baseUrl);
+			}
 		}
 
 		$this->load->library('session');
-		$payInfos = array(
-			'type' => 'ischange',
-			'username' => $username,
-			'money' => $money,
-			'webgameCode' => $webgameCode,
-			'serverId' => $serverId,
-			'userid' => $userid,
-			'serverRole' => $serverRole,
-			'usernamePay' => $this->loginedUserInfo['username'],
-		);
 		$this->session->set_userdata('payInfos', $payInfos);
-		header('Location:' . $this->applicationInfos[2]['domain'] . '/frontgame/pay/');
+		header('Location:' . $this->appInfos['webgame']['url'] . 'frontgame/pay/');
 	}
 
 	/**
@@ -221,11 +213,9 @@ class frontpay extends Custom_Controller
 	 */
 	protected function _checkParams()
 	{
-
 		$paymentCode = $this->input->get_post('paymentCode'); 
 		$paymentRate = $this->input->get_post('paymentRate');
-		$this->currentPayment = isset($this->paymentInfos[$paymentCode]) && $this->paymentInfos[$paymentCode]['rate'] == $paymentRate ? 
-			$this->paymentInfos[$paymentCode] : false;
+		$this->currentPayment = isset($this->paymentInfos[$paymentCode]) && $this->paymentInfos[$paymentCode]['rate'] == $paymentRate ? $this->paymentInfos[$paymentCode] : false;
 		$username = $this->input->get_post('username');
 		$getuserid = $this->input->get_post('getuserid');
 		$payuserid = $this->input->get_post('payuserid');
