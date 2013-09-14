@@ -1,227 +1,218 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title><?php echo $this->metaDatas['title']; ?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="<?php $this->metaDatas['keywords']; ?>" />
-<meta name="description" content="<?php $this->metaDatas['description']; ?>" />
+<?php echo $this->load->view('header_base'); ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>kidsedu/css/form.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>kidsedu/css/register.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>kidsedu/css/footer.css">
+<link href="<?php echo $this->staticUrl; ?>kidsedu/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->staticUrl; ?>kidsedu/css/dialog_simp.css" rel="stylesheet" type="text/css" />
+
+<script src="<?php echo $this->staticUrl; ?>common/script/jquery-1.8.0.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/themes/baidu/js/theme.js" type="text/javascript" charset="UTF-8"></script>
+<link href="<?php echo $this->staticUrl; ?>common/formvalidator/themes/baidu/style/style.css" type="text/css" />
+<script type="text/javascript">
+var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";
+</script>
+<script language="JavaScript">
+<!--
+$(function(){
+	$.formValidator.initConfig({formID:"form1",theme:"baidu",submitOnce:true,
+		onError:function(msg,obj,errorlist){
+			$("#errorlist").empty();
+			$.map(errorlist,function(msg){
+				$("#errorlist").append("<li>" + msg + "</li>")
+			});
+			alert(msg);
+		},
+		onSuccess:function() {
+			var paymentCode = $("#paymentCode").val();
+			if (paymentCode != 'myself') {
+				paysubmit();
+				return false;
+			}
+			return true;
+		},
+		ajaxPrompt : '有数据正在异步验证，请稍等...'
+	});
+
+	$("#username").formValidator({onShow:"请输入用户名",onFocus:"用户名至少5个字符,最多20个字符",onCorrect:"该用户名有效"}).inputValidator({min:5,max:20,onError:"你输入的用户名非法,请确认"})//.regexValidator({regExp:"username",dataType:"enum",onError:"用户名格式不正确"})
+	    .ajaxValidator({
+		dataType : "jsonp",
+		async : false,
+		jsonp:"callback",
+		url : passportUrl + 'index/getUserid/',
+		success : function(data){
+			var userid = parseInt(data.userid);
+			if (userid == 0) {
+				return true;
+			}
+			return "该用户名已存在，请更换用户名";
+		},
+		buttons: $("#button"),
+		error: function(jqXHR, textStatus, errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);},
+		onError : "该用户名已存在，请更换用户名",
+		onWait : "正在对用户名进行合法性校验，请稍候..."
+	}).defaultPassed();
+	$("#password").formValidator({onShow:"请输入密码",onFocus:"密码为6-16个字符",onCorrect:"密码合法"}).inputValidator({min:6,max:16,empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},onError:"密码为6-16个字符,请确认"});
+	$("#password2").formValidator({onShow:"输再次输入密码",onFocus:"至少1个长度",onCorrect:"密码一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},onError:"重复密码不能为空,请确认"}).compareValidator({desID:"password",operateor:"=",onError:"2次密码不一致,请确认"});
+	$("#email").formValidator({onShow:"请输入邮箱",onFocus:"邮箱6-100个字符,输入正确了才能离开焦点",onCorrect:"恭喜你,你输对了",defaultValue:"@"}).inputValidator({min:6,max:100,onError:"你输入的邮箱长度非法,请确认"}).regexValidator({regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$",onError:"你输入的邮箱格式不正确"})
+	.ajaxValidator({
+		dataType : "jsonp",
+		async : false,
+		jsonp:"callback",
+		url : passportUrl + 'index/emailExist/',
+		success : function(data){
+			var emailValid = parseInt(data.emailValid);
+			if (emailValid == 1) {
+				return true;
+			}
+			return "该邮箱已存在，请更换邮箱";
+		},
+		buttons: $("#button"),
+		error: function(jqXHR, textStatus, errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);},
+		onError : "该用邮箱已存在，请更换邮箱",
+		onWait : "正在对邮箱进行合法性校验，请稍候..."
+	}).defaultPassed();
+	$(":checkbox[name='protocol']").formValidator({onshow:"请阅读协议",onfocus:"请阅读协议"}).inputValidator({min:1,onerror:"请阅读协议"});
+
+	
+});
+
+function show_protocol()
+{
+	art.dialog({lock:false,title:'会员注册协议',id:'protocoliframe', iframe:'?m=member&c=index&a=register&protocol=1',width:'500',height:'310',yesText:'同意'}, function(){
+		$("#protocol").attr("checked",true);
+	});
+}
+//-->
+</script>
+<link href="<?php echo $this->staticUrl; ?>kidsedu/css/table_form.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.submit,.pass-logo a,.form-login .input label,.item span,#content h2 span em{display:inline-block;display:-moz-inline-stack;zoom:1;*display:inline;}
+.blue,.blue a{color:#377abe},.submit input{cursor:hand;}
+.log{line-height:24px; height:24px;float:right; font-size:12px}
+.log span{color:#ced9e7}
+.log a{color:#049;text-decoration: none;}
+.log a:hover{text-decoration: underline;}
+#header{ height:94px; background:url(<?php echo $this->staticUrl; ?>kidsedu/images/member/h.png) repeat-x}
+#header .logo{ padding-right:100px;float:left;background:url(<?php echo $this->staticUrl; ?>kidsedu/images/member/login-logo.png) no-repeat right 2px;}
+#header .content{width:920px; margin:auto; height:60px;padding:10px 0 0 0}
+#content{width:920px; margin:auto; padding:20px 0 0 0; overflow:auto}
+.form-login{width:420px; padding-left:40px}
+#content h2{font-size:25px;color:#494949;border-bottom: 1px dashed #CCC;padding-bottom:3px; margin-bottom:10px}
+#content h2 span{font-size:12px; font-weight:normal}
+#content h2 span em{background: url(<?php echo $this->staticUrl; ?>kidsedu/images/member/order.png) no-repeat 0px -16px; width:15px; height:15px; line-height:15px; text-align:center; margin-right:5px; color:#FFF}
+#content h2 span.on{ color:#333; font-weight:700}
+#content h2 span.on em{background-position: 0px 0px;}
+
+.form-login .input{ padding:7px 0; overflow:hidden; clear:both}
+.form-login .input label{ width:84px;font-size:14px; color:#8c8686; text-align:right; float:left}
+.form-login .input .form{ width:560px; float:left}
+.take,.reg{padding:0 0 0 84px}
+.take .submit{margin-top:10px}
+.form-login .hr{background: url(<?php echo $this->staticUrl; ?>kidsedu/images/member/line.png) no-repeat left center; height:50px;}
+.form-login .hr hr{ display:none}
+
+.form-reg{padding:10px 0 0 14px; width:700px; border-right:1px solid #ccc}
+.form-reg .input label{ width:120px}
+.form-reg .input label.type{ width:auto; color:#000; padding-right:10px}
+.form-reg .reg{padding:10px 0 0 120px}
+.form-reg .reg .submit{ margin-bottom:5px}
+
+.submit{padding-left:3px}
+.submit,.submit input{ background: url(<?php echo $this->staticUrl; ?>kidsedu/images/member/but.png) no-repeat; height:29px;width:auto;_width:0;overflow:visible !ie}
+.submit input{background-position: right top; border:none; padding:0 10px 0 7px; font-size:14px}
+.reg{ color:#666; line-height:24px}
+.reg .submit{background-position: left -35px; height:35px}
+.reg .submit input{background-position: right -35px; font-weight:700; color:#fff; height:35px}
+.reg-auto{ padding:10px 0 0 20px}
+.reg-auto p{ margin-bottom:10px; color:#666;}
+.col-1{position:relative; float:right; border:1px solid #c4d5df; zoom:1;background: url(<?php echo $this->staticUrl; ?>kidsedu/images/member/member_title.png) repeat-x; width:310px; margin: auto; height:304px}
+.col-1 span.o1,
+	.col-1 span.o2,
+	.col-1 span.o3,
+	.col-1 span.o4{position:absolute;width:3px;height:3px;background: url(<?php echo $this->staticUrl; ?>kidsedu/images/fillet.png) no-repeat}
+	.col-1 span.o1{background-position: left -6px; top:-1px; left:-1px}
+	.col-1 span.o2{background-position: right -6px; top:-1px; right:-1px}
+	.col-1 span.o3{background-position: left bottom; bottom:-1px; left:-1px}
+	.col-1 span.o4{background-position: right bottom; bottom:-1px; right:-1px;}
+.col-1 .title{color:#386ea8; padding:5px 10px 3px}
+.col-1 div.content{padding:0px 10px 10px}
+.col-1 div.content h5{background: url(<?php echo $this->staticUrl; ?>kidsedu/images/member/ext-title.png) no-repeat 2px 10px; height:34px}
+.col-1 div.content h5 strong{ visibility: hidden}
+.pass-logo{ margin:auto; width:261px; padding-top:15px}
+.pass-logo a img{ border:1px solid #ddd}
+.pass-logo a{border:3px solid #fff}
+.pass-logo a.logo,
+.pass-logo a:hover{border:3px solid #e8f1f1;}
+.pass-logo p{border-top: 1px solid #e1e4e8; padding-top:15px}
+.item{padding:10px 0; vertical-align:middle; margin-bottom:10px}
+.item span{ color:#8c8686}
+
+#footer{color:#666; line-height:24px;width:920px; margin:auto; text-align:center; padding:12px 0; margin-top:52px; border-top:1px solid #e5e5e5}
+#footer a{color:#666;}
+
+.point{border:1px solid #ffbf7a; background:#fffced; margin-bottom:10px; margin-right:100px;margin-left:50px;position:relative}
+.point .content{padding:8px 10px;}
+.point .content .title{color:#ff8400}
+.point .content p{color:#777; text-indent:20px}
+.point span.o1,
+	.point span.o2,
+	.point span.o3,
+	.point span.o4{position:absolute;width:3px;height:3px;background: url(<?php echo $this->staticUrl; ?>kidsedu/images/fillet.png) no-repeat; overflow:hidden}
+	.point span.o1{background-position: left top; top:-1px; left:-1px}
+	.point span.o2{background-position: right top; top:-1px; right:-1px}
+	.point span.o3{background-position: left -3px; bottom:-1px; left:-1px}
+	.point span.o4{background-position: right -3px; bottom:-1px; right:-1px;}
+.submit button.hqyz{margin:0px; padding:0px; border:none; cursor:pointer; }
+.submit button.hqyz{
+    background-position: 100% 0%;
+    border: medium none;
+    font-size: 12px;
+    padding: 0 10px 0 7px;
+}
+.submit button.hqyz{
+    background: url("<?php echo $this->staticUrl; ?>kidsedu/images/member/but.png") no-repeat 100% 0px;
+    height: 29px;
+    width: auto;
+	
+}
+#mobile_div input{*margin-bottom:12px;*_padding:0px 0px 6px 0px}
+</style>
 </head>
 <body>
-<!--头部 begin-->
-<div class="headerBox">
-	<div class="header">
-        <h1>中国加盟网新会员免费注册</h1>
-        <div class="topLinks">
-            <ul>
-                <li class="last"><a hidefocus="true" target="_blank" href="http://www.jmw.com.cn">中国加盟网首页</a></li>
-               <!--  <li class="last"><a href="#" target="_blank" hideFocus="true">帮助中心</a></li> -->
-            </ul>
-            <p>如遇问题请拔打：<strong>4000-500-555</strong></p>
-         </div>
-    </div>
-</div><!--头部 end-->
+<div id="header"><div class="content"><div class="logo"><img src="<?php echo $this->staticUrl; ?>kidsedu/images/v9/logo.jpg"/></div><span class="log"></span></div></div>
 
-<!--主体外框 begin-->
-<div class="container">
+<div id="content">
+	<h2>会员注册&nbsp;&nbsp;&nbsp;&nbsp;<span class="on"><em>1</em>填写信息</span></h2>
+	<form id="form1" action="" method="post">
+	<input type="hidden" value="1" name="siteid">
+	<div class="col-left form-login form-reg">
+    	<div class="input">
+			<label>用户名：</label><input type="text" class="input-text" size="36" name="username" id="username">
+			<div id="usernameTip"></div>
+		</div>
+        <div class="input">
+			<label>密码：</label><input type="password" class="input-text" size="36" name="password" id="password">
+			<div id="passwordTip"></div>
+		</div>
+        <div class="input">
+			<label>确认密码：</label><input type="password" class="input-text" size="36" id="password2" name="password2">
+			<div id="password2Tip"></div>
+		</div>
+        <div class="input">
+			<label>邮箱：</label><input type="text" class="input-text" size="36" name="email" id="email">
+			<div id="emailTip" class="onError">邮箱应该为2-32位之间</div>
+		</div>					
+        <div class="reg">
+            <div class="submit"><input type="submit" value="同意注册协议，提交注册" name="dosubmit"></div><br>
+            <input type="checkbox" value="" id="protocol" name="protocol"><a class="blue" onclick="show_protocol();return false;" href="javascript:void(0);">点击阅读注册协议</a>
+            <div id="protocoltip" class="onShow">请阅读协议</div>
+		</div>
+    </div>
+	</form>
 
-   	<!--左侧 B-->
-    <div class="regBox">
-    	<form onsubmit="return submitclick()" name="register" method="post" action="http://comp.jmw.com.cn/registerAction.php">
-        <div id="infoBox" class="formContent">
-            <h2>会员登录名和密码</h2>            
-            <p>
-                <em>用户登录名：</em>
-                <input type="text" onfocus="uNamefocus();return false;" onblur="uNameblur();return false;" maxlength="20" value="" name="username" id="uName" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>密码：</em>
-                <input type="password" onfocus="uPwdfocus();return false;" onblur="uPwdblur();return false;" maxlength="20" value="" name="company_pwd" id="uPwd" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>重复密码：</em>
-                <input type="password" onfocus="checkPwdfocus();return false;" onblur="checkPwdblur();return false;" value="" maxlength="20" name="company_rpwd" id="checkPwd" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-             
-            <h2>企业资料</h2>
-            <p>
-                <em>公司名称（中文）：</em>
-                <input type="text" onfocus="company_zh_focus();return false;" onblur="company_zh_blur();return false;" value="" maxlength="20" name="company_zh" id="company_zh" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>公司名称（英文）：</em>
-                <input type="text" onfocus="company_en_focus();return false" onblur="company_en_blur();return false;" maxlength="40" value="" name="company_en" id="company_en" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>企业类型：</em>
-                <select style="width:191px;" id="enterprise_type" name="enterprise_type">
-                        <option value="0">请选择</option><option value="1">国有</option><option value="2">外资</option><option value="3">合资</option><option value="4">独资</option><option value="5">股份制</option><option value="6">民营</option><option value="7">私有</option>                        </select>
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>所属行业：</em>
-                <select onchange="getChildIndustry();" name="industry_id" id="parent">
-					<option value="">请选择</option>
-					<option value="1">服装</option><option value="2">美食</option><option value="3">美容</option><option value="4">干洗</option><option value="5">精品</option><option value="7">饰品</option><option value="11">教育</option><option value="13">幼儿</option><option value="14">医疗</option><option value="15">零售</option><option value="16">家居</option><option value="17">环保</option><option value="19">五金</option><option value="21">珠宝</option><option value="22">家纺</option><option value="23">汽车</option><option value="24">建材</option><option value="174">其他</option><option value="196">酒水</option>				</select>
-				<select name="industry_child_id" id="child">
-                    <option value="0">请选择</option>
-                </select>
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>注册资金：</em>
-                <input type="text" onfocus="register_capital_focus();return false;" onblur="register_capital_blur();return false;" value="" maxlength="20" name="register_money" id="register_capital" class="inp4">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>注册日期：</em>
-                <span id="calendarSpan" class="boxWrap">
-                            <input type="text" value="" maxlength="10" name="reg_time" id="buildtime" class="inp4" readonly="readonly">
-                            <span class="calendarSelect"></span>
-                        </span>
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>公司所在地：</em>
-                
-                <select style="width:80px;" onchange="change(1,0);" id="province" name="province"><option value="省/市">省/市</option><option value="北京">北京</option><option value="天津">天津</option><option value="河北">河北</option><option value="山西">山西</option><option value="内蒙古">内蒙古</option><option value="辽宁">辽宁</option><option value="吉林">吉林</option><option value="黑龙江">黑龙江</option><option value="上海">上海</option><option value="江苏">江苏</option><option value="浙江">浙江</option><option value="安徽">安徽</option><option value="福建">福建</option><option value="江西">江西</option><option value="山东">山东</option><option value="河南">河南</option><option value="湖北">湖北</option><option value="湖南">湖南</option><option value="广东">广东</option><option value="广西">广西</option><option value="海南">海南</option><option value="重庆">重庆</option><option value="四川">四川</option><option value="贵州">贵州</option><option value="云南">云南</option><option value="西藏">西藏</option><option value="陕西">陕西</option><option value="甘肃">甘肃</option><option value="青海">青海</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="台湾">台湾</option><option value="香港">香港</option><option value="澳门">澳门</option></select>
-                <select style="width:80px;" onchange="change(2,0);" id="city" name="city"><option value="地/州">地/州</option></select>
-                <select style="width:93px;" id="area" name="area"><option value="区/县">区/县</option></select>
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>详细地址：</em>
-                <input type="text" onfocus="addressfocus();return false" onblur="addressblur();return false;" disabled="" maxlength="30" value="" name="address" id="address" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <h2>联系方式</h2>
-            <p>
-                <em>联系人：</em>
-                <input type="text" onfocus="contactsfocus();return false" onblur="contactsblur();return false;" maxlength="20" value="" name="combiner" id="contacts" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>联系电话：</em>
-                <input type="text" onfocus="contacts_phone_focus();return false;" onblur="contacts_phone_blur();return false;" maxlength="30" value="" name="telephone" id="contacts_phone" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>联系手机：</em>
-                <input type="text" onfocus="contacts_mobile_focus();return false;" onblur="contacts_mobile_blur();return false;" maxlength="11" value="" name="mobel_num" id="contacts_mobile" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>电子邮箱：</em>
-                <input type="text" onfocus="emailfocus();return false;" onblur="emailblur();return false;" maxlength="50" value="" name="email" id="email" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <h2>品牌/项目资料</h2>
-            <p>
-                <em>品牌名称（中文）：</em>
-                <input type="text" onfocus="brand_zh_focus();return false;" onblur="brand_zh_blur();return false;" maxlength="10" value="" name="brand_zh" id="brand_zh" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>品牌名称（英文）：</em>
-                <input type="text" onfocus="brand_en_focus();return false;" onblur="brand_en_blur();return false;" maxlength="20" value="" name="brand_en" id="brand_en" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>品牌发源地：</em>
-                <input type="text" onfocus="brand_cradle_focus();return false;" onblur="brand_cradle_blur();return false;" maxlength="20" value="" name="birthplace" id="brand_cradle" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>品牌/项目投资额度：</em>
-                <input type="text" onfocus="capital_limit1_focus();return false;" onblur="capital_limit_blur();return false;" maxlength="8" value="" name="min_money" id="capital_limit_1" class="inp2">
-                <font>～</font> 
-                <input type="text" onfocus="capital_limit2_focus();return false;" onblur="capital_limit_blur();return false;" maxlength="8" value="" name="max_money" id="capital_limit_2" class="inp2">
-                <font>万元</font> 
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>招商模式：</em>
-                <label><input type="checkbox" value="1" name="orders_model[]" id="business_mode_league">加盟连锁</label>
-                <label id="business_mode_label"><input type="checkbox" value="2" name="orders_model[]" id="business_mode_agent">分销代理</label>
-                <span id="business_mode_s" class="tipsBox"></span>
-            </p>
-            <p>
-                <em>直营店总数：</em>
-                <input type="text" onfocus="zhixiaodianfocus();return false;" onblur="zhixiaodianblur();return false;" value="" maxlength="4" name="total_store" id="zhixiaodian" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>加盟/代理店总数：</em>
-                <input type="text" onfocus="jiamengdianfocus();return false;" onblur="jiamengdianblur();return false;" value="" maxlength="6" name="join_store" id="jiamengdian" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>经营产品/提供服务：</em>
-                <input type="text" onfocus="productsfocus();return false;" onblur="productsblur();return false;" maxlength="100" value="" name="product" id="products" class="inp1">
-                <span class="tipsBox"></span>
-            </p>
-            <p>
-                <em>验证码：</em>
-                <input type="text" onfocus="checkcodefocus();return false;" onblur="checkcodeblur();return false;" value="" name="code" id="checkcode" class="inp2">
-                <img width="75" height="28" alt="" class="formCode" src="./identifying_code.php" id="code1">
-                <a onclick="changecode();return false;" class="refreshCode" href="">看不清？</a>
-                <span class="tipsBox"></span>
-            </p>
-            <p class="buttonBox">
-                <em></em>
-                <input type="submit" class="agreeSubmit_btn" value="" id="checkRegister">
-                <a class="treatyLink" target="_blank" href="http://user.jmw.com.cn/terms.shtml">点击阅读中国加盟网服务条款</a>
-            </p>
-        <div id="email" class="mailListBox"></div></div>
-        </form>
+    <div class="col-auto reg-auto">
+    	<p class="f14">已经有了账号？<br>请直接登录</p>
+        <div class="submit"><input type="submit" onclick="redirect('<?php echo $this->baseUrl; ?>kidsedu/index/login/')" value="登录" name="dosubmit"></div>
     </div>
-   	<!--左侧 E-->
-    
-   	<!--右侧 B-->
-    <div class="regSide">
-        <p>请认真、仔细的填写以下信息，严肃的商业信息有助于获得客户的信任，结交潜在客户，获得更多商业机会！另外，信息的完整度将会影响到您的项目在TOP排行榜中的排名。</p>
-    </div>
-    <!--右侧 E-->
-    
-    <div class="clr"></div>
 </div>
-<!--主体外框 end-->
-<div class="clr"></div>
-<div class="footer_wrap">
-    <!--底部 开始-->
-   	<div class="footer">
-    <div class="hot"><img src="http://image1.jmw.com.cn/public/images/hot.gif"></div> 
-    <p><a target="_blank" href="http://about.jmw.com.cn">关于我们</a>|<a target="_blank" href="http://about.jmw.com.cn/PhotoList_1.shtml">公司相册</a>|<a target="_blank" href="http://about.jmw.com.cn/News_268.shtml">公司视频</a>|<a target="_blank" href="http://about.jmw.com.cn/Internet.shtml">旗下业务</a>|<a target="_blank" href="http://about.jmw.com.cn/CorporateCulture.shtml">企业文化</a>|<a target="_blank" href="http://about.jmw.com.cn/guest.shtml">客户合作</a>|<a target="_blank" href="http://about.jmw.com.cn/Job_one.shtml">诚聘精英</a>|<a target="_blank" href="http://about.jmw.com.cn/MediaList_1.shtml">媒体报道</a>|<a target="_blank" href="http://about.jmw.com.cn/sitemap.shtml">网站地图</a>|<a target="_blank" href="http://about.jmw.com.cn/Statistics.shtml">在线统计</a>|<a target="_blank" href="http://about.jmw.com.cn/ContactUs.shtml">联系我们</a></p>
-    刊登热线：4000-500-555 咨询电话：010-62168889 中国加盟网友情提示：多打电话、多咨询、实地考察，可降低投资风险<br>
-    Copyright&copy;2004-2013 JMW.COM.CN. All Rights Reserved 北京天创时代信息技术有限公司 版权所有<br>
-    <a target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202006020700545"><img src="http://image1.jmw.com.cn/public/images/biaozhi.gif"></a>京ICP证：040787号 京公海网安备案编号:1101084667<br>
-</div>    <!--底部 结束-->
-<script type="text/javascript">
-    var s0=["province","city","area"];
-    var opt0=["省/市","地/州","区/县"];
-    change(0,0);
-
-    function SelectValue(c,v)
-    {
-        var selectList=document.getElementById(c);
-        for (i=0;i&lt;selectList.length;i++)
-        {
-            if (selectList.options[i].text == v)
-            {
-                selectList.options[i].selected = true;
-            }
-        }
-    }
-</script>
-</div>
-
-
-</body></html>
+<?php echo $this->load->view('kidsedu/footer');

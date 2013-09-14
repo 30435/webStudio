@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0;margin:0}
+html{_background:url(about:blank);}
+body{font-family:宋体;font-size:12px;color:#666;line-height:1.5em;background:#e6e6e6;}
+a{color:#666;text-decoration:none}
+a.red,a:hover{color:#c00;}
+a:hover{text-decoration:underline;}
+img{border:0}
+ul,ol{list-style:none}
+ul li img{display:block;vertical-align:bottom;}
+input,textarea,select,font{font-size:12px;color:#666;outline:none;}
+h1,h2,h3,h4{font-size:14px;color:#333;}
+.clr{height:0;font-size:0;clear:both;_overflow:hidden}
+em,i{font-style:normal;}
+.line1,.line2{display:block;margin:20px 0;font-size:0;overflow:hidden;}
+.line1{height:1px;background:#ddd;}
+.line2{height:2px;background:#e5e5e5;}
+
+/*主体框架*/
+.header,.container{margin:0 auto;}
+.header{width:1000px;}
+.container{width:998px;border:1px solid #ccc;background:#fff;}
+
+.mainBody{float:left;width:519px;padding:20px 25px 50px 25px;}
+.sideLeft,.sideRight{padding:20px 20px 50px 20px;}
+.sideLeft{float:left;width:139px;border-right:1px solid #ccc;background:url(../images/admin_new_3.gif) right top repeat-y;}
+.sideRight{float:right;width:208px;border-left:1px solid #ccc;background:#f7f7f7;}
+.pageBody{float:right;width:768px;padding:20px 25px 50px 25px;background:url(../images/admin_14c.jpg) repeat-x;}
+
+/*头部*/
+.headerBox{zoom:1;margin-bottom:20px;background:url(../images/admin_new_2a.jpg) repeat-x;}
+.header{height:43px;line-height:43px;}
+.header h1{float:left;width:182px;height:22px;margin:10px 0 0 0;overflow:hidden;display:inline;text-indent:-1999px;background:url(../images/admin_new_1.jpg) no-repeat;}
+.topNav{float:right;height:43px;overflow:hidden;}
+.topNav li{float:left;height:43px;background:url(../images/admin_new_2b.gif) right top no-repeat;}
+.topNav li a{float:left;display:block;height:43px;padding:0 15px;white-space:nowrap;color:#b3b3b3;outline:none;}
+.topNav li a span{color:#808080;}
+.topNav li a:hover{color:#fff;text-decoration:none;background:#000;}
+
+.loginTips{float:right;padding-right:15px;color:#b3b3b3;background:url(../images/admin_new_2b.gif) right top no-repeat;}
+.loginTips font{color:#FF0;}
+
+/*通用栏目Tab*/
+.columnTab_box{height:34px;margin-bottom:25px;background:url(../images/admin_new_6a.gif) left bottom repeat-x;}
+.columnTab{height:34px;}
+.columnTab li{float:left;line-height:30px;padding:0 25px;margin:3px 5px 0 0;font-size:14px;border:1px solid #CCD1DD;border-bottom:0;}
+.columnTab li a:hover{color:#999;text-decoration:none;}
+.columnTab li.current{line-height:33px;margin:0 5px 0 0;font-weight:bold;background:#fff url(../images/admin_new_6b.gif) repeat-x;}
+.columnTab li.current a{cursor:text;color:#333;}
+
+/*选择类别*/
+.classify{padding:10px 20px 20px 20px;}
+.classify p{height:32px;line-height:32px;padding-left:15px;overflow:hidden;}
+.classify p.tipsTxt,.classify p.queBtn{padding-left:0;}
+.classify p.queBtn{text-align:center;}
+.classify p.queBtn input{width:79px;height:28px;border:0;cursor:pointer;background:url(../images/per_sprites.gif) -110px -36px no-repeat;}
+.classify label{float:left;margin-right:18px;*margin-right:13px;}
+.classify label input{float:left;margin:10px 5px 0 0;*margin:5px 0 0 0;} 
+
+.botLine,.botLine2{display:block;font-size:0;overflow:hidden;margin-bottom:10px;border-bottom:1px solid #eee;}
+.botLine{height:1px;}
+.botLine2{height:5px;}
+
+/*通用弹出层*/
+.popWrap,.popWrap_sub,.popIframe{width:532px;}
+.popWrap{left:50%;top:50%;margin-left:-266px!important;margin-top:-190px!important;margin-top:0px;z-index:3000;}
+.popWrap_sub,.popIframe{position:absolute;left:0;top:0;}
+.popWrap_sub{border-radius:5px;background:#333;filter:alpha(opacity=50);opacity:0.5;}
+.popWrap .closeBtn{width:9px;height:9px;display:block;position:absolute;right:20px;top:22px;background:url(../images/per_sprites.gif) -280px -37px no-repeat;}
+.popWrap .closeBtn:hover{filter:alpha(opacity=80);opacity:0.8;}
+
+.popBox{width:520px;position: absolute;left:6px;top:6px;background:#fff;}
+.popBox h3{height:40px;line-height:40px;padding:0 20px;font-size:14px;color:#fff;background:url(../images/admin_new_12a.jpg) repeat-x;}
+
+.bgIframe,.popIframe{filter:alpha(opacity=0);opacity:0;}
+.bgDiv,.bgIframe{width:100%;display:none;position:absolute;left:0;top:0;filter:alpha(opacity=50);opacity:0.5;z-index:2999;background:#000;} 
+
+.popWrap{
+	 display:none;
+	 position:fixed!important;/*FF IE7*/
+     position:absolute;/*IE6*/
+    _top:expression(eval(document.compatMode &&
+         document.compatMode=='CSS1Compat') ?
+         documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+         document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+}
