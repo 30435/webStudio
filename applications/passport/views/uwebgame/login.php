@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . '/header'); ?>
 <div class="min-body" style="height:411px;margin-bottom: -8px;">
     <div class="min-content has-background">
 	    <span class="hack-span"></span>
@@ -48,4 +48,4 @@
         </a>
     </div>
 </div>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . '/footer'); ?>

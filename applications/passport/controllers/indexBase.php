@@ -16,7 +16,7 @@ class IndexBase extends Custom_Controller
 
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->view($this->prefix . '/index');
 	}
 
 	/**
@@ -32,7 +32,7 @@ class IndexBase extends Custom_Controller
 		
 		$this->form_validation->set_rules('username', 'name', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == false) {
-			$this->load->view('login');
+			$this->load->view($this->prefix . '/login');
 		} else {
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
@@ -135,7 +135,7 @@ class IndexBase extends Custom_Controller
 		$this->form_validation->set_rules('password', 'name', 'trim|required|xss_clean');
 		header("Cache-control: private");
 		if ($this->form_validation->run() == false) {
-			$this->load->view('register');
+			$this->load->view($this->prefix . '/register');
 		} else {
 			$fields = array();
 			$this->input->post('haveUsername') == 'yes' && $fields[] = 'username';

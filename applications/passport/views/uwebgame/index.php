@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . '/header'); ?>
 <div class="min-body">
     <div class="min-content back">
 	    <div class="min-head">
@@ -52,4 +52,4 @@
 		</div>
 	</div>
 </div>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . '/footer'); ?>

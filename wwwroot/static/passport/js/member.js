@@ -96,7 +96,7 @@ function checkusername(username)
 			type: "get",		//使用get方法访问后台  
 			dataType: "jsonp",	//返回json格式的数据  
 			jsonp:"callback",
-			url: passportUrl + 'index/getUserid/?username=' + username,	//要访问的后台地址  
+			url: passportUrl + 'uwebgame/getUserid/?username=' + username,	//要访问的后台地址  
 			//data:{"opp":"main"},
 			async: false,
 			success: function(html) {

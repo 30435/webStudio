@@ -38,7 +38,7 @@ $(function(){
 		dataType : "jsonp",
 		async : false,
 		jsonp:"callback",
-		url : passportUrl + 'index/getUserid/',
+		url : passportUrl + '<?php echo $this->prefix; ?>/getUserid/',
 		success : function(data){
 			var userid = parseInt(data.userid);
 			if (userid == 0) {
@@ -58,7 +58,7 @@ $(function(){
 		dataType : "jsonp",
 		async : false,
 		jsonp:"callback",
-		url : passportUrl + 'index/emailExist/',
+		url : passportUrl + '<?php echo $this->prefix; ?>/emailValid/',
 		success : function(data){
 			var emailValid = parseInt(data.emailValid);
 			if (emailValid == 1) {
@@ -215,4 +215,4 @@ function show_protocol()
         <div class="submit"><input type="submit" onclick="redirect('<?php echo $this->baseUrl . $this->prefix; ?>/login/')" value="登录" name="dosubmit"></div>
     </div>
 </div>
-<?php echo $this->load->view('kidsedu/footer');
+<?php echo $this->load->view($this->prefix . '/footer');

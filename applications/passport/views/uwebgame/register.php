@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . '/header'); ?>
 <script language="javascript" type="text/javascript">
 setNav(1);
 selectFast();
@@ -122,4 +122,4 @@ selectNoRealName();
     </div>
 </div>
 
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . '/footer'); ?>
