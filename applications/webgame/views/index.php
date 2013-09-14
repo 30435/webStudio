@@ -5,7 +5,7 @@
 			<div class="login_navtop"></div>
 			<div class="login_navmid">
 			<?php if (empty($this->loginedUserInfo)) { ?>
-				<a href="<?php echo $this->appInfos['passport']['url']; ?>" id="login_btn" class="login_btn"></a>
+				<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login/" id="login_btn" class="login_btn"></a>
 			<?php } else { ?>
 				<div class="profile">
 					<dl>
@@ -13,8 +13,8 @@
 	                    <dd class="tit usercolor" id="username"><?php echo $this->loginedUserInfo['username']; ?></dd>
 	                    <dd class="usercolor" id="userlevel"></dd>
 	                </dl>
-					<div class="profile_href"><a class="org" target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>">[进入个人中心]</a></div>
-					<a class="logout blue" id="logout_btn" href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/">[退出]</a>
+					<div class="profile_href"><a class="org" target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame">[进入个人中心]</a></div>
+					<a class="logout blue" id="logout_btn" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">[退出]</a>
 				</div>
 			<?php } ?>
 			</div>

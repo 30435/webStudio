@@ -26,9 +26,9 @@ var payUrl = "<?php echo $this->baseUrl; ?>";
 			<ul class="top_links_list">
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				<li>(<span class="uid_account"><?php echo $this->loginedUserInfo['username']; ?></span>)<a class="head_top" title="我的充值中心" href="<?php echo $this->baseUrl; ?>index/myaccount"> 我的充值中心 </a><span>|</span></li>
-				<li><a href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/">安全退出</a><span>|</span></li>
+				<li><a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">安全退出</a><span>|</span></li>
 			<? } else { ?>
-				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>index/login/">登录</a><span>|</span></li>
+				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login/">登录</a><span>|</span></li>
 			<? } ?>
 				<li><a href="/" target="_blank">意见反馈</a><span>|</span></li>
 				<li><a href="javascript: addBookmark(); void(0);"  hidefocus="true" style="cursor:pointer;">收藏本站</a></li>

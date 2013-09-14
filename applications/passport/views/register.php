@@ -6,7 +6,7 @@ selectNoRealName();
 </script>
 <div class="min-body">
     <div class="min-content back">
-    <form autocomplete="off" id="registerForm" name="registerForm" method="post" action="<?php echo $this->baseUrl . 'index/register/'; ?>" >
+    <form autocomplete="off" id="registerForm" name="registerForm" method="post" action="<?php echo $this->baseUrl . $this->prefix . '/register/'; ?>" >
         <input type="hidden" id="haveEmail" name="haveEmail" value="no" />
 		<input type="hidden" id="haveUsername" name="haveUsername" value="no" />
         <input type="hidden" id="haveRealName" name="haveRealName" value="no" />

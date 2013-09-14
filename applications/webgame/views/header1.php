@@ -24,10 +24,10 @@
 		<div class="topbar_reg">
 		<?php if (!empty($this->loginedUserInfo)) { ?>
 			(<span class="uid_account"><?php echo $this->loginedUserInfo['username']; ?></span>)<!--<a class="head_top" title="我的充值中心" href="<?php echo $this->baseUrl; ?>index/myaccount"> 我的充值中心 </a><i class="divide_new">|</i>-->
-			<a href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/">安全退出</a><i class="divide_new">|</i>
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">安全退出</a><i class="divide_new">|</i>
 		<? } else { ?>
-			<a href="<?php echo $this->appInfos['passport']['url']; ?>index/login" title="登陆" target="_blank" rel="nofollow">登陆</a><i class="divide_new">|</i>
-			<a href="<?php echo $this->appInfos['passport']['url']; ?>index/register" title="注册" target="_blank" rel="nofollow">注册</a><i class="divide_new">|</i>
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login" title="登陆" target="_blank" rel="nofollow">登陆</a><i class="divide_new">|</i>
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/register" title="注册" target="_blank" rel="nofollow">注册</a><i class="divide_new">|</i>
 		<? } ?>
 			<a href="<?php echo $this->appInfos['pay']['url']; ?>" title="诺币充值" target="_blank" rel="nofollow">充值</a><i class="divide_new">|</i>
 			<a id="j_addFav" href="javascript: addFavorite(); void(0);" title="添加到收藏夹" target="_self" rel="nofollow">收藏</a>

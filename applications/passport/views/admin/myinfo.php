@@ -46,7 +46,7 @@
 	echo form_open($this->appMenus[$this->method]['url'] . '?id=' . $this->id, $attributes);
   ?>
     <input type="hidden" name="info[userid]" value="1"></input>
-    <input type="hidden" name="info[username]" value="phpcms"></input>
+    <input type="hidden" name="info[username]" value=""></input>
     <table width="100%" class="table_form contentWrap">
       <tr>
         <td width="80"><?php echo $this->fieldInfos['username']['name']; ?>:</td> 

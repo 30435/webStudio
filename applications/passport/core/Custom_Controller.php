@@ -24,7 +24,7 @@ class Custom_Controller extends CommonController
 		require APPPATH . 'uc_client/' . 'config.php';
 		require_once APPPATH . 'uc_client/' . 'client.php';
 
-        $this->urlForward = $this->baseUrl;
+        //$this->urlForward = $this->baseUrl;
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->loginedUserInfo = $this->_checkUserLogin();

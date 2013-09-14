@@ -3,7 +3,7 @@
     <div class="min-content has-background">
 	    <span class="hack-span"></span>
 	    <div class="login">
-		<form action="<?php echo $this->baseUrl; ?>index/login/" method="post" accept-charset="utf-8" name="loginform" id="loginform"> 
+		<form action="<?php echo $this->baseUrl . $this->prefix; ?>/login/" method="post" accept-charset="utf-8" name="loginform" id="loginform"> 
 		    <div class="inputout-first">
 			    <div class="comm-error ps-error" id="usernamenote" style="margin-left:25px;*margin-left:-10px;"><span></span></div>
 	            <i class="fimg l-user">&nbsp;&nbsp;</i><span class="t-span">输入米米号或邮箱</span>

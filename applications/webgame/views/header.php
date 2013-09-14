@@ -27,11 +27,11 @@
 		<div class="webtop-login-area">
 			<div class="webtop-login">
 			<?php if (!empty($this->loginedUserInfo)) { ?>
-				(<span class="uid_account"><a href="<?php echo $this->appInfos['passport']['url']; ?>" target="_blank"><?php echo $this->loginedUserInfo['username']; ?></a></span>)
-				<span class="webtop-login-split">|</span> <a target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>index/logout/" class="webtop-login-link">退出</a>
+				(<span class="uid_account"><a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/" target="_blank"><?php echo $this->loginedUserInfo['username']; ?></a></span>)
+				<span class="webtop-login-split">|</span> <a target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/" class="webtop-login-link">退出</a>
 			<? } else { ?>
-				<a style="color:#FF7F01;" target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>index/login" class="webtop-login-link">登陆</a>
-				<span class="webtop-login-split">|</span> <a target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>index/register" class="webtop-login-link">注册</a>
+				<a style="color:#FF7F01;" target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login" class="webtop-login-link">登陆</a>
+				<span class="webtop-login-split">|</span> <a target="_blank" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/register" class="webtop-login-link">注册</a>
 			<? } ?>
 				<span class="webtop-login-split">|</span><a style="font-weight:700;color:#f00;" target="_blank" href="<?php echo $this->appInfos['pay']['url']; ?>" class="webtop-login-link">充值</a>
 			</div>

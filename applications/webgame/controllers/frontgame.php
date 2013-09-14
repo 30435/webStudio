@@ -19,7 +19,7 @@ class frontgame extends Custom_Controller
 	{	
 		$this->userid = $this->loginedUserInfo['userid'];
 		if (empty($this->userid)) {
-			$this->_messageInfo('请先登录！', $this->appInfos['passport']['url'] . 'index/login/');  //跳转到主页面
+			$this->_messageInfo('请先登录！', $this->appInfos['passport']['url'] . 'uwebgame/login/');  //跳转到主页面
 		}
 		
 		$this->username = $this->loginedUserInfo['username'];

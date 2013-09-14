@@ -5,6 +5,7 @@ class Uwebgame extends IndexBase
 {
 	public function __construct()
 	{
+		$this->prefix = 'uwebgame';
 		parent::__construct();
 	}
 }

@@ -212,7 +212,7 @@ function show_protocol()
 
     <div class="col-auto reg-auto">
     	<p class="f14">已经有了账号？<br>请直接登录</p>
-        <div class="submit"><input type="submit" onclick="redirect('<?php echo $this->baseUrl; ?>kidsedu/index/login/')" value="登录" name="dosubmit"></div>
+        <div class="submit"><input type="submit" onclick="redirect('<?php echo $this->baseUrl . $this->prefix; ?>/login/')" value="登录" name="dosubmit"></div>
     </div>
 </div>
 <?php echo $this->load->view('kidsedu/footer');

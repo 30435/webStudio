@@ -172,7 +172,7 @@ class Api extends Custom_Controller
 		}
 
 		/*if ($userInfo['islock']) {
-			$this->_messageInfo('帐号被锁定！', $this->baseUrl . 'index/login');
+			$this->_messageInfo('帐号被锁定！', $this->baseUrl . $this->prefix . '/login');
 		}*/
 
 		$updateInfo = array('lastloginip' => $this->ip, 'lastlogintime' => $this->time, 'loginnum' => $userInfo['loginnum'] + 1);

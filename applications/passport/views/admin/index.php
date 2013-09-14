@@ -35,10 +35,10 @@ var pc_hash = '<?php echo 'pc_hash'; ?>'
   <div class="rt-col">
     <div class="tab_style white cut_line text-r">
 	  <a onClick="lock_screen()" href="javascript:;"><img src="<?php echo $this->staticUrl; ?>admin/images/icon/lockscreen.png"><?php echo $this->lang->line('admin_screenLock'); ?></a><span>|</span>
-	  <a target="_blank" href="http://www.phpcms.cn"><?php echo $this->lang->line('admin_officeWeb'); ?></a><span>|</span>
-	  <a target="_blank" href="http://www.phpcms.cn/license/license.php"><?php echo $this->lang->line('admin_license'); ?></a><span>|</span>
-	  <a target="_blank" href="http://bbs.phpcms.cn"><?php echo $this->lang->line('admin_bbs'); ?></a><span>|</span>
-	  <a target="_blank" href="http://v9.help.phpcms.cn"><?php echo $this->lang->line('admin_help'); ?></a>
+	  <a target="_blank" href=""><?php echo $this->lang->line('admin_officeWeb'); ?></a><span>|</span>
+	  <a target="_blank" href=""><?php echo $this->lang->line('admin_license'); ?></a><span>|</span>
+	  <a target="_blank" href=""><?php echo $this->lang->line('admin_bbs'); ?></a><span>|</span>
+	  <a target="_blank" href=""><?php echo $this->lang->line('admin_help'); ?></a>
       <ul id="Skin">
         <li rel="styles1" class="s1 styleswitch"></li>
         <li rel="styles2" class="s2 styleswitch"></li>

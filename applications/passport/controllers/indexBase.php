@@ -9,7 +9,7 @@ class IndexBase extends Custom_Controller
 		$needLoginMethods = array('index');
 
 		if (in_array($this->method, $needLoginMethods) && empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您还没登录，请先登录！', $this->baseUrl . 'index/login');
+			$this->_messageInfo('您还没登录，请先登录！', $this->baseUrl . $this->prefix . '/login');
 		}
 		$this->categoryInfos = $this->_getCategoryInfos();
 	}
@@ -27,7 +27,7 @@ class IndexBase extends Custom_Controller
 	public function login()
 	{
 		if (!empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您已登录！', $this->baseUrl);
+			$this->_messageInfo('您已登录！', $this->baseUrl . $this->prefix);
 		}
 		
 		$this->form_validation->set_rules('username', 'name', 'trim|required|xss_clean');
@@ -43,7 +43,7 @@ class IndexBase extends Custom_Controller
 			$this->load->model('timesModel');
 			$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
 			if ($remainMinute > 0) {
-				$this->_showMessage('密码错误次数太多，请<b color="red">' . $remainMinute . '</b>分钟后再登录！', $this->baseUrl . 'index/login');
+				$this->_showMessage('密码错误次数太多，请<b color="red">' . $remainMinute . '</b>分钟后再登录！', $this->baseUrl . $this->prefix . '/login');
 			}
 			
 			$where = array('username' => $username);
@@ -57,7 +57,7 @@ class IndexBase extends Custom_Controller
 					$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
 				}
 				$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : '帐号被锁定！';
-				$this->_messageInfo($message, $this->baseUrl . 'index/login');
+				$this->_messageInfo($message, $this->baseUrl . $this->prefix . '/login');
 			}
 			if (empty($userInfo) && $ucInfo['userid'] > 0) {
 				$userInfo['username'] = $ucInfo['username'];
@@ -75,11 +75,11 @@ class IndexBase extends Custom_Controller
 
 			if (empty($userInfo)) {
 				$message = $statusInfos['-1'];
-				$this->_messageInfo($message, $this->baseUrl . 'index/login');
+				$this->_messageInfo($message, $this->baseUrl . $this->prefix . '/login');
 			}
 
 			if ($userInfo['islock']) {
-				$this->_messageInfo('帐号被锁定！', $this->baseUrl . 'index/login');
+				$this->_messageInfo('帐号被锁定！', $this->baseUrl . $this->prefix . '/login');
 			}
 
 			$updateInfo = array('lastloginip' => $this->ip, 'lastlogintime' => $this->time, 'loginnum' => $userInfo['loginnum'] + 1);
@@ -116,7 +116,7 @@ class IndexBase extends Custom_Controller
 		$this->input->set_cookie(array('name' => '_userid', 'value' => ''));
 		$this->input->set_cookie(array('name' => '_username', 'value' => ''));
 
-		$this->_messageInfo('退出成功！' . $synlogoutstr, $this->baseUrl);
+		$this->_messageInfo('退出成功！' . $synlogoutstr, $this->baseUrl . $this->prefix);
 	}
 
 	/**
@@ -127,7 +127,7 @@ class IndexBase extends Custom_Controller
 	public function register()
 	{
 		if (!empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您已登录！', $this->baseUrl);
+			$this->_messageInfo('您已登录！', $this->baseUrl . $this->prefix);
 		}
 		if(empty($this->settings['allowregister'])) {
 		}
@@ -158,7 +158,7 @@ class IndexBase extends Custom_Controller
 			$userid= uc_user_register($userInfo['username'], $this->input->post('password'), $userInfo['email']);
 			$userid = intval($userid);
 			if ($userid <= 0) {
-				$this->_messageInfo('注册失败，请重新注册！' . $userid, $this->baseUrl . 'index/register');
+				$this->_messageInfo('注册失败，请重新注册！' . $userid, $this->baseUrl . $this->prefix . '/register');
 			} else {
 				$passwordInfos = $this->_getPassword($this->input->post('password'));
 
@@ -237,7 +237,7 @@ class IndexBase extends Custom_Controller
 	public function editpwd()
 	{
 		if (empty($this->loginedUserInfo)) {
-			$this->_messageInfo('您还没有登录！', $this->baseUrl . 'index/login/');
+			$this->_messageInfo('您还没有登录！', $this->baseUrl . $this->prefix . '/login/');
 		}
 		
 		$this->form_validation->set_rules('password', 'passport', 'trim|required|xss_clean');
@@ -249,7 +249,7 @@ class IndexBase extends Custom_Controller
 			$password2 = $this->input->post('password2');
 
 			if (empty($oldpassword) || empty($password) || empty($password2) || ($password != $password2)) {
-				$this->_messageInfo('输入信息有误，请重新输入！', $this->baseUrl . 'index/editpwd');
+				$this->_messageInfo('输入信息有误，请重新输入！', $this->baseUrl . $this->prefix . '/editpwd');
 			}
 
 			$result = uc_user_edit($this->loginedUserInfo['username'], $oldpassword, $password, 0, 0);
@@ -259,13 +259,13 @@ class IndexBase extends Custom_Controller
 
 				$editResult = $this->memberModel->editInfo($data, $where);
 				if ($editResult) {
-					$this->_messageInfo('密码修改成功，请重新登陆！', $this->baseUrl . 'index/login/');
+					$this->_messageInfo('密码修改成功，请重新登陆！', $this->baseUrl . $this->prefix . '/login/');
 				} else {
-					$this->_messageInfo('密码修改异常，请重新修改！', $this->baseUrl . 'index/editpwd');
+					$this->_messageInfo('密码修改异常，请重新修改！', $this->baseUrl . $this->prefix . '/editpwd');
 				}
 			} else {
 				$str = $result == -1 ? '旧密码错误！' : '密码修改失败！';
-				$this->_messageInfo($str, $this->baseUrl . 'index/editpwd');
+				$this->_messageInfo($str, $this->baseUrl . $this->prefix . '/editpwd');
 			}
 		}
 	}

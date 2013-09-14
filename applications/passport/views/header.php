@@ -57,9 +57,9 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 			<span class="top-link">
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a> |
-				<a href="<?php echo $this->baseUrl; ?>index/logout/">安全退出</a> |
+				<a href="<?php echo $this->baseUrl . $this->prefix; ?>/logout/">安全退出</a> |
 			<? } else { ?>
-				<a id="login" href="<?php echo $this->baseUrl; ?>index/login/">登录</a>　|　
+				<a id="login" href="<?php echo $this->baseUrl . $this->prefix; ?>/login/">登录</a>　|　
 			<? } ?>
 				<a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>　| 
 				<a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a>
@@ -88,11 +88,11 @@ $(".gonggao-close").click(function() {
 </script>
 <div class="top-bar">
 	<ul class="in-bar">
-		<li class="bar"><a href="<?php echo $this->baseUrl; ?>" id="account_index" class="no-underline" hidefocus="true"><span class="spanout-bar">首页</span></a></li>
-        <?php if (empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl; ?>index/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li><?php } ?>
-        <li class="bar"><a href="<?php echo $this->baseUrl; ?>index/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
-        <li class="bar"><a href="<?php echo $this->baseUrl; ?>index/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
-        <?php if (!empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl; ?>index/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li><?php } ?>
+		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>" id="account_index" class="no-underline" hidefocus="true"><span class="spanout-bar">首页</span></a></li>
+        <?php if (empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li><?php } ?>
+        <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
+        <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
+        <?php if (!empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li><?php } ?>
         <!--<li class="bar"><a href="/appeal" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
         <li class="bar"><a href="/classroom" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>-->
 	</ul>

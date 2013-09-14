@@ -7,7 +7,7 @@ setNav(3);
 		<div class="lit-top">
 			<span class="tip">修改密码&nbsp;&gt;&nbsp;<span class="gray">设置新密码</span></span>
 		</div>
-		<form autocomplete="off" id="editpasswordform" name="editpasswordform" method="post" action="<?php echo $this->baseUrl . 'index/editpwd/'; ?>" >
+		<form autocomplete="off" id="editpasswordform" name="editpasswordform" method="post" action="<?php echo $this->baseUrl . $this->prefix . '/editpwd/'; ?>" >
 		<div class="reg-box">
 			<div style="position: relative;"></div>
 			<div style="display: none;" id="oldpasswordnote" class="comm-error ps-error"><span></span></div>
