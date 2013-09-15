@@ -224,43 +224,38 @@ class frontgame extends Custom_Controller
 	{
 		$this->load->library('session');
 		$payInfos = $this->session->userdata('payInfos');
-		//$this->session->unset_userdata('payInfos');
+		var_dump($payInfos);//$this->session->unset_userdata('payInfos');
 
-var_dump($payInfos);
-exit();
-		$username = isset($payInfos['username']) ? $payInfos['username'] : '';
-		$money = isset($payInfos['money']) ? $payInfos['money'] : 0;
-		$moneyValidMiddle = !empty($payInfos['moneyValidMiddle']) ? $payInfos['moneyValidMiddle'] : $money;
-		$webgameCode = isset($payInfos['webgameCode']) ? $payInfos['webgameCode'] : '';
-		$serverId = isset($payInfos['serverId']) ? $payInfos['serverId'] : '';
-		$serverRole = isset($payInfos['serverRole']) ? $payInfos['serverRole'] : '';
-		$userid = isset($payInfos['userid']) ? $payInfos['userid'] : '';
-		$usernamePay = isset($payInfos['usernamePay']) ? $payInfos['usernamePay'] : '';
-		$orderidPlat = isset($payInfos['orderidPlat']) ? $payInfos['orderidPlat'] : '';
-
-		$payType = isset($payInfos['type']) ? $payInfos['type'] : false;
-		$payTypeValid = in_array($payType, array('ischange', 'respond', 'iscourage')) ? true : false;
-		if ($payTypeValid && $payType == 'respond') {
-			$payTypeValid = $this->_checkOrder($orderidPlat, $username, $money, $webgameCode, $serverId);
+		if (!in_array($payInfos['payType'], array('topaymonth', 'towebgame'))) {
+			exit('payType error'); // $this->_messageInfo('支付类型有误！', $this->appInfos['pay']['url']);
+		}
+		if (!empty($payInfos['accountId'])) {
+			$payInfos['accountInfo'] = $this->checkAccount($payInfos);
+			if (empty($payInfos['accountInfo'])) {
+				exit('account error'); //$this->_messageInfo('充值到游戏失败！', $this->appInfos['pay']['url']);
+			}
+		}
+		$payInfos['userInfo'] = $this->_getUserByUsername($payInfos['username']);
+		$payInfos['moneyInfo'] = $this->_getMoneyInfo($usernamePay, true);
+		if (empty($userInfo) || ($userInfo['userid'] != $payInfos['userid']) || empty($payInfos['moneyInfo']) || $payInfos['moneyInfo']['money'] < $money) {
+			exit('user error');//$this->_messageInfo('支付账号信息有误！', $this->appInfos['pay']['url']);
 		}
 
-		if (empty($payTypeValid) || $money < 1 || empty($webgameCode) || empty($serverId) || empty($username) || empty($usernamePay)) {
-			//exit('1');
-			$this->_messageInfo('请求参数有误1', $this->applicationInfos[3]['domain']);
+		$function = '_' . $payInfos['payType'];
+		$this->$function($payInfos);
+
+		if ($payInfos['payType'] == 'topaymonth' && (empty($payInfos['username']) || $payInfos['money'] < 1)) {
+			exit('topaymonth param error');//$this->_messageInfo('支付包月参数错误！', $this->appInfos['pay']['url'] . 'index/paymonth/');
 		}
-		
+		if ($payInfos['payType'] == 'towebgame' && (empty($payInfos['webgameCode']) || empty($payInfos['serverId']) || $payInfos['money'] < 1)) {
+			exit('towebgame param error');//$this->_messageInfo('支付游戏服务器参数错误！', $this->appInfos['pay']['url'] . 'index/exchange/');
+		}
+
 		$webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
 		$serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
 		if (empty($webgameInfo) || empty($serverInfo) || $serverInfo['webgame_code'] != $webgameCode) {
 			//exit('2');
 			$this->_messageInfo('游戏参数有误2！', $this->applicationInfos[3]['domain']);
-		}
-
-		$userInfo = $this->_getUserByUsername($username);
-		$moneyInfo = $this->_getMoneyInfo($usernamePay, true);
-		if (empty($userInfo) || ($userInfo['userid'] != $userid) || empty($moneyInfo) || $moneyInfo['money'] < $money) {
-			//exit('3');
-			$this->_messageInfo('请求参数有误3', $this->applicationInfos[3]['domain']);
 		}
 
 		$params = array(
@@ -309,6 +304,25 @@ exit();
 
 			$this->load->view('payResult');
 		}
+	}
+
+	/**
+	 * Pay to paymonth
+	 *
+	 * @return array
+	 */
+	protected function _topaymonth($payInfos)
+	{
+	}
+
+	/**
+	 * Pay to webgame
+	 *
+	 * @return array
+	 */
+	protected function _towebgame($payInfos)
+	{
+
 	}
 	
 	/**
