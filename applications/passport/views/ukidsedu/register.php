@@ -184,7 +184,8 @@ function show_protocol()
 <div id="content">
 	<h2>会员注册&nbsp;&nbsp;&nbsp;&nbsp;<span class="on"><em>1</em>填写信息</span></h2>
 	<form id="form1" action="" method="post">
-	<input type="hidden" value="1" name="siteid">
+	<input type="hidden" name="hasEmail" value="yes" />
+	<input type="hidden" name="hasUsername" value="yes" />
 	<div class="col-left form-login form-reg">
     	<div class="input">
 			<label>用户名：</label><input type="text" class="input-text" size="36" name="username" id="username">
