@@ -81,7 +81,6 @@ abstract class CmsContent extends Custom_AdminController
 	 */
 	public function edit()
 	{
-		$this->_checkContent();
 		$this->_initModel();
 		$this->addbg = true;
 
@@ -122,10 +121,8 @@ abstract class CmsContent extends Custom_AdminController
 	 */
 	public function add()
 	{
-		$this->_checkContent();
 		$this->_initModel();
 		$this->addbg = true;
-
 
 		//$this->urlForward = $this->urlForward . '?catid=' . $this->catid;
 		//$this->_add();
@@ -142,6 +139,7 @@ abstract class CmsContent extends Custom_AdminController
 			$info = $this->_formatInfo($info, true);
 			$info['inputtime'] = $this->time;
 			$addResult = $this->currentModel->addInfo($info);
+			$this->_afterAdd($info);
 
 			$message = $this->appMenus[$this->method]['name'] . $this->lang->line('admin_successful');
 			$submitContinue = $this->input->post('dosubmit_continue');
@@ -166,32 +164,6 @@ abstract class CmsContent extends Custom_AdminController
 		$this->_initModel();
 		$this->urlForward = $this->urlForward . '?catid=' . $this->catid;
 		$this->_delete ();
-	}
-
-	/**
-	 * Check the content for keywords or description
-	 * 
-	 * @return void
-	 */
-	protected function _checkContent()
-	{
-		$action = $this->input->get_post('action');
-		if ($action != 'getKeywords') {
-			return ;
-		}
-
-		$data = $this->input->get_post('data');
-		if (empty($data)) {
-			exit('0');
-		}
-		exit('have keyword');
-		$where = array('username' => $username);
-		$userInfo = $this->currentModel->getInfo($where);
-		if (!empty($userInfo)) {
-			exit('0');
-		}
-
-		exit('1');
 	}
 
 	/**
@@ -278,8 +250,42 @@ abstract class CmsContent extends Custom_AdminController
 		if ($isWrite) {
 			$info['username'] = $this->userInfo['username'];
 			$info['updatetime'] = $this->time;
+			if (!empty($this->currentInfo)) {
+				$info['url'] = $this->_getUrl($info);
+			}
 			//$info['description'] = empty($info['description']) ? substr(trim(strip_tags($info['content'])), 0, 255) : $info['description'];
 		}
 		return $info;
+	}
+
+	/**
+	 * Create a url for a category
+	 *
+	 * @param array $info
+	 * @return string
+	 */
+	protected function _getUrl($info)
+	{
+		$url = '';
+		$catid = $info['catid'];
+		$ishtml = $this->categoryInfos[$catid]['ishtml'];
+		$parentDir = $bindDomain = '';
+		$info['id'] = empty($info['id']) ? $this->currentInfo['id'] : $info['id'];
+
+		while (isset($this->categoryInfos[$catid])) {
+			$parentDir = $this->categoryInfos[$catid]['catdir'] . '/' . $parentDir;
+			$bindDomain = $this->categoryInfos[$catid]['bind_domain'];
+			$catid = $this->categoryInfos[$catid]['parentid'];
+		}
+
+		$urlPre = empty($bindDomain) ? $this->baseUrl : $bindDomain;
+		if (empty($ishtml)) {
+			$url = empty($bindDomain) ? $urlPre . 'index/show?id=' . $info['id'] : $urlPre . 'show?id=' . $info['catid'] . '_' . $info['id'];
+		} else {
+			$urlPre = str_replace('index.php/', '', $urlPre);
+			$url = $urlPre . $parentDir . 'content_' . $info['id'] . '.html';
+		}
+
+		return $url;
 	}
 }

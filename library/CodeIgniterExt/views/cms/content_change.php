@@ -36,13 +36,8 @@ document.domain='<?php echo $this->frontDomain; ?>';
 	      <tr>
             <th width="80"> <font color="red">*</font><?php echo $this->fieldInfos['title']['name']; ?>:</th>
             <td>
-	          <input type="text" style="width:400px;" name="title" id="title" value="<?php if (isset($this->currentInfo['title'])) echo $this->currentInfo['title']; ?>" style="color:" class="measure-input " onBlur="$.post('?action=getKeywords&number=3&sid='+Math.random()*5, {data:$('#title').val()}, function(data){if(data && $('#keywords').val()=='') $('#keywords').val(data); })" onkeyup="strlen_verify(this, 'title_len', 80);"/>
+	          <input type="text" style="width:400px;" name="title" id="title" value="<?php if (isset($this->currentInfo['title'])) echo $this->currentInfo['title']; ?>" style="color:" class="measure-input " />
 		      <input type="hidden" name="style_color" id="style_color" value="">
-		      <input type="hidden" name="style_font_weight" id="style_font_weight" value="">
-		      <input type="button" class="button" id="check_title_alt" value="检测重复" onclick="$.get('?m=content&c=content&a=public_check_title&catid=6&sid='+Math.random()*5, {data:$('#title').val()}, function(data){if(data=='1') {$('#check_title_alt').val('标题重复');$('#check_title_alt').css('background-color','#FFCC66');} else if(data=='0') {$('#check_title_alt').val('标题不重复');$('#check_title_alt').css('background-color','#F8FFE1')}})" style="width:73px;"/>
-		      <img src="<?php echo $this->staticUrl; ?>admin/images/icon/colour.png" width="15" height="16" onclick="colorpicker('title_colorpanel','set_title_color');" style="cursor:hand"/> 
-		      <img src="<?php echo $this->staticUrl; ?>admin/images/icon/bold.png" width="10" height="10" onclick="input_font_bold()" style="cursor:hand"/> 
-		      <span id="title_colorpanel" style="position:absolute;" class="colorpanel"></span>还可输入<B><span id="title_len">80</span></B> 个字符
 	        </td>
           </tr>
 		  <tr>

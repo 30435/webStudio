@@ -144,8 +144,9 @@ abstract class CmsCategory extends Custom_AdminController
 		$this->_initInfo($info['parentid'], $info['modelid'], $info['template'], $info['urlrule']);
 
 		if ($isWrite) {
-			if (!empty($info['bind_domain'])) {
-				$info['bind_domain'] = $info['parentid'] == 0 ? $info['bind_domain'] : '';
+			$info['bind_domain'] = !empty($info['bind_domain']) && $info['parentid'] == 0 ? $info['bind_domain'] : '';
+			if (isset($this->currentInfo)) {
+				$info['url'] = $this->_getUrl($info);
 			}
 		}
 
@@ -153,38 +154,35 @@ abstract class CmsCategory extends Custom_AdminController
 	}
 
 	/**
-	 * Do some operations after adding an info 
+	 * Create a url for a category
 	 *
-	 * @return void
+	 * @param array $info
+	 * @return string
 	 */
-	protected function _afterAdd($info)
+	protected function _getUrl($info)
 	{
-        $catId = $this->currentModel->currentDb->insert_id();
-
-		$tree = new CustomTree($this->categoryInfos);
-		$parentdir = $bindDomain = '';
-		$this->_getParentInfos($info['parentid'], $parentdir, $bindDomain);
-		$data['parentdir'] = $parentdir;
+		$url = '';
 		$ishtml = $info['ishtml'];
-		if ($ishtml) {
-			$data['url'] = empty($bindDomain) ? $this->baseUrl . $parentdir . '.html' : $bindDomain . $parentdir . '.html';
-		} else {
-			$data['url'] = empty($bindDomain) ? $this->baseUrl . 'index/category?catid=' . $catId : $bindDomain . 'category?catid=' . $catId;
+		$parentid = $info['parentid'];
+		$parentDir = $info['catdir'];
+		$bindDomain = $info['bind_domain'];
+		$info['id'] = empty($info['id']) ? $this->currentInfo['id'] : $info['id'];
+
+		while (isset($this->categoryInfos[$parentid])) {
+			$parentDir = $this->categoryInfos[$parentid]['catdir'] . '/' . $parentDir;
+			$bindDomain = $this->categoryInfos[$parentid]['bind_domain'];
+			$parentid = $this->categoryInfos[$parentid]['parentid'];
 		}
 
-		$where = array('id =' => $catId);
-		$this->currentModel->editInfo($data, $where);
-	}
-
-	protected  function _getParentInfos($pid, & $parentdir, & $bindDomain)
-	{
-		if (!isset($this->categoryInfos[$pid])) {
-			return ;
+		$urlPre = empty($bindDomain) ? $this->baseUrl : $bindDomain;
+		
+		if (empty($ishtml)) {
+			$url = empty($bindDomain) ? $urlPre . 'index/category?catid=' . $info['id'] : $urlPre . 'category?catid=' . $info['id'];
 		} else {
-			$parentdir = $this->categoryInfos[$pid]['catdir'] . '/' . $parentdir;
-			$bindDomain = isset($this->categoryInfos[$pid]['bind_domain']) && $this->categoryInfos[$pid]['parentid'] == 0 ? $this->categoryInfos[$pid]['bind_domain'] : '';
+			$urlPre = str_replace('index.php/', '', $urlPre);
+			$url = $urlPre . $parentDir . 'index.html';
 		}
 
-		$ppid = $this->_getParentInfos($this->categoryInfos[$pid]['parentid'], $parentdir, $bindDomain);
+		return $url;
 	}
 }
