@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-13 13:11:28
+-- 生成日期: 2013-09-16 11:04:36
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `sw_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
-  `parentdir` varchar(100) NOT NULL COMMENT '上级目录',
   `image` varchar(100) NOT NULL,
   `parentid` mediumint(9) NOT NULL DEFAULT '0' COMMENT '父栏目ID',
   `modelid` smallint(6) NOT NULL DEFAULT '1' COMMENT '模型ID',
@@ -46,35 +45,44 @@ CREATE TABLE IF NOT EXISTS `sw_category` (
   `ishtml` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示 1不显示 0 显示',
   PRIMARY KEY (`id`),
   KEY `catname` (`catname`,`parentid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- 转存表中的数据 `sw_category`
 --
 
-INSERT INTO `sw_category` (`id`, `catname`, `catdir`, `parentdir`, `image`, `parentid`, `modelid`, `bind_domain`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `urlrule`, `ishtml`) VALUES
-(1, '公司信息', 'ourinfo', '/', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=1', 0, '公司信息相关的栏目', '0', '', '', '', 'biglist_html', 1),
-(2, '关于我们', 'gywm', 'ourinfo/', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=2', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(3, '员工关怀', 'yggh', 'ourinfo/', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=3', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(4, '发展历程', 'fzlc', 'ourinfo/', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=4', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(5, '核心价值', 'hxjz', 'ourinfo/', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=5', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(6, '联系我们', 'lxwm', 'ourinfo/', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=6', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(7, '公司新闻', 'news', 'ourinfo/', '', 1, 2, '', 'http://webgame.ci.com/index/category?catid=7', 0, '', 'list', '', '', '', 'biglist_html', 1),
-(8, '诺瓦奇兵', 'nova', '/', '', 0, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=8', 0, '诺瓦奇兵资讯', 'list_big', '', '', '', 'biglist_html', 1),
-(9, '新闻公告', 'xwgg', 'nova/', '', 8, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=9', 0, '诺瓦新闻', '0', '', '', '', '0', 1),
-(10, '诺瓦宠物', 'nwcw', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=10', 0, '诺瓦宠物', '0', '', '', '', '0', 0),
-(11, '宠物练级', 'cwlj', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=11', 0, '宠物练级', '0', '', '', '', '0', 0),
-(12, '宠物捕捉', 'cwbz', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=12', 0, '宠物捕捉', '0', '', '', '', '0', 0),
-(13, '游戏攻略', 'yxgl', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=13', 0, '游戏攻略', '0', '', '', '', '0', 0),
-(14, '诺瓦问答', 'nwwd', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=14', 0, '诺瓦问答', '0', '', '', '', '0', 0),
-(15, '新手指南', 'xszn', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=15', 0, '新手指南', '0', '', '', '', '0', 0),
-(16, '诺瓦图片', 'nwtp', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=16', 0, '诺瓦图片', '0', '', '', '', '0', 0),
-(17, '精彩视频', 'jcsp', 'nova/', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=17', 0, '精彩视频', '0', '', '', '', '0', 0),
-(18, '知金理念', 'zjln', '/', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=18', 0, '', 'page_service', '', '', '', '0', 1),
-(19, '父母须知', 'fmxz', 'zjln/', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=19', 0, '', 'page_service', '', '', '', '0', 0),
-(20, '儿童健康上网', 'jksw', 'zjln/', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=20', 0, '', 'page_service', '', '', '', '0', 0),
-(21, '绿色宣言', 'lsxy', 'zjln/', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=21', 0, '', 'page_service', '', '', '', '0', 0),
-(22, '服务条款', 'fwtk', 'zjln/', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=22', 0, '', 'page_service', '', '', '', '0', 0);
+INSERT INTO `sw_category` (`id`, `catname`, `catdir`, `image`, `parentid`, `modelid`, `bind_domain`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `urlrule`, `ishtml`) VALUES
+(1, '公司信息', 'ourinfo', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=1', 0, '公司信息相关的栏目', '0', '', '', '', 'biglist_html', 1),
+(2, '关于我们', 'gywm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=2', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
+(3, '员工关怀', 'yggh', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=3', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
+(4, '发展历程', 'fzlc', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=4', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
+(5, '核心价值', 'hxjz', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=5', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
+(6, '联系我们', 'lxwm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=6', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
+(7, '公司新闻', 'news', '', 1, 2, '', 'http://webgame.ci.com/index/category?catid=7', 0, '', 'list', '', '', '', 'biglist_html', 1),
+(8, '诺瓦奇兵', 'nova', '', 0, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=8', 0, '诺瓦奇兵资讯', 'list_big', '', '', '', 'biglist_html', 1),
+(9, '新闻公告', 'xwgg', '', 8, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=9', 0, '诺瓦新闻', '0', '', '', '', '0', 1),
+(10, '诺瓦宠物', 'nwcw', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=10', 0, '诺瓦宠物', '0', '', '', '', '0', 0),
+(11, '宠物练级', 'cwlj', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=11', 0, '宠物练级', '0', '', '', '', '0', 0),
+(12, '宠物捕捉', 'cwbz', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=12', 0, '宠物捕捉', '0', '', '', '', '0', 0),
+(13, '游戏攻略', 'yxgl', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=13', 0, '游戏攻略', '0', '', '', '', '0', 0),
+(14, '诺瓦问答', 'nwwd', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=14', 0, '诺瓦问答', '0', '', '', '', '0', 0),
+(15, '新手指南', 'xszn', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=15', 0, '新手指南', '0', '', '', '', '0', 0),
+(16, '诺瓦图片', 'nwtp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=16', 0, '诺瓦图片', '0', '', '', '', '0', 0),
+(17, '精彩视频', 'jcsp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=17', 0, '精彩视频', '0', '', '', '', '0', 0),
+(18, '知金理念', 'zjln', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=18', 0, '', 'page_service', '', '', '', '0', 1),
+(19, '父母须知', 'fmxz', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=19', 0, '', 'page_service', '', '', '', '0', 0),
+(20, '儿童健康上网', 'jksw', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=20', 0, '', 'page_service', '', '', '', '0', 0),
+(21, '绿色宣言', 'lsxy', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=21', 0, '', 'page_service', '', '', '', '0', 0),
+(22, '服务条款', 'fwtk', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=22', 0, '', 'page_service', '', '', '', '0', 0),
+(23, '赛尔资讯', 'sezx', '', 0, 2, 'http://seer.ci.com/', 'http://webgame.ci.com/.html', 0, '', '0', '', '', '', '0', 1),
+(24, '赛尔新闻', 'sexw', '', 23, 2, '', 'http://seer.ci.com/sezx/.html', 0, '', '0', '', '', '', '0', 1),
+(25, '日日日', 'rrr', '', 24, 2, '', '', 0, '', '0', '', '', '', '0', 0),
+(26, 'test', 'ttt', '', 24, 0, '', '', 0, '', '0', '', '', '', '0', 1),
+(27, '神仙道资讯', 'sxdzx', '', 0, 2, '', '', 0, '', '0', '', '', '', '0', 1),
+(28, '游戏2', 'yx', '', 0, 2, '', '', 0, '', '0', '', '', '', '0', 1),
+(29, '游戏3', 'rrr', '', 0, 2, 'http://yx.ci.com/', 'http://webgame.ci.com/index.html', 0, '', '0', '', '', '', '0', 1),
+(30, 'test', 'ttt', '', 0, 2, 'http://nova.ci.com/', 'http://nova.ci.com/category?catid=30', 0, '', '0', '', '', '', '0', 0),
+(31, 'fff', 'aaaaa', '', 25, 2, '', 'http://seer.ci.com/category?catid=31', 0, '', '0', '', '', '', '0', 0);
 
 -- --------------------------------------------------------
 
@@ -101,7 +109,8 @@ CREATE TABLE IF NOT EXISTS `sw_member_webgame` (
 --
 
 INSERT INTO `sw_member_webgame` (`userid`, `webgame_code`, `server_id`, `username`, `play_num`, `pay_num`, `pay_money`, `firsttime`, `lasttime_login`, `lasttime_pay`, `lasttime`) VALUES
-(1089692, 'shenxd', 1, '1089692', 12, 0, 0, 1378814227, 1378814231, 0, 1378814231);
+(1089692, 'shenxd', 1, '1089692', 12, 0, 0, 1378814227, 1378814231, 0, 1378814231),
+(1193559, 'shenxd', 1, 'aaaaaa', 0, 69, 575, 1379304670, 0, 1379310332, 1379310332);
 
 -- --------------------------------------------------------
 
@@ -133,15 +142,18 @@ CREATE TABLE IF NOT EXISTS `sw_new` (
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
   KEY `catid` (`catid`,`status`,`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- 转存表中的数据 `sw_new`
 --
 
 INSERT INTO `sw_new` (`id`, `catid`, `title`, `thumb`, `keywords`, `description`, `url`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `position`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`) VALUES
-(3, 7, 'uuuuuuuuuu', 'http://upload.ci.com/passport2013/0911/20130911165102242.jpg', '0是大法官', '大概发色发顺丰', '', 0, 1, 0, 'wangcan', 'diy', 'index', '<p>\r\n	阿萨德发生发的</p>\r\n', 'show', 1378886555, 1378889473, 0, ''),
-(2, 7, '方法', '0', 'have keyword', '', '', 0, 1, 0, 'wangcan', '0', '', '<p>\r\n	ggggg</p>\r\n', '0', 1378867357, 1378886767, 0, '');
+(3, 7, 'uuuuuuuuuu', 'http://upload.ci.com/passport2013/0911/20130911165102242.jpg', '0是大法官', '大概发色发顺丰', 'http://webgame.ci.com/ourinfo/news/content_3.html', 0, 1, 0, 'wangcan', 'diy', 'index', '<p>\r\n	阿萨德发生发的</p>\r\n', 'show', 1378886555, 1379321493, 0, ''),
+(2, 7, '方法', '0', 'have keyword', '', 'http://webgame.ci.com/ourinfo/news/content_2.html', 0, 1, 0, 'wangcan', '0', '0', '<p>\r\n	ggggg</p>\r\n', '0', 1378867357, 1379321504, 0, ''),
+(4, 14, '他也人体宴', '', '', '', 'http://nova.ci.com/show?id=14_4', 0, 1, 0, 'wangcan', '0', '0', '<p>\r\n	温热台湾儿童舞iiiuuu</p>\r\n', '0', 1379320975, 1379321465, 0, ''),
+(5, 14, 'asdASDad', '', '', '', 'http://nova.ci.com/show?id=5', 0, 1, 0, 'wangcan', '0', '0', '<p>\r\n	ADadAD</p>\r\n', '0', 1379321076, 1379321076, 0, ''),
+(6, 13, 'qwerqwer', '', '', '', 'http://nova.ci.com/show?id=13_6', 0, 1, 0, 'wangcan', '0', '0', '<p>\r\n	&nbsp;qwerqwerqwer</p>\r\n', '0', 1379321521, 1379321521, 0, '');
 
 -- --------------------------------------------------------
 
@@ -202,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `sw_record` (
   PRIMARY KEY (`id`),
   KEY `day_active` (`day`,`active_day`),
   KEY `active` (`active_day`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=89 ;
 
 --
 -- 转存表中的数据 `sw_record`
@@ -223,7 +235,80 @@ INSERT INTO `sw_record` (`id`, `webgame_code`, `serverid`, `userid`, `username`,
 (12, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
 (13, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
 (14, 'shenxd', 1, 1089692, '1089692', '', 1378814230, '20130910', 13395, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
-(15, 'shenxd', 1, 1089692, '1089692', '', 1378814231, '20130910', 13396, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0');
+(15, 'shenxd', 1, 1089692, '1089692', '', 1378814231, '20130910', 13396, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
+(16, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304637, '20130916', 440808, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(17, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304638, '20130916', 440809, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(18, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304638, '20130916', 440809, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(19, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304670, '20130916', 440841, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(20, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304671, '20130916', 440842, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(21, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304671, '20130916', 440842, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(22, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304671, '20130916', 440842, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(23, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304672, '20130916', 440843, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(24, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304672, '20130916', 440843, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(25, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304672, '20130916', 440843, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(26, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304672, '20130916', 440843, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(27, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304699, '20130916', 440870, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(28, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304856, '20130916', 441027, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(29, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304930, '20130916', 441101, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(30, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379304973, '20130916', 441144, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(31, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305007, '20130916', 441178, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(32, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305084, '20130916', 441255, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(33, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305104, '20130916', 441275, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(34, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305105, '20130916', 441276, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(35, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305106, '20130916', 441277, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(36, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305106, '20130916', 441277, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(37, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305106, '20130916', 441277, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(38, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(39, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(40, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(41, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(42, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(43, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305107, '20130916', 441278, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(44, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(45, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(46, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(47, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(48, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(49, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(50, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(51, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(52, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(53, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(54, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(55, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(56, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(57, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(58, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(59, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305108, '20130916', 441279, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(60, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(61, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(62, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(63, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(64, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(65, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(66, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(67, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(68, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(69, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(70, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(71, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(72, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(73, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(74, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(75, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(76, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(77, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(78, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(79, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(80, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305109, '20130916', 441280, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(81, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305118, '20130916', 441289, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(82, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305119, '20130916', 441290, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(83, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305119, '20130916', 441290, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(84, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305119, '20130916', 441290, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(85, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305120, '20130916', 441291, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(86, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305120, '20130916', 441291, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(87, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379305165, '20130916', 441336, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1'),
+(88, 'shenxd', 1, 1193559, 'aaaaaa', '', 1379310332, '20130916', 446503, 6, 432000, 6, 0, 0, 0, 0, 0, 0, '1');
 
 -- --------------------------------------------------------
 
