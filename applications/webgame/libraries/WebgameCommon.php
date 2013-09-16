@@ -10,19 +10,20 @@ class WebgameCommon
 	 */
 	public function __construct($params)
 	{
-		$this->userid = (isset($params['get_userid']) && !empty($params['get_userid'])) ? $params['get_userid'] : $params['userid'];
-		$this->username = (isset($params['get_username']) && !empty($params['get_username'])) ? $params['get_username'] : $params['username'];
+		$this->userid = $params['userInfo']['userid'];
+		$this->username = $params['userInfo']['username'];
 		if (empty($this->username)) {
 			return false;
 		}
 
 		$this->webgameInfo = $params['webgameInfo'];
 		$this->serverInfo = $params['serverInfo'];
-		if (!is_array($this->webgameInfo) || empty($this->webgameInfo) || !is_array($this->serverInfo) || empty($this->serverInfo)) {
-
+		if (empty($this->webgameInfo)) {
 			return false;
 		}
-
+		if ($params['payType'] == 'towebgame' && empty($params['serverInfo'])) {
+			return false;
+		}
 
 		$configFile = dirname(__FILE__) . '/config/' . strtolower($this->webgameInfo['code']) . '.php';
 
@@ -32,14 +33,7 @@ class WebgameCommon
 		}
 		$this->params = $params;
 		$this->time = time();
-
-
-		//新手卡相关
-		//$this->total_num=3000; //每服新手卡总数
-		$this->type_limit=false; //是否限制卡的类型
-		$this->is_import=false; // 是否是导入的类型
-		$this->server_limit=true; //是否限服务器
-		$this->card_types= array('a'=>'新手卡');
+		//var_dump($this->params);
 	}
 
 	/**
@@ -63,38 +57,11 @@ class WebgameCommon
 	 */
 	public function payGame()
 	{
-		$payIp = trim($this->serverInfo['enter_pay'], '/');
+		$payIp = trim($this->configInfo['enter_pay'], '/');
 		$payKey = empty($this->configInfo['isCommon']) ? $this->configInfo[$this->serverInfo['id']]['keyPay'] : $this->configInfo['commonKeyPay'];
 
-		$money = $this->params['money'];
-		$orderId = $this->params['orderid'];
-		if (empty($money) || empty($orderId)) {
-			return false;
-		}
-
-		$payResult = $this->_payGame($payIp, $payKey, $money, $orderId);
+		$payResult = $this->_payGame($payIp, $payKey);
 		return $payResult;
-	}
-
-	/*******************************************新手卡相关***************************************/
-	/**
-	 * 生成新手卡
-	 *
-	 * @return string sign
-	 */
-	public function generate_card() {
-		$sign = $this->userid.$this->serverInfo['id'];
-		return $sign;
-	}
-
-	/**
-	 * 新手卡类型
-	 *
-	 * @return array $type
-	 */
-	public function get_type(){
-		$self_type=array();
-		return array_merge($this->card_types,$self_type);
 	}
 
 	/**

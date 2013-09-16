@@ -13,13 +13,6 @@ class Shenxd extends WebgameCommon
 	public function __construct($params)
 	{
 		parent::__construct($params);
-
-
-		//新手卡相关
-		//$this->total_num=3000; //每服总数
-		$this->server_limit=true; //是否限服务器
-
-		//$this->username = urlencode($this->username);
 	}
 
 	/**
@@ -43,15 +36,16 @@ class Shenxd extends WebgameCommon
 	 *
 	 * @param unknown_type $orderInfo
 	 */
-	protected function _payGame($payIp, $payKey, $money, $orderId)
+	protected function _payGame($payIp, $payKey)
 	{
-		$gold = $money * $this->webgameInfo['coin_rate'];
-		$domain = $this->serverInfo['extra_param'];
-		$signStr = urlencode($this->username) . '_' . $gold . '_' . $orderId . '_' . $domain . '_' . $payKey;
+		$gold = $this->params['money'] * $this->webgameInfo['coin_rate'];
+		$domain = $this->serverInfo['server_mark'];
+		$signStr = urlencode($this->username) . '_' . $gold . '_' . $this->params['orderId'] . '_' . $domain . '_' . $payKey;
 		$sign = strtolower(md5($signStr));
 
-		$payUrl = $payIp . '?user=' . urlencode($this->username) . '&gold=' . $gold . '&order=' . $orderId
+		$payUrl = $payIp . '?user=' . urlencode($this->username) . '&gold=' . $gold . '&order=' . $this->params['orderId']
 			. '&domain=' . $domain . '&sign=' . $sign;
+
 		$payResult = file_get_contents($payUrl);
 		$payResult = $payResult == 1 ? true : false;
 

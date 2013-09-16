@@ -32,7 +32,7 @@ $(document).ready(function(){
 		dataType : "jsonp",
 		async : false,
 		jsonp:"callback",
-		url : passportUrl + 'index/getUserid/',
+		url : passportUrl + 'uwebgame/getUserid/',
 		success : function(data){
 			var userid = parseInt(data.userid);
 			if (userid > 1) {
@@ -124,7 +124,7 @@ $(document).ready(function(){
 						<label class="lbl">  充值的服务器：</label>
 						<div class="txt_wrap">
 							<select class="slt" name="serverId" id="serverId" style="display: inline-block;">
-								<option selected="selected" value="">请选择服务器</option>
+								<option value="">请选择服务器</option>
 								<?php if (isset($this->serverInfos) && is_array($this->serverInfos)) { foreach ($this->serverInfos as $serverInfo) { ?>
 								<option title="<?php echo $serverInfo['name']; ?>" value="<?php echo $serverInfo['id']; ?>"><?php echo $serverInfo['name']; ?></option>
 								<?php } } ?>
