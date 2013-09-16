@@ -337,6 +337,22 @@ class frontgame extends Custom_Controller
 		);
 		$this->_loadModel('pay', 'payModel');
 		$this->payModel->addInfo($data);
+
+		if ($params['payType'] == 'topaymonth') {
+			$data = array(
+				'userid' => $params['userInfo']['userid'],
+				'paymonth_id' => $parms['paymonthInfo']['id'],
+				'orderid' => $params['orderId'],
+				'orderid_plat' => isset($params['accountInfo']['orderid']) ? $params['accountInfo']['orderid'] : '',
+				'username' => $params['userInfo']['username'],
+				'money' => $params['money'],
+				'month' => $params['paymonthInfo']['month'],
+				'webgame_code' => $params['webgameInfo']['code'],
+				'pay_time' => $this->time,
+				'day' => date('Ymd', $this->time),
+			);
+			$this->payModel->addInfo($data, 'pay_paymonth');
+		}
 		
 		$moneyInfo = $this->_getMoneyInfo($params['userInfo']['username']);
 		$data = array(
