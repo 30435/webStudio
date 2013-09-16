@@ -1,16 +1,7 @@
 <?php echo $this->load->view('header'); ?>
 <div class="container cf">
     <div class="main account_main">
-        <div class="main_nav account_nav">
-            <ul>
-    	        <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值中心</span></a></li>
-                <li class="li_lv_1 cur"><a href="<?php echo $this->baseUrl; ?>index/myaccount"><span>交易明细查询</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypaypwd"><span>支付密码管理</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypaymonth"><span>我开通的服务</span></a></li>
-            </ul>
-        </div>
-
-
+        <?php $this->load->view('mypay_left'); ?>
         <div class="main_cont">
             <div class="main_title"><p><span>我的充值消费记录</span></p></div>
             <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
@@ -37,10 +28,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="6">暂无充值记录</td></tr>
+					<?php if (empty($this->infos)) { ?>
+						<tr><td colspan="6">暂无充值记录</td></tr>
+					<?php } else { foreach ($this->infos as $info) { ?>
+                        <tr>
+                            <td width="20%"><?php echo date('Y-m-d H:i:s', $info['account_time']); ?></td>
+                            <td width="15%"><?php echo $info['orderid']; ?></td>
+                            <td width="20%"><?php echo $info['money']; ?>（米币）</td>
+                            <td width="25%"><?php echo $info['get_username']; ?></td>
+                            <td width="10%"><?php echo $info['get_username']; ?></td>
+                            <td width="10%"><?php echo $info['get_username']; ?></td>
+                        </tr>
+					<?php } } ?>
                     </tbody>
                 </table>
-                <div style="text-align:center;margin-top:10px;font-size:14px">当前 1/0  首页 上一页 下一页 尾页 </div>
+                <div style="text-align:center;margin-top:10px;font-size:14px"><?php echo $this->pageStr; ?></div>
             </div>      
         </div>
     </div>

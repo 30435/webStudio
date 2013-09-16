@@ -242,7 +242,7 @@ class IndexBase extends Custom_Controller
 		
 		$this->form_validation->set_rules('password', 'passport', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == false) {
-			$this->load->view('editpwd');
+			$this->load->view($this->prefix . '/editpwd');
 		} else {
 			$oldpassword = $this->input->post('oldpassword');
 			$password = $this->input->post('password');

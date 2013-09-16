@@ -40,7 +40,7 @@ var payUrl = "<?php echo $this->baseUrl; ?>";
 			<li <?php if ($this->method == 'index') echo 'class="cur"' ?>><a href="/"><span>诺币充值</span></a></li>
 			<li <?php if (in_array($this->method, array('topaymonth', 'paymonth'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/paymonth"><span>游戏包月</span></a></li>
 			<li <?php if (in_array($this->method, array('towebgame', 'exchange'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/exchange"><span>游戏币兑换</span></a></li>
-			<li <?php if (in_array($this->method, array('myaccount', 'mypay', 'mypaymonth', 'mypaypwd'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值</span></a></li>
+			<li <?php if (in_array($this->method, array('myaccount', 'mypay', 'mypaymonth', 'mypayinfo'))) echo 'class="cur"' ?>><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值</span></a></li>
 		</ul>
 	</div>
 </div>

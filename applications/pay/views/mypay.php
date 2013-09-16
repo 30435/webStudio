@@ -1,25 +1,50 @@
 <?php echo $this->load->view('header'); ?>
 <div class="container cf">
     <div class="main account_main">
-        <div class="main_nav account_nav">
-            <ul>
-    	        <li class="li_lv_1 cur"><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值中心</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/myaccount"><span>交易明细查询</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypaypwd"><span>支付密码管理</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypaymonth"><span>我开通的服务</span></a></li>
-            </ul>
-        </div>
-		<div class="main_cont">
-            <div class="main_title"><p><span>我的充值中心</span></p></div>
-            <div class="form">
-            <form>
-                <ul class="form_list">
-                    <li class="form_list_li"><label class="lbl">帐号：</label><div class="txt_wrap"><b class="font_14"><?php echo $this->loginedUserInfo['username']; ?></b></div></li>
-                    <li class="form_list_li"><label class="lbl">帐户余额：</label><div class="txt_wrap"><b class="font_14"><?php if (isset($this->moneyInfo['money'])) echo $this->moneyInfo['money']; ?></b>&nbsp;&nbsp;诺币</div></li>
-                    <li class="form_list_li"><label class="lbl">已开通服务：</label><div class="service service_small"><ul class="service_list cf"><li>暂无开通的服务</li></ul></div></li>
-                    <li class="form_list_li"><label class="lbl">米币帐户支付密码：</label><p>未设置  &nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->baseUrl; ?>index/mypaypwd" class="link_create">创建</a></p></li>
-                </ul>
+        <?php $this->load->view('mypay_left'); ?>
+        <div class="main_cont">
+            <div class="main_title"><p><span>我的充值消费记录</span></p></div>
+            <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
+                <input type="hidden" value="4" id="is_query" name="is_query">
+                <input type="hidden" value="4" id="time_quantum" name="time_quantum">
+                <div class="search_data cf">
+					<span>查询日期</span>
+					<div class="ui_date"><input type="text" id="start_date" value="2013-08-05" autocomplete="off" name="start_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+					<span>至</span>
+					<div class="ui_date"><input type="text" id="end_date" value="2013-09-05" autocomplete="off" name="end_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+					<a class="ui_btn_small" id="searchDeal" href="javascript:"><span>查询</span></a>
+                </div>
             </form>
+            <div class="ui_table_wrap">
+                <table border="1" class="ui_table">
+                    <thead>
+                        <tr>
+                            <th width="20%">日期</th>
+                            <th width="15%">消费米米号</th>
+                            <th width="20%">充值消费（米币）</th>
+                            <th width="25%">明细</th>
+                            <th width="10%">数量</th>
+                            <th width="10%">帐户余额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+					<?php if (empty($this->infos)) { ?>
+						<tr><td colspan="6">暂无充值记录</td></tr>
+					<?php } else { foreach ($this->infos as $info) { ?>
+                        <tr>
+                            <td width="20%"><?php echo date('Y-m-d H:i:s', $info['pay_time']); ?></td>
+                            <td width="15%"><?php echo $info['orderid']; ?></td>
+                            <td width="20%"><?php echo $info['money']; ?>（米币）</td>
+                            <td width="25%"><?php echo $info['username']; ?></td>
+                            <td width="10%"><?php echo $info['username']; ?></td>
+                            <td width="10%"><?php echo $info['username']; ?></td>
+                        </tr>
+					<?php } } ?>
+
+                    </tbody>
+                </table>
+                <div style="text-align:center;margin-top:10px;font-size:14px"><?php echo $this->pageStr; ?></div>
+            </div>      
         </div>
     </div>
 </div>

@@ -1,14 +1,7 @@
 <?php echo $this->load->view('header'); ?>
 <div class="container cf">
     <div class="main account_main">
-        <div class="main_nav account_nav">
-            <ul>
-    	        <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypay"><span>我的充值中心</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/myaccount"><span>交易明细查询</span></a></li>
-                <li class="li_lv_1"><a href="<?php echo $this->baseUrl; ?>index/mypaypwd"><span>支付密码管理</span></a></li>
-                <li class="li_lv_1 cur"><a href="<?php echo $this->baseUrl; ?>index/mypaymonth"><span>我开通的服务</span></a></li>
-            </ul>
-        </div>
+		<?php $this->load->view('mypay_left'); ?>
         <div class="main_cont">
             <div class="main_title"><p><span>我已经开通的服务</span></p><a class="link" href="/help/gotopage?page=_p19#problem_list_19">如何开通自动续费？</a></div>
             <div class="service service_small"><ul class="service_list C_serviceList cf"></ul></div>

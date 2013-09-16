@@ -119,8 +119,34 @@ class Index extends Custom_Controller
 	 * Month pay
 	 *
 	 */
+	public function mypayinfo()
+	{
+		$this->load->view('mypayinfo');
+	}
+
+	/**
+	 * Month pay
+	 *
+	 */
 	public function mypay()
 	{
+		$this->load->library('pagination');
+
+		$page = intval($this->input->get_post('page'));
+		$currentPage = max(1, $page);
+		$paginationInfos = $this->_paginationConfig();
+		$pageSize = empty($paginationInfos['per_page']) ? 15 : $paginationInfos['per_page'];
+
+		$this->_loadModel('pay', 'payModel');
+		$result = $this->payModel->getInfos('', array(), array(), $currentPage, $pageSize);
+		$this->infos = $result['infos'];
+
+		$paginationInfos['base_url'] = $this->baseUrl . 'index/mypay' . '?';
+		$paginationInfos['total_rows'] = $result['num'];
+		$this->pagination->initialize($paginationInfos);
+		$this->pageStr = '<a>' . $result['num'] . '条</a>   <a>第<b>' . $currentPage . '</b>页/总' . ceil($result['num'] / $pageSize) . '页</a>    ';
+		$this->pageStr .= $this->pagination->create_links();
+
 		$this->load->view('mypay');
 	}
 
@@ -130,16 +156,24 @@ class Index extends Custom_Controller
 	 */
 	public function myaccount()
 	{
-		$this->load->view('myaccount');
-	}
+		$this->load->library('pagination');
 
-	/**
-	 * Month pay
-	 *
-	 */
-	public function mypaypwd()
-	{
-		$this->load->view('mypaypwd');
+		$page = intval($this->input->get_post('page'));
+		$currentPage = max(1, $page);
+		$paginationInfos = $this->_paginationConfig();
+		$pageSize = empty($paginationInfos['per_page']) ? 15 : $paginationInfos['per_page'];
+
+		$this->_loadModel('pay', 'accountModel');
+		$result = $this->accountModel->getInfos('', array(), array(), $currentPage, $pageSize);
+		$this->infos = $result['infos'];
+
+		$paginationInfos['base_url'] = $this->baseUrl . 'index/mypay' . '?';
+		$paginationInfos['total_rows'] = $result['num'];
+		$this->pagination->initialize($paginationInfos);
+		$this->pageStr = '<a>' . $result['num'] . '条</a>   <a>第<b>' . $currentPage . '</b>页/总' . ceil($result['num'] / $pageSize) . '页</a>    ';
+		$this->pageStr .= $this->pagination->create_links();
+
+		$this->load->view('myaccount');
 	}
 
 	/**
@@ -149,5 +183,26 @@ class Index extends Custom_Controller
 	public function mypaymonth()
 	{
 		$this->load->view('mypaymonth');
+	}
+	
+	/**
+	 * The pagination config infos
+	 *
+	 * @return array config infos
+	 */
+	protected function _paginationConfig()
+	{
+		$config['per_page'] = 15; // Max number of items you want shown per page
+		$config['num_links'] =  5; // Number of "digit" links to show before/after the currently viewed page
+		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
+		$config['next_link'] = '&gt;&gt;';
+		$config['prev_link'] = '&lt;&lt;';
+		$config['uri_segment'] = 4;
+		$config['cur_tag_open'] = '<span>';
+		$config['cur_tag_close'] = '</span>';
+		$config['page_query_string'] = TRUE;
+		$config['query_string_segment'] = 'page';
+	
+		return $config;
 	}
 }
