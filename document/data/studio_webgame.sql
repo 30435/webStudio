@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-16 11:04:36
+-- 生成日期: 2013-09-17 14:19:04
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -41,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `sw_category` (
   `meta_title` varchar(100) NOT NULL,
   `meta_keywords` varchar(200) NOT NULL COMMENT '栏目关键字',
   `meta_description` varchar(300) NOT NULL COMMENT '栏目描述',
-  `urlrule` varchar(20) NOT NULL COMMENT '栏目URL',
   `ishtml` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示 1不显示 0 显示',
   PRIMARY KEY (`id`),
   KEY `catname` (`catname`,`parentid`)
@@ -51,38 +50,38 @@ CREATE TABLE IF NOT EXISTS `sw_category` (
 -- 转存表中的数据 `sw_category`
 --
 
-INSERT INTO `sw_category` (`id`, `catname`, `catdir`, `image`, `parentid`, `modelid`, `bind_domain`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `urlrule`, `ishtml`) VALUES
-(1, '公司信息', 'ourinfo', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=1', 0, '公司信息相关的栏目', '0', '', '', '', 'biglist_html', 1),
-(2, '关于我们', 'gywm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=2', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(3, '员工关怀', 'yggh', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=3', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(4, '发展历程', 'fzlc', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=4', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(5, '核心价值', 'hxjz', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=5', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(6, '联系我们', 'lxwm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=6', 0, '', 'page_aboutus', '', '', '', 'biglist_html', 1),
-(7, '公司新闻', 'news', '', 1, 2, '', 'http://webgame.ci.com/index/category?catid=7', 0, '', 'list', '', '', '', 'biglist_html', 1),
-(8, '诺瓦奇兵', 'nova', '', 0, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=8', 0, '诺瓦奇兵资讯', 'list_big', '', '', '', 'biglist_html', 1),
-(9, '新闻公告', 'xwgg', '', 8, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=9', 0, '诺瓦新闻', '0', '', '', '', '0', 1),
-(10, '诺瓦宠物', 'nwcw', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=10', 0, '诺瓦宠物', '0', '', '', '', '0', 0),
-(11, '宠物练级', 'cwlj', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=11', 0, '宠物练级', '0', '', '', '', '0', 0),
-(12, '宠物捕捉', 'cwbz', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=12', 0, '宠物捕捉', '0', '', '', '', '0', 0),
-(13, '游戏攻略', 'yxgl', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=13', 0, '游戏攻略', '0', '', '', '', '0', 0),
-(14, '诺瓦问答', 'nwwd', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=14', 0, '诺瓦问答', '0', '', '', '', '0', 0),
-(15, '新手指南', 'xszn', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=15', 0, '新手指南', '0', '', '', '', '0', 0),
-(16, '诺瓦图片', 'nwtp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=16', 0, '诺瓦图片', '0', '', '', '', '0', 0),
-(17, '精彩视频', 'jcsp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=17', 0, '精彩视频', '0', '', '', '', '0', 0),
-(18, '知金理念', 'zjln', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=18', 0, '', 'page_service', '', '', '', '0', 1),
-(19, '父母须知', 'fmxz', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=19', 0, '', 'page_service', '', '', '', '0', 0),
-(20, '儿童健康上网', 'jksw', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=20', 0, '', 'page_service', '', '', '', '0', 0),
-(21, '绿色宣言', 'lsxy', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=21', 0, '', 'page_service', '', '', '', '0', 0),
-(22, '服务条款', 'fwtk', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=22', 0, '', 'page_service', '', '', '', '0', 0),
-(23, '赛尔资讯', 'sezx', '', 0, 2, 'http://seer.ci.com/', 'http://webgame.ci.com/.html', 0, '', '0', '', '', '', '0', 1),
-(24, '赛尔新闻', 'sexw', '', 23, 2, '', 'http://seer.ci.com/sezx/.html', 0, '', '0', '', '', '', '0', 1),
-(25, '日日日', 'rrr', '', 24, 2, '', '', 0, '', '0', '', '', '', '0', 0),
-(26, 'test', 'ttt', '', 24, 0, '', '', 0, '', '0', '', '', '', '0', 1),
-(27, '神仙道资讯', 'sxdzx', '', 0, 2, '', '', 0, '', '0', '', '', '', '0', 1),
-(28, '游戏2', 'yx', '', 0, 2, '', '', 0, '', '0', '', '', '', '0', 1),
-(29, '游戏3', 'rrr', '', 0, 2, 'http://yx.ci.com/', 'http://webgame.ci.com/index.html', 0, '', '0', '', '', '', '0', 1),
-(30, 'test', 'ttt', '', 0, 2, 'http://nova.ci.com/', 'http://nova.ci.com/category?catid=30', 0, '', '0', '', '', '', '0', 0),
-(31, 'fff', 'aaaaa', '', 25, 2, '', 'http://seer.ci.com/category?catid=31', 0, '', '0', '', '', '', '0', 0);
+INSERT INTO `sw_category` (`id`, `catname`, `catdir`, `image`, `parentid`, `modelid`, `bind_domain`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `ishtml`) VALUES
+(1, '公司信息', 'ourinfo', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=1', 0, '公司信息相关的栏目', '0', '', '', '', 1),
+(2, '关于我们', 'gywm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=2', 0, '', 'page_aboutus', '', '', '', 1),
+(3, '员工关怀', 'yggh', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=3', 0, '', 'page_aboutus', '', '', '', 1),
+(4, '发展历程', 'fzlc', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=4', 0, '', 'page_aboutus', '', '', '', 1),
+(5, '核心价值', 'hxjz', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=5', 0, '', 'page_aboutus', '', '', '', 1),
+(6, '联系我们', 'lxwm', '', 1, 1, '', 'http://webgame.ci.com/index/category?catid=6', 0, '', 'page_aboutus', '', '', '', 1),
+(7, '公司新闻', 'news', '', 1, 2, '', 'http://webgame.ci.com/index/category?catid=7', 0, '', 'list', '', '', '', 1),
+(8, '诺瓦奇兵', 'nova', '', 0, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=8', 0, '诺瓦奇兵资讯', 'list_big', '', '', '', 1),
+(9, '新闻公告', 'xwgg', '', 8, 2, 'http://nova.ci.com/', 'http://webgame.ci.com/index/category?catid=9', 0, '诺瓦新闻', '0', '', '', '', 1),
+(10, '诺瓦宠物', 'nwcw', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=10', 0, '诺瓦宠物', '0', '', '', '', 0),
+(11, '宠物练级', 'cwlj', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=11', 0, '宠物练级', '0', '', '', '', 0),
+(12, '宠物捕捉', 'cwbz', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=12', 0, '宠物捕捉', '0', '', '', '', 0),
+(13, '游戏攻略', 'yxgl', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=13', 0, '游戏攻略', '0', '', '', '', 0),
+(14, '诺瓦问答', 'nwwd', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=14', 0, '诺瓦问答', '0', '', '', '', 0),
+(15, '新手指南', 'xszn', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=15', 0, '新手指南', '0', '', '', '', 0),
+(16, '诺瓦图片', 'nwtp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=16', 0, '诺瓦图片', '0', '', '', '', 0),
+(17, '精彩视频', 'jcsp', '', 8, 2, '', 'http://webgame.ci.com/index/category?catid=17', 0, '精彩视频', '0', '', '', '', 0),
+(18, '知金理念', 'zjln', '', 0, 1, '', 'http://webgame.ci.com/index/category?catid=18', 0, '', 'page_service', '', '', '', 1),
+(19, '父母须知', 'fmxz', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=19', 0, '', 'page_service', '', '', '', 0),
+(20, '儿童健康上网', 'jksw', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=20', 0, '', 'page_service', '', '', '', 0),
+(21, '绿色宣言', 'lsxy', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=21', 0, '', 'page_service', '', '', '', 0),
+(22, '服务条款', 'fwtk', '', 18, 1, '', 'http://webgame.ci.com/index/category?catid=22', 0, '', 'page_service', '', '', '', 0),
+(23, '赛尔资讯', 'sezx', '', 0, 2, 'http://seer.ci.com/', 'http://webgame.ci.com/.html', 0, '', '0', '', '', '', 1),
+(24, '赛尔新闻', 'sexw', '', 23, 2, '', 'http://seer.ci.com/sezx/.html', 0, '', '0', '', '', '', 1),
+(25, '日日日', 'rrr', '', 24, 2, '', '', 0, '', '0', '', '', '', 0),
+(26, 'test', 'ttt', '', 24, 0, '', '', 0, '', '0', '', '', '', 1),
+(27, '神仙道资讯', 'sxdzx', '', 0, 2, '', '', 0, '', '0', '', '', '', 1),
+(28, '游戏2', 'yx', '', 0, 2, '', '', 0, '', '0', '', '', '', 1),
+(29, '游戏3', 'rrr', '', 0, 2, 'http://yx.ci.com/', 'http://webgame.ci.com/index.html', 0, '', '0', '', '', '', 1),
+(30, 'test', 'ttt', '', 0, 2, 'http://nova.ci.com/', 'http://nova.ci.com/category?catid=30', 0, '', '0', '', '', '', 0),
+(31, 'fff', 'aaaaa', '', 25, 2, '', 'http://seer.ci.com/category?catid=31', 0, '', '0', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -194,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `sw_picture` (
 CREATE TABLE IF NOT EXISTS `sw_record` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '玩游戏记录ID',
   `webgame_code` char(10) NOT NULL COMMENT '游戏代码',
-  `serverid` smallint(5) unsigned NOT NULL COMMENT '网游服务器ID',
+  `server_id` smallint(5) unsigned NOT NULL COMMENT '网游服务器ID',
   `userid` int(8) NOT NULL COMMENT '用户ID',
   `username` char(32) NOT NULL,
   `channel_code` varchar(64) NOT NULL,
@@ -210,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `sw_record` (
   `seven_pay_mark` tinyint(1) NOT NULL,
   `ten_pay_mark` tinyint(1) NOT NULL,
   `active_vday` int(8) unsigned NOT NULL,
-  `record_type` enum('1','0') NOT NULL COMMENT '记录类型，0：进入游戏，1：为游戏充值',
+  `type` enum('1','0') NOT NULL COMMENT '记录类型，0：进入游戏，1：为游戏充值',
   PRIMARY KEY (`id`),
   KEY `day_active` (`day`,`active_day`),
   KEY `active` (`active_day`)
@@ -220,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `sw_record` (
 -- 转存表中的数据 `sw_record`
 --
 
-INSERT INTO `sw_record` (`id`, `webgame_code`, `serverid`, `userid`, `username`, `channel_code`, `inputtime`, `day`, `active_time`, `active_day`, `active_nat_time`, `active_nat_day`, `three_mark`, `seven_mark`, `ten_mark`, `seven_pay_mark`, `ten_pay_mark`, `active_vday`, `record_type`) VALUES
+INSERT INTO `sw_record` (`id`, `webgame_code`, `server_id`, `userid`, `username`, `channel_code`, `inputtime`, `day`, `active_time`, `active_day`, `active_nat_time`, `active_nat_day`, `three_mark`, `seven_mark`, `ten_mark`, `seven_pay_mark`, `ten_pay_mark`, `active_vday`, `type`) VALUES
 (1, 'shenxd', 1, 1089692, '1089692', '', 1378814000, '20130910', 13165, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
 (2, 'shenxd', 1, 1089692, '1089692', '', 1378814027, '20130910', 13192, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
 (3, 'shenxd', 1, 1089692, '1089692', '', 1378814145, '20130910', 13310, 1, 0, 1, 1, 1, 1, 0, 0, 0, '0'),
@@ -322,7 +321,7 @@ CREATE TABLE IF NOT EXISTS `sw_server` (
   `name` varchar(50) NOT NULL COMMENT '游戏服务器名称',
   `listorder` smallint(5) unsigned NOT NULL COMMENT '游戏服务器排序',
   `ispay` enum('1','0') NOT NULL COMMENT '是否开启游戏充值，0：开启，1：不开启',
-  `server_status` tinyint(1) NOT NULL COMMENT '游戏服务器状态',
+  `status` tinyint(1) NOT NULL COMMENT '游戏服务器状态',
   `time_start` int(10) unsigned NOT NULL COMMENT '开服时间',
   `server_mark` varchar(40) NOT NULL COMMENT '服务器标识',
   `start_maintain` int(10) NOT NULL COMMENT '维护开始时间',
@@ -335,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `sw_server` (
 -- 转存表中的数据 `sw_server`
 --
 
-INSERT INTO `sw_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `server_status`, `time_start`, `server_mark`, `start_maintain`, `end_maintain`, `url_maintain`) VALUES
+INSERT INTO `sw_server` (`id`, `webgame_code`, `name`, `listorder`, `ispay`, `status`, `time_start`, `server_mark`, `start_maintain`, `end_maintain`, `url_maintain`) VALUES
 (1, 'shenxd', '神仙道1服', 1, '1', 1, 0, '3', 0, 0, '');
 
 -- --------------------------------------------------------
@@ -394,8 +393,8 @@ CREATE TABLE IF NOT EXISTS `sw_webgame` (
   `coin_rate` smallint(5) unsigned NOT NULL COMMENT '游戏币兑换比率',
   `listorder` smallint(5) unsigned NOT NULL COMMENT '游戏排序',
   `ispay` enum('1','0') NOT NULL COMMENT '是否开启游戏充值，1：开启，0：不开启',
-  `webgame_type` tinyint(4) NOT NULL COMMENT '游戏类型',
-  `webgame_status` enum('0','1','2','3','4') NOT NULL DEFAULT '1' COMMENT '游戏状态',
+  `type` tinyint(4) NOT NULL COMMENT '游戏类型',
+  `status` enum('0','1','2','3','4') NOT NULL DEFAULT '1' COMMENT '游戏状态',
   `url_maintain` varchar(200) DEFAULT '1' COMMENT '维护跳转地址',
   `start_maintain` int(10) NOT NULL COMMENT '维护开始时间',
   `end_maintain` int(10) NOT NULL COMMENT '维护结束时间',
@@ -407,7 +406,7 @@ CREATE TABLE IF NOT EXISTS `sw_webgame` (
 -- 转存表中的数据 `sw_webgame`
 --
 
-INSERT INTO `sw_webgame` (`id`, `code`, `name`, `description`, `brief`, `pic_small`, `pic_middle`, `pic_big`, `url_home`, `url_server`, `url_bbs`, `coin_name`, `coin_unit`, `coin_rate`, `listorder`, `ispay`, `webgame_type`, `webgame_status`, `url_maintain`, `start_maintain`, `end_maintain`) VALUES
+INSERT INTO `sw_webgame` (`id`, `code`, `name`, `description`, `brief`, `pic_small`, `pic_middle`, `pic_big`, `url_home`, `url_server`, `url_bbs`, `coin_name`, `coin_unit`, `coin_rate`, `listorder`, `ispay`, `type`, `status`, `url_maintain`, `start_maintain`, `end_maintain`) VALUES
 (1, 'nova', '诺瓦奇兵', '知金教育倾情奉献，最好的儿童网游，寓教于游。', NULL, 'http://upload.ci.com/passport2013/0910/20130910141912626.jpg', 'http://upload.ci.com/passport2013/0910/20130910141919705.jpg', 'http://upload.ci.com/passport2013/0910/20130910141925472.jpg', 'http://nova.ci.com/', 'http://nova.ci.com/', 'http://bbs.ci.com/', '诺币', '枚', 10, 1, '1', 1, '1', '', 0, 0),
 (2, 'seer', '赛尔号', '知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！', NULL, 'http://upload.ci.com/passport2013/0910/20130910143505676.jpg', 'http://upload.ci.com/passport2013/0910/20130910143545206.png', 'http://upload.ci.com/passport2013/0910/20130910143551723.png', 'http://seer.ci.com/', 'http://seer.ci.com/', 'http://bbs.ci.com/', '金币', '个', 10, 2, '1', 2, '1', '', 0, 0),
 (3, 'shenxd', '神仙道', '', NULL, 'http://upload.ci.com/passport2013/0910/20130910143739823.jpg', 'http://upload.ci.com/passport2013/0910/20130910143746964.jpg', 'http://upload.ci.com/passport2013/0910/20130910143751644.jpg', 'http://shenxd.ci.com/', 'http://shenxd.ci.com/server/', 'http://bbs.ci.com/', '水晶', '个', 100, 5, '1', 3, '1', '', 0, 0);

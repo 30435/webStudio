@@ -35,11 +35,11 @@ class frontpay extends Custom_Controller
 			echo $windowString;
 			exit();
 		}
-		$paymentCode = $this->orderInfo['paymentCode'];
-		$this->currentPayment['returnUrl'] = $this->baseUrl . '/index/respond?code=' . $paymentCode;
-		$this->currentPayment['notifyUrl'] = $this->baseUrl . '/index/notify?code=' . $paymentCode;
+		$paymentCode = $this->orderInfo['paymentInfo']['code'];
+		$this->orderInfo['paymentInfo']['returnUrl'] = $this->baseUrl . '/index/respond?code=' . $paymentCode;
+		$this->orderInfo['paymentInfo']['notifyUrl'] = $this->baseUrl . '/index/notify?code=' . $paymentCode;
 
-		$params = array('frontController' => $this, 'paymentInfo' => $this->currentPayment);
+		$params = array('frontController' => $this, 'paymentInfo' => $this->orderInfo['paymentInfo']);
 		$this->load->library($paymentCode, $params);
 		$this->buttonStr = $this->$paymentCode->getPayButton($this->orderInfo);
 
@@ -69,26 +69,19 @@ class frontpay extends Custom_Controller
 		$orderStr = $this->encrypt->decode(str_replace(' ', '+' , $orderStr), $encryptKey);
 
 		$orderInfo = unserialize($orderStr);
-		
 
 		if (!is_array($orderInfo) || empty($orderInfo)) {
 			echo '充值信息有误,请重新操作!';
 			exit();
 		}
 
-		$where = array('username' => $orderInfo['username']);
-		$userInfo = $this->getUserInfo($where);
-		if (empty($userInfo) || $userInfo['userid'] != $orderInfo['getuserid']) {
-			echo '用户' . $orderInfo['username'] . '不存在,请重新操作!';
-			exit();
-		}
 		$insertInfo = array(
 			'orderid' => $orderInfo['orderid'],
 			'payment_code' => $orderInfo['paymentCode'],
 			'payment_rate' => $orderInfo['paymentRate'],
 			'money' => $orderInfo['money'],
 			'userid' => $orderInfo['getuserid'],
-			'operating_userid' => $orderInfo['operating_userid'],
+			'pay_userid' => $orderInfo['payuserInfopay_userid'],
 			'username' => $orderInfo['username'],
 			'account_time' => $this->time,
 			'day' => date('Ymd', $this->time),
@@ -213,28 +206,45 @@ class frontpay extends Custom_Controller
 	 */
 	protected function _checkParams()
 	{
-		$paymentCode = $this->input->get_post('paymentCode'); 
-		$paymentRate = $this->input->get_post('paymentRate');
-		$this->currentPayment = isset($this->paymentInfos[$paymentCode]) && $this->paymentInfos[$paymentCode]['rate'] == $paymentRate ? $this->paymentInfos[$paymentCode] : false;
-		$username = $this->input->get_post('username');
-		$getuserid = $this->input->get_post('getuserid');
-		$payuserid = $this->input->get_post('payuserid');
-		$money = $this->input->get_post('money');
-
-		if (empty($this->currentPayment) ||  empty($username) || empty($money)) {
-			return false;
+		$fields = array('payType', 'username', 'money', 'paymentCode', 'paymentRate');
+		$orderInfo = array();
+		foreach ($fields as $field) {
+			$orderInfo[$field] = $this->input->get_post($field);
 		}
 
-		$orderInfo = array(
-			'paymentCode' => $paymentCode,
-			'paymentRate' => $paymentRate,
-			'username' => $username,
-			'money' => $money,
-			'getuserid' => $getuserid,
-			'payuserid' => $payuserid,
-		);
-		$orderInfo['orderid'] = $this->_createSingleRandomStr();
+		$this->paymentInfo = isset($this->paymentInfos[$orderInfo['paymentCode']]) ? $this->paymentInfos[$orderInfo['paymentCode']] : false;
+		if ($orderInfo['money'] < 1 || !in_array($orderInfo['payType'], array('topaymonth', 'towebgame', 'touser')) || empty($this->paymentInfo) || $this->paymentInfo['rate'] != $orderInfo['paymentRate']) {
+			exit('ddd');//return false;
+		}
+		if ($orderInfo['payType'] == 'topaymonth') {
+			$paymonthId = $this->input->get_post('paymonthId');
+			if (empty($this->paymonthInfos[$paymonthId])) {
+				exit('eee');//return false;
+			}
+			$this->paymonthInfo = $this->paymonthInfos[$paymonthId];
+		}
 
+		if ($orderInfo['payType'] == 'towebgame') {
+			$webgameCode = $this->input->get_post('webgameCode');
+			$this->webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
+			$serverId = $this->input->get_post('serverId');
+			$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
+			$serverRole = $this->input->get_post('serverRole');
+			if (empty($this->webgameInfo) || empty($this->serverInfo) || $webgameCode != $this->serverInfo['webgame_code']) {
+				exit('fff');//return false;
+			}
+		}
+			
+		$orderInfo['pay_userid'] = isset($this->loginedUserInfo['userid']) ? $this->loginedUserInfo['userid'] : 0;
+		$userInfo = (isset($this->loginedUserInfo) && $orderInfo['username'] == $this->loginedUserInfo['username']) ? $this->loginedUserInfo : $this->getUserInfo(array('username' => $orderInfo['username']));
+		$orderInfo['userInfo'] = (isset($this->loginedUserInfo) && $orderInfo['username'] == $this->loginedUserInfo['username']) ? $this->loginedUserInfo : $this->getUserInfo(array('username' => $orderInfo['username']));
+		if (empty($userInfo)) {
+			exit('gg');//return false;
+		}
+		$orderInfo['userid'] = $userInfo['userid'];
+
+		$orderInfo['orderid'] = $this->_createSingleRandomStr();
+//print_r($orderInfo);
 		return $orderInfo;
 	}
 }

@@ -19,16 +19,20 @@ function paysubmit()
 	var paymentCode = $('#paymentCode').val();
 	var paymentRate = $('#paymentRate').val();
 	var username = $('#username').val();
-	var getuserid = $('#getuserid').val();
-	var payuserid = $('#payuserid').val();
+	var userid = $('#userid').val();
 	var confirmusername = $('#confirmusername').val();
 	var money = $('#money').val();
+	var payType = $("#payType").val();
+	var paymonthId = $("#paymonthId").val();
+	var webgameCode = $("#webgameCode").val();
+	var serverId = $("#serverId").val();
+	var serverRole = $("#serverRole").val();
 
 	//alert("paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&getuserid=' + getuserid + '&payuserid=' + payuserid + '&money=' + money);
 	$.ajax({
 		type: "post", 
 		url: payUrl + 'frontpay/pay',
-		data: "paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&getuserid=' + getuserid + '&payuserid=' + payuserid + '&money=' + money,
+		data: "paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&userid=' + userid + '&payType=' + payType + '&money=' + money + '&webgameCode=' + webgameCode + '&serverId=' + serverId + '&serverRole=' + serverRole + '&paymonthId=' + paymonthId,
 			  
 		success: function (data) {
 			if (data == 'error') {

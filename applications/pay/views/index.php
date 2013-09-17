@@ -98,10 +98,7 @@ $(document).ready(function(){
 				<input type="hidden" name="serverUser" id="serverUser" />
 				<input type="hidden" name="webgameCode" id="webgameCode" value="<?php if (isset($this->webgameInfo['code'])) echo $this->webgameInfo['code']; ?>"/>
 				<input type="hidden" name="paymonthId" id="paymonthId" value="<?php if (isset($this->paymonthInfo['id'])) echo $this->paymonthInfo['id']; ?>" />
-
 				<input type="hidden" name="payType" id="payType" value="<?php echo $this->payType; ?>" />
-				<input type="hidden" name="operatingUserId" id="operatingUserId" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
-
 				<ul class="form_list">
 					<li class="form_list_li">
 						<label class="lbl">充值的诺瓦号：</label>

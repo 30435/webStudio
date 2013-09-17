@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-16 11:03:59
+-- 生成日期: 2013-09-17 14:18:49
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `sp_admin_manager` (
 --
 
 INSERT INTO `sp_admin_manager` (`id`, `username`, `truename`, `password`, `roleid`, `email`, `encrypt`, `createtime`, `loginnum`, `lastip`, `lasttime`, `islock`, `handpay_key`, `handpay_en`) VALUES
-(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 131, '127.0.0.1', 1378705114, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
-(2, 'wangcan', 'wang', '3b7bdee72acc991e195b29abf6ee2471', 3, 'eee@test.com', 'SEQ7TW', 1378707398, 12, '127.0.0.1', 1379295447, '1', '', '');
+(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 138, '127.0.0.1', 1379403711, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
+(2, 'wangcan', 'wang', '29508d34d7437cdfde48f5b4a9b668c8', 3, 'eee@test.com', 'hkKv5M', 1379388042, 20, '127.0.0.1', 1379398494, '1', '', '');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
 
 --
 -- 转存表中的数据 `sp_admin_managerlog`
@@ -89,7 +89,7 @@ INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_n
 (7, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:9:"管理员";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:23:"http://passport.ci.com/";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"8";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142445635.png";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794294),
 (8, 2, 'wangcan', 3, '管理员', '64', '添加广告', 'a:12:{s:4:"name";s:12:"幻灯广告";s:7:"ad_type";s:5:"image";s:8:"space_id";s:1:"1";s:3:"url";s:15:"http://abc.com/";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"9";s:9:"ad_status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142529332.jpg";s:7:"pic_ext";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794333),
 (9, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"赛尔号";s:4:"code";s:4:"seer";s:12:"webgame_type";s:1:"2";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:19:"http://seer.ci.com/";s:10:"url_server";s:19:"http://seer.ci.com/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"2";s:5:"ispay";s:1:"1";s:11:"description";s:93:"知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143505676.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143545206.png";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143551723.png";s:9:"coin_name";s:6:"金币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378794992),
-(10, 2, 'wangcan', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"神仙道";s:4:"code";s:6:"shenxd";s:12:"webgame_type";s:1:"3";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:21:"http://shenxd.ci.com/";s:10:"url_server";s:28:"http://shenxd.ci.com/server/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"5";s:5:"ispay";s:1:"1";s:11:"description";s:0:"";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143739823.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143746964.jpg";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143751644.jpg";s:9:"coin_name";s:6:"水晶";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:3:"100";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378795152),
+(10, 1, 'wangcanliang', 3, '管理员', '118', '添加游戏', 'a:19:{s:4:"name";s:9:"神仙道";s:4:"code";s:6:"shenxd";s:12:"webgame_type";s:1:"3";s:14:"webgame_status";s:1:"1";s:8:"url_home";s:21:"http://shenxd.ci.com/";s:10:"url_server";s:28:"http://shenxd.ci.com/server/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"5";s:5:"ispay";s:1:"1";s:11:"description";s:0:"";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143739823.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143746964.jpg";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143751644.jpg";s:9:"coin_name";s:6:"水晶";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:3:"100";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378795152),
 (11, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包月";s:5:"money";s:2:"10";s:4:"unit";s:1:"2";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144500693.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795503),
 (12, 2, 'wangcan', 3, '管理员', '123', '添加包月', 'a:5:{s:4:"name";s:12:"诺瓦包年";s:5:"money";s:2:"50";s:4:"unit";s:1:"1";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144532119.jpg";s:9:"listorder";s:1:"2";}', 'a:0:{}', 'add', '127.0.0.1', 1378795535),
 (13, 2, 'wangcan', 3, '管理员', '113', '添加服务器', 'a:10:{s:4:"name";s:13:"神仙道1服";s:11:"server_mark";s:1:"3";s:12:"webgame_code";s:6:"shenxd";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:13:"server_status";s:1:"1";s:10:"time_start";s:0:"";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:0:{}', 'add', '127.0.0.1', 1378810611),
@@ -121,7 +121,36 @@ INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_n
 (39, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:15:{s:7:"catname";s:3:"fff";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";s:1:"0";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:0:"";s:3:"url";s:34:"http://seer.ci.com/category?catid=";}', 'a:16:{s:2:"id";s:2:"31";s:7:"catname";s:3:"fff";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:0:"";s:3:"url";s:34:"http://seer.ci.com/category?catid=";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1379320181),
 (40, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:15:{s:7:"catname";s:4:"test";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";s:1:"0";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:34:"http://nova.ci.com/category?catid=";}', 'a:16:{s:2:"id";s:2:"30";s:7:"catname";s:4:"test";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:29:"http://nova.ci.com/index.html";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"1";}', 'edit', '127.0.0.1', 1379320203),
 (41, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:15:{s:7:"catname";s:4:"test";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";s:1:"0";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:36:"http://nova.ci.com/category?catid=30";}', 'a:16:{s:2:"id";s:2:"30";s:7:"catname";s:4:"test";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:34:"http://nova.ci.com/category?catid=";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1379320226),
-(42, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:15:{s:7:"catname";s:3:"fff";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";s:1:"0";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:0:"";s:3:"url";s:36:"http://seer.ci.com/category?catid=31";}', 'a:16:{s:2:"id";s:2:"31";s:7:"catname";s:3:"fff";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:0:"";s:3:"url";s:34:"http://seer.ci.com/category?catid=";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1379320245);
+(42, 2, 'wangcan', 3, '管理员', '94', '编辑栏目', 'a:15:{s:7:"catname";s:3:"fff";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";s:1:"0";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:7:"urlrule";s:1:"0";s:11:"bind_domain";s:0:"";s:3:"url";s:36:"http://seer.ci.com/category?catid=31";}', 'a:16:{s:2:"id";s:2:"31";s:7:"catname";s:3:"fff";s:6:"catdir";s:5:"aaaaa";s:5:"image";s:0:"";s:8:"parentid";s:2:"25";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:0:"";s:3:"url";s:34:"http://seer.ci.com/category?catid=";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:7:"urlrule";s:1:"0";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1379320245),
+(43, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";i:1379387533;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"SEQ7TW";s:10:"createtime";s:10:"1378707398";s:8:"loginnum";s:2:"14";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379387509";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379387533),
+(44, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";i:1379387601;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"SEQ7TW";s:10:"createtime";s:10:"1379387533";s:8:"loginnum";s:2:"14";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379387509";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379387601),
+(45, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";i:1379387666;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"SEQ7TW";s:10:"createtime";s:10:"1379387601";s:8:"loginnum";s:2:"14";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379387509";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379387666),
+(46, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";i:1379387693;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"SEQ7TW";s:10:"createtime";s:10:"1379387666";s:8:"loginnum";s:2:"14";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379387509";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379387693),
+(47, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";N;s:10:"createtime";i:1379387785;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"3b7bdee72acc991e195b29abf6ee2471";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"SEQ7TW";s:10:"createtime";s:10:"1379387693";s:8:"loginnum";s:2:"14";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379387509";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379387785),
+(48, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";N;s:10:"createtime";i:1379388042;}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"04ffd28d0a85e2050db77cbeeaa7d8ac";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"l9rIUD";s:10:"createtime";s:10:"1379387785";s:8:"loginnum";s:2:"15";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388032";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379388042),
+(49, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"04ffd28d0a85e2050db77cbeeaa7d8ac";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"l9rIUD";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"16";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388103";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379388829),
+(50, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"04ffd28d0a85e2050db77cbeeaa7d8ac";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"l9rIUD";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"16";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388103";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379388834),
+(51, 2, 'wangcan', 3, '管理员', '12', '修改个人信息', 'a:4:{s:8:"truename";s:4:"wang";s:5:"email";s:12:"eee@test.com";s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"04ffd28d0a85e2050db77cbeeaa7d8ac";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"l9rIUD";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"16";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388103";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379388841),
+(52, 2, 'wangcan', 3, '管理员', '13', '修改密码', 'a:4:{s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";s:8:"password";s:32:"836fe0cba3643f11490a82b76059a77c";s:7:"encrypt";s:6:"hFeG78";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"04ffd28d0a85e2050db77cbeeaa7d8ac";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"l9rIUD";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"16";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388103";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379388855),
+(53, 2, 'wangcan', 3, '管理员', '13', '修改密码', 'a:4:{s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";s:8:"password";s:32:"1c372b4a2049607135a717ead97deb55";s:7:"encrypt";s:6:"npmahP";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"836fe0cba3643f11490a82b76059a77c";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"hFeG78";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"17";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379388891";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379389144),
+(54, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:13:"测试站点2";s:8:"parentid";s:1:"0";s:8:"app_code";s:6:"tbshop";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"1";}', 'a:10:{s:2:"id";s:1:"9";s:4:"name";s:13:"测试站点2";s:8:"parentid";s:1:"0";s:8:"app_code";s:6:"tbshop";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"9";s:5:"islog";s:1:"0";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1379396095),
+(55, 2, 'wangcan', 3, '管理员', '61', '编辑版位', 'a:6:{s:4:"name";s:12:"幻灯广告";s:4:"type";b:0;s:5:"width";s:1:"0";s:6:"height";s:1:"0";s:11:"description";s:0:"";s:6:"status";s:1:"1";}', 'a:7:{s:2:"id";s:1:"1";s:4:"name";s:12:"幻灯广告";s:4:"type";s:6:"fixure";s:5:"width";s:1:"0";s:6:"height";s:1:"0";s:11:"description";s:0:"";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379396479),
+(56, 2, 'wangcan', 3, '管理员', '66', '编辑广告', 'a:12:{s:4:"name";s:12:"幻灯广告";s:4:"type";b:0;s:8:"space_id";b:0;s:3:"url";s:15:"http://abc.com/";s:7:"url_ext";s:0:"";s:8:"add_time";s:0:"";s:10:"start_time";s:0:"";s:8:"end_time";s:0:"";s:9:"listorder";s:1:"9";s:6:"status";s:1:"1";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142529332.jpg";s:7:"pic_ext";s:0:"";}', 'a:13:{s:2:"id";s:1:"5";s:4:"name";s:12:"幻灯广告";s:8:"space_id";s:1:"1";s:4:"type";s:5:"image";s:10:"start_time";s:1:"0";s:8:"end_time";s:1:"0";s:8:"add_time";s:1:"0";s:9:"listorder";s:1:"9";s:6:"status";s:1:"1";s:3:"url";s:15:"http://abc.com/";s:7:"url_ext";s:0:"";s:3:"pic";s:60:"http://upload.ci.com/passport2013/0910/20130910142529332.jpg";s:7:"pic_ext";s:0:"";}', 'edit', '127.0.0.1', 1379396485),
+(57, 2, 'wangcan', 3, '管理员', '69', '添加友链', 'a:8:{s:4:"name";s:7:"友链1";s:4:"type";s:4:"nova";s:3:"url";s:21:"http://www.baidu.com/";s:4:"logo";s:0:"";s:9:"listorder";s:0:"";s:8:"add_time";i:1379396460;s:11:"description";s:0:"";s:6:"status";s:1:"1";}', 'a:0:{}', 'add', '127.0.0.1', 1379396520),
+(58, 1, 'wangcanliang', 1, '超级管理员', '116', '编辑游戏', 'a:19:{s:4:"name";s:9:"赛尔号";s:4:"code";s:4:"seer";s:4:"type";s:1:"2";s:6:"status";s:1:"1";s:8:"url_home";s:19:"http://seer.ci.com/";s:10:"url_server";s:19:"http://seer.ci.com/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"listorder";s:1:"2";s:5:"ispay";s:1:"1";s:11:"description";s:93:"知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！";s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143505676.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143545206.png";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143551723.png";s:9:"coin_name";s:6:"金币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:21:{s:2:"id";s:1:"2";s:4:"code";s:4:"seer";s:4:"name";s:9:"赛尔号";s:11:"description";s:93:"知金教育用自己强大的用户群体运营第三方的游戏赛尔号，强强联合！";s:5:"brief";N;s:9:"pic_small";s:60:"http://upload.ci.com/passport2013/0910/20130910143505676.jpg";s:10:"pic_middle";s:60:"http://upload.ci.com/passport2013/0910/20130910143545206.png";s:7:"pic_big";s:60:"http://upload.ci.com/passport2013/0910/20130910143551723.png";s:8:"url_home";s:19:"http://seer.ci.com/";s:10:"url_server";s:19:"http://seer.ci.com/";s:7:"url_bbs";s:18:"http://bbs.ci.com/";s:9:"coin_name";s:6:"金币";s:9:"coin_unit";s:3:"个";s:9:"coin_rate";s:2:"10";s:9:"listorder";s:1:"2";s:5:"ispay";s:1:"1";s:4:"type";s:1:"2";s:6:"status";s:1:"1";s:12:"url_maintain";s:0:"";s:14:"start_maintain";s:1:"0";s:12:"end_maintain";s:1:"0";}', 'edit', '127.0.0.1', 1379397746),
+(59, 1, 'wangcanliang', 1, '超级管理员', '111', '编辑服务器', 'a:10:{s:4:"name";s:13:"神仙道1服";s:11:"server_mark";s:1:"3";s:12:"webgame_code";s:6:"shenxd";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:6:"status";s:1:"1";s:10:"time_start";s:0:"";s:14:"start_maintain";i:0;s:12:"end_maintain";i:0;s:12:"url_maintain";s:0:"";}', 'a:11:{s:2:"id";s:1:"1";s:12:"webgame_code";s:6:"shenxd";s:4:"name";s:13:"神仙道1服";s:9:"listorder";s:1:"1";s:5:"ispay";s:1:"1";s:6:"status";s:1:"1";s:10:"time_start";s:1:"0";s:11:"server_mark";s:1:"3";s:14:"start_maintain";s:1:"0";s:12:"end_maintain";s:1:"0";s:12:"url_maintain";s:0:"";}', 'edit', '127.0.0.1', 1379397751),
+(60, 2, 'wangcan', 3, '管理员', '13', '修改密码', 'a:4:{s:8:"username";s:7:"wangcan";s:10:"createtime";s:10:"1379388042";s:8:"password";s:32:"29508d34d7437cdfde48f5b4a9b668c8";s:7:"encrypt";s:6:"hkKv5M";}', 'a:14:{s:2:"id";s:1:"2";s:8:"username";s:7:"wangcan";s:8:"truename";s:4:"wang";s:8:"password";s:32:"1c372b4a2049607135a717ead97deb55";s:6:"roleid";s:1:"3";s:5:"email";s:12:"eee@test.com";s:7:"encrypt";s:6:"npmahP";s:10:"createtime";s:10:"1379388042";s:8:"loginnum";s:2:"19";s:6:"lastip";s:9:"127.0.0.1";s:8:"lasttime";s:10:"1379398458";s:6:"islock";s:1:"1";s:11:"handpay_key";s:0:"";s:10:"handpay_en";s:0:"";}', 'edit', '127.0.0.1', 1379398477),
+(61, 2, 'wangcan', 3, '管理员', '125', '编辑包月', 'a:3:{i:1;s:1:"2";i:2;s:1:"2";i:3;s:2:"66";}', 'a:0:{}', 'listorder', '127.0.0.1', 1379398810),
+(62, 2, 'wangcan', 3, '管理员', '125', '编辑包月', 'a:3:{i:1;s:1:"2";i:2;s:2:"23";i:3;s:2:"66";}', 'a:0:{}', 'listorder', '127.0.0.1', 1379398815),
+(63, 2, 'wangcan', 3, '管理员', '125', '编辑包月', 'a:6:{s:4:"name";s:12:"诺瓦包月";s:5:"money";s:1:"5";s:5:"month";s:1:"2";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144500693.jpg";s:9:"listorder";s:3:"233";s:12:"webgame_code";s:4:"nova";}', 'a:7:{s:2:"id";s:1:"1";s:4:"name";s:12:"诺瓦包月";s:12:"webgame_code";s:4:"nova";s:5:"money";s:1:"5";s:5:"month";s:1:"2";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0910/20130910144500693.jpg";s:9:"listorder";s:1:"2";}', 'edit', '127.0.0.1', 1379398822),
+(64, 2, 'wangcan', 3, '管理员', '125', '编辑包月', 'a:6:{s:4:"name";s:12:"诺币兑换";s:5:"money";s:2:"10";s:5:"month";s:1:"1";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0912/20130912172705850.png";s:9:"listorder";s:2:"66";s:12:"webgame_code";s:4:"nova";}', 'a:7:{s:2:"id";s:1:"3";s:4:"name";s:12:"诺币兑换";s:12:"webgame_code";s:4:"nova";s:5:"money";s:2:"10";s:5:"month";s:1:"1";s:5:"thumb";s:60:"http://upload.ci.com/passport2013/0912/20130912172705850.png";s:9:"listorder";s:2:"66";}', 'edit', '127.0.0.1', 1379398836),
+(65, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{i:1;s:3:"100";i:2;s:2:"99";i:8;s:2:"97";i:14;s:1:"0";i:20;s:1:"0";}', 'a:0:{}', 'listorder', '127.0.0.1', 1379399341),
+(66, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{i:1;s:3:"100";i:2;s:2:"99";i:8;s:2:"97";i:14;s:2:"10";i:20;s:1:"0";}', 'a:0:{}', 'listorder', '127.0.0.1', 1379399348),
+(67, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{i:1;s:3:"100";i:2;s:1:"8";i:8;s:2:"97";i:14;s:2:"10";i:20;s:1:"0";}', 'a:0:{}', 'listorder', '127.0.0.1', 1379399355),
+(68, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:7:{s:2:"id";b:0;s:4:"name";s:9:"电信卡";s:4:"code";b:0;s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:2:"14";s:4:"code";s:9:"ybtelecom";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:0:"";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399479),
+(69, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{s:4:"name";s:9:"电信卡";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399725),
+(70, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{s:4:"name";s:9:"电信卡";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399733),
+(71, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:6:{s:4:"name";s:9:"电信卡";s:4:"code";s:6:"ybtele";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399853);
 
 -- --------------------------------------------------------
 
@@ -159,7 +188,7 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (6, '支付模块', 0, 'pay', '', '', '', 6, '0', '1'),
 (7, '采集系统', 0, 'spider', '', '', '', 7, '0', '1'),
 (8, '测试站点', 0, 'movie', '', '', '', 8, '0', '1'),
-(9, '测试站点2', 0, 'tbshop', '', '', '', 9, '0', '1'),
+(9, '测试站点2', 0, 'tbshop', '', '', '', 0, '0', '1'),
 (10, '儿童教育', 0, 'kidsedu', '', '', '', 10, '0', '1'),
 (11, '管理员信息', 1, 'passport', '', '', '', 0, '0', '1'),
 (12, '修改个人信息', 11, 'passport', 'manager', 'editm', '', 0, '0', '1'),
@@ -417,6 +446,39 @@ CREATE TABLE IF NOT EXISTS `sp_admin_privilege` (
 --
 
 INSERT INTO `sp_admin_privilege` (`role_id`, `menu_id`) VALUES
+(2, 5),
+(2, 88),
+(2, 89),
+(2, 90),
+(2, 91),
+(2, 92),
+(2, 93),
+(2, 94),
+(2, 95),
+(2, 96),
+(2, 97),
+(2, 98),
+(2, 99),
+(2, 100),
+(2, 101),
+(2, 102),
+(2, 103),
+(2, 104),
+(2, 105),
+(2, 106),
+(2, 107),
+(2, 108),
+(2, 109),
+(2, 110),
+(2, 111),
+(2, 112),
+(2, 113),
+(2, 114),
+(2, 115),
+(2, 116),
+(2, 117),
+(2, 118),
+(2, 119),
 (3, 1),
 (3, 2),
 (3, 3),
@@ -574,7 +636,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_role` (
 
 INSERT INTO `sp_admin_role` (`id`, `name`, `description`, `status`, `listorder`) VALUES
 (1, '超级管理员', '超级管理员', '', 7),
-(2, '编辑', '网站编辑', '0', 0),
+(2, '编辑', '网站编辑', '1', 0),
 (3, '管理员', '', '1', 0);
 
 -- --------------------------------------------------------
@@ -646,17 +708,24 @@ INSERT INTO `sp_attachment` (`id`, `app_code`, `catid`, `contentid`, `file_name`
 
 CREATE TABLE IF NOT EXISTS `sp_linkurl` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `linkurl_type` char(8) NOT NULL DEFAULT '',
+  `type` char(8) NOT NULL DEFAULT '',
   `name` varchar(50) NOT NULL DEFAULT '',
   `url` varchar(255) NOT NULL DEFAULT '',
   `logo` varchar(255) NOT NULL DEFAULT '',
   `description` text NOT NULL,
   `username` varchar(30) NOT NULL DEFAULT '',
   `listorder` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `linkurl_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `add_time` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `sp_linkurl`
+--
+
+INSERT INTO `sp_linkurl` (`id`, `type`, `name`, `url`, `logo`, `description`, `username`, `listorder`, `status`, `add_time`) VALUES
+(1, 'nova', '友链1', 'http://www.baidu.com/', '', '', '', 0, 1, 1379396460);
 
 -- --------------------------------------------------------
 
@@ -703,7 +772,7 @@ INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `pwd_s
 (104760, '104760', 3, '1218a4b526c794480d28eefb08047400', '1', 'pdgEsz', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 1, '127.0.0.1', 1378801341),
 (1062753, '1062753', 4, 'e521f1e8065594e421b3b708878b14c1', '1', 'Zxinxa', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 0, '0', 0),
 (1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', '1', 'BK7Sng', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256),
-(1193559, 'aaaaaa', 6, '6dceefbc8399e41b5fae06839a8bdc2f', '1', 'JFAkWH', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378863829, 4, '127.0.0.1', 1379295508),
+(1193559, 'aaaaaa', 6, '6dceefbc8399e41b5fae06839a8bdc2f', '1', 'JFAkWH', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378863829, 6, '127.0.0.1', 1379381861),
 (1286042, 'bbbbbb', 7, 'ab794e1d2c0513f38a0af9ef90550cfe', '1', 'uyZ6UZ', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378979837, 0, '0', 0),
 (1386195, '1386195', 8, '87bef5b42e7e4a6a8b4c8a30542f503e', '1', 'm5iEPU', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1379064838, 0, '0', 0),
 (1391331, '1391331', 9, '2b2fbd378f47bdfa682f6f5ae63a0aff', '1', 'WPylpC', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1379064839, 1, '127.0.0.1', 1379064847);
@@ -718,30 +787,30 @@ CREATE TABLE IF NOT EXISTS `sp_poster` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(40) NOT NULL,
   `space_id` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `ad_type` varchar(10) NOT NULL,
+  `type` varchar(10) NOT NULL,
   `start_time` int(10) unsigned NOT NULL DEFAULT '0',
   `end_time` int(10) unsigned NOT NULL DEFAULT '0',
   `add_time` int(10) unsigned NOT NULL DEFAULT '0',
   `listorder` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `ad_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `url` varchar(200) NOT NULL,
   `url_ext` varchar(200) NOT NULL,
   `pic` varchar(200) NOT NULL,
   `pic_ext` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `spaceid` (`space_id`,`ad_status`,`listorder`)
+  KEY `spaceid` (`space_id`,`status`,`listorder`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- 转存表中的数据 `sp_poster`
 --
 
-INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `ad_type`, `start_time`, `end_time`, `add_time`, `listorder`, `ad_status`, `url`, `url_ext`, `pic`, `pic_ext`) VALUES
+INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `type`, `start_time`, `end_time`, `add_time`, `listorder`, `status`, `url`, `url_ext`, `pic`, `pic_ext`) VALUES
 (1, '幻灯广告1', 1, 'image', 2013, 2013, 2013, 66, 1, 'http://www.baidu.com', '', 'http://upload.ci.com/passport2013/0910/20130910142240992.jpg', ''),
 (2, '网页游戏', 1, 'image', 0, 0, 0, 2, 1, 'http://www.163.com', '', 'http://upload.ci.com/passport2013/0910/20130910142311290.jpg', ''),
 (3, '测试站点2', 1, 'image', 0, 0, 0, 2, 0, 'http://weibo.com', '', 'http://upload.ci.com/passport2013/0910/20130910142358994.jpg', ''),
 (4, '管理员', 1, 'image', 0, 0, 0, 8, 1, 'http://passport.ci.com/', '', 'http://upload.ci.com/passport2013/0910/20130910142445635.png', ''),
-(5, '幻灯广告', 1, 'image', 0, 0, 0, 9, 1, 'http://abc.com/', '', 'http://upload.ci.com/passport2013/0910/20130910142529332.jpg', '');
+(5, '幻灯广告', 0, '0', 0, 0, 0, 9, 1, 'http://abc.com/', '', 'http://upload.ci.com/passport2013/0910/20130910142529332.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -752,21 +821,21 @@ INSERT INTO `sp_poster` (`id`, `name`, `space_id`, `ad_type`, `start_time`, `end
 CREATE TABLE IF NOT EXISTS `sp_poster_space` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` char(50) NOT NULL,
-  `space_type` char(30) NOT NULL,
+  `type` char(30) NOT NULL,
   `width` smallint(4) unsigned NOT NULL DEFAULT '0',
   `height` smallint(4) unsigned NOT NULL DEFAULT '0',
   `description` char(100) NOT NULL,
-  `space_status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `disabled` (`space_status`)
+  KEY `disabled` (`status`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- 转存表中的数据 `sp_poster_space`
 --
 
-INSERT INTO `sp_poster_space` (`id`, `name`, `space_type`, `width`, `height`, `description`, `space_status`) VALUES
-(1, '幻灯广告', 'fixure', 0, 0, '', 1);
+INSERT INTO `sp_poster_space` (`id`, `name`, `type`, `width`, `height`, `description`, `status`) VALUES
+(1, '幻灯广告', '0', 0, 0, '', 1);
 
 -- --------------------------------------------------------
 

@@ -12,7 +12,7 @@
 				<ul style="padding-left:22px;" id="confirm_msg" class="pop_info_list">
 					
 				<li><label>充值米米号:</label><div class="b"><?php echo $this->orderInfo['username']; ?></div></li>
-				<li><label>你充值的方式:</label><div><?php echo $this->currentPayment['name']; ?></div></li>
+				<li><label>你充值的方式:</label><div><?php echo $this->orderInfo['paymentInfo']['name']; ?></div></li>
 				<li><label>你的充值金额:</label><div class="b"><?php echo $this->orderInfo['money']; ?> 元</div></li>
 				<li><label>充值所得:</label><div class="b"><?php echo $this->orderInfo['money']; ?>诺币</div></li></ul>
 				<input type="hidden" id="orderStr" value="<?php echo $this->orderStr; ?>" />

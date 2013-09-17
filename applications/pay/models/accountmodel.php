@@ -33,7 +33,7 @@ class AccountModel extends CommonModel
 			'webgame_code' => array('name' => '游戏代码'),
 			'server_id' => array('name' => '服务器ID'),
 			'server_role' => array('name' => '游戏角色'),
-			'operating_userid' => array('name' => '充值账号'),
+			'pay_userid' => array('name' => '充值账号'),
 			'userid' => array('name' => '目标账号'),
 			'username' => array('name' => '目标用户名'),
 			'mobile' => array('name' => '手机号'),
@@ -47,7 +47,7 @@ class AccountModel extends CommonModel
 			'status' => array('name' => '充值状态'),
 			'handpay_manager' => array('name' => '手工充值管理员')
 		);
-		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'payment_code', 'webgame_code', 'server_id', 'operating_userid', 'userid', 'username', 'mobile', 'payment_rate', 'money', 'money_valid_middle', 'money_valid', 'account_time', 'account_time_valid', 'status', 'hand_manager');
+		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'payment_code', 'webgame_code', 'server_id', 'pay_userid', 'userid', 'username', 'mobile', 'payment_rate', 'money', 'money_valid_middle', 'money_valid', 'account_time', 'account_time_valid', 'status', 'hand_manager');
 		
 		return $fieldInfos;
 	}
