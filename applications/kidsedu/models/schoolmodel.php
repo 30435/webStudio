@@ -16,7 +16,7 @@ class SchoolModel extends CommonModel
 	{
 		$fieldInfos['fields'] = array(
 			'id' => array('name' => '学校ID'),
-			'name' => array('name' => '课程名称'),
+			'name' => array('name' => '学校名称'),
 			'agency_id' => array('name' => '所属机构ID'),
 			'address' => array('name' => '学校地址'),
 			'contact_man' => array('name' => '联系人'),

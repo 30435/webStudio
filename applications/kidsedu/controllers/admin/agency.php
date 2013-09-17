@@ -10,7 +10,6 @@ class Agency extends Custom_AdminController
 
         $this->lang->load('form_key');
         $this->form_validation->set_rules('username', "lang:username", 'trim|min_length[2]|max_length[20]|xss_clean');
-		//$this->roleInfos = $this->currentModel->getAllInfos('admin_role', 'id');
 		$this->operationMenus = array('edit', 'delete');
 	}
 
@@ -60,10 +59,11 @@ class Agency extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($webgameStatus = 0, $webgameType = 0)
+	protected function _initInfo($type = '', $industry = '', $invitModel = '')
 	{
-		$this->selectWebgameStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $webgameStatus, true);
-		$this->selectWebgameType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $webgameType, true);
+		$this->selectType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $type, true);
+		$this->selectIndustry = $this->_getSelectElement($this->fieldInfos['industry']['infos'], 'key', 'value', $industry, true);
+		$this->selectInvitModel = $this->_getSelectElement($this->fieldInfos['invit_model']['infos'], 'key', 'value', $invitModel, true);
 	}
 
 	/**
@@ -76,11 +76,9 @@ class Agency extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['status'], $info['type']);
-		if ($isWrite) {
-			$info['code'] = !empty($this->currentInfo['code']) ? $this->currentInfo['code'] : $info['code'];
-			$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
-			$info['end_maintain'] = !empty($info['end_maintain']) ? strtotime($info['end_maintain']) : 0;
+		
+		if (!$isWrite) {
+			$this->_initInfo($info['type'], $info['industry'], $info['invit_model']);
 		}
 		return $info;
 	}

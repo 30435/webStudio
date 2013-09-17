@@ -10,7 +10,8 @@ class Course extends Custom_AdminController
 
         $this->lang->load('form_key');
         $this->form_validation->set_rules('username', "lang:username", 'trim|min_length[2]|max_length[20]|xss_clean');
-		//$this->roleInfos = $this->currentModel->getAllInfos('admin_role', 'id');
+		$this->agencyInfos = $this->currentModel->getAllInfos('agency', 'id');
+		$this->schoolInfos = $this->currentModel->getAllInfos('school', 'id');
 		$this->operationMenus = array('edit', 'delete');
 	}
 
@@ -60,10 +61,12 @@ class Course extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($webgameStatus = 0, $webgameType = 0)
+	protected function _initInfo($agencyId = 0, $schoolId = 0, $sort = '', $status = '')
 	{
-		$this->selectWebgameStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $webgameStatus, true);
-		$this->selectWebgameType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $webgameType, true);
+		$this->selectAgency = $this->_getSelectElement($this->agencyInfos, 'id', 'name', $agencyId, true);
+		$this->selectSchool = $this->_getSelectElement($this->schoolInfos, 'id', 'name', $schoolId, true);
+		$this->selectSort = $this->_getSelectElement($this->fieldInfos['sort']['infos'], 'key', 'value', $sort, true);
+		$this->selectStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $status, true);
 	}
 
 	/**
@@ -76,11 +79,8 @@ class Course extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['status'], $info['type']);
-		if ($isWrite) {
-			$info['code'] = !empty($this->currentInfo['code']) ? $this->currentInfo['code'] : $info['code'];
-			$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
-			$info['end_maintain'] = !empty($info['end_maintain']) ? strtotime($info['end_maintain']) : 0;
+		if (!$isWrite) {
+			$this->_initInfo($info['agency_id'], $info['school_id'], $info['sort'], $info['status']);
 		}
 		return $info;
 	}
