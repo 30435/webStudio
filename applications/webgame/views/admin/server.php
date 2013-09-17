@@ -17,7 +17,7 @@
 		  <th align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['webgame_code']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['ispay']['name']; ?></th>
-		  <th align="center"><?php echo $this->fieldInfos['server_status']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['status']['name']; ?></th>
 		  <th class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -30,7 +30,7 @@
           <td align="center"><?php echo $info['name']; ?></td>
 		  <td align="center"><?php echo $info['webgame_code']; ?></td>
 		  <td align="center"><?php echo $info['ispay']; ?></td>
-		  <td align="center"><?php echo $info['server_status']; ?></td>
+		  <td align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -78,8 +78,8 @@
 		<td class="y-bg"><input type="text" class="input-text" name="listorder" value="<?php if (isset($this->currentInfo['listorder'])) echo $this->currentInfo['listorder']; ?>" id="listorder"  size="30"/></td>
 	  </tr>
 	  <tr>
-	    <th width="80"><?php echo $this->fieldInfos['server_status']['name']; ?>：</th>
-		<td><select name="server_status" id="server_status"><?php echo $this->selectServerStatus; ?></select></td>
+	    <th width="80"><?php echo $this->fieldInfos['status']['name']; ?>：</th>
+		<td><select name="status" id="status"><?php echo $this->selectServerStatus; ?></select></td>
 	  </tr>
       <tr>
         <th><?php echo $this->fieldInfos['ispay']['name']; ?></th>

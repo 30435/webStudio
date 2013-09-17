@@ -28,8 +28,8 @@ class WebgameModel extends CommonModel
 			'id' => array('name' => '游戏ID'),
 			'name' => array('name' => '游戏名称'),
 			'code' => array('name' => '游戏代码'),
-			'webgame_type' => array('name' => '游戏类型', 'infos' => $typeInfos),
-			'webgame_status' => array('name' => '游戏状态', 'infos' => $statusInfos),
+			'type' => array('name' => '游戏类型', 'infos' => $typeInfos),
+			'status' => array('name' => '游戏状态', 'infos' => $statusInfos),
 			'url_home' => array('name' => '游戏官网地址'),
 			'url_server' => array('name' => '游戏服务器地址'),
 			'url_bbs' => array('name' => '游戏论坛地址'),
@@ -48,7 +48,7 @@ class WebgameModel extends CommonModel
 			'end_maintain' => array('name' => '维护结束时间'),
 			'url_maintain' => array('name' => '游戏维护调转地址')
 		);
-		$fieldInfos['fieldChanges'] = array('name', 'code', 'webgame_type', 'webgame_status', 'url_home', 'url_server',  'url_bbs', 'listorder', 'ispay', 'description', 'pic_small', 'pic_middle', 'pic_big', 'coin_name', 'coin_unit', 'coin_rate', 'start_maintain', 'end_maintain', 'url_maintain');
+		$fieldInfos['fieldChanges'] = array('name', 'code', 'type', 'status', 'url_home', 'url_server',  'url_bbs', 'listorder', 'ispay', 'description', 'pic_small', 'pic_middle', 'pic_big', 'coin_name', 'coin_unit', 'coin_rate', 'start_maintain', 'end_maintain', 'url_maintain');
 		
 		return $fieldInfos;
 	}

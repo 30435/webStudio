@@ -15,13 +15,13 @@
     	  <th width="35" align="center"><input type="checkbox" value="" id="check_box" onclick="selectall('mulIds[]');"></th>
 		  <th width="10%"><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th width="10%"><?php echo $this->fieldInfos['id']['name']; ?></th>
-		  <th width="5%" align="center"><?php echo $this->fieldInfos['webgame_type']['name']; ?></th>
+		  <th width="5%" align="center"><?php echo $this->fieldInfos['type']['name']; ?></th>
 		  <th width="15%" align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
 		  <th width="80" align="center"><?php echo $this->fieldInfos['code']['name']; ?></th>
 		  <th width="100" align="center"><?php echo $this->fieldInfos['url_home']['name']; ?></th>
 		  <th width="100" align="center"><?php echo $this->fieldInfos['url_server']['name']; ?></th>
 		  <th width="5%" align="center"><?php echo $this->fieldInfos['ispay']['name']; ?></th>
-		  <th width="5%" align="center"><?php echo $this->fieldInfos['webgame_status']['name']; ?></th>
+		  <th width="5%" align="center"><?php echo $this->fieldInfos['status']['name']; ?></th>
 		  <th class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -31,13 +31,13 @@
 		  <td align="center"><input type="checkbox" name="mulIds[]" value="<?php echo $info['id']; ?>"></td>
 		  <td width="10%" align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td width="10%" align="center"><?php echo $info['id']; ?></td>
-		  <td width="10%" align="center"><?php echo $info['webgame_type']; ?></td>
+		  <td width="10%" align="center"><?php echo $info['type']; ?></td>
           <td width="15%" align="center"><?php echo $info['name']; ?></td>
 		  <td width="80" align="center"><?php echo $info['code']; ?></td>
 		  <td width="100" align="center"><a href="<?php echo $info['url_home']; ?>" target="_blank"><?php echo $this->fieldInfos['url_home']['name']; ?></a></td>
 		  <td width="100" align="center"><a href="<?php echo $info['url_server']; ?>" target="_blank"><?php echo $this->fieldInfos['url_server']['name']; ?></a></td>
 		  <td width="5%" align="center"><?php echo $info['ispay']; ?></td>
-		  <td width="5%" align="center"><?php echo $info['webgame_status']; ?></td>
+		  <td width="5%" align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -107,8 +107,8 @@ $(function(){
 	  <legend>基本配置</legend>
 	  <table width="100%"  class="table_form">
 	  <tr>
-	    <th width="100"><?php echo $this->fieldInfos['webgame_type']['name']; ?>：</th>
-		<td><select name="webgame_type" id="webgame_type"><?php echo $this->selectWebgameType; ?></select></td>
+	    <th width="100"><?php echo $this->fieldInfos['type']['name']; ?>：</th>
+		<td><select name="type" id="type"><?php echo $this->selectWebgameType; ?></select></td>
 	  </tr>
 	  <tr>
 	    <th><?php echo $this->fieldInfos['code']['name']; ?>：</th>
@@ -135,8 +135,8 @@ $(function(){
 		<td class="y-bg"><input type="text" class="input-text" name="url_bbs" value="<?php if (isset($this->currentInfo['url_bbs'])) echo $this->currentInfo['url_bbs']; ?>" id="url_bbs"  size="100"/></td>
 	  </tr>
 	  <tr>
-	    <th width="80"><?php echo $this->fieldInfos['webgame_status']['name']; ?>：</th>
-		<td><select name="webgame_status" id="webgame_status"><?php echo $this->selectWebgameStatus; ?></select></td>
+	    <th width="80"><?php echo $this->fieldInfos['status']['name']; ?>：</th>
+		<td><select name="status" id="status"><?php echo $this->selectWebgameStatus; ?></select></td>
 	  </tr>
       <tr>
         <th><?php echo $this->fieldInfos['ispay']['name']; ?></th>

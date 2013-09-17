@@ -8,11 +8,11 @@
 		  <th width="10%"><?php echo $this->fieldInfos['listorder']['name']; ?></th>
           <th width="80"><?php echo $this->fieldInfos['id']['name']; ?></th>
           <th><?php echo $this->fieldInfos['name']['name']; ?></th>
-		  <th><?php echo $this->fieldInfos['linkurl_type']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['type']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['url']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['logo']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['add_time']['name']; ?></th>
-		  <th><?php echo $this->fieldInfos['linkurl_status']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['status']['name']; ?></th>
           <th width="150"><?php echo $this->lang->line('admin_operation'); ?></th>
         </tr>
       </thead>
@@ -22,11 +22,11 @@
 		  <td width="10%" align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td width="80" align="center"><?php echo $info['id']; ?></td>
           <td align="center"><a href="<?php echo $info['url']; ?>" target="_blank"><?php echo $info['name']; ?></a></td>
-		  <td align="center"><?php echo $info['linkurl_type']; ?></td>
+		  <td align="center"><?php echo $info['type']; ?></td>
 		  <td align="center"><a href="<?php echo $info['url']; ?>" target="_blank"><?php echo $info['url']; ?></a></td>
 		  <td align="center"><a href="<?php echo $info['url']; ?>" target="_blank"><?php echo $info['logo']; ?></a></td>
 		  <td align="center"><?php echo $info['add_time']; ?></td>
-		  <td align="center"><?php echo $info['linkurl_status']; ?></td>
+		  <td align="center"><?php echo $info['status']; ?></td>
           <td align="center">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -67,8 +67,8 @@ $(function(){
         <td><input type="text" name="name" class="input-text" id="name" value="<?php if (isset($this->currentInfo['name'])) echo $this->currentInfo['name']; ?>" /></input></td>
       </tr>
 	  <tr>
-	    <th width="100"><?php echo $this->fieldInfos['linkurl_type']['name']; ?>：</th>
-		<td><select name="linkurl_type" id="linkurl_type"><?php echo $this->selectLinkurlType; ?></select></td>
+	    <th width="100"><?php echo $this->fieldInfos['type']['name']; ?>：</th>
+		<td><select name="type" id="type"><?php echo $this->selectLinkurlType; ?></select></td>
 	  </tr>
 	  <tr>
 	    <th><?php echo $this->fieldInfos['url']['name']; ?>：</th>
@@ -91,10 +91,10 @@ $(function(){
 		<td class="y-bg"><input id="add_time" type="text" name="add_time" value="<?php if(!empty($this->currentInfo['add_time'])) echo date('Y-m-d H:i:s',$this->currentInfo['add_time']);?>"></td>
 	  </tr>
       <tr>
-        <th><?php echo $this->fieldInfos['linkurl_status']['name']; ?></th>
+        <th><?php echo $this->fieldInfos['status']['name']; ?></th>
         <td>
-		  <input type="radio" name="linkurl_status" value="0" <?php if (!isset($this->currentInfo['linkurl_status']) || empty($this->currentinfo['linkurl_status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['linkurl_status']['infos']['0']; ?> 
-		  <label><input type="radio" name="linkurl_status" value="1" <?php if (isset($this->currentInfo['linkurl_status']) && !empty($this->currentInfo['linkurl_status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['linkurl_status']['infos']['1']; ?>
+		  <input type="radio" name="status" value="0" <?php if (!isset($this->currentInfo['status']) || empty($this->currentinfo['status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['status']['infos']['0']; ?> 
+		  <label><input type="radio" name="status" value="1" <?php if (isset($this->currentInfo['status']) && !empty($this->currentInfo['status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['status']['infos']['1']; ?>
 		</td>
       </tr>
       <tr>

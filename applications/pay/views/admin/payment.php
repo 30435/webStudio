@@ -16,7 +16,7 @@
 		  <th><?php echo $this->fieldInfos['id']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['code']['name']; ?></th>
-		  <th align="center"><?php echo $this->fieldInfos['payment_status']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['status']['name']; ?></th>
 		  <th class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -28,7 +28,7 @@
           <td align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['name']; ?></td>
 		  <td align="center"><?php echo $info['code']; ?></td>
-		  <td align="center"><?php echo $info['payment_status']; ?></td>
+		  <td align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -94,8 +94,8 @@ $(function(){
 		<td class="y-bg"><input type="text" class="input-text" name="listorder" value="<?php if (isset($this->currentInfo['listorder'])) echo $this->currentInfo['listorder']; ?>" id="listorder"  size="30"/></td>
 	  </tr>
       <tr>
-        <th><?php echo $this->fieldInfos['payment_status']['name']; ?></th>
-        <td><input type="radio" name="payment_status" value="0" <?php if (!isset($this->currentInfo['payment_status']) || empty($this->currentinfo['payment_status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['payment_status']['infos']['0']; ?> <label><input type="radio" name="payment_status" value="1" <?php if (isset($this->currentInfo['payment_status']) || !empty($this->currentinfo['payment_status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['payment_status']['infos']['1']; ?></td>
+        <th><?php echo $this->fieldInfos['status']['name']; ?></th>
+        <td><input type="radio" name="status" value="0" <?php if (!isset($this->currentInfo['status']) || empty($this->currentinfo['status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['status']['infos']['0']; ?> <label><input type="radio" name="status" value="1" <?php if (isset($this->currentInfo['status']) || !empty($this->currentinfo['status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['status']['infos']['1']; ?></td>
       </tr>	  
       <tr>
         <th><?php echo $this->fieldInfos['description']['name']; ?></th>

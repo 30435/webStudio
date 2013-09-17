@@ -36,7 +36,7 @@
 					<dt onclick="listFolder(this)" class="fold">自主开发</dt>
 					<dd>
 						<ul style="display:block;">
-						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 1) { continue; } ?>
+						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 1) { continue; } ?>
 							<li><img src="<?php echo $webgameInfo['pic_small']; ?>"><a href="<?php echo $webgameInfo['url_home']; ?>" target="_blank" class="icon_arrow" width="16px" height="16px" /><?php echo $webgameInfo['name']; ?>&gt;</a></li>
 						<?php } ?>
 						</ul>
@@ -46,7 +46,7 @@
 					<dt onclick="listFolder(this)" class="fold">代理游戏</dt>
 					<dd>
 						<ul>
-						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 2) { continue; } ?>
+						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 2) { continue; } ?>
 							<li><img src="<?php echo $webgameInfo['pic_small']; ?>"><a href="<?php echo $webgameInfo['url_home']; ?>" target="_blank" class="icon_arrow" width="16px" height="16px" /><?php echo $webgameInfo['name']; ?>&gt;</a></li>
 						<?php } ?>
 						</ul>
@@ -56,7 +56,7 @@
 					<dt onclick="listFolder(this)" class="fold">网页游戏</dt>
 					<dd>
 						<ul>
-						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 3) { continue; } ?>
+						<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 3) { continue; } ?>
 							<li><img src="<?php echo $webgameInfo['pic_small']; ?>"><a href="<?php echo $webgameInfo['url_home']; ?>" target="_blank" class="icon_arrow" width="16px" height="16px" /><?php echo $webgameInfo['name']; ?>&gt;</a></li>
 						<?php } ?>
 						</ul>
@@ -108,7 +108,7 @@
 			<div class="recom_box">
 				<div class="recbox_top"></div>
 				<div class="recbox_con">
-					<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] == 3) { continue; } ?>
+					<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] == 3) { continue; } ?>
 			        <div class="recgame_box">
 						<div class="rgbox_mid"><a target="_blank" href="<?php echo $webgameInfo['url_home']; ?>"><img src="<?php echo $webgameInfo['pic_big']; ?>" width="129px" height="129px" /></a></div>
 						<a class="start-game-btn" title="开始游戏" target="_blank" href="<?php echo $webgameInfo['url_server']; ?>"></a>
@@ -120,13 +120,13 @@
 				<div class="wgbox_top"></div>
 				<div class="splitline"></div>
 				<div class="wgbox_con">
-					<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 3) { continue; } ?>
+					<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 3) { continue; } ?>
 				    <div class="g_item">
 						<dl>
 		                	<dt><a href="<?php echo $webgameInfo['url_home']; ?>" target="_blank"><img src="<?php echo $webgameInfo['pic_middle']; ?>" width="100px" height="100px"></a></dt>
 		                    <dd class="tit"><?php echo $webgameInfo['name']; ?></dd>
-		                    <dd class="des"><span class="des-blue"><?php echo $webgameInfo['webgame_type']; ?></span></dd>
-		                    <dd class="des"><span class="bg-green"><?php echo $webgameInfo['webgame_status']; ?></span></dd>
+		                    <dd class="des"><span class="des-blue"><?php echo $webgameInfo['type']; ?></span></dd>
+		                    <dd class="des"><span class="bg-green"><?php echo $webgameInfo['status']; ?></span></dd>
 		                    <dd class="s-btn"><a title="开始游戏" target="_blank" href="<?php echo $webgameInfo['url_server']; ?>" class="start-game-btn"></a></dd>
 		                </dl>
 		            </div>

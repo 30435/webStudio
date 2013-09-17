@@ -58,7 +58,7 @@
 		  <th align="center"><?php echo $this->fieldInfos['money_valid']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['account_time']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['handpay_manager']['name']; ?></th>
-		  <th align="center"><?php echo $this->fieldInfos['account_status']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['status']['name']; ?></th>
 		  <th  class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -77,7 +77,7 @@
 		  <td align="center"><?php echo $info['money_valid']; ?></td>
 		  <td align="center"><?php echo $info['account_time']; ?></td>
 		  <td align="center"><?php echo $info['handpay_manager']; ?></td>
-		  <td align="center"><?php echo $info['account_status']; ?></td>
+		  <td align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $url = $menu['url'] . '?id=' . $info['id'];?>
     		<a href='javascript: showLog("<?php echo $url; ?>"); void(0);'><?php echo $menu['name']; ?></a> |

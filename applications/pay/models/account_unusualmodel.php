@@ -29,7 +29,7 @@ class Account_unusualModel extends CommonModel
 			'orderid' => array('name' => '订单号'),
 			'orderid_plat' => array('name' => '平台订单号'),
 			'payment_code' => array('name' => '支付方式代码'),
-			'pay_type' => array('name' => '支付类型'),
+			'type' => array('name' => '支付类型'),
 			'webgame_code' => array('name' => '游戏代码'),
 			'server_id' => array('name' => '服务器ID'),
 			'server_role' => array('name' => '游戏角色'),
@@ -44,10 +44,10 @@ class Account_unusualModel extends CommonModel
 			'account_time' => array('name' => '充值时间'),
 			'account_time_valid' => array('name' => '实际充值时间'),
 			'account_data' => array('name' => '平台数据'),
-			'account_status' => array('name' => '充值状态'),
+			'status' => array('name' => '充值状态'),
 			'handpay_manager' => array('name' => '手工充值管理员')
 		);
-		$fieldInfos['fieldChanges'] = array('id', 'name', 'code', 'url_home', 'url_server', 'ispay', 'webgame_type', 'webgame_status');
+		$fieldInfos['fieldChanges'] = array('id', 'name', 'code', 'url_home', 'url_server', 'ispay', 'type', 'status');
 		
 		return $fieldInfos;
 	}

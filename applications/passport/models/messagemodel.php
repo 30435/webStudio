@@ -26,16 +26,16 @@ class MessageModel extends CommonModel
 			'id' => array('name' => '广告ID'),
 			'subject' => array('name' => '消息标题'),
 			'content' => array('name' => '消息内容'),
-			'message_type' => array('name' => '消息类型', 'infos' => $typeInfos),
+			'type' => array('name' => '消息类型', 'infos' => $typeInfos),
 			'target_group' => array('name' => '目标群组', 'infos' => $targetGroupInfos),
 			'start_time' => array('name' => '消息开始时间'),
 			'end_time' => array('name' => '消息结束时间'),
 			'add_time' => array('name' => '消息录入时间'),
 			'listorder' => array('name' => '排序'),
-			'message_status' => array('name' => '状态', 'infos' => array('0' => '<font class="red">终止</font>', '1' => '<font class="green">正常</font>')),
+			'status' => array('name' => '状态', 'infos' => array('0' => '<font class="red">终止</font>', '1' => '<font class="green">正常</font>')),
 		);
-		$fieldInfos['fieldList'] = array('id', 'subject', 'message_type', 'add_time', 'target_group', 'start_time', 'end_time', 'listorder', 'message_status');
-		$fieldInfos['fieldChanges'] = array('subject', 'message_type', 'add_time', 'target_group', 'start_time', 'end_time', 'listorder', 'message_status', 'content');
+		$fieldInfos['fieldList'] = array('id', 'subject', 'type', 'add_time', 'target_group', 'start_time', 'end_time', 'listorder', 'status');
+		$fieldInfos['fieldChanges'] = array('subject', 'type', 'add_time', 'target_group', 'start_time', 'end_time', 'listorder', 'status', 'content');
 		
 		return $fieldInfos;
 	}

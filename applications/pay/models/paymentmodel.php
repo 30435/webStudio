@@ -22,9 +22,9 @@ class PaymentModel extends CommonModel
 			'thumb' => array('name' => '图标'),
 			'listorder' => array('name' => '排序'),
 			'rate' => array('name' => '费率'),
-			'payment_status' => array('name' => '支付方式状态', 'infos' => array('0' => '<font class="red">不开启</font>', '1' => '<font class="green">开启</font>')),
+			'status' => array('name' => '支付方式状态', 'infos' => array('0' => '<font class="red">不开启</font>', '1' => '<font class="green">开启</font>')),
 		);
-		$fieldInfos['fieldChanges'] = array('id', 'name', 'code', 'thumb', 'listorder', 'rate', 'payment_status');
+		$fieldInfos['fieldChanges'] = array('id', 'name', 'code', 'thumb', 'listorder', 'rate', 'status');
 		
 		return $fieldInfos;
 	}

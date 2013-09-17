@@ -28,14 +28,14 @@ class Poster_spaceModel extends CommonModel
 		$fieldInfos['fields'] = array(
 			'id' => array('name' => '版位ID'),
 			'name' => array('name' => '版位名称'),
-			'space_type' => array('name' => '版位类型', 'infos' => $typeInfos),
+			'type' => array('name' => '版位类型', 'infos' => $typeInfos),
 			'width' => array('name' => '尺寸-宽'),
 			'height' => array('name' => '尺寸-高'),
 			'description' => array('name' => '描述'),
-			'space_status' => array('name' => '状态', 'infos' => array('0' => '<font class="red">终止</font>', '1' => '<font class="green">正常</font>')),
+			'status' => array('name' => '状态', 'infos' => array('0' => '<font class="red">终止</font>', '1' => '<font class="green">正常</font>')),
 		);
-		$fieldInfos['fieldList'] = array('id', 'name', 'space_type', 'width', 'height', 'description', 'space_status');
-		$fieldInfos['fieldChanges'] = array('name', 'space_type', 'width', 'height', 'description', 'space_status');
+		$fieldInfos['fieldList'] = array('id', 'name', 'type', 'width', 'height', 'description', 'status');
+		$fieldInfos['fieldChanges'] = array('name', 'type', 'width', 'height', 'description', 'status');
 		
 		return $fieldInfos;
 	}

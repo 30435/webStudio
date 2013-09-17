@@ -59,7 +59,7 @@
         <div class="top_link_web">
             <h3 class="top_link_tit_w">自主游戏</h3>
             <ul class="tl_list">
-			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 1) { continue; } ?>
+			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 1) { continue; } ?>
                 <li class="tl_item_w">
                     <a href="<?php echo $webgameInfo['url_home']; ?>" title="<?php echo $webgameInfo['name']; ?>" class="tl_item_w_link"  target="_blank" >
                     <img src="<?php echo $webgameInfo['pic_small']; ?>" alt="<?php echo $webgameInfo['name']; ?>" class="tl_item_w_pic" width="72px" height="60px" />
@@ -72,7 +72,7 @@
         <div class="top_link_web">
             <h3 class="top_link_tit_w">自主游戏</h3>
             <ul class="tl_list">
-			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 3) { continue; } ?>
+			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 3) { continue; } ?>
                 <li class="tl_item_w">
                     <a href="<?php echo $webgameInfo['url_home']; ?>" title="<?php echo $webgameInfo['name']; ?>" class="tl_item_w_link"  target="_blank" >
                     <img src="<?php echo $webgameInfo['pic_small']; ?>" alt="<?php echo $webgameInfo['name']; ?>" class="tl_item_w_pic" width="72px" height="60px" />
@@ -85,7 +85,7 @@
         <div class="top_link_mobile">
             <h3 class="top_link_tit_m">代理游戏</h3>
             <ul class="tl_list">
-  			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 2) { continue; } ?>
+  			<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 2) { continue; } ?>
 				<li class="tl_item_m">
 					<a href="<?php echo $webgameInfo['url_home']; ?>" title="<?php echo $webgameInfo['name']; ?>" class="tl_item_m_link"  target="_blank" >
                     <img src="<?php echo $webgameInfo['pic_middle']; ?>" alt="<?php echo $webgameInfo['name']; ?>" class="tl_item_m_pic" width="80px" height="80px">

@@ -62,8 +62,8 @@ class Webgame extends Custom_AdminController
 	 */
 	protected function _initInfo($webgameStatus = 0, $webgameType = 0)
 	{
-		$this->selectWebgameStatus = $this->_getSelectElement($this->fieldInfos['webgame_status']['infos'], 'key', 'value', $webgameStatus, true);
-		$this->selectWebgameType = $this->_getSelectElement($this->fieldInfos['webgame_type']['infos'], 'key', 'value', $webgameType, true);
+		$this->selectWebgameStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $webgameStatus, true);
+		$this->selectWebgameType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $webgameType, true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ class Webgame extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['webgame_status'], $info['webgame_type']);
+		$this->_initInfo($info['status'], $info['type']);
 		if ($isWrite) {
 			$info['code'] = !empty($this->currentInfo['code']) ? $this->currentInfo['code'] : $info['code'];
 			$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
@@ -95,8 +95,8 @@ class Webgame extends Custom_AdminController
 	{
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				$info['webgame_type'] = !empty($this->fieldInfos['webgame_type']['infos'][$info['webgame_type']]['value']) ? $this->fieldInfos['webgame_type']['infos'][$info['webgame_type']]['value'] : $info['webgame_type'];
-				$info['webgame_status'] = !empty($this->fieldInfos['webgame_status']['infos'][$info['webgame_status']]['value']) ? $this->fieldInfos['webgame_status']['infos'][$info['webgame_status']]['value'] : $info['webgame_status'];
+				$info['type'] = !empty($this->fieldInfos['type']['infos'][$info['type']]['value']) ? $this->fieldInfos['type']['infos'][$info['type']]['value'] : $info['type'];
+				$info['status'] = !empty($this->fieldInfos['status']['infos'][$info['status']]['value']) ? $this->fieldInfos['status']['infos'][$info['status']]['value'] : $info['status'];
 				$info['ispay'] = !empty($this->fieldInfos['ispay']['infos'][$info['ispay']]) ? $this->fieldInfos['ispay']['infos'][$info['ispay']] : $info['ispay'];
 
 				$infos[$key] = $info;

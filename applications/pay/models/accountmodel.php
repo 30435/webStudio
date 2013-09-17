@@ -29,7 +29,7 @@ class AccountModel extends CommonModel
 			'orderid' => array('name' => '订单号'),
 			'orderid_plat' => array('name' => '平台订单号'),
 			'payment_code' => array('name' => '支付方式代码'),
-			'pay_type' => array('name' => '支付类型'),
+			'type' => array('name' => '支付类型'),
 			'webgame_code' => array('name' => '游戏代码'),
 			'server_id' => array('name' => '服务器ID'),
 			'server_role' => array('name' => '游戏角色'),
@@ -44,10 +44,10 @@ class AccountModel extends CommonModel
 			'account_time' => array('name' => '充值时间'),
 			'account_time_valid' => array('name' => '实际充值时间'),
 			'account_data' => array('name' => '平台数据'),
-			'account_status' => array('name' => '充值状态'),
+			'status' => array('name' => '充值状态'),
 			'handpay_manager' => array('name' => '手工充值管理员')
 		);
-		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'payment_code', 'webgame_code', 'server_id', 'pay_userid', 'get_userid', 'get_username', 'mobile', 'payment_rate', 'money', 'money_valid_middle', 'money_valid', 'account_time', 'account_time_valid', 'account_status', 'hand_manager');
+		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'payment_code', 'webgame_code', 'server_id', 'pay_userid', 'get_userid', 'get_username', 'mobile', 'payment_rate', 'money', 'money_valid_middle', 'money_valid', 'account_time', 'account_time_valid', 'status', 'hand_manager');
 		
 		return $fieldInfos;
 	}

@@ -60,7 +60,7 @@ class Poster_space extends Custom_AdminController
 	 */
 	protected function _initInfo($spaceType = '')
 	{
-		$this->selectSpaceType = $this->_getSelectElement($this->fieldInfos['space_type']['infos'], 'key', 'value', $spaceType, true);
+		$this->selectSpaceType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $spaceType, true);
 	}
 
 	/**

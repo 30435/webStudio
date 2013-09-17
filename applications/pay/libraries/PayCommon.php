@@ -41,20 +41,20 @@ class PayCommon
 		$orderInfo = $this->frontController->accountModel->getInfo($where);
 
 		if (empty($orderInfo)) {
-			$returnInfo['account_status'] = '3';
+			$returnInfo['status'] = '3';
 			$this->frontController->accountModel->addInfo($returnInfo);
 		} else {
 			//$orderStatus = $orderInfo['status'];
 			//$getUserInfo = $this->validUserid($orderInfo['get_userid']);
 
-			if ($orderInfo['account_status'] == '0') {// && !empty($getUserInfo)) {
-				$returnInfo['account_status'] = '1';
+			if ($orderInfo['status'] == '0') {// && !empty($getUserInfo)) {
+				$returnInfo['status'] = '1';
 				$returnInfo['money_valid'] = $returnInfo['money_valid_middle'] * (1 - $orderInfo['payment_rate']);
 
 				$this->frontController->accountModel->editInfo($returnInfo, $where);
 				$this->_updateUserMoney($returnInfo['money_valid'], $returnInfo['money_valid_middle'], $orderInfo['get_username'], $orderInfo['get_userid']);
 			} else {
-				$returnInfo['account_status'] = '4';
+				$returnInfo['status'] = '4';
 				$this->frontController->_loadModel('pay', 'account_unusualModel');
 				$this->frontController->account_unusualModel->addInfo($returnInfo);
 			}
@@ -65,7 +65,7 @@ class PayCommon
 
 	protected function writeLog($orderInfo)
 	{
-		$orderInfo['account_status'] = '2';
+		$orderInfo['status'] = '2';
 		$this->frontController->_loadModel('pay', 'account_unusualModel');
 		$infos = $this->frontController->account_unusualModel->addInfo($orderInfo);
 	}

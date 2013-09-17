@@ -13,7 +13,7 @@ class frontpay extends Custom_Controller
 
 		$this->loginedUserInfo = $this->_checkUserLogin();
 		foreach ($this->paymentInfos as $code => $paymentInfo) {
-			if ($paymentInfo['payment_status'] == '0' && !in_array($this->loginedUserInfo['username'], $this->testUsers) && $this->method != 'respond') {
+			if ($paymentInfo['status'] == '0' && !in_array($this->loginedUserInfo['username'], $this->testUsers) && $this->method != 'respond') {
 				unset($this->paymentInfos[$code]);
 			}
 		}
@@ -92,7 +92,7 @@ class frontpay extends Custom_Controller
 			'get_username' => $orderInfo['username'],
 			'account_time' => $this->time,
 			'day' => date('Ymd', $this->time),
-			'account_status' => '0',
+			'status' => '0',
 		);
 
 		$this->_loadModel(APPCODE, 'accountModel');
@@ -121,8 +121,8 @@ class frontpay extends Custom_Controller
 		$params = array('frontController' => $this, 'paymentInfo' => $this->currentPayment);
 		$this->load->library($paymentCode, $params);
 		$respondInfo = $this->$paymentCode->respond();
-		if ($respondInfo['account_status'] === '1') {			
-			if ($respondInfo['pay_type'] == 1 && !empty($respondInfo['webgame_code']) && !empty($respondInfo['serverid'])) {
+		if ($respondInfo['status'] === '1') {			
+			if ($respondInfo['type'] == 1 && !empty($respondInfo['webgame_code']) && !empty($respondInfo['serverid'])) {
 				$this->load->library('session');
 				$payInfos = array(
 					'type' => 'respond',
@@ -145,7 +145,7 @@ class frontpay extends Custom_Controller
 				//$message = '成功充值到帐号<b>' . $respondInfo['get_username'] . '</b>  <b>' . $respondInfo['money_valid'] . '</b>元';
 				$this->load->view('payResult');
 			}
-		} else if ($respondInfo['account_status'] === '4') {
+		} else if ($respondInfo['status'] === '4') {
 			header('Location:' . $this->applicationInfos[1]['domain']);
 		} else {
 			$this->payResult = false;

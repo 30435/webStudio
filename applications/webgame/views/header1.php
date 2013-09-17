@@ -16,7 +16,7 @@
 	<div class="topbar_wrap cf" style="position:relative">
 		<a target="_blank" title="淘米网" class="topbar_logo" href="<?php echo $this->baseUrl; ?>">知金游戏</a>
 		<div class="topbar_nav cf">
-        <?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['webgame_type'] != 1) { continue; } ?>
+        <?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { if ($webgameInfo['type'] != 1) { continue; } ?>
 		    <a class="" href="<?php echo $webgameInfo['url_home']; ?>" target="_blank" title="<?php echo $webgameInfo['name']; ?>"><img src="<?php echo $webgameInfo['pic_small']; ?>" width="16px" height="16px"></img><?php echo $webgameInfo['name']; ?></a>
 		<?php } ?>
 		</div>

@@ -7,11 +7,11 @@
         <tr>
           <th width="80"><?php echo $this->fieldInfos['id']['name']; ?></th>
           <th><?php echo $this->fieldInfos['name']['name']; ?></th>
-		  <th><?php echo $this->fieldInfos['space_type']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['type']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['width']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['height']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['description']['name']; ?></th>
-		  <th><?php echo $this->fieldInfos['space_status']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['status']['name']; ?></th>
           <th width="150"><?php echo $this->lang->line('admin_operation'); ?></th>
         </tr>
       </thead>
@@ -20,11 +20,11 @@
         <tr>
           <td width="80" align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['name']; ?></td>
-		  <td align="center"><?php echo $info['space_type']; ?></td>
+		  <td align="center"><?php echo $info['type']; ?></td>
 		  <td align="center"><?php echo $info['width']; ?></td>
 		  <td align="center"><?php echo $info['height']; ?></td>
 		  <td align="center"><?php echo $info['description']; ?></td>
-		  <td align="center"><?php echo $info['space_status']; ?></td>
+		  <td align="center"><?php echo $info['status']; ?></td>
           <td align="center">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -56,8 +56,8 @@
         <td><input type="text" name="name" class="input-text" id="name" value="<?php if (isset($this->currentInfo['name'])) echo $this->currentInfo['name']; ?>" /></input></td>
       </tr>
       <tr>
-        <th><?php echo $this->fieldInfos['space_type']['name']; ?>:</th>
-        <td><select name="space_type" id="space_type"><?php echo $this->selectSpaceType; ?></select></td>
+        <th><?php echo $this->fieldInfos['type']['name']; ?>:</th>
+        <td><select name="type" id="type"><?php echo $this->selectSpaceType; ?></select></td>
       </tr>
 	  <tr>
 	    <th><?php echo $this->fieldInfos['width']['name']; ?>：</th>
@@ -68,8 +68,8 @@
 		<td class="y-bg"><input type="text" class="input-text" name="height" value="<?php if (isset($this->currentInfo['height'])) echo $this->currentInfo['height']; ?>" id="height"  size="30"/></td>
 	  </tr>
       <tr>
-        <th><?php echo $this->fieldInfos['space_status']['name']; ?></th>
-        <td><input type="radio" name="space_status" value="0" <?php if (!isset($this->currentInfo['space_status']) || empty($this->currentinfo['space_status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['space_status']['infos']['0']; ?> <label><input type="radio" name="space_status" value="1" <?php if (isset($this->currentInfo['space_status']) || !empty($this->currentinfo['space_status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['space_status']['infos']['1']; ?></td>
+        <th><?php echo $this->fieldInfos['status']['name']; ?></th>
+        <td><input type="radio" name="status" value="0" <?php if (!isset($this->currentInfo['status']) || empty($this->currentinfo['status'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['status']['infos']['0']; ?> <label><input type="radio" name="status" value="1" <?php if (isset($this->currentInfo['status']) || !empty($this->currentinfo['status'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['status']['infos']['1']; ?></td>
       </tr>
       <tr>
         <th><?php echo $this->fieldInfos['description']['name']; ?></th>

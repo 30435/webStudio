@@ -62,7 +62,7 @@ class Poster extends Custom_AdminController
 	protected function _initInfo($spaceId = 0, $adType = '')
 	{
 		$this->selectSpaceId = $this->_getSelectElement($this->spaceInfos, 'id', 'name', $spaceId, true);
-		$this->selectAdType = $this->_getSelectElement($this->fieldInfos['ad_type']['infos'], 'key', 'value', $adType, true);
+		$this->selectAdType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $adType, true);
 	}
 
 	/**

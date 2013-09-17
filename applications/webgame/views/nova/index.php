@@ -107,7 +107,7 @@
 		<!--<div class="data-main pr" id="data-h"><div class="pa data-box" id="dataMain" delayLoad="load_data()"></div></div>-->
     </div>
     <div class="friend-links tc"><span>友情链接：</span>
-		<?php $linkurlInfos = $controller->_getFrontInfos('passport', 'linkurl', 1, 4, array('linkurl_type =' => 'nova'), array(array('listorder', 'desc'))); foreach ($linkurlInfos['infos'] as $linkurlInfo) { ?>
+		<?php $linkurlInfos = $controller->_getFrontInfos('passport', 'linkurl', 1, 4, array('type =' => 'nova'), array(array('listorder', 'desc'))); foreach ($linkurlInfos['infos'] as $linkurlInfo) { ?>
 			<a href="<?php echo $linkurlInfo['url']; ?>" target="_blank"><?php echo $linkurlInfo['name']; ?></a> 
 		<?php } ?>
 	</div>

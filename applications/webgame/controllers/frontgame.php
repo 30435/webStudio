@@ -51,7 +51,7 @@ class frontgame extends Custom_Controller
 	protected function _checkWebgame($webgameCode, $isTestUser)
 	{
 		$webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
-		if (empty($webgameInfo) || $webgameInfo['webgame_type'] != 3) {
+		if (empty($webgameInfo) || $webgameInfo['type'] != 3) {
 			$this->_messageInfo('游戏有误！', $this->baseUrl);
 		}
 
@@ -59,7 +59,7 @@ class frontgame extends Custom_Controller
 			return $webgameInfo;
 		}
 
-		$webgameStatus = $webgameInfo['webgame_status'];
+		$webgameStatus = $webgameInfo['status'];
 		switch ($webgameStatus) {
 			case '0':
 				$this->_messageInfo('游戏已关闭', $this->baseUrl);
@@ -77,7 +77,7 @@ class frontgame extends Custom_Controller
 					$this->_messageInfo('游戏正在维护中，将于' . date('Y-m-d H:i:s', $webgameInfo['end_maintain']) . '开启!', $urlMainmain);
 				}
 
-				$data['webgame_status'] = '1';
+				$data['status'] = '1';
 				$where = array('code =' => $webgameInfo['code']);
 				$this->_loadModel(APPCODE, 'webgameModel');
 				$this->webgameModel->editInfo($data, $where);
@@ -105,7 +105,7 @@ class frontgame extends Custom_Controller
 			return $serverInfo;
 		}
 		
-		$serverStatus = $serverInfo['server_status'];
+		$serverStatus = $serverInfo['status'];
 		$statusInfo = array('0' => '服务器已关闭', '1' => '', '2' => '服务器正在维护', '3' => '服务器即将开放', '4' => '服务器爆满,请到最新开放的服务器玩游戏');
 		switch ($serverStatus) {
 			case '1':
@@ -113,7 +113,7 @@ class frontgame extends Custom_Controller
 				break;
 			case '3':
 				if (isset($serverInfo['time_start']) && $this->time > $serverInfo['time_start']) {
-					$data['server_status'] = '1';
+					$data['status'] = '1';
 					$where = array('id =' => $serverId);
 					$this->_loadModel(APPCODE, 'serverModel');
 					$this->webgameModel->editInfo($data, $where);
@@ -131,7 +131,7 @@ class frontgame extends Custom_Controller
 					$this->_messageInfo('服务器正在维护中，将于' . date('Y-m-d H:i:s', $serverInfo['end_maintain']) . '开启!', $urlMainmain);
 				}
 
-				$data['server_status'] = '1';
+				$data['status'] = '1';
 				$where = array('id =' => $serverId);
 				$this->_loadModel(APPCODE, 'serverModel');
 				$this->webgameModel->editInfo($data, $where);
@@ -183,7 +183,7 @@ class frontgame extends Custom_Controller
 			'active_day' => $activeDay,
 			'active_nat_time' => $activeNatTime,
 			'active_nat_day' => $activeNatDay,
-			'record_type' => $recordType,
+			'type' => $recordType,
 		);
 		$data = array_merge($data, $dataExt);
 		$this->recordModel->addInfo($data);

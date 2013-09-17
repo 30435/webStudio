@@ -61,7 +61,7 @@ class Linkurl extends Custom_AdminController
 	 */
 	protected function _initInfo($linkurlType = '')
 	{
-		$this->selectLinkurlType = $this->_getSelectElement($this->fieldInfos['linkurl_type']['infos'], 'key', 'value', $linkurlType, true);
+		$this->selectLinkurlType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $linkurlType, true);
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Linkurl extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['linkurl_type']);
+		$this->_initInfo($info['type']);
 
 		if ($isWrite) {
 			$info['add_time'] = !empty($info['add_time']) ? strtotime($info['add_time']) : 0;
@@ -93,7 +93,7 @@ class Linkurl extends Custom_AdminController
 	{
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				$info['linkurl_type'] = !empty($this->fieldInfos['linkurl_type']['infos'][$info['linkurl_type']]['value']) ? $this->fieldInfos['linkurl_type']['infos'][$info['linkurl_type']]['value'] : $info['linkurl_type'];
+				$info['type'] = !empty($this->fieldInfos['type']['infos'][$info['type']]['value']) ? $this->fieldInfos['type']['infos'][$info['type']]['value'] : $info['type'];
 				$info['logo'] = !empty($info['logo']) ? '<img src="' . $info['logo'] . '" width="60px" height="30px" />' : '';
 				$infos[$key] = $info;
 			}

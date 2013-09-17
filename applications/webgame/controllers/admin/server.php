@@ -63,7 +63,7 @@ class Server extends Custom_AdminController
 	protected function _initInfo($webgameCode = '', $serverStatus = 0)
 	{
 		$this->selectWebgame = $this->_getSelectElement($this->webgameInfos, 'code', 'name', $webgameCode, true);
-		$this->selectServerStatus = $this->_getSelectElement($this->fieldInfos['server_status']['infos'], 'key', 'value', $serverStatus, true);
+		$this->selectServerStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $serverStatus, true);
 	}
 
 	/**
@@ -76,7 +76,7 @@ class Server extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['webgame_code'], $info['server_status']);
+		$this->_initInfo($info['webgame_code'], $info['status']);
 		if ($isWrite) {
 			$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
 			$info['end_maintain'] = !empty($info['end_maintain']) ? strtotime($info['end_maintain']) : 0;
@@ -95,7 +95,7 @@ class Server extends Custom_AdminController
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
 				$info['webgame_code'] = !empty($this->webgameInfos[$info['webgame_code']]['name']) ? $this->webgameInfos[$info['webgame_code']]['name'] : $info['webgame_code'];
-				$info['server_status'] = !empty($this->fieldInfos['server_status']['infos'][$info['server_status']]['value']) ? $this->fieldInfos['server_status']['infos'][$info['server_status']]['value'] : $info['server_status'];
+				$info['status'] = !empty($this->fieldInfos['status']['infos'][$info['status']]['value']) ? $this->fieldInfos['status']['infos'][$info['status']]['value'] : $info['status'];
 				$info['ispay'] = !empty($this->fieldInfos['ispay']['infos'][$info['ispay']]) ? $this->fieldInfos['ispay']['infos'][$info['ispay']] : $info['ispay'];
 
 				$infos[$key] = $info;
