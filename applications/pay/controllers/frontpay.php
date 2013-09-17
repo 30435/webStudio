@@ -87,9 +87,9 @@ class frontpay extends Custom_Controller
 			'payment_code' => $orderInfo['paymentCode'],
 			'payment_rate' => $orderInfo['paymentRate'],
 			'money' => $orderInfo['money'],
-			'get_userid' => $orderInfo['getuserid'],
-			'pay_userid' => $orderInfo['payuserid'],
-			'get_username' => $orderInfo['username'],
+			'userid' => $orderInfo['getuserid'],
+			'operating_userid' => $orderInfo['operating_userid'],
+			'username' => $orderInfo['username'],
 			'account_time' => $this->time,
 			'day' => date('Ymd', $this->time),
 			'status' => '0',
@@ -127,13 +127,13 @@ class frontpay extends Custom_Controller
 				$payInfos = array(
 					'type' => 'respond',
 					'orderidPlat' => $respondInfo['orderid'],
-					'username' => $respondInfo['get_username'],
+					'username' => $respondInfo['username'],
 					'money' => $respondInfo['money_valid'],
 					'webgameCode' => $respondInfo['webgame_code'],
 					'serverId' => $respondInfo['serverid'],
-					'userid' => $respondInfo['get_userid'],
+					'userid' => $respondInfo['userid'],
 					'serverRole' => $respondInfo['server_role'],
-					'usernamePay' => $respondInfo['get_username'],
+					'usernamePay' => $respondInfo['username'],
 					'moneyMiddle' => $respondInfo['money_valid_middle'],
 				);
 				$this->session->set_userdata('payInfos', $payInfos);
@@ -142,7 +142,7 @@ class frontpay extends Custom_Controller
 				$this->payResult = true;
 				$this->message = '充值成功！';
 				$this->respondInfo = $respondInfo;
-				//$message = '成功充值到帐号<b>' . $respondInfo['get_username'] . '</b>  <b>' . $respondInfo['money_valid'] . '</b>元';
+				//$message = '成功充值到帐号<b>' . $respondInfo['username'] . '</b>  <b>' . $respondInfo['money_valid'] . '</b>元';
 				$this->load->view('payResult');
 			}
 		} else if ($respondInfo['status'] === '4') {

@@ -385,7 +385,7 @@ class frontgame extends Custom_Controller
 			return false;
 		}
 
-		if ($orderInfo['get_username'] != $username || floor($orderInfo['money_valid']) != $money
+		if ($orderInfo['username'] != $username || floor($orderInfo['money_valid']) != $money
 			|| $orderInfo['webgame_code'] != $webgameCode || $orderInfo['serverid'] != $serverId) {
 			return false;
 		}

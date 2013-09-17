@@ -35,9 +35,9 @@
                             <td width="20%"><?php echo date('Y-m-d H:i:s', $info['account_time']); ?></td>
                             <td width="15%"><?php echo $info['orderid']; ?></td>
                             <td width="20%"><?php echo $info['money']; ?>（米币）</td>
-                            <td width="25%"><?php echo $info['get_username']; ?></td>
-                            <td width="10%"><?php echo $info['get_username']; ?></td>
-                            <td width="10%"><?php echo $info['get_username']; ?></td>
+                            <td width="25%"><?php echo $info['username']; ?></td>
+                            <td width="10%"><?php echo $info['username']; ?></td>
+                            <td width="10%"><?php echo $info['username']; ?></td>
                         </tr>
 					<?php } } ?>
                     </tbody>

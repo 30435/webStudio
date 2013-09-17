@@ -18,8 +18,8 @@ class PayModel extends CommonModel
 			'id' => array('name' => '支付ID'),
 			'orderid' => array('name' => '订单号'),
 			'orderid_account' => array('name' => '充值订单号'),
-			'get_username' => array('name' => '目标用户名'),
-			'get_userid' => array('name' => '目标用户ID'),
+			'username' => array('name' => '目标用户名'),
+			'userid' => array('name' => '目标用户ID'),
 			'userid' => array('name' => '用户ID'),
 			'username' => array('name' => '用户名'),
 			'money' => array('name' => '支付金额'),
@@ -28,7 +28,7 @@ class PayModel extends CommonModel
 			'server_role' => array('name' => '游戏角色'),
 			'pay_time' => array('name' => '支付时间'),
 		);
-		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'orderid_account', 'get_username', 'get_userid', 'userid', 'username', 'money', 'webgame_code', 'server_id', 'server_role', 'pay_time');
+		$fieldInfos['fieldChanges'] = array('id', 'orderid', 'orderid_account', 'username', 'userid', 'userid', 'username', 'money', 'webgame_code', 'server_id', 'server_role', 'pay_time');
 		
 		return $fieldInfos;
 	}

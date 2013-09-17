@@ -100,14 +100,14 @@ $(document).ready(function(){
 				<input type="hidden" name="paymonthId" id="paymonthId" value="<?php if (isset($this->paymonthInfo['id'])) echo $this->paymonthInfo['id']; ?>" />
 
 				<input type="hidden" name="payType" id="payType" value="<?php echo $this->payType; ?>" />
-				<input type="hidden" name="payUserId" id="payUserId" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
+				<input type="hidden" name="operatingUserId" id="operatingUserId" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
 
 				<ul class="form_list">
 					<li class="form_list_li">
 						<label class="lbl">充值的诺瓦号：</label>
 						<div class="txt_wrap">
 							<input  class="txt txt_num" name="username" id="username" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>" maxlength="15"/>
-							<input type="hidden" name="get_userid" id="getuserid" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
+							<input type="hidden" name="userid" id="userid" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
 							<div class="txt_tips"><span id="usernameTip"></span></div>
 						</div>
 					</li>

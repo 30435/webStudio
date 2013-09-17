@@ -51,7 +51,7 @@
 		  <th align="center"><?php echo $this->fieldInfos['payment_code']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['webgame_code']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['server_id']['name']; ?> </th>
-		  <th align="center"><?php echo $this->fieldInfos['get_username']['name']; ?> </th>
+		  <th align="center"><?php echo $this->fieldInfos['username']['name']; ?> </th>
 		  <th align="center"><?php echo $this->fieldInfos['mobile']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['money']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['payment_rate']['name']; ?></th>
@@ -70,7 +70,7 @@
 		  <td align="center"><?php echo $info['payment_code']; ?></td>
 		  <td align="center"><?php echo $info['webgame_code']; ?></td>
 		  <td align="center"><?php echo $info['server_id']; ?></td>
-		  <td align="center"><?php echo $info['get_username']; ?></td>
+		  <td align="center"><?php echo $info['username']; ?></td>
 		  <td align="center"><?php echo $info['mobile']; ?></td>
 		  <td align="center"><?php echo $info['money']; ?></td>
 		  <td align="center"><?php echo $info['payment_rate']; ?></td>

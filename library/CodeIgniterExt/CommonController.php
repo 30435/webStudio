@@ -58,7 +58,7 @@ class CommonController extends CI_Controller
 		$this->load->library('session');
 		$targetCheckCode = $this->session->userdata('checkcode');
 		$checkCode = $this->input->get_post('checkcode');
-//echo $checkCode . '--' . $targetCheckCode;
+
 		$isValid = $checkCode == $targetCheckCode ? true : false;
 		$isAjax = $this->input->get('isajax');
 		if ($isAjax == 'yes') {

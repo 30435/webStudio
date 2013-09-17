@@ -45,14 +45,14 @@ class PayCommon
 			$this->frontController->accountModel->addInfo($returnInfo);
 		} else {
 			//$orderStatus = $orderInfo['status'];
-			//$getUserInfo = $this->validUserid($orderInfo['get_userid']);
+			//$getUserInfo = $this->validUserid($orderInfo['userid']);
 
 			if ($orderInfo['status'] == '0') {// && !empty($getUserInfo)) {
 				$returnInfo['status'] = '1';
 				$returnInfo['money_valid'] = $returnInfo['money_valid_middle'] * (1 - $orderInfo['payment_rate']);
 
 				$this->frontController->accountModel->editInfo($returnInfo, $where);
-				$this->_updateUserMoney($returnInfo['money_valid'], $returnInfo['money_valid_middle'], $orderInfo['get_username'], $orderInfo['get_userid']);
+				$this->_updateUserMoney($returnInfo['money_valid'], $returnInfo['money_valid_middle'], $orderInfo['username'], $orderInfo['userid']);
 			} else {
 				$returnInfo['status'] = '4';
 				$this->frontController->_loadModel('pay', 'account_unusualModel');
