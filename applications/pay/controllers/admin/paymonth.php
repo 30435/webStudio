@@ -42,6 +42,7 @@ class Paymonth extends Custom_AdminController
 	 */
 	public function edit()
 	{
+		$this->_listorderExt();
 		$this->_edit();
 	}
 

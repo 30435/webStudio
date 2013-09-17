@@ -11,7 +11,6 @@
     <table width="100%" cellspacing="0">
       <thead>
 		<tr>
-    	  <th align="center"><input type="checkbox" value="" id="check_box" onclick="selectall('mulIds[]');"></th>
 		  <th><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['id']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
@@ -24,7 +23,6 @@
       <tbody>
 	  <?php if (is_array($this->infos) && !empty($this->infos)) { foreach ($this->infos as $info) { ?>
         <tr>
-		  <td align="center"><input type="checkbox" name="mulIds[]" value="<?php echo $info['id']; ?>"></td>
 		  <td align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['name']; ?></td>
@@ -40,7 +38,7 @@
       <?php } } ?>
       </tbody>
     </table>
-    <div class="btn"><label for="check_box">全选/取消</label><input type="submit" class="button" name="dosubmit" value="排序" /></div>
+    <div class="btn"><input type="submit" class="button" name="dosubmit" value="排序" /></div>
   </form>
   <div id="pages"> <?php echo $this->pageStr; ?></div>
 </div>

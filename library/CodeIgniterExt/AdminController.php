@@ -200,7 +200,7 @@ class AdminController extends Custom_Controller
 		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
 		$config['next_link'] = '&gt;&gt;';
 		$config['prev_link'] = '&lt;&lt;';
-		$config['uri_segment'] = 4;
+		//$config['uri_segment'] = 4;
 		$config['cur_tag_open'] = '<span>';
 		$config['cur_tag_close'] = '</span>';
 		$config['page_query_string'] = TRUE;
@@ -307,9 +307,11 @@ class AdminController extends Custom_Controller
 		if ($this->form_validation->run() == false) {
 			$this->load->view($this->template);
 		} else {
+			$data = array();
 			foreach ($this->fieldChanges as $field) {
 				$data[$field] = $this->input->post($field);
 			}
+
 			$data = $this->_formatInfo($data, true);
 			$editResult = $this->currentModel->editInfo($data, array('id' => $this->id));
 			
@@ -474,6 +476,7 @@ class AdminController extends Custom_Controller
 		
 			@$this->pagination->suffix .= strpos($this->pagination->suffix , '?') !== false ? $urlStr : '?' . $urlStr;
 		}
+		@$this->pagination->suffix = trim(trim($this->pagination->suffix), '?');
 	}
 		
 	/**

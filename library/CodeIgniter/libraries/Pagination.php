@@ -278,7 +278,7 @@ class CI_Pagination {
 					}
 					else
 					{
-						$n = ($i == $base_page) ? '' : $i;
+						$n = $i;//($i == $base_page) ? '' : $i;
 
 						if ($n == '' && $this->first_url != '')
 						{

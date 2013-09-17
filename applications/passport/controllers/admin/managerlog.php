@@ -135,13 +135,13 @@ class Managerlog extends Custom_AdminController
 		$urlStr = '';
 
 		$startTime = $this->input->get('start_time');
-		$endTime = $this->input->get('end_time') . ' 23:59:59';
-		if (!empty($$startTime) || !empty($endTime)) {
-			$whereArray = empty($$startTime) ? $whereArray : array_merge($whereArray, array('inputtime >=' => strtotime($$startTime)));
+		$endTime = !empty($this->input->get('end_time')) ? $this->input->get('end_time') . ' 23:59:59' : '';
+		if (!empty($startTime) || !empty($endTime)) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array('inputtime >=' => strtotime($startTime)));
 			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array('inputtime <=' => strtotime($endTime)));
 
-			$urlStr .= empty($startTime) ? '' : '&statr_time=' . $startTime;
-			$urlStr .= empty($endTime) ? '' : '&end_time=' . $endTime;
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
 		}
 
 		if (empty($this->showCurrent)) {

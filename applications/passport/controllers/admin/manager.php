@@ -111,12 +111,13 @@ class Manager extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->selectRole = $this->_getSelectElement($this->roleInfos, 'id', 'name', $info['roleid']);
-
-		if ($isWrite) {
+		if (!$isWrite) {
+			$this->selectRole = $this->_getSelectElement($this->roleInfos, 'id', 'name', $info['roleid']);
+		} else {
 			$info['username'] = !empty($this->currentInfo['username']) ? $this->currentInfo['username'] : $info['username'];
-			$info['createtime'] = $this->time;
+			$info['createtime'] = empty($this->currentInfo['createtime']) ? $this->time : $this->currentInfo['createtime'];
 			$password = $this->input->post('password');
+
 			if (!empty($password)) {
 				$passwordInfo = $this->_getPassword($password);
 				$info['password'] = $passwordInfo['password'];

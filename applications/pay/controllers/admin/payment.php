@@ -42,6 +42,7 @@ class Payment extends Custom_AdminController
 	 */
 	public function edit()
 	{
+		$this->_listorderExt();
 		$this->_edit();
 	}
 
@@ -75,7 +76,9 @@ class Payment extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-
+		if ($isWrite) {
+			$info['code'] = !empty($this->currentInfo['code']) ? $this->currentInfo['code'] : $info['code'];
+		}
 		return $info;
 	}
 		

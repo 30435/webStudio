@@ -215,7 +215,7 @@ abstract class CmsContent extends Custom_AdminController
 		$info = $this->currentModel->getInfo(array('catid' => $this->catid));
 		
 		if ($this->form_validation->run() == false) {
-			$this->currentInfo = $this->_formatInfo($info);
+			//$this->currentInfo = $this->_formatInfo($info);
 			$this->load->view('cms/spage');
 		} else {
 			foreach ($this->fieldChanges as $field) {

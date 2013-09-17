@@ -11,7 +11,6 @@
     <table width="100%" cellspacing="0">
       <thead>
 		<tr>
-    	  <th align="center"><input type="checkbox" value="" id="check_box" onclick="selectall('mulIds[]');"></th>
 		  <th><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['id']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['name']['name']; ?></th>
@@ -23,7 +22,6 @@
       <tbody>
 	  <?php if (is_array($this->infos) && !empty($this->infos)) { foreach ($this->infos as $info) { ?>
         <tr>
-		  <td align="center"><input type="checkbox" name="mulIds[]" value="<?php echo $info['id']; ?>"></td>
 		  <td align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['name']; ?></td>
@@ -38,7 +36,7 @@
       <?php } } ?>
       </tbody>
     </table>
-    <div class="btn"><label for="check_box">全选/取消</label><input type="submit" class="button" name="dosubmit" value="排序" /></div>
+    <div class="btn"><input type="submit" class="button" name="dosubmit" value="排序" /></div>
   </form>
   <div id="pages"> <?php echo $this->pageStr; ?></div>
 </div>
@@ -51,6 +49,7 @@
 <!--
 $(function(){
   $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+  <?php if ($this->method == 'add') { ?>
   $("#code").formValidator({onshow:"请输入2-10为小写字母的支付方式代码",onfocus:"请输入支付方式代码"}).regexValidator({regexp:"^[a-z]{2,10}$",onerror:"2-10个小写字母"}).inputValidator({min:1,onerror:"请输入支付方式代码"}).ajaxValidator({
 	type : "get",
 	url : "",
@@ -64,6 +63,7 @@ $(function(){
 		if( data == "1" ){return true;}else{return false;}
 	},buttons: $("#dosubmit"),onerror : "支付方式代码已存在",onwait : "正在连接，请稍候。"}
   );
+  <?php } ?>
   $("#name").formValidator({onshow:"请输入支付方式名称",onfocus:"支付方式名称不能为空。"}).inputValidator({min:1,max:999,onerror:"支付方式名称不能为空。"});
 })
 //-->
@@ -107,37 +107,6 @@ $(function(){
   </form>
   </div>
 </div>
-<script type="text/javascript">
-Calendar.setup({
-    weekNumbers: true,
-    inputField : "time_start",
-    trigger    : "time_start",
-    dateFormat: "%Y-%m-%d  %H:%M",
-    showTime: true,
-    minuteStep: 1,
-    onSelect   : function() {this.hide();}
-});
-
-Calendar.setup({
-    weekNumbers: true,
-    inputField : "start_maintain",
-    trigger    : "start_maintain",
-    dateFormat: "%Y-%m-%d  %H:%M",
-    showTime: true,
-    minuteStep: 1,
-    onSelect   : function() {this.hide();}
-});
-
-Calendar.setup({
-    weekNumbers: true,
-    inputField : "end_maintain",
-    trigger    : "end_maintain",
-    dateFormat: "%Y-%m-%d  %H:%M",
-    showTime: true,
-    minuteStep: 1,
-    onSelect   : function() {this.hide();}
-});
-</script>
 <?php } ?>
 </body>
 </html>
