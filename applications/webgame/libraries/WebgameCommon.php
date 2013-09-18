@@ -17,7 +17,7 @@ class WebgameCommon
 		}
 
 		$this->webgameInfo = $params['webgameInfo'];
-		$this->serverInfo = $params['serverInfo'];
+		$this->serverInfo = isset($params['serverInfo']) ? $params['serverInfo'] : array();
 		if (empty($this->webgameInfo)) {
 			return false;
 		}

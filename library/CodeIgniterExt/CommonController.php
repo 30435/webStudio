@@ -587,10 +587,10 @@ class CommonController extends CI_Controller
 		$info = $this->member_payModel->getInfo($where);
 
 		if ($isLock) {
-			$data =  array('locktime' => $this->time);
+			$data = array('locktime' => $this->time);
 			$this->member_payModel->editInfo($data, $where);
 
-			$info = $this->time - $info['locktime'] < 30 ? array() : $info;
+			$info = $this->time - $info['locktime'] < 0 ? array() : $info;
 		}
 		return $info;
 	}

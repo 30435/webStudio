@@ -39,7 +39,7 @@ class Nova extends WebgameCommon
 	protected function _payGame($payIp, $payKey)
 	{
 		$gold = $this->params['money'] * $this->webgameInfo['coin_rate'];
-		$domain = $this->serverInfo['server_mark'];
+		$domain = '';//$this->serverInfo['server_mark'];
 		$signStr = urlencode($this->username) . '_' . $gold . '_' . $this->params['orderId'] . '_' . $domain . '_' . $payKey;
 		$sign = strtolower(md5($signStr));
 

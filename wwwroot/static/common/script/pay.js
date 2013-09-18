@@ -8,10 +8,6 @@ function setPayment(paymentStr) //paymentCode, paymentName, description)
 	$("#paymentCode").val(paymentStr.code);
 	$("#paymentRate").val(paymentStr.rate);
 	$("#payTypeSelect").show();
-
-	if (paymentStr.code == 'myself') {
-		//$('#payButton').attr('href', 'javascript: payChange();void(0);');
-	}
 }
 
 function paysubmit()
@@ -19,7 +15,6 @@ function paysubmit()
 	var paymentCode = $('#paymentCode').val();
 	var paymentRate = $('#paymentRate').val();
 	var username = $('#username').val();
-	var userid = $('#userid').val();
 	var confirmusername = $('#confirmusername').val();
 	var money = $('#money').val();
 	var payType = $("#payType").val();
@@ -32,7 +27,7 @@ function paysubmit()
 	$.ajax({
 		type: "post", 
 		url: payUrl + 'frontpay/pay',
-		data: "paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&userid=' + userid + '&payType=' + payType + '&money=' + money + '&webgameCode=' + webgameCode + '&serverId=' + serverId + '&serverRole=' + serverRole + '&paymonthId=' + paymonthId,
+		data: "paymentCode=" + paymentCode + '&paymentRate=' + paymentRate + '&username=' + username + '&payType=' + payType + '&money=' + money + '&webgameCode=' + webgameCode + '&serverId=' + serverId + '&serverRole=' + serverRole + '&paymonthId=' + paymonthId,
 			  
 		success: function (data) {
 			if (data == 'error') {
@@ -133,7 +128,7 @@ function checkServerUser()
 function confirmPay()
 {
 	var orderStr = $('#orderStr').val();
-	alert(payUrl + 'frontpay/confirmPay?orderStr=' + orderStr);
+	//alert(payUrl + 'frontpay/confirmPay?orderStr=' + orderStr);
 	$.ajax({    
 		type: "post", 
 		url: payUrl + 'frontpay/confirmPay',

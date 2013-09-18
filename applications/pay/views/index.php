@@ -104,7 +104,6 @@ $(document).ready(function(){
 						<label class="lbl">充值的诺瓦号：</label>
 						<div class="txt_wrap">
 							<input  class="txt txt_num" name="username" id="username" value="<?php if (!empty($this->loginedUserInfo['username'])) { echo $this->loginedUserInfo['username']; } ?>" maxlength="15"/>
-							<input type="hidden" name="userid" id="userid" value="<?php if (!empty($this->loginedUserInfo['userid'])) { echo $this->loginedUserInfo['userid']; } ?>" />
 							<div class="txt_tips"><span id="usernameTip"></span></div>
 						</div>
 					</li>
@@ -142,7 +141,7 @@ $(document).ready(function(){
 						<label class="lbl">选择开通时长：</label>
 						<div class="radio_wrap">
 							<?php foreach ($this->webgamePaymonthInfos as $webgamePaymonthInfo) { $checkedMark = $this->paymonthInfo['id'] == $webgamePaymonthInfo['id'] ? ' checked="checked"' : ''; ?>
-							<input type="radio" value="<?php echo $webgamePaymonthInfo['money']; ?>" id="radio_group_1_<?php echo $i; ?>" name="mb_usage" class="rdo rmb_num" <?php echo $checkedMark; ?> onclick="$('#money').val(this.value); $('#moneyShow').text(this.value); " />
+							<input type="radio" value="<?php echo $webgamePaymonthInfo['money']; ?>" id="radio_group_1_<?php echo $i; ?>" name="mb_usage" class="rdo rmb_num" <?php echo $checkedMark; ?> onclick="paymonthMoney(this.value);" />
 							<label for="radio_group_1_<?php echo $i; ?>"><?php echo $webgamePaymonthInfo['money'] . '元开通' . $webgamePaymonthInfo['month'] . '月'; ?></label>
 							<?php if ($i / 2 == 0) echo '<br />';  $i++; }?>
 						</div>
@@ -189,5 +188,15 @@ $("#money").change( function() {
 	$("#moneyShow").text($("#money").val());
 });
 setPayment(<?php echo $this->showPayment; ?>);
+<?php if ($this->payType == 'topaymonth') { ?>
+function paymonthMoney(money)
+{
+	var paymentRate = $("#paymentRate").val();
+	var validMoney = Math.ceil(money / (1 - paymentRate));
+	$('#money').val(validMoney); 
+	$('#moneyShow').text(validMoney);
+}
+paymonthMoney(<?php echo $this->paymonthInfo['money'];?>);
+<?php } ?>
 </script>
 <?php echo $this->load->view('footer'); ?>

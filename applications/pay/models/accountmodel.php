@@ -33,6 +33,7 @@ class AccountModel extends CommonModel
 			'webgame_code' => array('name' => '游戏代码'),
 			'server_id' => array('name' => '服务器ID'),
 			'server_role' => array('name' => '游戏角色'),
+			'paymonth_id' => array('name' => '包月服务ID'),
 			'pay_userid' => array('name' => '充值账号'),
 			'userid' => array('name' => '目标账号'),
 			'username' => array('name' => '目标用户名'),
