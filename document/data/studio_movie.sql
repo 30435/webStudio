@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-16 11:03:49
+-- 生成日期: 2013-09-22 14:00:55
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `sm_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
-  `parentdir` varchar(100) NOT NULL COMMENT '上级目录',
   `image` varchar(100) NOT NULL,
   `parentid` mediumint(9) NOT NULL DEFAULT '0' COMMENT '父栏目ID',
   `modelid` smallint(6) NOT NULL DEFAULT '1' COMMENT '模型ID',
@@ -42,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `sm_category` (
   `meta_title` varchar(100) NOT NULL,
   `meta_keywords` varchar(200) NOT NULL COMMENT '栏目关键字',
   `meta_description` varchar(300) NOT NULL COMMENT '栏目描述',
-  `urlrule` varchar(20) NOT NULL COMMENT '栏目URL',
   `ishtml` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示 1不显示 0 显示',
   PRIMARY KEY (`id`),
   KEY `catname` (`catname`,`parentid`)

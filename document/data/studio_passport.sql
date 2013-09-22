@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-18 08:42:41
+-- 生成日期: 2013-09-22 14:00:48
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `sp_admin_manager` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '管理员ID',
   `username` varchar(20) NOT NULL COMMENT '管理员帐号',
-  `truename` varchar(30) NOT NULL,
+  `truename` varchar(30) NOT NULL DEFAULT '',
   `password` char(32) NOT NULL COMMENT '管理员密码',
   `roleid` smallint(5) unsigned NOT NULL COMMENT '管理员角色',
   `email` varchar(40) NOT NULL COMMENT '管理员E-mail',
@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `sp_admin_manager` (
 --
 
 INSERT INTO `sp_admin_manager` (`id`, `username`, `truename`, `password`, `roleid`, `email`, `encrypt`, `createtime`, `loginnum`, `lastip`, `lasttime`, `islock`, `handpay_key`, `handpay_en`) VALUES
-(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 139, '127.0.0.1', 1379483457, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
-(2, 'wangcan', 'wang', '29508d34d7437cdfde48f5b4a9b668c8', 3, 'eee@test.com', 'hkKv5M', 1379388042, 21, '127.0.0.1', 1379468412, '1', '', '');
+(1, 'wangcanliang', '', '04ffd28d0a85e2050db77cbeeaa7d8ac', 1, '0', 'l9rIUD', 1361149565, 141, '127.0.0.1', 1379843872, '1', '2f5a45a93f1bb1824dbb649e85e3753d', 'tE4RTF'),
+(2, 'wangcan', 'wang', '29508d34d7437cdfde48f5b4a9b668c8', 3, 'eee@test.com', 'hkKv5M', 1379388042, 23, '127.0.0.1', 1379838410, '1', '', '');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_managerlog` (
   `ip` varchar(17) NOT NULL COMMENT '操作IP',
   `inputtime` int(10) unsigned NOT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=72 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=80 ;
 
 --
 -- 转存表中的数据 `sp_admin_managerlog`
@@ -150,7 +150,15 @@ INSERT INTO `sp_admin_managerlog` (`id`, `userid`, `username`, `roleid`, `role_n
 (68, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:7:{s:2:"id";b:0;s:4:"name";s:9:"电信卡";s:4:"code";b:0;s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:2:"14";s:4:"code";s:9:"ybtelecom";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:0:"";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399479),
 (69, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{s:4:"name";s:9:"电信卡";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399725),
 (70, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:5:{s:4:"name";s:9:"电信卡";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399733),
-(71, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:6:{s:4:"name";s:9:"电信卡";s:4:"code";s:6:"ybtele";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399853);
+(71, 2, 'wangcan', 3, '管理员', '129', '编辑支付方式', 'a:6:{s:4:"name";s:9:"电信卡";s:4:"code";s:6:"ybtele";s:5:"thumb";b:0;s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'a:8:{s:2:"id";s:1:"4";s:4:"code";s:6:"ybtele";s:4:"name";s:9:"电信卡";s:11:"description";s:25:"电信卡<br />\n电信卡";s:5:"thumb";s:1:"0";s:9:"listorder";s:2:"10";s:4:"rate";s:4:"0.04";s:6:"status";s:1:"1";}', 'edit', '127.0.0.1', 1379399853),
+(72, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"编辑配置";s:8:"parentid";s:3:"120";s:8:"app_code";s:3:"pay";s:10:"controller";s:6:"config";s:6:"method";s:6:"change";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"2";}', 'a:10:{s:2:"id";s:3:"133";s:4:"name";s:12:"编辑配置";s:8:"parentid";s:3:"120";s:8:"app_code";s:3:"pay";s:10:"controller";s:6:"config";s:6:"method";s:6:"change";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"3";}', 'edit', '127.0.0.1', 1379819280),
+(73, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"活动奖励";s:8:"parentid";s:3:"121";s:8:"app_code";s:3:"pay";s:10:"controller";s:10:"handcharge";s:6:"method";s:8:"listinfo";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"4";}', 'a:10:{s:2:"id";s:3:"135";s:4:"name";s:12:"活动奖励";s:8:"parentid";s:3:"121";s:8:"app_code";s:3:"pay";s:10:"controller";s:10:"handcharge";s:6:"method";s:8:"listinfo";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1379823533),
+(74, 1, 'wangcanliang', 1, '超级管理员', '33', '删除角色', 'a:10:{s:2:"id";s:2:"89";s:4:"name";s:18:"内容相关设置";s:8:"parentid";s:1:"5";s:8:"app_code";s:7:"webgame";s:10:"controller";s:0:"";s:6:"method";s:0:"";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"2";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'a:0:{}', 'delete', '127.0.0.1', 1379834948),
+(75, 1, 'wangcanliang', 1, '超级管理员', '94', '编辑栏目', 'a:14:{s:7:"catname";s:4:"test";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:11:"description";s:0:"";s:6:"ishtml";b:0;s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:9:"listorder";b:0;s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:36:"http://nova.ci.com/category?catid=30";}', 'a:15:{s:2:"id";s:2:"30";s:7:"catname";s:4:"test";s:6:"catdir";s:3:"ttt";s:5:"image";s:0:"";s:8:"parentid";s:1:"0";s:7:"modelid";s:1:"2";s:11:"bind_domain";s:19:"http://nova.ci.com/";s:3:"url";s:36:"http://nova.ci.com/category?catid=30";s:9:"listorder";s:1:"0";s:11:"description";s:0:"";s:8:"template";s:1:"0";s:10:"meta_title";s:0:"";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:6:"ishtml";s:1:"0";}', 'edit', '127.0.0.1', 1379836698),
+(76, 1, 'wangcanliang', 1, '超级管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"查看用户";s:8:"parentid";s:2:"39";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"member";s:6:"method";s:4:"view";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"3";}', 'a:10:{s:2:"id";s:2:"43";s:4:"name";s:12:"查看用户";s:8:"parentid";s:2:"39";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"member";s:6:"method";s:4:"view";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1379838347),
+(77, 2, 'wangcan', 3, '管理员', '34', '添加菜单', 'a:8:{s:4:"name";s:12:"编辑配置";s:8:"parentid";s:2:"38";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"config";s:6:"method";s:6:"change";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"3";}', 'a:0:{}', 'add', '127.0.0.1', 1379839382),
+(78, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"编辑配置";s:8:"parentid";s:2:"38";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"config";s:6:"method";s:6:"change";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"2";}', 'a:10:{s:2:"id";s:3:"248";s:4:"name";s:12:"编辑配置";s:8:"parentid";s:2:"38";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"config";s:6:"method";s:6:"change";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"3";}', 'edit', '127.0.0.1', 1379840054),
+(79, 2, 'wangcan', 3, '管理员', '32', '编辑', 'a:8:{s:4:"name";s:12:"审核用户";s:8:"parentid";s:2:"39";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"member";s:6:"method";s:5:"check";s:8:"extparam";s:0:"";s:9:"listorder";b:0;s:7:"display";s:1:"3";}', 'a:10:{s:2:"id";s:2:"44";s:4:"name";s:12:"审核用户";s:8:"parentid";s:2:"39";s:8:"app_code";s:8:"passport";s:10:"controller";s:6:"member";s:6:"method";s:5:"check";s:8:"extparam";s:0:"";s:9:"listorder";s:1:"0";s:5:"islog";s:1:"1";s:7:"display";s:1:"1";}', 'edit', '127.0.0.1', 1379851144);
 
 -- --------------------------------------------------------
 
@@ -173,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `sp_admin_menu` (
   KEY `listorder` (`listorder`),
   KEY `parentid` (`parentid`),
   KEY `operation` (`app_code`,`controller`,`method`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=248 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=249 ;
 
 --
 -- 转存表中的数据 `sp_admin_menu`
@@ -219,16 +227,11 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (37, '操作日志', 17, 'passport', 'managerlog', 'listinfo', '', 0, '0', '1'),
 (38, '用户中心设置', 3, 'passport', '', '', '', 0, '1', '1'),
 (39, '用户管理', 3, 'passport', '', '', '', 1, '1', '1'),
-(40, '用户组管理', 3, 'passport', '', '', '', 2, '1', '1'),
 (41, '基本设置', 38, 'passport', 'config', 'base', '', 0, '1', '1'),
 (42, '管理用户', 39, 'passport', 'member', 'listinfo', '', 0, '1', '1'),
-(43, '查看用户', 39, 'passport', 'member', 'view', '', 0, '1', '1'),
-(44, '审核用户', 39, 'passport', 'member', 'check', '', 0, '1', '1'),
-(45, '管理用户组', 40, 'passport', 'group', 'listinfo', '', 0, '1', '1'),
-(46, '添加用户组', 40, 'passport', 'group', 'add', '', 0, '1', '2'),
-(47, '查看用户组', 40, 'passport', 'group', 'view', '', 0, '1', '3'),
-(48, '编辑用户组', 40, 'passport', 'group', 'edit', '', 0, '1', '3'),
-(49, '删除用户组', 40, 'passport', 'group', 'delete', '', 0, '1', '3'),
+(43, '查看用户', 39, 'passport', 'member', 'view', '', 0, '1', '3'),
+(44, '审核用户', 39, 'passport', 'member', 'check', '', 0, '1', '3'),
+(248, '编辑配置', 38, 'passport', 'config', 'change', '', 0, '1', '2'),
 (50, '平台附件管理', 4, 'passport', '', '', '', 0, '1', '1'),
 (51, '广告管理', 4, 'passport', '', '', '', 0, '1', '1'),
 (52, '友情链接', 4, 'passport', '', '', '', 0, '1', '1'),
@@ -268,24 +271,18 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (86, '编辑评论', 54, 'passport', 'commend', 'edit', '', 0, '1', '3'),
 (87, '删除评论', 54, 'passport', 'commend', 'delete', '', 0, '1', '3'),
 (88, '游戏管理', 5, 'webgame', '', '', '', 1, '0', '1'),
-(89, '内容相关设置', 5, 'webgame', '', '', '', 2, '1', '1'),
 (90, '内容管理', 5, 'webgame', '', '', '', 3, '1', '1'),
-(91, '发布管理', 5, 'webgame', '', '', '', 4, '1', '1'),
-(92, '添加栏目', 89, 'webgame', 'category', 'add', '', 0, '1', '2'),
-(93, '删除栏目', 89, 'webgame', 'category', 'delete', '', 0, '1', '3'),
-(94, '编辑栏目', 89, 'webgame', 'category', 'edit', '', 0, '1', '3'),
-(95, '管理栏目', 89, 'webgame', 'category', 'listinfo', '', 0, '1', '1'),
-(96, '查看栏目', 89, 'webgame', 'category', 'view', '', 0, '1', '3'),
+(92, '添加栏目', 90, 'webgame', 'category', 'add', '', 0, '1', '2'),
+(93, '删除栏目', 90, 'webgame', 'category', 'delete', '', 0, '1', '3'),
+(94, '编辑栏目', 90, 'webgame', 'category', 'edit', '', 0, '1', '3'),
+(95, '管理栏目', 90, 'webgame', 'category', 'listinfo', '', 0, '1', '1'),
+(96, '查看栏目', 90, 'webgame', 'category', 'view', '', 0, '1', '3'),
 (97, '添加内容', 90, 'webgame', 'content', 'add', '', 0, '1', '2'),
 (98, '管理内容', 90, 'webgame', 'content', 'catquick', '', 0, '1', '1'),
 (99, '删除内容', 90, 'webgame', 'content', 'delete', '', 0, '1', '3'),
 (100, '编辑内容', 90, 'webgame', 'content', 'edit', '', 0, '1', '3'),
 (101, '内容列表', 90, 'webgame', 'content', 'listinfo', '', 0, '1', '3'),
 (102, '查看内容', 90, 'webgame', 'content', 'view', '', 0, '1', '3'),
-(103, '生成栏目页', 91, 'webgame', 'publish', 'category', '', 0, '1', '1'),
-(104, '生成内容页', 91, 'webgame', 'publish', 'content', '', 0, '1', '1'),
-(105, '生成首页', 91, 'webgame', 'publish', 'index', '', 0, '1', '1'),
-(106, '更新URL页', 91, 'webgame', 'publish', 'url', '', 0, '1', '1'),
 (107, '游戏帐号报表', 88, 'webgame', 'member_webgame', 'report', '', 0, '1', '2'),
 (108, '游戏帐号明细', 88, 'webgame', 'member_webgame', 'listinfo', '', 4, '1', '1'),
 (109, '复制服务器', 88, 'webgame', 'server', 'copy', '', 0, '1', '3'),
@@ -312,9 +309,9 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (130, '查看支付方式', 120, 'pay', 'payment', 'view', '', 0, '1', '3'),
 (131, '添加支付方式', 120, 'pay', 'payment', 'add', '', 0, '1', '2'),
 (132, '管理支付方式', 120, 'pay', 'payment', 'listinfo', '', 0, '1', '1'),
-(133, '编辑配置', 120, 'pay', 'config', 'change', '', 0, '1', '3'),
+(133, '编辑配置', 120, 'pay', 'config', 'change', '', 0, '1', '2'),
 (134, '支付配置', 120, 'pay', 'config', 'base', '', 0, '1', '1'),
-(135, '活动奖励', 121, 'pay', 'handcharge', 'listinfo', '', 0, '1', '1'),
+(135, '活动奖励', 121, 'pay', 'handcharge', 'listinfo', '', 0, '1', '4'),
 (136, '手工充值', 121, 'pay', 'handcharge', 'add', '', 0, '1', '2'),
 (137, '异常充值', 121, 'pay', 'account_unusual', 'listinfo', '', 0, '1', '1'),
 (138, '支付记录', 121, 'pay', 'pay', 'listinfo', '', 0, '1', '1'),
@@ -355,7 +352,7 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (173, '查看源内容', 142, 'spider', 'content', 'showSource', '', 0, '0', '3'),
 (174, '查看本地内容', 142, 'spider', 'content', 'showTarget', '', 0, '0', '3'),
 (175, '内容管理', 8, 'movie', '', '', '', 3, '1', '1'),
-(176, '发布管理', 8, 'movie', '', '', '', 4, '1', '1'),
+(176, '发布管理', 8, 'movie', '', '', '', 4, '1', '4'),
 (177, '添加栏目', 175, 'movie', 'category', 'add', '', 0, '1', '2'),
 (178, '删除栏目', 175, 'movie', 'category', 'delete', '', 0, '1', '3'),
 (179, '编辑栏目', 175, 'movie', 'category', 'edit', '', 0, '1', '3'),
@@ -367,12 +364,11 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (185, '编辑内容', 175, 'movie', 'content', 'edit', '', 0, '1', '3'),
 (186, '内容列表', 175, 'movie', 'content', 'listinfo', '', 0, '1', '3'),
 (187, '查看内容', 175, 'movie', 'content', 'view', '', 0, '1', '3'),
-(188, '生成栏目页', 176, 'movie', 'publish', 'category', '', 0, '1', '1'),
-(189, '生成内容页', 176, 'movie', 'publish', 'content', '', 0, '1', '1'),
-(190, '生成首页', 176, 'movie', 'publish', 'index', '', 0, '1', '1'),
-(191, '更新URL页', 176, 'movie', 'publish', 'url', '', 0, '1', '1'),
+(188, '生成栏目页', 176, 'movie', 'publish', 'category', '', 0, '1', '4'),
+(189, '生成内容页', 176, 'movie', 'publish', 'content', '', 0, '1', '4'),
+(190, '生成首页', 176, 'movie', 'publish', 'index', '', 0, '1', '4'),
+(191, '更新URL页', 176, 'movie', 'publish', 'url', '', 0, '1', '4'),
 (192, '内容管理', 9, 'tbshop', '', '', '', 3, '1', '1'),
-(193, '发布管理', 9, 'tbshop', '', '', '', 4, '1', '1'),
 (194, '添加栏目', 192, 'tbshop', 'category', 'add', '', 0, '1', '2'),
 (195, '删除栏目', 192, 'tbshop', 'category', 'delete', '', 0, '1', '3'),
 (196, '编辑栏目', 192, 'tbshop', 'category', 'edit', '', 0, '1', '3'),
@@ -384,14 +380,9 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (202, '编辑内容', 192, 'tbshop', 'content', 'edit', '', 0, '1', '3'),
 (203, '内容列表', 192, 'tbshop', 'content', 'listinfo', '', 0, '1', '3'),
 (204, '查看内容', 192, 'tbshop', 'content', 'view', '', 0, '1', '3'),
-(205, '生成栏目页', 193, 'tbshop', 'publish', 'category', '', 0, '1', '1'),
-(206, '生成内容页', 193, 'tbshop', 'publish', 'content', '', 0, '1', '1'),
-(207, '生成首页', 193, 'tbshop', 'publish', 'index', '', 0, '1', '1'),
-(208, '更新URL页', 193, 'tbshop', 'publish', 'url', '', 0, '1', '1'),
 (209, '机构管理', 10, 'kidsedu', '', '', '', 0, '0', '1'),
 (210, '内容管理', 10, 'kidsedu', '', '', '', 0, '0', '1'),
 (211, '资源管理', 10, 'kidsedu', '', '', '', 0, '0', '1'),
-(212, '内容发布管理', 10, 'kidsedu', '', '', '', 0, '0', '1'),
 (213, '添加栏目', 210, 'kidsedu', 'category', 'add', '', 0, '1', '2'),
 (214, '删除栏目', 210, 'kidsedu', 'category', 'delete', '', 0, '1', '3'),
 (215, '编辑栏目', 210, 'kidsedu', 'category', 'edit', '', 0, '1', '3'),
@@ -403,10 +394,6 @@ INSERT INTO `sp_admin_menu` (`id`, `name`, `parentid`, `app_code`, `controller`,
 (221, '编辑内容', 210, 'kidsedu', 'content', 'edit', '', 0, '1', '3'),
 (222, '内容列表', 210, 'kidsedu', 'content', 'listinfo', '', 0, '1', '3'),
 (223, '查看内容', 210, 'kidsedu', 'content', 'view', '', 0, '1', '3'),
-(224, '生成栏目页', 212, 'kidsedu', 'publish', 'category', '', 0, '1', '1'),
-(225, '生成内容页', 212, 'kidsedu', 'publish', 'content', '', 0, '1', '1'),
-(226, '生成首页', 212, 'kidsedu', 'publish', 'index', '', 0, '1', '1'),
-(227, '更新URL页', 212, 'kidsedu', 'publish', 'url', '', 0, '1', '1'),
 (228, '添加机构', 209, 'kidsedu', 'agency', 'add', '', 0, '1', '2'),
 (229, '删除机构', 209, 'kidsedu', 'agency', 'delete', '', 0, '1', '3'),
 (230, '编辑机构', 209, 'kidsedu', 'agency', 'edit', '', 0, '1', '3'),
@@ -514,16 +501,10 @@ INSERT INTO `sp_admin_privilege` (`role_id`, `menu_id`) VALUES
 (3, 37),
 (3, 38),
 (3, 39),
-(3, 40),
 (3, 41),
 (3, 42),
 (3, 43),
 (3, 44),
-(3, 45),
-(3, 46),
-(3, 47),
-(3, 48),
-(3, 49),
 (3, 50),
 (3, 51),
 (3, 52),
@@ -563,9 +544,7 @@ INSERT INTO `sp_admin_privilege` (`role_id`, `menu_id`) VALUES
 (3, 86),
 (3, 87),
 (3, 88),
-(3, 89),
 (3, 90),
-(3, 91),
 (3, 92),
 (3, 93),
 (3, 94),
@@ -577,10 +556,6 @@ INSERT INTO `sp_admin_privilege` (`role_id`, `menu_id`) VALUES
 (3, 100),
 (3, 101),
 (3, 102),
-(3, 103),
-(3, 104),
-(3, 105),
-(3, 106),
 (3, 107),
 (3, 108),
 (3, 109),
@@ -613,7 +588,8 @@ INSERT INTO `sp_admin_privilege` (`role_id`, `menu_id`) VALUES
 (3, 136),
 (3, 137),
 (3, 138),
-(3, 139);
+(3, 139),
+(3, 248);
 
 -- --------------------------------------------------------
 
@@ -738,15 +714,12 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   `username` char(32) NOT NULL DEFAULT '' COMMENT '用户名',
   `ucserver_id` int(10) unsigned NOT NULL DEFAULT '0',
   `password` char(32) NOT NULL DEFAULT '' COMMENT '密码',
-  `pwd_strong` enum('1','2','3') NOT NULL DEFAULT '1' COMMENT '密码强度 1 弱 2 中 3 强',
   `encrypt` char(6) NOT NULL COMMENT '辅助加密字符串',
   `avatar` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户头像',
   `email` char(32) NOT NULL DEFAULT '' COMMENT '邮箱',
   `truename` varchar(255) NOT NULL DEFAULT '' COMMENT '真实姓名',
   `gender` enum('1','2') NOT NULL DEFAULT '2' COMMENT '性别 1 男 2 女',
-  `msn` varchar(20) NOT NULL DEFAULT '' COMMENT 'msn帐号',
   `telephone` varchar(255) NOT NULL DEFAULT '' COMMENT '电话',
-  `get_username` varchar(32) NOT NULL COMMENT '收货人地址',
   `address` varchar(255) NOT NULL DEFAULT '' COMMENT '地址',
   `qq` varchar(255) NOT NULL DEFAULT '' COMMENT 'QQ号',
   `birthday` int(11) NOT NULL COMMENT '生日',
@@ -758,24 +731,27 @@ CREATE TABLE IF NOT EXISTS `sp_member` (
   `loginnum` int(8) NOT NULL COMMENT '登录次数',
   `lastloginip` char(15) NOT NULL DEFAULT '0' COMMENT '最后一次登录IP',
   `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后一次登录时间',
+  `is_lock` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1391332 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2240405 ;
 
 --
 -- 转存表中的数据 `sp_member`
 --
 
-INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `pwd_strong`, `encrypt`, `avatar`, `email`, `truename`, `gender`, `msn`, `telephone`, `get_username`, `address`, `qq`, `birthday`, `postcode`, `mobile`, `idcard`, `regip`, `regdate`, `loginnum`, `lastloginip`, `lastlogintime`) VALUES
-(1089692, '1089692', 1, '542666faae27ef5b977a701af4e86b19', '1', '2NlgqY', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378800835, 0, '0', 0),
-(1065112, '1065112', 2, '514c59761aeaba4fbe7cc788577fc515', '1', 'l4IZ1m', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 0, '0', 0),
-(104760, '104760', 3, '1218a4b526c794480d28eefb08047400', '1', 'pdgEsz', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 1, '127.0.0.1', 1378801341),
-(1062753, '1062753', 4, 'e521f1e8065594e421b3b708878b14c1', '1', 'Zxinxa', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 0, '0', 0),
-(1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', '1', 'BK7Sng', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256),
-(1193559, 'aaaaaa', 6, '6dceefbc8399e41b5fae06839a8bdc2f', '1', 'JFAkWH', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378863829, 6, '127.0.0.1', 1379381861),
-(1286042, 'bbbbbb', 7, 'ab794e1d2c0513f38a0af9ef90550cfe', '1', 'uyZ6UZ', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1378979837, 1, '127.0.0.1', 1379468433),
-(1386195, '1386195', 8, '87bef5b42e7e4a6a8b4c8a30542f503e', '1', 'm5iEPU', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1379064838, 0, '0', 0),
-(1391331, '1391331', 9, '2b2fbd378f47bdfa682f6f5ae63a0aff', '1', 'WPylpC', 0, '', '', '2', '', '', '', '', '', 0, '', '', '', '127.0.0.1', 1379064839, 1, '127.0.0.1', 1379064847);
+INSERT INTO `sp_member` (`userid`, `username`, `ucserver_id`, `password`, `encrypt`, `avatar`, `email`, `truename`, `gender`, `telephone`, `address`, `qq`, `birthday`, `postcode`, `mobile`, `idcard`, `regip`, `regdate`, `loginnum`, `lastloginip`, `lastlogintime`, `is_lock`) VALUES
+(1089692, '1089692', 1, '542666faae27ef5b977a701af4e86b19', '2NlgqY', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378800835, 0, '0', 0, 0),
+(1065112, '1065112', 2, '514c59761aeaba4fbe7cc788577fc515', 'l4IZ1m', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 0, '0', 0, 0),
+(104760, '104760', 3, '1218a4b526c794480d28eefb08047400', 'pdgEsz', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378801338, 1, '127.0.0.1', 1378801341, 0),
+(1062753, '1062753', 4, 'e521f1e8065594e421b3b708878b14c1', 'Zxinxa', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 0, '0', 0, 0),
+(1023032, '1023032', 5, '1d3c7c23f550f7430e4da301a8f5d21d', 'BK7Sng', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378811253, 1, '127.0.0.1', 1378811256, 0),
+(1193559, 'aaaaaa', 6, '6dceefbc8399e41b5fae06839a8bdc2f', 'JFAkWH', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378863829, 9, '127.0.0.1', 1379830644, 0),
+(1286042, 'bbbbbb', 7, 'ab794e1d2c0513f38a0af9ef90550cfe', 'uyZ6UZ', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1378979837, 1, '127.0.0.1', 1379468433, 0),
+(1386195, '1386195', 8, '87bef5b42e7e4a6a8b4c8a30542f503e', 'm5iEPU', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1379064838, 0, '0', 0, 0),
+(1391331, '1391331', 9, '2b2fbd378f47bdfa682f6f5ae63a0aff', 'WPylpC', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1379064839, 1, '127.0.0.1', 1379064847, 0),
+(2240404, '2240404', 10, 'a1c702d23731730051b3471b4e2a737b', 'kfF6uv', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1379829032, 0, '0', 0, 0),
+(2240362, '2240362', 11, 'ea55bd5d4c72b5193ea1c6a985ae7917', 'XSev1V', 0, '', '', '2', '', '', '', 0, '', '', '', '127.0.0.1', 1379829032, 2, '127.0.0.1', 1379829091, 0);
 
 -- --------------------------------------------------------
 
@@ -851,6 +827,13 @@ CREATE TABLE IF NOT EXISTS `sp_times` (
   `times` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`username`,`isadmin`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `sp_times`
+--
+
+INSERT INTO `sp_times` (`username`, `ip`, `logintime`, `isadmin`, `times`) VALUES
+('aaaaaa', '127.0.0.1', 1379830631, 0, 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
