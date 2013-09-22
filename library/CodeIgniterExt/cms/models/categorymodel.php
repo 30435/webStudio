@@ -53,11 +53,11 @@ abstract class CmsCategoryModel extends CommonModel
 			'meta_description' => array('name' => 'META Description（栏目描述）'),
 			'listorder' => array('name' => '排序'),
 			'bind_domain' => array('name' => '绑定域名'),
-			'urlrule' => array('name' => 'URL规则', 'infos' => $urlruleInfos)
+			//'urlrule' => array('name' => 'URL规则', 'infos' => $urlruleInfos)
 		);
 		$fieldInfos['fieldChanges'] = array(
 			'catname', 'parentid', 'modelid', 'catdir', 'image', 'description', 'ishtml', 'template', 'meta_title', 'meta_keywords', 
-			'meta_description', 'listorder', 'urlrule', 'bind_domain'
+			'meta_description', 'listorder', 'bind_domain'
 		);
 		
 		return $fieldInfos;

@@ -96,8 +96,7 @@
         </tr>
 	    <tr>
           <th><?php echo $this->fieldInfos['bind_domain']['name']; ?>:</th>
-          <td><input type="text" name="bind_domain" id="bind_domain" class="input-text" value="<?php if (isset($this->currentInfo['bind_domain'])) echo $this->currentInfo['bind_domain']; ?>" size="100px" /></td>
-		  <div id="tip" class="onShow">只对一级目录有效！</div>
+          <td><input type="text" name="bind_domain" id="bind_domain" class="input-text" value="<?php if (isset($this->currentInfo['bind_domain'])) echo $this->currentInfo['bind_domain']; ?>" size="100px" /><div id="tip" class="onShow">只对一级目录有效！</div></td>
         </tr>
 	    <tr>
           <th><?php echo $this->fieldInfos['image']['name']; ?>:</th>
@@ -115,17 +114,6 @@
     </div>
     <div id="div_setting_2" class="contentList pad-10 hidden">
       <table width="100%" class="table_form ">
-		<tr>
-          <th width="200"><?php echo $this->fieldInfos['ishtml']['name']; ?>:</th>
-          <td>
-          <input type="radio" name="ishtml" value="0" class="input-text" <?php if (isset($this->currentInfo['ishtml']) && empty($this->currentInfo['ishtml'])) echo 'checked="checked"'; ?> /><?php echo $this->fieldInfos['ishtml']['infos']['0']; ?> |
-		  <input type="radio" name="ishtml" value="1" class="input-text" <?php if (isset($this->currentInfo['ishtml']) && $this->currentInfo['ishtml'] == '1') echo 'checked="checked"'; ?> /><?php echo $this->fieldInfos['ishtml']['infos']['1']; ?>
-	      </td>
-        </tr>
-		<tr>
-          <th width="200"><?php echo $this->fieldInfos['urlrule']['name']; ?>:</th>
-          <td id="page_template"><select name="urlrule" id="urlrule"><?php echo $this->selectUrlrule; ?></select></td>
-        </tr>
 		<tr>
           <th width="200"><?php echo $this->fieldInfos['template']['name']; ?>:</th>
           <td id="page_template"><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>

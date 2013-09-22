@@ -25,7 +25,7 @@
 				<a href="javascript:document.getElementById('seccode_img').src='<?php echo $this->baseUrl; ?>admin/index/checkcode'+'/'+Math.random();void(0);" class="ses-a gray no-underline">换一个</a>
 			</div>
 			<div class="botton f16b" id="J_login1" onClick="javascript: login(); "><span>登&nbsp;录</span></div>
-			<span class="a-span"><a href="/index/register" class="no-underline">申请米米号</a>&nbsp;&nbsp; |  &nbsp;&nbsp;<a href="/index/getpwd" class="no-underline">忘记密码</a></span>
+			<span class="a-span"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/register" class="no-underline">申请米米号</a>&nbsp;&nbsp; |  &nbsp;&nbsp;<a href="/index/getpwd" class="no-underline">忘记密码</a></span>
 		</form>
 		</div>
 	</div>

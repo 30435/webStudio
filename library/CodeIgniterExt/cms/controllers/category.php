@@ -121,7 +121,7 @@ abstract class CmsCategory extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($currentCatid = 0, $currentModelid = 0, $template = '', $urlrule = '')
+	protected function _initInfo($currentCatid = 0, $currentModelid = 0, $template = '')
 	{
 		$format = "<option value='\$id' \$selected>\$spacer\$catname</option>";
 		$tree = new CustomTree($this->categoryInfos);
@@ -129,7 +129,7 @@ abstract class CmsCategory extends Custom_AdminController
 
 		$this->selectModel = $this->_getSelectElement($this->fieldInfos['modelid']['infos'], 'id', 'name', $currentModelid, true);
 		$this->selectTemplate = $this->_getSelectElement($this->fieldInfos['template']['infos'], 'key', 'value', $template, true);
-		$this->selectUrlrule = $this->_getSelectElement($this->fieldInfos['urlrule']['infos'], 'key', 'value', $urlrule, true);
+		//$this->selectUrlrule = $this->_getSelectElement($this->fieldInfos['urlrule']['infos'], 'key', 'value', $urlrule, true);
 	}
 
 	/**
@@ -141,7 +141,7 @@ abstract class CmsCategory extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['parentid'], $info['modelid'], $info['template'], $info['urlrule']);
+		$this->_initInfo($info['parentid'], $info['modelid'], $info['template']);
 
 		if ($isWrite) {
 			$info['bind_domain'] = !empty($info['bind_domain']) && $info['parentid'] == 0 ? $info['bind_domain'] : '';

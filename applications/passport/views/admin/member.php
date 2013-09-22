@@ -6,12 +6,12 @@
       <thead>
         <tr>
           <th width="80">ID</th>
-          <th><?php echo $this->lang->line('member_name'); ?></th>
-		  <th><?php echo $this->lang->line('member_email'); ?></th>
-		  <th><?php echo $this->lang->line('member_createtime'); ?></th>
-		  <th><?php echo $this->lang->line('member_loginnum'); ?></th>
-		  <th><?php echo $this->lang->line('member_lastip'); ?></th>
-		  <th><?php echo $this->lang->line('member_lasttime'); ?></th>
+          <th><?php echo $this->fieldInfos['username']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['email']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['regdate']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['loginnum']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['lastloginip']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['lastlogintime']['name']; ?></th>
           <th width="150"><?php echo $this->lang->line('admin_operation'); ?></th>
         </tr>
       </thead>
@@ -26,13 +26,7 @@
 		  <td align="center"><?php echo $info['lastloginip']; ?></td>
 		  <td align="center"><?php echo date('Y-m-d H:i:s', $info['lastlogintime']); ?></td>
           <td align="center">
-		    <?php foreach ($this->appMenus as $appKey => $appMenu) { if (!in_array($appKey, array('edit', 'view', 'delete'))) continue;?>
-            <?php if($appKey==='delete'){ ?>
-    		        <a href='javascript:;' onclick="return confirm_del('<?php echo $appMenu['url']  . $info['userid']?>')" ><?php echo $appMenu['name']; ?></a> |
-
-            <?php }else{?>
-                    <a href='<?php echo $appMenu['url']  . $info['id']; ?>'><?php echo $appMenu['name']; ?></a> |
-    		<?php } } ?>
+    		<a href='javascript: showLog("<?php echo $url = $this->appMenus['view']['url'] . '?userid=' . $info['userid']; ?>"); void(0);'><?php echo $this->appMenus['view']['name']; ?></a> |
 		  </td>
         </tr>
         <?php } } ?>
@@ -46,58 +40,37 @@
 .radio-label{ border-top:1px solid #e4e2e2; border-left:1px solid #e4e2e2}
 .radio-label td{ border-right:1px solid #e4e2e2; border-bottom:1px solid #e4e2e2;background:#f6f9fd}
 </style>
-<div class="pad_10">
-  <div class="common-form">
-<?php
-	echo validation_errors();
-	$attributes = array('name' => 'myform', 'id' => 'myform');
-	$this->id = isset($this->id) ? $this->id : 0;
-	echo form_open($this->appMenus[$this->method]['url'] . '/' . $this->id, $attributes);
-?>
-    <table width="100%" class="table_form contentWrap">
-      <tbody>
+<div class="subnav">
+	<h2 class="title-1 line-x f14 fb blue lh28"><?php echo '用户--' . $this->currentInfo['username'] . '--信息'; ?></h2>
+</div>
+<div class="pad-10">
+  <div>
+    <fieldset>
+	  <legend></legend>
+	  <table width="100%"  class="table_form">
+	  <?php foreach ($this->currentInfo as $field => $value) { ?>
         <tr>
-          <th width="80"><?php echo $this->lang->line('member_name'); ?>:</th>
-          <td class="y-bg"><input type="text" value="<?php if (isset($this->currentInfo['username'])) echo $this->currentInfo['username']; ?>" size="30" id="username" name="username" class="input-text">
-            <div id="nameTip" class="onCorrect"></div></td>
+          <th width="80"><?php echo $this->fieldInfos[$field]['name']; ?></th>
+          <td class="y-bg"><input type="text" class="input-text" value="<?php echo $value; ?>" disabled="desabled" /></td>
         </tr>
-
-        <tr>
-          <th width="80"><?php echo $this->lang->line('member_password'); ?>:</th>
-          <td class="y-bg"><input type="password" value="" size="30" id="password" name="password" class="input-text">
-            <div id="passwordTip" class="onCorrect"></div></td>
-        </tr>
-
-        <tr>
-          <th><?php echo $this->lang->line('member_email'); ?>:</th>
-          <td class="y-bg"><input type="text" value="<?php if (isset($this->currentInfo['email'])) echo $this->currentInfo['email']; ?>" size="50" id="email" name="email" class="input-text">
-            <div id="emailTip" class="onShow"></div></td>
-        </tr>
-
-            <!--
-                <tr>
-          <th><?php echo $this->lang->line('member_islock'); ?>:</th>
-          <td class="y-bg">
-            <?php echo $this->lang->line('member_lock'); ?>
-            <input type="radio" name="islock" value='1' <?php if (isset($this->currentInfo['islock'])) echo 'checked'; ?>>
-            <?php echo $this->lang->line('member_nlock'); ?>
-            <input type="radio" name="islock" value='0' <?php if (isset($this->currentInfo['islock'])) echo 'checked'; ?>>
-          </td>
-        </tr> -->
-
-      </tbody>
-    </table>
-    <div class="bk15"></div>
-    <?php if (in_array($this->method, array('edit', 'add', 'delete'))) { ?><input type="submit" class="button" value="<?php echo $this->lang->line('admin_submit'); ?>" name="dosubmit"><?php } ?>
-    </form>
+      <?php } ?>
+      </table>
+    </fieldset>
+	<div class="bk15"></div>
   </div>
 </div>
 <?php } ?>
-</body>
+
 <script type="text/javascript">
-     function confirm_del(url){
-         if (confirm('确认删除?'))
-             window.location.href=url;
-         }
+<!--
+document.domain='<?php echo $this->frontDomain; ?>';
+function showLog(url) {
+	window.top.art.dialog({id:'show'}).close();
+	window.top.art.dialog({title:'操作详情',id:'show',iframe: url,width:'700',height:'500'}, function(){
+		var d = window.top.art.dialog({id:'show'}).data.iframe;return false;
+	}, function(){window.top.art.dialog({id:'show'}).close()});
+}
+//-->
 </script>
+</body>
 </html>

@@ -10,5 +10,6 @@
 	<div class="row">知金伟业教育科技（北京）有限公司 Copyright ? 2008 - 2012 ZhiJin Inc. All Rights Reserved.    京ICP备09081115号-6 京网文[2013]0506-133号 网络文化经营许可证</div>
 	<div class="row"></div>
 </div>
+<script type='text/javascript' src='http://tb.53kf.com/kf.php?arg=10037701&style=1'> </script> <div style='display:none;'> <a href='http://www.53kf.com/?controller=pro_center' >在线客服系统</a> </div> 
 </body>
 </html>

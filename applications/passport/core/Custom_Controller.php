@@ -7,6 +7,7 @@ class Custom_Controller extends CommonController
 	{
 		parent::__construct();
 
+		$this->configPassportInfos = require $this->appInfos[APPCODE]['path'] . 'config/config_passport.php';
 
 		$this->load->model('memberModel');
 		$this->fieldInfos = $this->memberModel->fieldInfos;
@@ -20,7 +21,6 @@ class Custom_Controller extends CommonController
         $this->headerTitle = 'passport title';
 		$this->currentActive = 'passport';
 
-		$this->settings = $this->_getSettings();
 		require APPPATH . 'uc_client/' . 'config.php';
 		require_once APPPATH . 'uc_client/' . 'client.php';
 
@@ -28,16 +28,6 @@ class Custom_Controller extends CommonController
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->loginedUserInfo = $this->_checkUserLogin();
-	}
-
-	/**
-	 * Get the settings of the passport application
-	 *
-	 * @return array the settings
-	 */
-	protected function _getSettings()
-	{
-
 	}
 	
 	/**

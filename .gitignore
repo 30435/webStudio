@@ -4,6 +4,7 @@ applications/config_public.php
 applications/passport/uc_client/config.php
 applications/passport/uc_client/data
 applications/passport/config/config.php
+applications/passport/config/config_passport.php
 applications/passport/cache
 applications/movie/config/config.php
 applications/movie/cache
@@ -17,6 +18,7 @@ applications/webgame/config/config.php
 applications/webgame/cache
 applications/webgame/libraries/config
 applications/pay/config/config.php
+applications/pay/config/config_pay.php
 applications/pay/cache
 applications/pay/libraries/config
 wwwroot/static/common/ckeditor/config.js

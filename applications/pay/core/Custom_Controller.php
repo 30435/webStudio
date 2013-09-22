@@ -7,14 +7,18 @@ class Custom_Controller extends CommonController
 	{
 		parent::__construct();
 
+		$this->configPayInfos = require $this->appInfos[APPCODE]['path'] . 'config/config_pay.php';
+		if ($this->module != 'admin' && $this->configPayInfos['pay_open'] != 'yes') {
+			$targetUrl = empty($this->configPayInfos['pay_close_url']) ? $this->appInfos['webgame']['url'] : $this->configPayInfos['pay_close_url'];
+			$this->_messageInfo('充值支付模块暂未开启!', $targetUrl);
+		}
+
         $this->metaInfos = array(
 				array('name' => 'robots', 'content' => 'no-cache'),
 				array('name' => 'description', 'content' => '敢玩网(ganwan)是一家专以原创网页游戏为业务方向的网站，旗下运营独代产品《闪客快打》，以及数十款联运产品，包括《仙落凡尘》、《神仙道》、《神曲》、《龙将》等国内精品网页游戏。'),
 				array('name' => 'keywords', 'content' => '敢玩网 ganwan,敢玩游戏 敢拼天下,网页游戏大全,webgame,网页游戏平台,网页游戏排行榜,网页游戏开服表,最新网页游戏,网络游戏,游戏'),
 				array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
 		);
-
-
 		$this->paymentInfos = $this->_getPaymentInfos();
 		$this->webgameInfos = $this->_getWebgameInfos();
 		$this->_loadModel(APPCODE, 'paymonthModel');

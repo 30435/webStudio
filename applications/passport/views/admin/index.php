@@ -8,7 +8,6 @@
 	echo link_tag($this->staticUrl . 'admin/css/zh-cn-system.css');
 	echo link_tag($this->staticUrl . 'admin/css/dialog.css');
 	echo link_tag($this->staticUrl . 'admin/css/style/zh-cn-styles1.css');
-	echo link_tag('admin/css/reset.css'); 
 ?>
 <script src="<?php echo $this->staticUrl; ?>common/script/jquery-1.8.0.min.js" type="text/javascript" language="javascript"></script>
 <script src="<?php echo $this->staticUrl; ?>common/script/dialog.js" type="text/javascript" language="javascript"></script>

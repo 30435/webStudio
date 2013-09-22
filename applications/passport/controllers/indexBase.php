@@ -16,6 +16,11 @@ class IndexBase extends Custom_Controller
 
 	public function index()
 	{
+		if ($this->module != 'admin' && $this->configPassportInfos['passport_open'] != 'yes') {
+			$targetUrl = empty($this->configPayInfos['passport_close_url']) ? $this->appInfos['webgame']['url'] : $this->configPayInfos['passport_close_url'];
+			$this->_messageInfo('用户模块暂未开启!', $targetUrl);
+		}
+
 		$this->load->view($this->prefix . '/index');
 	}
 
@@ -129,7 +134,8 @@ class IndexBase extends Custom_Controller
 		if (!empty($this->loginedUserInfo)) {
 			$this->_messageInfo('您已登录！', $this->baseUrl . $this->prefix);
 		}
-		if(empty($this->settings['allowregister'])) {
+		if($this->configPassportInfos['passport_register_open'] != 'yes') {
+			$this->_messageInfo('平台暂停了注册功能！', $this->baseUrl . $this->prefix . '/login/');
 		}
 
 		$this->form_validation->set_rules('password', 'name', 'trim|required|xss_clean');

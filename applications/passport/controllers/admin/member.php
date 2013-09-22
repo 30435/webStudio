@@ -29,17 +29,13 @@ class Member extends Custom_AdminController
 	 */
 	public function view()
 	{
-		$this->_view();
-	}
+		$this->showSubnav = false;
+		$this->userid = $this->input->get_post('userid');
+		$where = array('userid' => $this->userid);
+		$info = $this->currentModel->getInfo($where);
+		$this->currentInfo = $this->_formatInfo($info);
 
-	/**
-	 * Add a manager
-	 *
-	 * @return void
-	 */
-	public function add()
-	{
-		$this->_add();
+		$this->load->view($this->template);
 	}
 
 	/**
@@ -72,18 +68,11 @@ class Member extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-
-		if ($this->method == 'add') {
-			$info['regdate'] = $this->time;
-			$passwordInfos = $this->_getPassword($this->input->post('password'));
-			$info['password'] = $passwordInfos['password'];
-			$info['encrypt'] = $passwordInfos['encrypt'];
-		}elseif($this->method == 'edit'){
-            $info['regdate'] = $this->time;
-			$passwordInfos = $this->_getPassword($this->input->post('password'));
-			$info['password'] = $passwordInfos['password'];
-			$info['encrypt'] = $passwordInfos['encrypt'];
-        }
+		if (!$isWrite) {
+			unset($info['password']);
+			unset($info['avatar']);
+			unset($info['encrypt']);
+		}
 
 		return $info;
 	}
