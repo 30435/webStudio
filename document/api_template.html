@@ -1,0 +1,247 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title>《神仙道》联运手册</title>
+	<style type="text/css">
+	html, body { padding:0; margin:0; }
+	body { font-size:14px; width:1000px; }
+	body, h1, h2, h3 { font-family:"微软雅黑","Lucida Grande","Lucida Sans Unicode",Calibri,Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; }
+	b { color:#0000cc; }
+	
+	#menu { background:#EAEEF3; width:200px; border-right:1px solid #C6C9CE; float:left; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; }
+	#menu_title { padding:24px; margin:0; text-align:right; font-size:24px; color:#576780; }
+	#menu ul, #menu li { list-style:none; margin:0; padding:0; }
+	#menu li a { border:1px solid #EAEEF3; border-right:none; border-left:none; }
+	#menu a { font-size:14px; display:block; padding:10px 24px; text-decoration:none; text-align:right; color:#426DC9; }
+	#menu .current a, #menu li a:hover { background:#BBCEE9; color:#000; border-color:#8FAAD9; }
+	
+	#content { margin-left:220px; padding-bottom:24px; margin-right:24px; }
+	#content h3 { font-size:24px; color:#576780; border-bottom:1px solid #eee; padding-bottom:8px; margin-top:24px; }
+	#content ul, #content li { margin:0; padding:0; list-style:none; color:#ccc; }
+	#content li span { color:#000; }
+	#content li { line-height:24px; list-style-type:disc; margin-left:30px; }
+	#content p { line-height:24px; }
+	#content .subp { margin-left:30px; }
+	
+	#footer { text-align:center; font-size:12px; color:#888; border-top:solid 1px #eee; padding-top:10px; margin-top:24px; }
+	</style>
+	<script type="text/javascript">
+		var currentItem = 'i1';
+	</script>
+</head>
+<body>
+	<div id="menu">
+		<h3 id="menu_title">目录</h3>
+		<ul>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">开服准备</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">预备知识</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">测试服</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">新手卡算法</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">登录接口</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#f">充值接口</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#g">排行数据</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#h">帐号是否存在</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i9"><a href="#i">广告渠道来源规则</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i10"><a href="#j">游戏内链接设置</a></li>
+			<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i11"><a href="#k">角色回档接口</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h3 id="a">开服准备</h3>
+		<p>联运前需提前准备好以下内容：</p>
+		<ul>
+			<li><span>游戏主页、论坛、VIP说明页面</span></li>
+			<li><span>确定游戏入口三级域名格式，如：<b>s?.sxd.xd.com</b>，并 <b>cname</b> 方式解析到 <b>cls.sxd.xd.com</b></span></li>
+			<li><span>联系并确定开服时间，并确定硬件已经到位</span></li>
+			<li><span>根据本文的提供的接口描述和测试服地址测试好必须的接口</span></li>
+			<li><span>获得功能接口的密钥</span></li>
+			<li><span>提供充值服务器的IP，未在允许IP内的充值提交来源将无法返回成功</span></li>
+		</ul>
+
+		<h3 id="b">预备知识</h3>
+		<p>理解《神仙道》的部署结构对理解本文档和后续的运维工作将会有所帮助，所以这里对《神仙道》的部署结构做一个简要的描述。</p>
+		<p>《神仙道》的部署分为三部分，分别为：后台、游戏、资源。</p>
+		<p>后台只有一个入口，请向运营负责人索取，不需要反复部署多个。后台通过不同的帐号权限提供不同平台的游戏管理。</p>
+		<p>游戏服部署在不同服务器上，每个服务器可能部署多个游戏服，但是游戏服的入口始终只有 <b>cls.sxd.xd.com</b> 的两台服务器，游戏入口根据不同游戏服的二级域名来决定连接的游戏服务器和资源路径。所以游戏开服前需要事先将游戏服对应的二级域名 <b>cname</b> 方式解析到 <b>cls.sxd.xd.com</b>。</p>
+		<p>游戏资源部署到固定的资源服务器，然后使用cdn进行分流，同一个版本的游戏资源用的都是同一份，加载资源的路径都是一致的，所以资源不存在服差异只有版本差异。</p>
+		<p>游戏登录接口使用固定格式的字符串的md5哈希结果作为登录票据，出于帐号安全考虑，登录时间参与登录票据的生成，使得登录票据有过期时间，不同时间登录的同一个帐号，生成的登录票据是不同的。每个平台有各自的密钥参与登录票据生成，所以同一个帐号同一个时间在不同平台生成的票据也是不同的，具体的生成算法参考下文的描述。</p>
+		<p>游戏登录接口所在的服务器时间自动与北京时间同步，所以建议各平台的登录服务器也设置时间同步，如果同步的时区不一样，请计算好时差再发送到接口。</p>
+
+		<h3 id="c">测试服</h3>
+		<p>为了开服前就可以测试好功能接口，我们部署了一个长期运行的接口测试服，使用测试服对应的密钥测试好接口后，只需要修改为正式密钥就可以正确的操作正式服。</p>
+		<p>测试服地址：<b>http://s999.sxd.xd.com/</b></p>
+		<p>测试服密钥：<b>{the-test-api-key-for-s999}</b></p>
+		<p>注意事项：测试服测试充值最高上限为<strong>10</strong>元宝，超过上限按<strong>10</strong>元宝计算，每个帐号最多只能充值10笔，超出10笔返回值为0，测试时user勿用1、2、3这样简单的数值测试，以免冲突无法充值。</p><p></p>
+		<h3 id="d">新手卡算法</h3>
+		<p>新手卡按固定算法生成，每个玩家在每台服务器对应生成唯一的一个新手卡序列号，玩家不能冒领也不能重复领，平台需要制做一页可以让玩家登陆领取新手卡的页面，玩家从该页面领取新手卡后可进入游戏中找[迎新道人]兑换。</p>
+		<p>生成算法：<b>md5(user_domain)</b></p>
+		<p>参数说明：<b>user</b> 对应登录接口的<b>user</b>参数，<b>domain</b> 对应游戏服的二级域名，例如：md5(2235112_s1.sxd.xd.com)</p>
+		<p>注意事项：若<b>user</b>长度超过20位，请先将其截取到20位在放到生成算法中，否则可能会出现无法领取的情况。</p>
+		<h3 id="e">登录接口</h3>
+		<p>接口地址：</p>
+		<p class="subp"><b>http://游戏服二级域名/login_api.php</b>，如：http://s1.sxd.xd.com/login_api.php</p>
+
+		<p>调用方式：</p>
+		<p class="subp">浏览器 <b>GET</b>（从平台登录完跳转到这个接口）</p>
+
+		<p>调用参数：</p>
+		<ul>
+			<li><span><b>user</b> － 玩家的唯一标识，字符串类型，只要可以唯一标识一个玩家即可，可以是平台的用户ID、用户名、Email等(长度&lt;=20)。</span></li>
+			<li><span><b>time</b> － 登录时间，时间戳类型，一个正整数，对应php中的time()函数的返回值，北京时间，如果登录服务器时间不是北京时间，请算好时差，登录时间用于登录票据的过期验证，目前票据过期时间为前后10分钟。</span></li>
+			<li><span><b>hash</b> － 登录票据，字符串类型，按 <b>md5(user_time_平台密钥)</b> 算法生成的哈希值(小写)。</span></li>
+		</ul>
+
+		<p>可选参数(详细请查看[<a href="#i">广告渠道来源规则</a>])：</p>
+		<ul>
+			<li><span><b>source</b> － 玩家的来源，字符串类型，用于后台统计不同广告来源的玩家流失率等情况，有助于分享广告质量。</span></li>
+			<li><span><b>regdate</b> － 玩家在平台上的注册时间，时间戳类型，一个正整数，用于后台分析滚服玩家。</span></li>
+			<li><span><b>non_kid</b> － 传0表示玩家需要被防沉迷，不传或传1表示不需要</span></li>
+		</ul>
+
+		<p>调用结果：</p>
+		<p class="subp">登录成功跳转至 <b>http://游戏二级域名/index.php</b>，登录失败则跳转至与平台相应的游戏主页。</p>
+
+		<h3 id="f">充值接口</h3>
+		<p>接口地址：</p>
+		<p class="subp"><b>http://api.sxd.xd.com/api/buygold.php</b>，固定是这个地址，不会根据游戏服改变。</p>
+		
+		<p>调用方式：</p>
+		<p class="subp">服务端 <b>GET</b>（由充值服务器GET方式请求调用充值接口）</p>
+
+		<p>调用参数：</p>
+		<ul>
+			<li><span><b>user</b> － 玩家的唯一标识，字符串类型，只要可以唯一标识一个玩家即可，要于登录接口一致(长度&lt;=20)</span></li>
+			<li><span><b>gold</b> － 充值的元宝数量，一个正整数，与人民币比例为：<b>1:10</b>，1人民币=10元宝</span></li>
+			<li><span><b>order</b> － 本次充值在平台上的订单号，字符串类型，需要可以唯一标识这次充值</span></li>
+			<li><span><b>domain</b> － 所要充值的游戏服所对应的二级域名，例如：s1.sxd.xd.com</span></li>
+			<li><span><b>sign</b> － 充值票据，字符串类型，按 <b>md5(user_gold_order_domain_平台密钥)</b> 算法生成的哈希值(小写)，user请先urlencode后再放入加密串</span></li>
+		</ul>
+
+		<p>调用结果：</p>
+		<ul>
+			<li><span><b>1</b> － 充值成功</span></li>
+			<li><span><b>2</b> － 充值的服务器不存在，请确认游戏服域名正确并已被添加到后台</span></li>
+			<li><span><b>3</b> － 参数不完整或充值游戏币有误</span></li>
+			<li><span><b>4</b> － 不允许的访问的IP，请将充值服务器的IP提交给联运负责人加入白名单</span></li>
+			<li><span><b>5</b> － md5错误，请确认密钥正确，充值票据算法跟文档描述一致，参与票据计算的参数于传递给接口的参数一致</span></li>
+			<li><span><b>6</b> － 订单已经成功充过值，请确认订单号在平台上是唯一的，并且没有错误的重跑</span></li>
+			<li><span><b>7</b> － 不存在此账号，请确认用户名和登录接口传递的是一致的</span></li>
+			<li><span><b>8</b> － 充值接口关闭</span></li>
+			<li><span><b>0</b> － 充值失败，订单处于待充状态，您可以重复请求直到返回值为6</span></li>
+		</ul>
+		<p>附加说明：</p>
+		<p class="subp">对于充值失败的订单服务器有重跑机制，一般每5分钟会对充值状态为待充的订单进行重新请求，处理为成功状态(也就是返回0的订单)，若超过5分钟订单还未执行成功请与运营同学联系。 </p>
+		
+		<h3 id="g">排行数据</h3>
+		<p>接口地址：</p>
+		<p class="subp"><b>http://api.sxd.xd.com/order/{domain}_{order}.json</b>，固定是这个地址，不会根据游戏服改变。</p>
+
+		<p>调用方式：</p>
+		<p class="subp"><b>GET</b>（在客户端用ajax获取后渲染或者服务端获取后渲染到页面都可以，最好本地做下缓存）</p>
+
+		<p>调用参数：</p>
+		<ul>
+			<li><span><b>domain</b> 游戏服二级域名，例如：s1.sxd.xd.com</span></li>
+			<li><span><b>order</b> 排行类型，<b>plt</b> = 等级排行；<b>mt</b> = 副本进度排行；<b>pft</b> = 声望排行</span></li>
+		</ul>
+
+		<p>附加说明：</p>
+		<p class="subp">排名接口是已生成好的静态文件，文件内容为JSON后的数据格式平台获取数据时可改变接口文件两个不同参数来获取不同服不同类型的排名排名默认取前10名 ，未开服不会产生排行数据，可先提取测试服排行数据测试。</p>
+
+		<h3 id="h">帐号是否存在</h3>
+		<p>接口地址：</p>
+		<p class="subp"><b>http://api.sxd.xd.com/api/check_user.php</b>，固定是这个地址，不会根据游戏服务器改变。</p>
+
+		<p>调用方式：</p>
+		<p class="subp">服务端 <b>GET</b></p>
+
+		<p>调用参数：</p>
+		<ul>
+			<li><span><b>user</b> － 所要检查的玩家帐号，与登录接口一致(长度&lt;=20)</span></li>
+			<li><span><b>domain</b> － 游戏服二级域名，例如：s1.sxd.xd.com</span></li>
+			<li><span><b>sign</b> － 调用票据，按 <b>md5(user_ domain _平台密钥)</b> 算法生成的哈希值</span></li>
+		</ul>
+
+		<p>调用结果：</p>
+		<ul>
+			<li><span><b>1</b> － 成功，玩家帐号存在</span></li>
+			<li><span><b>2</b> － 服务器不存在，请确认游戏服域名正确并已被添加到后台</span></li>
+			<li><span><b>3</b> － md5错误，请确认密钥正确，充值票据算法跟文档描述一致，参与票据计算的参数于传递给接口的参数一致</span></li>
+			<li><span><b>4</b> － 玩家帐号未创建角色</span></li>
+			<li><span><b>5</b> － 玩家帐号不存在</span></li>
+		</ul>
+		<p>附加说明：</p>
+		<p class="subp">本接口主要用于请求充值接口前进行帐号是否存在的判断，平台若请求此接口返回错误信息则勿继续调用充值接口。</p>
+		
+		<h3 id="i">广告渠道来源规则</h3>
+		<p>1-加入渠道来源参数：</p>
+		<p class="subp">参数名：<b>source</b>，在游戏登陆接口中加入一个参数，例如&amp;source=baidu，标明这是baidu的用户，当用户创建帐号后进入游戏，将渠道参数绑定在ID上。</p>
+		<p>2-加入平台用户注册时间参数：</p>
+		<p class="subp">参数名：<b>regdate</b>，在游戏登陆接口中加入一个参数，例如&amp;regdate=1313486928，标明这是用户在平台的注册时间，当用户创建帐号后进入游戏，将参数绑定在ID上。</p>
+		<p>3-来源统计后台规则：</p>
+		<p class="subp">用户注册后，游戏的后台需要将用户来源参数绑定ID进入游戏，并持续跟踪。服务器将用户注册渠道单独存入数据库，并可在后台数据报表中的(<strong>角色创建/渠道统计</strong>)查看<br><br>
+		<img src="style/source.jpg"><br><br>
+		共8项： 渠道、注册用户、创建角色、角色创建率、到达**级、**级百分比、充值人数、充值总额<br>
+		<br>
+		1.	渠道：source来源<br>
+		2.	注册用户：从这个渠道来的注册量<br>
+		3.	创建角色：来源注册量中，有多少人完成创建角色进入游戏<br>
+		4.	角色创建率：创建角色/注册用户<br>
+		5.	到达**级：玩家到达**级的数量<br>
+		6.	**级百分比：玩家到达**级的数量/角色量<br>
+		7.	充值人数：其中有多少玩家进行充值<br>
+		8.	充值总额：该渠道来源玩家的充值金额<br><br>
+
+		首先数据库记录用户注册的信息，也就是玩家渠道来源和平台注册时间。<br>
+		后台查询时，若选择[滚服]查询只按照用户注册第一时间查询。渠道注册后的账号，无论玩哪个服，这个账号都属于注册时候的渠道，和注册时候的第一时间。<br>
+		后台只能记录source后面的渠道，不能具体查看是哪一个账号。<br><br>
+		
+		例如：（服务器中只有下面一个用户）<br>
+		这个用户在1月1号通过a渠道进入游戏玩s1，那么后台查看时，1月1日就会有记录。那么查看1月2日，则没有该账号。因为账号不属于2号的注册时间。<br>
+		1月5号S2开服，用户又玩s2，那么这个账号仍旧是算1号的a渠道的。如果查看S2的1月1号。可以查看到该用户，而不是1月5号才有该用户。也就是说，后台告诉你，1月1号，有a渠道的用户注册了账号，并在S2创建的角色。而1月5号没有用户从渠道注册账号。<br>
+	
+
+		</p>
+		<h3 id="j">游戏内链接设置</h3>
+		<p>1-运营号进入游戏数据后台选择[<strong>平台信息设置</strong>]：</p>
+		<p class="subp">共9项： 游戏下方描述、官网链接、论坛链接、充值链接、VIP说明链接、GM链接、收藏夹标题、收藏夹链接、防沉迷链接<br>
+		<br>
+		1.	<strong>游戏下方描述</strong>：游戏界面底部文字，如：最好玩的横版过关网游《神仙道》<br>
+		2.	<strong>官网链接</strong>：游戏内玩家可点击的游戏官网链接，请以http://开头<br>
+		3.	<strong>论坛链接</strong>：游戏内玩家可点击的游戏论坛链接，请以http://开头<br>
+		4.	<strong>充值链接</strong>：游戏内玩家可点击的平台充值页面链接，可加入变量，请以http://开头<br>
+		5.	<strong>VIP说明链接</strong>：游戏内玩家可点击的链接，介绍神仙道VIP等级，请以http://开头<br>
+		6.	<strong>GM链接</strong>：若想使用自有平台的GM工具，请填写链接地址，留空则使用游戏内置GM工具（可选）<br>
+		7.	<strong>收藏夹标题</strong>：提示玩家收藏游戏时的标题（可选）<br>
+		8.	<strong>收藏夹链接</strong>：提示玩家收藏游戏时的地址，可设置为游戏官网地址，请以http://开头（可选）<br>
+		9.	<strong>防沉迷链接</strong>：平台自定义防沉迷链接地址，开启防沉迷功能后该地址有效，不填则默认让玩家使用游戏内的防沉迷资料录入，请以http://开头（可选）<br>
+		</p>
+		<p>2-链接中变量说明(主要针对充值链接)：</p>
+		<p class="subp">
+		<b>%sid%</b> ： 等同于S1、S2等大写格式； 如：http://xd.com/pay.php?server=%sid%<br>
+		<b>%sid2%</b> ： 等同于s1、s2等小写格式； 如：http://xd.com/pay.php?server=%sid2%<br>
+		<b>%sno%</b> ： 等同于1、2、3等格式； 如：http://xd.com/pay.php?server=%sno%<br>
+		<b>%user%</b> ： 等同于登陆帐号； 如：http://xd.com/pay.php?user=%user%
+		</p>
+		<h3 id="k">角色回档接口</h3>
+		<p>接口地址：</p>
+		<p class="subp"><b>http://游戏服二级域名/sxd/backup.php</b>，如：http://s1.sxd.xd.com/sxd/backup.php</p>
+
+		<p>调用方式：</p>
+		<p class="subp">浏览器 <b>GET</b>（从平台登录完跳转到这个接口）</p>
+
+		<p>调用参数：</p>
+		<ul>
+			<li><span><b>user</b> － 同登陆接口user即可</span></li>
+			<li><span><b>identity</b> － 验证身份证, 按 <b>md5(身份证号_平台密钥) </b> 算法生成的哈希值(小写)。</span></li>
+			<li><span><b>mobile</b> － 验证手机号码, 按 <b>md5(手机号码_平台密钥) </b> 算法生成的哈希值(小写)。</span></li>
+			<li><span><b>time</b> － 时间，时间戳类型，对应php中的time()函数的返回值，北京时间，票据过期时间为前后10分钟。</span></li>
+			<li><span><b>sign</b> － 验证票据，字符串类型，按 <b>md5(user_time_平台密钥)</b> 算法生成的哈希值(小写)。</span></li>
+		</ul>
+
+
+		<p>调用结果：</p>
+		<p class="subp">登录失败返回相应错误代号。</p>		
+		<div id="footer"> 最后修改时间：2013-01-30</div>
+	</div>
+
+
+</body></html>
