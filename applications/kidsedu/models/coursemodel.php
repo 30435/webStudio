@@ -33,7 +33,7 @@ class CourseModel extends CommonModel
 			'status' => array('name' => '课程状态', 'infos' => $statusInfos),
 			'description' => array('name' => '游戏描述'),
 		);
-		$fieldInfos['fieldChanges'] = array('name', 'agency_id', 'shool_id', 'sort', 'status');
+		$fieldInfos['fieldChanges'] = array('name', 'agency_id', 'school_id', 'sort', 'status');
 		
 		return $fieldInfos;
 	}
