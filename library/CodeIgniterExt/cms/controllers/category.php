@@ -154,6 +154,22 @@ abstract class CmsCategory extends Custom_AdminController
 	}
 
 	/**
+	 * Do some operations after adding an info 
+	 *
+	 * @return void
+	 */
+	protected function _afterAdd($info)
+	{
+        $id = $this->currentModel->currentDb->insert_id();
+		$info['id'] = $id;
+
+		$data['url'] = $this->_getUrl($info);
+
+		$where = array('id =' => $id);
+		$this->currentModel->editInfo($data, $where);
+	}
+
+	/**
 	 * Create a url for a category
 	 *
 	 * @param array $info
