@@ -21,7 +21,7 @@ class WebgameCommon
 		if (empty($this->webgameInfo)) {
 			return false;
 		}
-		if ($params['payType'] == 'towebgame' && empty($params['serverInfo'])) {
+		if ($this->webgameInfo['type'] == 3 && empty($params['serverInfo'])) {
 			return false;
 		}
 
@@ -33,7 +33,6 @@ class WebgameCommon
 		}
 		$this->params = $params;
 		$this->time = time();
-		//var_dump($this->params);
 	}
 
 	/**
@@ -63,14 +62,4 @@ class WebgameCommon
 		$payResult = $this->_payGame($payIp, $payKey);
 		return $payResult;
 	}
-
-	/**
-	 * 返回查询条件
-	 *
-	 * @return array
-	 */
-	public function get_where_arr(){
-		return array('serverid'=>$this->serverInfo['id'],'gamename'=>$this->webgameInfo['code'],'userid'=>$this->userid);
-	}
-
 }

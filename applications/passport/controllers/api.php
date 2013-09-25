@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Api extends Custom_Controller
 {
@@ -17,13 +17,13 @@ class Api extends Custom_Controller
 	{
 		$token = str_replace(' ', '+', $this->input->get('token'));
 		if (empty($token)) {
-			exit('Param Error!');
+			exit('-9');
 		}
 
 		parse_str(uc_authcode($token, 'DECODE', 'novagame'), $infos);
 		$validActions = array('login', 'register');
 		if (!isset($infos['action']) || !in_array($infos['action'], $validActions)) {
-			exit('Action Error!');
+			exit('-8');
 		}
 
 		$this->$infos['action']($infos);
@@ -42,11 +42,11 @@ class Api extends Custom_Controller
 		$email = $infos['email'];
 
 		if (empty($password) || empty($password2) || empty($seccode)) {
-			$datas['code'] = $datas['msg'] = 'INFO EMPTY';
+			$datas['code'] = -7; $datas['msg'] = 'INFO EMPTY';
 			exit(json_encode($datas));
 		}
 		if ($password != $password2) {
-			$datas['code'] = $datas['msg'] = 'PASSWORD NO EQUAL';
+			$datas['code'] = -6; $datas['msg'] = 'PASSWORD NO EQUAL';
 			exit(json_encode($datas));
 		}
 		$this->load->library('session');
@@ -66,7 +66,7 @@ class Api extends Custom_Controller
 		$userid= uc_user_register($userInfo['username'], $password, $email);
 		$userid = intval($userid);
 		if ($userid <= 0) {
-			$datas['code'] = $datas['msg'] = 'SERVER_ERROR';
+			$datas['code'] = -5; $datas['msg'] = 'SERVER_ERROR';
 			exit(json_encode($datas));
 		} else {
 			$passwordInfos = $this->_getPassword($password);
@@ -80,7 +80,7 @@ class Api extends Custom_Controller
 
 			$addUser = $this->memberModel->addInfo($userInfo);
 			if (empty($addUser)) {
-				$datas['code'] = $datas['msg'] = 'SERVER2_ERROR';
+				$datas['code'] = -4; $datas['msg'] = 'SERVER2_ERROR';
 				exit(json_encode($datas));
 			}
 
@@ -116,7 +116,7 @@ class Api extends Custom_Controller
 	public function login($infos)
 	{
 		$datas['status'] = false;
-		$datas['code']   = 'PASSWD_OR_AID_WRONG';
+		$datas['code']   = '3';//'PASSWD_OR_AID_WRONG';
 		$datas['msg']    = 'PASSWD_OR_AID_WRONG';
 
 		$username = $infos['username'];
@@ -130,7 +130,7 @@ class Api extends Custom_Controller
 		$this->load->model('timesModel');
 		/*$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
 		if ($remainMinute > 0) {
-			$datas['code'] = 'PASSWD_WRONG_TIMES';
+			$datas['code'] = '4';//'PASSWD_WRONG_TIMES';
 			$datas['msg'] = 'PASSWD_WRONG_TIMES';
 			exit(json_encode($datas));
 		}*/
@@ -146,7 +146,8 @@ class Api extends Custom_Controller
 				$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
 			}
 			$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : 'OTHER_ERROR';
-			$datas['code'] = $datas['msg'] = $message;
+			$datas['code'] = $ucInfo['userid'];
+			$datas['msg'] = $message;
 			exit(json_encode($datas));
 		}
 
@@ -191,7 +192,8 @@ class Api extends Custom_Controller
 		$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 
 		$datas['status'] = true;
-		$datas['code'] = $datas['msg'] = 'SUCCESS';
+		$datas['code'] = 1;
+		$datas['msg'] = 'SUCCESS';
 		exit(json_encode($datas));
 		//$this->_messageInfo('登录成功！' . $synloginCode, $this->applicationInfos[2]['domain']);
 	}

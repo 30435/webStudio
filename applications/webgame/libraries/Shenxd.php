@@ -72,21 +72,5 @@ class Shenxd extends WebgameCommon
 
 		return $result;
 	}
-
-	/*******************************************新手卡相关***************************************/
-
-	/**
-	 * 生成新手卡
-	 *
-	 * @return string sign
-	 */
-	public function generate_card() {
-		$user = (strlen($this->username)) >20 ? substr($this->username, 0,20) : $this->username;
-		$domain =$this->serverInfo['extra_param'];
-		$signStr = $user . '_'.$domain;
-		$sign = strtolower(md5($signStr));
-		return $sign;
-	}
-
 }
 ?>

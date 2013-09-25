@@ -155,10 +155,18 @@ class frontpay extends Custom_Controller
 				'money' => floor($respondInfo['money_valid']),
 				'moneyMiddle' => $respondInfo['money_valid_middle'],
 			);
-			$payInfos = $accountType == 'touser' ? false : $payInfos;
-			$payInfos = $accountType == 'topaymonth' ? (empty($respondInfo['paymonth_id']) ?  false : array_merge($payInfos, array('paymonthId' => $respondInfo['paymonth_id']))) : $payInfos; print_r($payInfos);
-			$payInfos = ($accountType == 'towebgame') ? (empty($respondInfo['webgame_code']) || empty($respondInfo['server_id'])) ? 
-				false : array_merge($payInfos, array('webgameCode' => $respondInfo['webgame_code'], 'serverId' => $respondInfo['server_id'], 'serverRole' => $respondInfo['server_role'])) : $payInfos;
+
+			switch ($accountType) {
+				case 'touser':
+					$payInfos = false;
+					break;
+				case 'topaymonth':
+					$payInfos = empty($respondInfo['paymonth_id']) ?  false : array_merge($payInfos, array('paymonthId' => $respondInfo['paymonth_id']));
+					break;
+				case 'towebgame':
+					$payInfos = empty($respondInfo['webgame_code']) ? false : array_merge($payInfos, array('webgameCode' => $respondInfo['webgame_code'], 'serverId' => $respondInfo['server_id'], 'serverRole' => $respondInfo['server_role']));
+					break;
+			}
 
 			if (!empty($payInfos)) {
 				$this->session->set_userdata('payInfos', $payInfos);
@@ -264,10 +272,12 @@ class frontpay extends Custom_Controller
 		if ($orderInfo['payType'] == 'towebgame') {
 			$orderInfo['webgameCode'] = $this->input->get_post('webgameCode');
 			$params['webgameInfo'] = isset($this->webgameInfos[$orderInfo['webgameCode']]) ? $this->webgameInfos[$orderInfo['webgameCode']] : false;
-			$orderInfo['serverId'] = $this->input->get_post('serverId');
-			$params['serverInfo'] = isset($this->serverInfos[$orderInfo['serverId']]) ? $this->serverInfos[$orderInfo['serverId']] : false;
-			$orderInfo['serverRole'] = $this->input->get_post('serverRole');
-			if (empty($params['webgameInfo']) || empty($params['serverInfo']) || $orderInfo['webgameCode'] != $params['serverInfo']['webgame_code']) {
+			if ($params['webgameInfo']['type'] == 3) {
+				$orderInfo['serverId'] = $this->input->get_post('serverId');
+				$params['serverInfo'] = isset($this->serverInfos[$orderInfo['serverId']]) ? $this->serverInfos[$orderInfo['serverId']] : false;
+				$orderInfo['serverRole'] = $this->input->get_post('serverRole');
+			}
+			if (empty($params['webgameInfo']) || ($params['webgameInfo']['type'] == 3 && (empty($params['serverInfo']) || $orderInfo['webgameCode'] != $params['serverInfo']['webgame_code']))) {
 				exit('fff');//return false;
 			}
 		}

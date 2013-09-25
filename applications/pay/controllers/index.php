@@ -54,11 +54,14 @@ class Index extends Custom_Controller
 		$midParam = explode('_', $codeServerParam);
 		$webgameCode = (isset($midParam[0]) && !empty($midParam[0])) ? $midParam[0] : '';
 		$this->webgameInfo = isset($this->webgameInfos[$webgameCode]) ? $this->webgameInfos[$webgameCode] : false;
-		$serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
-		$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
 
-		if (empty($this->webgameInfo)) {
+		if (empty($this->webgameInfo) || $this->webgameInfo['type'] == 2) {
 			$this->_messageInfo('游戏选择有误！', $this->baseUrl . 'index/exchange');
+		}
+		$this->serverInfo = array();
+		if ($this->webgameInfo['type'] == 3) {
+			$serverId = (isset($midParam[1]) && !empty($midParam[1])) ? $midParam[1] : '';
+			$this->serverInfo = isset($this->serverInfos[$serverId]) ? $this->serverInfos[$serverId] : false;
 		}
 
 		$this->_showForm();

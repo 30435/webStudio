@@ -10,9 +10,9 @@ switch ($this->params['orderInfo']['payType']) {
 		break;
 	case 'towebgame':
 		$validMoney = $validMoney * $this->params['webgameInfo']['coin_rate'];
-		$getStr = '<li><label>你充值的游戏:</label><div class="b">' . $this->params['webgameInfo']['name'] . '</div></li>'
-			. '<li><label>你充值的服务器:</label><div class="b">' . $this->params['serverInfo']['name'] . '</div></li>'
-			. '<li><label>充值所得:</label><div class="b">' . $validMoney . $this->params['webgameInfo']['coin_unit'] . $this->params['webgameInfo']['coin_name'] . '诺币</div></li>';
+		$getStr = '<li><label>你充值的游戏:</label><div class="b">' . $this->params['webgameInfo']['name'] . '</div></li>';
+		$getStr .= $this->params['webgameInfo']['type'] == 3 ? '<li><label>你充值的服务器:</label><div class="b">' . $this->params['serverInfo']['name'] . '</div></li>' : '';
+		$getStr .= '<li><label>充值所得:</label><div class="b">' . $validMoney . $this->params['webgameInfo']['coin_unit'] . $this->params['webgameInfo']['coin_name'] . '诺币</div></li>';
 		break;
 	case 'topaymonth':
 		$getStr = '<li><label>您花费了:</label><div class="b">' . $validMoney . '诺币</div></li>'

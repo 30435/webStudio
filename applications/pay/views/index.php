@@ -50,7 +50,7 @@ $(document).ready(function(){
 	}).defaultPassed();
 	$("#username2").formValidator({onShow:"",onFocus:"至少1个长度",onCorrect:"用户名一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复用户名两边不能有空符号"},onError:"重复用户名不能为空,请确认"}).compareValidator({desID:"username",operateor:"=",onError:"2次用户名不一致,请确认"});
 	$("#money").formValidator({onShow:"",onFocus:"只能输入1-5000之间的数字哦",onCorrect:"恭喜你,你输对了"}).inputValidator({min:1,max:5000,type:"value",onErrorMin:"你输入的值必须大于等于1",onError:"金额必须在1-5000之间，请确认"});
-	<?php if ($this->payType == 'towebgame') { ?>
+	<?php if ($this->payType == 'towebgame' && $this->webgameInfo['type'] == 3) { ?>
 	$("#serverId").formValidator({onShow:"请选择服务器",onFocus:"服务器必须选择",onCorrect:"选择正确"}).inputValidator({min:1,onError: "充值需指定服务器！"}).functionValidator({fun:checkServerUser});
 	<?php } ?>
 });
@@ -115,7 +115,7 @@ $(document).ready(function(){
 						</div>
 					</li>
 
-					<?php if ($this->payType == 'towebgame') { ?>
+					<?php if ($this->payType == 'towebgame' && $this->webgameInfo['type'] == 3) { ?>
 					<li class="form_list_li">
 						<label class="lbl">  充值的服务器：</label>
 						<div class="txt_wrap">
