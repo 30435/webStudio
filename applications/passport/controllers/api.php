@@ -194,6 +194,8 @@ class Api extends Custom_Controller
 		$datas['status'] = true;
 		$datas['code'] = 1;
 		$datas['msg'] = 'SUCCESS';
+		echo json_encode($datas);
+		exit();
 		exit(json_encode($datas));
 		//$this->_messageInfo('登录成功！' . $synloginCode, $this->applicationInfos[2]['domain']);
 	}

@@ -20,7 +20,7 @@ abstract class CommonModel extends CI_Model
 	 * @param  string $applicationCode
 	 * @return resource
 	 */
-	protected function _loadDatabase($appCode)
+	public function _loadDatabase($appCode)
 	{
 		static $databases = array();
 		if (isset($databases[$appCode])) {
