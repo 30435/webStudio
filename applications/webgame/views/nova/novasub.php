@@ -85,7 +85,7 @@ body{background-color:#ffffff;}
 <body>
 <div class="act_wapper">
     <div class="act_inner">
-		<div id="block179_8" class="block179_8 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="468" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_8" class="block179_8 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="468" rel="0" target="_blank" href="<?php echo $this->categoryInfos[16]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 	    <div id="block179_0" class="block179_0 gen_tab_block">
 		    <div class="tab_container">
                 <ul tab_nav_img="<?php echo $this->staticUrl; ?>nova/web/images/tabnav_pic/14.jpg" class="tab_nav">
@@ -99,7 +99,7 @@ body{background-color:#ffffff;}
 					<div class="child_inner">
 						<div id="block181_0" class="block181_0 gen_linkList_block">
 							<ul class="mod_gameinfo_list">
-							<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 9); ?>
+							<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 9, array('catid' => 16), array(array('inputtime', 'desc'))); ?>
 							<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 								<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 							<?php } ?>
@@ -109,55 +109,55 @@ body{background-color:#ffffff;}
 				</div>
 			</div>
 		</div>
-		<div id="block179_9" class="block179_9 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="469" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_9" class="block179_9 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="469" rel="0" target="_blank" href="<?php echo $this->categoryInfos[9]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_1" class="block179_1 gen_linkList_block">
 			<ul class="mod_gameinfo_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 9), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 			<?php } ?>
 			</ul> 
 		</div>
-		<div id="block179_10" class="block179_10 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="472" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_10" class="block179_10 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="472" rel="0" target="_blank" href="<?php echo $this->categoryInfos[14]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_2" class="block179_2 gen_linkList_block">
 			<ul class="mod_gameinfo_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 14), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 			<?php } ?>
 			</ul> 
 		</div>
-		<div id="block179_11" class="block179_11 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="470" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_11" class="block179_11 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="470" rel="0" target="_blank" href="<?php echo $this->categoryInfos[12]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_3" class="block179_3 gen_linkList_block"><ul class="mod_gameinfo_list">
 			<ul class="mod_gameinfo_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 12), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 			<?php } ?>
 			</ul> 
 		</div>
-		<div id="block179_12" class="block179_12 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="471" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_12" class="block179_12 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="471" rel="0" target="_blank" href="<?php echo $this->categoryInfos[11]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_4" class="block179_4 gen_linkList_block"><ul class="mod_gameinfo_list">
 			<ul class="mod_gameinfo_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 11), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 			<?php } ?>
 			</ul> 
 		</div>
-		<div id="block179_17" class="block179_17 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="477" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_17" class="block179_17 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="477" rel="0" target="_blank" href="<?php echo $this->categoryInfos[13]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_5" class="block179_5 gen_linkList_block"><ul class="mod_gameinfo_list">
 			<ul class="mod_gameinfo_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 13), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li><i></i><em><?php echo date('m-d', $newInfo['inputtime']); ?></em><span><a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $newInfo['title']; ?></a></span></li>
 			<?php } ?>
 			</ul> 
 		</div>
-		<div id="block179_7" class="block179_7 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="467" rel="0" target="_blank" href="<?php echo $this->baseUrl; ?>index/category/10" class="gen_link c_t_combo0 "></a></div>
+		<div id="block179_7" class="block179_7 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="467" rel="0" target="_blank" href="<?php echo $this->categoryInfos[10]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 		<div id="block179_6" class="block179_6 gen_imgList_block">
 			<ul class="mod_game_list">
-			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 6); ?>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 6, array('catid' => 10), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li>
 					<a title="<?php echo $newInfo['title']; ?>" target="_blank" href="<?php echo $newInfo['url']; ?>" class="c_lazy_load"><img alt="<?php echo $newInfo['title']; ?>" src="<?php echo $newInfo['thumb']; ?>" width="108px" height="113px"></a>
@@ -166,22 +166,24 @@ body{background-color:#ffffff;}
 			<?php } ?>
 			</ul> 
 		</div>
-
-<div id="block179_13" class="block179_13 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="473" rel="nofollow" onclick="mgpPvStat('stat.autoact.btn473');" target="_blank" href="http://3366.gamebbs.qq.com/forum.php?mod=viewthread&amp;tid=15063&amp;page=1&amp;extra=#pid111499" class="gen_link c_t_combo0 "></a></div>
-		<div id="block179_15" class="block179_15 gen_text_block"><p align="center"><strong><a target="_blank" href="http://web.3366.com/17roco/art/1_6484.shtml"><span style="color:#e56600;font-size:20px;">8月30日更新预告 霹雳游侠</span></a></strong></p></div>
-		<div id="block179_16" class="block179_16 gen_text_block"><p align="center"><span style="color:#304e7f;"><a target="_blank" href="http://www.3366.com/act/a20130701webgame/index6.shtml">8月天天签到送豪礼，还有专属神秘宠物等你来拿，快来参加吧！！</a></span></p></div>
+		<?php $i = 1; $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 2, array('catid' => 15)); ?>
+		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
+			<?php if ($i == 1) { ?>
+			<div id="block179_15" class="block179_15 gen_text_block"><p align="center"><strong><a target="_blank" href="<?php echo $newInfo['url']; ?>"><span style="color:#e56600;font-size:20px;"><?php echo $controller->cutstr($newInfo['title'], 30); ?></span></a></strong></p></div>
+			<?php } else { ?>
+			<div id="block179_16" class="block179_16 gen_text_block"><p align="center"><span style="color:#304e7f;"><a target="_blank" href="<?php echo $newInfo['url']; ?>"><?php echo $controller->cutstr($newInfo['title'], 30); ?></a></span></p></div>
+			<?php } ?>
+		<?php $i++; } ?>
 		
-		<div id="block179_18" class="block179_18 gen_text_block"><p><a target="_blank" href="http://web.3366.com/17roco/art/1_5075.shtml"><span style="COLOR: #e56600">洛克快捷方式</span></a> </p></div>
-		<div id="block179_19" class="block179_19 gen_text_block"><p>&nbsp;<a target="_blank" href="http://web.3366.com/17roco/art/3_2197.shtml"><span style="color:#e56600;">材料大全</span></a></p></div>
-		<div id="block179_20" class="block179_20 gen_text_block"><a target="_blank" href="http://web.3366.com/17roco/art/27_1693.shtml"><span style="color:#e56600;">宠物大全</span></a></div>
+		<div id="block179_18" class="block179_18 gen_text_block"><p><a target="_blank" href="<?php echo $this->categoryInfos[15]['url']; ?>"><span style="COLOR: #e56600"><?php echo $this->categoryInfos[15]['catname']; ?></span></a> </p></div>
+		<div id="block179_19" class="block179_19 gen_text_block"><p>&nbsp;<a target="_blank" href="<?php echo $this->categoryInfos[16]['url']; ?>"><span style="color:#e56600;"><?php echo $this->categoryInfos[16]['catname']; ?></span></a></p></div>
+		<div id="block179_20" class="block179_20 gen_text_block"><a target="_blank" href="<?php echo $this->categoryInfos[17]['url']; ?>"><span style="color:#e56600;"><?php echo $this->categoryInfos[17]['catname']; ?></span></a></div>
 	</div>
-	<!-- 宽度1000PX以内背景图填充区_S-->
 	<div class="bg_container_normal" id="js_act_bg_normal"><div class="bg bg0"></div><div class="bg bg1"></div><div class="bg bg2"></div><div class="bg bg3"></div></div>    
-	<!--宽度1000PX以上背景填充区_S-->
 	<div class="bg_container_full" id="js_act_bg_full"> </div>
 </div>
 
-<div class="wrap_footer">       
+<!--<div class="wrap_footer">       
 	<div id="footer">
 		<div class="copyright">
 			<span>
@@ -200,6 +202,6 @@ body{background-color:#ffffff;}
 			</p>
 		</div>
 	</div>
-</div>
+</div>-->
 </body>
 </html>

@@ -33,7 +33,7 @@
 		<i class="news_list_title"></i>
 	</div>
 	<ul class="news_list">
-	<?php $page = intval($this->input->get_post('page')); $page = max(1, $page); $newInfos = $controller->_getFrontInfos('webgame', 'new', $page, 8); ?>
+	<?php $page = intval($this->input->get_post('page')); $page = max(1, $page); $where = array('catid' => $this->catid); $newInfos = $controller->_getFrontInfos('webgame', 'new', $page, 8, $where); ?>
 	<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 			<li class="news_item">
 				<a target="_blank" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>"><i class="news_item_tag"></i><?php echo $newInfo['title']; ?></a>

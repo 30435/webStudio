@@ -123,6 +123,10 @@ $(function(){
 		<td class="y-bg"><input type="text" class="input-text" name="listorder" value="<?php if (isset($this->currentInfo['listorder'])) echo $this->currentInfo['listorder']; ?>" id="listorder"  size="30"/></td>
 	  </tr>
 	  <tr>
+	    <th><?php echo $this->fieldInfos['url_webgame']['name']; ?>：</th>
+		<td class="y-bg"><input type="text" class="input-text" name="url_webgame" value="<?php if (isset($this->currentInfo['url_webgame'])) echo $this->currentInfo['url_webgame']; ?>" id="url_webgame"  size="100"/></td>
+	  </tr>
+	  <tr>
 	    <th><?php echo $this->fieldInfos['url_home']['name']; ?>：</th>
 		<td class="y-bg"><input type="text" class="input-text" name="url_home" value="<?php if (isset($this->currentInfo['url_home'])) echo $this->currentInfo['url_home']; ?>" id="url_home"  size="100"/></td>
 	  </tr>
