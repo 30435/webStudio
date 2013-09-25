@@ -21,4 +21,10 @@ class Index extends CmsIndex
 		$template = isset($this->templatePre) ? $this->templatePre . 'index1' : 'index1';
 		$this->load->view($template, $this->frontController);
 	}
+
+	public function index2()
+	{
+		$template = isset($this->templatePre) ? $this->templatePre . 'index2' : 'index2';
+		$this->load->view($template, $this->frontController);
+	}
 }

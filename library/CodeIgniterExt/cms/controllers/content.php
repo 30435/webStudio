@@ -36,8 +36,15 @@ abstract class CmsContent extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _getSubCat() {
-		$tree = new CustomTree($this->categoryInfos);
+	protected function _getSubCat()
+	{
+		$categoryInfos = array();
+		foreach ($this->categoryInfos as $key => $category) {
+			if ($category['modelid'] != 1) {
+				$categoryInfos[$key] = $category;
+			}
+		}
+		$tree = new CustomTree($categoryInfos);
 		$strs = "<span class=''><a href='{$this->baseUrl}admin/content/listinfo/?catid=\$id' target='right'>\$catname</a></span>";
 		$strs2 = "<span class='folder'>\$catname</span>";
 
