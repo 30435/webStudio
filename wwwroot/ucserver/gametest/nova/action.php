@@ -11,9 +11,13 @@ if ($action == 'login') {
 
 	$string = "action=login&username={$username}&password={$password}";
 	$token = uc_authcode($string, 'ENCODE');
-	$url = 'http://passport.ci.com/api?token=' . $token; echo file_get_contents($url);
-	$result = json_decode(file_get_contents($url));
-var_dump($result);
+	$url = 'http://passport.ci.com/api?token=' . $token;
+	$returnStr = file_get_contents($url);
+	if (preg_match('/^\xEF\xBB\xBF/', $returnStr)) {
+		$returnStr = substr($returnStr, 3);
+	}
+	$result = json_decode($returnStr, true);
+
 	if ($result['status'] === true) {
 		echo '进入游戏.......';
 	} else {
@@ -31,9 +35,11 @@ var_dump($result);
 	$string = "action=register&password={$password}&password2={$password2}&seccode={$seccode}";
 	$token = uc_authcode($string, 'ENCODE');
 	$url = 'http://passport.ci.com/api?token=' . $token;
-echo $url;
-var_dump(file_get_contents($url)); exit();
-	$result = json_decode(file_get_contents($url), true);
+	$returnStr = file_get_contents($url);
+	if (preg_match('/^\xEF\xBB\xBF/', $returnStr)) {
+		$returnStr = substr($returnStr, 3);
+	}
+	$result = json_decode($returnStr, true);
 	var_dump($result);
 	if ($result['status'] === true) {
 		header("Location: http://g1.game.com/?action=registersuccess&username=" . $result['username'] . '&password=' . $password);
