@@ -1,1759 +1,4289 @@
-<?php echo $this->load->view('header'); ?>
-<!-- 内容开始 -->
-<div class="box_20ov cl"></div>
-<!-- 1楼开始 -->
-<div id="floor_1" class="layout">
-  <div class="floor-hd"> 
-    <span class="floor-logo"></span>
-    <div class="floor-about">
-      <p class="title tcolor2">看新闻</p>
-      <h2><a target="_blank" href="http://www.m1905.com/film/">电影新闻</a> | <a target="_blank" href="http://www.m1905.com/star/">明星新闻</a> | <a target="_blank" href="http://www.m1905.com/film/video/">视频新闻</a> | <a target="_blank" href="http://www.m1905.com/special/index-p-typeid-1.html">专题</a> | <a target="_blank" href="http://www.m1905.com/special/index-p-typeid-2.html">独家</a> | <a target="_blank" href="http://www.m1905.com/video/Globaldaily/">环球日报</a></h2>
-    </div>
-    <div data-size="585" style="width: 585px; height: 37px; font-size: 0px; line-height: 0;" class="adArea" id="adjs_275"><iframe width="585" scrolling="no" height="0" frameborder="no" id="m1905ad_83647" name="m1905ad_83647" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=83647"></iframe></div>
-  </div>
-                                    <div data-unit-config="{'onclass':'active', 'offclass':'', 'pause_on_act':'click', 'interval':8000, 'position':'left'}" id="carousel_news" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-pos" style="width: 6160px; left: -5390px;">
-            <div class="f_out style01">
-      <ul>
-<li>
-  <a title="北美票房：恐怖片《潜伏2》登顶" target="_blank" href="http://www.m1905.com/news/20130916/690699.shtml" class="mtitle">北美票房：恐怖片《潜伏2》登顶</a>
-  <a href="http://www.m1905.com/news/20130916/690699.shtml" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916101724104.jpg" alt="北美票房：恐怖片《潜伏2》登顶"></a>
-</li>
-<li>
-  <a title="多伦多影节闭幕 《为奴十二年》登顶" target="_blank" href="http://www.m1905.com/special/filmfest/38thtoronto/" class="mtitle">多伦多影节闭幕 《为奴十二年》登顶</a>
-  <a href="http://www.m1905.com/special/filmfest/38thtoronto/" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916055942347.jpg" alt="多伦多影节闭幕 《为奴十二年》登顶"></a>
-</li>
-<li>
-  <a title="电影频道银幕情侣大戏 对你爱爱爱不完" target="_blank" href="http://www.m1905.com/special/cctv6mastermind/movielistaiai/" class="mtitle">电影频道银幕情侣大戏 对你爱爱爱不完</a>
-  <a href="http://www.m1905.com/special/cctv6mastermind/movielistaiai/" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916101203575.jpg" alt="电影频道银幕情侣大戏 对你爱爱爱不完"></a>
-</li>
-</ul>
-      </div>
-            <div class="f_out style01">
-      <ul>
-    <li>
-    <span class="cinemaTag"></span>    <a title="《全民目击》：国产口碑之作" target="_blank" href="http://www.m1905.com/yx/film/c1f543945.html" class="mtitle">《全民目击》：国产口碑之作</a>
-    <a href="http://www.m1905.com/yx/film/c1f543945.html" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916085326573.jpg" alt="《全民目击》：国产口碑之作"></a>
-  </li>
-    <li>
-    <span class="payTag"></span>    <a title="《谍海军魂》：国防部长嫁祸情敌脱身" target="_blank" href="http://vip.m1905.com/play/686158.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=6" class="mtitle">《谍海军魂》：国防部长嫁祸情敌脱身</a>
-    <a href="http://vip.m1905.com/play/686158.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=6" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0712/thumb_1_256_353_20130712103328622.jpg" alt="《谍海军魂》：国防部长嫁祸情敌脱身"></a>
-  </li>
-    <li>
-    <span class="HDTag"></span>    <a title="《我老公不靠谱》：假结婚磨出真感情" target="_blank" href="http://www.m1905.com/vod/info/690714.shtml" class="mtitle">《我老公不靠谱》：假结婚磨出真感情</a>
-    <a href="http://www.m1905.com/vod/info/690714.shtml" target="_blank"><img width="256" height="353" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916112758396.jpg" alt="《我老公不靠谱》：假结婚磨出真感情"></a>
-  </li>
-  </ul>
-      </div>
-            <div class="f_out style03">
-          <ul class="sm_pc fr">
-                        <li class="active ">
-    <a data-toggle="tab" data-evt="hover" href="#big_01"><div class="loadmask" style="position: absolute; width: 129px; height: 176px; display: none;"></div><img width="129" height="176" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_129_176_20130916105647762.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_129_176_20130916105647762.jpg" alt="【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆" title="【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆" style="visibility: visible; display: inline;"></a>
-  </li>
-                                                            <li class=" mt01">
-    <a data-toggle="tab" data-evt="hover" href="#big_02"><div class="loadmask" style="position: absolute; width: 129px; height: 176px; display: none;"></div><img width="129" height="176" data-original="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_129_176_20130906111311400.jpg" src="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_129_176_20130906111311400.jpg" alt="【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋" title="【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋" style="visibility: visible; display: inline;"></a>
-  </li>
-  </ul>
-<ul class="big_pc fl">
-    <li id="big_01" class="active">
-    <a title="【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆" target="_blank" href="http://www.m1905.com/special/mastermind/house/" class="mtitle">【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆</a>
-    <a href="http://www.m1905.com/special/mastermind/house/" target="_blank"><div class="loadmask" style="position: absolute; width: 641px; height: 353px; display: none;"></div><img width="641" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_641_353_20130916105654229.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_641_353_20130916105654229.jpg" alt="【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆" title="【独家策划】百怪私密空间 豪宅藏娇妹 鬼屋吓破胆" style="visibility: visible; display: inline;"></a>
-  </li>
-    <li id="big_02" class="">
-    <a title="【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋" target="_blank" href="http://www.m1905.com/video/play/690679.shtml" class="mtitle">【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋</a>
-    <a href="http://www.m1905.com/video/play/690679.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 641px; height: 353px; display: none;"></div><img width="641" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_641_353_20130916101955562.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_641_353_20130916101955562.jpg" alt="【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋" title="【瞩目新片】《神奇》爱情版预告 郭采洁质问黄晓明上演多角恋" style="visibility: visible; display: inline;"></a>
-  </li>
-  </ul>
-      </div>
-            <div class="f_out style01">
-      <ul>
-<li>
-  <span class="payTag"></span>
-  <a title="《特种部队2：全面反击》震撼热播" target="_blank" href="http://vip.m1905.com/play/685191.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" class="mtitle">《特种部队2：全面反击》震撼热播</a>
-  <a href="http://vip.m1905.com/play/685191.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916090258706.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916090258706.jpg" alt="《特种部队2：全面反击》震撼热播" title="《特种部队2：全面反击》震撼热播" style="visibility: visible; display: inline;"></a>
-</li>
-<li>
-  <span class="payTag"></span>
-  <a title="《不道德交易》：形色男女桃色事件" target="_blank" href="http://vip.m1905.com/play/604704.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" class="mtitle">《不道德交易》：形色男女桃色事件</a>
-  <a href="http://vip.m1905.com/play/604704.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2012/1205/thumb_1_256_353_20121205022826600.jpg" src="http://image11.m1905.cn/uploadfile/2012/1205/thumb_1_256_353_20121205022826600.jpg" alt="《不道德交易》：形色男女桃色事件" title="《不道德交易》：形色男女桃色事件" style="visibility: visible; display: inline;"></a>
-</li>
-<li>
-  <span class="payTag"></span>
-  <a title="《盲探》：郑秀文华仔无厘头破案" target="_blank" href="http://vip.m1905.com/play/682136.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" class="mtitle">《盲探》：郑秀文华仔无厘头破案</a>
-  <a href="http://vip.m1905.com/play/682136.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=7" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916090921473.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916090921473.jpg" alt="《盲探》：郑秀文华仔无厘头破案" title="《盲探》：郑秀文华仔无厘头破案" style="visibility: visible; display: inline;"></a>
-</li>
-</ul>
-      </div>
-            <div class="f_out style01">
-      <ul>
-<li>
-  <a title="《模特魅影》：揭秘模特私密生活" target="_blank" href="http://www.m1905.com/vod/info/687155.shtml" class="mtitle">《模特魅影》：揭秘模特私密生活</a>
-  <a href="http://www.m1905.com/vod/info/687155.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916091319313.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916091319313.jpg" alt="《模特魅影》：揭秘模特私密生活" title="《模特魅影》：揭秘模特私密生活" style="visibility: visible; display: inline;"></a>
-</li>
-<li>
-  <a title="《圣诞玫瑰》：桂纶镁遭性侵变复仇女" target="_blank" href="http://www.m1905.com/vod/info/668377.shtml" class="mtitle">《圣诞玫瑰》：桂纶镁遭性侵变复仇女</a>
-  <a href="http://www.m1905.com/vod/info/668377.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916095733588.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916095733588.jpg" alt="《圣诞玫瑰》：桂纶镁遭性侵变复仇女" title="《圣诞玫瑰》：桂纶镁遭性侵变复仇女" style="visibility: visible; display: inline;"></a>
-</li>
-<li>
-  <a title="《杀戒》：刘烨、倪妮虐恋缠绵" target="_blank" href="http://www.m1905.com/vod/info/672583.shtml" class="mtitle">《杀戒》：刘烨、倪妮虐恋缠绵</a>
-  <a href="http://www.m1905.com/vod/info/672583.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0715/thumb_1_256_353_20130715110331578.jpg" src="http://image11.m1905.cn/uploadfile/2013/0715/thumb_1_256_353_20130715110331578.jpg" alt="《杀戒》：刘烨、倪妮虐恋缠绵" title="《杀戒》：刘烨、倪妮虐恋缠绵" style="visibility: visible; display: inline;"></a>
-</li>
-</ul>
-      </div>
-            <div class="f_out style01">
-      <ul>
-<li class="li01">
-  <a title="[北京] 《一座城池》超前点映" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/116" class="mtitle">[北京] 《一座城池》超前点映</a>
-  <a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/116" target="_blank"><div class="loadmask" style="position: absolute; width: 206px; height: 353px; display: none;"></div><img width="206" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_206_353_20130916103228383.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_206_353_20130916103228383.jpg" alt="[北京] 《一座城池》超前点映" title="[北京] 《一座城池》超前点映" style="visibility: visible; display: inline;"></a>
-</li>
-<li class="li02">
-  <a title="[全国]《非常幸运》华谊兄弟影城免费观影" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/91" class="mtitle">[全国]《非常幸运》华谊兄弟影城免费观影</a>
-  <a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/91" target="_blank"><div class="loadmask" style="position: absolute; width: 356px; height: 353px; display: none;"></div><img width="356" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_356_353_20130916104457207.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_356_353_20130916104457207.jpg" alt="[全国]《非常幸运》华谊兄弟影城免费观影" title="[全国]《非常幸运》华谊兄弟影城免费观影" style="visibility: visible; display: inline;"></a>
-</li>
-<li class="li01">
-  <a title="娱乐大事件之石头心引发激战" target="_blank" href="http://d.m1905.com/huati/204" class="mtitle">娱乐大事件之石头心引发激战</a>
-  <a href="http://d.m1905.com/huati/204" target="_blank"><div class="loadmask" style="position: absolute; width: 206px; height: 353px; display: none;"></div><img width="206" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0910/thumb_1_206_353_20130910022826178.jpg" src="http://image11.m1905.cn/uploadfile/2013/0910/thumb_1_206_353_20130910022826178.jpg" alt="娱乐大事件之石头心引发激战" title="娱乐大事件之石头心引发激战" style="visibility: visible; display: inline;"></a>
-</li>
-</ul>
-      </div>
-            <div class="f_out style01">
-      <ul>
-  <li>
-      <a title="《蓝精灵2》：小伙伴回来了" target="_blank" href="http://www.m1905.com/yx/film/c1f535308.html" class="mtitle">《蓝精灵2》：小伙伴回来了</a>
-    <a href="http://www.m1905.com/yx/film/c1f535308.html" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0830/thumb_1_256_353_20130830103355577.jpg" src="http://image11.m1905.cn/uploadfile/2013/0830/thumb_1_256_353_20130830103355577.jpg" alt="《蓝精灵2》：小伙伴回来了" title="《蓝精灵2》：小伙伴回来了" style="visibility: visible; display: inline;"></a>
-    </li>
-  <li>
-      <a title="《穿越火线》：俄罗斯科幻大片" target="_blank" href="http://www.m1905.com/yx/film/c1f651137.html" class="mtitle">《穿越火线》：俄罗斯科幻大片</a>
-    <a href="http://www.m1905.com/yx/film/c1f651137.html" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_256_353_20130906104140331.jpg" src="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_256_353_20130906104140331.jpg" alt="《穿越火线》：俄罗斯科幻大片" title="《穿越火线》：俄罗斯科幻大片" style="visibility: visible; display: inline;"></a>
-    </li>
-  <li>
-      <a title="《极乐空间》：马特·达蒙科幻巨制" target="_blank" href="http://www.m1905.com/yx/film/c1f539281.html" class="mtitle">《极乐空间》：马特·达蒙科幻巨制</a>
-    <a href="http://www.m1905.com/yx/film/c1f539281.html" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0905/thumb_1_256_353_20130905110732555.jpg" src="http://image11.m1905.cn/uploadfile/2013/0905/thumb_1_256_353_20130905110732555.jpg" alt="《极乐空间》：马特·达蒙科幻巨制" title="《极乐空间》：马特·达蒙科幻巨制" style="visibility: visible; display: inline;"></a>
-    </li>
-</ul>
-      </div>
-            <div class="f_out style04">
-      <div class="fr s_listbox">
-  <p class="white_f">电影频道精彩推荐</p>
-  <ul>
-                                                      <li class="active"><a data-toggle="tab" data-evt="hover" href="#foucs_01">世界电影之旅之资讯快车</a></li>
-                                                                  <li class=""><a data-toggle="tab" data-evt="hover" href="#foucs_02">中国电影报道</a></li>
-                                                                  <li class=""><a data-toggle="tab" data-evt="hover" href="#foucs_03">电影网</a></li>
-                                                                  <li class=""><a data-toggle="tab" data-evt="hover" href="#foucs_04">动感英语</a></li>
-                                                                  <li class=""><a data-toggle="tab" data-evt="hover" href="#foucs_05">光影星播客</a></li>
-                  </ul>
-  <p class="mt15 white_f underline line-h24"><a target="_blank" href="http://www.m1905.com/cctv6/program/dypdepg/list/">查看完整节目单</a><a target="_blank" class="ml20" href="http://www.m1905.com/cctv6/live/">进入直播厅</a><br><a target="_blank" class="" href="http://www.m1905.com/cctv6/">进入CCTV6</a></p>
+<html><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="IE=7" http-equiv="X-UA-Compatible">
+<meta content="" name="description">
+<title>最新最热电影,电视剧,动漫，综艺, 音乐在线观看网站大全-114啦影视导航</title>
+<link type="image/x-icon" href="http://v.114la.com/favicon.ico" rel="icon">
+<link type="image/x-icon" href="http://v.114la.com/favicon.ico" rel="shortcut icon">
+<meta content="电影，电视，电视剧，动漫，综艺，音乐" name="keywords">
+<meta content="114la影视导航为您提供最新最热的电影，电视剧，动漫，综艺节目，音乐视频推荐及免费在线观看网站。找免费网站尽在114啦影视导航" name="description">
+<meta content="NOIMAGEINDEX" name="ROBOTS">
+<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>movie/css/style.css?v2013">
+<script charset="utf-8" async="" src="http://cbjs.baidu.com/js/logAdvanced.js"></script><script charset="utf-8" async="" src="http://cbjs.baidu.com/js/log.js"></script><script src="http://cbjs.baidu.com/js/m.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top">
+	<div class="wrapper">
+		<div class="fl">
+			<a target="_blnak" class="home" href="http://www.114la.com">114啦首页</a>
+			<i class="sq">|</i>
+			<a target="_blnak" href="http://youxi.114la.com/">游戏</a>
+			<a target="_blnak" href="http://yinyue.114la.com/">音乐</a>
+			<a target="_blnak" href="http://meishi.114la.com/">美食</a>
+			<a target="_blnak" href="http://book.114la.com/">小说</a>
+			<a target="_blnak" href="http://tuan.114la.com/">团购</a>
+			<a target="_blnak" href="http://hgd.114la.com/">皇冠店</a>
+			<a v="" href="http://app.114la.com/">实用工具</a>
+		</div>
+		<div class="fr">
+			<a target="_blnak" href="http://www.114la.com/feedback">意见反馈</a>
+			<i class="sq">|</i>
+			<a id="collet" title="收藏114la影视" href="javascript:;">收藏本页</a>
+		</div>
+	</div>
 </div>
-<ul class="big_pc fl">
-    <li id="foucs_01" class="active">
-    <a title="【资讯快车259期精彩推荐】《变形金刚4》试镜会在京举办 打造不同的合拍片" target="_blank" href="http://www.m1905.com/video/play/690808.shtml" class="mtitle">【资讯快车259期精彩推荐】《变形金刚4》试镜会在京举办 打造不同的合拍片<br>播出时间：9月16日 17:52</a>
-    <a href="http://www.m1905.com/video/play/690808.shtml" target="_blank" class=""><div class="loadmask" style="position: absolute; width: 563px; height: 353px; display: none;"></div><img width="563" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916035217504.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916035217504.jpg" alt="【资讯快车259期精彩推荐】《变形金刚4》试镜会在京举办 打造不同的合拍片" title="【资讯快车259期精彩推荐】《变形金刚4》试镜会在京举办 打造不同的合拍片" style="visibility: visible; display: inline;"></a>
-  </li>
-    <li id="foucs_02" class="">
-    <a title="【电影报道259期精彩推荐】《白狐》钟欣桐一脸“狐狸相” 好莱坞加盟3D特效" target="_blank" href="http://www.m1905.com/video/play/690780.shtml" class="mtitle">【电影报道259期精彩推荐】《白狐》钟欣桐一脸“狐狸相” 好莱坞加盟3D特效<br>播出时间：9月16日 18:00</a>
-    <a href="http://www.m1905.com/video/play/690780.shtml" target="_blank" class=""><div class="loadmask" style="position: absolute; width: 563px; height: 353px; display: none;"></div><img width="563" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916035834350.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916035834350.jpg" alt="【电影报道259期精彩推荐】《白狐》钟欣桐一脸“狐狸相” 好莱坞加盟3D特效" title="【电影报道259期精彩推荐】《白狐》钟欣桐一脸“狐狸相” 好莱坞加盟3D特效" style="visibility: visible; display: inline;"></a>
-  </li>
-    <li id="foucs_03" class="">
-    <a title="枪械脑战飙车党 型男硬汉肌肉展" target="_blank" href="http://www.m1905.com/special/cctv6mastermind/hard/" class="mtitle">枪械脑战飙车党 型男硬汉肌肉展<br>电影网独家策划</a>
-    <a href="http://www.m1905.com/special/cctv6mastermind/hard/" target="_blank" class=""><div class="loadmask" style="position: absolute; width: 563px; height: 353px; display: none;"></div><img width="563" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916093308704.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916093308704.jpg" alt="枪械脑战飙车党 型男硬汉肌肉展" title="枪械脑战飙车党 型男硬汉肌肉展" style="visibility: visible; display: inline;"></a>
-  </li>
-    <li id="foucs_04" class="">
-    <a title="【动感英语】303期：伊娃·格林重拾童年记忆 酷玩乐队金曲再现" target="_blank" href="http://www.m1905.com/video/play/690260.shtml" class="mtitle">【动感英语】303期：伊娃·格林重拾童年记忆 酷玩乐队金曲再现<br>电影网独播</a>
-    <a href="http://www.m1905.com/video/play/690260.shtml" target="_blank" class=""><div class="loadmask" style="position: absolute; width: 563px; height: 353px; display: none;"></div><img width="563" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916085959936.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_563_353_20130916085959936.jpg" alt="【动感英语】303期：伊娃·格林重拾童年记忆 酷玩乐队金曲再现" title="【动感英语】303期：伊娃·格林重拾童年记忆 酷玩乐队金曲再现" style="visibility: visible; display: inline;"></a>
-  </li>
-    <li id="foucs_05" class="">
-    <a title="【光影星播客】林鹏任星主播谈心路历程 渴望新尝试感谢成龙引路" target="_blank" href="http://www.m1905.com/video/play/690523.shtml" class="mtitle">【光影星播客】林鹏任星主播谈心路历程 渴望新尝试感谢成龙引路<br>播出时间：9月14日&mdash;9月20日 轮番播出</a>
-    <a href="http://www.m1905.com/video/play/690523.shtml" target="_blank" class=""><div class="loadmask" style="position: absolute; width: 563px; height: 353px; display: none;"></div><img width="563" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0915/thumb_1_563_353_20130915044341938.jpg" src="http://image11.m1905.cn/uploadfile/2013/0915/thumb_1_563_353_20130915044341938.jpg" alt="【光影星播客】林鹏任星主播谈心路历程 渴望新尝试感谢成龙引路" title="【光影星播客】林鹏任星主播谈心路历程 渴望新尝试感谢成龙引路" style="visibility: visible; display: inline;"></a>
-  </li>
-  </ul>
-      </div>
+<div id="header">
+	<div class="wrapper">
+		<h1 class="logo"><a href="http://v.114la.com">114啦影视</a></h1>
+		<div class="search">
+			<form method="post" action="/" id="searchform" name="search">
+				<input type="text" placeholder="输入影片名称、演员" name="q">
+				<input type="hidden" value="" name="t">
+				<button type="submit">搜索</button>
+			</form>
+			<div class="queryList clearfix">
+				<ul>
+					<li class="hover">神探狄仁杰 第二部 (电视剧)<em></em></li>
+					<li>神探狄仁杰 第二部 (电影)<em></em></li>
+					<li>神探狄仁杰 第二部 (动漫)<em></em></li>
+					<li>神探狄仁杰 第二部 (综艺)<em></em></li>
+					<li>中国合伙人 高清预告片</li>
+					<li>冰与火之歌（权力游戏）第三季</li>
+					<li>达芬奇的恶魔 第一季</li>
+				</ul>
+				<div class="prevList">
+					<dl class="tcont">
+						<dt>
+							<img alt="中国合伙人" src="http://v.114la.com/static/images/thums.jpg">
+							<div>
+								<p>电视剧 2009</p>
+								<p>更新至25集</p>
+								<p>主演：<span>黄晓明，佟大为，邓超，杜鹃</span></p>
+							</div>
+						</dt>
+						<dd>
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<a class="all" href="#">全部&gt;&gt;</a>
+						</dd>
+					</dl>
+					<dl style="display:block;" class="tcont">
+						<dt>
+							<img alt="中国合伙人" src="http://v.114la.com/static/images/thums.jpg">
+							<div>
+								<p>电视剧 2009</p>
+								<p>更新至25集</p>
+								<p>主演：<span>黄晓明，佟大为，邓超，杜鹃</span></p>
+							</div>
+						</dt>
+						<dd>
+							<a class="goplay" href="#">立即播放</a>
+							<a class="past" href="#">往期节目</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="operht">
+			<div class="userlog">
+								<a href="http://v.114la.com/?ct=login">登录</a>
+				<a href="http://v.114la.com/?ct=register">注册</a>	
+							</div>
+			<div class="history">
+				<span class="kick">播放记录<i></i></span>
+				<dl class="hisCont">
+					<dt>播放记录</dt>
+					<dd id="hisStatu">
+						<ul><li id="noHis">您还没有观看记录~</li></ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div><div id="slider">
+	    <div id="indexSlide" class="sliCont">
+    <ul>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138018061617849.jpg&quot;) no-repeat scroll center center rgb(231, 233, 249); display: none;">
+            <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">
+                <img alt="神枪狙击" src="http://v.114la.com/img/focus_img/201309/138018061617849.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"></a>
+                </i>
+                <h3>
+                    <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">
+                        神枪狙击                    </a>
+                </h3>
+                <p>
+                    型男飞虎队,张兆辉谢天华枪王大对决。
+                </p>
             </div>
-    </div>
-    <div class="carousel-panel">
-      <ul>
-              <li class="item1">今日头条</li>
-              <li class="item0">今日佳片</li>
-              <li class="item2">焦点视频</li>
-              <li class="item3">付费超清</li>
-              <li class="item4">免费高清</li>
-              <li class="item5">互动社区</li>
-              <li class="item7">近期热映</li>
-              <li class="item6 active">CCTV6</li>
-            </ul>    
-    </div>
-  </div>
-  <div class="box_10ov"></div>
-  <div class="">
-    <div class="left_panel">
-      <div class="column_l tody_news">
-        <div class="title_hd">
-          <h3 class="hd-line">今日热点</h3>
-        </div>
-                                                                                                                                                                                                            <h4><a href="http://www.m1905.com/news/20130916/690695.shtml" target="_blank" class="blue_f02">中秋档前瞻：《非常幸运》卖相好 动画片争高低</a></h4>
-<ul class="newslist">
-    <li><a href="http://www.m1905.com/news/20130916/690687.shtml" target="_blank">《一座城池》曝搞笑片段提前点映</a>&nbsp; <a href="http://www.m1905.com/news/20130913/690308.shtml" target="_blank">十月份影市前瞻</a></li>
-    <li><a href="http://www.m1905.com/news/20130916/690691.shtml" target="_blank">《四大名捕2》定档11.22&nbsp;</a>&nbsp;<a href="http://www.m1905.com/news/20130916/690684.shtml" target="_blank">《狄仁杰之神都龙王》点映</a></li>
-    <li><a href="http://www.m1905.com/news/20130916/690770.shtml" target="_blank">张艺谋新片《归来》开机</a>&nbsp; <a href="http://www.m1905.com/news/20130916/690817.shtml#p4" target="_blank">超模海蒂夺艾美最佳主持</a></li>
-</ul>
-<h4><a href="http://www.m1905.com/news/20130916/690689.shtml" target="_blank" class="blue_f02">《速度与激情7》首曝剧照 导演将加入惊悚元素</a></h4>
-<ul class="newslist">
-    <li><a href="http://www.m1905.com/news/20130913/690293.shtml" target="_blank">焦点人物郭富城：我不仅仅是“天王”更还是“影帝”</a></li>
-    <li><a href="http://www.m1905.com/newgallery/hdpic/690739.shtml" target="_blank">皮特为新片《狂怒》剪短发</a>&nbsp;<a href="http://www.m1905.com/news/20130916/690759.shtml" target="_blank">魔幻大片《白狐》国庆映</a></li>
-    <li><a href="http://www.m1905.com/news/20130916/690711.shtml" target="_blank">宫崎骏的矛盾世界观</a> <a href="http://www.m1905.com/news/20130916/690709.shtml" target="_blank">《极速蜗牛》曝“中秋版”预告</a></li>
-</ul>              </div>
-      <div class="column_l ml20 tody_news">
-        <div class="title_hd">
-          <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/film/">&gt; 更多新闻</a></span>
-          <h3 class="hd-line"></h3>
-        </div>
-                                                                                                                                                                                                            <h4><a href="http://www.m1905.com/news/20130916/690752.shtml" target="_blank" class="blue_f02">独家影评汇总：多伦多电影节展映佳片口碑详解</a></h4>
-<ul class="newslist">
-    <li>[<a href="http://www.m1905.com/special/filmfest/38thtoronto/2606-page_special_ffpics.html?type=1&amp;ffposid=6941" target="_blank">动态</a>]<a href="http://www.m1905.com/news/20130916/690692.shtml" target="_blank">多伦多等影节为奥斯卡炒作 业内：就是拼资源</a></li>
-    <li><a href="http://www.m1905.com/news/20130916/690678.shtml" target="_blank">多伦多专访刘韵文：刘嘉玲、陈坤绝对不是戏霸</a></li>
-    <li>[影评]<a href="http://www.m1905.com/news/20130916/690680.shtml" target="_blank">《铁路人》：超赞反战片 感人至深具冲奥相</a></li>
-</ul>
-<h4><a href="http://www.m1905.com/newgallery/hdpic/690768.shtml#p1" target="_blank" class="blue_f02">王菲、李亚鹏离婚令人唏嘘 盘点“菲鹏”情史</a></h4>
-<ul class="newslist">
-    <li><a href="http://www.m1905.com/news/20130914/690569.shtml" target="_blank">网曝王菲李亚鹏离婚真相</a>&nbsp; <a href="http://www.m1905.com/news/20130916/690719.shtml" target="_blank">李亚鹏返京两人回同一小区</a></li>
-    <li><a href="http://www.m1905.com/news/20130916/690673.shtml" target="_blank">潘粤明羡慕王菲和平离婚 谈与伊能静绯闻：别闹</a></li>
-    <li><a href="http://www.m1905.com/special/mastermind/lihun/#p690580" target="_blank">王菲夫妻情路纠葛</a>&nbsp;<a href="http://www.m1905.com/special/dianbo/wangfei/" target="_blank">明星情缘剪不断理还乱</a>&nbsp;<a href="http://www.m1905.com/newgallery/hdpic/690625.shtml#p1" target="_blank">十年回顾</a></li>
-</ul>              </div>
-      <div class="column_l topicbox">
-        <div class="title_hd">
-          <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/special/index-p-typeid-1.html">&gt; 更多专题</a></span>
-          <h3 class="hd-line"><a target="_blank" href="http://www.m1905.com/special/index-p-typeid-1.html">特色专题</a></h3>
-        </div>
-        <div class="col-l-bd">
-                                                                                                                                                <ul class="mt15">
-                              <li>
-            <a target="_blank" href="http://www.m1905.com/special/starshow/t4top4/"><div class="loadmask" style="position: absolute; width: 180px; height: 100px; display: none;"></div><img width="180" height="100" data-original="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_180_100_20130912115851908.jpg" src="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_180_100_20130912115851908.jpg" alt="[星秀]《变型金刚4》4强写真" title="[星秀]《变型金刚4》4强写真" style="visibility: visible; display: inline;"></a>
-            <p><a target="_blank" href="http://www.m1905.com/special/starshow/t4top4/">[星秀]《变型金刚4》4强写真</a></p>
-          </li>
-                                        <li class="ml15">
-            <a target="_blank" href="http://www.m1905.com/special/filmfest/38thtoronto/"><div class="loadmask" style="position: absolute; width: 180px; height: 100px; display: none;"></div><img width="180" height="100" data-original="http://image11.m1905.cn/uploadfile/2013/0904/thumb_1_180_100_20130904102056373.jpg" src="http://image11.m1905.cn/uploadfile/2013/0904/thumb_1_180_100_20130904102056373.jpg" alt="第38届多伦多国际电影节" title="第38届多伦多国际电影节" style="visibility: visible; display: inline;"></a>
-            <p><a target="_blank" href="http://www.m1905.com/special/filmfest/38thtoronto/">第38届多伦多国际电影节</a></p>
-          </li>
-                                        <li>
-            <a target="_blank" href="http://www.m1905.com/special/mastermind/house/"><div class="loadmask" style="position: absolute; width: 180px; height: 100px; display: none;"></div><img width="180" height="100" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_180_100_20130916043137178.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_180_100_20130916043137178.jpg" alt="光影房间：豪宅藏娇鬼屋吓人" title="光影房间：豪宅藏娇鬼屋吓人" style="visibility: visible; display: inline;"></a>
-            <p><a target="_blank" href="http://www.m1905.com/special/mastermind/house/">光影房间：豪宅藏娇鬼屋吓人</a></p>
-          </li>
-                                        <li class="ml15">
-            <a target="_blank" href="http://www.m1905.com/news/20130828/685922.shtml"><div class="loadmask" style="position: absolute; width: 180px; height: 100px; display: none;"></div><img width="180" height="100" data-original="http://image11.m1905.cn/uploadfile/2013/0909/thumb_1_180_100_20130909105003840.jpg" src="http://image11.m1905.cn/uploadfile/2013/0909/thumb_1_180_100_20130909105003840.jpg" alt="电影频道九月外片盛宴" title="电影频道九月外片盛宴" style="visibility: visible; display: inline;"></a>
-            <p><a target="_blank" href="http://www.m1905.com/news/20130828/685922.shtml">电影频道九月外片盛宴</a></p>
-          </li>
-                                                                                                            </ul>
-        <ul class="more">
-                                                                                                                <li><a title="胆小勿入！银幕怪兽威力升级" target="_blank" href="http://www.m1905.com/special/mastermind/guaishou/">胆小勿入！银幕怪兽威力升级</a></li>
-                                          <li class="ml15"><a title="《激战》老少型男集体裸上身 " target="_blank" href="http://www.m1905.com/special/mastermind/hotfilmjz/">《激战》老少型男集体裸上身 </a></li>
-                                          <li><a title="科幻巨制《环太平洋》精彩抢先" target="_blank" href="http://www.m1905.com/special/dianbo/hotfilm45/">科幻巨制《环太平洋》精彩抢先</a></li>
-                                          <li class="ml15"><a title="华语女神正面PK 谁与争锋！" target="_blank" href="http://www.m1905.com/special/mastermind/3PK/">华语女神正面PK 谁与争锋！</a></li>
-                            </ul>
-        </div>
-      </div>
-                                                                                                <div class="column_l ml20 tody_hot">
-        <div class="title_hd">
-          <ul class="fr hd_tabs">
-            <li class="active"><a href="#hotlist01" data-evt="hover" data-toggle="tab"></a></li>
-            <li><a href="#hotlist02" data-evt="hover" data-toggle="tab"></a></li>
-          </ul>
-          <h3 class="hd-line">独家聚焦</h3>
-        </div>
-        <div style="height:337px; overflow:hidden;" class="col-l-bd">
-          <ul class="tody_hotlist active" id="hotlist01">
-                                    <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/news/20130908/688932.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_0_47_64_20130916104218730.jpg" alt="好莱坞大片模式遭遇困局 中国成为救命稻草？" title="好莱坞大片模式遭遇困局 中国成为救命稻草？"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="好莱坞大片模式遭遇困局 中国成为救命稻草？" target="_blank" href="http://www.m1905.com/news/20130908/688932.shtml">好莱坞大片模式遭遇困局 中国成为救命稻草？</a></p>
-                <p class="mt05 line-h20 gray_f02">2013年北美暑期档终告结束，北美票房创纪录地达到了45亿美元，不过遗憾的是，没有一部好莱坞大片在本土掀起现象级观影热潮，《独行侠》、...</p>
-              </div>
-            </li>
-                                                <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/news/20130912/690107.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_0_47_64_20130916101959818.jpg" alt="DC复兴之战：解读《蝙蝠侠大战超人》八大猜想" title="DC复兴之战：解读《蝙蝠侠大战超人》八大猜想"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="DC复兴之战：解读《蝙蝠侠大战超人》八大猜想" target="_blank" href="http://www.m1905.com/news/20130912/690107.shtml">DC复兴之战：解读《蝙蝠侠大战超人》八大猜想</a></p>
-                <p class="mt05 line-h20 gray_f02">华纳在圣地亚哥动漫展宣布，《超人：钢铁之躯》的续集将加入“蝙蝠侠”布鲁斯·韦恩，打造一部“双超级英雄”电影。而两大超级英雄的联...</p>
-              </div>
-            </li>
-                                                <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/news/20130909/689218.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0912/thumb_0_47_64_20130912120020642.jpg" alt="2013影市纷纭 事件电影最热话题“黑红榜”" title="2013影市纷纭 事件电影最热话题“黑红榜”"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="2013影市纷纭 事件电影最热话题“黑红榜”" target="_blank" href="http://www.m1905.com/news/20130909/689218.shtml">2013影市纷纭 事件电影最热话题“黑红榜”</a></p>
-                <p class="mt05 line-h20 gray_f02">芳林新叶催陈叶，流水前波让后波。暑假档刚扛着58亿笑逐颜开谢幕，转眼9月一摞新片奔着年度150亿线前赴后继。时间跳跃着急急赶进，人脑...</p>
-              </div>
-            </li>
-                                                                                                            <p class="gray_f01 ta_r mt04"><a target="_blank" href="http://www.m1905.com/film/">&gt;  进入新闻频道了解更多</a></p>
-          </ul>
-          <ul class="tody_hotlist" id="hotlist02">
-                                                                                                            <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/news/20130904/688011.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0910/thumb_0_47_64_20130910103306122.jpg" alt="本尼迪克特·康伯巴奇：给我一个不爱他的理由" title="本尼迪克特·康伯巴奇：给我一个不爱他的理由"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="本尼迪克特·康伯巴奇：给我一个不爱他的理由" target="_blank" href="http://www.m1905.com/news/20130904/688011.shtml">本尼迪克特·康伯巴奇：给我一个不爱他的理由</a></p>
-                <p class="mt05 line-h20 gray_f02">本尼迪克特·康伯巴奇，我相信大多数人第一次读这个绕口的名字的时候没有人不打结巴的。这个“名字与脸一般长”的男人顶着一头英式...</p>
-              </div>
-            </li>
-                                                <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/newgallery/hdpic/688100.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0908/thumb_0_47_64_20130908033304192.jpg" alt="奖项YY供你参考 2013多伦多影展冲奥佳片超前瞻" title="奖项YY供你参考 2013多伦多影展冲奥佳片超前瞻"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="奖项YY供你参考 2013多伦多影展冲奥佳片超前瞻" target="_blank" href="http://www.m1905.com/newgallery/hdpic/688100.shtml">奖项YY供你参考 2013多伦多影展冲奥佳片超前瞻</a></p>
-                <p class="mt05 line-h20 gray_f02">第38届多伦多国际电影节即将于当地时间9月5日正式敲锣迎宾，作为全球最具知名度的电影市场，每年的新晋佳片都会汇聚至此，成为电影的超...</p>
-              </div>
-            </li>
-                                                <li>
-              <a target="_blank" class="fl" href="http://www.m1905.com/newgallery/hdpic/687679.shtml"><img width="47" height="64" src="http://image11.m1905.cn/uploadfile/2013/0906/thumb_0_47_64_20130906090804812.jpg" alt="“天上人间”的创新学 《极乐空间》特效揭秘" title="“天上人间”的创新学 《极乐空间》特效揭秘"></a>
-              <div class="txt-area">
-                <p class="f14 m_yahei box_20ov fb"><a title="“天上人间”的创新学 《极乐空间》特效揭秘" target="_blank" href="http://www.m1905.com/newgallery/hdpic/687679.shtml">“天上人间”的创新学 《极乐空间》特效揭秘</a></p>
-                <p class="mt05 line-h20 gray_f02">    《第九区》导演尼尔·布洛姆坎普的3D科幻新作《极乐空间》将于明天正式在内地上映。电影的特效团队来自著名的维塔工作室，特效...</p>
-              </div>
-            </li>
-                                    <p class="gray_f01 ta_r mt04"><a target="_blank" href="http://www.m1905.com/film/">&gt;  进入新闻频道了解更多</a></p>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="right_panel">
-      <div class="side_box">
-        <div class="title_hd">
-          <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/star/">&gt; 更多</a></span>
-          <h3 class=""><a target="_blank" href="http://www.m1905.com/star/">影人动态</a></h3>
-        </div>
-                                                                                                                <div class="gossip_tp">
-          <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690701.shtml"><span class="titleMask">章子怡卖萌搞怪“揩油”王力宏</span><div class="loadmask" style="position: absolute; width: 190px; height: 110px; display: none;"></div><img width="190" height="110" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_190_110_20130916094856422.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_190_110_20130916094856422.jpg" alt="章子怡卖萌搞怪“揩油”王力宏" title="章子怡卖萌搞怪“揩油”王力宏" style="visibility: visible; display: inline;"></a>
-        </div>
-        <ul class="sidebar_list">
-                                              <li><a target="_blank" title="王菲李亚鹏婚变众星反应大盘点" href="http://www.m1905.com/news/20130916/690769.shtml">王菲李亚鹏婚变众星反应大盘点</a></li>
-                                      <li><a target="_blank" title="何洁李宇春事件 二人微信截图" href="http://www.m1905.com/newgallery/hdpic/690789.shtml">何洁李宇春事件 二人微信截图</a></li>
-                                      <li><a target="_blank" title="传梁朝伟天后“小三”怀孕逼宫" href="http://www.m1905.com/news/20130916/690732.shtml">传梁朝伟天后“小三”怀孕逼宫</a></li>
-                                      <li><a target="_blank" title="主持人崔永元将全心投入电影圈" href="http://www.m1905.com/news/20130916/690741.shtml">主持人崔永元将全心投入电影圈</a></li>
-                                      <li><a target="_blank" title="莫文蔚20周年展与老公甜蜜热吻" href="http://www.m1905.com/newgallery/hdpic/690721.shtml">莫文蔚20周年展与老公甜蜜热吻</a></li>
-                          </ul>
-      </div>
-      <div data-size="190" style="width: 190px; height: 172px; font-size: 0px; line-height: 0;" class="adArea mt10" id="adjs_357"><iframe width="190" scrolling="no" height="176" frameborder="no" id="m1905ad_90441" name="m1905ad_90441" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=90441"></iframe></div>
-      <div data-size="190" style="width: 190px; height: 172px; font-size: 0px; line-height: 0;" class="adArea mt20" id="adjs_358"><iframe width="190" scrolling="no" height="172" frameborder="no" id="m1905ad_90443" name="m1905ad_90443" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=90443"></iframe></div>
-    </div>
-  </div>
-</div>
-<!-- 1楼结束 -->
-<div class="box_20ov cl"></div>
-<!-- 2楼开始 -->
-<div id="floor_2" class="layout cl">
-  <div class="floor-hd"> 
-    <span class="floor-logo"></span>
-    <div class="floor-about">
-      <p class="title tcolor2">看电影</p>
-      <h2><a target="_blank" href="http://www.m1905.com/vod/list/c_177/o1u1p1.html">高清大片</a> | <a target="_blank" href="http://vip.m1905.com/">付费超清</a> | <a target="_blank" href="http://www.m1905.com/yx/film/c1.html">影院热映</a> | <a target="_blank" href="http://www.m1905.com/cctv6/">CCTV6</a> | <a target="_blank" href="http://www.m1905.com/video/prevues/">预告片</a></h2>
-    </div>
-    <div data-size="585" style="width: 585px; height: 37px; font-size: 0px; line-height: 0;" class="adArea" id="adjs_276"><iframe width="585" scrolling="no" height="0" frameborder="no" id="m1905ad_83649" name="m1905ad_83649" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=83649"></iframe></div>
-  </div>
-                                    <div data-unit-config="{'onclass':'active','offclass':'','pause_on_act':'click','interval':5000,'position':'left'}" id="carousel_film" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-pos" style="width: 6160px; left: 0px;">
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="清纯妹为钱财辗转N男走迷途" target="_blank" href="http://www.m1905.com/vod/info/689737.shtml" class="mtitle">清纯妹为钱财辗转N男走迷途</a>
-            <a href="http://www.m1905.com/vod/info/689737.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911021004827.jpg" src="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911021004827.jpg" alt="清纯妹为钱财辗转N男走迷途" title="清纯妹为钱财辗转N男走迷途" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="独居女人寂寞心事" target="_blank" href="http://www.m1905.com/vod/info/689625.shtml" class="mtitle">独居女人寂寞心事</a>
-            <a href="http://www.m1905.com/vod/info/689625.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911104503264.jpg" src="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911104503264.jpg" alt="独居女人寂寞心事" title="独居女人寂寞心事" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-            <span class="payTag"></span>            <a title="经典情色片《查泰莱夫人的情人》" target="_blank" href="http://vip.m1905.com/play/641094.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=8" class="mtitle">经典情色片《查泰莱夫人的情人》</a>
-            <a href="http://vip.m1905.com/play/641094.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=8" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0421/thumb_1_256_353_20130421092153176.jpg" src="http://image11.m1905.cn/uploadfile/2013/0421/thumb_1_256_353_20130421092153176.jpg" alt="经典情色片《查泰莱夫人的情人》" title="经典情色片《查泰莱夫人的情人》" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="杀人狂魔乞求救赎" target="_blank" href="http://www.m1905.com/vod/info/690017.shtml" class="mtitle">杀人狂魔乞求救赎</a>
-            <a href="http://www.m1905.com/vod/info/690017.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_256_353_20130912112850566.jpg" src="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_256_353_20130912112850566.jpg" alt="杀人狂魔乞求救赎" title="杀人狂魔乞求救赎" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="巩新亮、房祖名姐弟同床" target="_blank" href="http://www.m1905.com/vod/info/666148.shtml" class="mtitle">巩新亮、房祖名姐弟同床</a>
-            <a href="http://www.m1905.com/vod/info/666148.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0626/thumb_1_256_353_20130626044212686.jpg" src="http://image11.m1905.cn/uploadfile/2013/0626/thumb_1_256_353_20130626044212686.jpg" alt="巩新亮、房祖名姐弟同床" title="巩新亮、房祖名姐弟同床" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="良辰美景奈何天 赵薇导演处女作" target="_blank" href="http://www.m1905.com/vod/info/660869.shtml" class="mtitle">良辰美景奈何天 赵薇导演处女作</a>
-            <a href="http://www.m1905.com/vod/info/660869.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916093219645.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_256_353_20130916093219645.jpg" alt="良辰美景奈何天 赵薇导演处女作" title="良辰美景奈何天 赵薇导演处女作" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="陈凯歌执导开山之作" target="_blank" href="http://www.m1905.com/vod/info/682637.shtml" class="mtitle">陈凯歌执导开山之作</a>
-            <a href="http://www.m1905.com/vod/info/682637.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_256_353_20130816125744958.jpg" src="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_256_353_20130816125744958.jpg" alt="陈凯歌执导开山之作" title="陈凯歌执导开山之作" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="泼辣媳妇搭配憨夫" target="_blank" href="http://www.m1905.com/vod/info/689624.shtml" class="mtitle">泼辣媳妇搭配憨夫</a>
-            <a href="http://www.m1905.com/vod/info/689624.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911110058573.jpg" src="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_256_353_20130911110058573.jpg" alt="泼辣媳妇搭配憨夫" title="泼辣媳妇搭配憨夫" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="阮玲玉经典演绎风尘母亲" target="_blank" href="http://www.m1905.com/vod/info/690071.shtml" class="mtitle">阮玲玉经典演绎风尘母亲</a>
-            <a href="http://www.m1905.com/vod/info/690071.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_256_353_20130912020251162.jpg" src="http://image11.m1905.cn/uploadfile/2013/0912/thumb_1_256_353_20130912020251162.jpg" alt="阮玲玉经典演绎风尘母亲" title="阮玲玉经典演绎风尘母亲" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="吴京上演真实近距离肉搏" target="_blank" href="http://www.m1905.com/vod/info/85946.shtml" class="mtitle">吴京上演真实近距离肉搏</a>
-            <a href="http://www.m1905.com/vod/info/85946.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_256_353_20091106111848318.jpg" src="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_256_353_20091106111848318.jpg" alt="吴京上演真实近距离肉搏" title="吴京上演真实近距离肉搏" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="古天乐对决孙红雷" target="_blank" href="http://www.m1905.com/vod/info/649168.shtml" class="mtitle">古天乐对决孙红雷</a>
-            <a href="http://www.m1905.com/vod/info/649168.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0712/thumb_1_256_353_20130712120238408.jpg" src="http://image11.m1905.cn/uploadfile/2013/0712/thumb_1_256_353_20130712120238408.jpg" alt="古天乐对决孙红雷" title="古天乐对决孙红雷" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="翁虹真空露乳色诱猛男" target="_blank" href="http://www.m1905.com/vod/info/627980.shtml" class="mtitle">翁虹真空露乳色诱猛男</a>
-            <a href="http://www.m1905.com/vod/info/627980.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0313/thumb_1_256_353_20130313034320496.jpg" src="http://image11.m1905.cn/uploadfile/2013/0313/thumb_1_256_353_20130313034320496.jpg" alt="翁虹真空露乳色诱猛男" title="翁虹真空露乳色诱猛男" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="陈妍希“劈腿”恋上甄子丹" target="_blank" href="http://www.m1905.com/vod/info/638291.shtml" class="mtitle">陈妍希“劈腿”恋上甄子丹</a>
-            <a href="http://www.m1905.com/vod/info/638291.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0710/thumb_1_256_353_20130710090045163.jpg" src="http://image11.m1905.cn/uploadfile/2013/0710/thumb_1_256_353_20130710090045163.jpg" alt="陈妍希“劈腿”恋上甄子丹" title="陈妍希“劈腿”恋上甄子丹" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="汤镇宗异国金屋藏娇" target="_blank" href="http://www.m1905.com/vod/info/85822.shtml" class="mtitle">汤镇宗异国金屋藏娇</a>
-            <a href="http://www.m1905.com/vod/info/85822.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_256_353_20091106112554133.jpg" src="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_256_353_20091106112554133.jpg" alt="汤镇宗异国金屋藏娇" title="汤镇宗异国金屋藏娇" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="“石头心”李晨的艰难爱情" target="_blank" href="http://www.m1905.com/vod/info/403651.shtml" class="mtitle">“石头心”李晨的艰难爱情</a>
-            <a href="http://www.m1905.com/vod/info/403651.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0524/thumb_1_256_353_20130524111919154.jpg" src="http://image11.m1905.cn/uploadfile/2013/0524/thumb_1_256_353_20130524111919154.jpg" alt="“石头心”李晨的艰难爱情" title="“石头心”李晨的艰难爱情" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="莫小棋变身偷情寡妇" target="_blank" href="http://www.m1905.com/vod/info/530920.shtml" class="mtitle">莫小棋变身偷情寡妇</a>
-            <a href="http://www.m1905.com/vod/info/530920.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0514/thumb_1_256_353_20130514102142464.jpg" src="http://image11.m1905.cn/uploadfile/2013/0514/thumb_1_256_353_20130514102142464.jpg" alt="莫小棋变身偷情寡妇" title="莫小棋变身偷情寡妇" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="深宅鬼影哀婉奇冤" target="_blank" href="http://www.m1905.com/vod/info/511301.shtml" class="mtitle">深宅鬼影哀婉奇冤</a>
-            <a href="http://www.m1905.com/vod/info/511301.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2012/0406/thumb_1_256_353_20120406091714752.jpg" src="http://image11.m1905.cn/uploadfile/2012/0406/thumb_1_256_353_20120406091714752.jpg" alt="深宅鬼影哀婉奇冤" title="深宅鬼影哀婉奇冤" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="恐怖地下室惊闻“鬼音”" target="_blank" href="http://www.m1905.com/vod/info/662544.shtml" class="mtitle">恐怖地下室惊闻“鬼音”</a>
-            <a href="http://www.m1905.com/vod/info/662544.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0106/thumb_1_256_353_20130106102338802.jpg" src="http://image11.m1905.cn/uploadfile/2013/0106/thumb_1_256_353_20130106102338802.jpg" alt="恐怖地下室惊闻“鬼音”" title="恐怖地下室惊闻“鬼音”" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="张雨绮一女三男乱伦情史" target="_blank" href="http://www.m1905.com/vod/info/584320.shtml" class="mtitle">张雨绮一女三男乱伦情史</a>
-            <a href="http://www.m1905.com/vod/info/584320.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0514/thumb_1_256_353_20130514101033191.jpg" src="http://image11.m1905.cn/uploadfile/2013/0514/thumb_1_256_353_20130514101033191.jpg" alt="张雨绮一女三男乱伦情史" title="张雨绮一女三男乱伦情史" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="都市女孩茶汤天浴诱惑" target="_blank" href="http://www.m1905.com/vod/info/333071.shtml" class="mtitle">都市女孩茶汤天浴诱惑</a>
-            <a href="http://www.m1905.com/vod/info/333071.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0524/thumb_1_256_353_20130524094702924.jpg" src="http://image11.m1905.cn/uploadfile/2013/0524/thumb_1_256_353_20130524094702924.jpg" alt="都市女孩茶汤天浴诱惑" title="都市女孩茶汤天浴诱惑" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="郭晓冬难忘一夜情" target="_blank" href="http://www.m1905.com/vod/info/424194.shtml" class="mtitle">郭晓冬难忘一夜情</a>
-            <a href="http://www.m1905.com/vod/info/424194.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0506/thumb_1_256_353_20130506120015736.jpg" src="http://image11.m1905.cn/uploadfile/2013/0506/thumb_1_256_353_20130506120015736.jpg" alt="郭晓冬难忘一夜情" title="郭晓冬难忘一夜情" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
-            <div class="f_out style01">
-        <ul>
-                    <li>
-                        <a title="群星合家欢杨幂泳装露乳" target="_blank" href="http://www.m1905.com/vod/info/541361.shtml" class="mtitle">群星合家欢杨幂泳装露乳</a>
-            <a href="http://www.m1905.com/vod/info/541361.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2013/0530/thumb_1_256_353_20130530092216916.jpg" src="http://image11.m1905.cn/uploadfile/2013/0530/thumb_1_256_353_20130530092216916.jpg" alt="群星合家欢杨幂泳装露乳" title="群星合家欢杨幂泳装露乳" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="谢娜、杜汶泽爆笑调情" target="_blank" href="http://www.m1905.com/vod/info/515714.shtml" class="mtitle">谢娜、杜汶泽爆笑调情</a>
-            <a href="http://www.m1905.com/vod/info/515714.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2012/0313/thumb_1_256_353_20120313090739864.jpg" src="http://image11.m1905.cn/uploadfile/2012/0313/thumb_1_256_353_20120313090739864.jpg" alt="谢娜、杜汶泽爆笑调情" title="谢娜、杜汶泽爆笑调情" style="visibility: visible; display: inline;"></a>
-          </li>
-                    <li>
-                        <a title="芙蓉姐姐银幕处女作" target="_blank" href="http://www.m1905.com/vod/info/472932.shtml" class="mtitle">芙蓉姐姐银幕处女作</a>
-            <a href="http://www.m1905.com/vod/info/472932.shtml" target="_blank"><div class="loadmask" style="position: absolute; width: 256px; height: 353px; display: none;"></div><img width="256" height="353" data-original="http://image11.m1905.cn/uploadfile/2012/0730/thumb_1_256_353_20120730105659368.jpg" src="http://image11.m1905.cn/uploadfile/2012/0730/thumb_1_256_353_20120730105659368.jpg" alt="芙蓉姐姐银幕处女作" title="芙蓉姐姐银幕处女作" style="visibility: visible; display: inline;"></a>
-          </li>
-                  </ul>
-      </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138016778722090.jpg&quot;) no-repeat scroll center center rgb(0, 0, 0); display: block;">
+            <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">
+                <img alt="神盾局特工第1季" src="http://v.114la.com/img/focus_img/201309/138016778722090.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"></a>
+                </i>
+                <h3>
+                    <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">
+                        神盾局特工第1季                    </a>
+                </h3>
+                <p>
+                    超级英雄，让位人类特工。
+                </p>
             </div>
-    </div>
-    <div class="carousel-panel">
-      <ul>
-              <li class="item0 active">最新</li>
-              <li class="item1">最热</li>
-              <li class="item2">经典</li>
-              <li class="item3">动作</li>
-              <li class="item4">爱情</li>
-              <li class="item5">惊悚</li>
-              <li class="item6">伦理</li>
-              <li class="item7">喜剧</li>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138008738197908.jpg&quot;) no-repeat scroll center center rgb(0, 0, 0); display: none;">
+            <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
+                <img alt="痒婚之十年再爱你" src="http://v.114la.com/img/focus_img/201309/138008738197908.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html"></a>
+                </i>
+                <h3>
+                    <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
+                        痒婚之十年再爱你                    </a>
+                </h3>
+                <p>
+                    阿雅携手连凯 揭秘男女追逐的悬念游戏。
+                </p>
+            </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138008606313473.jpg&quot;) no-repeat scroll center center rgb(238, 190, 85); display: none;">
+            <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
+                <img alt="巨轮" src="http://v.114la.com/img/focus_img/201309/138008606313473.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html"></a>
+                </i>
+                <h3>
+                    <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
+                        巨轮                    </a>
+                </h3>
+                <p>
+                    两兄弟各走极端 陈展鹏萧正楠变幻人生
+                </p>
+            </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137998735775287.jpg&quot;) no-repeat scroll center center rgb(239, 242, 244); display: none;">
+            <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
+                <img alt="辣妈正传" src="http://v.114la.com/img/focus_img/201309/137998735775287.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html"></a>
+                </i>
+                <h3>
+                    <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
+                        辣妈正传                    </a>
+                </h3>
+                <p>
+                    孙俪产后复出，形象大颠覆，出演麻辣妈妈。
+                </p>
+            </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137981800778500.jpg&quot;) no-repeat scroll center center rgb(255, 205, 2); display: none;">
+            <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
+                <img alt="疯狂的导演" src="http://v.114la.com/img/focus_img/201309/137981800778500.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html"></a>
+                </i>
+                <h3>
+                    <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
+                        疯狂的导演                    </a>
+                </h3>
+                <p>
+                    超越“疯狂系列”的又一”疯狂力作“
+                </p>
+            </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137990300456338.jpg&quot;) no-repeat scroll center center rgb(227, 213, 195); display: none;">
+            <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
+                <img alt="iphone 5s/5c 天猫全球同步首发" src="http://v.114la.com/img/focus_img/201309/137990300456338.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8"></a>
+                </i>
+                <h3>
+                    <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
+                        iphone 5s/5c 天猫全球同步首发                    </a>
+                </h3>
+                <p>
+                    超前，空前。 为敢想而构想,为细致而思量,为精雕而细琢。
+                </p>
+            </div>
+        </li>
+                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138001559194805.jpg&quot;) no-repeat scroll center center rgb(255, 184, 82); display: none;">
+            <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
+                <img alt="女神联盟" src="http://v.114la.com/img/focus_img/201309/138001559194805.jpg">
+            </a>
+            <div class="summary">
+                <i>
+                    <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22"></a>
+                </i>
+                <h3>
+                    <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
+                        女神联盟                    </a>
+                </h3>
+                <p>
+                    坐骑升阶增战力 英雄无上威风
+                </p>
+            </div>
+        </li>
             </ul>
-    </div>
-  </div>
-  <div class="box_10ov cl"></div>
-  <div class="left_panel">
-    <div id="bookingOl">
-            <div class="title_hd">
-        <span class="fr pt08 line-h16">在  <a target="_blank" href="http://www.m1905.com/yx/" class="sublk">全国</a>  共有  <a target="_blank" href="http://www.m1905.com/yx/film/" class="sublk">26</a>  部电影在  <a target="_blank" href="http://www.m1905.com/yx/cinema/" class="sublk">1726</a>  家影院放映  <a target="_blank" href="http://www.m1905.com/yx/" class="sublk">38000</a>  场</span>
-        <h3 class="hd-line">在线购票</h3>
-      </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="hot_buy ">
-        <a target="_blank" class="fl" href="http://www.m1905.com/yx/film/c1f535308.html"><div class="loadmask" style="position: absolute; width: 120px; height: 168px; display: none;"></div><img width="120" height="168" data-original="http://image11.m1905.cn/uploadfile/2013/0830/thumb_1_120_168_20130830103355577.jpg" src="http://image11.m1905.cn/uploadfile/2013/0830/thumb_1_120_168_20130830103355577.jpg" alt="蓝精灵2" title="蓝精灵2" style="visibility: visible; display: inline;"></a>
-        <dl class="fl ml15 ticket_info">
-          <dt><a title="蓝精灵2" target="_blank" href="http://www.m1905.com/yx/film/c1f535308.html" class="tcolor2">蓝精灵2</a></dt>
-          <dd><span class="gray_f01">上映:</span> 2013-09-12</dd>
-          <dd><span class="gray_f01">导演:</span> <a title="拉加·高斯内尔" target="_blank" href="http://www.m1905.com/mdb/star/1272035/">拉加·高斯内尔</a></dd>
-          <dd><span class="gray_f01">主演:</span> <a title="尼尔·帕特里克·哈里斯" target="_blank" href="http://www.m1905.com/mdb/star/3942/">尼尔·帕特里克·哈里斯</a> \ <a title="安东·尤金" target="_blank" href="http://www.m1905.com/mdb/star/1772875/">安东·尤金</a></dd>
-          <dd><a target="_blank" class="tcolor" href="http://www.m1905.com/yx/film/c1f535308.html">全国1209家影院10524场</a></dd>
-        </dl>
-                <dl class="fl ml10 score_dial">
-                    <div class="score-img">
-            <span class="score0 score12"></span>
-            <div class="canvas" id="circ_b">
-              <div class="act-area"></div>
-              <div class="inact-area-l"></div>
-              <div class="inact-area-r"></div>
+    <div class="snum">
+                        <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html" class="">
+            <img width="58" height="38" alt="神枪狙击" src="http://v.114la.com/img/small_img/201309/137947350043618.jpg">
+        </a>
+                        <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html" class="current">
+            <img width="58" height="38" alt="神盾局特工第1季" src="http://v.114la.com/img/small_img/201309/138016675660521.jpg">
+        </a>
+                        <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
+            <img width="58" height="38" alt="痒婚之十年再爱你" src="http://v.114la.com/img/small_img/201309/138008738129872.jpg">
+        </a>
+                        <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
+            <img width="58" height="38" alt="巨轮" src="http://v.114la.com/img/small_img/201309/138008431312200.jpg">
+        </a>
+                        <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
+            <img width="58" height="38" alt="辣妈正传" src="http://v.114la.com/img/small_img/201309/137998898993102.jpg">
+        </a>
+                        <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
+            <img width="58" height="38" alt="疯狂的导演" src="http://v.114la.com/img/small_img/201309/137981800769552.jpg">
+        </a>
+                        <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
+            <img width="58" height="38" alt="iphone 5s/5c 天猫全球同步首发" src="http://v.114la.com/img/small_img/201309/137990279785985.jpg">
+        </a>
+                        <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
+            <img width="58" height="38" alt="女神联盟" src="http://v.114la.com/img/small_img/201309/138001559148314.jpg">
+        </a>
             </div>
-            <div class="canvas" id="circ_c"></div>
-            <div class="canvas" id="needle"></div>
-          </div>
-          <p class="num">6.4</p>          <p class="gray_f01 ta_c">(285人评)</p>	
-        </dl>
-      </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="hot_buy ml20">
-        <a target="_blank" class="fl" href="http://www.m1905.com/yx/film/c1f543945.html"><div class="loadmask" style="position: absolute; width: 120px; height: 168px; display: none;"></div><img width="120" height="168" data-original="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_120_168_20130816090950486.jpg" src="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_120_168_20130816090950486.jpg" alt="全民目击" title="全民目击" style="visibility: visible; display: inline;"></a>
-        <dl class="fl ml15 ticket_info">
-          <dt><a title="全民目击" target="_blank" href="http://www.m1905.com/yx/film/c1f543945.html" class="tcolor2">全民目击</a></dt>
-          <dd><span class="gray_f01">上映:</span> 2013-09-13</dd>
-          <dd><span class="gray_f01">导演:</span> <a title="非行" target="_blank" href="http://www.m1905.com/mdb/star/18256/">非行</a></dd>
-          <dd><span class="gray_f01">主演:</span> <a title="孙红雷" target="_blank" href="http://www.m1905.com/mdb/star/271/">孙红雷</a> \ <a title="郭富城" target="_blank" href="http://www.m1905.com/mdb/star/401/">郭富城</a></dd>
-          <dd><a target="_blank" class="tcolor" href="http://www.m1905.com/yx/film/c1f543945.html">全国1074家影院9318场</a></dd>
-        </dl>
-                <dl class="fl ml10 score_dial">
-                    <div class="score-img">
-            <span class="score0 score17.8"></span>
-            <div class="canvas" id="circ_b">
-              <div class="act-area"></div>
-              <div class="inact-area-l"></div>
-              <div class="inact-area-r"></div>
-            </div>
-            <div class="canvas" id="circ_c"></div>
-            <div class="canvas" id="needle"></div>
-          </div>
-          <p class="num">7.9</p>          <p class="gray_f01 ta_c">(68人评)</p>	
-        </dl>
-      </div>
-                                                                                                                                                                                                                                                                                                                        <div class="box_10ov cl"></div>
-            <ul class="c_list cl f14 line-h26">
-                                                                                <li><a title="极乐空间" target="_blank" href="http://www.m1905.com/yx/film/c1f539281.html">极乐空间</a></li>
-                                                        <li><a title="穿越火线" target="_blank" href="http://www.m1905.com/yx/film/c1f651137.html">穿越火线</a></li>
-                                                        <li><a title="了不起的盖茨比" target="_blank" href="http://www.m1905.com/yx/film/c1f486808.html">了不起的盖茨比</a></li>
-                                                        <li><a title="超级经纪人" target="_blank" href="http://www.m1905.com/yx/film/c1f578630.html">超级经纪人</a></li>
-                                                        <li><a title="古镇凶灵之巫咒缠身" target="_blank" href="http://www.m1905.com/yx/film/c1f683843.html">古镇凶灵之巫咒缠身</a></li>
-                                                        <li><a title="4B青年之4楼B座" target="_blank" href="http://www.m1905.com/yx/film/c1f677439.html">4B青年之4楼B座</a></li>
-                                                        <li><a title="怪兽大学" target="_blank" href="http://www.m1905.com/yx/film/c1f54001.html">怪兽大学</a></li>
-                                                        <li><a title="海啸奇迹" target="_blank" href="http://www.m1905.com/yx/film/c1f491161.html">海啸奇迹</a></li>
-                                                        <li><a title="被偷走的那五年" target="_blank" href="http://www.m1905.com/yx/film/c1f593615.html">被偷走的那五年</a></li>
-                                                        <li><a title="时光恋人" target="_blank" href="http://www.m1905.com/yx/film/c1f670055.html">时光恋人</a></li>
-                                                        <li><a title="侏罗纪公园" target="_blank" href="http://www.m1905.com/yx/film/c1f298194.html">侏罗纪公园</a></li>
-                                                        <li><a title="花漾" target="_blank" href="http://www.m1905.com/yx/film/c1f522233.html">花漾</a></li>
-                                                        <li><a title="摩登年代" target="_blank" href="http://www.m1905.com/yx/film/c1f642485.html">摩登年代</a></li>
-                                                        <li><a title="疯狂的导演" target="_blank" href="http://www.m1905.com/yx/film/c1f677272.html">疯狂的导演</a></li>
-                                                        <li><a title="回到爱开始的地方" target="_blank" href="http://www.m1905.com/yx/film/c1f654534.html">回到爱开始的地方</a></li>
-                                                        <li><a title="逆袭" target="_blank" href="http://www.m1905.com/yx/film/c1f660338.html">逆袭</a></li>
-                                                        <li><a title="隔窗有眼" target="_blank" href="http://www.m1905.com/yx/film/c1f545587.html">隔窗有眼</a></li>
-                                                        <li><a title="牛胆神偷" target="_blank" href="http://www.m1905.com/yx/film/c1f680474.html">牛胆神偷</a></li>
-                                                        <li><a title="爱拼北京" target="_blank" href="http://www.m1905.com/yx/film/c1f673685.html">爱拼北京</a></li>
-                                                        <li><a title="夏天的拉花" target="_blank" href="http://www.m1905.com/yx/film/c1f551195.html">夏天的拉花</a></li>
-                                                                                                                                      </ul>
+    <div class="inSlide-mouse">
+        <a class="tk-left" href="javascript:;"></a>
+        <a class="tk-right" href="javascript:;"></a>
     </div>
-    <div class="advance_mv cl mt10">
-            <div class="title_hd">
-        <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/video/prevues/">&gt; 更多预告片</a></span>
-        <h3 class="hd-line"><a target="_blank" href="http://www.m1905.com/video/prevues/">预告片</a></h3>
-      </div>
-                                                                        <ul class="advance_list">
-                                                  <li>
-          <a target="_blank" href="http://www.m1905.com/video/play/690686.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 96px; display: none;"></div><img width="153" height="96" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916083548330.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916083548330.jpg" alt="金刚王：死亡救赎" title="金刚王：死亡救赎" style="visibility: visible; display: inline;"></a>
-          <p class="mt05"><a title="金刚王：死亡救赎" target="_blank" href="http://www.m1905.com/video/play/690686.shtml">金刚王：死亡救赎</a></p>
-                              <p><a target="_blank" href="http://www.m1905.com/mdb/film/2218516/prevue/" class="gray_f02">共有8部预告片</a></p>
-                            </li>
-                                                          <li>
-          <a target="_blank" href="http://www.m1905.com/video/play/690683.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 96px; display: none;"></div><img width="153" height="96" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916083006144.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916083006144.jpg" alt="一座城池" title="一座城池" style="visibility: visible; display: inline;"></a>
-          <p class="mt05"><a title="一座城池" target="_blank" href="http://www.m1905.com/video/play/690683.shtml">一座城池</a></p>
-                              <p><a target="_blank" href="http://www.m1905.com/mdb/film/2211927/prevue/" class="gray_f02">共有10部预告片</a></p>
-                            </li>
-                                                          <li>
-          <a target="_blank" href="http://www.m1905.com/video/play/690681.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 96px; display: none;"></div><img width="153" height="96" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916082102555.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916082102555.jpg" alt="四大名捕2" title="四大名捕2" style="visibility: visible; display: inline;"></a>
-          <p class="mt05"><a title="四大名捕2" target="_blank" href="http://www.m1905.com/video/play/690681.shtml">四大名捕2</a></p>
-                              <p><a target="_blank" href="http://www.m1905.com/mdb/film/2210591/prevue/" class="gray_f02">共有1部预告片</a></p>
-                            </li>
-                                                          <li>
-          <a target="_blank" href="http://www.m1905.com/video/play/690679.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 96px; display: none;"></div><img width="153" height="96" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916085726144.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916085726144.jpg" alt="神奇" title="神奇" style="visibility: visible; display: inline;"></a>
-          <p class="mt05"><a title="神奇" target="_blank" href="http://www.m1905.com/video/play/690679.shtml">神奇</a></p>
-                              <p><a target="_blank" href="http://www.m1905.com/mdb/film/390242/prevue/" class="gray_f02">共有14部预告片</a></p>
-                            </li>
-                                                          <li>
-          <a target="_blank" href="http://www.m1905.com/video/play/690676.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 96px; display: none;"></div><img width="153" height="96" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916075929798.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_96_20130916075929798.jpg" alt="狄仁杰之神都龙王" title="狄仁杰之神都龙王" style="visibility: visible; display: inline;"></a>
-          <p class="mt05"><a title="狄仁杰之神都龙王" target="_blank" href="http://www.m1905.com/video/play/690676.shtml">狄仁杰之神都龙王</a></p>
-                              <p><a target="_blank" href="http://www.m1905.com/mdb/film/2211571/prevue/" class="gray_f02">共有6部预告片</a></p>
-                            </li>
-                      </ul>
-    </div>
-    <div class="webcinema cl">
-            <div class="title_hd"><span class="fr gray_f01"><a target="_blank" href="http://vip.m1905.com/">&gt; 更多影片</a></span><h3 class="hd-line"><a href="http://vip.m1905.com/">付费超清</a></h3></div>
-                                                                                                                                                                                                <ul class="webcnm_list">
-                        <li>
-          <span class="payTag"></span><span class="titleMask"><a title="浴室奸杀细节追踪" target="_blank" href="http://vip.m1905.com/play/689810.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">浴室奸杀细节追踪</a></span>
-          <a target="_blank" href="http://vip.m1905.com/play/689810.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_213_20130916092223958.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_213_20130916092223958.jpg" alt="浴室奸杀细节追踪" title="浴室奸杀细节追踪" style="visibility: visible; display: inline;"></a>
-        </li>
-                                <li>
-          <span class="payTag"></span><span class="titleMask"><a title="世界经典情色电影" target="_blank" href="http://vip.m1905.com/play/641094.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">世界经典情色电影</a></span>
-          <a target="_blank" href="http://vip.m1905.com/play/641094.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0909/thumb_1_153_213_20130909101735811.jpg" src="http://image11.m1905.cn/uploadfile/2013/0909/thumb_1_153_213_20130909101735811.jpg" alt="世界经典情色电影" title="世界经典情色电影" style="visibility: visible; display: inline;"></a>
-        </li>
-                                <li>
-          <span class="payTag"></span><span class="titleMask"><a title="刘德华猎艳群女" target="_blank" href="http://vip.m1905.com/play/681537.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">刘德华猎艳群女</a></span>
-          <a target="_blank" href="http://vip.m1905.com/play/681537.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_213_20130916093026755.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_153_213_20130916093026755.jpg" alt="刘德华猎艳群女" title="刘德华猎艳群女" style="visibility: visible; display: inline;"></a>
-        </li>
-                                <li>
-          <span class="payTag"></span><span class="titleMask"><a title="世界冠军成长之路" target="_blank" href="http://vip.m1905.com/play/689512.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">世界冠军成长之路</a></span>
-          <a target="_blank" href="http://vip.m1905.com/play/689512.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2012/1116/thumb_1_153_213_20121116091113935.jpg" src="http://image11.m1905.cn/uploadfile/2012/1116/thumb_1_153_213_20121116091113935.jpg" alt="世界冠军成长之路" title="世界冠军成长之路" style="visibility: visible; display: inline;"></a>
-        </li>
-                                <li>
-          <span class="payTag"></span><span class="titleMask"><a title="独播《三月情流感》" target="_blank" href="http://vip.m1905.com/play/688535.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">独播《三月情流感》</a></span>
-          <a target="_blank" href="http://vip.m1905.com/play/688535.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_153_213_20130906013814504.jpg" src="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_153_213_20130906013814504.jpg" alt="独播《三月情流感》" title="独播《三月情流感》" style="visibility: visible; display: inline;"></a>
-        </li>
-                                                                                                                                                                                      </ul>
-      <ul class="c_list cl f14 line-h26">
-                                                                                                        <li><a title="央6热播《霹雳凤凰》" target="_blank" href="http://vip.m1905.com/play/630168.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">央6热播《霹雳凤凰》</a></li>
-                                <li><a title="动作《新少林五祖》" target="_blank" href="http://vip.m1905.com/play/689186.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">动作《新少林五祖》</a></li>
-                                <li><a title="几宗罪之性与罪" target="_blank" href="http://vip.m1905.com/play/690195.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">几宗罪之性与罪</a></li>
-                                <li><a title="周恩来外交风云" target="_blank" href="http://vip.m1905.com/play/689201.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">周恩来外交风云</a></li>
-                                <li><a title="【会员大礼免费拿】" target="_blank" href="http://vip.m1905.com/privilege/?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">【会员大礼免费拿】</a></li>
-                                <li><a title="伦理《半夜别照镜子》" target="_blank" href="http://vip.m1905.com/play/541860.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">伦理《半夜别照镜子》</a></li>
-                                <li><a title="谢娜《当初应该爱你》" target="_blank" href="http://vip.m1905.com/play/689181.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">谢娜《当初应该爱你》</a></li>
-                                <li><a title="解禁片《大鸿米店》" target="_blank" href="http://vip.m1905.com/play/462513.shtml?utm_source=m1905&amp;utm_medium=cps&amp;utm_campaign=2">解禁片《大鸿米店》</a></li>
-                                <li><a title="一周电影指南[第38周]" target="_blank" href="http://www.m1905.com/special/fee/cctv6/">一周电影指南[第38周]</a></li>
-                                <li><a title="[促销]-高清1元点播" target="_blank" href="http://www.m1905.com/special/fee/tejia1/">[促销]-高清1元点播</a></li>
-                      </ul>
-    </div>
-    <div class=" cl mt10">
-                                                                                  <div class="title_hd">
-        <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/vod/">&gt; 更多影片</a></span>
-        <h3 class="hd-line"><a target="_blank" href="http://www.m1905.com/vod/">独家热播</a></h3>
-      </div>
-      <ul class="webcnm_list">
-                <li>
-          <span class="titleMask"><a title="阿珍和她的女主人" target="_blank" href="http://www.m1905.com/vod/info/85601.shtml">阿珍和她的女主人</a></span>
-          <a target="_blank" href="http://www.m1905.com/vod/info/85601.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_153_213_20091106112942127.jpg" src="http://image11.m1905.cn/uploadfile/2009/1106/thumb_1_153_213_20091106112942127.jpg" alt="阿珍和她的女主人" title="阿珍和她的女主人" style="visibility: visible; display: inline;"></a>
-        </li>
-                <li>
-          <span class="titleMask"><a title="欲望法则" target="_blank" href="http://www.m1905.com/vod/info/86421.shtml">欲望法则</a></span>
-          <a target="_blank" href="http://www.m1905.com/vod/info/86421.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0408/thumb_1_153_213_20130408103420683.jpg" src="http://image11.m1905.cn/uploadfile/2013/0408/thumb_1_153_213_20130408103420683.jpg" alt="欲望法则" title="欲望法则" style="visibility: visible; display: inline;"></a>
-        </li>
-                <li>
-          <span class="titleMask"><a title="红唇档案" target="_blank" href="http://www.m1905.com/vod/info/330631.shtml">红唇档案</a></span>
-          <a target="_blank" href="http://www.m1905.com/vod/info/330631.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/s2010/0207/thumb_1_153_213_20100207112534564.jpg" src="http://image11.m1905.cn/uploadfile/s2010/0207/thumb_1_153_213_20100207112534564.jpg" alt="红唇档案" title="红唇档案" style="visibility: visible; display: inline;"></a>
-        </li>
-                <li>
-          <span class="titleMask"><a title="刺青怨" target="_blank" href="http://www.m1905.com/vod/info/332861.shtml">刺青怨</a></span>
-          <a target="_blank" href="http://www.m1905.com/vod/info/332861.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/s2010/0223/thumb_1_153_213_20100223053552567.jpg" src="http://image11.m1905.cn/uploadfile/s2010/0223/thumb_1_153_213_20100223053552567.jpg" alt="刺青怨" title="刺青怨" style="visibility: visible; display: inline;"></a>
-        </li>
-                <li>
-          <span class="titleMask"><a title="侠侣探案之古刹怪佛" target="_blank" href="http://www.m1905.com/vod/info/310108.shtml">侠侣探案之古刹怪佛</a></span>
-          <a target="_blank" href="http://www.m1905.com/vod/info/310108.shtml"><div class="loadmask" style="position: absolute; width: 153px; height: 213px; display: none;"></div><img width="153" height="213" data-original="http://image11.m1905.cn/uploadfile/2013/0628/thumb_1_153_213_20130628115155621.jpg" src="http://image11.m1905.cn/uploadfile/2013/0628/thumb_1_153_213_20130628115155621.jpg" alt="侠侣探案之古刹怪佛" title="侠侣探案之古刹怪佛" style="visibility: visible; display: inline;"></a>
-        </li>
-              </ul>
-    </div>
-  </div>
-  <div class="right_panel">
-    <div id="rankGross" class="side_box">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="title_hd">
-        <span class="fr gray_f01">单位:万</span>
-        <h3 class="">票房周报<a target="_blank" href="http://www.m1905.com/video/pfbb/"><span class="green_video"></span></a></h3>
-      </div>
-      <div class="subnav">
-        <ul>
-          <li class="active"><a title="09.02-09.08" data-toggle="tab" data-evt="hover" href="#ranklist01">内地</a></li>
-          <li><a title="09.06-09.08" data-toggle="tab" data-evt="hover" href="#ranklist02">北美</a></li>
-          <li><a title="09.05-09.08" data-toggle="tab" data-evt="hover" href="#ranklist03">香港</a></li>
-        </ul>
-      </div>
-      <div class="ranklist">
-        <ul id="ranklist01" class="active fade in">
-                    <li><em>1</em><a title="极乐空间" target="_blank" href="http://www.m1905.com/mdb/film/2210177/">极乐空间</a><span>￥7400</span></li>
-                    <li><em>2</em><a title="被偷走的那五年" target="_blank" href="http://www.m1905.com/mdb/film/2215302/">被偷走的那五</a><span>￥5500</span></li>
-                    <li><em>3</em><a title="了不起的盖茨比" target="_blank" href="http://www.m1905.com/mdb/film/2207930/">了不起的盖茨</a><span>￥3300</span></li>
-                    <li><em>4</em><a title="侏罗纪公园" target="_blank" href="http://www.m1905.com/mdb/film/298194/">侏罗纪公园</a><span>￥2900</span></li>
-                    <li><em>5</em><a title="怪兽大学" target="_blank" href="http://www.m1905.com/mdb/film/54001/">怪兽大学</a><span>￥2500</span></li>
-                    <li><em>6</em><a title="海啸奇迹" target="_blank" href="http://www.m1905.com/mdb/film/2208063/">海啸奇迹</a><span>￥2000</span></li>
-                    <li><em>7</em><a title="超级经纪人" target="_blank" href="http://www.m1905.com/mdb/film/2214174/">超级经纪人</a><span>￥1300</span></li>
-                    <li><em>8</em><a title="周恩来的四个昼夜" target="_blank" href="http://www.m1905.com/mdb/film/2220471/">周恩来的四个</a><span>￥470</span></li>
-                    <li><em>9</em><a title="古镇凶灵之巫咒缠身" target="_blank" href="http://www.m1905.com/mdb/film/2221798/">古镇凶灵之巫</a><span>￥370</span></li>
-                    <li><em>10</em><a title="摩登年代" target="_blank" href="http://www.m1905.com/mdb/film/2219225/">摩登年代</a><span>￥330</span></li>
-                  </ul>
-        <ul id="ranklist02" class="fade">
-                    <li><em>1</em><a title="星际传奇3" target="_blank" href="http://www.m1905.com/mdb/film/2091924/">星际传奇3</a><span>$1867</span></li>
-                    <li><em>2</em><a title="白宫管家" target="_blank" href="http://www.m1905.com/mdb/film/2210795/">白宫管家</a><span>$890</span></li>
-                    <li><em>3</em><a title="非常父女档" target="_blank" href="http://www.m1905.com/mdb/film/2221980/">非常父女档</a><span>$810</span></li>
-                    <li><em>4</em><a title="冒牌家庭" target="_blank" href="http://www.m1905.com/mdb/film/2212587/">冒牌家庭</a><span>$793</span></li>
-                    <li><em>5</em><a title="飞机总动员" target="_blank" href="http://www.m1905.com/mdb/film/2215054/">飞机总动员</a><span>$427</span></li>
-                    <li><em>6</em><a title="单向乐队：这就是我们" target="_blank" href="http://www.m1905.com/mdb/film/2218518/">单向乐队：这就</a><span>$410</span></li>
-                    <li><em>7</em><a title="极乐空间" target="_blank" href="http://www.m1905.com/mdb/film/2210177/">极乐空间</a><span>$310</span></li>
-                    <li><em>8</em><a title="蓝色茉莉" target="_blank" href="http://www.m1905.com/mdb/film/2213234/">蓝色茉莉</a><span>$269</span></li>
-                    <li><em>9</em><a title="波西·杰克逊与魔兽之海" target="_blank" href="http://www.m1905.com/mdb/film/2208383/">波西·杰克逊</a><span>$250</span></li>
-                    <li><em>10</em><a title="世界尽头" target="_blank" href="http://www.m1905.com/mdb/film/2210462/">世界尽头</a><span>$230</span></li>
-                  </ul>
-        <ul id="ranklist03" class="fade">
-                    <li><em>1</em><a title="激战" target="_blank" href="http://www.m1905.com/mdb/film/2217794/">激战</a><span>$47</span></li>
-                    <li><em>2</em><a title="Midas Touch" href="javascript:void(0);">Midas Touch</a><span>$29</span></li>
-                    <li><em>3</em><a title="赤焰战场2" target="_blank" href="http://www.m1905.com/mdb/film/2212871/">赤焰战场2</a><span>$29</span></li>
-                    <li><em>4</em><a title="星际传奇3" target="_blank" href="http://www.m1905.com/mdb/film/2091924/">星际传奇3</a><span>$19</span></li>
-                    <li><em>5</em><a title="招魂" target="_blank" href="http://www.m1905.com/mdb/film/2215711/">招魂</a><span>$18</span></li>
-                    <li><em>6</em><a title="实习大叔" target="_blank" href="http://www.m1905.com/mdb/film/2211620/">实习大叔</a><span>$15</span></li>
-                    <li><em>7</em><a title="爱在午夜降临前" target="_blank" href="http://www.m1905.com/mdb/film/2212545/">爱在午夜降临</a><span>$13</span></li>
-                    <li><em>8</em><a title="狂舞派" target="_blank" href="http://www.m1905.com/mdb/film/2219898/">狂舞派</a><span>$12</span></li>
-                    <li><em>9</em><a title="长大后2" target="_blank" href="http://www.m1905.com/mdb/film/2216663/">长大后2</a><span>$8</span></li>
-                    <li><em>10</em><a title="圣杯神器：骸骨之城" target="_blank" href="http://www.m1905.com/mdb/film/2210253/">圣杯神器：骸骨</a><span>$8</span></li>
-                  </ul>
-      </div>
-    </div>
-    <div class="side_box mt10">
-      <div class="title_hd"><span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/interactive/activity/">&gt; 更多观影团</a></span><h3 class=""><a target="_blank" href="http://www.m1905.com/interactive/activity/">观影团</a></h3></div>
-                                                                                  <div class="gossip_tp">
-        <a title="电影网观影团带你免费看大片" target="_blank" href="http://d.m1905.com/apps/gyt"><span class="titleMask">电影网观影团带你免费看大片</span><div class="loadmask" style="position: absolute; width: 190px; height: 110px; display: none;"></div><img width="190" height="110" data-original="http://image11.m1905.cn/uploadfile/2013/0716/thumb_1_190_110_20130716112547995.jpg" src="http://image11.m1905.cn/uploadfile/2013/0716/thumb_1_190_110_20130716112547995.jpg" alt="电影网观影团带你免费看大片" title="电影网观影团带你免费看大片" style="visibility: visible; display: inline;"></a>
-      </div>
-      <ul class="sidebar_list">
-                                        <li><a title="皮克斯《怪兽大学》南京免费观影" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/49">皮克斯《怪兽大学》南京免费观影</a></li>
-                                <li><a title="《蓝精灵2》时代金球影城免费观影" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/81">《蓝精灵2》时代金球影城免费观影</a></li>
-                                <li><a title="《古镇凶灵之巫咒缠身》免费观影" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/103">《古镇凶灵之巫咒缠身》免费观影</a></li>
-                                <li><a title="《非常幸运》华谊兄弟影城免费观影" target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/91">《非常幸运》华谊兄弟影城免费观影</a></li>
-                      </ul>
-    </div>
-    <div class="side_box mt10">
-      <div class="title_hd"><span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/special/list-p-typeid-17.html">&gt; 更多片场</a></span><h3 class=""><a target="_blank" href="http://www.m1905.com/special/list-p-typeid-17.html">特色片场</a></h3></div>
-                                                                                  <div class="gossip_tp">
-        <a title="开学甜蜜味，欢乐闺蜜会" target="_blank" href="http://www.m1905.com/special/dianbo/guimi/"><span class="titleMask">开学甜蜜味，欢乐闺蜜会</span><div class="loadmask" style="position: absolute; width: 190px; height: 110px; display: none;"></div><img width="190" height="110" data-original="http://image11.m1905.cn/uploadfile/2013/0913/thumb_1_190_110_20130913040927718.jpg" src="http://image11.m1905.cn/uploadfile/2013/0913/thumb_1_190_110_20130913040927718.jpg" alt="开学甜蜜味，欢乐闺蜜会" title="开学甜蜜味，欢乐闺蜜会" style="visibility: visible; display: inline;"></a>
-      </div>
-      <ul class="sidebar_list">
-                                        <li><a title="一片成谶&mdash;&mdash;女星坎坷求爱路" target="_blank" href="http://www.m1905.com/special/dianbo/theme15/">一片成谶&mdash;&mdash;女星坎坷求爱路</a></li>
-                                <li><a title="银幕俏寡妇 忍住寂寞活出精彩" target="_blank" href="http://www.m1905.com/special/dianbo/kefu/">银幕俏寡妇 忍住寂寞活出精彩</a></li>
-                                <li><a title="让你纯情100回！纯爱片合集" target="_blank" href="http://www.m1905.com/special/dianbo/theme14/">让你纯情100回！纯爱片合集</a></li>
-                                <li><a title="新学期把妹指南&mdash;&mdash;秘技50式" target="_blank" href="http://www.m1905.com/special/dianbo/theme13/">新学期把妹指南&mdash;&mdash;秘技50式</a></li>
-                      </ul>
-    </div>
-    <div id="cctv6live" class="side_box mt10">
-            <div class="title_hd">
-        <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/cctv6/">&gt; CCTV6</a></span>
-        <h3 class=""><a target="_blank" href="http://www.m1905.com/cctv6/live/">CCTV6直播间</a></h3>
-      </div>
-      <div class="broadcast_tp"><a target="_blank" href="http://www.m1905.com/cctv6/program/dypdepg/list/" class="tcolor fr">完整节目表</a>2013-09-16 星期一</div>
-      <ul class="bdcast_list">
-      </ul>      
-    </div>
-  </div>
-</div>
-<!-- 2楼结束 -->
-<!--<div class="box_20ov cl"></div>-->
-<div class="box_10ov cl"></div>
-<div data-size="980" class="layout adArea" style="width: 960px; font-size: 0px; line-height: 0;" id="adjs_359"><iframe width="980" scrolling="no" height="94" frameborder="no" id="m1905ad_90445" name="m1905ad_90445" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=90445"></iframe></div>
-<div class="box_20ov cl"></div>
-<!-- 3楼开始 -->
-<div id="floor_3" class="layout cl">
-  <div class="floor-hd">
-    <span class="floor-logo"></span>
-    <div class="floor-about">
-      <p class="title tcolor2">查资料</p>
-      <h2><a target="_blank" href="http://www.m1905.com/mdb/film/">影库</a> | <a target="_blank" href="http://www.m1905.com/mdb/star/">明星库</a> | <a target="_blank" href="http://www.m1905.com/newgallery/list/c41.html">剧照</a> | <a target="_blank" href="http://www.m1905.com/newgallery/list/c35.html">海报</a> | <a target="_blank" href="http://www.m1905.com/film/">资讯</a> | <a target="_blank" href="http://www.m1905.com/star/starnews/">星闻</a></h2>
-    </div>
-  </div>
-                                                                                                                                                        <div data-unit-config="{'onclass':'active','offclass':'','pause_on_act':'click','position':'left'}" id="carousel_data" class="carousel slide f_list">
-    <div class="carousel-panel f_tabs">
-      <ul>
-        <li class="item0 f_tab active">即将上映</li>
-        <li class="item1 f_tab rel">院线热映</li>
-        <li class="item2 f_tab">全球新片</li>
-        <li class="item3 f_tab">经典影片</li>
-      </ul>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-pos" style="width: 3920px; left: 0px;">
-      <div class="item0 f_out">
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211468/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="非常幸运" title="非常幸运" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090505589.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090505589.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="非常幸运" target="_blank" href="http://www.m1905.com/mdb/film/2211468/">非常幸运</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2211468/">2013年09月17日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211468/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220975/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="落经山" title="落经山" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090553642.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090553642.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="落经山" target="_blank" href="http://www.m1905.com/mdb/film/2220975/">落经山</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2220975/">2013年09月17日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220975/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221776/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="我的母亲" title="我的母亲" data-original="http://image11.m1905.cn/uploadfile/2013/0820/thumb_1_162_241_20130820104531355.jpg" src="http://image11.m1905.cn/uploadfile/2013/0820/thumb_1_162_241_20130820104531355.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="我的母亲" target="_blank" href="http://www.m1905.com/mdb/film/2221776/">我的母亲</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2221776/">2013年09月17日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221776/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211927/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="一座城池" title="一座城池" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090704149.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090704149.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="一座城池" target="_blank" href="http://www.m1905.com/mdb/film/2211927/">一座城池</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2211927/">2013年09月18日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211927/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212900/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="极速蜗牛" title="极速蜗牛" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090806516.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916090806516.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="极速蜗牛" target="_blank" href="http://www.m1905.com/mdb/film/2212900/">极速蜗牛</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2212900/">2013年09月18日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212900/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221246/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="爱别离" title="爱别离" data-original="http://image11.m1905.cn/uploadfile/2013/0904/thumb_1_162_241_20130904100529773.jpg" src="http://image11.m1905.cn/uploadfile/2013/0904/thumb_1_162_241_20130904100529773.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="爱别离" target="_blank" href="http://www.m1905.com/mdb/film/2221246/">爱别离</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2221246/">2013年09月18日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221246/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212554/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="囚徒" title="囚徒" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916091211280.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916091211280.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="囚徒" target="_blank" href="http://www.m1905.com/mdb/film/2212554/">囚徒</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2212554/">2013年09月20日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212554/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2209311/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="极速风流" title="极速风流" data-original="http://image11.m1905.cn/uploadfile/2013/0901/thumb_1_162_241_20130901103154763.jpg" src="http://image11.m1905.cn/uploadfile/2013/0901/thumb_1_162_241_20130901103154763.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="极速风流" target="_blank" href="http://www.m1905.com/mdb/film/2209311/">极速风流</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2209311/">2013年09月20日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2209311/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212221/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="天降美食2" title="天降美食2" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916093041178.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916093041178.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="天降美食2" target="_blank" href="http://www.m1905.com/mdb/film/2212221/">天降美食2</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2212221/">2013年09月27日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212221/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212424/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="唐璜" title="唐璜" data-original="http://image11.m1905.cn/uploadfile/2013/0626/thumb_1_162_241_20130626085606177.jpg" src="http://image11.m1905.cn/uploadfile/2013/0626/thumb_1_162_241_20130626085606177.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="唐璜" target="_blank" href="http://www.m1905.com/mdb/film/2212424/">唐璜</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2212424/">2013年09月27日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212424/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211040/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="逆转王牌" title="逆转王牌" data-original="http://image11.m1905.cn/uploadfile/2013/0621/thumb_1_162_241_20130621092948739.jpg" src="http://image11.m1905.cn/uploadfile/2013/0621/thumb_1_162_241_20130621092948739.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="逆转王牌" target="_blank" href="http://www.m1905.com/mdb/film/2211040/">逆转王牌</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2211040/">2013年10月04日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2211040/prevue/">相关视频</a>
-          </div>
-        </div>
-                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2119930/"><div class="loadmask" style="position: absolute; width: 162px; height: 241px; display: none;"></div><img width="162" height="241" alt="地心引力" title="地心引力" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916093130362.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_162_241_20130916093130362.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <p><a title="地心引力" target="_blank" href="http://www.m1905.com/mdb/film/2119930/">地心引力</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/mdb/film/2119930/">2013年10月04日上映</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2119930/prevue/">相关视频</a>
-          </div>
-        </div>
-              </div>
-      <div class="item1 f_out">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219686/"><img width="162" height="241" alt="穿越火线" title="穿越火线" data-original="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_162_241_20130906104140331.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="穿越火线" target="_blank" href="http://www.m1905.com/mdb/film/2219686/">穿越火线</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f651137.html">放映4711场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219686/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2209895/"><img width="162" height="241" alt="蓝精灵2" title="蓝精灵2" data-original="http://image11.m1905.cn/uploadfile/2013/0830/thumb_1_162_241_20130830103355577.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="蓝精灵2" target="_blank" href="http://www.m1905.com/mdb/film/2209895/">蓝精灵2</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f535308.html">放映10525场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2209895/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210597/"><img width="162" height="241" alt="全民目击" title="全民目击" data-original="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_162_241_20130816090950486.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="全民目击" target="_blank" href="http://www.m1905.com/mdb/film/2210597/">全民目击</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f543945.html">放映9318场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210597/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210177/"><img width="162" height="241" alt="极乐空间" title="极乐空间" data-original="http://image11.m1905.cn/uploadfile/2013/0905/thumb_1_162_241_20130905110732555.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="极乐空间" target="_blank" href="http://www.m1905.com/mdb/film/2210177/">极乐空间</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f539281.html">放映6951场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210177/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2207930/"><img width="162" height="241" alt="了不起的盖茨比" title="了不起的盖茨比" data-original="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_162_241_20130816034156961.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="了不起的盖茨比" target="_blank" href="http://www.m1905.com/mdb/film/2207930/">了不起的盖茨比</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f486808.html">放映1582场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2207930/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2214174/"><img width="162" height="241" alt="超级经纪人" title="超级经纪人" data-original="http://image11.m1905.cn/uploadfile/2013/0809/thumb_1_162_241_20130809094502166.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="超级经纪人" target="_blank" href="http://www.m1905.com/mdb/film/2214174/">超级经纪人</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f578630.html">放映1295场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2214174/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221798/"><img width="162" height="241" alt="古镇凶灵之巫咒缠身" title="古镇凶灵之巫咒缠身" data-original="http://image11.m1905.cn/uploadfile/2013/0821/thumb_1_162_241_20130821113750355.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="古镇凶灵之巫咒缠身" target="_blank" href="http://www.m1905.com/mdb/film/2221798/">古镇凶灵之巫咒缠</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f683843.html">放映829场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221798/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221443/"><img width="162" height="241" alt="4B青年之4楼B座" title="4B青年之4楼B座" data-original="http://image11.m1905.cn/uploadfile/2013/0902/thumb_1_162_241_20130902092000459.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="4B青年之4楼B座" target="_blank" href="http://www.m1905.com/mdb/film/2221443/">4B青年之4楼B座</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f677439.html">放映827场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2221443/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/54001/"><img width="162" height="241" alt="怪兽大学" title="怪兽大学" data-original="http://image11.m1905.cn/uploadfile/2013/0711/thumb_1_162_241_20130711033844719.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="怪兽大学" target="_blank" href="http://www.m1905.com/mdb/film/54001/">怪兽大学</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f54001.html">放映592场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/54001/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2208063/"><img width="162" height="241" alt="海啸奇迹" title="海啸奇迹" data-original="http://image11.m1905.cn/uploadfile/2013/0805/thumb_1_162_241_20130805013406563.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="海啸奇迹" target="_blank" href="http://www.m1905.com/mdb/film/2208063/">海啸奇迹</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f491161.html">放映568场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2208063/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2215302/"><img width="162" height="241" alt="被偷走的那五年" title="被偷走的那五年" data-original="http://image11.m1905.cn/uploadfile/2013/0815/thumb_1_162_241_20130815090907245.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="被偷走的那五年" target="_blank" href="http://www.m1905.com/mdb/film/2215302/">被偷走的那五年</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f593615.html">放映415场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2215302/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220947/"><img width="162" height="241" alt="时光恋人" title="时光恋人" data-original="http://image11.m1905.cn/uploadfile/2013/0826/thumb_1_162_241_20130826091229143.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="时光恋人" target="_blank" href="http://www.m1905.com/mdb/film/2220947/">时光恋人</a></p>
-            <p><a target="_blank" href="http://www.m1905.com/yx/film/c1f670055.html">放映151场</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220947/prevue/">相关视频</a>
-          </div>
-        </div>
-                                                                                                                                                                                                                                                              </div>
-      <div class="item2 f_out">
-                        <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210031/"><img width="162" height="241" alt="离线" title="离线" data-original="http://image11.m1905.cn/uploadfile/2013/0407/thumb_1_162_241_20130407030520595.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="离线" target="_blank" href="http://www.m1905.com/mdb/film/2210031/">离线</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2210031/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210031/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2014440/"><img width="162" height="241" alt="疯狂原始人" title="疯狂原始人" data-original="http://image11.m1905.cn/uploadfile/2013/0328/thumb_1_162_241_20130328113929872.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="疯狂原始人" target="_blank" href="http://www.m1905.com/mdb/film/2014440/">疯狂原始人</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2014440/">6.6分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2014440/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210870/"><img width="162" height="241" alt="宿醉3" title="宿醉3" data-original="http://image11.m1905.cn/uploadfile/2013/0412/thumb_1_162_241_20130412085544697.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="宿醉3" target="_blank" href="http://www.m1905.com/mdb/film/2210870/">宿醉3</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2210870/">7.2分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2210870/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220110/"><img width="162" height="241" alt="青春洋溢色彩" title="青春洋溢色彩" data-original="http://image11.m1905.cn/uploadfile/2013/0605/thumb_1_162_241_20130605020834652.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="青春洋溢色彩" target="_blank" href="http://www.m1905.com/mdb/film/2220110/">青春洋溢色彩</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2220110/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2220110/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2215906/"><img width="162" height="241" alt="世界末日" title="世界末日" data-original="http://image11.m1905.cn/uploadfile/2013/0403/thumb_1_162_241_20130403090100871.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="世界末日" target="_blank" href="http://www.m1905.com/mdb/film/2215906/">世界末日</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2215906/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2215906/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2218677/"><img width="162" height="241" alt="我们是贵族" title="我们是贵族" data-original="http://image11.m1905.cn/uploadfile/2013/0328/thumb_1_162_241_20130328094027852.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="我们是贵族" target="_blank" href="http://www.m1905.com/mdb/film/2218677/">我们是贵族</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2218677/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2218677/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212443/"><img width="162" height="241" alt="向日葵与幼犬的7天" title="向日葵与幼犬的7天" data-original="http://image11.m1905.cn/uploadfile/2012/1126/thumb_1_162_241_20121126085417565.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="向日葵与幼犬的7天" target="_blank" href="http://www.m1905.com/mdb/film/2212443/">向日葵与幼犬的7</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2212443/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2212443/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2218856/"><img width="162" height="241" alt="爱沙尼亚女人在巴黎" title="爱沙尼亚女人在巴黎" data-original="http://image11.m1905.cn/uploadfile/2013/0408/thumb_1_162_241_20130408115105454.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="爱沙尼亚女人在巴黎" target="_blank" href="http://www.m1905.com/mdb/film/2218856/">爱沙尼亚女人在巴</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2218856/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2218856/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2216383/"><img width="162" height="241" alt="过往" title="过往" data-original="http://image11.m1905.cn/uploadfile/2013/0407/thumb_1_162_241_20130407104721935.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="过往" target="_blank" href="http://www.m1905.com/mdb/film/2216383/">过往</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2216383/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2216383/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219931/"><img width="162" height="241" alt="诡魇" title="诡魇" data-original="http://image11.m1905.cn/uploadfile/2013/0805/thumb_1_162_241_20130805112040519.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="诡魇" target="_blank" href="http://www.m1905.com/mdb/film/2219931/">诡魇</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2219931/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219931/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219606/"><img width="162" height="241" alt="迷离夜" title="迷离夜" data-original="http://image11.m1905.cn/uploadfile/2013/0625/thumb_1_162_241_20130625092130852.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="迷离夜" target="_blank" href="http://www.m1905.com/mdb/film/2219606/">迷离夜</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2219606/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2219606/prevue/">相关视频</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2213708/"><img width="162" height="241" alt="最佳出价" title="最佳出价" data-original="http://image11.m1905.cn/uploadfile/2013/0530/thumb_1_162_241_20130530102855102.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="最佳出价" target="_blank" href="http://www.m1905.com/mdb/film/2213708/">最佳出价</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2213708/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2213708/prevue/">相关视频</a>
-          </div>
-        </div>
-                      </div>
-      <div class="item3 f_out">
-                        <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/1972114/"><img width="162" height="241" alt="雨人" title="雨人" data-original="http://image11.m1905.cn/uploadfile/2013/0110/thumb_1_162_241_20130110095251558.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="雨人" target="_blank" href="http://www.m1905.com/mdb/film/1972114/">雨人</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/1972114/">7.8分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/1972114/prevue/">1988年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/47900/"><img width="162" height="241" alt="曼哈顿" title="曼哈顿" data-original="http://image11.m1905.cn/uploadfile/2008/thumb_1_162_241_0801edb-c10d23825803.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="曼哈顿" target="_blank" href="http://www.m1905.com/mdb/film/47900/">曼哈顿</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/47900/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/47900/prevue/">1979年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/58934/"><img width="162" height="241" alt="沉默的羔羊" title="沉默的羔羊" data-original="http://image11.m1905.cn/uploadfile/2008/0919/thumb_1_162_241_13160906368.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="沉默的羔羊" target="_blank" href="http://www.m1905.com/mdb/film/58934/">沉默的羔羊</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/58934/">7.5分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/58934/prevue/">1991年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/48674/"><img width="162" height="241" alt="危情十日" title="危情十日" data-original="http://image11.m1905.cn/uploadfile/2013/0712/thumb_1_162_241_20130712023009878.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="危情十日" target="_blank" href="http://www.m1905.com/mdb/film/48674/">危情十日</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/48674/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/48674/prevue/">1990年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/47508/"><img width="162" height="241" alt="午夜牛郎" title="午夜牛郎" data-original="http://image11.m1905.cn/uploadfile/2008/thumb_1_162_241_0725e07-a5ce35dda065.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="午夜牛郎" target="_blank" href="http://www.m1905.com/mdb/film/47508/">午夜牛郎</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/47508/">暂无评分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/47508/prevue/">1969年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/91824/"><img width="162" height="241" alt="黄金三镖客" title="黄金三镖客" data-original="http://image11.m1905.cn/uploadfile/2012/1212/thumb_1_162_241_20121212064304312.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="黄金三镖客" target="_blank" href="http://www.m1905.com/mdb/film/91824/">黄金三镖客</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/91824/">3.0分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/91824/prevue/">1967年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/57203/"><img width="162" height="241" alt="集结号" title="集结号" data-original="http://image11.m1905.cn/uploadfile/2012/0307/thumb_1_162_241_20120307113550136.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="集结号" target="_blank" href="http://www.m1905.com/mdb/film/57203/">集结号</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/57203/">4.8分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/57203/prevue/">2007年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/58455/"><img width="162" height="241" alt="色，戒" title="色，戒" data-original="http://image11.m1905.cn/uploadfile/2008/1003/thumb_1_162_241_141753187.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="色，戒" target="_blank" href="http://www.m1905.com/mdb/film/58455/">色，戒</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/58455/">6.4分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/58455/prevue/">2007年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/46795/"><img width="162" height="241" alt="父子" title="父子" data-original="http://image11.m1905.cn/uploadfile/2008/0922/thumb_1_162_241_0611912424467.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="父子" target="_blank" href="http://www.m1905.com/mdb/film/46795/">父子</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/46795/">4.5分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/46795/prevue/">2006年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/46378/"><img width="162" height="241" alt="三岔口" title="三岔口" data-original="http://image11.m1905.cn/uploadfile/2008/0922/thumb_1_162_241_05123022134576.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="三岔口" target="_blank" href="http://www.m1905.com/mdb/film/46378/">三岔口</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/46378/">5.3分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/46378/prevue/">2005年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2206940/"><img width="162" height="241" alt="无间道III终极无间" title="无间道III终极无间" data-original="http://image11.m1905.cn/uploadfile/2011/0815/thumb_1_162_241_20110815023819956.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="无间道III终极无间" target="_blank" href="http://www.m1905.com/mdb/film/2206940/">无间道III终极无</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/2206940/">6.7分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/2206940/prevue/">2003年上映</a>
-          </div>
-        </div>
-                                <div class="sub-item">
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/film/54626/"><img width="162" height="241" alt="无间道" title="无间道" data-original="http://image11.m1905.cn/uploadfile/s2010/0716/thumb_1_162_241_20100716024509720.jpg" src="http://static.m1905.cn/index2012/images/grey.gif"></a>
-          </div>
-          <div class="info">
-            <p><a title="无间道" target="_blank" href="http://www.m1905.com/mdb/film/54626/">无间道</a></p>
-                                                  <p><a target="_blank" href="http://www.m1905.com/mdb/film/54626/">5.9分</a></p>
-            <a target="_blank" href="http://www.m1905.com/mdb/film/54626/prevue/">2002年上映</a>
-          </div>
-        </div>
-                      </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-full-1 mt10">
-    <div class="title_hd">
-      <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/mdb/star/">&gt; 进入明星库</a></span>
-      <h3 class="hd-line"><a target="_blank" href="http://www.m1905.com/mdb/star/">明星</a></h3>
-    </div>
-                                <div class="bd col-star mt15">
-            <div class="star-item">
-        <div class="mask"></div>
-                <div class="star-main">
-                    <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/star/2140824/" title="温子仁"><div class="loadmask" style="position: absolute; width: 218px; height: 301px; display: none;"></div><img width="218" height="301" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_218_301_20130916094705991.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_218_301_20130916094705991.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <h3><a target="_blank" href="http://www.m1905.com/mdb/star/2140824/">温子仁</a></h3>
-            <p>出生日期：1977-02-27</p>
-            <p>星座：双鱼座</p>
-            <p>代表作：<a target="_blank" href="http://www.m1905.com/mdb/film/2215104/">《潜伏2》</a></p>
-          </div>
-                  </div>
-                <div class="star-rel">
-                    <ul>
-                                  <li><a target="_blank" href="http://www.m1905.com/mdb/star/333649/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="维拉·法梅加" title="维拉·法梅加" data-original="http://image11.m1905.cn/uploadfile/2013/0217/thumb_1_107_150_20130217091329651.jpg" src="http://image11.m1905.cn/uploadfile/2013/0217/thumb_1_107_150_20130217091329651.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/1004812/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="范·迪塞尔" title="范·迪塞尔" data-original="http://image11.m1905.cn/uploadfile/2013/0204/thumb_1_107_150_20130204101428971.jpg" src="http://image11.m1905.cn/uploadfile/2013/0204/thumb_1_107_150_20130204101428971.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/1104274/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="萝丝·拜恩" title="萝丝·拜恩" data-original="http://image11.m1905.cn/uploadfile/2013/0304/thumb_1_107_150_20130304012735556.jpg" src="http://image11.m1905.cn/uploadfile/2013/0304/thumb_1_107_150_20130304012735556.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                </ul>
-        </div>
-      </div>
-            <div class="star-item">
-        <div class="mask"></div>
-                <div class="star-main">
-                    <div class="info">
-            <h3><a target="_blank" href="http://www.m1905.com/mdb/star/1427/">郭采洁</a></h3>
-            <p>出生日期：1986-02-19</p>
-            <p>星座：双鱼座</p>
-            <p>代表作：<a target="_blank" href="http://www.m1905.com/mdb/film/390242/">《神奇》</a></p>
-          </div>
-          <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/star/1427/" title="郭采洁"><div class="loadmask" style="position: absolute; width: 218px; height: 301px; display: none;"></div><img width="218" height="301" data-original="http://image11.m1905.cn/uploadfile/2013/0130/thumb_1_218_301_20130130113816552.jpg" src="http://image11.m1905.cn/uploadfile/2013/0130/thumb_1_218_301_20130130113816552.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-                  </div>
-                <div class="star-rel">
-                    <ul>
-                                  <li><a target="_blank" href="http://www.m1905.com/mdb/star/174/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="黄晓明" title="黄晓明" data-original="http://image11.m1905.cn/uploadfile/2013/0222/thumb_1_107_150_20130222032138112.jpg" src="http://image11.m1905.cn/uploadfile/2013/0222/thumb_1_107_150_20130222032138112.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/552/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="黄奕" title="黄奕" data-original="http://image11.m1905.cn/uploadfile/2013/0406/thumb_1_107_150_20130406114733252.jpg" src="http://image11.m1905.cn/uploadfile/2013/0406/thumb_1_107_150_20130406114733252.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/1048/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="郭敬明" title="郭敬明" data-original="http://image11.m1905.cn/uploadfile/2013/0118/thumb_1_107_150_20130118030425688.jpg" src="http://image11.m1905.cn/uploadfile/2013/0118/thumb_1_107_150_20130118030425688.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                </ul>
-        </div>
-      </div>
-            <div class="star-item">
-        <div class="mask"></div>
-                <div class="star-main">
-                    <div class="top-cv">
-            <a target="_blank" href="http://www.m1905.com/mdb/star/572/" title="房祖名"><div class="loadmask" style="position: absolute; width: 218px; height: 301px; display: none;"></div><img width="218" height="301" data-original="http://image11.m1905.cn/uploadfile/2013/0415/thumb_1_218_301_20130415110030251.jpg" src="http://image11.m1905.cn/uploadfile/2013/0415/thumb_1_218_301_20130415110030251.jpg" style="visibility: visible; display: inline;"></a>
-          </div>
-          <div class="info">
-            <h3><a target="_blank" href="http://www.m1905.com/mdb/star/572/">房祖名</a></h3>
-            <p>出生日期：1982-12-03</p>
-            <p>星座：射手座</p>
-            <p>代表作：<a target="_blank" href="http://www.m1905.com/mdb/film/2211927/">《一座城池》</a></p>
-          </div>
-                  </div>
-                <div class="star-rel">
-                    <ul>
-                                  <li><a target="_blank" href="http://www.m1905.com/mdb/star/3002272/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="黄瀞怡" title="黄瀞怡" data-original="http://image11.m1905.cn/uploadfile/2013/0222/thumb_1_107_150_20130222090844903.jpg" src="http://image11.m1905.cn/uploadfile/2013/0222/thumb_1_107_150_20130222090844903.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/242/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="成龙" title="成龙" data-original="http://image11.m1905.cn/uploadfile/2009/0820/thumb_1_107_150_20090820104358455242.jpg" src="http://image11.m1905.cn/uploadfile/2009/0820/thumb_1_107_150_20090820104358455242.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>父子</p>
-            </li>
-                                              <li><a target="_blank" href="http://www.m1905.com/mdb/star/994/"><div class="loadmask" style="position: absolute; width: 107px; height: 150px; display: none;"></div><img width="107" height="150" alt="薛凯琪" title="薛凯琪" data-original="http://image11.m1905.cn/uploadfile/2013/0417/thumb_1_107_150_20130417093148325.jpg" src="http://image11.m1905.cn/uploadfile/2013/0417/thumb_1_107_150_20130417093148325.jpg" style="visibility: visible; display: inline;"></a>
-              <p><span>&lt;</span>拍档</p>
-            </li>
-                                </ul>
-        </div>
-      </div>
-          </div>
-  </div>
-  <div class="col-full-1 mt10">
-    <div class="title_hd">
-      <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/newgallery/">&gt; 进入图库</a></span>
-      <h3 class="hd-line"><a target="_blank" href="http://www.m1905.com/newgallery/">图库</a></h3>
-    </div>
-                                                    <div class="bd col-pics mt15 mb10">
-      <div style="left:0; top:0" class="pics-item">
-        <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690721.shtml"><div class="loadmask" style="position: absolute; width: 326px; height: 160px; display: none;"></div><img width="326" height="160" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_160_20130916025220979.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_160_20130916025220979.jpg" style="visibility: visible; display: inline;"></a>
-        <p><a target="_blank" href="http://www.m1905.com/newgallery/list/c774.html" title="秀场">秀场</a>莫文蔚20周年展与老公热吻 透视裙秀美背露玉腿</p>      
-      </div>
-      <div style="left:327px; top:0" class="pics-item">
-        <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690795.shtml"><div class="loadmask" style="position: absolute; width: 326px; height: 441px; display: none;"></div><img width="326" height="441" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_441_20130916043910121.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_441_20130916043910121.jpg" style="visibility: visible; display: inline;"></a>
-        <p><a target="_blank" href="http://www.m1905.com/newgallery/list/c53.html" title="写真">写真</a>超模瑞卡比基尼写真摆性感姿态 长发披肩显酥胸</p>      
-      </div>
-      <div style="left:654px; top:0" class="pics-item">
-        <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690750.shtml"><div class="loadmask" style="position: absolute; width: 326px; height: 280px; display: none;"></div><img width="326" height="280" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_280_20130916025343140.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_280_20130916025343140.jpg" style="visibility: visible; display: inline;"></a>
-        <p><a target="_blank" href="http://www.m1905.com/newgallery/list/c773.html" title="海外">海外</a>宝莱坞美女穿透明装拍MV 和男艺人互动火辣香艳</p>      
-      </div>
-      <div style="left:0px; top:161px" class="pics-item">
-        <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690742.shtml"><div class="loadmask" style="position: absolute; width: 326px; height: 280px; display: none;"></div><img width="326" height="280" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_280_20130916025530237.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_280_20130916025530237.jpg" style="visibility: visible; display: inline;"></a>
-        <p><a target="_blank" href="http://www.m1905.com/newgallery/list/c774.html" title="秀场">秀场</a>张雨绮蕾丝礼服亮相性感爆乳 散发浓浓女人魅力</p>      
-      </div>
-      <div style="left:654px; top:281px" class="pics-item">
-        <a target="_blank" href="http://www.m1905.com/newgallery/hdpic/690802.shtml"><div class="loadmask" style="position: absolute; width: 326px; height: 160px; display: none;"></div><img width="326" height="160" data-original="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_160_20130916043704173.jpg" src="http://image11.m1905.cn/uploadfile/2013/0916/thumb_1_326_160_20130916043704173.jpg" style="visibility: visible; display: inline;"></a>
-        <p><a target="_blank" href="http://www.m1905.com/newgallery/list/c53.html" title="写真">写真</a>日本女星牧桥美辉内衣写真 事业线毕露姿态撩人</p>      
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 3楼结束 -->
-<!--<div class="box_20ov cl"></div>
-<div class="box_10ov cl"></div>-->
-<div data-size="980" class="layout adArea" style="width: 960px; font-size: 0px; line-height: 0;" id="adjs_360"><iframe width="980" scrolling="no" height="94" frameborder="no" id="m1905ad_90447" name="m1905ad_90447" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=90447"></iframe></div>
-<div class="box_20ov cl"></div>
-<!-- 4楼开始 -->
-<div id="floor_4" class="layout">
-  <div class="floor-hd">
-    <span class="floor-logo"></span>
-    <div class="floor-about">
-      <p class="title tcolor2">聊电影</p>
-      <h2><a target="_blank" href="http://d.m1905.com/">叮叮</a> | <a target="_blank" href="http://www.m1905.com/interactive/activity/gyt/">观影团</a> | <a target="_blank" href="http://bbs.m1905.com/">论坛</a> | <a target="_blank" href="http://blog.m1905.com/list.php">博客</a></h2>
-    </div>
-  </div>
-  <div class="left_panel">
-    <div id="reviews" class="column_l">
-      <div class="title_hd"> 
-        <span class="fr gray_f01"><a target="_blank" href="http://d.m1905.com/index.php?app=home&amp;mod=User&amp;act=films">&gt; 更多影片</a></span>
-        <h3 class="hd-line"><a target="_blank" href="http://d.m1905.com/index.php?app=home&amp;mod=User&amp;act=films">热门影片</a></h3>
-      </div>
-            <div class="col-l-bd">
-        <ul>
-                              <li>
-                                    <a target="_blank" class="fl" href="http://d.m1905.com/m1905/touser/2210597/1" title=""><img width="72" height="101" src="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_72_101_20130816090950486.jpg" title="全民目击" alt="全民目击"></a>                        <div class="txt-area">
-              <span class="fr tcolor2">644 人评论过</span>
-              <h3><a target="_blank" href="http://d.m1905.com/m1905/touser/2210597/1">全民目击</a></h3>
-              <p class="mt05 line-h20 gray_f02"><a target="_blank" href="http://d.m1905.com/weibo/911520">人的一生总有些东西比命还重要，父亲对女儿的爱也许真正的做了父亲之后...</a><a class="tcolor2" target="_blank" href="http://d.m1905.com/weibo/911520">[详细]</a></p>
-              <p class="author"><a target="_blank" href="http://d.m1905.com/space/4233949">tymonkey</a></p>
-            </div>
-          </li>
-                                        <li>
-                                    <a target="_blank" class="fl" href="http://d.m1905.com/m1905/touser/2219686/1" title=""><img width="72" height="101" src="http://image11.m1905.cn/uploadfile/2013/0906/thumb_1_72_101_20130906104140331.jpg" title="穿越火线" alt="穿越火线"></a>                        <div class="txt-area">
-              <span class="fr tcolor2">100 人评论过</span>
-              <h3><a target="_blank" href="http://d.m1905.com/m1905/touser/2219686/1">穿越火线</a></h3>
-              <p class="mt05 line-h20 gray_f02"><a target="_blank" href="http://d.m1905.com/weibo/910996">开头让观众有进错场的幻觉 由小男孩带着大家在幻想与现实中交错很有...</a><a class="tcolor2" target="_blank" href="http://d.m1905.com/weibo/910996">[详细]</a></p>
-              <p class="author"><a target="_blank" href="http://d.m1905.com/space/3783834">frances_wang</a></p>
-            </div>
-          </li>
-                                        <li>
-                                    <a target="_blank" class="fl" href="http://d.m1905.com/m1905/touser/2207930/1" title=""><img width="72" height="101" src="http://image11.m1905.cn/uploadfile/2013/0816/thumb_1_72_101_20130816034156961.jpg" title="了不起的盖茨比" alt="了不起的盖茨比"></a>                        <div class="txt-area">
-              <span class="fr tcolor2">237 人评论过</span>
-              <h3><a target="_blank" href="http://d.m1905.com/m1905/touser/2207930/1">了不起的盖茨比</a></h3>
-              <p class="mt05 line-h20 gray_f02"><a target="_blank" href="http://d.m1905.com/weibo/910202">《了不起的盖茨比》可谓莱昂纳多另一里程碑的作品。这部影片故事讲得...</a><a class="tcolor2" target="_blank" href="http://d.m1905.com/weibo/910202">[详细]</a></p>
-              <p class="author"><a target="_blank" href="http://d.m1905.com/space/7634427">同行在路</a></p>
-            </div>
-          </li>
-                                                                                                                                                                                                                                                                                                                                                                                </ul>
-      </div>
-    </div>
-    <div id="hotTopic" class="column_l ml20">
-      <div class="title_hd">
-        <h3 class="hd-line">热门叮叮</h3>
-      </div>
-            <div id="hot-dd-box" class="col-l-bd">
-        <ul id="hot-dd">
-                              
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                                                                                                                                                                                                                    <li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/911348" class="tcolor">#穿越火线#</a>整体还好，跟好莱坞比差上几个等级，不过甩国内几条街。巷战那段不错，男主角挺帅，给妈妈打电话那个梗也挺搞笑。就是最后女主角独自完成号称最危险的五公里的时候有点搞，一秒变身女超人啊，飞车，躲坦克，啥都会了，而且步行的时候没有遇到任何敌人。</p>
-            <p class="author"><span class="date">2013-09-15</span><a target="_blank" href="http://d.m1905.com/space/8105351">googoodolls2000</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/911523" class="tcolor">#全民目击#</a>看完以后觉得这是讲好爸爸的故事啊，为了替女儿脱罪，不惜用自己的生命去换女儿的自由，而最后女儿也幡然醒悟，不去偷生，选择重生。</p>
-            <p class="author"><span class="date">2013-09-16</span><a target="_blank" href="http://d.m1905.com/space/829598">萧萧1027</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910198" class="tcolor">#了不起的盖茨比#</a>这部家喻户晓的著作我没看过,但电影让我领略到了这部作品的魅力,莱昂纳多·迪卡普里奥是位天才演员,极富人格魅力,他那传神的一笑在我的脑海里定格很难再忘记,那一笑就如旁白所传达的他把人性最美的一面都在笑中传达了,爱,尊重和慈悲。他演绎的窘促、害羞、不安、滑稽而富有感染力，纯真就这一笔就足以，让观众笑了，也让这个纯真的盖茨比深入到了我们的内心，如此让人着迷。场景宏大，奢华，那异域动感的音乐舞蹈都极具感染力，营造的梦幻般的场景那城堡，伸展到海里的堤岸， 海对面那绿光，会成为我脑海里幻灭不掉的印记，这些镜头多次出现透露出那么孤独，我觉得导演真的很会讲故事。</p>
-            <p class="author"><span class="date">2013-09-13</span><a target="_blank" href="http://d.m1905.com/space/7629976">印花布</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910179" class="tcolor">#了不起的盖茨比#</a>画面感极强，唯美，奢华。演员都是最喜欢的国外影星，表演到位，不浮夸。</p>
-            <p class="author"><span class="date">2013-09-12</span><a target="_blank" href="http://d.m1905.com/space/4145319">hyssmw</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910167" class="tcolor">#4B青年之4楼B座#</a>影片故事很简单，几个有梦想年轻人生活在同一个城市，为着不同梦想奋斗，最后各自找到需要的人生。笑点一般，但道理很明确相信自己的梦想一定能成功，尤其最后求婚的场面，男主角最后露出比基尼装让人发笑。有梦想的年轻人可以去看看。</p>
-            <p class="author"><span class="date">2013-09-12</span><a target="_blank" href="http://d.m1905.com/space/3782464">blue268</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910202" class="tcolor">#了不起的盖茨比#</a>《了不起的盖茨比》可谓莱昂纳多另一里程碑的作品。这部影片故事讲得精彩，感人，悲剧但同时也是最有抨击力量的，让我们看到了伪绅士，伪爱情，伪社会精神。我们有华美高贵的鉴赏，却忽略内心的高贵华美，有爱的衡量砝码，却没发现爱最真最纯、无声无息无法度量，我们讲究地位尊卑，其实尊卑全不在自己的感觉，都在外人的眼里。影片里表象演员的华丽妆饰，华丽场景的大美最终让我们看到了大俗，莱昂纳多演绎的盖茨比深入到了我们的灵魂，他就是那个传奇、至纯至真、有教养懂尊重的盖茨比，各种眼神在不同场景刻画不同内心，非常传神，相信莱昂纳多的影迷对他会赞不绝口。</p>
-            <p class="author"><span class="date">2013-09-13</span><a target="_blank" href="http://d.m1905.com/space/7634427">同行在路</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910102" class="tcolor">#极乐空间#</a>虽然没有处女作那么的惊艳，但对于国内暑期档的几部科幻片，这一部算是最具深刻意义的了，但在两级世界的细节描写上还是趋于表面，而结局与科普雷扮演的变态特工的对决其实就是帮极乐空间维稳就是某程度上和解，条件就是成为合法公民。也就是这位痴迷于反乌托邦主题南非导演尼尔·布洛姆坎普对于好莱坞工业的某种让步，后果就是没有达到《第九区》种族格局的深刻描写和其意义。国内版删掉了个别血腥镜头，但不影响叙事。虽是让步，其导演对未来世界的反思态度和悲观情绪还是非常强烈的，可能在好莱坞再混几年，赢得更多的主导权之后，我们期待的私货，可能就会浮出水面</p>
-            <p class="author"><span class="date">2013-09-12</span><a target="_blank" href="http://d.m1905.com/space/1073577">rockyao1986</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/910181" class="tcolor">#蓝精灵2#</a>这部片子好好玩，里面的故事情节设计的也很搞笑，这是我在电影院里看的最搞笑的电影，没有之一，哈哈，乐的我不行了，整个电影是从开始笑到最后，还有就是传奇时代影城的3D眼镜真的不是特别的好，整个镜片还是模模糊糊的，希望以后传奇时代的3D眼镜能擦一擦，我自己用我的眼镜布擦了一下3D眼镜的镜片，擦后感觉明亮了好多，这部片子充满了爱，充满了整个蓝精灵的所有的希望，片尾的时候我最喜欢的歌曲Ooh la la la 音乐响起的时候，我的整个神经都快蹦出来了，力推这部片子。</p>
-            <p class="author"><span class="date">2013-09-12</span><a target="_blank" href="http://d.m1905.com/space/8798867">利趣那铁铁</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/911336" class="tcolor">#蓝精灵2#</a>《蓝精灵2》延续了第一部的故事架构，几个可爱的蓝精灵在人类朋友的帮助下又一次斗败了可恶的格格巫和阿滋猫。影片将故事发生的地点放到了拥有美丽风光的浪漫之都巴黎，继续着幽默、欢快的风格。同时在这一部剧中，又加进了暖暖的、浓浓的亲情，帕特里和维克多的父子情，蓝爸爸和蓝妹妹的父女情，蓝精灵之间的兄妹情都很感人。总体上来说，这部影片的质量还是不错的，配乐是一个亮点。</p>
-            <p class="author"><span class="date">2013-09-15</span><a target="_blank" href="http://d.m1905.com/space/4605487">kabasijishadu</a></p>
-            <div class="marks-r">”</div>
-          </li><li>
-            <div class="marks-l">“</div>
-            <p class="gray_f02 cont"><a target="_blank" href="http://d.m1905.com/weibo/911519" class="tcolor">#全民目击#</a>两场主要的庭审戏很精彩，咄咄逼人，更像是给对手催眠，然后让他们自己交代罪行。影片中的案件其实很简单，但由于有人想替罪，所以使案件复杂化，而电影从三个角度把故事讲得很清楚，这在现在的电影界也是不容易的。</p>
-            <p class="author"><span class="date">2013-09-16</span><a target="_blank" href="http://d.m1905.com/space/4606876">cindy0929</a></p>
-            <div class="marks-r">”</div>
-          </li></ul>
-      </div>
-    </div>
-    <div class="column_l mt20" id="bbsSelect">
-      <div class="title_hd">
-        <h3 class="hd-line"><a target="_blank" href="http://bbs.m1905.com/">热门活动</a></h3>
-      </div>
-                                                                                                                        <div id="bbs01" class="col-l-bd active fade in">        
-        <div class="mt15"><a target="_blank" href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/81" title=""><div class="loadmask" style="position: absolute; width: 375px; height: 124px; display: none;"></div><img width="375" height="124" alt="[全国]《蓝精灵2》时代金球影城免费观影" title="[全国]《蓝精灵2》时代金球影城免费观影" data-original="http://image11.m1905.cn/uploadfile/2013/0902/thumb_1_375_124_20130902013736670.jpg" src="http://image11.m1905.cn/uploadfile/2013/0902/thumb_1_375_124_20130902013736670.jpg" style="visibility: visible; display: inline;"></a></div>
-        <ul>
-                                                  <li><a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/82" target="_blank"><span>【免费观影】</span>[北京]格格巫来了《蓝精灵2》奇幻之旅首映日观影</a></li>
-                                        <li><a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/105" target="_blank"><span>【免费观影】</span>[长沙]球星来拍片《神奇》银兴乐天影城免费观影</a></li>
-                                        <li><a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/102" target="_blank"><span>【免费观影】</span>[北京]《狄仁杰之神都龙王》传奇时代首映日观影</a></li>
-                                        <li><a href="http://d.m1905.com/apps/gyt?url=http://d.m1905.com/app/gyt/index/detail/104" target="_blank"><span>【免费观影】</span>[长沙]银兴乐天影城《狄仁杰之神都龙王》免费观影</a></li>
-                                                                                                            </ul>
-      </div>
-    </div>
-    <div id="mAlbum" class="column_l mt20 ml20">
-      <div class="title_hd">
-        <span class="fr gray_f01"><a target="_blank" href="http://d.m1905.com/select/album">&gt; 更多专辑</a></span><h3 class="hd-line"><a target="_blank" href="http://d.m1905.com/select/album">精选专辑</a></h3>
-      </div>
-            <div class="col-l-bd">
-                        <div class="main-area mt15">
-          <a target="_blank" class="albumCv fl mr15" href="http://d.m1905.com/space/special/7273532/1093" title=""><img width="81" height="116" src="http://imaged.m1905.cn/uploadfile/2013/0916/10/thumb_0_197_256_52366ce47205f.jpg" alt=""></a>
-          <h3 class="f14"><a target="_blank" href="http://d.m1905.com/space/special/7273532/1093">盘点欧美虐恋电影</a><i> - </i><span class="f12">共包括<b>10</b>部影片</span></h3>
-          <p class="mt08 line-h20">欧美经典虐恋电影<a class="tcolor2" target="_blank" href="http://d.m1905.com/space/special/7273532/1093">[详细]</a></p>
-        </div>
-                                <div class="main-area mt15">
-          <a target="_blank" class="albumCv fl mr15" href="http://d.m1905.com/space/special/8500042/1092" title=""><img width="81" height="116" src="http://imaged.m1905.cn/uploadfile/2013/0913/15/thumb_0_193_251_5232c478072df.jpg" alt=""></a>
-          <h3 class="f14"><a target="_blank" href="http://d.m1905.com/space/special/8500042/1092">物欲横流靠边站，让你纯情100回</a><i> - </i><span class="f12">共包括<b>10</b>部影片</span></h3>
-          <p class="mt08 line-h20">如今提起“真爱”二字，似乎总会被人耻笑。“吊丝无权谈爱！”，“宁在宝马车里哭，不在自行车...<a class="tcolor2" target="_blank" href="http://d.m1905.com/space/special/8500042/1092">[详细]</a></p>
-        </div>
-                                                                                                                                                                                                                                                                                                                      </div>
-    </div>
-  </div>
-  <div class="right_panel">
-    <div id="hotUsers" class="side_box">
-      <div class="title_hd">
-        <!--<span class="fr gray_f01"><a href="http://blog.m1905.com/list.php?do=member" target="_blank">> 找朋友</a></span>-->
-        <h3 class="">人气达人</h3>
-      </div>
-            <ul class="sidebar_list">
-                <li>
-          <a target="_blank" class="fl mt05 mr15" href="http://d.m1905.com/space/8553475"><img width="60" height="60" onerror="this.onerror=null;this.src='http://www.m1905.com/images/nophoto.gif'" src="http://nuc.m1905.com/data/avatar/008/55/34/75_avatar_middle.jpg" alt=""></a>
-          <p><a target="_blank" href="http://d.m1905.com/space/8553475">wanshanzz</a></p>
-          <p class="tcolor">好友：12</p>
-          <a target="_blank" href="http://d.m1905.com/space/8553475" class="btns">加关注</a>
-        </li>
-                <li>
-          <a target="_blank" class="fl mt05 mr15" href="http://d.m1905.com/space/7865841"><img width="60" height="60" onerror="this.onerror=null;this.src='http://www.m1905.com/images/nophoto.gif'" src="http://nuc.m1905.com/data/avatar/007/86/58/41_avatar_middle.jpg" alt=""></a>
-          <p><a target="_blank" href="http://d.m1905.com/space/7865841">我在这里</a></p>
-          <p class="tcolor">好友：18</p>
-          <a target="_blank" href="http://d.m1905.com/space/7865841" class="btns">加关注</a>
-        </li>
-                <li>
-          <a target="_blank" class="fl mt05 mr15" href="http://d.m1905.com/space/8590538"><img width="60" height="60" onerror="this.onerror=null;this.src='http://www.m1905.com/images/nophoto.gif'" src="http://nuc.m1905.com/data/avatar/008/59/05/38_avatar_middle.jpg" alt=""></a>
-          <p><a target="_blank" href="http://d.m1905.com/space/8590538">xiaoyultj</a></p>
-          <p class="tcolor">好友：10</p>
-          <a target="_blank" href="http://d.m1905.com/space/8590538" class="btns">加关注</a>
-        </li>
-                <li>
-          <a target="_blank" class="fl mt05 mr15" href="http://d.m1905.com/space/8087200"><img width="60" height="60" onerror="this.onerror=null;this.src='http://www.m1905.com/images/nophoto.gif'" src="http://nuc.m1905.com/data/avatar/008/08/72/00_avatar_middle.jpg" alt=""></a>
-          <p><a target="_blank" href="http://d.m1905.com/space/8087200">taotao32</a></p>
-          <p class="tcolor">好友：15</p>
-          <a target="_blank" href="http://d.m1905.com/space/8087200" class="btns">加关注</a>
-        </li>
-              </ul>
-    </div>
-    <div id="hotDiary" class="side_box mt10">
-      <div class="title_hd">
-        <!--<span class="fr gray_f01"><a href="http://blog.m1905.com/list.php" target="_blank">&gt; 更多日志</a></span>-->
-        <h3>热门话题</h3>
-      </div>
-            <ul class="sidebar_list replace_03">
-              <li><span class="fr pr05">39</span><a title="被偷走的那五年" target="_blank" href="http://d.m1905.com/huati/199" class="fl">被偷走的那五年</a></li>
-              <li><span class="fr pr05">83</span><a title="皮克斯经典动画" target="_blank" href="http://d.m1905.com/huati/196" class="fl">皮克斯经典动画</a></li>
-              <li><span class="fr pr05">32</span><a title="回到爱开始的地方" target="_blank" href="http://d.m1905.com/huati/197" class="fl">回到爱开始的地方</a></li>
-              <li><span class="fr pr05">24</span><a title="威尼斯电影节" target="_blank" href="http://d.m1905.com/huati/186" class="fl">威尼斯电影节</a></li>
-              <li><span class="fr pr05">34</span><a title="宫崎骏退休" target="_blank" href="http://d.m1905.com/huati/40" class="fl">宫崎骏退休</a></li>
-              <li><span class="fr pr05">30</span><a title="美国禁酒令时代的电影" target="_blank" href="http://d.m1905.com/huati/201" class="fl">美国禁酒令时代的电影</a></li>
-              <li><span class="fr pr05">93</span><a title="电影票房榜" target="_blank" href="http://d.m1905.com/huati/164" class="fl">电影票房榜</a></li>
-              <li><span class="fr pr05">11</span><a title="躺枪的处女座" target="_blank" href="http://d.m1905.com/huati/200" class="fl">躺枪的处女座</a></li>
-              <li><span class="fr pr05">20</span><a title="你上“叮叮小报”了吗" target="_blank" href="http://d.m1905.com/huati/202" class="fl">你上“叮叮小报”了吗</a></li>
-              <li><span class="fr pr05">54</span><a title="娱乐事件之分手也离婚" target="_blank" href="http://d.m1905.com/huati/204" class="fl">娱乐事件之分手也离婚</a></li>
-            </ul>
-    </div>
-  </div>
-</div>
-<!-- 4楼结束 -->
-<!--<div class="box_20ov cl"></div>-->
-<div class="box_10ov cl"></div>
-<div data-size="980" class="layout adArea" style="width: 960px; font-size: 0px; line-height: 0;" id="adjs_361"><iframe width="980" scrolling="no" height="90" frameborder="no" id="m1905ad_90449" name="m1905ad_90449" style="border: medium none; transition: all 500ms ease 0s;" src="/coll/adproxy.html?aid=90449"></iframe></div>
-<div class="box_20ov cl"></div>
-<div id="coop" class="layout">
-  <div class="title_hd">
-    <span class="fr gray_f01"><a target="_blank" href="http://www.m1905.com/link/">&gt; 更多</a></span>
-    <h3 class="hd-line">合作媒体</h3>
-  </div>
-  <div class="bd mt15 mb20">
-  <a title="北青网" onclick="$.get('link/count.php?linkid=219');window.open('http://ent.ynet.com/');" href="javascript:void(0);">北青网</a>
-<a title="搜狗影视" onclick="$.get('link/count.php?linkid=383');window.open('http://kan.sogou.com/');" href="javascript:void(0);">搜狗影视</a>
-<a title="一搜视频" onclick="$.get('link/count.php?linkid=369');window.open('http://dianying.yisou.com/');" href="javascript:void(0);">一搜视频</a>
-<a title="凤凰网" onclick="$.get('link/count.php?linkid=24');window.open('http://ent.ifeng.com/');" href="javascript:void(0);">凤凰网</a>
-<a title="360影视" onclick="$.get('link/count.php?linkid=364');window.open('http://v.360.cn/index.html');" href="javascript:void(0);">360影视</a>
-<a title="中国银幕" onclick="$.get('link/count.php?linkid=18');window.open('http://cs.m1905.com/');" href="javascript:void(0);">中国银幕</a>
-<a title="腾讯娱乐" onclick="$.get('link/count.php?linkid=14');window.open('http://ent.qq.com/');" href="javascript:void(0);">腾讯娱乐</a>
-<a title="中国电视网" onclick="$.get('link/count.php?linkid=411');window.open('http://www.tv.cn/');" href="javascript:void(0);">中国电视网</a>
-<a title="影展网" onclick="$.get('link/count.php?linkid=334');window.open('http://www.yingzhanwang.com/');" href="javascript:void(0);">影展网</a>
-<a title="环球网娱乐" onclick="$.get('link/count.php?linkid=340');window.open('http://ent.huanqiu.com/');" href="javascript:void(0);">环球网娱乐</a>
-<a title="南方网娱乐" onclick="$.get('link/count.php?linkid=109');window.open('http://ent.southcn.com');" href="javascript:void(0);">南方网娱乐</a>
-<a title="东方网娱乐" onclick="$.get('link/count.php?linkid=114');window.open('http://enjoy.eastday.com/');" href="javascript:void(0);">东方网娱乐</a>
-<a title="21CN娱乐" onclick="$.get('link/count.php?linkid=224');window.open('http://et.21cn.com/');" href="javascript:void(0);">21CN娱乐</a>
-<a title="中国网影视" onclick="$.get('link/count.php?linkid=293');window.open('http://ent.china.com.cn/');" href="javascript:void(0);">中国网影视</a>
-  </div>
-</div>
-<div class="clear" id="footer">
-  <div class="layout">
-    <div class="logo_small"><a href="http://www.m1905.com/">电影网</a></div>
-    <p class="mt08 ft"><span class=" pr10">电影频道全媒体平台</span><a onclick="$.get('link/count.php?linkid=276')" target="_blank" title="电影频道" href="http://www.m1905.com/cctv6/">电影频道</a>
- | <a onclick="$.get('link/count.php?linkid=280')" target="_blank" title="家庭影院" href="http://www.chc2004.cn/catid/72">家庭影院</a>
- | <a onclick="$.get('link/count.php?linkid=278')" target="_blank" title="动作电影" href="http://www.chc2004.cn/catid/73">动作电影</a>
- | <a onclick="$.get('link/count.php?linkid=279')" target="_blank" title="高清电影" href="http://www.chc2004.cn/catid/74">高清电影</a>
- | <a onclick="$.get('link/count.php?linkid=282')" target="_blank" title="香港频道" href="http://www.m1905.com/cctv6/program/cmchk/list/">香港频道</a>
- | <a onclick="$.get('link/count.php?linkid=275')" target="_blank" title="北美频道" href="http://www.m1905.com/cctv6/program/chcna/list/">北美频道</a>
- | <a onclick="$.get('link/count.php?linkid=283')" target="_blank" title="中国银幕" href="http://cs.m1905.com/">中国银幕</a>
- | <a onclick="$.get('link/count.php?linkid=277')" target="_blank" title="电影频道DM" href="http://www.m1905.com/other/dm/">电影频道DM</a>
- | <a onclick="$.get('link/count.php?linkid=281')" target="_blank" title="听电影" href="http://www.m1905.com/cctv6/radio/">听电影</a>
-</p>
-    <p class="ft"><span class=" pr10">品牌战略合作</span><a onclick="$.get('link/count.php?linkid=209');window.open('http://www.bojie.com.cn/');" target="_blank" title="博杰广告" href="javascript:void(0);">博杰广告</a>
- | <a onclick="$.get('link/count.php?linkid=193');window.open('http://www.b-cinema.cn/');" target="_blank" title="百丽宫影城" href="javascript:void(0);">百丽宫影城</a>
- | <a onclick="$.get('link/count.php?linkid=190');window.open('http://www.hbcinemas.com.cn/Beijing/Default.shtml');" target="_blank" title="华谊兄弟影院" href="javascript:void(0);">华谊兄弟影院</a>
- | <a onclick="$.get('link/count.php?linkid=345');window.open('http://www.hg-ent.com/studios/index.php?m_c_id=31');" target="_blank" title="天津横店影视" href="javascript:void(0);">天津横店影视</a>
- | <a onclick="$.get('link/count.php?linkid=266');window.open('http://www.rkanr.com/');" target="_blank" title="人看人视频网" href="javascript:void(0);">人看人视频网</a>
-</p>
-    <p class="ft"><span class=" pr10">CopyRight &copy; 2012</span><a target="_blank" href="http://www.m1905.com/about/aboutus/">关于我们</a> | <a target="_blank" href="http://www.m1905.com/sitemap.html">网站地图</a> | <a target="_blank" href="http://www.m1905.com/jobs/">诚聘英才</a> | <a target="_blank" href="http://www.m1905.com/about/copyright/">版权声明</a> | <a target="_blank" href="http://www.m1905.com/about/contactus/">联系我们</a> | <a target="_blank" href="http://www.m1905.com/link/">友情链接</a> | <a target="_blank" href="http://www.m1905.com/cctv6/advertise/">CCTV6广告招商</a></p>
-    <div class="licence-left"><p>国家广播电影电视总局电影卫星频道节目制作中心版权所有 <a onclick="window.open('http://www.m1905.com/about/icp/');" href="javascript:void(0);" class="gray_f02">京ICP证100935</a></p>
-    <p><a onclick="window.open('http://www.m1905.com/about/licence/');" href="javascript:void(0);" class="gray_f02">网络视听许可证0107199号</a>      <a onclick="window.open('http://www.m1905.com/about/culture/');" href="javascript:void(0);" class="gray_f02">京网文[2010]0564-067号</a></p>
-    <p><a onclick="window.open('http://www.m1905.com/about/beian/');" href="javascript:void(0);" class="gray_f02">企业法人营业执照</a>     <a onclick="window.open('http://www.m1905.com/about/licence_internet/');" href="javascript:void(0);" class="gray_f02">京工海网安备1101083548</a></p></div>
-    <div class="licence-right">
-    <p><a onclick="window.open('http://www.m1905.com/about/cbwjyxkz/');" href="javascript:void(0);" class="gray_f02">出版物经营许可证</a> <a onclick="window.open('http://www.m1905.com/about/gbdsjmzz/');" href="javascript:void(0);" class="gray_f02">广播电视节目制作经营许可证</a> <a onclick="window.open('http://www.m1905.com/about/dyfxjyxkz/');" href="javascript:void(0);" class="gray_f02">电影发行经营许可证</a></p>
-    <p><a onclick="window.open('http://www.m1905.com/about/jyxyc/');" href="javascript:void(0);" class="gray_f02">经营性演出许可证</a> <a onclick="window.open('http://www.m1905.com/about/szdy/');" href="javascript:void(0);" class="gray_f02">摄制电影许可证</a></p>
-    <p><a onclick="window.open('http://www.m1905.com/about/zzdxyw/');" href="javascript:void(0);" class="gray_f02">增值电信业务经营许可证</a></p>
-    </div>
-    <a onclick="window.open('http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007111200001');" class="footer-ext" href="javascript:void(0);"><img src="http://static.m1905.cn/index2012/images/iclogo.png"></a>
-  </div>
-</div>
-<div id="mini_nav" class="horizontal">
-  <a hidefocus="true" href="javascript:void(0)" class="go"><span class="arr-u">▲</span><span class="arr-r">►</span></a>
-  <div class="mini-nav">
-    <div class="mini-nav-search">
-      <form target="_blank" action="http://www.m1905.com/search/" method="get">
-        <input type="text" name="q" autocomplete="off" value="">
-        <button hidefocus="true" type="submit"></button>
-      </form>
-    </div>
-    <div class="mini-nav-li">
-      <a target="_blank" href="http://www.m1905.com/vod/">高清</a>
-      <a target="_blank" href="http://vip.m1905.com/">付费</a>
-      <a target="_blank" href="http://www.m1905.com/film/">资讯</a>
-      <a target="_blank" href="http://www.m1905.com/mdb/film/">影库</a>
-      <a target="_blank" href="http://www.m1905.com/star/">明星</a>
-      <a target="_blank" href="http://www.m1905.com/yx/">影讯</a>
-      <a target="_blank" href="http://www.m1905.com/video/">视频</a>
-      <a target="_blank" href="http://www.m1905.com/newgallery/">图库</a>     
-      <a target="_blank" href="http://www.m1905.com/interactive/activity/">互动</a>     
-      <a target="_blank" href="http://bbs.m1905.com/">论坛</a>
-      <a target="_blank" href="http://blog.m1905.com/list.php">博客</a>     
-      <a target="_blank" href="http://game.m1905.com/">游戏</a>     
-      <a target="_blank" href="http://shanpin.m1905.com/">善品</a>
-      <a target="_blank" href="http://www.m1905.com/cctv6/">CCTV6</a>  
-      <a target="_blank" href="http://www.m1905.com/sitemap.html">更多</a>
-    </div>
-  </div>
-  <ul class="s_nav mini-floor">
-    <li class="fl-1 online"><a hidefocus="true" href="#floor_1">看新闻</a></li>
-    <li class="fl-2 online"><a hidefocus="true" href="#floor_2">看电影</a></li>
-    <li class="fl-3 online"><a hidefocus="true" href="#floor_3">查资料</a></li>
-    <li class="fl-4 online"><a hidefocus="true" href="#floor_4">聊电影</a></li>
-  </ul>
-  <a onclick="window.open('http://www.m1905.com/error_report/error_report.php?pid=125&amp;cid=126');return false;" href="javascript:void(0);" class="feedback">反馈</a>
-</div>
-<!--<div style="display:none;">
-<img src="http://dnstest.moviechannel.com.cn/1.jpg">
-<img src="http://dnstest1.moviechannel.com.cn/1.jpg">
-</div>-->
-<script src="http://js.static.m1905.cn/core/jquery-edge.min.js"></script>
-<script src="http://js.static.m1905.cn/core/seed.js"></script>
-<script src="http://js.static.m1905.cn/index2012/store+json2.min.js"></script>
-<script src="http://js.static.m1905.cn/index2012/playlist.js"></script>
-<script src="http://js.static.m1905.cn/core/application.min.js"></script>
-<script src="http://js.static.m1905.cn/core/ui.min.js?t=20130705"></script>
-<script src="http://js.static.m1905.cn/index2012/index_patch.js?201309161530"></script>
-<script>
-M.config({baseUrl : 'http://js.static.m1905.cn/'}); 
-	M.use( 'utils/adloader', function (adloader) {
-	//广告初始化
-		var $adQueue = $('.adArea');
-    	$adQueue.each(function (i, el) {
-        	var adthis = adloader(this);
-        	adthis &amp;&amp; adthis.addIframeAd();
-    	});
-	});
-</script>
-<!-- 85913：页面浮层 -->
-<script type="text/javascript">//&lt;![CDATA[
-ac_as_id = 85913;
-ac_format = 0;
-ac_mode = 1;
-ac_group_id = 1;
-ac_server_base_url = "tga.acs86.com/";
-//]]&gt;
-</script>
-<script id="ac_js86_85913"></script><script src="http://afp.m1905.com/asp_js/k.js" type="text/javascript"></script><script>
-var topheight = "252px";
-var sidezindex = "200";
-var showzindex = "200";
-</script>
-<!--[if lte IE 6]>
-<script type="text/javascript" src="http://js.static.m1905.com/afp/m1905_aspt4_ie6.js"></script>
-<![endif]-->
-<script src="http://js.static.m1905.com/afp/m1905_aspt4_buffer.js" type="text/javascript"></script><div id="focus-img-box"><div style="width: 60px; height: 353px; position: absolute; z-index: 200; left: 123.5px; top: 252px;" id="focus-mini-items"><dd style="width:60px;float:left;margin-bottom:2px;" id="mini-items1"><a target="_blank" href="http://t4.m1905.com/"><img src="http://static.m1905.com/images/20130418/10-1.jpg"></a></dd><dd style="width:60px;float:left;margin-bottom:2px;" id="mini-items2"><a target="_blank" href="http://www.m1905.com/cctv6/gzdc/"><img src="http://static.m1905.com/images/20130418/13-1.jpg"></a></dd><dd style="width:60px;float:left;margin-bottom:2px;" id="mini-items3"><a target="_blank" href="http://vip.m1905.com/privilege/"><img src="http://static.m1905.com/images/20130418/12-1.jpg"></a></dd></div><div style="width: 980px; position: absolute; display: none; z-index: 200; left: 183.5px; top: 252px;" id="focus-bigpic-wrap"><div style="position:absolute;" id="big-items1"><a target="_blank" href="http://t4.m1905.com/"><img width="980" height="353" src="http://static.m1905.com/images/20130418/10-2.jpg"></a><span style="position:absolute;width:43px;height:43px;right:0px;cursor:pointer;" class="btn-cancel"><img src="http://static.m1905.com/images/20130418/btn_cancel.png"></span> </div><div style="position:absolute;" id="big-items2"><a target="_blank" href="http://www.m1905.com/cctv6/gzdc/"><img width="980" height="353" src="http://static.m1905.com/images/20130418/13-2.jpg"></a><span style="position:absolute;width:43px;height:43px;right:0px;cursor:pointer;" class="btn-cancel"><img src="http://static.m1905.com/images/20130418/btn_cancel.png"></span> </div><div style="position:absolute;" id="big-items3"><a target="_blank" href="http://vip.m1905.com/privilege/"><img width="980" height="353" src="http://static.m1905.com/images/20130418/12-2.jpg"></a><span style="position:absolute;width:43px;height:43px;right:0px;cursor:pointer;" class="btn-cancel"><img src="http://static.m1905.com/images/20130418/btn_cancel.png"></span>   </div></div></div>
+</div></div>
+<div id="navis">
+	<ul>
+		<li class="active"><a title="首页" href="http://v.114la.com/">首页<i></i></a></li>
+		<li><a title="电影" href="http://v.114la.com/movie/">电影<i></i></a></li>
+		<li><a title="电视剧" href="http://v.114la.com/tv/">电视剧<i></i></a></li>
+		<li><a title="动漫" href="http://v.114la.com/anime/">动漫<i></i></a></li>
+		<li><a title="综艺" href="http://v.114la.com/zongyi/">综艺<i></i></a></li>
 
-<script type="text/javascript">//&lt;![CDATA[
-ac_as_id = 90639;
-ac_format = 0;
-ac_mode = 1;
-ac_group_id = 1;
-ac_server_base_url = "tga.acs86.com/";
-//]]&gt;
-</script>
-<span style="overflow: visible; position: absolute; display: block; width: 100px; height: 100px; background: none repeat scroll 0% 0% transparent; border: 0px none; text-align: left; z-index: 2147483647; left: 1249px; top: 0px;"><span style="overflow: auto; position: absolute; display: block; width: 100px; height: 100px; background: none repeat scroll 0% 0% transparent; border: 0px none; text-align: left; top: 0px; left: 0px;"><span style="overflow: hidden; position: absolute; display: block; width: 100px; height: 100px; background: none repeat scroll 0% 0% transparent; border: 0px none; text-align: left;"><embed width="100" height="100" id="ac_cs_90639_1" name="ac_cs_90639_1" src="http://afp.m1905.com/FrameWork/system/afp_0614.swf" type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent" menu="false" flashvars="cfg=%3Ccf%20tn%3D%22ac_info_ware.tag_90639%22%20mv%3D%22http%3A%2F%2Fafp.m1905.com%2Fmediafiles%2Fcreative%2Fu6903%2F9827%2Feeenhi4k.ulf_201399.swf%22%20si%3D%22http%3A%2F%2Fafp.m1905.com%2Fskin%2Fskin_noborder.swf%22%20%20vi%3D%221%22%20sp%3D%220%22%20cu%3D%22%22%20hm%3D%220%22%20he%3D%220%22%20sm%3D%220%22%20da%3D%221%22%20iv%3D%22-1%22%20lt%3D%221%22%20cb%3D%220%2C0%2C0%2C0%2C0%22%20cx%3D%221%22%20tu%3D%22%22%20ve%3D%22%22%20pt%3D%220%22%20%2F%3E"></span></span></span><script id="ac_js86_90639"></script><script src="http://afp.m1905.com/asp_js/k.js" type="text/javascript"></script>
-<script src="http://js.static.m1905.cn/pingd.js?v=1" type="text/javascript"></script><input type="button" style="display: none;" id="added_object_for_bi"><input type="hidden" id="uvtext" value="1379345609669">
+        <li>
+            <a class="co" title="娱乐" href="http://v.114la.com/yule/">娱乐<em>new</em><i></i></a>
+        </li>
 
-<!--google统计--> 
+        <li><a title="排行榜" href="http://v.114la.com/top/">排行榜<i></i></a></li>
+		<li><a title="影视网址" href="http://v.114la.com/website/">影视网址<i></i></a></li>
+	</ul>
+</div><div id="dexCol" class="wrapper">
+		<dl class="siteLink">
+		<dt>影视名站<i></i></dt>
+		<dd>
+		    <a rel="nofollow" target="_blnak" href="http://cps.youku.com/redirect.html?id=00000240">优酷网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.iqiyi.com/">爱奇艺</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.letv.com/">乐视网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://tv.sohu.com/?aureole=1171">搜狐视频</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.kankan.com/">迅雷看看</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.pptv.com/">PPTV</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.tudou.com/">土豆网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://v.qq.com/index.html">腾讯视频</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.m1905.com/vod/">电影网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.pps.tv/">PPS网络电视</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.69k.com/?merchant_no=114la">69k影院</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.56.com/">56网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://app.114la.com/zhibo/">电视直播</a>
+			<a rel="nofollow" class="more" target="_blnak" href="http://v.114la.com/website/">更多&gt;&gt;</a>
+		</dd>
+	</dl>	<div class="comwrap topare">
+		<div class="comTitle">
+			<h6>卫视热播</h6>
+		</div>
+		<ul class="comcaseRow clearfix">
+															<li>
+				<a title="两周Two Weeks" href="http://v.114la.com/tv/52409.html">
+					<img alt="两周Two Weeks" src="http://v.114la.com/img/focus_img/201309/137990626789666.jpg">
+					<cite>两周Two Weeks</cite>
+					<em></em>
+				</a>
+				<p>更新至第15集</p>
+			</li>
+						<li>
+				<a title="主君的太阳" href="http://v.114la.com/tv/34625.html">
+					<img alt="主君的太阳" src="http://v.114la.com/img/focus_img/201309/138017450977608.jpg">
+					<cite>主君的太阳</cite>
+					<em></em>
+				</a>
+				<p>更新至第14集</p>
+			</li>
+						<li>
+				<a title="万万没想到" href="http://v.114la.com/tv/50857.html">
+					<img alt="万万没想到" src="http://v.114la.com/img/focus_img/201309/138001997611752.jpg">
+					<cite>万万没想到</cite>
+					<em></em>
+				</a>
+				<p>更新至第8集</p>
+			</li>
+						<li>
+				<a title="终极一班3" href="http://v.114la.com/tv/18509.html">
+					<img alt="终极一班3" src="http://v.114la.com/img/focus_img/201309/138017459558957.jpg">
+					<cite>终极一班3</cite>
+					<em></em>
+				</a>
+				<p>更新至第24集</p>
+			</li>
+						<li>
+				<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
+					<img alt="破产姐妹第3季" src="http://v.114la.com/img/focus_img/201309/138017443549845.jpg">
+					<cite>破产姐妹第3季</cite>
+					<em></em>
+				</a>
+				<p>更新至第1集</p>
+			</li>
+								</ul>
+	</div>
+	<div class="comwrap clearfix">
+	    							   		<div class="leftSide fl ingrep">
+			<dl class="inTitle">
+				<dt>推荐电视剧</dt>
+				<dd class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">最热</a></li>
+						<li><a href="javascript:;">最新</a></li>
+												<li><a href="javascript:;">内地</a></li>
+												<li><a href="javascript:;">港台</a></li>
+												<li><a href="javascript:;">韩剧</a></li>
+												<li><a href="javascript:;">美剧</a></li>
+												<li><a href="javascript:;">泰剧</a></li>
+											</ul>
+					<a class="more" href="http://v.114la.com/tv/">更多&gt;&gt;</a>
+				</dd>
+			</dl>
+						<div style="display:block;" class="ingrep-Cont">
+				<div class="clearfix rowleft">
+										<div class="bgsummar fl">
+						<a title="小爸爸" href="http://v.114la.com/tv/38555.html">
+							<img alt="小爸爸" data-original="http://v.114la.com/img/focus_img/201309/138018117580076.jpg" src="http://v.114la.com/img/focus_img/201309/138018117580076.jpg" style="display: inline;">
+							<cite>
+								<strong>小爸爸</strong>
+								33集全							</cite>
+						</a>
+						<p>&#12288;一个生长在美国的男孩，偶遇一个女孩，不自觉恋爱上了，一不小心生下了一个小男孩，之后小男孩就留在了美国，而这个男孩则回到了国内，等那孩子长大了之后，美国的亲戚携带着小孩回到国...<em></em></p>
+					</div>
+										<ul class="sumgroup fr clearfix">
+												<li class="">
+							<a title="半泽直树" href="http://v.114la.com/tv/52585.html">
+								<img alt="半泽直树" data-original="http://v.114la.com/img/focus_img/201309/138009984951598.jpg" src="http://v.114la.com/img/focus_img/201309/138009984951598.jpg" style="display: inline;">
+								<cite>半泽直树</cite>
+								<em></em>
+							</a>
+							<p>更新至第10集</p>
+						</li>
+												<li class="">
+							<a title="抹布女也有春天" href="http://v.114la.com/tv/38561.html">
+								<img alt="抹布女也有春天" data-original="http://v.114la.com/img/focus_img/201309/138017571139316.jpg" src="http://v.114la.com/img/focus_img/201309/138017571139316.jpg" style="display: inline;">
+								<cite>抹布女也有春天</cite>
+								<em></em>
+							</a>
+							<p>41集全</p>
+						</li>
+												<li class="">
+							<a title="大秦帝国之纵横" href="http://v.114la.com/tv/39423.html">
+								<img alt="大秦帝国之纵横" data-original="http://v.114la.com/img/focus_img/201309/138017514039649.jpg" src="http://v.114la.com/img/focus_img/201309/138017514039649.jpg" style="display: inline;">
+								<cite>大秦帝国之纵横</cite>
+								<em></em>
+							</a>
+							<p>更新至第26集</p>
+						</li>
+												<li class="">
+							<a title="歧路兄弟" href="http://v.114la.com/tv/52128.html">
+								<img alt="歧路兄弟" data-original="http://v.114la.com/img/focus_img/201309/138018178092900.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>歧路兄弟</cite>
+								<em></em>
+							</a>
+							<p>更新至第24集</p>
+						</li>
+												<li class="">
+							<a title="唐宫燕" href="http://v.114la.com/tv/34784.html">
+								<img alt="唐宫燕" data-original="http://v.114la.com/img/focus_img/201309/138017523427304.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>唐宫燕</cite>
+								<em></em>
+							</a>
+							<p>更新至第33集</p>
+						</li>
+												<li class="">
+							<a title="她的神话" href="http://v.114la.com/tv/32482.html">
+								<img alt="她的神话" data-original="http://v.114la.com/img/focus_img/201309/138018094196390.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>她的神话</cite>
+								<em></em>
+							</a>
+							<p>更新至第16集</p>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="秘密" href="http://v.114la.com/tv/53629.html">
+							<img alt="秘密" data-original="http://pic4.qiyipic.com/thumb/20130903/a616346.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>秘密</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="巨轮" href="http://v.114la.com/tv/52794.html">
+							<img alt="巨轮" data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>巨轮</cite>
+							<em></em>
+						</a>
+						<p>更新至第3集</p>
+					</li>
+										<li>
+						<a title="神盾局特工第1季" href="http://v.114la.com/tv/52839.html">
+							<img alt="神盾局特工第1季" data-original="http://pic4.qiyipic.com/thumb/20130924/a635629.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>神盾局特工第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
+							<img alt="破产姐妹第3季" data-original="http://pic3.qiyipic.com/thumb/20130923/a634957.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>破产姐妹第3季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="黑名单第1季" href="http://v.114la.com/tv/52614.html">
+							<img alt="黑名单第1季" data-original="http://pic6.qiyipic.com/thumb/20130923/a635015.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>黑名单第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="人质第1季" href="http://v.114la.com/tv/52612.html">
+							<img alt="人质第1季" data-original="http://pic5.qiyipic.com/thumb/20130921/a632825.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>人质第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="老妈第1季" href="http://v.114la.com/tv/52722.html">
+							<img alt="老妈第1季" data-original="http://pic3.qiyipic.com/thumb/20130923/a634935.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>老妈第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="蛇蝎女佣第1季" href="http://v.114la.com/tv/52594.html">
+							<img alt="蛇蝎女佣第1季" data-original="http://photocdn.sohu.com/20130923/vrsab_ver5905313.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>蛇蝎女佣第1季</cite>
+							<em></em>
+						</a>
+						<p>13集全</p>
+					</li>
+					
+				</ul>
+			</div>
+									<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="璀璨人生" href="http://v.114la.com/tv/38028.html">
+							<img data-original="http://pic4.qiyipic.com/thumb/20130826/a605082.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>璀璨人生</cite>
+							<em></em>
+						</a>
+						<p>73集全</p>
+					</li>
+										<li>
+						<a title="辣妈正传" href="http://v.114la.com/tv/51847.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137929600155843.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>辣妈正传</cite>
+							<em></em>
+						</a>
+						<p>更新至第33集</p>
+					</li>
+										<li>
+						<a title="武松（2013）" href="http://v.114la.com/tv/33908.html">
+							<img data-original="http://photocdn.sohu.com/20130814/vrsab_ver5703612.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>武松（2013）</cite>
+							<em></em>
+						</a>
+						<p>50集全</p>
+					</li>
+										<li>
+						<a title="万万没想到" href="http://v.114la.com/tv/50857.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137895698051955.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>万万没想到</cite>
+							<em></em>
+						</a>
+						<p>更新至第8集</p>
+					</li>
+										<li>
+						<a title="兰陵王" href="http://v.114la.com/tv/33916.html">
+							<img data-original="http://v.114la.com/img/up_img/201308/137653607963544.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>兰陵王</cite>
+							<em></em>
+						</a>
+						<p>46集全</p>
+					</li>
+										<li>
+						<a title="穿越火线" href="http://v.114la.com/tv/34101.html">
+							<img data-original="http://v.114la.com/img/up_img/201308/137688261856879.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>穿越火线</cite>
+							<em></em>
+						</a>
+						<p>38集全</p>
+					</li>
+										<li>
+						<a title="龙门镖局" href="http://v.114la.com/tv/25378.html">
+							<img data-original="http://pic5.qiyipic.com/thumb/20130724/a555616.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>龙门镖局</cite>
+							<em></em>
+						</a>
+						<p>40集全</p>
+					</li>
+										<li>
+						<a title="叶问（电视剧）" href="http://v.114la.com/tv/27865.html">
+							<img data-original="http://photocdn.sohu.com/20130801/vrsab_ver5078567.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>叶问（电视剧）</cite>
+							<em></em>
+						</a>
+						<p>更新至第47集</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="神枪狙击" href="http://v.114la.com/tv/40758.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137886450264682.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>神枪狙击</cite>
+							<em></em>
+						</a>
+						<p>更新至第13集</p>
+					</li>
+										<li>
+						<a title="情逆三世缘" href="http://v.114la.com/tv/33917.html">
+							<img data-original="http://v.114la.com/img/up_img/201308/137654953539538.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>情逆三世缘</cite>
+							<em></em>
+						</a>
+						<p>31集全</p>
+					</li>
+										<li>
+						<a title="巨轮" href="http://v.114la.com/tv/52794.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>巨轮</cite>
+							<em></em>
+						</a>
+						<p>更新至第3集</p>
+					</li>
+										<li>
+						<a title=" 冲上云霄Ⅱ" href="http://v.114la.com/tv/18491.html">
+							<img data-original="http://v.114la.com/img/up_img/201307/137413992397672.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite> 冲上云霄Ⅱ</cite>
+							<em></em>
+						</a>
+						<p>43集全</p>
+					</li>
+										<li>
+						<a title="雷霆扫毒" href="http://v.114la.com/tv/16674.html">
+							<img data-original="http://v.114la.com/img/2013/08/01/xl/tvs/5/Te67t01676N.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>雷霆扫毒</cite>
+							<em></em>
+						</a>
+						<p>30集全</p>
+					</li>
+										<li>
+						<a title="千金百分百" href="http://v.114la.com/tv/8789.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/2/57R7823Kv7y.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>千金百分百</cite>
+							<em></em>
+						</a>
+						<p>40集全</p>
+					</li>
+										<li>
+						<a title="胜者为王" href="http://v.114la.com/tv/8018.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/pp/tvs/7/ZO121d3L1p5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>胜者为王</cite>
+							<em></em>
+						</a>
+						<p>22集全</p>
+					</li>
+										<li>
+						<a title="中华英雄" href="http://v.114la.com/tv/39001.html">
+							<img data-original="http://v.114la.com/img/2013/09/26/56/tvs/10/5449I0em15S.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>中华英雄</cite>
+							<em></em>
+						</a>
+						<p>更新至第43集</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="城市猎人" href="http://v.114la.com/tv/1756.html">
+							<img data-original="http://pic5.qiyipic.com/thumb/20120512/a114912u1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>城市猎人</cite>
+							<em></em>
+						</a>
+						<p>20集全</p>
+					</li>
+										<li>
+						<a title="花样男子" href="http://v.114la.com/tv/1554.html">
+							<img data-original="http://photocdn.sohu.com/20110531/vrsab_ver1003244.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>花样男子</cite>
+							<em></em>
+						</a>
+						<p>25集全</p>
+					</li>
+										<li>
+						<a title="我的女孩" href="http://v.114la.com/tv/1886.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/tB947XW238i.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>我的女孩</cite>
+							<em></em>
+						</a>
+						<p>20集全</p>
+					</li>
+										<li>
+						<a title="恋人" href="http://v.114la.com/tv/2060.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/7/6063G23Zh6V.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>恋人</cite>
+							<em></em>
+						</a>
+						<p>20集全</p>
+					</li>
+										<li>
+						<a title="魔女幼熙" href="http://v.114la.com/tv/1988.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/2yZG1878KZ8.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>魔女幼熙</cite>
+							<em></em>
+						</a>
+						<p>16集全</p>
+					</li>
+										<li>
+						<a title="灿烂的遗产" href="http://v.114la.com/tv/1962.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/1/1WrS75h835h.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>灿烂的遗产</cite>
+							<em></em>
+						</a>
+						<p>28集全</p>
+					</li>
+										<li>
+						<a title="钢琴" href="http://v.114la.com/tv/2457.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/I5y59T872A7.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>钢琴</cite>
+							<em></em>
+						</a>
+						<p>16集全</p>
+					</li>
+										<li>
+						<a title="想你" href="http://v.114la.com/tv/1539.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/3/Ewx17Q55u87.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>想你</cite>
+							<em></em>
+						</a>
+						<p>21集全</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="神盾局特工第1季" href="http://v.114la.com/tv/52839.html">
+							<img data-original="http://pic4.qiyipic.com/thumb/20130924/a635629.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>神盾局特工第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
+							<img data-original="http://pic3.qiyipic.com/thumb/20130923/a634957.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>破产姐妹第3季</cite>
+							<em></em>
+						</a>
+						<p>更新至第1集</p>
+					</li>
+										<li>
+						<a title="断头谷第1季" href="http://v.114la.com/tv/51953.html">
+							<img data-original="http://pic9.qiyipic.com/thumb/20130916/a627296.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>断头谷第1季</cite>
+							<em></em>
+						</a>
+						<p>更新至第2集</p>
+					</li>
+										<li>
+						<a title="破产姐妹第2季" href="http://v.114la.com/tv/1557.html">
+							<img data-original="http://photocdn.sohu.com/20120824/vrsab_ver5030875.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>破产姐妹第2季</cite>
+							<em></em>
+						</a>
+						<p>24集全</p>
+					</li>
+										<li>
+						<a title="尼基塔第3季" href="http://v.114la.com/tv/1544.html">
+							<img data-original="http://photocdn.sohu.com/20121020/vrsab_ver5035311.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>尼基塔第3季</cite>
+							<em></em>
+						</a>
+						<p>更新至第21集</p>
+					</li>
+										<li>
+						<a title="绝命毒师第5季" href="http://v.114la.com/tv/1925.html">
+							<img data-original="http://pic6.qiyipic.com/thumb/20130801/a568553.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>绝命毒师第5季</cite>
+							<em></em>
+						</a>
+						<p>更新至第15集</p>
+					</li>
+										<li>
+						<a title="尼基塔（新版）第1季" href="http://v.114la.com/tv/1535.html">
+							<img data-original="http://photocdn.sohu.com/20101200/vrsab5343.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>尼基塔（新版）第1季</cite>
+							<em></em>
+						</a>
+						<p>22集全</p>
+					</li>
+										<li>
+						<a title="生活大爆炸第5季" href="http://v.114la.com/tv/1543.html">
+							<img data-original="http://photocdn.sohu.com/20110916/vrsab_ver1005271.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>生活大爆炸第5季</cite>
+							<em></em>
+						</a>
+						<p>24集全</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="爱在旅途" href="http://v.114la.com/tv/1499.html">
+							<img data-original="http://photocdn.sohu.com/20110128/vrsab_ver1001244.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>爱在旅途</cite>
+							<em></em>
+						</a>
+						<p>30集全</p>
+					</li>
+										<li>
+						<a title="玻钻之争" href="http://v.114la.com/tv/1587.html">
+							<img data-original="http://v.114la.com/img/2013/07/20/qy/tvs/8/WTO993lF692.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>玻钻之争</cite>
+							<em></em>
+						</a>
+						<p>29集全</p>
+					</li>
+										<li>
+						<a title="妒海" href="http://v.114la.com/tv/1669.html">
+							<img data-original="http://v.114la.com/img/2013/07/20/qy/tvs/8/7l9uS24I9E5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>妒海</cite>
+							<em></em>
+						</a>
+						<p>31集全</p>
+					</li>
+										<li>
+						<a title="旋转的爱" href="http://v.114la.com/tv/1573.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/3/Y5819C05BY1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>旋转的爱</cite>
+							<em></em>
+						</a>
+						<p>34集全</p>
+					</li>
+										<li>
+						<a title="路边新娘" href="http://v.114la.com/tv/1521.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/5G9WL23717n.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>路边新娘</cite>
+							<em></em>
+						</a>
+						<p>25集全</p>
+					</li>
+										<li>
+						<a title="铁石心肠" href="http://v.114la.com/tv/1613.html">
+							<img data-original="http://i0.letvimg.com/vrs/201301/24/aed0e32a667f4e4792bfc2706ccaca79.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>铁石心肠</cite>
+							<em></em>
+						</a>
+						<p>28集全</p>
+					</li>
+										<li>
+						<a title="无忧花开" href="http://v.114la.com/tv/1920.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/51v76l6r2I3.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>无忧花开</cite>
+							<em></em>
+						</a>
+						<p>31集全</p>
+					</li>
+										<li>
+						<a title="爱的烹饪法" href="http://v.114la.com/tv/1882.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/x4641M1rY4C.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>爱的烹饪法</cite>
+							<em></em>
+						</a>
+						<p>32集全</p>
+					</li>
+									</ul>
+			</div>
+					</div>
+	   		<div class="sideCont fr ingrep">
+			<div class="inTitle">
+				<h6><a target="_blank" title="电视剧排行榜" href="http://v.114la.com/top/tv.html">电视剧排行榜</a></h6>
+				<div class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">全部</a></li>
+						<li><a href="javascript:;">韩剧</a></li>
+						<li><a href="javascript:;">美剧</a></li>
+					</ul>
+					<a target="_blank" class="more" href="http://v.114la.com/top/tv.html">更多&gt;&gt;</a>
+				</div>
+			</div>
+			<div style="display:block;" class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/51938.html">
+							<img alt="辣妈正传" src="http://pic9.qiyipic.com/thumb/20130909/a623083u1.jpg">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>辣妈正传</h4>
+							<p>类型：电视剧,言情剧,家...</p>
+							<p>主演：孙俪,张译,明道,邬君梅,张晨光,奚美娟,秦沛,朱茵</p>
+							<a class="p" href="http://v.114la.com/tv/51938.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/tv/51938.html">辣妈正传</a><span>522045</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/38028.html">
+							<img alt="璀璨人生" data-original="http://i0.letvimg.com/vrs/201212/05/d7438b035e324bd2aba604354b68144d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>璀璨人生</h4>
+							<p>类型：电视剧,言情剧,偶...</p>
+							<p>主演：李沁,何润东,阚清子,张勋杰,杨雨婷,杨明娜,尹昭德,张衣,周晓涵,缪俊杰,刘文治,王侃伟,张子枫</p>
+							<a class="p" href="http://v.114la.com/tv/38028.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/tv/38028.html">璀璨人生</a><span>322852</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/39154.html">
+							<img alt="小爸爸" data-original="http://pic9.qiyipic.com/thumb/20130829/a610147.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>小爸爸</h4>
+							<p>类型：电视剧,言情剧,偶...</p>
+							<p>主演：文章,马伊琍,朱佳煜,王耀庆,刘欢,徐翠翠,张子萱</p>
+							<a class="p" href="http://v.114la.com/tv/39154.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/tv/39154.html">小爸爸</a><span>274416</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/50857.html">
+							<img alt="万万没想到" data-original="http://v.114la.com/img/up_img/201309/137895698051955.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>万万没想到</h4>
+							<p>类型：武侠搞笑时装...</p>
+							<p>主演：白客 刘循子墨 小爱</p>
+							<a class="p" href="http://v.114la.com/tv/50857.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/tv/50857.html">万万没想到</a><span>108767</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52031.html">
+							<img alt="向着胜利前进" data-original="http://pic9.qiyipic.com/thumb/20130917/a628407.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>向着胜利前进</h4>
+							<p>类型：电视剧,偶像剧,悬...</p>
+							<p>主演：吴奇隆,甘婷婷,王新,赵会南,谢孟伟,杨婷婷,于荣光,陈迪</p>
+							<a class="p" href="http://v.114la.com/tv/52031.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/tv/52031.html">向着胜利前进</a><span>95458</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/39423.html">
+							<img alt="大秦帝国之纵横" data-original="http://p2.img.cctvpic.com/fmspic/vms/image/2013/08/22/VSET_1377153950978885.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>大秦帝国之纵横</h4>
+							<p>类型：大秦帝国之纵横...</p>
+							<p>主演：宁静,王学兵,富大龙,喻恩泰</p>
+							<a class="p" href="http://v.114la.com/tv/39423.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/tv/39423.html">大秦帝国之纵横</a><span>92671</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/34625.html">
+							<img alt="主君的太阳" data-original="http://v.114la.com/img/up_img/201308/137724328366910.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>主君的太阳</h4>
+							<p>类型：都市言情时装...</p>
+							<p>主演：苏志燮孔孝珍徐仁国</p>
+							<a class="p" href="http://v.114la.com/tv/34625.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/tv/34625.html">主君的太阳</a><span>85427</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/18509.html">
+							<img alt="终极一班3" data-original="http://v.114la.com/img/up_img/201307/137414036969165.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>终极一班3</h4>
+							<p>类型：</p>
+							<p>主演：汪东城 / 蔡芷纭 / 曾沛慈 / Spexial</p>
+							<a class="p" href="http://v.114la.com/tv/18509.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/tv/18509.html">终极一班3</a><span>78396</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52585.html">
+							<img alt="半泽直树" data-original="http://i2.letvimg.com/vrs/201309/13/f34c1bde8f624dd8b7b4463b88b36cb1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>半泽直树</h4>
+							<p>类型：剧情|都市|情感...</p>
+							<p>主演：堺雅人,上户彩,及川光博,香川照之</p>
+							<a class="p" href="http://v.114la.com/tv/52585.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/tv/52585.html">半泽直树</a><span>75135</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/51839.html">
+							<img alt="谁是真英雄" data-original="http://i2.letvimg.com/vrs/201309/12/4b1c942473ab48d080cd484adcdc9662.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>谁是真英雄</h4>
+							<p>类型：剧情|战争|历史|...</p>
+							<p>主演：小沈阳,王刚,王佳宁</p>
+							<a class="p" href="http://v.114la.com/tv/51839.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/tv/51839.html">谁是真英雄</a><span>71171</span></p>
+				</li>
+									
+				</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/34625.html">
+							<img alt="主君的太阳" data-original="http://v.114la.com/img/up_img/201308/137724328366910.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>主君的太阳</h4>
+							<p>类型：都市言情时装...</p>
+							<p>主演：苏志燮孔孝珍徐仁国</p>
+							<a class="p" href="http://v.114la.com/tv/34625.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/tv/34625.html">主君的太阳</a><span>85427</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/32482.html">
+							<img alt="她的神话" data-original="http://i0.letvimg.com/vrs/201308/06/4b7376c17e034f89877cc38854784f06.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>她的神话</h4>
+							<p>类型：偶像,都市,情感...</p>
+							<p>主演：崔贞媛,金桢勋,孙恩书,朴允载</p>
+							<a class="p" href="http://v.114la.com/tv/32482.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/tv/32482.html">她的神话</a><span>32279</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/28729.html">
+							<img alt="good doctor" data-original="http://photocdn.sohu.com/20130723/vrsab_ver5630504.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>good doctor</h4>
+							<p>类型：电视剧,言情剧,青...</p>
+							<p>主演：朱元,文彩元,朱相昱,金敏瑞,千浩振,郭道元,罗英姬,金英光,郑满植,严贤璟</p>
+							<a class="p" href="http://v.114la.com/tv/28729.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/tv/28729.html">good doctor</a><span>25702</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/27935.html">
+							<img alt="听见你的声音" data-original="http://v.114la.com/img/up_img/201308/137542272790559.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>听见你的声音</h4>
+							<p>类型：偶像言情时装...</p>
+							<p>主演：李宝英 李钟硕 尹尚贤 李多熙</p>
+							<a class="p" href="http://v.114la.com/tv/27935.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/tv/27935.html">听见你的声音</a><span>9639</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1701.html">
+							<img alt="善良的男人" data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/3C76H762a69.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>善良的男人</h4>
+							<p>类型：都市剧,剧情片,言...</p>
+							<p>主演：宋钟基,文彩媛,朴诗妍</p>
+							<a class="p" href="http://v.114la.com/tv/1701.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/tv/1701.html">善良的男人</a><span>5529</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1953.html">
+							<img alt="最佳爱情" data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/16u58ai9G10.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>最佳爱情</h4>
+							<p>类型：言情剧,偶像剧,剧...</p>
+							<p>主演：车胜元,孔孝真,尹启相,刘仁娜</p>
+							<a class="p" href="http://v.114la.com/tv/1953.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/tv/1953.html">最佳爱情</a><span>3717</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1708.html">
+							<img alt="逆转女王" data-original="http://v.114la.com/img/2013/07/18/qy/tvs/3/QMFl80556Z0.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>逆转女王</h4>
+							<p>类型：言情剧,喜剧片,,...</p>
+							<p>主演：郑俊浩,金南珠,蔡贞安,朴施厚</p>
+							<a class="p" href="http://v.114la.com/tv/1708.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/tv/1708.html">逆转女王</a><span>3589</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/15398.html">
+							<img alt="丑闻" data-original="http://img36.pplive.cn/2013/06/27/17120014346_230X306.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>丑闻</h4>
+							<p>类型：偶像</p>
+							<p>主演：金载沅,赵允熙,赵在炫</p>
+							<a class="p" href="http://v.114la.com/tv/15398.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/tv/15398.html">丑闻</a><span>3047</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1687.html">
+							<img alt="至诚感天" data-original="http://photocdn.sohu.com/20130501/vrsab_ver5295002.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>至诚感天</h4>
+							<p>类型：家庭剧,言情剧,都...</p>
+							<p>主演：朴世英,李海仁,刘健,朴载正</p>
+							<a class="p" href="http://v.114la.com/tv/1687.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/tv/1687.html">至诚感天</a><span>2878</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/28339.html">
+							<img alt="搞笑一家人" data-original="http://i0.letvimg.com/vrs/201301/24/50bda131a220491a92eace95c8c459fb.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>搞笑一家人</h4>
+							<p>类型：剧情,喜剧,情景,...</p>
+							<p>主演：牛莉,高亚麟,白志迪,宫景华,姜妍</p>
+							<a class="p" href="http://v.114la.com/tv/28339.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/tv/28339.html">搞笑一家人</a><span>2649</span></p>
+				</li>
+							</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1810.html">
+							<img alt="绝命毒师" data-original="http://photocdn.sohu.com/20120724/vrsab_ver5030869.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>绝命毒师</h4>
+							<p>类型：都市剧,悬疑剧,剧...</p>
+							<p>主演：布莱恩.科兰斯顿,亚伦.保尔,安娜.冈,迪恩.诺里斯</p>
+							<a class="p" href="http://v.114la.com/tv/1810.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/tv/1810.html">绝命毒师</a><span>30728</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52613.html">
+							<img alt="破产姐妹" data-original="http://photocdn.sohu.com/20130807/vrsab_ver5690705.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>破产姐妹</h4>
+							<p>类型：电视剧,偶像剧,青...</p>
+							<p>主演：凯特·戴琳斯,贝丝·贝尔斯,诺亚·米尔斯,马修·摩伊,乔纳森·克特,加勒特·莫里斯</p>
+							<a class="p" href="http://v.114la.com/tv/52613.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/tv/52613.html">破产姐妹</a><span>29321</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/51953.html">
+							<img alt="断头谷" data-original="http://photocdn.sohu.com/20130711/vrsab_ver5590113.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>断头谷</h4>
+							<p>类型：电视剧,偶像剧,悬...</p>
+							<p>主演：汤姆 ·米森,妮可儿·贝海尔,奥兰多·琼斯,卡蒂亚 温特</p>
+							<a class="p" href="http://v.114la.com/tv/51953.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/tv/51953.html">断头谷</a><span>12695</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/34812.html">
+							<img alt="穹顶之下" data-original="http://v.114la.com/img/up_img/201308/137749878589497.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>穹顶之下</h4>
+							<p>类型：剧情科幻悬疑...</p>
+							<p>主演：迈克·沃格尔 科林·福特</p>
+							<a class="p" href="http://v.114la.com/tv/34812.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/tv/34812.html">穹顶之下</a><span>10161</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52021.html">
+							<img alt="性爱大师" data-original="http://v.114la.com/img/2013/09/18/le/tvs/2/Z8T6W31i84X.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>性爱大师</h4>
+							<p>类型：剧情</p>
+							<p>主演：麦克·辛,丽兹·卡潘</p>
+							<a class="p" href="http://v.114la.com/tv/52021.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/tv/52021.html">性爱大师</a><span>7789</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1765.html">
+							<img alt="摩登家庭" data-original="http://photocdn.sohu.com/20120823/vrsab_ver5066337.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>摩登家庭</h4>
+							<p>类型：家庭剧,喜剧片,,...</p>
+							<p>主演：阿芮尔·温特,艾德.奥尼尔,杰西.泰勒.弗格森,朱丽·鲍温</p>
+							<a class="p" href="http://v.114la.com/tv/1765.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/tv/1765.html">摩登家庭</a><span>4687</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/1657.html">
+							<img alt="纸牌屋" data-original="http://photocdn.sohu.com/20130302/vrsab_ver5175537.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>纸牌屋</h4>
+							<p>类型：悬疑剧,剧情片,都...</p>
+							<p>主演：凯文·史派西,罗宾·怀特,迈克尔·凯利</p>
+							<a class="p" href="http://v.114la.com/tv/1657.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/tv/1657.html">纸牌屋</a><span>3733</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52839.html">
+							<img alt="神盾局特工" data-original="http://photocdn.sohu.com/20130711/vrsab_ver5590402.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>神盾局特工</h4>
+							<p>类型：电视剧,偶像剧,悬...</p>
+							<p>主演：温明娜,克拉克·格雷格,乔斯·韦登</p>
+							<a class="p" href="http://v.114la.com/tv/52839.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/tv/52839.html">神盾局特工</a><span>3644</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/16732.html">
+							<img alt="绿箭侠" data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/l714TB15p01.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>绿箭侠</h4>
+							<p>类型：电视剧,悬疑剧,科...</p>
+							<p>主演：斯蒂芬·阿美尔,凯蒂·卡西迪,薇拉·贺兰德,科林·唐纳,苏珊娜·汤姆森,大卫·拉姆西,杰米·谢尔丹</p>
+							<a class="p" href="http://v.114la.com/tv/16732.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/tv/16732.html">绿箭侠</a><span>3136</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/tv/52612.html">
+							<img alt="人质" data-original="http://photocdn.sohu.com/20130807/vrsab_ver5690708.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>人质</h4>
+							<p>类型：电视剧,悬疑剧,谍...</p>
+							<p>主演：托妮·科莱特,迪伦·麦克德莫特,比利·布朗,劳拉·库克,泰勒·埃利奥特·伯克,马泰斯·瓦德,奎恩·谢法德</p>
+							<a class="p" href="http://v.114la.com/tv/52612.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/tv/52612.html">人质</a><span>1769</span></p>
+				</li>
+								</ul>
+			</div>			
+		</div>
+	</div>
+	<div class="comwrap clearfix">
+	    					   		<div class="leftSide fl ingrep">
+			<dl class="inTitle">
+				<dt>推荐电影</dt>
+				<dd class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">最热</a></li>
+												<li><a href="javascript:;">欧美</a></li>
+												<li><a href="javascript:;">动作</a></li>
+												<li><a href="javascript:;">喜剧</a></li>
+												<li><a href="javascript:;">战争</a></li>
+												<li><a href="javascript:;">恐怖</a></li>
+												<li><a href="javascript:;">伦理</a></li>
+											</ul>
+					<a class="more" href="http://v.114la.com/movie/">更多&gt;&gt;</a>
+				</dd>
+			</dl>
+						<div style="display:block;" class="ingrep-Cont">
+				<div class="clearfix rowleft">
+										<div class="bgsummar fl">
+						<a title="《僵尸世界大战》特辑" href="http://v.114la.com/movie/16359.html">
+							<img alt="《僵尸世界大战》特辑" data-original="http://v.114la.com/img/focus_img/201309/138017369728314.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>
+								<strong>《僵尸世界大战》特辑</strong>
+								主演：布拉德·皮特,米瑞·伊诺丝,马修·福克斯,埃里克·韦斯特,大卫·摩斯							</cite>
+						</a>
+						<p>    由科幻小说《僵尸世界大战》改编。通过联合国战后调查人员对一场毁灭世界各国的僵尸战争幸存者的调查展现了一次虚构的世界大战。 故事背景设定在人类赢得僵尸大战的十年后，当年...<em></em></p>
+					</div>
+										<ul class="sumgroup fr clearfix">
+												<li class="">
+							<a title="天神传" href="http://v.114la.com/movie/39286.html">
+								<img alt="天神传" data-original="http://v.114la.com/img/focus_img/201309/138017132815168.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>天神传</cite>
+								<em></em>
+							</a>
+							<p>性感女优大尺度出镜 </p>
+						</li>
+												<li class="">
+							<a title="超级大导演之金刚王" href="http://v.114la.com/movie/52137.html">
+								<img alt="超级大导演之金刚王" data-original="http://v.114la.com/img/focus_img/201309/137991778461593.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>超级大导演之金刚王</cite>
+								<em></em>
+							</a>
+							<p>暴力枪战肉搏爽翻天</p>
+						</li>
+												<li class="">
+							<a title="夜店北京" href="http://v.114la.com/movie/51595.html">
+								<img alt="夜店北京" data-original="http://v.114la.com/img/focus_img/201309/138016837410415.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>夜店北京</cite>
+								<em></em>
+							</a>
+							<p>嫩模主演大秀豪乳 </p>
+						</li>
+												<li class="">
+							<a title="我是裸模" href="http://v.114la.com/movie/40653.html">
+								<img alt="我是裸模" data-original="http://v.114la.com/img/focus_img/201309/137991852712027.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>我是裸模</cite>
+								<em></em>
+							</a>
+							<p>裸模背后的故事</p>
+						</li>
+												<li class="">
+							<a title="妈咪" href="http://v.114la.com/movie/15427.html">
+								<img alt="妈咪" data-original="http://v.114la.com/img/focus_img/201309/138017121572637.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>妈咪</cite>
+								<em></em>
+							</a>
+							<p>陪酒女孩的迷醉生活</p>
+						</li>
+												<li class="">
+							<a title="四大名捕" href="http://v.114la.com/movie/15420.html">
+								<img alt="四大名捕" data-original="http://v.114la.com/img/focus_img/201309/138017205928963.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>四大名捕</cite>
+								<em></em>
+							</a>
+							<p>江一燕与女捕头裸浴</p>
+						</li>
+											</ul>
+				</div>
+			</div>
+									<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="王者之剑" href="http://www.m1905.com/vod/play/516590.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0206/thumb_1_160_230_20130206100707796.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>王者之剑</cite>
+							<em></em>
+						</a>
+						<p>主演：杰森·莫玛,朗·普尔曼,罗丝·麦高恩</p>
+					</li>
+										<li>
+						<a title="敢死队" href="http://v.114la.com/movie/4501.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/1/10ZMX9w364H.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>敢死队</cite>
+							<em></em>
+						</a>
+						<p>主演：西尔维斯特·史泰龙,李连杰,米基·洛克,布鲁斯·威利斯</p>
+					</li>
+										<li>
+						<a title="永无止境" href="http://v.114la.com/movie/3733.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0911/thumb_1_160_230_20130911034749857.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>永无止境</cite>
+							<em></em>
+						</a>
+						<p>主演：布莱德利·库珀,艾比·考尼什,罗伯特·德尼罗,安德鲁·霍华德(I)</p>
+					</li>
+										<li>
+						<a title="女巫季节" href="http://v.114la.com/movie/4229.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/2/701j7H56Vt4.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>女巫季节</cite>
+							<em></em>
+						</a>
+						<p>主演：罗伯特·席安,尼古拉斯·凯奇,朗·普尔曼,克里斯托弗·李</p>
+					</li>
+										<li>
+						<a title="黄沙武士" href="http://v.114la.com/movie/3735.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0410/thumb_1_160_230_20130410114301127.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>黄沙武士</cite>
+							<em></em>
+						</a>
+						<p>主演：凯特·波茨沃斯,张东健,托尼·考克斯,杰弗里·拉什</p>
+					</li>
+										<li>
+						<a title="夺命手机" href="http://v.114la.com/movie/4360.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/1/43K5683D5s3.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>夺命手机</cite>
+							<em></em>
+						</a>
+						<p>主演：夏恩·韦斯特,爱德华·伯恩斯,文·瑞姆斯,Yuri Kutsenko</p>
+					</li>
+										<li>
+						<a title="X战争" href="http://v.114la.com/movie/3910.html">
+							<img data-original="http://v.114la.com/img/2013/08/01/xl/movie/4/y6W89v92j23.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>X战争</cite>
+							<em></em>
+						</a>
+						<p>主演：小古巴•古丁,J•K•西蒙斯</p>
+					</li>
+										<li>
+						<a title="孤堡惊情" href="http://v.114la.com/movie/5636.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/10/gr13584pI38.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>孤堡惊情</cite>
+							<em></em>
+						</a>
+						<p>主演：贝琳·瑞达,Roger Príncep,梅宝·里维拉,Montserrat Carulla</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="灭门" href="http://v.114la.com/movie/52040.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/573/901377fc51e902a6c424ca5f4ddaba7a.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>灭门</cite>
+							<em></em>
+						</a>
+						<p>杀机四伏 血战连场 任达华安志杰好勇斗狠</p>
+					</li>
+										<li>
+						<a title="赏金杀手" href="http://v.114la.com/movie/42548.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137888515246496.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>赏金杀手</cite>
+							<em></em>
+						</a>
+						<p>西部牛仔恩仇 ，一路砍头。</p>
+					</li>
+										<li>
+						<a title="赤警威龙" href="http://v.114la.com/movie/40656.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137878525680491.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>赤警威龙</cite>
+							<em></em>
+						</a>
+						<p>简单、直接、粗暴又话唠的史泰龙大叔，不变的动作英雄。</p>
+					</li>
+										<li>
+						<a title="白蛇传说" href="http://www.m1905.com/vod/play/503568.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2012/0518/thumb_1_160_230_20120518032956786.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>白蛇传说</cite>
+							<em></em>
+						</a>
+						<p>主演：李连杰,黄圣依,林峰,蔡卓妍</p>
+					</li>
+										<li>
+						<a title="灵魂战车2：复仇时刻" href="http://www.m1905.com/vod/play/520724.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2012/0406/thumb_1_160_230_20120406045650351.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>灵魂战车2：复仇时刻</cite>
+							<em></em>
+						</a>
+						<p>主演：尼古拉斯·凯奇,伊德瑞斯·艾尔巴,塞伦·希德,薇奥兰特·普拉西多,约翰尼·威特沃斯</p>
+					</li>
+										<li>
+						<a title="忠烈杨家将" href="http://www.m1905.com/vod/play/656353.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0329/thumb_1_160_230_20130329093527365.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>忠烈杨家将</cite>
+							<em></em>
+						</a>
+						<p>忠烈杨家将型男大集结。</p>
+					</li>
+										<li>
+						<a title="太极2：英雄崛起" href="http://www.m1905.com/vod/play/611056.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2012/1018/thumb_1_160_230_20121018083925874.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>太极2：英雄崛起</cite>
+							<em></em>
+						</a>
+						<p>主演：梁家辉,袁晓超,杨颖,彭于晏,冯绍峰</p>
+					</li>
+										<li>
+						<a title="致命黑兰" href="http://v.114la.com/movie/33528.html">
+							<img data-original="http://pic8.qiyipic.com/thumb/20130813/a525699u1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>致命黑兰</cite>
+							<em></em>
+						</a>
+						<p>“阿凡达”女星 冷艳血腥仇杀</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="大野狼和小绵羊的爱情" href="http://v.114la.com/movie/52501.html">
+							<img data-original="http://pic3.qiyipic.com/thumb/20130821/a598239.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>大野狼和小绵羊的爱情</cite>
+							<em></em>
+						</a>
+						<p>柯震东再度上演小清新的爱情故事。</p>
+					</li>
+										<li>
+						<a title="决战大洋" href="http://v.114la.com/movie/49608.html">
+							<img data-original="http://pic1.qiyipic.com/thumb/20130912/a624362u1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>决战大洋</cite>
+							<em></em>
+						</a>
+						<p>麻生希版 ，性感风骚船灵。</p>
+					</li>
+										<li>
+						<a title="金太郎的幸福生活 " href="http://v.114la.com/movie/39136.html">
+							<img data-original="http://v.114la.com/img/up_img/201309/137819203718526.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>金太郎的幸福生活 </cite>
+							<em></em>
+						</a>
+						<p>王雷再演“金太狼”，电影版讲述妇科男医生婚前那点闷骚囧事</p>
+					</li>
+										<li>
+						<a title="疯狂的导演" href="http://v.114la.com/movie/52243.html">
+							<img data-original="http://pic5.qiyipic.com/thumb/20130829/a609846.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>疯狂的导演</cite>
+							<em></em>
+						</a>
+						<p>超越“疯狂系列”的又一”疯狂力作“</p>
+					</li>
+										<li>
+						<a title="疯狂原始人 英文版" href="http://v.114la.com/movie/28837.html">
+							<img data-original="http://i1.letvimg.com/vrs/201304/07/a68af03014aa4a008cf3b60662078f47.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>疯狂原始人 英文版</cite>
+							<em></em>
+						</a>
+						<p>主演：尼古拉斯·凯奇,瑞恩·雷诺兹,艾玛·斯通</p>
+					</li>
+										<li>
+						<a title="西游·降魔篇" href="http://v.114la.com/movie/34468.html">
+							<img data-original="http://v.114la.com/img/up_img/201308/137715274232626.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>西游·降魔篇</cite>
+							<em></em>
+						</a>
+						<p> 周星驰巨制，东方魔幻爱情喜剧。</p>
+					</li>
+										<li>
+						<a title="夜幕惊魂" href="http://v.114la.com/movie/52244.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0531/thumb_1_160_230_20130531044253196.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>夜幕惊魂</cite>
+							<em></em>
+						</a>
+						<p>主演：吴佩慈,张翰,连晋,淳于珊珊</p>
+					</li>
+										<li>
+						<a title="2013王牌情敌" href="http://v.114la.com/movie/28727.html">
+							<img data-original="http://img36.pplive.cn/2013/06/04/13542235226_230X306.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>2013王牌情敌</cite>
+							<em></em>
+						</a>
+						<p>主演：曾志伟,谭咏麟,陈百祥,谢天华,黄宗泽</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="忠烈杨家将" href="http://www.m1905.com/vod/play/656353.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2013/0329/thumb_1_160_230_20130329093527365.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>忠烈杨家将</cite>
+							<em></em>
+						</a>
+						<p>忠烈杨家将型男大集结。</p>
+					</li>
+										<li>
+						<a title="特种部队" href="http://v.114la.com/movie/63.html">
+							<img data-original="http://photocdn.sohu.com/20120821/vrsab_ver5064833.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>特种部队</cite>
+							<em></em>
+						</a>
+						<p>主演：黛安·克鲁格,杰曼·翰苏,贝诺特.马吉梅尔,丹尼斯.门诺切特</p>
+					</li>
+										<li>
+						<a title="金陵十三钗" href="http://v.114la.com/movie/11827.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2011/1202/thumb_1_160_230_20111202024213166.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>金陵十三钗</cite>
+							<em></em>
+						</a>
+						<p>主演：克里斯汀·贝尔,佟大为,窦骁,黄海波,曹可凡,聂远,倪妮</p>
+					</li>
+										<li>
+						<a title="叶问" href="http://v.114la.com/movie/177.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/6/672m8Z2tX82.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>叶问</cite>
+							<em></em>
+						</a>
+						<p>主演：甄子丹,任达华,池内博之,林家栋</p>
+					</li>
+										<li>
+						<a title="超级女特工" href="http://v.114la.com/movie/188.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/movie/5/967gK248624.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>超级女特工</cite>
+							<em></em>
+						</a>
+						<p>主演：苏菲·玛索,茱莉·德帕迪约,玛丽.吉莲</p>
+					</li>
+										<li>
+						<a title="杨门女将之军令如山" href="http://v.114la.com/movie/3731.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2011/1028/thumb_1_160_230_20111028040632249.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>杨门女将之军令如山</cite>
+							<em></em>
+						</a>
+						<p>主演：张柏芝,郑佩佩,刘晓庆,金巧巧</p>
+					</li>
+										<li>
+						<a title="D4救援队" href="http://v.114la.com/movie/26025.html">
+							<img data-original="http://i2.letvimg.com/vrs/201301/24/8a318eb59beb4b35bc16dd78a9e4746c.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>D4救援队</cite>
+							<em></em>
+						</a>
+						<p>主演：Darrin Dickerson,Clay Brocker</p>
+					</li>
+										<li>
+						<a title="赛德克·巴莱" href="http://v.114la.com/movie/25894.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/673/8ba1ce9a3f3d639ec8338645b9fdf639.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>赛德克·巴莱</cite>
+							<em></em>
+						</a>
+						<p>主演：林庆台,徐若瑄,徐若瑄,温岚,温岚,田中千绘,田中千绘,徐诣帆,徐诣帆,林源杰</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="半夜不要照镜子" href="http://www.m1905.com/vod/play/549024.shtml">
+							<img data-original="http://image11.m1905.cn/uploadfile/2012/0730/thumb_1_160_230_20120730094333984.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>半夜不要照镜子</cite>
+							<em></em>
+						</a>
+						<p>主演：关智斌,李曼筠,刘静怡,姜梦茹</p>
+					</li>
+										<li>
+						<a title="床下有人" href="http://www.m1905.com/vod/play/479438.shtml">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/6/05N6J36O34s.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>床下有人</cite>
+							<em></em>
+						</a>
+						<p>主演：郭晓然,何可人,武文佳,葛红霖</p>
+					</li>
+										<li>
+						<a title="暴劫倾情" href="http://v.114la.com/movie/42.html">
+							<img data-original="http://v.114la.com/img/2013/07/17/m1905/movie/10/1733Xf79t34.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>暴劫倾情</cite>
+							<em></em>
+						</a>
+						<p>主演：任达华,叶玉卿</p>
+					</li>
+										<li>
+						<a title="暮光之城2:新月" href="http://v.114la.com/movie/25746.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/974/7dd50d89903753fb1fdd16d43ac2e010.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>暮光之城2:新月</cite>
+							<em></em>
+						</a>
+						<p>主演：罗伯特·帕丁森,克里斯汀·斯图尔特,泰勒·洛特纳,达寇塔·范宁,安娜·肯德里克</p>
+					</li>
+										<li>
+						<a title="饥饿游戏" href="http://v.114la.com/movie/100.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/movie/4/o66y35i4HQ3.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>饥饿游戏</cite>
+							<em></em>
+						</a>
+						<p>主演：詹妮弗.劳伦斯,乔什·哈切森</p>
+					</li>
+										<li>
+						<a title="巨蟒惊魂(泰国)" href="http://v.114la.com/movie/25958.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/726/d52556c8605121b3ff749974ced50bd5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>巨蟒惊魂(泰国)</cite>
+							<em></em>
+						</a>
+						<p>主演：pympan chalayanacupt,sittha lertsrimonkol,kiratikorn</p>
+					</li>
+										<li>
+						<a title="异虫咒" href="http://v.114la.com/movie/25701.html">
+							<img data-original="http://v.114la.com/img/2013/08/01/xl/movie/6/6gZ56ExN108.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>异虫咒</cite>
+							<em></em>
+						</a>
+						<p>主演：</p>
+					</li>
+										<li>
+						<a title="超能游戏者" href="http://v.114la.com/movie/80.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/movie/3/Y26C42x8506.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>超能游戏者</cite>
+							<em></em>
+						</a>
+						<p>主演：亚力克萨.巴杜科夫,谢尔盖.布鲁诺夫</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="金陵十三钗" href="http://v.114la.com/movie/11827.html">
+							<img data-original="http://image11.m1905.cn/uploadfile/2011/1202/thumb_1_160_230_20111202024213166.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>金陵十三钗</cite>
+							<em></em>
+						</a>
+						<p>主演：克里斯汀·贝尔,佟大为,窦骁,黄海波,曹可凡,聂远,倪妮</p>
+					</li>
+										<li>
+						<a title="妈咪" href="http://v.114la.com/movie/15427.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/movie/2/24o2v769R6l.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>妈咪</cite>
+							<em></em>
+						</a>
+						<p>陪酒女孩的迷醉生活</p>
+					</li>
+										<li>
+						<a title="樱桃汁" href="http://v.114la.com/movie/25656.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/370/d71f7e340ab168ca99be9215979f0c4a.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>樱桃汁</cite>
+							<em></em>
+						</a>
+						<p>主演：尼基·雷德,Jonathan_Tucker,迈克尔·奥吉弗,哈维兰·莫里斯,弗兰克·惠利</p>
+					</li>
+										<li>
+						<a title="我们都是坏孩子" href="http://v.114la.com/movie/15432.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/movie/6/2Ti3596gw02.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>我们都是坏孩子</cite>
+							<em></em>
+						</a>
+						<p>主演：谢容儿,杨杏儿,李艾佳,夏筠妍,邢增婧,孙曼龄</p>
+					</li>
+										<li>
+						<a title="爱滋初体验" href="http://v.114la.com/movie/25963.html">
+							<img data-original="http://v.114la.com/img/2013/08/01/xl/movie/10/20FQ1H19C46.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>爱滋初体验</cite>
+							<em></em>
+						</a>
+						<p>主演：罗家英,蓝洁瑛,彭丹</p>
+					</li>
+										<li>
+						<a title="感情生活" href="http://v.114la.com/movie/30348.html">
+							<img data-original="http://i1.letvimg.com/vrs/201301/23/9be9fd7391fb43c5a8b32b092939e0d8.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>感情生活</cite>
+							<em></em>
+						</a>
+						<p>主演：夏雨,明道</p>
+					</li>
+										<li>
+						<a title="迷城" href="http://v.114la.com/movie/30297.html">
+							<img data-original="http://i2.letvimg.com/vrs/201301/23/6123737ba5824f5387db5672d6d4df17.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>迷城</cite>
+							<em></em>
+						</a>
+						<p>主演：霍思燕,郭晓然</p>
+					</li>
+										<li>
+						<a title="古镇情缘" href="http://v.114la.com/movie/30304.html">
+							<img data-original="http://i0.letvimg.com/vrs/201301/23/fb279e1a8f2848dba0d157b9b01c0c50.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>古镇情缘</cite>
+							<em></em>
+						</a>
+						<p>主演：伊能静,段钧豪,贡米,车永莉,丁海峰</p>
+					</li>
+									</ul>
+			</div>
+					</div>
+	   	   <div class="sideCont fr ingrep">
+			<div class="inTitle">
+				<h6><a target="_blank" title="电影排行榜" href="http://v.114la.com/top/movie.html">电影排行榜</a></h6>
+				<div class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">全部</a></li>
+						<li><a href="javascript:;">喜剧</a></li>
+						<li><a href="javascript:;">科幻</a></li>
+					</ul>
+					<a target="_blank" class="more" href="http://v.114la.com/top/movie.html">更多&gt;&gt;</a>
+				</div>
+			</div>
+			<div style="display:block;" class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/33807.html">
+							<img alt="全民目击" data-original="http://v.114la.com/img/focus_img/201309/137930421692788.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>全民目击</h4>
+							<p>类型：悬疑 / 犯罪...</p>
+							<p>主演： 孙红雷 / 余男 / 郭富城 / 邓家佳 </p>
+							<a class="p" href="http://v.114la.com/movie/33807.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/movie/33807.html">全民目击</a><span>47496</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/16359.html">
+							<img alt="僵尸世界大战" data-original="http://v.114la.com/img/2013/07/18/qy/movie/4/67A94T990K5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>僵尸世界大战</h4>
+							<p>类型：电影,科幻,恐怖,...</p>
+							<p>主演：布拉德·皮特,米瑞·伊诺丝,马修·福克斯,埃里克·韦斯特,大卫·摩斯</p>
+							<a class="p" href="http://v.114la.com/movie/16359.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/movie/16359.html">僵尸世界大战</a><span>35036</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/40657.html">
+							<img alt="非常幸运" data-original="http://v.114la.com/img/up_img/201309/137878554775216.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>非常幸运</h4>
+							<p>类型：喜剧 爱情...</p>
+							<p>主演： 章子怡  王力宏 林心如</p>
+							<a class="p" href="http://v.114la.com/movie/40657.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/movie/40657.html">非常幸运</a><span>32124</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/25373.html">
+							<img alt="不二神探" data-original="http://v.114la.com/img/up_img/201307/137516280789310.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>不二神探</h4>
+							<p>类型：犯罪 / 动作 /...</p>
+							<p>主演：李连杰 / 文章 / 刘诗诗</p>
+							<a class="p" href="http://v.114la.com/movie/25373.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/movie/25373.html">不二神探</a><span>30603</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/52502.html">
+							<img alt="摩登年代" data-original="http://v.114la.com/img/up_img/201309/137990032215596.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>摩登年代</h4>
+							<p>类型：剧情 / 喜剧...</p>
+							<p>主演：徐峥 / 张子枫 / 王宣予 / 张颂文</p>
+							<a class="p" href="http://v.114la.com/movie/52502.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/movie/52502.html">摩登年代</a><span>29518</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/33305.html">
+							<img alt="一路向西" data-original="http://v.114la.com/img/up_img/201308/137594651995462.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>一路向西</h4>
+							<p>类型：剧情</p>
+							<p>主演：李沐晴 舒沁妍 胡耀辉</p>
+							<a class="p" href="http://v.114la.com/movie/33305.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/movie/33305.html">一路向西</a><span>23155</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/29274.html">
+							<img alt="失恋33天" data-original="http://i2.letvimg.com/vrs/201301/24/f168fca062434b99a6ee4c9b08a46cd5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>失恋33天</h4>
+							<p>类型：剧情,喜剧,爱情...</p>
+							<p>主演：文章,白百何,张子萱,王耀庆,郭京飞,张嘉译</p>
+							<a class="p" href="http://v.114la.com/movie/29274.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/movie/29274.html">失恋33天</a><span>22394</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/51591.html">
+							<img alt="小时代" data-original="http://v.114la.com/img/up_img/201309/137903798754097.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>小时代</h4>
+							<p>类型：喜剧 爱情 剧情...</p>
+							<p>主演：郭采洁杨幂谢依霖</p>
+							<a class="p" href="http://v.114la.com/movie/51591.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/movie/51591.html">小时代</a><span>21312</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/34470.html">
+							<img alt="被偷走的那五年" data-original="http://v.114la.com/img/up_img/201308/137715603667441.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>被偷走的那五年</h4>
+							<p>类型：爱情 / 剧情...</p>
+							<p>主演：白百何 / 张孝全 / 范玮琪</p>
+							<a class="p" href="http://v.114la.com/movie/34470.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/movie/34470.html">被偷走的那五年</a><span>18776</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/25171.html">
+							<img alt="了不起的盖茨比" data-original="http://v.114la.com/img/2013/07/27/qy/movie/9/T61524K2HR6.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>了不起的盖茨比</h4>
+							<p>类型：电影,爱情,剧情...</p>
+							<p>主演：莱昂纳多·迪卡普里奥,凯瑞·穆里根,托比·马奎尔,艾拉·菲舍尔,乔尔·埃哲顿</p>
+							<a class="p" href="http://v.114la.com/movie/25171.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/movie/25171.html">了不起的盖茨比</a><span>18185</span></p>
+				</li>
+									
+				</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/40657.html">
+							<img alt="非常幸运" data-original="http://v.114la.com/img/up_img/201309/137878554775216.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>非常幸运</h4>
+							<p>类型：喜剧 爱情...</p>
+							<p>主演： 章子怡  王力宏 林心如</p>
+							<a class="p" href="http://v.114la.com/movie/40657.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/movie/40657.html">非常幸运</a><span>32124</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/25373.html">
+							<img alt="不二神探" data-original="http://v.114la.com/img/up_img/201307/137516280789310.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>不二神探</h4>
+							<p>类型：犯罪 / 动作 /...</p>
+							<p>主演：李连杰 / 文章 / 刘诗诗</p>
+							<a class="p" href="http://v.114la.com/movie/25373.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/movie/25373.html">不二神探</a><span>30603</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/52502.html">
+							<img alt="摩登年代" data-original="http://v.114la.com/img/up_img/201309/137990032215596.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>摩登年代</h4>
+							<p>类型：剧情 / 喜剧...</p>
+							<p>主演：徐峥 / 张子枫 / 王宣予 / 张颂文</p>
+							<a class="p" href="http://v.114la.com/movie/52502.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/movie/52502.html">摩登年代</a><span>29518</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/33655.html">
+							<img alt="一夜惊喜" data-original="http://photocdn.sohu.com/20130812/vrsab_ver5696302.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>一夜惊喜</h4>
+							<p>类型：电影,爱情片,喜剧...</p>
+							<p>主演：丹尼尔·海尼,范冰冰,李治廷,蒋劲夫</p>
+							<a class="p" href="http://v.114la.com/movie/33655.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/movie/33655.html">一夜惊喜</a><span>9731</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/52138.html">
+							<img alt="一座城池" data-original="http://www.qiyipic.com/thumb/20130918/a629882.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>一座城池</h4>
+							<p>类型：电影,喜剧,剧情,...</p>
+							<p>主演：房祖名,王太利,黄瀞怡,谢芳</p>
+							<a class="p" href="http://v.114la.com/movie/52138.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/movie/52138.html">一座城池</a><span>8435</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/417.html">
+							<img alt="亨利的罪行" data-original="http://v.114la.com/img/2013/07/18/qy/movie/6/Wk8155a6267.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>亨利的罪行</h4>
+							<p>类型：电影,剧情片,爱情...</p>
+							<p>主演：基努·李维斯,詹姆斯·凯恩,维拉.法米加</p>
+							<a class="p" href="http://v.114la.com/movie/417.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/movie/417.html">亨利的罪行</a><span>7667</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/49.html">
+							<img alt="我老公不靠谱" data-original="http://photocdn.sohu.com/20121113/vrsab_ver5109833.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>我老公不靠谱</h4>
+							<p>类型：电影,爱情片,喜剧...</p>
+							<p>主演：蔡卓妍,郑伊健,张歆艺,徐正曦</p>
+							<a class="p" href="http://v.114la.com/movie/49.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/movie/49.html">我老公不靠谱</a><span>6664</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/34466.html">
+							<img alt="超级经纪人" data-original="http://v.114la.com/img/up_img/201308/137715200090840.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>超级经纪人</h4>
+							<p>类型：爱情 / 剧情...</p>
+							<p>主演：蔡卓妍 / 杜汶泽 / 高云翔</p>
+							<a class="p" href="http://v.114la.com/movie/34466.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/movie/34466.html">超级经纪人</a><span>6539</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/20621.html">
+							<img alt="一起飞" data-original="http://image11.m1905.cn/uploadfile/2012/0809/thumb_1_160_230_20120809085605554.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>一起飞</h4>
+							<p>类型：喜剧,爱情,剧情,...</p>
+							<p>主演：林志颖,张娜拉,万思维,王子子</p>
+							<a class="p" href="http://v.114la.com/movie/20621.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/movie/20621.html">一起飞</a><span>6478</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/34631.html">
+							<img alt="怪兽大学" data-original="http://pic6.qiyipic.com/thumb/20130821/a598099.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>怪兽大学</h4>
+							<p>类型：电影,喜剧,动画...</p>
+							<p>主演：比利·克里斯托,约翰·古德曼,史蒂夫·布西密,海伦·米伦,彼得·索恩</p>
+							<a class="p" href="http://v.114la.com/movie/34631.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/movie/34631.html">怪兽大学</a><span>6335</span></p>
+				</li>
+							</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/16359.html">
+							<img alt="僵尸世界大战" data-original="http://v.114la.com/img/2013/07/18/qy/movie/4/67A94T990K5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>僵尸世界大战</h4>
+							<p>类型：电影,科幻,恐怖,...</p>
+							<p>主演：布拉德·皮特,米瑞·伊诺丝,马修·福克斯,埃里克·韦斯特,大卫·摩斯</p>
+							<a class="p" href="http://v.114la.com/movie/16359.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/movie/16359.html">僵尸世界大战</a><span>35036</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/25169.html">
+							<img alt="环太平洋" data-original="http://v.114la.com/img/2013/07/27/qy/movie/10/1A2485w1J0j.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>环太平洋</h4>
+							<p>类型：电影,科幻,动作,...</p>
+							<p>主演：查理·汉纳姆,菊地凛子,伊德瑞斯·艾尔巴,查理·戴,朗·普尔曼</p>
+							<a class="p" href="http://v.114la.com/movie/25169.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/movie/25169.html">环太平洋</a><span>17810</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/38438.html">
+							<img alt="极乐空间" data-original="http://v.114la.com/img/up_img/201308/137782860840457.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>极乐空间</h4>
+							<p>类型：科幻 / 剧情 /...</p>
+							<p>主演：马特·达蒙 / 朱迪·福斯特 </p>
+							<a class="p" href="http://v.114la.com/movie/38438.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/movie/38438.html">极乐空间</a><span>10625</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/15528.html">
+							<img alt="钢铁侠3" data-original="http://v.114la.com/img/2013/07/18/qy/movie/9/0Nd57qF0305.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>钢铁侠3</h4>
+							<p>类型：电影,科幻,动作,...</p>
+							<p>主演：小罗伯特·唐尼,格温妮丝·帕特洛,唐·钱德尔,本·金斯利,盖·皮尔斯</p>
+							<a class="p" href="http://v.114la.com/movie/15528.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/movie/15528.html">钢铁侠3</a><span>7022</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/38608.html">
+							<img alt="遗落战境" data-original="http://v.114la.com/img/up_img/201309/137817470087735.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>遗落战境</h4>
+							<p>类型：科幻 / 动作 /...</p>
+							<p>主演：汤姆·克鲁斯 / 欧嘉·柯瑞兰寇</p>
+							<a class="p" href="http://v.114la.com/movie/38608.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/movie/38608.html">遗落战境</a><span>3591</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/34103.html">
+							<img alt="特种部队2" data-original="http://v.114la.com/img/up_img/201308/137689889166870.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>特种部队2</h4>
+							<p>类型：科幻 | 动作 |...</p>
+							<p>主演： 丹尼斯·奎德 | 查宁·塔图姆 | 雷·帕克</p>
+							<a class="p" href="http://v.114la.com/movie/34103.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/movie/34103.html">特种部队2</a><span>2894</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/15477.html">
+							<img alt="v字仇杀队" data-original="http://v.114la.com/img/2013/07/18/qy/movie/7/w37Z91A7F34.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>v字仇杀队</h4>
+							<p>类型：电影,科幻,动作,...</p>
+							<p>主演：娜塔莉·波特曼,雨果·维文,斯蒂芬·瑞,斯蒂芬·弗雷,约翰·赫特</p>
+							<a class="p" href="http://v.114la.com/movie/15477.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/movie/15477.html">v字仇杀队</a><span>2641</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/29768.html">
+							<img alt="蓝血人" data-original="http://i3.letvimg.com/vrs/201301/24/def921a2f1104c7ebec63232d293e219.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>蓝血人</h4>
+							<p>类型：剧情,动作,爱情,...</p>
+							<p>主演：刘德华,关之琳,舒淇,张耀扬</p>
+							<a class="p" href="http://v.114la.com/movie/29768.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/movie/29768.html">蓝血人</a><span>2258</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/15535.html">
+							<img alt="超人3" data-original="http://v.114la.com/img/2013/07/18/qy/movie/8/6s38g3c8102.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>超人3</h4>
+							<p>类型：电影,喜剧,科幻,...</p>
+							<p>主演：克里斯托弗·里夫,玛戈·基德,理查德·普赖尔,杰基·库伯,马克·麦克罗</p>
+							<a class="p" href="http://v.114la.com/movie/15535.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/movie/15535.html">超人3</a><span>2128</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/movie/15652.html">
+							<img alt="逆世界" data-original="http://v.114la.com/img/2013/07/18/qy/movie/9/7Z902Xpg2d8.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>逆世界</h4>
+							<p>类型：电影,爱情,科幻,...</p>
+							<p>主演：克尔斯滕·邓斯特,吉姆·斯特吉斯,蒂莫西·斯波,詹姆斯·基德尼,尼尔·纳皮尔</p>
+							<a class="p" href="http://v.114la.com/movie/15652.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/movie/15652.html">逆世界</a><span>1969</span></p>
+				</li>
+								</ul>
+			</div>			
+		</div>
+	</div>	
+	<div class="comwrap clearfix">
+							   		<div class="leftSide fl ingrep">
+			<dl class="inTitle">
+				<dt>热播动漫</dt>
+				<dd class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">最热</a></li>
+												<li><a href="javascript:;">日韩</a></li>
+												<li><a href="javascript:;">国产</a></li>
+												<li><a href="javascript:;">欧美</a></li>
+											</ul>
+					<a class="more" href="http://v.114la.com/anime/">更多&gt;&gt;</a>
+				</dd>
+			</dl>
+						<div style="display:block;" class="ingrep-Cont">
+				<div class="clearfix rowleft">
+										<div class="bgsummar fl">
+						<a title="妖精的尾巴（国语）" href="http://v.114la.com/anime/2644.html">
+							<img alt="妖精的尾巴（国语）" data-original="http://v.114la.com/img/focus_img/201309/138017615252731.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>
+								<strong>妖精的尾巴（国语）</strong>
+								更新至第164集							</cite>
+						</a>
+						<p>少女露西一直希望能加入云集众多厉害魔法师的名为“妖精尾巴”的公会，在纳兹的引导下，露西终于得偿所愿，随后，露西跟纳兹、格雷、艾尔莎和哈比组成“最强！？”队伍，二男二女一猫的旅...<em></em></p>
+					</div>
+										<ul class="sumgroup fr clearfix">
+												<li class="">
+							<a title="进击的巨人MAD" href="http://v.114la.com/anime/33786.html">
+								<img alt="进击的巨人MAD" data-original="http://v.114la.com/img/focus_img/201309/137897249984444.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>进击的巨人MAD</cite>
+								<em></em>
+							</a>
+							<p>更新至第45集</p>
+						</li>
+												<li class="">
+							<a title="海贼王" href="http://v.114la.com/anime/2646.html">
+								<img alt="海贼王" data-original="http://v.114la.com/img/focus_img/201309/137828194469238.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>海贼王</cite>
+								<em></em>
+							</a>
+							<p>613集全</p>
+						</li>
+												<li class="">
+							<a title="尸兄" href="http://v.114la.com/anime/17625.html">
+								<img alt="尸兄" data-original="http://v.114la.com/img/focus_img/201309/137938483767724.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>尸兄</cite>
+								<em></em>
+							</a>
+							<p>10集全</p>
+						</li>
+												<li class="">
+							<a title="十万个语言版十万个冷笑话" href="http://v.114la.com/anime/36723.html">
+								<img alt="十万个语言版十万个冷笑话" data-original="http://v.114la.com/img/focus_img/201309/137938482431955.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>十万个语言版十万个冷笑话</cite>
+								<em></em>
+							</a>
+							<p>8集全</p>
+						</li>
+												<li class="">
+							<a title="全职猎人（2011）" href="http://v.114la.com/anime/2642.html">
+								<img alt="全职猎人（2011）" data-original="http://v.114la.com/img/focus_img/201309/137938503127946.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>全职猎人（2011）</cite>
+								<em></em>
+							</a>
+							<p>更新至第97集</p>
+						</li>
+												<li class="">
+							<a title="我叫MT第六季" href="http://v.114la.com/anime/17615.html">
+								<img alt="我叫MT第六季" data-original="http://v.114la.com/img/focus_img/201309/137828192681819.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>我叫MT第六季</cite>
+								<em></em>
+							</a>
+							<p>27集全</p>
+						</li>
+											</ul>
+				</div>
+			</div>
+									<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="蜡笔小新" href="http://v.114la.com/anime/2676.html">
+							<img data-original="http://photocdn.sohu.com/20110421/vrsab_ver1002411.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>蜡笔小新</cite>
+							<em></em>
+						</a>
+						<p>1449集全</p>
+					</li>
+										<li>
+						<a title="魔鬼恋人" href="http://v.114la.com/anime/51951.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/1012/40ff40fabfe506a595c76ed9050aaf53.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>魔鬼恋人</cite>
+							<em></em>
+						</a>
+						<p>更新至第2集</p>
+					</li>
+										<li>
+						<a title="进击的巨人MAD" href="http://v.114la.com/anime/33786.html">
+							<img data-original="http://i0.letvimg.com/vrs/201308/14/73d68884428240138bb7e1bb8ecb9845.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>进击的巨人MAD</cite>
+							<em></em>
+						</a>
+						<p>更新至第45集</p>
+					</li>
+										<li>
+						<a title="樱桃小丸子 第2季" href="http://v.114la.com/anime/30863.html">
+							<img data-original="http://i1.letvimg.com/vrs/201208/21/0cccd7833c6c4028a13571616be72718.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>樱桃小丸子 第2季</cite>
+							<em></em>
+						</a>
+						<p>更新至第616集</p>
+					</li>
+										<li>
+						<a title="火影忍者剧场版合集" href="http://v.114la.com/anime/31729.html">
+							<img data-original="http://i1.letvimg.com/vrs/201211/10/1225e22b7a7349c19b461817b7843836.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>火影忍者剧场版合集</cite>
+							<em></em>
+						</a>
+						<p>9集全</p>
+					</li>
+										<li>
+						<a title="火影忍者2012剧场版：忍者之路" href="http://v.114la.com/anime/30861.html">
+							<img data-original="http://i1.letvimg.com/vrs/201304/12/2c31467e20a6479ca187616f63cb98ca.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>火影忍者2012剧场版：忍者之路</cite>
+							<em></em>
+						</a>
+						<p>1集全</p>
+					</li>
+										<li>
+						<a title="海贼王" href="http://v.114la.com/anime/2646.html">
+							<img data-original="http://photocdn.sohu.com/20130624/vrsab_ver1007474.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>海贼王</cite>
+							<em></em>
+						</a>
+						<p>613集全</p>
+					</li>
+										<li>
+						<a title="宫崎骏作品集" href="http://v.114la.com/anime/49611.html">
+							<img data-original="http://images.movie.xunlei.com/100x140/788/a3a0214e7ed3869594d9250cb14d0faf.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>宫崎骏作品集</cite>
+							<em></em>
+						</a>
+						<p>18集全</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="喜羊羊与灰太狼之开心方程式" href="http://v.114la.com/anime/37337.html">
+							<img data-original="http://pic8.qiyipic.com/thumb/20130826/a604569.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>喜羊羊与灰太狼之开心方程式</cite>
+							<em></em>
+						</a>
+						<p>78集全</p>
+					</li>
+										<li>
+						<a title="十万个冷笑话特别版" href="http://v.114la.com/anime/2573.html">
+							<img data-original="http://photocdn.sohu.com/20130320/vrsab_ver5191342.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>十万个冷笑话特别版</cite>
+							<em></em>
+						</a>
+						<p>更新至第5集</p>
+					</li>
+										<li>
+						<a title="神魄" href="http://v.114la.com/anime/37718.html">
+							<img data-original="http://pic9.qiyipic.com/thumb/20130904/a611060u1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>神魄</cite>
+							<em></em>
+						</a>
+						<p>33集全</p>
+					</li>
+										<li>
+						<a title="熊出没" href="http://v.114la.com/anime/9127.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/comic/6/C242CH58609.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>熊出没</cite>
+							<em></em>
+						</a>
+						<p>207集全</p>
+					</li>
+										<li>
+						<a title="洛克王国大冒险" href="http://v.114la.com/anime/34823.html">
+							<img data-original="http://pic9.qiyipic.com/thumb/20130826/a605692.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>洛克王国大冒险</cite>
+							<em></em>
+						</a>
+						<p>52集全</p>
+					</li>
+										<li>
+						<a title="贝瓦儿歌" href="http://v.114la.com/anime/14664.html">
+							<img data-original="http://www.qiyipic.com/thumb/20120723/a198539u1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>贝瓦儿歌</cite>
+							<em></em>
+						</a>
+						<p>88集全</p>
+					</li>
+										<li>
+						<a title="尸兄" href="http://v.114la.com/anime/17625.html">
+							<img data-original="http://photocdn.sohu.com/20130801/vrsab_ver5670609.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>尸兄</cite>
+							<em></em>
+						</a>
+						<p>10集全</p>
+					</li>
+										<li>
+						<a title="十万个冷笑话" href="http://v.114la.com/anime/2621.html">
+							<img data-original="http://photocdn.sohu.com/20120727/vrsab_ver5034904.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>十万个冷笑话</cite>
+							<em></em>
+						</a>
+						<p>12集全</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="蓝精灵" href="http://v.114la.com/anime/35155.html">
+							<img data-original="http://v.114la.com/img/2013/09/26/sh/comic/2/42M17rF0Nx5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>蓝精灵</cite>
+							<em></em>
+						</a>
+						<p>82集全</p>
+					</li>
+										<li>
+						<a title="灰姑娘动画电影" href="http://v.114la.com/anime/39091.html">
+							<img data-original="http://s2.56img.com/images/index/1111/7974_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>灰姑娘动画电影</cite>
+							<em></em>
+						</a>
+						<p>1集全</p>
+					</li>
+										<li>
+						<a title="米奇和米妮" href="http://v.114la.com/anime/39088.html">
+							<img data-original="http://s2.56img.com/images/index/1111/8152_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>米奇和米妮</cite>
+							<em></em>
+						</a>
+						<p>1集全</p>
+					</li>
+										<li>
+						<a title="迈达斯国王的宝藏" href="http://v.114la.com/anime/39032.html">
+							<img data-original="http://i1.letvimg.com/vrs/201309/24/ac67fc5651c340049ac4f2d747a50178.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>迈达斯国王的宝藏</cite>
+							<em></em>
+						</a>
+						<p>1集全</p>
+					</li>
+										<li>
+						<a title="刺猬索尼克之历险记" href="http://v.114la.com/anime/39078.html">
+							<img data-original="http://s2.56img.com/images/index/1111/18963_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>刺猬索尼克之历险记</cite>
+							<em></em>
+						</a>
+						<p>65集全</p>
+					</li>
+										<li>
+						<a title="歌牛之金牛钟" href="http://v.114la.com/anime/39030.html">
+							<img data-original="http://i2.letvimg.com/vrs/201309/24/e670b2e6ba7f408794af6502152f65fa.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>歌牛之金牛钟</cite>
+							<em></em>
+						</a>
+						<p>1集全</p>
+					</li>
+										<li>
+						<a title="刺猬索尼克外传" href="http://v.114la.com/anime/39076.html">
+							<img data-original="http://v.114la.com/img/2013/09/26/56/comic/6/132aaU7y656.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>刺猬索尼克外传</cite>
+							<em></em>
+						</a>
+						<p>13集全</p>
+					</li>
+										<li>
+						<a title="刺猬索尼克之音速三兄妹" href="http://v.114la.com/anime/39077.html">
+							<img data-original="http://s2.56img.com/images/index/1111/18964_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>刺猬索尼克之音速三兄妹</cite>
+							<em></em>
+						</a>
+						<p>40集全</p>
+					</li>
+									</ul>
+			</div>
+					</div>
+	   		<div class="sideCont fr ingrep">
+			<div class="inTitle">
+				<h6><a title="动漫排行榜" href="http://v.114la.com/top/anime.html">动漫排行榜</a></h6>
+				<div class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">全部</a></li>
+						<li><a href="javascript:;">日韩</a></li>
+						<li><a href="javascript:;">国产</a></li>
+					</ul>
+					<a target="_blank" class="more" href="http://v.114la.com/top/anime.html">更多&gt;&gt;</a>
+				</div>
+			</div>
+			<div style="display:block;" class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/36551.html">
+							<img alt="火影忍者" data-original="http://v.114la.com/img/2013/08/27/v61/comic/3/leZ5560c9E9.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>火影忍者</h4>
+							<p>类型：</p>
+							<p>十多年前一只拥有巨大威力的妖兽“九尾妖狐”袭击了木叶忍者村，当时的第四代火影拼尽全力，以自己的生命为代价将“九尾妖狐”封印在了刚出生的鸣人身上。木叶村终于恢复了平静，但村民们却把鸣人当成像“九尾妖狐”那样的怪物看待，所有人都疏远他。鸣人自小就孤苦无依，一晃十多年过去了，少年鸣人考入了木叶村的忍者学校，结识了好朋友佐助和小樱。佐助是宇智波家族的传人之一，当他还是小孩的时候他的哥哥&mdash;&mdash;一个已经拥有高超忍术的忍者将他们家族的人都杀死了，然后投靠了一直想将木叶村毁灭的大蛇丸，佐助自小就发誓要超越哥哥，为家族报仇。鸣人他们在忍者学校得到了教官卡卡西的精心指点，在他的帮助下去迎接成长中的一次又一次挑战！</p>
+							<a class="p" href="http://v.114la.com/anime/36551.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/anime/36551.html">火影忍者</a><span>285181</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37642.html">
+							<img alt="进击的巨人" data-original="http://v.114la.com/img/2013/08/27/v61/comic/8/254hM13r4sl.png" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>进击的巨人</h4>
+							<p>类型：</p>
+							<p>&#12288;&#12288;进击的巨人全集动画改编自是日本漫画家 谏山创 所著的同名漫画。2009年开始连载于月刊别册少年magazine（创刊号）的漫画。在2010年12月发售3本单行本累计发行量达到180万。进击的巨人获得“这本漫画真厉害2011 男子榜”第1位，2010『NEXTブレイク漫画ランキングBEST50』第2位。被评论为“自亚基拉以来的冲击，自烙印战士以来的绝望”。&#12288;&#12288;在最新期的《别册少年Magazine》1月号（12/8发售）的预告上，正式宣布漫画「进击的巨人」TV动画化确定！并将于2013年春（4月）放送！除「进击的巨人」TV动画化的消息外，另一部在《别册少年Magazine》连载的已宣布TV动画化的作品「恶之华」也正式确定将于明年春（4月）开播。进击的巨人全集动画海报&#12288;&#12288;进击的巨人动漫全集讲述的是悠长的历史之中,人类曾一度因被巨人捕食而崩溃。幸存下来的人们建造了一面巨大的墙壁,防止了巨人的入侵。不过,作为「和平」的代价,人类失去了到墙壁的外面去这一「自由」，主人公艾伦·耶格尔对还没见过的外面的世界抱有兴趣。在他正做着到墙壁的外面去这个梦的时候,毁坏墙壁的大巨人出现了！&#12288;&#12288;进击的巨人全集动画片人物介绍：&#12288;&#12288;艾伦·耶格尔，第104期训练兵?庾湟瞪??o.5。现为调查兵团新入生，在调查兵团王牌团员利威尔的特别作战班中。因自幼曾目睹母亲被巨人迫害，对巨人有着非同他人的愤怒。曾经被父亲注射过不明药物，使其在被巨人吃掉食时第一次巨人化，成功扭转了特罗斯特区的战况。在巨人化时会失去意识，也因此被宪兵团团长和主教在军事法庭上要求判死刑，但在调查兵团团长和士兵长利威尔的保证下以有待观察的情况下加入了调查兵团。&nbsp;&#12288;&#12288;三笠·阿克曼，第104期训练兵?庾湟瞪?氖紫?Ｏ治?鞑楸?判氯肷??苁前谧乓环?丝肆常?氚?缀桶⒚魇乔嗝分衤恚?改冈诠章羧丝诘氖录?斜簧焙Γ?招┳约阂脖环仿簟Ｒ虮挥啄曛?钡陌?拙戎?靡员Ｃ?Ｊ影?孜???娜?俊Ｎ?吮；ぐ?祝?恢弊柚顾?尤氲鞑楸?牛???雷约何薹ㄗ柚故保?龆ǜ??黄鸺尤氩⑾露ň鲂囊?；に?Ｖ灰?俏?税?祝?还苁蔷奕嘶故侨死啵??慷蓟嵘钡簟１黄兰畚?肺耷袄?囊莶摹?/p&gt;&#12288;&#12288;阿明·阿诺德，第104期训练兵?庾湟瞪?Ｏ治?鞑楸?判氯肷??氚?住⑷?易杂紫嗍叮?且?玫呐笥选Ｔ??籽勰慷霉?0M巨人的侵略袭击，因其向士兵求救而让艾伦活了下来。自幼便常被他人欺负，这时艾伦总会出来为阿明解围。是相当要好的朋友。虽然实战技术勉强及格，但在关键时刻总能想出脱困的方法，成功地运用自己的头脑，让巨人化的艾伦干掉多个巨人并将艾伦从人类的炮弹下解救下来，并且献计成功夺回特罗斯特区，让艾伦和三笠都愿意再关键时刻把性命交给他。&nbsp;</p>
+							<a class="p" href="http://v.114la.com/anime/37642.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/anime/37642.html">进击的巨人</a><span>150967</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37813.html">
+							<img alt="海贼王" data-original="http://images.movie.xunlei.com/100x140/546/afac16856c995f29afddd595a2b0ff15.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>海贼王</h4>
+							<p>类型：励志,搞笑,冒险,...</p>
+							<p>&#12288;&#12288;草帽小子路飞等人历尽各种艰难挫折，终于到达了伟大航路后半段新世界。为了确保在这片世界最强的海上航行万无一失，弗兰奇对千阳号进行整修，来帮忙的乌索普、乔巴、布鲁克三人则乘着梅利2号出海，检查其是否正常。布鲁克问起了梅利2号名字的由来，乌索普和乔巴这才意识到布鲁克并不知道梅利号的事。于是乌索普开始为布鲁克讲述起这艘曾经载着众人穿洋过海的船的传奇故事</p>
+							<a class="p" href="http://v.114la.com/anime/37813.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/anime/37813.html">海贼王</a><span>117855</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/17625.html">
+							<img alt="尸兄" data-original="http://i3.letvimg.com/vrs/201305/20/504f4134b4ce4d698b03256d729392fe.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>尸兄</h4>
+							<p>类型：动漫,搞笑,青春,...</p>
+							<p>一次意外的自来水厂污染，打破了屌丝青年白小飞的平淡生活。面对前所未闻超强大尸兄，小飞 毅然踏上了寻找女友的道路。但途中困难重重，身为普通人类的小飞渐渐力不从心。在注射了从网上购买的人体强化药剂后，自身潜能逐渐爆发。过五关斩六将，打败了各式各样的变异大尸兄。变异的源头幕后黑手也渐渐显露除了其锋利的獠牙……</p>
+							<a class="p" href="http://v.114la.com/anime/17625.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/anime/17625.html">尸兄</a><span>44864</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/17570.html">
+							<img alt="熊出没" data-original="http://v.114la.com/img/2013/07/18/qy/comic/9/6KGU2f4p349.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>熊出没</h4>
+							<p>类型：动漫,搞笑,剧情,...</p>
+							<p>《熊出没之丛林总动员》延续《熊出没》和《熊出没之环球大冒险》轻松搞笑的风格，讲述了两头熊&mdash;&mdash;熊大和熊二和光头强身上发生的保护森林和砍伐森林之间的搞笑斗争故事。两熊回到森林，再次见到森林里的朋友们，众人欢聚一堂，光头强追着两熊也回到旧地，双方阵营在森林里再次展开保卫家园和盗砍盗伐之间的环保大战。</p>
+							<a class="p" href="http://v.114la.com/anime/17570.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/anime/17570.html">熊出没</a><span>38892</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/38155.html">
+							<img alt="我叫mt" data-original="http://images.movie.xunlei.com/100x140/989/d897e9f756636fade7495777a0fc743c.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>我叫mt</h4>
+							<p>类型：励志,搞笑,冒险,...</p>
+							<p>&#12288;&#12288;《我叫MT》是一部由七彩映画工作室出品的原创3D网络动画，被众多网友冠之以国产动画新光芒的动画剧集。该动画是以魔兽为核心的人气旺盛的同人网络动画，其原型是暴雪公司著名的网络游戏《魔兽世界》。该片是由一群游戏动漫爱好者共同打造的，其中人物包括MT、傻馒、大小姐等，清馨幽默的风格倍受魔兽玩家的推崇。</p>
+							<a class="p" href="http://v.114la.com/anime/38155.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/anime/38155.html">我叫mt</a><span>36414</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/38542.html">
+							<img alt="死神" data-original="http://i3.letvimg.com/vrs/201309/12/1acacbfe724d4ad296983523c51a87f1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>死神</h4>
+							<p>类型：搞笑,冒险...</p>
+							<p>&#12288;&#12288; &#12288;&#12288;小屁孩比利和曼蒂成功在一场与死神对抗的 limbo 游戏中使诈，因而打败了死神。之后，他们把死神留在人间成为他们的随从，逼迫死神听他们俩的话。借助死神的魔法以及超能力，控制欲强的曼蒂和她的傻傻伙伴比利在与怪物、小妖精与野兽的互动中经历了一次又一次华丽的冒险。</p>
+							<a class="p" href="http://v.114la.com/anime/38542.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/anime/38542.html">死神</a><span>35403</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37568.html">
+							<img alt="名侦探柯南" data-original="http://v.114la.com/img/2013/08/27/v61/comic/7/2P94D3429LT.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>名侦探柯南</h4>
+							<p>类型：</p>
+							<p>某天，柯南因感冒在家休息，期间接到了灰原哀的电话。原来灰原做出了APTX-4869的最新解药，虽然只是试制品，但一心恢复工藤新一身份的柯南仍然迫不及待赶往阿笠博士的实验室。服药后，新一终于回到原有状态，不过周遭的一切却似乎有所改变：博士院子里的树长高了，出现许多新的建筑物，体育老师变得苍老，班里的同学全是陌生面孔，甚至元太、光彦和步美也都变成高中生的模样。     他找到同样变成高中生的灰原，得知自己在过去的10年里不断服用解毒药导致产生抗药性，最近5年已无法变会原有状态。失落的柯南无奈看着周遭的转变，更让他倍受打击的是，小兰决定放弃杳无音讯的新一而嫁给新出老师。他们的恋情亦梦以幻，何以为终……</p>
+							<a class="p" href="http://v.114la.com/anime/37568.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/anime/37568.html">名侦探柯南</a><span>26147</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/35211.html">
+							<img alt="妖精的尾巴" data-original="http://v.114la.com/img/2013/08/26/v61/comic/8/08Bui4456u9.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>妖精的尾巴</h4>
+							<p>类型：</p>
+							<p>OAD 01：妖精的尾巴 总集篇
+OAD 02：欢迎来到 Fairy Hills!!
+OAD 03：妖精学园 不良少年与大姐头
+OAD 04：Memory Days</p>
+							<a class="p" href="http://v.114la.com/anime/35211.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/anime/35211.html">妖精的尾巴</a><span>20403</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37107.html">
+							<img alt="十万个冷笑话" data-original="http://v.114la.com/img/2013/08/27/v61/comic/5/F99V164xcH5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>十万个冷笑话</h4>
+							<p>类型：</p>
+							<p>&#12288;&#12288;十万个冷笑话粤语版全集原作是一部连载于有妖气原创漫画梦工厂的国产漫画，由一系列吐槽短篇组成，短篇之间目前看似没关系，但关系又非常微妙，语言也十分符合网民需求，被誉为“中国版的日和”。十万个冷笑话粤语版全集图片</p>
+							<a class="p" href="http://v.114la.com/anime/37107.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/anime/37107.html">十万个冷笑话</a><span>19309</span></p>
+				</li>
+									
+				</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+									<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/36551.html">
+							<img alt="火影忍者" data-original="http://v.114la.com/img/2013/08/27/v61/comic/3/leZ5560c9E9.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>火影忍者</h4>
+							<p>类型：</p>
+							<p>十多年前一只拥有巨大威力的妖兽“九尾妖狐”袭击了木叶忍者村，当时的第四代火影拼尽全力，以自己的生命为代价将“九尾妖狐”封印在了刚出生的鸣人身上。木叶村终于恢复了平静，但村民们却把鸣人当成像“九尾妖狐”那样的怪物看待，所有人都疏远他。鸣人自小就孤苦无依，一晃十多年过去了，少年鸣人考入了木叶村的忍者学校，结识了好朋友佐助和小樱。佐助是宇智波家族的传人之一，当他还是小孩的时候他的哥哥&mdash;&mdash;一个已经拥有高超忍术的忍者将他们家族的人都杀死了，然后投靠了一直想将木叶村毁灭的大蛇丸，佐助自小就发誓要超越哥哥，为家族报仇。鸣人他们在忍者学校得到了教官卡卡西的精心指点，在他的帮助下去迎接成长中的一次又一次挑战！</p>
+							<a class="p" href="http://v.114la.com/anime/36551.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/anime/36551.html">火影忍者</a><span>285181</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37642.html">
+							<img alt="进击的巨人" data-original="http://v.114la.com/img/2013/08/27/v61/comic/8/254hM13r4sl.png" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>进击的巨人</h4>
+							<p>类型：</p>
+							<p>&#12288;&#12288;进击的巨人全集动画改编自是日本漫画家 谏山创 所著的同名漫画。2009年开始连载于月刊别册少年magazine（创刊号）的漫画。在2010年12月发售3本单行本累计发行量达到180万。进击的巨人获得“这本漫画真厉害2011 男子榜”第1位，2010『NEXTブレイク漫画ランキングBEST50』第2位。被评论为“自亚基拉以来的冲击，自烙印战士以来的绝望”。&#12288;&#12288;在最新期的《别册少年Magazine》1月号（12/8发售）的预告上，正式宣布漫画「进击的巨人」TV动画化确定！并将于2013年春（4月）放送！除「进击的巨人」TV动画化的消息外，另一部在《别册少年Magazine》连载的已宣布TV动画化的作品「恶之华」也正式确定将于明年春（4月）开播。进击的巨人全集动画海报&#12288;&#12288;进击的巨人动漫全集讲述的是悠长的历史之中,人类曾一度因被巨人捕食而崩溃。幸存下来的人们建造了一面巨大的墙壁,防止了巨人的入侵。不过,作为「和平」的代价,人类失去了到墙壁的外面去这一「自由」，主人公艾伦·耶格尔对还没见过的外面的世界抱有兴趣。在他正做着到墙壁的外面去这个梦的时候,毁坏墙壁的大巨人出现了！&#12288;&#12288;进击的巨人全集动画片人物介绍：&#12288;&#12288;艾伦·耶格尔，第104期训练兵?庾湟瞪??o.5。现为调查兵团新入生，在调查兵团王牌团员利威尔的特别作战班中。因自幼曾目睹母亲被巨人迫害，对巨人有着非同他人的愤怒。曾经被父亲注射过不明药物，使其在被巨人吃掉食时第一次巨人化，成功扭转了特罗斯特区的战况。在巨人化时会失去意识，也因此被宪兵团团长和主教在军事法庭上要求判死刑，但在调查兵团团长和士兵长利威尔的保证下以有待观察的情况下加入了调查兵团。&nbsp;&#12288;&#12288;三笠·阿克曼，第104期训练兵?庾湟瞪?氖紫?Ｏ治?鞑楸?判氯肷??苁前谧乓环?丝肆常?氚?缀桶⒚魇乔嗝分衤恚?改冈诠章羧丝诘氖录?斜簧焙Γ?招┳约阂脖环仿簟Ｒ虮挥啄曛?钡陌?拙戎?靡员Ｃ?Ｊ影?孜???娜?俊Ｎ?吮；ぐ?祝?恢弊柚顾?尤氲鞑楸?牛???雷约何薹ㄗ柚故保?龆ǜ??黄鸺尤氩⑾露ň鲂囊?；に?Ｖ灰?俏?税?祝?还苁蔷奕嘶故侨死啵??慷蓟嵘钡簟１黄兰畚?肺耷袄?囊莶摹?/p&gt;&#12288;&#12288;阿明·阿诺德，第104期训练兵?庾湟瞪?Ｏ治?鞑楸?判氯肷??氚?住⑷?易杂紫嗍叮?且?玫呐笥选Ｔ??籽勰慷霉?0M巨人的侵略袭击，因其向士兵求救而让艾伦活了下来。自幼便常被他人欺负，这时艾伦总会出来为阿明解围。是相当要好的朋友。虽然实战技术勉强及格，但在关键时刻总能想出脱困的方法，成功地运用自己的头脑，让巨人化的艾伦干掉多个巨人并将艾伦从人类的炮弹下解救下来，并且献计成功夺回特罗斯特区，让艾伦和三笠都愿意再关键时刻把性命交给他。&nbsp;</p>
+							<a class="p" href="http://v.114la.com/anime/37642.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/anime/37642.html">进击的巨人</a><span>150967</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37813.html">
+							<img alt="海贼王" data-original="http://images.movie.xunlei.com/100x140/546/afac16856c995f29afddd595a2b0ff15.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>海贼王</h4>
+							<p>类型：励志,搞笑,冒险,...</p>
+							<p>&#12288;&#12288;草帽小子路飞等人历尽各种艰难挫折，终于到达了伟大航路后半段新世界。为了确保在这片世界最强的海上航行万无一失，弗兰奇对千阳号进行整修，来帮忙的乌索普、乔巴、布鲁克三人则乘着梅利2号出海，检查其是否正常。布鲁克问起了梅利2号名字的由来，乌索普和乔巴这才意识到布鲁克并不知道梅利号的事。于是乌索普开始为布鲁克讲述起这艘曾经载着众人穿洋过海的船的传奇故事</p>
+							<a class="p" href="http://v.114la.com/anime/37813.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/anime/37813.html">海贼王</a><span>117855</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/38542.html">
+							<img alt="死神" data-original="http://i3.letvimg.com/vrs/201309/12/1acacbfe724d4ad296983523c51a87f1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>死神</h4>
+							<p>类型：搞笑,冒险...</p>
+							<p>&#12288;&#12288; &#12288;&#12288;小屁孩比利和曼蒂成功在一场与死神对抗的 limbo 游戏中使诈，因而打败了死神。之后，他们把死神留在人间成为他们的随从，逼迫死神听他们俩的话。借助死神的魔法以及超能力，控制欲强的曼蒂和她的傻傻伙伴比利在与怪物、小妖精与野兽的互动中经历了一次又一次华丽的冒险。</p>
+							<a class="p" href="http://v.114la.com/anime/38542.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/anime/38542.html">死神</a><span>35403</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37568.html">
+							<img alt="名侦探柯南" data-original="http://v.114la.com/img/2013/08/27/v61/comic/7/2P94D3429LT.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>名侦探柯南</h4>
+							<p>类型：</p>
+							<p>某天，柯南因感冒在家休息，期间接到了灰原哀的电话。原来灰原做出了APTX-4869的最新解药，虽然只是试制品，但一心恢复工藤新一身份的柯南仍然迫不及待赶往阿笠博士的实验室。服药后，新一终于回到原有状态，不过周遭的一切却似乎有所改变：博士院子里的树长高了，出现许多新的建筑物，体育老师变得苍老，班里的同学全是陌生面孔，甚至元太、光彦和步美也都变成高中生的模样。     他找到同样变成高中生的灰原，得知自己在过去的10年里不断服用解毒药导致产生抗药性，最近5年已无法变会原有状态。失落的柯南无奈看着周遭的转变，更让他倍受打击的是，小兰决定放弃杳无音讯的新一而嫁给新出老师。他们的恋情亦梦以幻，何以为终……</p>
+							<a class="p" href="http://v.114la.com/anime/37568.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/anime/37568.html">名侦探柯南</a><span>26147</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/35211.html">
+							<img alt="妖精的尾巴" data-original="http://v.114la.com/img/2013/08/26/v61/comic/8/08Bui4456u9.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>妖精的尾巴</h4>
+							<p>类型：</p>
+							<p>OAD 01：妖精的尾巴 总集篇
+OAD 02：欢迎来到 Fairy Hills!!
+OAD 03：妖精学园 不良少年与大姐头
+OAD 04：Memory Days</p>
+							<a class="p" href="http://v.114la.com/anime/35211.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/anime/35211.html">妖精的尾巴</a><span>20403</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37724.html">
+							<img alt="全职猎人" data-original="http://v.114la.com/img/2013/08/27/v61/comic/5/8w9L7v319DA.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>全职猎人</h4>
+							<p>类型：</p>
+							<p>全职猎人剧场版最后的任务全集动画预定2013年12月27日在日本上映&#12288;&#12288;全职猎人剧场版最后的任务全集动画全名全职猎人剧场版THE LAST MISSION，是全职猎人第二部剧场版动画，剧情大概仍是描写猎人协会的同人剧情（不能指望懒到死的富坚义博会写剧场版剧本）。监督是川口敬一郎，脚本是岸间信明。全职猎人剧场版最后的任务全集动画海报&#12288;&#12288;全职猎人全集动画讲述主人公小杰自小在鲸鱼岛长大，与米特阿姨和阿婆相依为命。性格开朗的他，有着能与动物沟通的灵性。因为无父无母，小杰将米特阿姨当作自己的生母爱着。直到9岁那一年，小杰在森林里被一个青年男子搭救。从他口中小杰得知自己的父亲还活着且职业是猎人。全职猎人剧场版最后的任务全集动画海报</p>
+							<a class="p" href="http://v.114la.com/anime/37724.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/anime/37724.html">全职猎人</a><span>17323</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/36856.html">
+							<img alt="只有神知道的世界" data-original="http://v.114la.com/img/2013/08/27/v61/comic/7/6FM2F29M0z8.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>只有神知道的世界</h4>
+							<p>类型：</p>
+							<p>只有神知道的世界第三季全集动画改编自若木民喜在《周刊少年 Sunday》上2008年19号开始进行连载的爱情喜剧同名漫画作品，是《只有神知道的世界》系列动画作品的第三季。
+只有神知道的世界第三季全集动画讲述的是就读于舞岛学园高中部的桂木桂马是个喜欢恋爱养成游戏（Galgame）的高中生。曾经成功攻略过10000名女生（游戏中），有着能够攻略任何类型女性的能力，是拥有一切galgame攻略的网站“落とし神”的管理者，以高超的技术被广大机友尊称为“落とし神”（攻略之神、攻陷之神）。
+&#12288;&#12288;某日，一名少女从天而降来到他的面前。这名少女名叫艾露西，从地狱远道而来的她委托桂马为她捕获“驱魂”(驱け魂)的协力者。方法是使被附身的人类恋爱，填补她的心灵缝隙，从而把因在心里无处容身而逃出来的驱魂捕获。对现实生活中的女孩退避三舍的桂马自然毫不犹豫的拒绝了艾露西的要求，但是由于和艾露西结成的契约危及生命，所以他不得不心不甘情不愿的承诺帮忙。于是，GAL界的“攻略之神”桂木桂马终于以三次元世界的女生发动了攻略。
+&#12288;&#12288;只有神知道的世界第三季全集人物简介：
+&#12288;&#12288;桂木桂马，人称攻略之神的Galgame达人高中生。开始时已攻下第10000名女主角，玩的游戏接近5000部。绝招（攻略之神模式）是同时攻略6部游戏，极限是同时攻略24部ADV游戏。一直上课玩游戏，可是学习很好，基本全科满分，但是有一次因为那些被攻略对象因而得过一次99分。同学都称他为“眼镜宅”（オタメガネ）。
+&#12288;&#12288;艾露西，本作女主角，来到桂马家后自称叫做桂木艾露西，桂马妈妈对她昵称“小艾露”(エルちゃん)。地狱的冥界法治省极东支局的“驱魂队”其中一个恶魔，自己有一个姐姐貌似十分优秀。在进入驱魂队之前当了300年的地狱扫除人员，现在也仅是三等公务恶魔。头上戴有骷髅的发饰，这个发饰也是驱魂探测器。
+&#12288;&#12288;白娅，和艾鲁西是同学，以第一名的成绩毕业，手上拿的大镰刀是学年第一名毕业的象征“证明之镰”。在学生时代经常帮艾鲁西，而艾鲁西也相当尊敬她。经常教训不成器的艾鲁西，但其实两人是好友。飞机场，桂马曾说过他的身材都比她好。
+&#12288;&#12288;鲇川天理，女主角之一，性格内向不善表达，总是玩噼啪噼啪。已知关系好的朋友只有榛原七香，特技是变魔术。10年前住在桂马家的斜侧，不过由于地震倒塌，搬到了远方。现在又搬到了桂马隔壁的家（因为艾露西的某件事使得桂马家隔壁的人搬走了）。</p>
+							<a class="p" href="http://v.114la.com/anime/36856.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/anime/36856.html">只有神知道的世界</a><span>15115</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/52414.html">
+							<img alt="蜡笔小新" data-original="http://img36.pplive.cn/2008/11/01/16482248041_230X306.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>蜡笔小新</h4>
+							<p>类型：亲子,搞笑...</p>
+							<p>小新是一个年仅５岁，正在幼儿园上学的小男孩。他家住在春日市的市郊，最初小新与父亲广志和母亲美冴组成一个三人家族。随后又添加了流浪狗小白，随着故事展开，又加入了新的成员妹妹野原葵（漫画版：野原向日葵）。在最新的故事里，美冴的妹妹小山梦冴住到了野原家（不过找到工作后又离开了）。作者臼井仪人从日常生活中的故事取材，叙述小新在日常生活中所发生的事情。小新是一个有点调皮的小孩，他喜欢别出心裁，富于幻想。</p>
+							<a class="p" href="http://v.114la.com/anime/52414.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/anime/52414.html">蜡笔小新</a><span>14888</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/36460.html">
+							<img alt="银魂" data-original="http://v.114la.com/img/2013/08/27/v61/comic/2/91x2P1mi452.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>银魂</h4>
+							<p>类型：</p>
+							<p>&#12288;&#12288;江户时代末期（本作的20年前），被称为“天人”（あまんと）的谜之异星人来袭。于是地球人与天人之间的战争瞬即爆发，为数众多的武士和攘夷派志士都参与与天人的战斗。幕府见识到天人强大的实力后，最终向天人低头，放弃武士不管，擅自与天人签订不平等条约，准许他们入国。其后更颁布了“废刀令”，夺走了武士的刀，使他们无力反抗。自此，天人横行霸道，幕府为天人所影响，甚至被控制，成为了“傀儡政权”。在这样的时代，有一个落魄，但是却一直贯彻自己武士道的男人与同伴的生活的故事。也有人称万事屋银魂的诞生源于作者和编辑的一次激烈争执，编辑希望空知英秋搭上时下热门题材“幕末新撰组”的顺风车，但空知英秋却一心想画幻想漫画，在争执不下的情况下，空知英秋终于爆发了，大喊：“那就他妈的让新撰组和外星人对打吧！”&mdash;&mdash;于是《银魂》就诞生了。坂田银时所经营的万事屋。号称做万事其实万事不做的“事务所”。天人掌权后武士没落，身为武士的银时为了维生而建立万事屋，接受他人的请求；只要付钱，什么工作都会做（前提是不违背他的武士道）。</p>
+							<a class="p" href="http://v.114la.com/anime/36460.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/anime/36460.html">银魂</a><span>11751</span></p>
+				</li>
+								</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+								<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/17625.html">
+							<img alt="尸兄" data-original="http://i3.letvimg.com/vrs/201305/20/504f4134b4ce4d698b03256d729392fe.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>尸兄</h4>
+							<p>类型：动漫,搞笑,青春,...</p>
+							<p>一次意外的自来水厂污染，打破了屌丝青年白小飞的平淡生活。面对前所未闻超强大尸兄，小飞 毅然踏上了寻找女友的道路。但途中困难重重，身为普通人类的小飞渐渐力不从心。在注射了从网上购买的人体强化药剂后，自身潜能逐渐爆发。过五关斩六将，打败了各式各样的变异大尸兄。变异的源头幕后黑手也渐渐显露除了其锋利的獠牙……</p>
+							<a class="p" href="http://v.114la.com/anime/17625.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/anime/17625.html">尸兄</a><span>44864</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/17570.html">
+							<img alt="熊出没" data-original="http://v.114la.com/img/2013/07/18/qy/comic/9/6KGU2f4p349.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>熊出没</h4>
+							<p>类型：动漫,搞笑,剧情,...</p>
+							<p>《熊出没之丛林总动员》延续《熊出没》和《熊出没之环球大冒险》轻松搞笑的风格，讲述了两头熊&mdash;&mdash;熊大和熊二和光头强身上发生的保护森林和砍伐森林之间的搞笑斗争故事。两熊回到森林，再次见到森林里的朋友们，众人欢聚一堂，光头强追着两熊也回到旧地，双方阵营在森林里再次展开保卫家园和盗砍盗伐之间的环保大战。</p>
+							<a class="p" href="http://v.114la.com/anime/17570.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/anime/17570.html">熊出没</a><span>38892</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37107.html">
+							<img alt="十万个冷笑话" data-original="http://v.114la.com/img/2013/08/27/v61/comic/5/F99V164xcH5.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>十万个冷笑话</h4>
+							<p>类型：</p>
+							<p>&#12288;&#12288;十万个冷笑话粤语版全集原作是一部连载于有妖气原创漫画梦工厂的国产漫画，由一系列吐槽短篇组成，短篇之间目前看似没关系，但关系又非常微妙，语言也十分符合网民需求，被誉为“中国版的日和”。十万个冷笑话粤语版全集图片</p>
+							<a class="p" href="http://v.114la.com/anime/37107.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/anime/37107.html">十万个冷笑话</a><span>19309</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/39516.html">
+							<img alt="喜羊羊与灰太狼" data-original="http://v.114la.com/img/2013/09/09/ct/comic/7/ud105r06uz7.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>喜羊羊与灰太狼</h4>
+							<p>类型：喜羊羊与灰太狼之给...</p>
+							<p>新一年青青草原迎来很多变化,小灰灰长大了，却整天在家里面捣乱。为了让小灰灰能成为一只真正的狼，灰太狼送他去上学了。懒羊羊也有改变，某天他在苹果树下睡大觉，树上突然掉下一个苹果……
+
+</p>
+							<a class="p" href="http://v.114la.com/anime/39516.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/anime/39516.html">喜羊羊与灰太狼</a><span>13665</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37251.html">
+							<img alt="贝瓦儿歌" data-original="http://v.114la.com/img/2013/08/27/v61/comic/7/0iL4m6p93e9.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>贝瓦儿歌</h4>
+							<p>类型：</p>
+							<p>贝瓦儿歌是贝瓦网旗下的产品。它是集儿童歌谣、经典儿歌、三字经、古诗为一体的儿歌汇合，具有动画精美、节奏欢快、语言简单、易学易懂等特点，深受广大小朋友和家长的喜爱...</p>
+							<a class="p" href="http://v.114la.com/anime/37251.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/anime/37251.html">贝瓦儿歌</a><span>9944</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/35137.html">
+							<img alt="秦时明月之万里长城" data-original="http://v.114la.com/img/2013/08/26/v61/comic/7/F55Y1A4E056.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>秦时明月之万里长城</h4>
+							<p>类型：</p>
+							<p>自从机关城崩塌，墨家抵抗势力几乎被全部清除。秦帝国又回到太平盛世的迷梦中……n      咸阳宫中的嬴政一边动用无数劳工营造万里长城，一边进行着一些更为精密的计划。现在这个计划已经接近完成，由阴阳家协助完成的巨艇“蜃楼”已经建造完毕。它壮丽精绝的身姿浮现海平面彼端，宛如人人梦想中的海上仙山。为了解开巨艇“蜃楼”的疑团，各家各派势力慢慢汇聚到这座平静的海边小城。此时，故事主角天明和少羽为了避开秦兵追捕，正在儒家庄园学习和生活。而接下来各种奇异事件在此地发生，小城的平静也被完全打破。 &#12288;&#12288;所有的生死仇，家国恨，都将在那个时刻凝结。所有人的目光，都将在那个地点汇聚！n &#12288; 芸芸众生不过是一块块城砖，用来铸造帝国的万里长城。</p>
+							<a class="p" href="http://v.114la.com/anime/35137.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/anime/35137.html">秦时明月之万里长城</a><span>8089</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/2585.html">
+							<img alt="熊出没之过年" data-original="http://v.114la.com/img/2013/07/19/qy/comic/6/824hJx69u97.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>熊出没之过年</h4>
+							<p>类型：亲子,益智,搞笑,...</p>
+							<p>春节前夕，没钱回家的光头强不得不努力给李老板砍树来赚取回家的车票。因此，光头强与保护丛林的熊大、熊二继续展开斗争。熊兄弟胜利后，却被光头强不能和家人相聚的悲伤所感动，于是它们想尽办法帮助光头强回家，默默地在暗中协助光头强，即使被光头强误解成绑架也无怨无悔。历经波折，光头强终于在新年与家人团聚了。</p>
+							<a class="p" href="http://v.114la.com/anime/2585.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/anime/2585.html">熊出没之过年</a><span>6905</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37539.html">
+							<img alt="啦啦啦德玛西亚" data-original="http://v.114la.com/img/2013/08/27/v61/comic/4/8u0u6M3eT78.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>啦啦啦德玛西亚</h4>
+							<p>类型：</p>
+							<p>《啦啦啦德玛西亚》是根据目前炙手可热的英雄对战网游《英雄联盟》为故事背景，剧本取材于玩家在游戏中各种喜闻乐见的游戏文化，以幽默、轻松、搞笑的故事风格，真实还原英雄联盟的玩家在游戏中的乐趣和对战生活。</p>
+							<a class="p" href="http://v.114la.com/anime/37539.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/anime/37539.html">啦啦啦德玛西亚</a><span>6241</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/37584.html">
+							<img alt="铠甲勇士" data-original="http://v.114la.com/img/2013/08/27/v61/comic/4/0T7316HR741.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>铠甲勇士</h4>
+							<p>类型：</p>
+							<p>五千年前，宇宙的最大黑暗势力-暗影大帝对太阳系有着旺盛生命体的地球发动侵略，并派出了暗影五行魔率领了50个魔灵石（魔灵石能与地球上的生命结合为暗影异能兽）来到了地球，暗影五行魔当时选中了有着高度文明的古中国作为首要毁灭的对象，太阳系的守护者-太阳星，为了预防地球被暗影势力所吞噬毁灭，于是向古中国发射了五颗光影石，这五颗光影石分别能与形成地球万物的五行元素结合，形成五套能在光和影中穿梭战斗的铠甲-光影铠甲，而能召唤这些光影铠甲的人，就是当初这五颗光影石分别落地的五个村落中的人们，不管时代的变迁，只要这些村人遗传的血液仍在，他们就能透过光影石的力量，召唤光影铠甲来执行与暗影集团的神圣战斗!</p>
+							<a class="p" href="http://v.114la.com/anime/37584.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/anime/37584.html">铠甲勇士</a><span>5741</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/anime/35063.html">
+							<img alt="偷星九月天" data-original="http://v.114la.com/img/2013/08/26/v61/comic/7/0t45apw6F86.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>偷星九月天</h4>
+							<p>类型：</p>
+							<p>《偷星九月天》是在《知音漫客》连载的大人气国产漫画，作者为新生代漫画创作者周洪滨、小松等人。讲述了主人公琉星追逐大盗九天月的过程发生的离奇故事，作品被誉为时尚轻小说与唯美青春漫画的完美结合。</p>
+							<a class="p" href="http://v.114la.com/anime/35063.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/anime/35063.html">偷星九月天</a><span>5661</span></p>
+				</li>
+								</ul>
+			</div>			
+		</div>
+	</div>
+	<div class="comwrap clearfix">
+							   		<div class="leftSide fl ingrep">
+			<dl class="inTitle">
+				<dt>综艺节目</dt>
+				<dd class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">最热</a></li>
+												<li><a href="javascript:;">时尚</a></li>
+												<li><a href="javascript:;">选秀</a></li>
+												<li><a href="javascript:;">综艺</a></li>
+												<li><a href="javascript:;">访谈</a></li>
+											</ul>
+					<a class="more" href="http://v.114la.com/zongyi/">更多&gt;&gt;</a>
+				</dd>
+			</dl>
+						<div style="display:block;" class="ingrep-Cont">
+				<div class="clearfix rowleft">
+										<div class="bgsummar fl">
+						<a title="康熙来了" href="http://v.114la.com/zongyi/18337.html">
+							<img alt="康熙来了" data-original="http://v.114la.com/img/focus_img/201309/137999069051034.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>
+								<strong>康熙来了</strong>
+								最新20130925期
+							</cite>
+						</a>
+						<p>康熙来了20130424，人人都向往演艺界的工作，一般人看似简单唱唱跳跳，可是台上十分钟，台下十年功，想在演艺界成功立足说、学、逗、唱，可是要样样通，但是在光鲜亮丽的背后，又...<em></em></p>
+					</div>
+										<ul class="sumgroup fr clearfix">
+												<li class="">
+							<a title="天天向上" href="http://v.114la.com/zongyi/18328.html">
+								<img alt="天天向上" data-original="http://v.114la.com/img/focus_img/201309/137991698395075.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>天天向上</cite>
+								<em></em>
+							</a>
+							<p>最新20130920期</p>
+						</li>
+												<li class="">
+							<a title="Running Man" href="http://v.114la.com/zongyi/18385.html">
+								<img alt="Running Man" data-original="http://v.114la.com/img/focus_img/201309/137811298311153.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>Running Man</cite>
+								<em></em>
+							</a>
+							<p>最新20130922期</p>
+						</li>
+												<li class="">
+							<a title="非常完美" href="http://v.114la.com/zongyi/18407.html">
+								<img alt="非常完美" data-original="http://v.114la.com/img/focus_img/201309/137886852185076.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>非常完美</cite>
+								<em></em>
+							</a>
+							<p>最新20130922期</p>
+						</li>
+												<li class="">
+							<a title="非诚勿扰" href="http://v.114la.com/zongyi/18322.html">
+								<img alt="非诚勿扰" data-original="http://v.114la.com/img/focus_img/201309/137990530722355.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>非诚勿扰</cite>
+								<em></em>
+							</a>
+							<p>最新20130922期</p>
+						</li>
+												<li class="">
+							<a title="武林风" href="http://v.114la.com/zongyi/18367.html">
+								<img alt="武林风" data-original="http://v.114la.com/img/focus_img/201309/137990585882447.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>武林风</cite>
+								<em></em>
+							</a>
+							<p>最新20130925期</p>
+						</li>
+												<li class="">
+							<a title="中国梦之声" href="http://v.114la.com/zongyi/18329.html">
+								<img alt="中国梦之声" data-original="http://v.114la.com/img/focus_img/201308/137784283379662.jpg" src="http://v.114la.com/static/images/loading.gif">
+								<cite>中国梦之声</cite>
+								<em></em>
+							</a>
+							<p>最新20130825期</p>
+						</li>
+											</ul>
+				</div>
+			</div>
+									<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="健康相对论" href="http://v.114la.com/zongyi/18341.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/3/1sIo0Zl8899.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>健康相对论</cite>
+							<em></em>
+						</a>
+						<p>最新20130925期</p>
+					</li>
+										<li>
+						<a title="最耀B" href="http://v.114la.com/zongyi/39103.html">
+							<img data-original="http://s2.56img.com/images/index/1111/21864_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>最耀B</cite>
+							<em></em>
+						</a>
+						<p>最新20130920期</p>
+					</li>
+										<li>
+						<a title="湖南卫视给力2011跨年演唱会" href="http://v.114la.com/zongyi/18432.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/7/Mu825ZE954h.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>湖南卫视给力2011跨年演唱会</cite>
+							<em></em>
+						</a>
+						<p>最新20110101期</p>
+					</li>
+										<li>
+						<a title="帕帕帮" href="http://v.114la.com/zongyi/18420.html">
+							<img data-original="http://pic0.qiyipic.com/thumb/20130909/a615407u4.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>帕帕帮</cite>
+							<em></em>
+						</a>
+						<p>最新20130923期</p>
+					</li>
+										<li>
+						<a title="China艺术客" href="http://v.114la.com/zongyi/52866.html">
+							<img data-original="http://s2.56img.com/images/index/1111/22125_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>China艺术客</cite>
+							<em></em>
+						</a>
+						<p>最新20130924期</p>
+					</li>
+										<li>
+						<a title="宅女食验室" href="http://v.114la.com/zongyi/39110.html">
+							<img data-original="http://s2.56img.com/images/index/1111/21212_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>宅女食验室</cite>
+							<em></em>
+						</a>
+						<p>最新20130918期</p>
+					</li>
+										<li>
+						<a title="健康肌础" href="http://v.114la.com/zongyi/18497.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/10/530E29J5kyC.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>健康肌础</cite>
+							<em></em>
+						</a>
+						<p>最新20130919期</p>
+					</li>
+										<li>
+						<a title="黑龙江卫视美丽俏佳人" href="http://v.114la.com/zongyi/18624.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/6/4K6NE45612Q.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>黑龙江卫视美丽俏佳人</cite>
+							<em></em>
+						</a>
+						<p>最新20130925期</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="中国梦之声" href="http://v.114la.com/zongyi/18329.html">
+							<img data-original="http://v.114la.com/img/2013/08/02/pp/variety/7/11IiQ372F70.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>中国梦之声</cite>
+							<em></em>
+						</a>
+						<p>最新20130825期</p>
+					</li>
+										<li>
+						<a title="快乐男声2013" href="http://v.114la.com/zongyi/18335.html">
+							<img data-original="http://pic5.qiyipic.com/image/20130920/v_100242253_m_601_m1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>快乐男声2013</cite>
+							<em></em>
+						</a>
+						<p>最新20130920期</p>
+					</li>
+										<li>
+						<a title="好声音后传之酷我真声音" href="http://v.114la.com/zongyi/18314.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/6/B6Vn885152I.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>好声音后传之酷我真声音</cite>
+							<em></em>
+						</a>
+						<p>最新20120930期</p>
+					</li>
+										<li>
+						<a title="快乐女声" href="http://v.114la.com/zongyi/18316.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/7/23Hm89P5g3w.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>快乐女声</cite>
+							<em></em>
+						</a>
+						<p>最新20110916期</p>
+					</li>
+										<li>
+						<a title="我是歌手" href="http://v.114la.com/zongyi/18318.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/7/1g30zD6420s.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>我是歌手</cite>
+							<em></em>
+						</a>
+						<p>最新20130412期</p>
+					</li>
+										<li>
+						<a title="中国达人秀第3季" href="http://v.114la.com/zongyi/18333.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/1/56SV7vg08K1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>中国达人秀第3季</cite>
+							<em></em>
+						</a>
+						<p>最新20120121期</p>
+					</li>
+										<li>
+						<a title="一声所爱大地飞歌" href="http://v.114la.com/zongyi/18686.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/3/a5312vi534G.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>一声所爱大地飞歌</cite>
+							<em></em>
+						</a>
+						<p>最新20130821期</p>
+					</li>
+										<li>
+						<a title="非你莫属" href="http://v.114la.com/zongyi/18372.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/7/8TO2M21L26G.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>非你莫属</cite>
+							<em></em>
+						</a>
+						<p>最新20130923期</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="爸爸我们去哪儿" href="http://v.114la.com/zongyi/28730.html">
+							<img data-original="http://pic5.qiyipic.com/image/20130915/v_100184987_m_601_m1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>爸爸我们去哪儿</cite>
+							<em></em>
+						</a>
+						<p>最新20130922期</p>
+					</li>
+										<li>
+						<a title="中国梦之声" href="http://v.114la.com/zongyi/18329.html">
+							<img data-original="http://v.114la.com/img/2013/08/02/pp/variety/7/11IiQ372F70.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>中国梦之声</cite>
+							<em></em>
+						</a>
+						<p>最新20130825期</p>
+					</li>
+										<li>
+						<a title="爱情连连看" href="http://v.114la.com/zongyi/18381.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/10/860DU42N566.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>爱情连连看</cite>
+							<em></em>
+						</a>
+						<p>最新20130924期</p>
+					</li>
+										<li>
+						<a title="快乐男声2013" href="http://v.114la.com/zongyi/18335.html">
+							<img data-original="http://pic5.qiyipic.com/image/20130920/v_100242253_m_601_m1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>快乐男声2013</cite>
+							<em></em>
+						</a>
+						<p>最新20130920期</p>
+					</li>
+										<li>
+						<a title="超级演说家" href="http://v.114la.com/zongyi/27730.html">
+							<img data-original="http://pic1.qiyipic.com/thumb/20130802/a569494u2.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>超级演说家</cite>
+							<em></em>
+						</a>
+						<p>最新20130919期</p>
+					</li>
+										<li>
+						<a title="快乐大本营" href="http://v.114la.com/zongyi/18315.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/9/9X8i282RM19.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>快乐大本营</cite>
+							<em></em>
+						</a>
+						<p>最新20130921期</p>
+					</li>
+										<li>
+						<a title="我们约会吧" href="http://v.114la.com/zongyi/18376.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/5/822137j3Ghl.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>我们约会吧</cite>
+							<em></em>
+						</a>
+						<p>最新20130925期</p>
+					</li>
+										<li>
+						<a title="快乐男声2013之男声学院" href="http://v.114la.com/zongyi/18343.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/5/9zh8256H3GC.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>快乐男声2013之男声学院</cite>
+							<em></em>
+						</a>
+						<p>最新20130707期</p>
+					</li>
+									</ul>
+			</div>
+						<div class="ingrep-Cont">
+				<ul class="sumgroup entire clearfix">
+										<li>
+						<a title="康熙来了" href="http://v.114la.com/zongyi/18337.html">
+							<img data-original="http://www.qiyipic.com/thumb/20100624/vrsa3927.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>康熙来了</cite>
+							<em></em>
+						</a>
+						<p>最新20130925期</p>
+					</li>
+										<li>
+						<a title="天天向上" href="http://v.114la.com/zongyi/18328.html">
+							<img data-original="http://pic8.qiyipic.com/thumb/20130906/a620409u2.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>天天向上</cite>
+							<em></em>
+						</a>
+						<p>最新20130920期</p>
+					</li>
+										<li>
+						<a title="超级访问" href="http://v.114la.com/zongyi/18390.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/6/wD22O22968T.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>超级访问</cite>
+							<em></em>
+						</a>
+						<p>最新20130924期</p>
+					</li>
+										<li>
+						<a title="龙斌大话电影" href="http://v.114la.com/zongyi/52869.html">
+							<img data-original="http://s2.56img.com/images/index/1111/22121_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>龙斌大话电影</cite>
+							<em></em>
+						</a>
+						<p>最新20130923期</p>
+					</li>
+										<li>
+						<a title="综艺劲爆点" href="http://v.114la.com/zongyi/18344.html">
+							<img data-original="http://v.114la.com/img/2013/09/22/qy/variety/2/532Ce32F901.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>综艺劲爆点</cite>
+							<em></em>
+						</a>
+						<p>最新20130926期</p>
+					</li>
+										<li>
+						<a title="青春那些事儿" href="http://v.114la.com/zongyi/18397.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/4/1303YD2A6TH.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>青春那些事儿</cite>
+							<em></em>
+						</a>
+						<p>最新20130926期</p>
+					</li>
+										<li>
+						<a title="最耀B" href="http://v.114la.com/zongyi/39103.html">
+							<img data-original="http://s2.56img.com/images/index/1111/21864_d.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>最耀B</cite>
+							<em></em>
+						</a>
+						<p>最新20130920期</p>
+					</li>
+										<li>
+						<a title="以德服人" href="http://v.114la.com/zongyi/18396.html">
+							<img data-original="http://v.114la.com/img/2013/07/18/qy/variety/7/6kS6d7O9760.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<cite>以德服人</cite>
+							<em></em>
+						</a>
+						<p>最新20130618期</p>
+					</li>
+									</ul>
+			</div>
+					</div>
+	   		<div class="sideCont fr ingrep">
+			<div class="inTitle">
+				<h6><a title="综艺排行榜" href="http://v.114la.com/top/zongyi.html">综艺排行榜</a></h6>
+				<div class="contabs">
+					<ul>
+						<li class="current"><a href="javascript:;">全部</a></li>
+						<li><a href="javascript:;">选秀</a></li>
+						<li><a href="javascript:;">访谈</a></li>
+					</ul>
+					<a target="_blank" class="more" href="http://v.114la.com/top/zongyi.html">更多&gt;&gt;</a>
+				</div>
+			</div>
+			<div style="display:block;" class="ingrep-Cont">
+				<ul class="foldlist">
+									<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/27580.html">
+							<img alt="中国好声音" data-original="http://v.114la.com/img/2013/08/08/le/variety/6/PL660r325U4.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>中国好声音</h4>
+							<p>类型：其他</p>
+							<p>主演：华少</p>
+							<a class="p" href="http://v.114la.com/zongyi/27580.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/zongyi/27580.html">中国好声音</a><span>135650</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18337.html">
+							<img alt="康熙来了" data-original="http://v.114la.com/img/2013/08/07/le/variety/3/4I0Uh01S262.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>康熙来了</h4>
+							<p>类型：综艺,访谈,搞笑...</p>
+							<p>主演：谢娜,柳翰雅,卜学亮</p>
+							<a class="p" href="http://v.114la.com/zongyi/18337.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/zongyi/18337.html">康熙来了</a><span>99259</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/9257.html">
+							<img alt="快乐大本营" data-original="http://v.114la.com/img/2013/07/18/pp/variety/1/5u1u172SK29.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>快乐大本营</h4>
+							<p>类型：大陆综艺</p>
+							<p>主演：何炅,谢娜,李维嘉,吴昕,杜海涛</p>
+							<a class="p" href="http://v.114la.com/zongyi/9257.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/zongyi/9257.html">快乐大本营</a><span>87148</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/9646.html">
+							<img alt="非诚勿扰" data-original="http://v.114la.com/img/2013/07/18/pp/variety/10/4xsO0V828T0.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>非诚勿扰</h4>
+							<p>类型：非诚勿扰</p>
+							<p>主演：孟非 李艾 李好 李响 阿雅 hold住姐</p>
+							<a class="p" href="http://v.114la.com/zongyi/9646.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/zongyi/9646.html">非诚勿扰</a><span>71809</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18385.html">
+							<img alt="running man" data-original="http://v.114la.com/img/2013/07/18/qy/variety/3/L8Ox2892C07.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>running man</h4>
+							<p>类型：综艺,游戏...</p>
+							<p>主演：宋智孝</p>
+							<a class="p" href="http://v.114la.com/zongyi/18385.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/zongyi/18385.html">running man</a><span>64085</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18330.html">
+							<img alt="转身遇到ta" data-original="http://v.114la.com/img/2013/07/18/qy/variety/9/945Ln55Y1dz.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>转身遇到ta</h4>
+							<p>类型：综艺,相亲...</p>
+							<p>主演：肖飞,周阳,高珊,许畯森,沈婷</p>
+							<a class="p" href="http://v.114la.com/zongyi/18330.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/zongyi/18330.html">转身遇到ta</a><span>56384</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18629.html">
+							<img alt="我的中国星" data-original="http://v.114la.com/img/2013/07/18/qy/variety/4/c55mru87f22.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>我的中国星</h4>
+							<p>类型：综艺,选秀...</p>
+							<p>主演：谭咏麟,宋茜,瞿颖,袁惟仁</p>
+							<a class="p" href="http://v.114la.com/zongyi/18629.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/zongyi/18629.html">我的中国星</a><span>53105</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18328.html">
+							<img alt="天天向上" data-original="http://v.114la.com/img/focus_img/201308/137756843672940.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>天天向上</h4>
+							<p>类型：综艺,访谈,搞笑,...</p>
+							<p>主演：柳岩,叶一茜,居文沛</p>
+							<a class="p" href="http://v.114la.com/zongyi/18328.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/zongyi/18328.html">天天向上</a><span>39993</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/51944.html">
+							<img alt="赢在中国蓝天碧水间" data-original="http://v.114la.com/img/2013/09/18/le/variety/8/E06LS35m53O.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>赢在中国蓝天碧水间</h4>
+							<p>类型：游戏</p>
+							<p>主演：</p>
+							<a class="p" href="http://v.114la.com/zongyi/51944.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/zongyi/51944.html">赢在中国蓝天碧水间</a><span>33225</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/27703.html">
+							<img alt="快乐男声" data-original="http://v.114la.com/img/2013/09/14/le/variety/10/46527Qv65h6.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>快乐男声</h4>
+							<p>类型：其他</p>
+							<p>主演：何炅,汪涵</p>
+							<a class="p" href="http://v.114la.com/zongyi/27703.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/zongyi/27703.html">快乐男声</a><span>33063</span></p>
+				</li>
+									
+				</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+									<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/27580.html">
+							<img alt="中国好声音" data-original="http://v.114la.com/img/2013/08/08/le/variety/6/PL660r325U4.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>中国好声音</h4>
+							<p>类型：其他</p>
+							<p>主演：华少</p>
+							<a class="p" href="http://v.114la.com/zongyi/27580.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/zongyi/27580.html">中国好声音</a><span>135650</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/9646.html">
+							<img alt="非诚勿扰" data-original="http://v.114la.com/img/2013/07/18/pp/variety/10/4xsO0V828T0.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>非诚勿扰</h4>
+							<p>类型：非诚勿扰</p>
+							<p>主演：孟非 李艾 李好 李响 阿雅 hold住姐</p>
+							<a class="p" href="http://v.114la.com/zongyi/9646.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/zongyi/9646.html">非诚勿扰</a><span>71809</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18629.html">
+							<img alt="我的中国星" data-original="http://v.114la.com/img/2013/07/18/qy/variety/4/c55mru87f22.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>我的中国星</h4>
+							<p>类型：综艺,选秀...</p>
+							<p>主演：谭咏麟,宋茜,瞿颖,袁惟仁</p>
+							<a class="p" href="http://v.114la.com/zongyi/18629.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/zongyi/18629.html">我的中国星</a><span>53105</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/27703.html">
+							<img alt="快乐男声" data-original="http://v.114la.com/img/2013/09/14/le/variety/10/46527Qv65h6.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>快乐男声</h4>
+							<p>类型：其他</p>
+							<p>主演：何炅,汪涵</p>
+							<a class="p" href="http://v.114la.com/zongyi/27703.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/zongyi/27703.html">快乐男声</a><span>33063</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18334.html">
+							<img alt="我们结婚了" data-original="http://v.114la.com/img/2013/07/18/qy/variety/1/407OXB08Xa7.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>我们结婚了</h4>
+							<p>类型：综艺,搞笑,情感,...</p>
+							<p>主演：吴映洁,玉泽演,李弘基,藤井美菜</p>
+							<a class="p" href="http://v.114la.com/zongyi/18334.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/zongyi/18334.html">我们结婚了</a><span>32550</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/27702.html">
+							<img alt="非你莫属" data-original="http://v.114la.com/img/2013/08/08/le/variety/8/otx773G61b3.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>非你莫属</h4>
+							<p>类型：其他</p>
+							<p>主演：张绍刚</p>
+							<a class="p" href="http://v.114la.com/zongyi/27702.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/zongyi/27702.html">非你莫属</a><span>20832</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/39986.html">
+							<img alt="非常完美" data-original="http://v.114la.com/img/2013/09/16/ct/variety/2/6E995Ac17j1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>非常完美</h4>
+							<p>类型：非常完美 陈怡 洪...</p>
+							<p>主演：</p>
+							<a class="p" href="http://v.114la.com/zongyi/39986.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/zongyi/39986.html">非常完美</a><span>16474</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/40577.html">
+							<img alt="老梁故事汇" data-original="http://v.114la.com/img/2013/09/16/ct/variety/10/2j6M468I209.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>老梁故事汇</h4>
+							<p>类型：老梁故事汇 老梁 ...</p>
+							<p>主演：</p>
+							<a class="p" href="http://v.114la.com/zongyi/40577.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/zongyi/40577.html">老梁故事汇</a><span>14313</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/39358.html">
+							<img alt="最美和声" data-original="http://v.114la.com/img/2013/09/08/le/variety/4/6wI61XL43X1.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>最美和声</h4>
+							<p>类型：其他</p>
+							<p>主演：杨坤</p>
+							<a class="p" href="http://v.114la.com/zongyi/39358.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/zongyi/39358.html">最美和声</a><span>10539</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18405.html">
+							<img alt="年代秀" data-original="http://v.114la.com/img/2013/07/18/qy/variety/6/Nx6I00D918Z.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>年代秀</h4>
+							<p>类型：综艺,搞笑...</p>
+							<p>主演：宋茜,周觅,严爵,宁静,贾玲</p>
+							<a class="p" href="http://v.114la.com/zongyi/18405.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/zongyi/18405.html">年代秀</a><span>8351</span></p>
+				</li>
+							</ul>
+			</div>
+			<div class="ingrep-Cont">
+				<ul class="foldlist">
+									<li class="hover">
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18337.html">
+							<img alt="康熙来了" data-original="http://v.114la.com/img/2013/08/07/le/variety/3/4I0Uh01S262.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>1</b>
+						</a>
+						<div class="imr">
+							<h4>康熙来了</h4>
+							<p>类型：综艺,访谈,搞笑...</p>
+							<p>主演：谢娜,柳翰雅,卜学亮</p>
+							<a class="p" href="http://v.114la.com/zongyi/18337.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>1</em><a href="http://v.114la.com/zongyi/18337.html">康熙来了</a><span>99259</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/9257.html">
+							<img alt="快乐大本营" data-original="http://v.114la.com/img/2013/07/18/pp/variety/1/5u1u172SK29.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>2</b>
+						</a>
+						<div class="imr">
+							<h4>快乐大本营</h4>
+							<p>类型：大陆综艺</p>
+							<p>主演：何炅,谢娜,李维嘉,吴昕,杜海涛</p>
+							<a class="p" href="http://v.114la.com/zongyi/9257.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>2</em><a href="http://v.114la.com/zongyi/9257.html">快乐大本营</a><span>87148</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/9646.html">
+							<img alt="非诚勿扰" data-original="http://v.114la.com/img/2013/07/18/pp/variety/10/4xsO0V828T0.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>3</b>
+						</a>
+						<div class="imr">
+							<h4>非诚勿扰</h4>
+							<p>类型：非诚勿扰</p>
+							<p>主演：孟非 李艾 李好 李响 阿雅 hold住姐</p>
+							<a class="p" href="http://v.114la.com/zongyi/9646.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>3</em><a href="http://v.114la.com/zongyi/9646.html">非诚勿扰</a><span>71809</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18385.html">
+							<img alt="running man" data-original="http://v.114la.com/img/2013/07/18/qy/variety/3/L8Ox2892C07.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>4</b>
+						</a>
+						<div class="imr">
+							<h4>running man</h4>
+							<p>类型：综艺,游戏...</p>
+							<p>主演：宋智孝</p>
+							<a class="p" href="http://v.114la.com/zongyi/18385.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>4</em><a href="http://v.114la.com/zongyi/18385.html">running man</a><span>64085</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18328.html">
+							<img alt="天天向上" data-original="http://v.114la.com/img/focus_img/201308/137756843672940.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>5</b>
+						</a>
+						<div class="imr">
+							<h4>天天向上</h4>
+							<p>类型：综艺,访谈,搞笑,...</p>
+							<p>主演：柳岩,叶一茜,居文沛</p>
+							<a class="p" href="http://v.114la.com/zongyi/18328.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>5</em><a href="http://v.114la.com/zongyi/18328.html">天天向上</a><span>39993</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18544.html">
+							<img alt="锵锵三人行" data-original="http://v.114la.com/img/2013/07/18/qy/variety/9/h6S9D82h5p6.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>6</b>
+						</a>
+						<div class="imr">
+							<h4>锵锵三人行</h4>
+							<p>类型：综艺,访谈,其它...</p>
+							<p>主演：马未都,孟广美</p>
+							<a class="p" href="http://v.114la.com/zongyi/18544.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>6</em><a href="http://v.114la.com/zongyi/18544.html">锵锵三人行</a><span>25244</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/39521.html">
+							<img alt="开讲啦" data-original="http://v.114la.com/img/2013/09/16/ct/variety/6/0YEo7t818G8.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>7</b>
+						</a>
+						<div class="imr">
+							<h4>开讲啦</h4>
+							<p>类型：开讲啦 撒贝宁 方...</p>
+							<p>主演：</p>
+							<a class="p" href="http://v.114la.com/zongyi/39521.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>7</em><a href="http://v.114la.com/zongyi/39521.html">开讲啦</a><span>18765</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18376.html">
+							<img alt="我们约会吧" data-original="http://v.114la.com/img/2013/07/18/qy/variety/5/822137j3Ghl.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>8</b>
+						</a>
+						<div class="imr">
+							<h4>我们约会吧</h4>
+							<p>类型：综艺,情感...</p>
+							<p>主演：</p>
+							<a class="p" href="http://v.114la.com/zongyi/18376.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>8</em><a href="http://v.114la.com/zongyi/18376.html">我们约会吧</a><span>14990</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18514.html">
+							<img alt="国光帮帮忙" data-original="http://v.114la.com/img/2013/07/18/qy/variety/5/n7x8y289927.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>9</b>
+						</a>
+						<div class="imr">
+							<h4>国光帮帮忙</h4>
+							<p>类型：综艺,访谈,搞笑...</p>
+							<p>主演：宋少卿,马国毕</p>
+							<a class="p" href="http://v.114la.com/zongyi/18514.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>9</em><a href="http://v.114la.com/zongyi/18514.html">国光帮帮忙</a><span>12187</span></p>
+				</li>
+								<li>
+					<div class="hisus">
+						<a class="img" href="http://v.114la.com/zongyi/18360.html">
+							<img alt="非常了得" data-original="http://v.114la.com/img/2013/07/18/qy/variety/1/2g4j946e03T.jpg" src="http://v.114la.com/static/images/loading.gif">
+							<b>10</b>
+						</a>
+						<div class="imr">
+							<h4>非常了得</h4>
+							<p>类型：综艺,搞笑,游戏...</p>
+							<p>主演：姜振宇</p>
+							<a class="p" href="http://v.114la.com/zongyi/18360.html">立即播放</a>
+						</div>
+					</div>
+					<p><em>10</em><a href="http://v.114la.com/zongyi/18360.html">非常了得</a><span>11923</span></p>
+				</li>
+								</ul>
+			</div>			
+		</div>
+	</div>
+	<div class="comwrap topare clearfix">
+		<dl class="spitRow fl">
+			<dt><a href="http://v.114la.com/music/0-0-0-0-2.html">MV欣赏</a></dt>
+			<dd>										<a href="http://v.114la.com/music/0-0-235-0-2.html">港台</a>
+										<a href="http://v.114la.com/music/0-0-209-0-2.html">其它</a>
+										<a href="http://v.114la.com/music/0-0-207-0-2.html">欧美</a>
+										<a href="http://v.114la.com/music/0-0-208-0-2.html">日韩</a>
+										<a href="http://v.114la.com/music/0-0-206-0-2.html">内地</a>
+														<a href="http://v.114la.com/music/242-0-0-0-2.html">韩语</a>
+										<a href="http://v.114la.com/music/241-0-0-0-2.html">闽南</a>
+										<a href="http://v.114la.com/music/240-0-0-0-2.html">英语</a>
+										<a href="http://v.114la.com/music/239-0-0-0-2.html">粤语</a>
+										<a href="http://v.114la.com/music/238-0-0-0-2.html">日语</a>
+										<a href="http://v.114la.com/music/237-0-0-0-2.html">国语</a>
+								
+										<a href="http://v.114la.com/music/230-0-0-0-2.html">民谣</a>
+											<a href="http://v.114la.com/music/231-0-0-0-2.html">独立</a>
+											<a href="http://v.114la.com/music/232-0-0-0-2.html">朋克</a>
+											<a href="http://v.114la.com/music/233-0-0-0-2.html">另类</a>
+											<a href="http://v.114la.com/music/234-0-0-0-2.html">灵魂</a>
+											<a href="http://v.114la.com/music/229-0-0-0-2.html">舞曲</a>
+											<a href="http://v.114la.com/music/227-0-0-0-2.html">轻音乐</a>
+											<a href="http://v.114la.com/music/225-0-0-0-2.html">古典</a>
+											<a href="http://v.114la.com/music/226-0-0-0-2.html">民歌</a>
+											<a href="http://v.114la.com/music/223-0-0-0-2.html">乡村</a>
+											<a href="http://v.114la.com/music/224-0-0-0-2.html">R&amp;B</a>
+											<a href="http://v.114la.com/music/221-0-0-0-2.html">爵士</a>
+											<a href="http://v.114la.com/music/222-0-0-0-2.html">金属</a>
+											<a href="http://v.114la.com/music/220-0-0-0-2.html">电音</a>
+											<a href="http://v.114la.com/music/218-0-0-0-2.html">摇滚</a>
+											<a href="http://v.114la.com/music/219-0-0-0-2.html">说唱</a>
+											<a href="http://v.114la.com/music/217-0-0-0-2.html">流行</a>
+											<a href="http://v.114la.com/music/228-0-0-0-2.html">电影音乐</a>
+								</dd>
+		</dl>
+		<ul class="spitMvList fr clearfix">
+						<li>
+				<a title="郭燕 - 天空之城 电视剧 《兰陵王》 主题曲" target="_blank" href="http://v.114la.com/?ac=play&amp;id=27774&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrifwyid.html">
+					<img alt="郭燕 - 天空之城 电视剧 《兰陵王》 主题曲" data-original="http://pic8.qiyipic.com/thumb/20130801/a569259.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>电视剧《兰陵王》主题曲，由林依晨和冯绍峰主演。</cite>
+					<em></em>
+				</a>
+				<p>郭燕 - 天空之城 电视剧 《兰陵王》 主题曲</p>
+			</li>
+						<li>
+				<a title="M83 - Wait 电视剧 《穹顶之下》 07集片尾曲" target="_blank" href="http://v.114la.com/?ac=play&amp;id=33351&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrifwg2e.html">
+					<img alt="M83 - Wait 电视剧 《穹顶之下》 07集片尾曲" data-original="http://pic0.qiyipic.com/thumb/20130808/a579129.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>M83，又名南天纸风车星系，是业余天文学家们能够在夜空中看到的最壮观旋涡星系之一。在这里M83不再是星系，而是来自法国的两人组合(05年已经变成一个人...)。电子外衣下的shoegaze(自赏派)+迷幻nosie rock。可以说有时像 Sigur Ros 刻意构造的实验噪音，或还带有点 Vangelis 的环境音效在里面，有时候给人以飘渺，有时却又是如M83给我们的迷一样的宽广。</cite>
+					<em></em>
+				</a>
+				<p>M83 - Wait 电视剧 《穹顶之下》 07集片尾曲</p>
+			</li>
+						<li>
+				<a title="Connie Talbot - Wrecking Ball" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52725&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhabikc.html">
+					<img alt="Connie Talbot - Wrecking Ball" data-original="http://pic5.qiyipic.com/image/20130924/v_100275411_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>达人小康妮Connie Talbot翻唱Miley Cyrus最新热单《wrecking ball》</cite>
+					<em></em>
+				</a>
+				<p>Connie Talbot - Wrecking Ball</p>
+			</li>
+						<li>
+				<a title="冯允谦 - 世界剧团" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52498&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhbemf4.html">
+					<img alt="冯允谦 - 世界剧团" data-original="http://pic5.qiyipic.com/image/20130922/v_100249808_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>继承新专辑第一首派台歌《What do you want from me》的合作班底，冯允谦(Jay)很高兴能继续和作曲的Kelvin Avon、Shridhar Salanki及填词的杨熙合作，为他制作新歌&lt;&lt;世界剧团&gt;&gt;。此歌曲有别于一般的情歌，这次的主题是讲述都市人为了要在社会中生存，往往会有压力地被迫戴上面具示人，但久而久之，可能忘却了真正的自己。对Jay来说，于整张新专题当中，这首歌别具意义。除了旋律动听、曲风令人容易记得，Jay觉得是次的歌词既写得真实，也很深入，期望能够引起乐迷的共鸣；亦希望大家能喜欢这首收录在他即将于9月份推出的最新专辑中的第二首主打歌。</cite>
+					<em></em>
+				</a>
+				<p>冯允谦 - 世界剧团</p>
+			</li>
+						<li>
+				<a title="摘星的你" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52497&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhbcepg.html">
+					<img alt="摘星的你" data-original="http://pic5.qiyipic.com/image/20130922/v_100258391_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>摘星的你</cite>
+					<em></em>
+				</a>
+				<p>摘星的你</p>
+			</li>
+						<li>
+				<a title="容祖儿 - 小日子" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52496&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhbdr2c.html">
+					<img alt="容祖儿 - 小日子" data-original="http://pic5.qiyipic.com/image/20130922/v_100249817_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>Joey大碟主題作《小日子》MV於9月19日面世，與大家共渡中秋，MV於台灣拍攝­，於一所棄置的車場由早上拍至零晨，MV內容描一對情侶於亂世中相遇，愛上，兩口子的­世界裡只有對方，那管社會洪流怎樣衝激，只要能共所愛的共渡小小時間，小小的日子，已­很足夠！雖說是小小的日子，陣容一點也不賴，導演找來真情侶加上60位演繹憤青及防暴­警察，煙霧彈，防煙面罩等重裝備，加上眾工作人員，達百人之多，場面壯觀，還以為是電­影製作呢！
+MV中，Joey以說書人的角色穿梭於不同場景，拍攝當天氣温高達攝氏39度，甫到達­場地，眾工作人員己經汗流浹背，Joey熱到即興唱起：攝氏48度...《逃》令這熱­騰騰的環境中增添不少歡樂！</cite>
+					<em></em>
+				</a>
+				<p>容祖儿 - 小日子</p>
+			</li>
+						<li>
+				<a title="信 - 你存在" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52158&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhaxpo4.html">
+					<img alt="信 - 你存在" data-original="http://pic5.qiyipic.com/image/20130916/v_100193241_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>信 - 你存在</cite>
+					<em></em>
+				</a>
+				<p>信 - 你存在</p>
+			</li>
+						<li>
+				<a title="许靖韵 - 那个他" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52157&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhb4tvg.html">
+					<img alt="许靖韵 - 那个他" data-original="http://pic5.qiyipic.com/image/20130918/v_100223336_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>MV描述一段感情結束後的空窗期，不停跟自已說不要再留戀上一段情，要重新振作收拾心情迎接&lt;那個他&gt;，剛開始時，第一次拍攝MV的Angela顯然有點生硬及不知所措，但經導演指導後, 在第三Take便進入佳境馬上投入角色，現場的工作人員都稱讚她非常聰明伶俐兼消化力强，問Angela聽到稱讚鬆一口氣嗎? Angela道：「我今日真係好感動，覺得自已很幸運有一個咁好的工作的團隊。」說罷眼睜睜的望著眾工作人員，要唱片公司問她是否有話要說，Angela眼紅紅的應道：「係呀！好多謝大家呀!」眾工作人員即道：「唔使客氣，請食飯就得喇!」就這樣Angela便許下承諾，待新碟後便請客！</cite>
+					<em></em>
+				</a>
+				<p>许靖韵 - 那个他</p>
+			</li>
+						<li>
+				<a title="平野绫 - Promise 短版" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52156&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhb52v0.html">
+					<img alt="平野绫 - Promise 短版" data-original="http://pic5.qiyipic.com/image/20130918/v_100223332_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>电影《狐狸的故事》插曲</cite>
+					<em></em>
+				</a>
+				<p>平野绫 - Promise 短版</p>
+			</li>
+						<li>
+				<a title="信 - 远得要命的爱情" target="_blank" href="http://v.114la.com/?ac=play&amp;id=52155&amp;url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhaw1po.html">
+					<img alt="信 - 远得要命的爱情" data-original="http://pic5.qiyipic.com/image/20130916/v_100193488_m_601.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>信 - 远得要命的爱情</cite>
+					<em></em>
+				</a>
+				<p>信 - 远得要命的爱情</p>
+			</li>
+					</ul>
+	</div>	
+	<!-- 广告位：影视首页文字链 -->
+	  <div id="bad">
+  <div class="linead">
+<script type="text/javascript">BAIDU_CLB_fillSlot("730963");</script><div id="BAIDU_CLB_SLOT_PS_730963"></div><script src="http://cb.baidu.com/ecom?di=730963&amp;fn=BAIDU_CLB_SETJSONADSLOT&amp;tpl=BAIDU_CLB_SETJSONADSLOT&amp;asp_refer=http%3A%2F%2Fwww.bale.cn%2F&amp;asp_url=http%3A%2F%2Fv.114la.com%2F&amp;new=9&amp;fv=11&amp;cn=1&amp;if=0&amp;word=asp_url&amp;refer=asp_refer&amp;ready=1&amp;jn=3&amp;lmt=1380210924&amp;csp=1366,768&amp;csn=1366,728&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=25&amp;cmi=50&amp;cce=true&amp;csl=zh-CN&amp;did=1&amp;rt=8&amp;dt=1380210925&amp;c01=0&amp;prt=1380210924725&amp;ps=3185x194&amp;pcs=1349x640&amp;pss=1349x3238&amp;pis=1349x640&amp;cec=UTF-8&amp;dis=0&amp;baidu_id=" charset="utf-8"></script><script type="text/javascript">
+/*114啦影视首页980*34 彩色标签，创建于2013-9-11*/
+var cpro_id = "u1366509";
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script><script src="http://pos.baidu.com/ecom?di=u1366509&amp;dcb=BAIDU_CPRO_SETJSONADSLOT&amp;dtm=BAIDU_CPRO_SETJSONADSLOT&amp;dai=1&amp;jn=3&amp;ltu=http%3A%2F%2Fv.114la.com%2F&amp;liu=http%3A%2F%2Fv.114la.com%2F&amp;ltr=http%3A%2F%2Fwww.bale.cn%2F&amp;ps=3185x194&amp;psr=1366x768&amp;par=1366x728&amp;pcs=1349x640&amp;pss=1349x3238&amp;pis=1349x640&amp;cfv=11&amp;ccd=24&amp;col=zh-CN&amp;coa=&amp;cec=UTF-8&amp;tpr=1380210924891&amp;kl=&amp;dis=16" charset="utf-8" type="text/javascript"></script><div style="display:none">-</div><iframe width="960" scrolling="no" height="34" frameborder="0" align="center,center" allowtransparency="true" marginheight="0" marginwidth="0" src="http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&amp;tu=u1366509&amp;tn=baiduCustSTagLinkUnit&amp;n=ylmfcpr&amp;adn=1&amp;rsi1=34&amp;rsi0=960&amp;rad=&amp;rss0=&amp;rss1=&amp;conOP=0&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rsi5=4&amp;ts=1&amp;at=103&amp;ch=0&amp;cad=1&amp;aurl=&amp;rss7=&amp;cpa=1&amp;fv=11&amp;cn=1&amp;if=16&amp;word=http%3A%2F%2Fv.114la.com%2F&amp;refer=http%3A%2F%2Fwww.bale.cn%2F&amp;ready=1&amp;jk=9c0bcbd2a0eb515f&amp;jn=3&amp;lmt=1380210924&amp;csp=1366,768&amp;csn=1366,728&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=25&amp;cmi=50&amp;cce=true&amp;csl=zh-CN&amp;did=1&amp;rt=8&amp;dt=1380210925&amp;ev=16777216&amp;c01=0&amp;prt=1380210924891&amp;i3=f&amp;anatp=0&amp;stid=5&amp;lunum=6&amp;scale=&amp;skin=tabcloud_skin_1" id="cproIframe1"></iframe>
+</div>
+</div>
+
+	<div class="comwrap topare">
+		<div class="inTitle">
+			<h6>影视专题</h6>
+			<a rel="nofollow" target="_blnak" class="more" href="http://www.k559.com/superstar/">更多专题&gt;&gt;</a>
+		</div>
+		<ul class="comSumList clearfix">
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/liangchaowei/">
+					<img alt="梁朝伟电影全集" data-original="static/images/zt0717-01.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>梁朝伟电影全集</cite>
+				</a>
+			</li>
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/zhenzidan/">
+					<img alt="甄子丹电影全集" data-original="static/images/zt0717-02.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>甄子丹电影全集</cite>
+				</a>
+			</li>
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/zhourunfa/">
+					<img alt="周润发电影全集" data-original="static/images/zt0717-03.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>周润发电影全集</cite>
+				</a>
+			</li>
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/chenglong/">
+					<img alt="成龙电影全集" data-original="static/images/zt0717-04.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>成龙电影全集</cite>
+				</a>
+			</li>
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/lilianjie/">
+					<img alt="李连杰电影全集" data-original="static/images/zt0717-05.jpg" src="http://v.114la.com/static/images/loading.gif">
+					<cite>李连杰电影全集</cite>
+				</a>
+			</li>
+		</ul>
+	</div>
+		<div class="comwrap category clearfix">
+		<dl>
+			<dt><span>电影</span></dt>
+			<dd>
+				<a href="http://v.114la.com/movie/6-0-0-0-2.html">动作</a>
+				<a href="http://v.114la.com/movie/7-0-0-0-2.html">喜剧</a>
+				<a href="http://v.114la.com/movie/8-0-0-0-2.html">恐怖</a>
+				<a href="http://v.114la.com/movie/9-0-0-0-2.html">科幻</a>
+				<a href="http://v.114la.com/movie/10-0-0-0-2.html">爱情</a>
+				<a href="http://v.114la.com/movie/11-0-0-0-2.html">犯罪</a>
+				<a href="http://v.114la.com/movie/12-0-0-0-2.html">惊悚</a>
+				<a href="http://v.114la.com/movie/13-0-0-0-2.html">动画</a>
+				<a href="http://v.114la.com/movie/14-0-0-0-2.html">剧情</a>
+				<a href="http://v.114la.com/movie/15-0-0-0-2.html">历史</a>
+				<a href="http://v.114la.com/movie/246-0-0-0-2.html">奇幻</a>
+				<a href="http://v.114la.com/movie/16-0-0-0-2.html">战争</a>
+				<a href="http://v.114la.com/movie/247-0-0-0-2.html">悬疑</a>
+				<a href="http://v.114la.com/movie/248-0-0-0-2.html">伦理</a>
+				<a href="http://v.114la.com/movie/0-0-20-0-2.html">美国</a>
+				<a href="http://v.114la.com/movie/0-0-250-0-2.html">香港</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>电视</span></dt>
+			<dd>
+				<a href="http://v.114la.com/tv/39-0-0-0-2.html">偶像</a>
+				<a href="http://v.114la.com/tv/40-0-0-0-2.html">言情</a>
+				<a href="http://v.114la.com/tv/41-0-0-0-2.html">都市</a>
+				<a href="http://v.114la.com/tv/42-0-0-0-2.html">家庭</a>
+				<a href="http://v.114la.com/tv/43-0-0-0-2.html">农村</a>
+				<a href="http://v.114la.com/tv/44-0-0-0-2.html">警匪</a>
+				<a href="http://v.114la.com/tv/45-0-0-0-2.html">悬疑</a>
+				<a href="http://v.114la.com/tv/46-0-0-0-2.html">搞笑</a>
+				<a href="http://v.114la.com/tv/47-0-0-0-2.html">军事</a>
+				<a href="http://v.114la.com/tv/42-0-0-0-2.html">伦理</a>
+				<a href="http://v.114la.com/tv/268-0-0-0-2.html">喜剧</a>
+				<a href="http://v.114la.com/tv/48-0-0-0-2.html">古装</a>
+				<a href="http://v.114la.com/tv/274-0-0-0-2.html">神话</a>
+				<a href="http://v.114la.com/tv/269-0-0-0-2.html">武侠</a>
+				<a href="http://v.114la.com/tv/275-0-0-0-2.html">谍战</a>
+				<a href="http://v.114la.com/tv/273-0-0-0-2.html">励志</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>动漫</span></dt>
+			<dd>
+				<a class="current" href="http://v.114la.com/anime/0-0-0-0-2.html">全部</a>
+				<a href="http://v.114la.com/anime/85-0-0-0-2.html">热血</a>
+				<a href="http://v.114la.com/anime/86-0-0-0-2.html">科幻</a>
+				<a href="http://v.114la.com/anime/87-0-0-0-2.html">青春</a>
+				<a href="http://v.114la.com/anime/88-0-0-0-2.html">搞笑</a>
+				<a href="http://v.114la.com/anime/89-0-0-0-2.html">亲子</a>
+				<a href="http://v.114la.com/anime/90-0-0-0-2.html">魔幻</a>
+				<a href="http://v.114la.com/anime/91-0-0-0-2.html">运动</a>
+				<a href="http://v.114la.com/anime/92-0-0-0-2.html">少女</a>
+				<a href="http://v.114la.com/anime/93-0-0-0-2.html">真人</a>
+				<a href="http://v.114la.com/anime/244-0-0-0-2.html">冒险</a>
+				<a href="http://v.114la.com/anime/243-0-0-0-2.html">益智</a>
+				<a href="http://v.114la.com/anime/297-0-0-0-2.html">成人</a>
+				<a href="http://v.114la.com/anime/288-0-0-0-2.html">恋爱</a>
+				<a href="http://v.114la.com/anime/298-0-0-0-2.html">竞技</a>
+				<a href="http://v.114la.com/anime/293-0-0-0-2.html">动物</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt><span>综艺</span></dt>
+			<dd>
+				<a class="current" href="http://v.114la.com/zongyi/0-0-0-0-2.html">全部</a>
+				<a href="http://v.114la.com/zongyi/106-0-0-0-2.html">时尚</a>
+				<a href="http://v.114la.com/zongyi/107-0-0-0-2.html">娱乐</a>
+				<a href="http://v.114la.com/zongyi/108-0-0-0-2.html">综艺</a>
+				<a href="http://v.114la.com/zongyi/109-0-0-0-2.html">选秀</a>
+				<a href="http://v.114la.com/zongyi/110-0-0-0-2.html">音乐</a>
+				<a href="http://v.114la.com/zongyi/111-0-0-0-2.html">访谈</a>
+				<a href="http://v.114la.com/zongyi/112-0-0-0-2.html">生活</a>
+				<a href="http://v.114la.com/zongyi/113-0-0-0-2.html">游戏</a>
+				<a href="http://v.114la.com/zongyi/305-0-0-0-2.html">美食</a>
+				<a href="http://v.114la.com/zongyi/308-0-0-0-2.html">求职</a>
+				<a href="http://v.114la.com/zongyi/304-0-0-0-2.html">旅游</a>
+				<a href="http://v.114la.com/zongyi/309-0-0-0-2.html">曲艺</a>
+				<a href="http://v.114la.com/zongyi/307-0-0-0-2.html">财经</a>
+				<a href="http://v.114la.com/zongyi/303-0-0-0-2.html">播报</a>
+			</dd>
+		</dl>
+		<dl class="last">
+			<dt><span>音乐</span></dt>
+			<dd>
+			        <a href="http://v.114la.com/music/0-0-235-0-2.html">港台</a>
+				<a href="http://v.114la.com/music/0-0-209-0-2.html">其它</a>
+				<a href="http://v.114la.com/music/0-0-207-0-2.html">欧美</a>
+				<a href="http://v.114la.com/music/0-0-208-0-2.html">日韩</a>
+				<a href="http://v.114la.com/music/0-0-206-0-2.html">内地</a>
+								<a href="http://v.114la.com/music/242-0-0-0-2.html">韩语</a>
+				<a href="http://v.114la.com/music/241-0-0-0-2.html">闽南</a>
+				<a href="http://v.114la.com/music/240-0-0-0-2.html">英语</a>
+				<a href="http://v.114la.com/music/239-0-0-0-2.html">粤语</a>
+				<a href="http://v.114la.com/music/238-0-0-0-2.html">日语</a>
+				<a href="http://v.114la.com/music/237-0-0-0-2.html">国语</a>
+			</dd>
+		</dl>
+	</div>			<dl class="flink">
+		<dt class="comTitle">
+			<h6>友情链接</h6>
+		</dt>
+		<dd>
+						<a target="_blank" href="http://www.news.cn/video/index.htm">新华网视频</a>
+						<a target="_blank" href="http://www.ku6.com/">酷6网</a>
+						<a target="_blank" href="http://www.iqiyi.com">爱奇艺视频</a>
+						<a target="_blank" href="http://www.k559.com/">高清电影</a>
+						<a target="_blank" href="http://ent.v1.cn/">第一视频</a>
+						<a target="_blank" href="http://tv.v.ifeng.com/">凤凰影视 </a>
+						<a target="_blank" href="http://www.bale.cn/">芭乐新媒体</a>
+						<a target="_blank" href="http://www.7706.com/">7706娱乐网</a>
+						<a target="_blank" href="http://ent.cntv.cn/">央视网综艺</a>
+						<a target="_blank" href="http://www.kangou.cn/">电影卡</a>
+						<a target="_blank" href="http://www.fengyunzhibo.com">风云直播</a>
+						<a target="_blank" href="http://www.69k.com">最新电影</a>
+						<a target="_blank" href="http://www.51rrkan.com/">51人人看电影</a>
+						<a target="_blank" href="http://v.61.com/">淘米视频</a>
+						<a target="_blank" href="http://www.51vv.com/">51vv视频聊天</a>
+						<a target="_blank" href="http://www.56.com/">56视频</a>
+						<a target="_blank" href="http://v.2345.com/"> 2345影视大全</a>
+						<a target="_blank" href="http://me.cztv.com/">新蓝网TV</a>
+						<a target="_blank" href="http://www.11pk.net/">11pk影院</a>
+						<a target="_blank" href="http://www.yueyuez.com/">粤语电影</a>
+						<a target="_blank" href="http://www.31y.com/ ">31y影院 </a>
+						<a target="_blank" href="http://www.233d.com/">3d电影下载</a>
+						<a target="_blank" href="http://www.nydown.com/">MP4电影下载</a>
+						<a target="_blank" href="http://www.meiju.la/">美剧</a>
+						<a target="_blank" href="http://www.myrice.com">多来米视频</a>
+						<a target="_blank" href="http://www.guagua.cn/">呱呱视频</a>
+						<a target="_blank" href="http://film.spider.com.cn/">电影票预订</a>
+						<a target="_blank" href="http://www.zhejiangmi.com/">浙江卫视直播</a>
+						<a target="_blank" href="http://video.iresearch.cn/">艾瑞网络视频</a>
+						<a target="_blank" href="http://www.suxiazai.com">速下载</a>
+						<a target="_blank" href="http://www.ttuu.com/">推优网</a>
+						<a target="_blank" href="http://www.babady.com ">快播电影网站大全</a>
+						<a target="_blank" href="http://www.cccnews.com.cn/">中国动漫产业网</a>
+						<a target="_blank" href="http://www.jiangsufang.com/">江苏卫视直播</a>
+						<a target="_blank" href="http://www.0755.so/">深圳在线</a>
+						<a target="_blank" href="http://www.boosj.com/">播视网 </a>
+						<a target="_blank" href="http://www.tvbzhibo.com">TVB最新电视剧</a>
+						<a target="_blank" href="http://zhibo.90tiyu.com/ ">体育直播 </a>
+						<a target="_blank" href="http://www.shuangshitv.net/">双视影院</a>
+						<a target="_blank" href="http://www.80s3gp.com/">手机电影下载</a>
+						<a target="_blank" href="http://www.ywt.cc/ ">野兔影院 </a>
+						<a target="_blank" href="http://www.datou8.com/">韩剧网</a>
+					</dd>
+	</dl>
+	</div>
+<div id="footer">
+	<div class="wrapper clearfix">
+		<dl>
+			<dt>热门站点</dt>
+			<dd>
+				<a href="http://book.114la.com/">好看的小说</a>
+				<a href="http://tianqi.114la.com/">天气预报</a>
+				<a href="http://tianqi.114la.com/air/">空气质量查询</a>
+				<a href="http://manhua.114la.com/">在线漫画</a>
+				<a href="http://tuan.114la.com/">团购大全</a>
+				<a href="http://meishi.114la.com/">美食天下</a>
+				<a href="http://meishi.114la.com/">菜谱大全</a>
+				<a href="http://v.114la.com/movie/">最新好看的电影</a>
+				<a href="http://v.114la.com/dianshi/">电视剧大全</a>
+				<a href="http://youxi.114la.com/">游戏大全</a>
+				<a href="http://app.114la.com/xingzuo/">星座运势</a>
+				<a href="http://app.114la.com/historyontoday/">历史上的今天</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>热门排行</dt>
+			<dd>
+				<a href="http://v.114la.com/top/movie-kehuan.html">科幻电影排行榜</a>
+				<a href="http://v.114la.com/top/movie-jingsong.html">惊悚电影排行榜</a>
+				<a href="http://v.114la.com/top/movie-xiju.html">喜剧电影排行榜</a>
+				<a href="http://v.114la.com/top/movie.html">电影排行榜</a>
+				<a href="http://v.114la.com/top/anime.html">动漫电影排行榜</a>
+				<a href="http://v.114la.com/top/tv-hanju.html">韩国电视剧排行榜</a>
+				<a href="http://v.114la.com/top/tv-meiju.html">美国电视剧排行榜</a>
+					</dd>
+		</dl>
+		<dl>
+			<dt>节目分类</dt>
+			<dd>
+				<a href="http://v.114la.com/movie/0-0-19-0-2.html">日本电影</a>
+				<a href="http://v.114la.com/movie/0-0-250-0-2.html">香港电影</a>
+				<a href="http://v.114la.com/movie/0-0-20-0-2.html">美国电影</a>
+				<a href="http://v.114la.com/movie/0-0-21-0-2.html">韩国电影</a>
+				<a href="http://v.114la.com/tv/0-0-277-0-2.html">泰国电视剧</a>
+				<a href="http://v.114la.com/tv/0-0-55-0-2.html">好看的美剧</a>
+				<a href="http://v.114la.com/tv/0-0-52-0-2.html">韩国电视剧</a>
+				<a href="http://v.114la.com/tv/0-0-53-0-2.html">香港电视剧</a>
+				<a href="http://v.114la.com/anime/0-0-99-0-2.html">日本动漫</a>
+				<a href="http://v.114la.com/zongyi/0-0-117-0-2.html">韩国综艺节目</a>
+				<a href="http://v.114la.com/zongyi/0-0-116-0-2.html">台湾综艺节目</a>
+			</dd>
+		</dl>
+		<p class="bhr"></p>
+		<ul class="fl">
+			<li><a href="http://www.114la.com/about/about.html">关于114啦</a> | </li>
+			<li><a href="http://www.114la.com/about/ad.html">广告招商</a> | </li>
+			<li><a href="http://url.114la.com/">网站收录申请</a> | </li>
+			<li><a onclick="divcenter()" href="javascript:void(0)">意见反馈</a> | </li>
+			<li><a href="http://weibo.com/ylmf114la">官方微博</a></li>
+		</ul>
+		<p class="fr">&copy;2005- 2013 114啦网址导航 粤ICP备05021225号</p>
+	</div>
+</div>
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1642132-1']);
-  _gaq.push(['_setDomainName', '.m1905.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+	var cid = 16;
 </script>
-
-<!--百度统计-->
+<script src="http://fankui.114la.com/static/js/feedBack.js" type="text/javascript"></script><div id="feedBackWrap" style="position: absolute; top: 0px; left: 0px; display: none; width: 516px; height: 416px; z-index: 100;"><div id="feedBackMask" style="position: absolute; top: 0px; left: 0px; width: 516px; height: 416px; background: none repeat scroll 0% 0% black; opacity: 0.2;"></div><iframe scrolling="0" frameborder="no" id="feedBackIframe" border="0" marginwidth="0" marginheight="0" allowtransparency="0" style="position: absolute; top: 8px; left: 8px; width: 500px; height: 400px;"></iframe></div>
+<div style="display:none">
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbfe9961e25bf081711e59b3f78be82d4' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?bfe9961e25bf081711e59b3f78be82d4"></script>
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F883d579322a459f2b528fa3c951e1005' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?883d579322a459f2b528fa3c951e1005"></script><a target="_blank" href="http://tongji.baidu.com/hm-web/welcome/ico?s=883d579322a459f2b528fa3c951e1005"><img width="20" height="20" border="0" src="http://eiv.baidu.com/hmt/icon/21.gif"></a>
+</div><div id="gotop" style="opacity: 0;"><a title="回顶部" href="javascript:;">回顶部</a></div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/common.source.js"></script>
+
 
 </body></html>
