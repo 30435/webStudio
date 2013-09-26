@@ -9,6 +9,7 @@ if ($action == 'login') {
 	if (empty($username) || empty($password)) {
 		exit('username or password is empty!<a href="index.php?code=' . $webgameCode . '">登陆</a>=====<a href="register.php?code=' . $webgameCode . '">注册</a>');
 	}
+	$password = md5($password);
 	
 	$string = "action=login&username={$username}&password={$password}&webgameCode={$webgameCode}";
 	$url = getUrl($string, $interfaceType, $configInfos);
@@ -22,26 +23,26 @@ if ($action == 'login') {
 } else if ($action == 'register') {
 	$password = $_GET['password'];
 	$password2 = $_GET['password2'];
-	$seccode = $_GET['seccode'];
+	$captcha = $_GET['frontCaptcha'];
 
-	if (empty($password) || empty($password2) || empty($seccode)) {
+	if (empty($password) || empty($password2) || empty($captcha)) {
 		exit('password password2 or seccode is empty<a href="/">登陆</a>=====<a href="register">注册</a>');
 	}
 
-	$string = "action=register&password={$password}&password2={$password2}&seccode={$seccode}";
+	$string = "action=register&password={$password}&password2={$password2}&captcha={$captcha}";
 	$url = getUrl($string, $interfaceType, $configInfos);
 
 	$resultInfo = getResult($string, $url, $interfaceType, $configInfos);
-	if ($result['status'] === true) {
-		header("Location: http://g1.game.com/?action=registersuccess&username=" . $result['username'] . '&password=' . $password);
+	if ($resultInfo['status'] === true) {
+		echo '注册成功！';//header("Location: index.php?action=registersuccess&username=" . $result['username'] . '&password=' . $password . '&code=' . $webgameCode);
 	} else {
-		echo '注册出错了，错误代码是: ' . $result['code'];
+		echo '注册出错了，错误代码是: ' . $resultInfo['code'];
 	}
 }
 
 function getUrl($string, $interfaceType, $configInfos)
 {
-	$urlBase = $configInfos[$interfaceType . 'DealUrl'];
+	$urlBase = $configInfos['interfaceUrl'];
 	switch ($interfaceType) {
 		case 'encrypt':
 			$token = uc_authcode($string, 'ENCODE', $configInfos['key']);
@@ -57,19 +58,18 @@ function getUrl($string, $interfaceType, $configInfos)
 			$uri = $string;
 	}
 
-	$url = $urlBase . $uri;
+	$url = $urlBase . '?' . $uri;
 	return $url;
 }
 
 function getResult($string, $url, $interfaceType, $configInfos)
 {
-	echo $url;
-	$returnStr = file_get_contents($url); var_dump($returnStr);
-	if (preg_match('/^\xEF\xBB\xBF/', $returnStr)) {
+	$returnStr = file_get_contents($url); var_dump($returnStr); var_dump($returnStr);
+	while (preg_match('/^\xEF\xBB\xBF/', $returnStr)) {
 		$returnStr = substr($returnStr, 3);
 	}
-	$result = json_decode($returnStr, true);
-
+	
+	$result = json_decode($returnStr, true); var_dump($url); var_dump($returnStr); var_dump($result);
 	return $result;
 }
 

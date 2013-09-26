@@ -35,14 +35,14 @@ class CommonController extends CI_Controller
 	 *
 	 * @return  Draw a checkcode png, and write the checkcode info to the session
 	 */
-	public function checkcode()
+	public function checkcode($codeVar = 'checkcode')
 	{
 		$this->load->library('session');
 		$checkCode = new CheckCode();
 	
 		$checkCodeStr = $checkCode->get_code();
 		$checkCodeInfos = array(
-				'checkcode'  => $checkCodeStr,
+				$codeVar  => $checkCodeStr,
 		);
 		$this->session->set_userdata($checkCodeInfos);
 		$checkCode->doimage();
@@ -53,11 +53,11 @@ class CommonController extends CI_Controller
 	 *
 	 * @return string 
 	 */
-	public function isValidCode()
+	public function isValidCode($codeVar = 'checkcode')
 	{
 		$this->load->library('session');
-		$targetCheckCode = $this->session->userdata('checkcode');
-		$checkCode = $this->input->get_post('checkcode');
+		$targetCheckCode = $this->session->userdata($codeVar);
+		$checkCode = $this->input->get_post($codeVar);
 
 		$isValid = $checkCode == $targetCheckCode ? true : false;
 		$isAjax = $this->input->get('isajax');

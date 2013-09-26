@@ -1,13 +1,34 @@
-﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 abstract class ApiBase extends Custom_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
-		
+	
+		$this->validActions = array('login', 'register');	
 		ini_set('display_errors', 1);
-		error_reporting(0);	
+		error_reporting(0);
+
+		$this->messageInfos = array(
+			'10000' => array('SUCCESSFUL'),
+			'10001' => array('PARAMS_WRONG'),
+			'10002' => array('VERIFICATION_WRONG'),
+
+			'10003' => array('LOGIN_INFO_EMPTY'),
+			'10004' => array('PASSWD_WRONG_TIMESOVER'),
+			'10005' => array('USERNAME_NOT_EXIST'),
+			'10006' => array('PASSWD_WRONG'),
+			'10007' => array('EXTRA_WRONG'),
+			'10008' => array('DATABASE_ERROR'),
+
+			'10009' => array('REGISTER_INFO_EMPTY'),
+			'10010' => array('REGISTER_PASSWORD_NOEQUAL'),
+			'10011' => array('CAPTCHA_WRONG'),
+			'10012' => array('EMAIL_WRONG'),
+
+			'11000' => array('EXCEPTION'),
+		);
 	}
 
 	/**
@@ -16,39 +37,38 @@ abstract class ApiBase extends Custom_Controller
 	 */
 	public function register($infos)
 	{
-		$datas = array('status' => false, 'code' => 'EXCEPTION', 'msg' => 'EXCEPTION');
 		$password = $infos['password'];
 		$password2 = $infos['password2'];
-		$seccode = $infos['seccode'];
+		$captcha = $infos['captcha'];
 		$email = $infos['email'];
+var_dump($password . $password2 . $captcha);
+		if (empty($password) || empty($password2) || empty($captcha)) {
+			$this->returnResult('10009');
+		}
 
-		if (empty($password) || empty($password2) || empty($seccode)) {
-			$datas['code'] = -7; $datas['msg'] = 'INFO EMPTY';
-			exit(json_encode($datas));
-		}
 		if ($password != $password2) {
-			$datas['code'] = -6; $datas['msg'] = 'PASSWORD NO EQUAL';
-			exit(json_encode($datas));
+			$this->returnResult('10010');
 		}
+
 		$this->load->library('session');
-		$currentSeccode = $this->session->userdata('checkcode');
+		$currentSeccode = $this->session->userdata('frontCaptcha');
 		if ($seccode != $currentSeccode) {
-			//$datas['code'] = $datas['msg'] = 'SECCODE ERROR';
-			//exit(json_encode($datas));
+			//$this->returnResult('10011');
 		}
-		$this->session->unset_userdata('checkcode');
+		$this->session->unset_userdata('frontCaptcha');
 		$userInfo['username'] = $this->getUsername();
 
-		/*$checkUsername = $this->checkUsername();
-		if ($checkUsername['status'] == 'error') {
-			$this->_messageInfo($checkUsername['message'], $this->applicationInfos[1]['domain'] . 'index/register');
-		}*/
+		if (!empty($email)) {
+			$emailStatus = uc_user_checkemail($email);
+			if ($emailStatus != 1) {
+				$this->returnResult('10012');
+			}
+		}
 
 		$userid= uc_user_register($userInfo['username'], $password, $email);
 		$userid = intval($userid);
 		if ($userid <= 0) {
-			$datas['code'] = -5; $datas['msg'] = 'SERVER_ERROR';
-			exit(json_encode($datas));
+			$this->returnResult('10008');
 		} else {
 			$passwordInfos = $this->_getPassword($password);
 
@@ -61,21 +81,15 @@ abstract class ApiBase extends Custom_Controller
 
 			$addUser = $this->memberModel->addInfo($userInfo);
 			if (empty($addUser)) {
-				$datas['code'] = -4; $datas['msg'] = 'SERVER2_ERROR';
-				exit(json_encode($datas));
+				$this->returnResult('10008');
 			}
 
 			$where = array('username' => $userInfo['username']);
 			$userInfo = $this->memberModel->getInfo($where);
-			$synloginCode = '';
-			if ($this->settings['ucserver']) {
-				//$synloginCode = uc_user_synlogin($userInfo['userid']);
-			}
-			$setCookieTime = $this->input->post('setcookietime');
-			$cookieTime = empty($setCookieTime) ? $this->time + 86400 : $this->time + 864000;
+
+			$cookieTime = $this->time + 864000;
 
 			$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $this->input->post('password');
-			//echo $encryptString;
 			$encryptKey = $this->_getEncryptKey();
 			$encrypt = $this->encrypt->encode($encryptString, $encryptKey);
 
@@ -83,10 +97,7 @@ abstract class ApiBase extends Custom_Controller
 			$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 			$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 			
-			$datas['status'] = true;
-			$datas['username'] = $userInfo['username'];
-			$datas['code'] = $datas['msg'] = 'SUCCESSFUL';
-			exit(json_encode($datas));
+			$this->returnResult('10000', array('userInfo' => $userInfo));
 		}
 	}
 	
@@ -96,40 +107,27 @@ abstract class ApiBase extends Custom_Controller
 	 */
 	public function login($infos)
 	{
-		$datas['status'] = false;
-		$datas['code']   = '3';//'PASSWD_OR_AID_WRONG';
-		$datas['msg']    = 'PASSWD_OR_AID_WRONG';
-
 		$username = $infos['username'];
 		$password = $infos['password'];
 
 		if (empty($username) || empty($password)) {
-			$data['code'] = $data['msg'] = 'INFO EMPTY';
-			exit(json_encode($datas));
+			$this->returnResult('10003');
 		}
 
 		$this->load->model('timesModel');
-		/*$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
+		$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
 		if ($remainMinute > 0) {
-			$datas['code'] = '4';//'PASSWD_WRONG_TIMES';
-			$datas['msg'] = 'PASSWD_WRONG_TIMES';
-			exit(json_encode($datas));
-		}*/
+			$this->returnResult('10004');
+		}
 
-		list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password);
-
-
-		$statusInfos = array('-1' => 'USER_NO_EXIST', '-2' => 'PASSWD_WRONG', '-3' => 'WRONG_');
-
-		
+		list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password); 
+		$statusInfos = array('-1' => '10005', '-2' => '10006', '-3' => '10007');
 		if ($ucInfo['userid'] <= 0) {
 			if ($ucInfo['userid'] == -2) {
 				$this->timesModel->writeLoginTimes(array('username' => $username, 'isadmin' => 0), false, $this->ip);
 			}
-			$message = in_array($ucInfo['userid'], array_keys($statusInfos)) ? $statusInfos[$ucInfo['userid']] : 'OTHER_ERROR';
-			$datas['code'] = $ucInfo['userid'];
-			$datas['msg'] = $message;
-			exit(json_encode($datas));
+
+			$this->returnResult($statusInfos[$ucInfo['userid']]);
 		}
 
 		$where = array('username' => $username);
@@ -149,8 +147,7 @@ abstract class ApiBase extends Custom_Controller
 		}
 
 		if (empty($userInfo)) {
-			$datas['code'] = $datas['msg'] = $statusInfos['-1'];
-			exit(json_encode($datas));
+			$this->returnResult('10008');
 		}
 
 		/*if ($userInfo['islock']) {
@@ -160,11 +157,8 @@ abstract class ApiBase extends Custom_Controller
 		$updateInfo = array('lastloginip' => $this->ip, 'lastlogintime' => $this->time, 'loginnum' => $userInfo['loginnum'] + 1);
 		$this->memberModel->editInfo($updateInfo, $where);
 
-		$setCookieTime = $this->input->post('setcookietime');
-		$cookieTime = empty($setCookieTime) ? $this->time + 86400 : $this->time + 864000;
-
+		$cookieTime = $this->time + 864000;
 		$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $password;
-		//echo $encryptString;
 		$encryptKey = $this->_getEncryptKey();
 		$encrypt = $this->encrypt->encode($encryptString, $encryptKey);
 
@@ -172,12 +166,42 @@ abstract class ApiBase extends Custom_Controller
 		$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 		$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 
-		$datas['status'] = true;
-		$datas['code'] = 1;
-		$datas['msg'] = 'SUCCESS';
-		echo json_encode($datas);
+		$this->returnResult('10000');
+	}
+
+	/**
+	 * Create the checkcode for front webgame
+	 *
+	 */
+	public function createCaptcha()
+	{
+		$this->checkcode('frontCaptcha');
+	}
+
+	/**
+	 * Check the checkcode for front webgame
+	 *
+	 */
+	public function checkCaptcha()
+	{
+		$captchaValid = $this->isValidCode('frontCaptcha');
+		
+		$data['captchaValid'] = $captchaValid;
+		echo $this->_jsonp($data);
 		exit();
-		exit(json_encode($datas));
-		//$this->_messageInfo('登录成功！' . $synloginCode, $this->applicationInfos[2]['domain']);
+	}
+
+	public function returnResult($resultKey, $array = array())
+	{
+		$status = $resultKey == '10000' ? true : false;
+		$resultKey = in_array($resultKey, array_keys($this->messageInfos)) ? $resultKey : '11000';
+		$returnInfos = array(
+			'status' => $status,
+			'code'   => $resultKey,
+			'msg'    => $this->messageInfos[$resultKey],
+		);
+		
+		$returnInfos = !empty($array) ? array_merge($returnInfos, $array) : $returnInfos; 
+		exit(json_encode($returnInfos));
 	}
 }

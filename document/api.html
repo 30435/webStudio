@@ -38,7 +38,6 @@ b { color:#0000cc; }
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">登陆接口</a></li>
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">新用户注册接口</a></li>
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">支付接口</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#f">游戏角色的接口</a></li>
 	</ul>
 </div>
 <div id="content">
@@ -95,26 +94,42 @@ b { color:#0000cc; }
 
 	<p>需要用到的参数：</p>
 	<ul>
+	    <li><span><b>action</b> － 值为login，指向平台发起账号登陆的请求事件</span></li>
 		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
-		<li><span><b>password</b> － 用户在游戏里提供的登陆密码</span></li>
-		<li><span><b>gamecode</b> － 平台分配给游戏的唯一标示符</span></li>
-		<li><span><b>key</b> － 平台与游戏使用的秘钥</span></li>
+		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
+		<li><span><b>code</b> － 平台分配给游戏的唯一标示符，指定账号要进入什么游戏</span></li>
 	</ul>
 	<p>登陆请求URL：</p>
 	<ul>
-		<li><span><b>token</b> － 基于以上参数password、password2、seccode、gamecode、key，使用某一加密算法生成一个加密后的字符串，该字符串作为GET参数token的值</span></li>
-		<li><span><b>url</b> － 完整的url，接口地址和token参数组成一个完整的登陆请求地址，如：http://passport.t.alyee.com/api?token=517cc1ngm4Bux4scMik4D2hqEVg0fPJ35h8mdPOIGLMRRpo3QLlCuRG0A28oF+LqNRJ47kSrP0JWrOfN5WL4lmnGdV2GRvbpbw</span></li>
+		<li><span><b></b> － 基于以上参数action、username、password、code，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的账号aaaaaa，使用密码aaaaaa在游戏上登陆时，游戏方应该向平台发起的请求url是：</span></li>
+		<li><span><b>url</b> － http://passport.nova.com:92/api/?action=login&username=aaaaaa&password=0b4e7a0e5fe84ad35fb5f95b9ceeac79&code=nova</span></li>
 	</ul>
 
-	<p>调用结果是json字符串，如（{"status":true,"code":"1","msg":"SUCCESS"}）。返回的数字及其含义：</p>
+	<p>调用结果是json字符串，如（{"status":true,"code":"10000","msg":["SUCCESSFUL"]}）。可通过json解码为一个数组，数组中各个字段的含义：</p>
 	<ul>
-		<li><span><b>-9</b> － 参数有误</span></li>
-		<li><span><b>-8</b> － 请求的事件不存在</span></li>
-		<li><span><b>-1</b> － 账号不存在</span></li>
-		<li><span><b>-2</b> － 密码错误</span></li>
-		<li><span><b>-3</b> － 未知错误</span></li>
-		<li><span><b>1</b> － 登陆成功</span></li>
+		<li><span><b>status</b> － 返回状态：true为成功，表示平台通过了用户的登陆验证，false为失败，只有code为10000时，status为true，其他情况status均为false<</span></li>
+		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
+		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
 	</ul>
+
+	<p>返回值中各个状态码的含义</p>
+	<ul>
+		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
+		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
+		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
+		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
+		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
+		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
+		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
+		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
+		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
+		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
+		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
+		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
+		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
+		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
+	</ul>
+
 
 	<h3 id="d">注册接口（只对自主研发的儿童类网游有效）</h3>
 	<p>接口地址：</p>
@@ -124,84 +139,60 @@ b { color:#0000cc; }
 
 	<p>需要用到的参数：</p>
 	<ul>
+	    <li><span><b>action</b> － 值为register，指向平台发起账号注册的请求事件</span></li>
+		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
+		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
+		<li><span><b>code</b> － 平台分配给游戏的唯一标示符，指定账号要进入什么游戏</span></li>
+
 		<li><span><b>password</b> － 注册信息之密码</span></li>
 		<li><span><b>password2</b> － 注册信息之密码确认</span></li>
-		<li><span><b>password2</b> － 注册信息之验证码</span></li>
-		<li><span><b>gamecode</b> － 平台分配给游戏的唯一标示符</span></li>
-		<li><span><b>key</b> － 平台与游戏使用的秘钥</span></li>
+		<li><span><b>captcha</b> － 注册信息之验证码</span></li>
+		<li><span><b>code</b> － 平台分配给游戏的唯一标示符</span></li>
+		<li><span><b>channel</b> － 当有多个运营平台时，用来标识运营平台的标识信息，可以统计运营平台上产生的注册用户数等相关信息</span></li>
 	</ul>
 	<p>注册请求URL：</p>
 	<ul>
-		<li><span><b>token</b> － 基于以上参数username、password、gamecode、key，使用某一加密算法生成一个加密后的字符串，该字符串作为GET参数token的值</span></li>
-		<li><span><b>url</b> － 完整的url，接口地址和token参数组成一个完整的登陆请求地址，如：http://passport.ci.com/api?token=daa0YSrYRDrJYI97H62+7uZVDR+VaK3yu6uGp+K3Ou9J4hBSJinUKCsTw0kVJvbGOIQBix8z7ZZLx1rRCHN5NIvSWxrzy/9qzS7VCGiBd2zDNFyx38CzOCKN</span></li>
+		<li><span><b></b> － 基于以上参数action、password、password2、captcha、code、channel，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的用户指定了密码aaaaaa申请称为注册用户，游戏方应该向平台发起的请求url是：</span></li>
+		<li><span><b>url</b> － http://passport.ci.com/api/?action=register&password=aaaaaa&password2=aaaaaa&seccode=test&code=nova&channel=official</span></li>
 	</ul>
 
-	<p>调用结果是json字符串，如（{"status":true,"code":"1","msg":"SUCCESSFUL","username":"2372554"}）。返回的数字及其含义：</p>
+	<p>调用结果是json字符串，如（{"status":false,"code":"10009","msg":["REGISTER_INFO_EMPTY"]}）。当status成功时，同时返回注册用户的相关信息，如：{"status":true,"code":"10000","msg":["SUCCESSFUL"],"userInfo":{"userid":"2656318","username":"2656318","avatar":"0","email":"","truename":"","gender":"2","telephone":"","address":"","qq":"","birthday":"0","postcode":"","mobile":"","idcard":"","regip":"127.0.0.1","regdate":"1380189944","loginnum":"0","lastloginip":"0","lastlogintime":"0","is_lock":"0"}}。可通过json解码为一个数组，数组中各个字段的含义：</p>
 	<ul>
-		<li><span><b>-9</b> － 参数有误</span></li>
-		<li><span><b>-8</b> － 请求的事件不存在</span></li>
-		<li><span><b>-7</b> － 注册信息不能为空</span></li>
-		<li><span><b>-6</b> － 输入的两次密码不相等</span></li>
-		<li><span><b>-5</b> － 注册用户失败</span></li>
-		<li><span><b>-4</b> － 注册用户失败2</span></li>
-		<li><span><b>1</b> － 注册用户成功</span></li>
+		<li><span><b>status</b> － 返回状态：true为成功，表示成功地注册了一个有效账号，false为失败，即注册失败；只有code为10000时，status为true，其他情况status均为false</span></li>
+		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
+		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
 	</ul>
+
+	<p>返回值中各个状态码的含义</p>
+	<ul>
+		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
+		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
+		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
+		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
+		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
+		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
+		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
+		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
+		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
+		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
+		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
+		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
+		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
+		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
+	</ul>
+
 
 	<h3 id="e">支付接口</h3>
-	<p>建议支付接口由游戏提供，然后当平台用户向诺瓦游戏支付游戏币时，由平台主动请求游戏支付接口，通知游戏指定用户向该游戏支付了若干游戏币。游戏方提供接口的示例：</p>
-	<p>接口地址：</p>
-	<p class="subp"><b>http://api.nova.com/api/buycoin.php</b></p>
-	
-	<p>调用方式：</p>
-	<p class="subp">服务端 <b>GET</b>（由支付服务器GET方式请求调用支付接口）</p>
-
-	<p>调用参数：</p>
+	<p>支付接口通过平台和游戏端共享数据表的方式实现，当平台用户向游戏支付游戏币时，平台向游戏的指定数据表的指定字段里加入相关的游戏币数量。</p>
 	<ul>
-		<li><span><b>user</b> － 平台用户的用户ID，唯一标识一个玩家。</span></li>
-		<li><span><b>coin</b> － 支付的诺币数量，一个正整数，与人民币比例为：<b>1:10</b>，1人民币=10诺币</span></li>
-		<li><span><b>order</b> － 本次支付在平台上的订单号，字符串类型，需要可以唯一标识这次支付</span></li>
-		<li><span><b>sign</b> － 支付票据，字符串类型，按 <b>md5(user_coin_order_平台密钥)</b> 算法生成的哈希值(小写)</span></li>
+		<li><span><b>相关的数据表和字段</b> － 初步定为nova库的t_account数据表的money字段</span></li>
+		<li><span><b>平台币</b> － 用户在平台上的货币，1平台币=1元人民币</span></li>
+		<li><span><b>平台币与诺瓦游戏币的兑换比率</b> － 这里假设1平台币=10个诺瓦游戏币，即兑换比率为10</span></li>
+		<li><span><b>支付过程</b> － 有平台账号aaaaaa，在平台上向诺瓦游戏发起支付100平台币的操作，通过平台的验证后，平台将会读取t_account数据表，查询表中是否有aaaaaa的记录，如果没有，则在表中增加一条记录，新纪录的accname值为aaaaaa、money的值为1000。如果t_account已经有了aaaaaa的记录，则只更新该记录的money字段信息，即为money字段加上1000个诺瓦游戏币</span></li>
 	</ul>
 
-	<p>调用结果：</p>
-	<ul>
-		<li><span><b>1</b> － 支付成功</span></li>
-		<li><span><b>2</b> － 支付的服务器不存在，请确认游戏服域名正确并已被添加到后台</span></li>
-		<li><span><b>3</b> － 参数不完整或支付游戏币有误</span></li>
-		<li><span><b>4</b> － 不允许的访问的IP，请将支付服务器的IP提交给联运负责人加入白名单</span></li>
-		<li><span><b>5</b> － md5错误，请确认密钥正确，支付票据算法跟文档描述一致，参与票据计算的参数于传递给接口的参数一致</span></li>
-		<li><span><b>6</b> － 订单已经成功充过值，请确认订单号在平台上是唯一的，并且没有错误的重跑</span></li>
-		<li><span><b>7</b> － 不存在此账号，请确认用户名和登录接口传递的是一致的</span></li>
-		<li><span><b>8</b> － 支付接口关闭</span></li>
-		<li><span><b>0</b> － 支付失败，订单处于待充状态，您可以重复请求直到返回值为6</span></li>
-	</ul>
-	<p>附加说明：</p>
-	<p class="subp">对于支付失败的订单服务器有重跑机制，一般每5分钟会对支付状态为待充的订单进行重新请求，处理为成功状态(也就是返回0的订单)，若超过5分钟订单还未执行成功请与运营同学联系。 </p>
-
-	<h3 id="f">帐号是否创建游戏角色</h3>
-	<p>建议判断游戏角色接口由游戏提供，然后当平台用户向诺瓦游戏支付游戏币时，应首先判断该用户是否在游戏中创建了角色，只有创建了角色的用户，才可以向游戏里支付游戏币。游戏方提供接口的示例：</p>
-	<p>接口地址：</p>
-	<p class="subp"><b>http://api.nova.com/api/check_user.php</b></p>
-
-	<p>调用方式：</p>
-	<p class="subp">服务端 <b>GET</b></p>
-
-	<p>调用参数：</p>
-	<ul>
-		<li><span><b>user</b> － 所要检查的平台帐号</span></li>
-		<li><span><b>sign</b> － 调用验证字符串，按 <b>md5(user_平台密钥)</b> 算法生成的哈希值</span></li>
-	</ul>
-
-	<p>调用结果：</p>
-	<ul>
-		<li><span><b>1</b> － 成功，平台账号已创建了角色存在</span></li>
-		<li><span><b>2</b> － 玩家帐号未创建角色</span></li>
-		<li><span><b>3</b> － 玩家帐号不存在</span></li>
-	</ul>
-	<p>附加说明：</p>
-	<p class="subp">本接口主要用于请求充值接口前进行帐号是否存在的判断，平台若请求此接口返回错误信息则勿继续调用充值接口。</p>
 		
-	<div id="footer"> 最后修改时间：2013-01-30</div>
+	<div id="footer"> 最后修改时间：2013-09-26</div>
 </div>
 
 

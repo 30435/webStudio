@@ -1,4 +1,4 @@
-﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 require_once dirname(__FILE__) . '/apiBase.php';
 class Api2 extends ApiBase
@@ -15,13 +15,18 @@ class Api2 extends ApiBase
 	{
 		$token = str_replace(' ', '+', $this->input->get('token'));
 		if (empty($token)) {
-			exit('-9');
+			$this->returnInfos['code'] = '10001';
+			$this->returnInfos['msg'] = $this->messageInfos['10001'];
+			echo json_encode($msg);
+			exit();
 		}
 
 		parse_str(uc_authcode($token, 'DECODE', 'novagame'), $infos);
-		$validActions = array('login', 'register');
-		if (!isset($infos['action']) || !in_array($infos['action'], $validActions)) {
-			exit('-8');
+		if (!isset($infos['action']) || !in_array($infos['action'], $this->validActions)) {
+			$this->returnInfos['code'] = '10001';
+			$this->returnInfos['msg'] = $this->messageInfos['10001'];
+			echo json_encode($msg);
+			exit();
 		}
 
 		$this->$infos['action']($infos);

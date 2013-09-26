@@ -22,8 +22,8 @@ tr{height:32px;}
 </style>
 </head>
 <body>
+<h1><?php if (isset($_GET['action']) && $_GET['action'] == 'registersuccess') { echo '注册成功，您可以登陆游戏了！'; } ?></h1>
 <form action="action.php" method="get" name="form1" id="form1">
-  <input type="submit" name="button" id="button" value="提交" /><br />
   <input type="hidden" name="action" value="login" />
   <input type="hidden" name="code" value="<?php echo $webgameCode; ?>" />
   <table border="0px" style="font-size:12px" width="630px">
@@ -34,13 +34,14 @@ tr{height:32px;}
     </tr>
     <tr> 
       <td align="right">密码:</td>
-      <td><input type="password" id="password" name="password" value="<?php if (isset($_GET['passport'])) echo $_GET['passport']; ?>" style="width:120px" /></td>
+      <td><input type="password" id="password" name="password" value="<?php if (isset($_GET['password'])) echo $_GET['password']; ?>" style="width:120px" /></td>
       <td><div id="passwordTip" style="width:280px"></div></td>
     </tr>
     <tr> 
       <td colspan="3"><div id="msTip" style="width:280px"></div></td>
     </tr>
   </table>
+  <input type="submit" name="button" id="button" value="提交" /><br />
 </form>
 <div id="output"></div>
 
