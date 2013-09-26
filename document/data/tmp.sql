@@ -1,3 +1,5 @@
+grant all privileges on `nova`.`t_account` to 'plat_duser'@'192.168.0.116' identified by "duserplat";
+
 INSERT INTO `sw_new` (`catid`, `title`, `thumb`, `keywords`, `description`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `position`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`) 
 SELECT 9, `title`, `thumb`, `keywords`, `description`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `position`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`
 FROM `sw_new` WHERE `catid` = 7;

@@ -41,7 +41,7 @@ abstract class ApiBase extends Custom_Controller
 		$password2 = $infos['password2'];
 		$captcha = $infos['captcha'];
 		$email = $infos['email'];
-var_dump($password . $password2 . $captcha);
+
 		if (empty($password) || empty($password2) || empty($captcha)) {
 			$this->returnResult('10009');
 		}
@@ -51,9 +51,9 @@ var_dump($password . $password2 . $captcha);
 		}
 
 		$this->load->library('session');
-		$currentSeccode = $this->session->userdata('frontCaptcha');
-		if ($seccode != $currentSeccode) {
-			//$this->returnResult('10011');
+		$currentCaptcha = $this->session->userdata('frontCaptcha');
+		if ($captcha != $currentCaptcha) {
+			$this->returnResult('10011');
 		}
 		$this->session->unset_userdata('frontCaptcha');
 		$userInfo['username'] = $this->getUsername();

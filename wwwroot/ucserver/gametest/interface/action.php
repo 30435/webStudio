@@ -64,7 +64,7 @@ function getUrl($string, $interfaceType, $configInfos)
 
 function getResult($string, $url, $interfaceType, $configInfos)
 {
-	$returnStr = file_get_contents($url); var_dump($returnStr); var_dump($returnStr);
+	$returnStr = file_get_contents($url);
 	while (preg_match('/^\xEF\xBB\xBF/', $returnStr)) {
 		$returnStr = substr($returnStr, 3);
 	}

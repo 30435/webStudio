@@ -16,10 +16,7 @@ class Api extends ApiBase
 		$infos = array();
 		$action = $this->input->get_post('action');
 		if (!in_array($action, $this->validActions)) {
-			$this->returnInfos['code'] = '10001';
-			$this->returnInfos['msg'] = $this->messageInfos['10001'];
-			echo json_encode($msg);
-			exit();
+			$this->returnResult('10001');
 		}
 
 		switch ($action) {

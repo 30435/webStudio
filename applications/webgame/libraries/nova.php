@@ -34,22 +34,26 @@ class Nova extends WebgameCommon
 		$gamegoldModel = $this->params['frontController']->gamegoldModel;
 		
 		$gamegoldModel->currentDb = $gamegoldModel->_loadDatabase('game');
-		$where = array('username' => $this->username);
+		$where = array('accname' => $this->userid);
 		$infos = $gamegoldModel->getInfo($where);
 
 		if (empty($infos)) {
-			$data = array(
+			/*$data = array(
 				'username' => $this->username,
 				'userid' => $this->userid,
 				'money' => $this->params['money'],
 				'lasttime' => $this->time,
+			);*/
+			$data = array(
+				'accname' => $this->userid,
+				'money' => $this->params['money'],
 			);
 
 			$payResult = $gamegoldModel->addInfo($data);
 		} else {
 			$data = array(
 				'money' => $infos['money'] + $this->params['money'],
-				'lasttime' => $this->time,
+				//'lasttime' => $this->time,
 			);
 			$payResult = $gamegoldModel->editInfo($data, $where);
 		}
