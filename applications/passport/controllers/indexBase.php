@@ -275,4 +275,13 @@ class IndexBase extends Custom_Controller
 			}
 		}
 	}
+
+	/**
+	 * Get the password
+	 *
+	 */
+	public function getpwd()
+	{
+		$this->load->view($this->prefix . '/getpwd');
+	}
 }
