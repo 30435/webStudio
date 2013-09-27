@@ -37,6 +37,7 @@ abstract class ApiBase extends Custom_Controller
 	 */
 	public function register($infos)
 	{
+		var_dump($_COOKIE);
 		$password = $infos['password'];
 		$password2 = $infos['password2'];
 		$captcha = $infos['captcha'];
@@ -89,7 +90,7 @@ abstract class ApiBase extends Custom_Controller
 
 			$cookieTime = $this->time + 864000;
 
-			$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $this->input->post('password');
+			$encryptString = $userInfo['userid'] . "\t" . $userInfo['username'] . "\t" . $password;
 			$encryptKey = $this->_getEncryptKey();
 			$encrypt = $this->encrypt->encode($encryptString, $encryptKey);
 

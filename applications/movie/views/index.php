@@ -1,15 +1,5 @@
-<html><head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta content="IE=7" http-equiv="X-UA-Compatible">
-<meta content="" name="description">
-<title>最新最热电影,电视剧,动漫，综艺, 音乐在线观看网站大全-114啦影视导航</title>
-<link type="image/x-icon" href="http://v.114la.com/favicon.ico" rel="icon">
-<link type="image/x-icon" href="http://v.114la.com/favicon.ico" rel="shortcut icon">
-<meta content="电影，电视，电视剧，动漫，综艺，音乐" name="keywords">
-<meta content="114la影视导航为您提供最新最热的电影，电视剧，动漫，综艺节目，音乐视频推荐及免费在线观看网站。找免费网站尽在114啦影视导航" name="description">
-<meta content="NOIMAGEINDEX" name="ROBOTS">
+<?php echo $this->load->view('header_base'); ?>
 <link rel="stylesheet" href="<?php echo $this->staticUrl; ?>movie/css/style.css?v2013">
-<script charset="utf-8" async="" src="http://cbjs.baidu.com/js/logAdvanced.js"></script><script charset="utf-8" async="" src="http://cbjs.baidu.com/js/log.js"></script><script src="http://cbjs.baidu.com/js/m.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="top">
@@ -25,11 +15,7 @@
 			<a target="_blnak" href="http://hgd.114la.com/">皇冠店</a>
 			<a v="" href="http://app.114la.com/">实用工具</a>
 		</div>
-		<div class="fr">
-			<a target="_blnak" href="http://www.114la.com/feedback">意见反馈</a>
-			<i class="sq">|</i>
-			<a id="collet" title="收藏114la影视" href="javascript:;">收藏本页</a>
-		</div>
+		<div class="fr"><a target="_blnak" href="http://www.114la.com/feedback">意见反馈</a><i class="sq">|</i><a id="collet" title="收藏114la影视" href="javascript:;">收藏本页</a></div>
 	</div>
 </div>
 <div id="header">
@@ -93,192 +79,48 @@
 			</div>
 		</div>
 		<div class="operht">
-			<div class="userlog">
-								<a href="http://v.114la.com/?ct=login">登录</a>
-				<a href="http://v.114la.com/?ct=register">注册</a>	
-							</div>
+			<div class="userlog"><a href="http://v.114la.com/?ct=login">登录</a><a href="http://v.114la.com/?ct=register">注册</a></div>
 			<div class="history">
 				<span class="kick">播放记录<i></i></span>
 				<dl class="hisCont">
 					<dt>播放记录</dt>
-					<dd id="hisStatu">
-						<ul><li id="noHis">您还没有观看记录~</li></ul>
-					</dd>
+					<dd id="hisStatu"><ul><li id="noHis">您还没有观看记录~</li></ul></dd>
 				</dl>
 			</div>
 		</div>
 	</div>
-</div><div id="slider">
-	    <div id="indexSlide" class="sliCont">
-    <ul>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138018061617849.jpg&quot;) no-repeat scroll center center rgb(231, 233, 249); display: none;">
-            <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">
-                <img alt="神枪狙击" src="http://v.114la.com/img/focus_img/201309/138018061617849.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"></a>
-                </i>
-                <h3>
-                    <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">
-                        神枪狙击                    </a>
-                </h3>
-                <p>
-                    型男飞虎队,张兆辉谢天华枪王大对决。
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138016778722090.jpg&quot;) no-repeat scroll center center rgb(0, 0, 0); display: block;">
-            <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">
-                <img alt="神盾局特工第1季" src="http://v.114la.com/img/focus_img/201309/138016778722090.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"></a>
-                </i>
-                <h3>
-                    <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">
-                        神盾局特工第1季                    </a>
-                </h3>
-                <p>
-                    超级英雄，让位人类特工。
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138008738197908.jpg&quot;) no-repeat scroll center center rgb(0, 0, 0); display: none;">
-            <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
-                <img alt="痒婚之十年再爱你" src="http://v.114la.com/img/focus_img/201309/138008738197908.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html"></a>
-                </i>
-                <h3>
-                    <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
-                        痒婚之十年再爱你                    </a>
-                </h3>
-                <p>
-                    阿雅携手连凯 揭秘男女追逐的悬念游戏。
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138008606313473.jpg&quot;) no-repeat scroll center center rgb(238, 190, 85); display: none;">
-            <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
-                <img alt="巨轮" src="http://v.114la.com/img/focus_img/201309/138008606313473.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html"></a>
-                </i>
-                <h3>
-                    <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
-                        巨轮                    </a>
-                </h3>
-                <p>
-                    两兄弟各走极端 陈展鹏萧正楠变幻人生
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137998735775287.jpg&quot;) no-repeat scroll center center rgb(239, 242, 244); display: none;">
-            <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
-                <img alt="辣妈正传" src="http://v.114la.com/img/focus_img/201309/137998735775287.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html"></a>
-                </i>
-                <h3>
-                    <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
-                        辣妈正传                    </a>
-                </h3>
-                <p>
-                    孙俪产后复出，形象大颠覆，出演麻辣妈妈。
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137981800778500.jpg&quot;) no-repeat scroll center center rgb(255, 205, 2); display: none;">
-            <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
-                <img alt="疯狂的导演" src="http://v.114la.com/img/focus_img/201309/137981800778500.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html"></a>
-                </i>
-                <h3>
-                    <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
-                        疯狂的导演                    </a>
-                </h3>
-                <p>
-                    超越“疯狂系列”的又一”疯狂力作“
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/137990300456338.jpg&quot;) no-repeat scroll center center rgb(227, 213, 195); display: none;">
-            <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
-                <img alt="iphone 5s/5c 天猫全球同步首发" src="http://v.114la.com/img/focus_img/201309/137990300456338.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8"></a>
-                </i>
-                <h3>
-                    <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
-                        iphone 5s/5c 天猫全球同步首发                    </a>
-                </h3>
-                <p>
-                    超前，空前。 为敢想而构想,为细致而思量,为精雕而细琢。
-                </p>
-            </div>
-        </li>
-                <li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138001559194805.jpg&quot;) no-repeat scroll center center rgb(255, 184, 82); display: none;">
-            <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
-                <img alt="女神联盟" src="http://v.114la.com/img/focus_img/201309/138001559194805.jpg">
-            </a>
-            <div class="summary">
-                <i>
-                    <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22"></a>
-                </i>
-                <h3>
-                    <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
-                        女神联盟                    </a>
-                </h3>
-                <p>
-                    坐骑升阶增战力 英雄无上威风
-                </p>
-            </div>
-        </li>
-            </ul>
-    <div class="snum">
-                        <a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html" class="">
-            <img width="58" height="38" alt="神枪狙击" src="http://v.114la.com/img/small_img/201309/137947350043618.jpg">
-        </a>
-                        <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html" class="current">
-            <img width="58" height="38" alt="神盾局特工第1季" src="http://v.114la.com/img/small_img/201309/138016675660521.jpg">
-        </a>
-                        <a title="痒婚之十年再爱你" target="_blank" href="http://v.114la.com/movie/34748.html">
-            <img width="58" height="38" alt="痒婚之十年再爱你" src="http://v.114la.com/img/small_img/201309/138008738129872.jpg">
-        </a>
-                        <a title="巨轮" target="_blank" href="http://v.114la.com/tv/52794.html">
-            <img width="58" height="38" alt="巨轮" src="http://v.114la.com/img/small_img/201309/138008431312200.jpg">
-        </a>
-                        <a title="辣妈正传" target="_blank" rel="nofollow" href="http://v.114la.com/tv/51847.html">
-            <img width="58" height="38" alt="辣妈正传" src="http://v.114la.com/img/small_img/201309/137998898993102.jpg">
-        </a>
-                        <a title="疯狂的导演" target="_blank" href="http://v.114la.com/movie/52243.html">
-            <img width="58" height="38" alt="疯狂的导演" src="http://v.114la.com/img/small_img/201309/137981800769552.jpg">
-        </a>
-                        <a title="iphone 5s/5c 天猫全球同步首发" target="_blank" rel="nofollow" href="http://click.hm.baidu.com/clk?21617567fb5a617966ff6e69429a3ec8">
-            <img width="58" height="38" alt="iphone 5s/5c 天猫全球同步首发" src="http://v.114la.com/img/small_img/201309/137990279785985.jpg">
-        </a>
-                        <a title="女神联盟" target="_blank" rel="nofollow" href="http://web.7k7k.com/games/nslm/114lwzdh/114lwzdh-2013010.html?k=22">
-            <img width="58" height="38" alt="女神联盟" src="http://v.114la.com/img/small_img/201309/138001559148314.jpg">
-        </a>
-            </div>
-    <div class="inSlide-mouse">
-        <a class="tk-left" href="javascript:;"></a>
-        <a class="tk-right" href="javascript:;"></a>
-    </div>
-</div></div>
+</div>
+<div id="slider">
+	<div id="indexSlide" class="sliCont">
+		<ul>
+            <li style="background: url('http://v.114la.com/img/focus_img/201309/138016778722090.jpg') no-repeat scroll center center rgb(0, 0, 0); display: block;">
+				<a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"><img alt="神盾局特工第1季" src="http://v.114la.com/img/focus_img/201309/138016778722090.jpg"></a>
+				<div class="summary">
+					<i><a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"></a></i>
+					<h3><a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">神盾局特工第1季</a></h3>
+					<p>超级英雄，让位人类特工。</p>
+				</div>
+			</li>
+			<?php for ($i = 1; $i < 8; $i++) { ?>
+			<li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138018061617849.jpg&quot;) no-repeat scroll center center rgb(231, 233, 249); display: none;">
+				<a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"><img alt="神枪狙击" src="http://v.114la.com/img/focus_img/201309/138018061617849.jpg"></a>
+				<div class="summary">
+					<i><a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"></a></i>
+					<h3><a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">神枪狙击</a></h3>
+					<p>型男飞虎队,张兆辉谢天华枪王大对决。</p>
+				</div>
+			</li>
+			<?php } ?>
+        </ul>
+		<div class="snum">
+			<a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html" class="current"><img width="58" height="38" alt="神枪狙击" src="http://v.114la.com/img/small_img/201309/137947350043618.jpg"></a>
+			<?php for ($i = 1; $i < 8; $i++) { ?>
+            <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html" class=""><img width="58" height="38" alt="神盾局特工第1季" src="http://v.114la.com/img/small_img/201309/138016675660521.jpg"></a>
+			<?php } ?>
+        </div>
+        <div class="inSlide-mouse"><a class="tk-left" href="javascript:;"></a><a class="tk-right" href="javascript:;"></a></div>
+	</div>
+</div>
 <div id="navis">
 	<ul>
 		<li class="active"><a title="首页" href="http://v.114la.com/">首页<i></i></a></li>
@@ -286,16 +128,13 @@
 		<li><a title="电视剧" href="http://v.114la.com/tv/">电视剧<i></i></a></li>
 		<li><a title="动漫" href="http://v.114la.com/anime/">动漫<i></i></a></li>
 		<li><a title="综艺" href="http://v.114la.com/zongyi/">综艺<i></i></a></li>
-
-        <li>
-            <a class="co" title="娱乐" href="http://v.114la.com/yule/">娱乐<em>new</em><i></i></a>
-        </li>
-
+        <li><a class="co" title="娱乐" href="http://v.114la.com/yule/">娱乐<em>new</em><i></i></a></li>
         <li><a title="排行榜" href="http://v.114la.com/top/">排行榜<i></i></a></li>
 		<li><a title="影视网址" href="http://v.114la.com/website/">影视网址<i></i></a></li>
 	</ul>
-</div><div id="dexCol" class="wrapper">
-		<dl class="siteLink">
+</div>
+<div id="dexCol" class="wrapper">
+	<dl class="siteLink">
 		<dt>影视名站<i></i></dt>
 		<dd>
 		    <a rel="nofollow" target="_blnak" href="http://cps.youku.com/redirect.html?id=00000240">优酷网</a><i>|</i>
@@ -313,544 +152,119 @@
 			<a rel="nofollow" target="_blnak" href="http://app.114la.com/zhibo/">电视直播</a>
 			<a rel="nofollow" class="more" target="_blnak" href="http://v.114la.com/website/">更多&gt;&gt;</a>
 		</dd>
-	</dl>	<div class="comwrap topare">
-		<div class="comTitle">
-			<h6>卫视热播</h6>
-		</div>
+	</dl>
+	<div class="comwrap topare">
+		<div class="comTitle"><h6>卫视热播</h6></div>
 		<ul class="comcaseRow clearfix">
-															<li>
-				<a title="两周Two Weeks" href="http://v.114la.com/tv/52409.html">
-					<img alt="两周Two Weeks" src="http://v.114la.com/img/focus_img/201309/137990626789666.jpg">
-					<cite>两周Two Weeks</cite>
-					<em></em>
-				</a>
-				<p>更新至第15集</p>
-			</li>
-						<li>
-				<a title="主君的太阳" href="http://v.114la.com/tv/34625.html">
-					<img alt="主君的太阳" src="http://v.114la.com/img/focus_img/201309/138017450977608.jpg">
-					<cite>主君的太阳</cite>
-					<em></em>
-				</a>
+			<?php for ($i = 1; $i < 6; $i++) { ?>
+			<li>
+				<a title="主君的太阳" href="http://v.114la.com/tv/34625.html"><img alt="主君的太阳" src="http://v.114la.com/img/focus_img/201309/138017450977608.jpg"><cite>主君的太阳</cite><em></em></a>
 				<p>更新至第14集</p>
 			</li>
-						<li>
-				<a title="万万没想到" href="http://v.114la.com/tv/50857.html">
-					<img alt="万万没想到" src="http://v.114la.com/img/focus_img/201309/138001997611752.jpg">
-					<cite>万万没想到</cite>
-					<em></em>
-				</a>
-				<p>更新至第8集</p>
-			</li>
-						<li>
-				<a title="终极一班3" href="http://v.114la.com/tv/18509.html">
-					<img alt="终极一班3" src="http://v.114la.com/img/focus_img/201309/138017459558957.jpg">
-					<cite>终极一班3</cite>
-					<em></em>
-				</a>
-				<p>更新至第24集</p>
-			</li>
-						<li>
-				<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
-					<img alt="破产姐妹第3季" src="http://v.114la.com/img/focus_img/201309/138017443549845.jpg">
-					<cite>破产姐妹第3季</cite>
-					<em></em>
-				</a>
-				<p>更新至第1集</p>
-			</li>
-								</ul>
+			<?php } ?>
+		</ul>
 	</div>
 	<div class="comwrap clearfix">
-	    							   		<div class="leftSide fl ingrep">
+		<div class="leftSide fl ingrep">
 			<dl class="inTitle">
 				<dt>推荐电视剧</dt>
 				<dd class="contabs">
 					<ul>
 						<li class="current"><a href="javascript:;">最热</a></li>
 						<li><a href="javascript:;">最新</a></li>
-												<li><a href="javascript:;">内地</a></li>
-												<li><a href="javascript:;">港台</a></li>
-												<li><a href="javascript:;">韩剧</a></li>
-												<li><a href="javascript:;">美剧</a></li>
-												<li><a href="javascript:;">泰剧</a></li>
-											</ul>
+						<li><a href="javascript:;">内地</a></li>
+						<li><a href="javascript:;">港台</a></li>
+						<li><a href="javascript:;">韩剧</a></li>
+						<li><a href="javascript:;">美剧</a></li>
+						<li><a href="javascript:;">泰剧</a></li>
+					</ul>
 					<a class="more" href="http://v.114la.com/tv/">更多&gt;&gt;</a>
 				</dd>
 			</dl>
-						<div style="display:block;" class="ingrep-Cont">
+			<div style="display:block;" class="ingrep-Cont">
 				<div class="clearfix rowleft">
-										<div class="bgsummar fl">
+					<div class="bgsummar fl">
 						<a title="小爸爸" href="http://v.114la.com/tv/38555.html">
 							<img alt="小爸爸" data-original="http://v.114la.com/img/focus_img/201309/138018117580076.jpg" src="http://v.114la.com/img/focus_img/201309/138018117580076.jpg" style="display: inline;">
-							<cite>
-								<strong>小爸爸</strong>
-								33集全							</cite>
+							<cite><strong>小爸爸</strong>33集全</cite>
 						</a>
 						<p>&#12288;一个生长在美国的男孩，偶遇一个女孩，不自觉恋爱上了，一不小心生下了一个小男孩，之后小男孩就留在了美国，而这个男孩则回到了国内，等那孩子长大了之后，美国的亲戚携带着小孩回到国...<em></em></p>
 					</div>
-										<ul class="sumgroup fr clearfix">
-												<li class="">
+					<ul class="sumgroup fr clearfix">
+						<?php for ($i = 1; $i < 7; $i++) { ?>
+						<li class="">
 							<a title="半泽直树" href="http://v.114la.com/tv/52585.html">
 								<img alt="半泽直树" data-original="http://v.114la.com/img/focus_img/201309/138009984951598.jpg" src="http://v.114la.com/img/focus_img/201309/138009984951598.jpg" style="display: inline;">
-								<cite>半泽直树</cite>
-								<em></em>
+								<cite>半泽直树</cite><em></em>
 							</a>
 							<p>更新至第10集</p>
 						</li>
-												<li class="">
-							<a title="抹布女也有春天" href="http://v.114la.com/tv/38561.html">
-								<img alt="抹布女也有春天" data-original="http://v.114la.com/img/focus_img/201309/138017571139316.jpg" src="http://v.114la.com/img/focus_img/201309/138017571139316.jpg" style="display: inline;">
-								<cite>抹布女也有春天</cite>
-								<em></em>
-							</a>
-							<p>41集全</p>
-						</li>
-												<li class="">
-							<a title="大秦帝国之纵横" href="http://v.114la.com/tv/39423.html">
-								<img alt="大秦帝国之纵横" data-original="http://v.114la.com/img/focus_img/201309/138017514039649.jpg" src="http://v.114la.com/img/focus_img/201309/138017514039649.jpg" style="display: inline;">
-								<cite>大秦帝国之纵横</cite>
-								<em></em>
-							</a>
-							<p>更新至第26集</p>
-						</li>
-												<li class="">
-							<a title="歧路兄弟" href="http://v.114la.com/tv/52128.html">
-								<img alt="歧路兄弟" data-original="http://v.114la.com/img/focus_img/201309/138018178092900.jpg" src="http://v.114la.com/static/images/loading.gif">
-								<cite>歧路兄弟</cite>
-								<em></em>
-							</a>
-							<p>更新至第24集</p>
-						</li>
-												<li class="">
-							<a title="唐宫燕" href="http://v.114la.com/tv/34784.html">
-								<img alt="唐宫燕" data-original="http://v.114la.com/img/focus_img/201309/138017523427304.jpg" src="http://v.114la.com/static/images/loading.gif">
-								<cite>唐宫燕</cite>
-								<em></em>
-							</a>
-							<p>更新至第33集</p>
-						</li>
-												<li class="">
-							<a title="她的神话" href="http://v.114la.com/tv/32482.html">
-								<img alt="她的神话" data-original="http://v.114la.com/img/focus_img/201309/138018094196390.jpg" src="http://v.114la.com/static/images/loading.gif">
-								<cite>她的神话</cite>
-								<em></em>
-							</a>
-							<p>更新至第16集</p>
-						</li>
-											</ul>
+						<?php } ?>
+					</ul>
 				</div>
 			</div>
-						<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="秘密" href="http://v.114la.com/tv/53629.html">
-							<img alt="秘密" data-original="http://pic4.qiyipic.com/thumb/20130903/a616346.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>秘密</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="巨轮" href="http://v.114la.com/tv/52794.html">
-							<img alt="巨轮" data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>巨轮</cite>
-							<em></em>
-						</a>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="巨轮" href="http://v.114la.com/tv/52794.html"><img alt="巨轮" data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>巨轮</cite><em></em></a>
 						<p>更新至第3集</p>
 					</li>
-										<li>
-						<a title="神盾局特工第1季" href="http://v.114la.com/tv/52839.html">
-							<img alt="神盾局特工第1季" data-original="http://pic4.qiyipic.com/thumb/20130924/a635629.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>神盾局特工第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
-							<img alt="破产姐妹第3季" data-original="http://pic3.qiyipic.com/thumb/20130923/a634957.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>破产姐妹第3季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="黑名单第1季" href="http://v.114la.com/tv/52614.html">
-							<img alt="黑名单第1季" data-original="http://pic6.qiyipic.com/thumb/20130923/a635015.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>黑名单第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="人质第1季" href="http://v.114la.com/tv/52612.html">
-							<img alt="人质第1季" data-original="http://pic5.qiyipic.com/thumb/20130921/a632825.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>人质第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="老妈第1季" href="http://v.114la.com/tv/52722.html">
-							<img alt="老妈第1季" data-original="http://pic3.qiyipic.com/thumb/20130923/a634935.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>老妈第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="蛇蝎女佣第1季" href="http://v.114la.com/tv/52594.html">
-							<img alt="蛇蝎女佣第1季" data-original="http://photocdn.sohu.com/20130923/vrsab_ver5905313.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>蛇蝎女佣第1季</cite>
-							<em></em>
-						</a>
-						<p>13集全</p>
-					</li>
-					
+					<?php } ?>					
 				</ul>
 			</div>
-									<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="璀璨人生" href="http://v.114la.com/tv/38028.html">
-							<img data-original="http://pic4.qiyipic.com/thumb/20130826/a605082.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>璀璨人生</cite>
-							<em></em>
-						</a>
-						<p>73集全</p>
-					</li>
-										<li>
-						<a title="辣妈正传" href="http://v.114la.com/tv/51847.html">
-							<img data-original="http://v.114la.com/img/up_img/201309/137929600155843.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>辣妈正传</cite>
-							<em></em>
-						</a>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="辣妈正传" href="http://v.114la.com/tv/51847.html"><img data-original="http://v.114la.com/img/up_img/201309/137929600155843.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>辣妈正传</cite><em></em></a>
 						<p>更新至第33集</p>
 					</li>
-										<li>
-						<a title="武松（2013）" href="http://v.114la.com/tv/33908.html">
-							<img data-original="http://photocdn.sohu.com/20130814/vrsab_ver5703612.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>武松（2013）</cite>
-							<em></em>
-						</a>
-						<p>50集全</p>
-					</li>
-										<li>
-						<a title="万万没想到" href="http://v.114la.com/tv/50857.html">
-							<img data-original="http://v.114la.com/img/up_img/201309/137895698051955.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>万万没想到</cite>
-							<em></em>
-						</a>
-						<p>更新至第8集</p>
-					</li>
-										<li>
-						<a title="兰陵王" href="http://v.114la.com/tv/33916.html">
-							<img data-original="http://v.114la.com/img/up_img/201308/137653607963544.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>兰陵王</cite>
-							<em></em>
-						</a>
-						<p>46集全</p>
-					</li>
-										<li>
-						<a title="穿越火线" href="http://v.114la.com/tv/34101.html">
-							<img data-original="http://v.114la.com/img/up_img/201308/137688261856879.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>穿越火线</cite>
-							<em></em>
-						</a>
-						<p>38集全</p>
-					</li>
-										<li>
-						<a title="龙门镖局" href="http://v.114la.com/tv/25378.html">
-							<img data-original="http://pic5.qiyipic.com/thumb/20130724/a555616.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>龙门镖局</cite>
-							<em></em>
-						</a>
-						<p>40集全</p>
-					</li>
-										<li>
-						<a title="叶问（电视剧）" href="http://v.114la.com/tv/27865.html">
-							<img data-original="http://photocdn.sohu.com/20130801/vrsab_ver5078567.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>叶问（电视剧）</cite>
-							<em></em>
-						</a>
-						<p>更新至第47集</p>
-					</li>
-									</ul>
+					<?php } ?>
+				</ul>
 			</div>
-						<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="神枪狙击" href="http://v.114la.com/tv/40758.html">
-							<img data-original="http://v.114la.com/img/up_img/201309/137886450264682.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>神枪狙击</cite>
-							<em></em>
-						</a>
-						<p>更新至第13集</p>
-					</li>
-										<li>
-						<a title="情逆三世缘" href="http://v.114la.com/tv/33917.html">
-							<img data-original="http://v.114la.com/img/up_img/201308/137654953539538.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>情逆三世缘</cite>
-							<em></em>
-						</a>
-						<p>31集全</p>
-					</li>
-										<li>
-						<a title="巨轮" href="http://v.114la.com/tv/52794.html">
-							<img data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>巨轮</cite>
-							<em></em>
-						</a>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="巨轮" href="http://v.114la.com/tv/52794.html"><img alt="巨轮" data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>巨轮</cite><em></em></a>
 						<p>更新至第3集</p>
 					</li>
-										<li>
-						<a title=" 冲上云霄Ⅱ" href="http://v.114la.com/tv/18491.html">
-							<img data-original="http://v.114la.com/img/up_img/201307/137413992397672.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite> 冲上云霄Ⅱ</cite>
-							<em></em>
-						</a>
-						<p>43集全</p>
-					</li>
-										<li>
-						<a title="雷霆扫毒" href="http://v.114la.com/tv/16674.html">
-							<img data-original="http://v.114la.com/img/2013/08/01/xl/tvs/5/Te67t01676N.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>雷霆扫毒</cite>
-							<em></em>
-						</a>
-						<p>30集全</p>
-					</li>
-										<li>
-						<a title="千金百分百" href="http://v.114la.com/tv/8789.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/2/57R7823Kv7y.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>千金百分百</cite>
-							<em></em>
-						</a>
-						<p>40集全</p>
-					</li>
-										<li>
-						<a title="胜者为王" href="http://v.114la.com/tv/8018.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/pp/tvs/7/ZO121d3L1p5.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>胜者为王</cite>
-							<em></em>
-						</a>
-						<p>22集全</p>
-					</li>
-										<li>
-						<a title="中华英雄" href="http://v.114la.com/tv/39001.html">
-							<img data-original="http://v.114la.com/img/2013/09/26/56/tvs/10/5449I0em15S.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>中华英雄</cite>
-							<em></em>
-						</a>
-						<p>更新至第43集</p>
-					</li>
-									</ul>
+					<?php } ?>	
+				</ul>
 			</div>
-						<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="城市猎人" href="http://v.114la.com/tv/1756.html">
-							<img data-original="http://pic5.qiyipic.com/thumb/20120512/a114912u1.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>城市猎人</cite>
-							<em></em>
-						</a>
-						<p>20集全</p>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="辣妈正传" href="http://v.114la.com/tv/51847.html"><img data-original="http://v.114la.com/img/up_img/201309/137929600155843.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>辣妈正传</cite><em></em></a>
+						<p>更新至第33集</p>
 					</li>
-										<li>
-						<a title="花样男子" href="http://v.114la.com/tv/1554.html">
-							<img data-original="http://photocdn.sohu.com/20110531/vrsab_ver1003244.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>花样男子</cite>
-							<em></em>
-						</a>
-						<p>25集全</p>
-					</li>
-										<li>
-						<a title="我的女孩" href="http://v.114la.com/tv/1886.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/tB947XW238i.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>我的女孩</cite>
-							<em></em>
-						</a>
-						<p>20集全</p>
-					</li>
-										<li>
-						<a title="恋人" href="http://v.114la.com/tv/2060.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/7/6063G23Zh6V.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>恋人</cite>
-							<em></em>
-						</a>
-						<p>20集全</p>
-					</li>
-										<li>
-						<a title="魔女幼熙" href="http://v.114la.com/tv/1988.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/2yZG1878KZ8.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>魔女幼熙</cite>
-							<em></em>
-						</a>
-						<p>16集全</p>
-					</li>
-										<li>
-						<a title="灿烂的遗产" href="http://v.114la.com/tv/1962.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/1/1WrS75h835h.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>灿烂的遗产</cite>
-							<em></em>
-						</a>
-						<p>28集全</p>
-					</li>
-										<li>
-						<a title="钢琴" href="http://v.114la.com/tv/2457.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/I5y59T872A7.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>钢琴</cite>
-							<em></em>
-						</a>
-						<p>16集全</p>
-					</li>
-										<li>
-						<a title="想你" href="http://v.114la.com/tv/1539.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/3/Ewx17Q55u87.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>想你</cite>
-							<em></em>
-						</a>
-						<p>21集全</p>
-					</li>
-									</ul>
+					<?php } ?>
+				</ul>
 			</div>
-						<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="神盾局特工第1季" href="http://v.114la.com/tv/52839.html">
-							<img data-original="http://pic4.qiyipic.com/thumb/20130924/a635629.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>神盾局特工第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="巨轮" href="http://v.114la.com/tv/52794.html"><img alt="巨轮" data-original="http://v.114la.com/img/up_img/201309/138007319230883.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>巨轮</cite><em></em></a>
+						<p>更新至第3集</p>
 					</li>
-										<li>
-						<a title="破产姐妹第3季" href="http://v.114la.com/tv/52613.html">
-							<img data-original="http://pic3.qiyipic.com/thumb/20130923/a634957.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>破产姐妹第3季</cite>
-							<em></em>
-						</a>
-						<p>更新至第1集</p>
-					</li>
-										<li>
-						<a title="断头谷第1季" href="http://v.114la.com/tv/51953.html">
-							<img data-original="http://pic9.qiyipic.com/thumb/20130916/a627296.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>断头谷第1季</cite>
-							<em></em>
-						</a>
-						<p>更新至第2集</p>
-					</li>
-										<li>
-						<a title="破产姐妹第2季" href="http://v.114la.com/tv/1557.html">
-							<img data-original="http://photocdn.sohu.com/20120824/vrsab_ver5030875.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>破产姐妹第2季</cite>
-							<em></em>
-						</a>
-						<p>24集全</p>
-					</li>
-										<li>
-						<a title="尼基塔第3季" href="http://v.114la.com/tv/1544.html">
-							<img data-original="http://photocdn.sohu.com/20121020/vrsab_ver5035311.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>尼基塔第3季</cite>
-							<em></em>
-						</a>
-						<p>更新至第21集</p>
-					</li>
-										<li>
-						<a title="绝命毒师第5季" href="http://v.114la.com/tv/1925.html">
-							<img data-original="http://pic6.qiyipic.com/thumb/20130801/a568553.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>绝命毒师第5季</cite>
-							<em></em>
-						</a>
-						<p>更新至第15集</p>
-					</li>
-										<li>
-						<a title="尼基塔（新版）第1季" href="http://v.114la.com/tv/1535.html">
-							<img data-original="http://photocdn.sohu.com/20101200/vrsab5343.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>尼基塔（新版）第1季</cite>
-							<em></em>
-						</a>
-						<p>22集全</p>
-					</li>
-										<li>
-						<a title="生活大爆炸第5季" href="http://v.114la.com/tv/1543.html">
-							<img data-original="http://photocdn.sohu.com/20110916/vrsab_ver1005271.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>生活大爆炸第5季</cite>
-							<em></em>
-						</a>
-						<p>24集全</p>
-					</li>
-									</ul>
+					<?php } ?>	
+				</ul>
 			</div>
-						<div class="ingrep-Cont">
+			<div class="ingrep-Cont">
 				<ul class="sumgroup entire clearfix">
-										<li>
-						<a title="爱在旅途" href="http://v.114la.com/tv/1499.html">
-							<img data-original="http://photocdn.sohu.com/20110128/vrsab_ver1001244.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>爱在旅途</cite>
-							<em></em>
-						</a>
-						<p>30集全</p>
+					<?php for ($i = 1; $i < 9; $i++) { ?>
+					<li>
+						<a title="辣妈正传" href="http://v.114la.com/tv/51847.html"><img data-original="http://v.114la.com/img/up_img/201309/137929600155843.jpg" src="http://v.114la.com/static/images/loading.gif"><cite>辣妈正传</cite><em></em></a>
+						<p>更新至第33集</p>
 					</li>
-										<li>
-						<a title="玻钻之争" href="http://v.114la.com/tv/1587.html">
-							<img data-original="http://v.114la.com/img/2013/07/20/qy/tvs/8/WTO993lF692.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>玻钻之争</cite>
-							<em></em>
-						</a>
-						<p>29集全</p>
-					</li>
-										<li>
-						<a title="妒海" href="http://v.114la.com/tv/1669.html">
-							<img data-original="http://v.114la.com/img/2013/07/20/qy/tvs/8/7l9uS24I9E5.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>妒海</cite>
-							<em></em>
-						</a>
-						<p>31集全</p>
-					</li>
-										<li>
-						<a title="旋转的爱" href="http://v.114la.com/tv/1573.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/3/Y5819C05BY1.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>旋转的爱</cite>
-							<em></em>
-						</a>
-						<p>34集全</p>
-					</li>
-										<li>
-						<a title="路边新娘" href="http://v.114la.com/tv/1521.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/9/5G9WL23717n.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>路边新娘</cite>
-							<em></em>
-						</a>
-						<p>25集全</p>
-					</li>
-										<li>
-						<a title="铁石心肠" href="http://v.114la.com/tv/1613.html">
-							<img data-original="http://i0.letvimg.com/vrs/201301/24/aed0e32a667f4e4792bfc2706ccaca79.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>铁石心肠</cite>
-							<em></em>
-						</a>
-						<p>28集全</p>
-					</li>
-										<li>
-						<a title="无忧花开" href="http://v.114la.com/tv/1920.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/51v76l6r2I3.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>无忧花开</cite>
-							<em></em>
-						</a>
-						<p>31集全</p>
-					</li>
-										<li>
-						<a title="爱的烹饪法" href="http://v.114la.com/tv/1882.html">
-							<img data-original="http://v.114la.com/img/2013/07/18/qy/tvs/6/x4641M1rY4C.jpg" src="http://v.114la.com/static/images/loading.gif">
-							<cite>爱的烹饪法</cite>
-							<em></em>
-						</a>
-						<p>32集全</p>
-					</li>
-									</ul>
+					<?php } ?>
+				</ul>
 			</div>
-					</div>
-	   		<div class="sideCont fr ingrep">
+		</div>
+	   	<div class="sideCont fr ingrep">
 			<div class="inTitle">
 				<h6><a target="_blank" title="电视剧排行榜" href="http://v.114la.com/top/tv.html">电视剧排行榜</a></h6>
 				<div class="contabs">
@@ -864,21 +278,18 @@
 			</div>
 			<div style="display:block;" class="ingrep-Cont">
 				<ul class="foldlist">
-								<li class="hover">
-					<div class="hisus">
-						<a class="img" href="http://v.114la.com/tv/51938.html">
-							<img alt="辣妈正传" src="http://pic9.qiyipic.com/thumb/20130909/a623083u1.jpg">
-							<b>1</b>
-						</a>
-						<div class="imr">
-							<h4>辣妈正传</h4>
-							<p>类型：电视剧,言情剧,家...</p>
-							<p>主演：孙俪,张译,明道,邬君梅,张晨光,奚美娟,秦沛,朱茵</p>
-							<a class="p" href="http://v.114la.com/tv/51938.html">立即播放</a>
+					<li class="hover">
+						<div class="hisus">
+							<a class="img" href="http://v.114la.com/tv/51938.html"><img alt="辣妈正传" src="http://v.114la.com/static/images/loading.gif"><b>1</b></a>
+							<div class="imr">
+								<h4>辣妈正传</h4>
+								<p>类型：电视剧,言情剧,家...</p>
+								<p>主演：孙俪,张译,明道,邬君梅,张晨光,奚美娟,秦沛,朱茵</p>
+								<a class="p" href="http://v.114la.com/tv/51938.html">立即播放</a>
+							</div>
 						</div>
-					</div>
-					<p><em>1</em><a href="http://v.114la.com/tv/51938.html">辣妈正传</a><span>522045</span></p>
-				</li>
+						<p><em>1</em><a href="http://v.114la.com/tv/51938.html">辣妈正传</a><span>522045</span></p>
+					</li>
 								<li>
 					<div class="hisus">
 						<a class="img" href="http://v.114la.com/tv/38028.html">
@@ -4014,17 +3425,7 @@ MV中，Joey以說書人的角色穿梭於不同場景，拍攝當天氣温高�
 				<p>信 - 远得要命的爱情</p>
 			</li>
 					</ul>
-	</div>	
-	<!-- 广告位：影视首页文字链 -->
-	  <div id="bad">
-  <div class="linead">
-<script type="text/javascript">BAIDU_CLB_fillSlot("730963");</script><div id="BAIDU_CLB_SLOT_PS_730963"></div><script src="http://cb.baidu.com/ecom?di=730963&amp;fn=BAIDU_CLB_SETJSONADSLOT&amp;tpl=BAIDU_CLB_SETJSONADSLOT&amp;asp_refer=http%3A%2F%2Fwww.bale.cn%2F&amp;asp_url=http%3A%2F%2Fv.114la.com%2F&amp;new=9&amp;fv=11&amp;cn=1&amp;if=0&amp;word=asp_url&amp;refer=asp_refer&amp;ready=1&amp;jn=3&amp;lmt=1380210924&amp;csp=1366,768&amp;csn=1366,728&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=25&amp;cmi=50&amp;cce=true&amp;csl=zh-CN&amp;did=1&amp;rt=8&amp;dt=1380210925&amp;c01=0&amp;prt=1380210924725&amp;ps=3185x194&amp;pcs=1349x640&amp;pss=1349x3238&amp;pis=1349x640&amp;cec=UTF-8&amp;dis=0&amp;baidu_id=" charset="utf-8"></script><script type="text/javascript">
-/*114啦影视首页980*34 彩色标签，创建于2013-9-11*/
-var cpro_id = "u1366509";
-</script>
-<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script><script src="http://pos.baidu.com/ecom?di=u1366509&amp;dcb=BAIDU_CPRO_SETJSONADSLOT&amp;dtm=BAIDU_CPRO_SETJSONADSLOT&amp;dai=1&amp;jn=3&amp;ltu=http%3A%2F%2Fv.114la.com%2F&amp;liu=http%3A%2F%2Fv.114la.com%2F&amp;ltr=http%3A%2F%2Fwww.bale.cn%2F&amp;ps=3185x194&amp;psr=1366x768&amp;par=1366x728&amp;pcs=1349x640&amp;pss=1349x3238&amp;pis=1349x640&amp;cfv=11&amp;ccd=24&amp;col=zh-CN&amp;coa=&amp;cec=UTF-8&amp;tpr=1380210924891&amp;kl=&amp;dis=16" charset="utf-8" type="text/javascript"></script><div style="display:none">-</div><iframe width="960" scrolling="no" height="34" frameborder="0" align="center,center" allowtransparency="true" marginheight="0" marginwidth="0" src="http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&amp;tu=u1366509&amp;tn=baiduCustSTagLinkUnit&amp;n=ylmfcpr&amp;adn=1&amp;rsi1=34&amp;rsi0=960&amp;rad=&amp;rss0=&amp;rss1=&amp;conOP=0&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rsi5=4&amp;ts=1&amp;at=103&amp;ch=0&amp;cad=1&amp;aurl=&amp;rss7=&amp;cpa=1&amp;fv=11&amp;cn=1&amp;if=16&amp;word=http%3A%2F%2Fv.114la.com%2F&amp;refer=http%3A%2F%2Fwww.bale.cn%2F&amp;ready=1&amp;jk=9c0bcbd2a0eb515f&amp;jn=3&amp;lmt=1380210924&amp;csp=1366,768&amp;csn=1366,728&amp;ccd=24&amp;chi=1&amp;cja=false&amp;cpl=25&amp;cmi=50&amp;cce=true&amp;csl=zh-CN&amp;did=1&amp;rt=8&amp;dt=1380210925&amp;ev=16777216&amp;c01=0&amp;prt=1380210924891&amp;i3=f&amp;anatp=0&amp;stid=5&amp;lunum=6&amp;scale=&amp;skin=tabcloud_skin_1" id="cproIframe1"></iframe>
-</div>
-</div>
+	</div>
 
 	<div class="comwrap topare">
 		<div class="inTitle">
@@ -4214,76 +3615,4 @@ var cpro_id = "u1366509";
 					</dd>
 	</dl>
 	</div>
-<div id="footer">
-	<div class="wrapper clearfix">
-		<dl>
-			<dt>热门站点</dt>
-			<dd>
-				<a href="http://book.114la.com/">好看的小说</a>
-				<a href="http://tianqi.114la.com/">天气预报</a>
-				<a href="http://tianqi.114la.com/air/">空气质量查询</a>
-				<a href="http://manhua.114la.com/">在线漫画</a>
-				<a href="http://tuan.114la.com/">团购大全</a>
-				<a href="http://meishi.114la.com/">美食天下</a>
-				<a href="http://meishi.114la.com/">菜谱大全</a>
-				<a href="http://v.114la.com/movie/">最新好看的电影</a>
-				<a href="http://v.114la.com/dianshi/">电视剧大全</a>
-				<a href="http://youxi.114la.com/">游戏大全</a>
-				<a href="http://app.114la.com/xingzuo/">星座运势</a>
-				<a href="http://app.114la.com/historyontoday/">历史上的今天</a>
-			</dd>
-		</dl>
-		<dl>
-			<dt>热门排行</dt>
-			<dd>
-				<a href="http://v.114la.com/top/movie-kehuan.html">科幻电影排行榜</a>
-				<a href="http://v.114la.com/top/movie-jingsong.html">惊悚电影排行榜</a>
-				<a href="http://v.114la.com/top/movie-xiju.html">喜剧电影排行榜</a>
-				<a href="http://v.114la.com/top/movie.html">电影排行榜</a>
-				<a href="http://v.114la.com/top/anime.html">动漫电影排行榜</a>
-				<a href="http://v.114la.com/top/tv-hanju.html">韩国电视剧排行榜</a>
-				<a href="http://v.114la.com/top/tv-meiju.html">美国电视剧排行榜</a>
-					</dd>
-		</dl>
-		<dl>
-			<dt>节目分类</dt>
-			<dd>
-				<a href="http://v.114la.com/movie/0-0-19-0-2.html">日本电影</a>
-				<a href="http://v.114la.com/movie/0-0-250-0-2.html">香港电影</a>
-				<a href="http://v.114la.com/movie/0-0-20-0-2.html">美国电影</a>
-				<a href="http://v.114la.com/movie/0-0-21-0-2.html">韩国电影</a>
-				<a href="http://v.114la.com/tv/0-0-277-0-2.html">泰国电视剧</a>
-				<a href="http://v.114la.com/tv/0-0-55-0-2.html">好看的美剧</a>
-				<a href="http://v.114la.com/tv/0-0-52-0-2.html">韩国电视剧</a>
-				<a href="http://v.114la.com/tv/0-0-53-0-2.html">香港电视剧</a>
-				<a href="http://v.114la.com/anime/0-0-99-0-2.html">日本动漫</a>
-				<a href="http://v.114la.com/zongyi/0-0-117-0-2.html">韩国综艺节目</a>
-				<a href="http://v.114la.com/zongyi/0-0-116-0-2.html">台湾综艺节目</a>
-			</dd>
-		</dl>
-		<p class="bhr"></p>
-		<ul class="fl">
-			<li><a href="http://www.114la.com/about/about.html">关于114啦</a> | </li>
-			<li><a href="http://www.114la.com/about/ad.html">广告招商</a> | </li>
-			<li><a href="http://url.114la.com/">网站收录申请</a> | </li>
-			<li><a onclick="divcenter()" href="javascript:void(0)">意见反馈</a> | </li>
-			<li><a href="http://weibo.com/ylmf114la">官方微博</a></li>
-		</ul>
-		<p class="fr">&copy;2005- 2013 114啦网址导航 粤ICP备05021225号</p>
-	</div>
-</div>
-<script type="text/javascript">
-	var cid = 16;
-</script>
-<script src="http://fankui.114la.com/static/js/feedBack.js" type="text/javascript"></script><div id="feedBackWrap" style="position: absolute; top: 0px; left: 0px; display: none; width: 516px; height: 416px; z-index: 100;"><div id="feedBackMask" style="position: absolute; top: 0px; left: 0px; width: 516px; height: 416px; background: none repeat scroll 0% 0% black; opacity: 0.2;"></div><iframe scrolling="0" frameborder="no" id="feedBackIframe" border="0" marginwidth="0" marginheight="0" allowtransparency="0" style="position: absolute; top: 8px; left: 8px; width: 500px; height: 400px;"></iframe></div>
-<div style="display:none">
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F883d579322a459f2b528fa3c951e1005' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?883d579322a459f2b528fa3c951e1005"></script><a target="_blank" href="http://tongji.baidu.com/hm-web/welcome/ico?s=883d579322a459f2b528fa3c951e1005"><img width="20" height="20" border="0" src="http://eiv.baidu.com/hmt/icon/21.gif"></a>
-</div><div id="gotop" style="opacity: 0;"><a title="回顶部" href="javascript:;">回顶部</a></div>
-<script src="static/js/jquery.min.js"></script>
-<script src="static/js/common.source.js"></script>
-
-
-</body></html>
+<?php echo $this->load->view('footer_index'); ?>
