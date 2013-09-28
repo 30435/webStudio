@@ -1,0 +1,100 @@
+body { _font-family: Tahoma,Arial,Helvetica,STHeiti!important; }
+
+.mod-book-sort .hd { overflow: hidden; }
+.my-menu-bd { overflow: hidden; }
+
+.input-wrap input { margin-top: 3px; }
+
+.home-menu { padding-top: 21px; }		
+		
+.mod-article-list-2 .txtbox-item .txtbox-bd { padding-top: 20px;} 	
+.manage-book-list li.collapsible-li { margin-bottom: -2px; }
+
+.mod-book-review p.level { margin-top: 0px; } 		
+.mod-page h1 { top: 50px; }
+.mod-account-menu li { _zoom: 1; }
+h1.p-title { _position: relative; _top: 8px; }
+.mod-book-sort-2 .txtbox-content { _width: 569px; }
+.mod-comment-list .txtbox-content { _width: 620px; }
+
+.clear {
+    zoom: 1;     /* triggers hasLayout */
+    display: block;     /* resets display for IE/Win */
+}  /* Only IE can see inside the conditional comment
+    and read this CSS rule. Don't ever use a normal HTML
+    comment inside the CC or it will close prematurely. */
+    
+
+.mod-medal-card .pop-border {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='scale', src="../images/bg-zx-border.png";
+}
+.mod-medal-card .pop-tt { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-zx-top.png";
+}
+.mod-medal-card .pop-bb {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-zx-bottom.png";
+}
+
+.pop-tl { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-float-tl.png";
+}
+.pop-tr { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-float-tr.png";
+}
+.pop-bl { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-float-bl.png";
+}
+.pop-br { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-float-br.png";
+}
+.pop-border { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='scale', src="../images/bg-float-border.png";
+}
+.mod-slide-handles ul {
+	_padding-right: 50px; 
+}
+.mod-real-time .bottom { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='scale', src="../images/bg-real-time.png";
+}
+.namecard-arrow {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-namecard-arrow-tt.png";
+}
+.pos-bl {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-namecard-arrow-bb.png";
+}
+.pos-br {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-namecard-arrow-bb.png";
+}
+.pos-rt {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/bg-namecard-arrow-rt.png";
+}
+
+.book-score div.level a.star {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/star-on-18.png";
+}
+.book-score div.level a.star-off {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/star-off-18.png";
+}
+.mod-page .thumbtack { 
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src="../images/clip.png";
+}
+#overlay {
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='scale', src="../images/overlay.png";
+}
