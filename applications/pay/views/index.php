@@ -21,8 +21,9 @@ $(document).ready(function(){
 			if (paymentCode != 'myself') {
 				paysubmit();
 				return false;
+			} else {
+				return true;
 			}
-			return true;
 		},
 		ajaxPrompt : '有数据正在异步验证，请稍等...'
 	});

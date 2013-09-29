@@ -3,7 +3,7 @@ class GamegoldModel extends CommonModel
 {
 	public function __construct($data = '')
 	{
-		$this->table = 'gamegold';
+		$this->table = 'account';
 		parent::__construct($data);		
 	}
 }

@@ -260,7 +260,7 @@ class frontgame extends Custom_Controller
 	{
 		$this->load->library('session');
 		$payInfos = $this->session->userdata('payInfos');
-		//var_dump($payInfos);$this->session->unset_userdata('payInfos');
+		var_dump($payInfos);//$this->session->unset_userdata('payInfos');
 
 		if (!in_array($payInfos['payType'], array('topaymonth', 'towebgame'))) {
 			exit('payType error'); // $this->_messageInfo('支付类型有误！', $this->appInfos['pay']['url']);

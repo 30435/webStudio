@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-09-25 03:21:18
+-- 生成日期: 2013-09-29 07:56:55
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `sp_account` (
   `handpay_manager` tinyint(4) DEFAULT NULL COMMENT '手工支付管理员账号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `orderid` (`orderid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- 转存表中的数据 `sp_account`
@@ -69,7 +69,16 @@ INSERT INTO `sp_account` (`id`, `orderid`, `orderid_plat`, `payment_code`, `type
 (8, '2013092404581', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 8.00, 8.00, 5.60, 1380021234, '20130924', 1380021236, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092404581";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"65823ee2e1f08d38dca3e19e68265aa2";}', '1', NULL),
 (9, '2013092458138', '', 'yeepay', 'touser', '', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 7.00, 7.00, 4.90, 1380021243, '20130924', 1380021249, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"7";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092458138";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"addbe467b5ec5d2d7bf1420d10e16eda";}', '1', NULL),
 (10, '2013092416579', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 4.00, 4.00, 2.80, 1380021261, '20130924', 1380021265, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"4";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092416579";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"134235812a971140f64006bc04e2a6db";}', '1', NULL),
-(11, '2013092417966', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 8.00, 8.00, 5.60, 1380025813, '20130924', 1380025814, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092417966";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"b366002a1f8e6c7eb9631114ca22c4da";}', '1', NULL);
+(11, '2013092417966', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 8.00, 8.00, 5.60, 1380025813, '20130924', 1380025814, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092417966";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"b366002a1f8e6c7eb9631114ca22c4da";}', '1', NULL),
+(12, '2013092501383', '', 'yeepay', '', '', 0, NULL, 0, 0, 0, '', '', 0, 0.00, 7.00, 0.00, 0, '', 1380073185, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"7";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092501383";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"09ad3be5a0438904334ce6e24d9cbc00";}', '', NULL),
+(13, '2013092520213', '', 'yeepay', '', '', 0, NULL, 0, 0, 0, '', '', 0, 0.00, 8.00, 0.00, 0, '', 1380073205, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092520213";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"5b49ababa368055e19e57f367cc49cb0";}', '', NULL),
+(14, '2013092521421', '', 'yeepay', '', '', 0, NULL, 0, 0, 0, '', '', 0, 0.00, 4.00, 0.00, 0, '', 1380073306, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"4";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092521421";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"6cbb907dd7077764fd2c2a4396c64473";}', '', NULL),
+(15, '2013092575087', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 7.00, 7.00, 4.90, 1380108276, '20130925', 1380108278, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"7";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092575087";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"fe7120c6578e5b0915b1769f4072a665";}', '1', NULL),
+(16, '2013092594006', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 1193559, 1193559, 'aaaaaa', '', 0.3, 3.00, 3.00, 2.10, 1380109419, '20130925', 1380109421, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"3";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092594006";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"998154182bbc83736c93aa36f11345e6";}', '1', NULL),
+(17, '2013092970396', '', 'yeepay', 'topaymonth', 'nova', 0, '', 3, 0, 1193559, 'aaaaaa', '', 0.3, 15.00, 15.00, 10.50, 1380417721, '20130929', 1380417722, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:2:"15";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092970396";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"4f93e231ecb976dbc3311a9c206b0341";}', '1', NULL),
+(18, '2013092984940', '', 'yeepay', 'towebgame', 'shenxd', 1, 'undefined', 0, 17183510, 17183510, '17183510', '', 0.3, 3.00, 3.00, 2.10, 1380426336, '20130929', 1380426337, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"3";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092984940";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"57ef3eaa654f09f484571ae6cc891fd6";}', '1', NULL),
+(19, '2013092944772', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 17183510, 17183510, '17183510', '', 0.3, 8.00, 8.00, 5.60, 1380433342, '20130929', 1380433343, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092944772";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"fb8fbf0b730bfdf963f5c6ee28ddcc80";}', '1', NULL),
+(20, '2013092948249', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 17183510, 1193559, 'aaaaaa', '', 0.3, 8.00, 8.00, 5.60, 1380433378, '20130929', 1380433380, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"8";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013092948249";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"f01935e9541123ada779990a6f0cf043";}', '1', NULL);
 
 -- --------------------------------------------------------
 
@@ -140,7 +149,8 @@ CREATE TABLE IF NOT EXISTS `sp_member_pay` (
 --
 
 INSERT INTO `sp_member_pay` (`userid`, `username`, `money`, `want_money`, `want_times`, `valid_money_middle`, `valid_money`, `valid_times`, `lasttime_account`, `pay_times`, `pay_money`, `lasttime_pay`, `locktime`, `unusual_money`) VALUES
-(1193559, 'aaaaaa', 1810.9, 2757, 11, 2757, 1929.9, 11, 1380025814, 2, 119, 1379904474, 1380025838, '0.00');
+(1193559, 'aaaaaa', 1827, 2790, 15, 2790, 1953, 15, 1380433380, 4, 126, 1380433380, 1380433380, '0.00'),
+(17183510, '17183510', 2.7, 11, 2, 11, 7.7, 2, 1380433343, 1, 5, 1380433343, 1380433343, '0.00');
 
 -- --------------------------------------------------------
 
@@ -163,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `sp_pay` (
   `pay_time` int(10) NOT NULL COMMENT '支付时间',
   `day` char(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- 转存表中的数据 `sp_pay`
@@ -171,7 +181,10 @@ CREATE TABLE IF NOT EXISTS `sp_pay` (
 
 INSERT INTO `sp_pay` (`id`, `orderid`, `orderid_account`, `pay_username`, `pay_userid`, `userid`, `username`, `money`, `webgame_code`, `server_id`, `server_role`, `pay_time`, `day`) VALUES
 (1, '2013092202098', '0', '', 0, 1193559, 'aaaaaa', 19, 'shenxd', 1, '', 1379831359, '20130922'),
-(2, '2013092395373', '0', '', 0, 1193559, 'aaaaaa', 100, 'shenxd', 1, '', 1379904474, '20130923');
+(2, '2013092395373', '0', '', 0, 1193559, 'aaaaaa', 100, 'shenxd', 1, '', 1379904474, '20130923'),
+(3, '2013092539765', '2013092594006', '', 0, 1193559, 'aaaaaa', 2, 'nova', 0, '', 1380109421, '20130925'),
+(4, '2013092901368', '2013092944772', '', 0, 17183510, '17183510', 5, 'nova', 0, '', 1380433343, '20130929'),
+(5, '2013092965130', '2013092948249', '', 0, 1193559, 'aaaaaa', 5, 'nova', 0, '', 1380433380, '20130929');
 
 -- --------------------------------------------------------
 

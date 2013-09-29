@@ -37,8 +37,14 @@ class Custom_Controller extends CommonController
 	 */
 	public function getUsername()
 	{
-		$username = date('d') . str_pad(mt_rand(1, 99999), 4, '0', STR_PAD_LEFT);
-		return $username;
+		$where = array('aid_status' => 0);
+		$userInfo = $this->memberModel->getInfo($where, 'aid_cre');
+
+		$updateWhere = array('id' => $userInfo['id']);
+		$data = array('aid_status' => '1');
+		
+		$this->memberModel->editInfo($data, $updateWhere, 'aid_cre');
+		return $userInfo['aid'];
 	}
 }
 

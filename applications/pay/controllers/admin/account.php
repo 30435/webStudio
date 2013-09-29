@@ -53,6 +53,14 @@ class Account extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
+		foreach ($infos as $key => $info) {
+			$info['payment_code'] = isset($this->paymentInfos[$info['payment_code']]['name']) ? $this->paymentInfos[$info['payment_code']]['name'] : $info['payment_code'];
+			$info['webgame_code'] = isset($this->webgameInfos[$info['webgame_code']]['name']) ? $this->webgameInfos[$info['webgame_code']]['name'] : $info['webgame_code'];
+			$info['server_id'] = isset($this->webgameInfos[$info['server_id']]['name']) ? $this->webgameInfos[$info['server_id']]['name'] : $info['server_id'];
+			$info['status'] = $info['status'] == '1' ? '成功支付' : '未支付';
+			$info['account_time'] = date('Y-m-d H:i:s', $info['account_time']);
+			$infos[$key] = $info;
+		}
 		return $infos;
 	}
 		
@@ -63,9 +71,9 @@ class Account extends Custom_AdminController
 	 */
 	protected function _order()
 	{
-		//$order = array(array('inputtime', 'desc'));
+		$order = array(array('account_time', 'desc'));
 		
-		//return $order;
+		return $order;
 	}
 		
 	/**
