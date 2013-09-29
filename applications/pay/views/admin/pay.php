@@ -51,6 +51,7 @@
 		  <th align="center"><?php echo $this->fieldInfos['orderid_account']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['webgame_code']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['server_id']['name']; ?> </th>
+		  <th align="center"><?php echo $this->fieldInfos['pay_username']['name']; ?> </th>
 		  <th align="center"><?php echo $this->fieldInfos['username']['name']; ?> </th>
 		  <th align="center"><?php echo $this->fieldInfos['money']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['pay_time']['name']; ?></th>
@@ -65,6 +66,7 @@
 		  <td align="center"><?php echo $info['orderid_account']; ?></td>
 		  <td align="center"><?php echo $info['webgame_code']; ?></td>
 		  <td align="center"><?php echo $info['server_id']; ?></td>
+		  <td align="center"><?php echo $info['pay_username']; ?></td>
 		  <td align="center"><?php echo $info['username']; ?></td>
 		  <td align="center"><?php echo $info['money']; ?></td>
 		  <td align="center"><?php echo $info['pay_time']; ?></td>

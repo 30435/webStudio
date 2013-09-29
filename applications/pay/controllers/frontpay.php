@@ -80,8 +80,9 @@ class frontpay extends Custom_Controller
 			'payment_code' => $orderInfo['paymentCode'],
 			'payment_rate' => $orderInfo['paymentRate'],
 			'money' => $orderInfo['money'],
-			'userid' => $orderInfo['userid'],
 			'pay_userid' => $orderInfo['pay_userid'],
+			'pay_username' => $orderInfo['pay_username'],
+			'userid' => $orderInfo['userid'],
 			'username' => $orderInfo['username'],
 			'account_time' => $this->time,
 			'day' => date('Ymd', $this->time),
@@ -150,6 +151,7 @@ class frontpay extends Custom_Controller
 			$payInfos = array(
 				'payType' => $accountType,
 				'accountId' => $respondInfo['orderid'],
+				'payUsername' => $respondInfo['username'],
 				'username' => $respondInfo['username'],
 				'userid' => $respondInfo['userid'],
 				'money' => floor($respondInfo['money_valid']),
@@ -229,7 +231,7 @@ class frontpay extends Custom_Controller
 		}
 
 		$payInfos['payType'] = $payType;
-		$payInfos['payUserid'] = $this->loginedUserInfo['userid'];
+		$payInfos['payUsername'] = $this->loginedUserInfo['username'];
 		$payInfos['accountId'] = isset($infos['accountId']) ? $infos['accountId'] : false;
 		foreach ($payFields[$payType] as $payField) {
 			$payInfos[$payField] = isset($infos[$payField]) ? $infos[$payField] : $this->input->post($payField);
@@ -287,6 +289,7 @@ class frontpay extends Custom_Controller
 		}
 			
 		$orderInfo['pay_userid'] = isset($this->loginedUserInfo['userid']) ? $this->loginedUserInfo['userid'] : 0;
+		$orderInfo['pay_username'] = isset($this->loginedUserInfo['username']) ? $this->loginedUserInfo['username'] : '';
 		$userInfo = (isset($this->loginedUserInfo) && $orderInfo['username'] == $this->loginedUserInfo['username']) ? $this->loginedUserInfo : $this->getUserInfo(array('username' => $orderInfo['username']));
 		$params['userInfo'] = (isset($this->loginedUserInfo) && $orderInfo['username'] == $this->loginedUserInfo['username']) ? $this->loginedUserInfo : $this->getUserInfo(array('username' => $orderInfo['username']));
 		if (empty($userInfo)) {

@@ -47,6 +47,10 @@ class Shenxd extends WebgameCommon
 			. '&domain=' . $domain . '&sign=' . $sign;
 
 		$payResult = file_get_contents($payUrl);
+
+		while (preg_match('/^\xEF\xBB\xBF/', $payResult)) {
+			$payResult = substr($payResult, 3);
+		}
 		$payResult = $payResult == 1 ? true : false;
 
 		return $payResult;

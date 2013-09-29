@@ -240,7 +240,7 @@ class frontgame extends Custom_Controller
 			$this->message = '支付成功！';
 			$this->resultInfo = array(
 				'webgameName' => $payInfos['webgameInfo']['name'],
-				'serverName'=> isset($payInfos['serverInfo']['name']) ? $playinfos['serverInfo']['name'] : '',
+				'serverName'=> isset($payInfos['serverInfo']['name']) ? $payInfos['serverInfo']['name'] : '',
 				'username' => $payInfos['username'],
 				'money' => $payInfos['money'],
 				'coin' => $gameCoin,
@@ -272,7 +272,8 @@ class frontgame extends Custom_Controller
 			}
 		}
 
-		$payInfos['userInfo'] = $this->getUserInfo(array('username =' => $payInfos['username']));
+		$payInfos['getUserInfo'] = $payInfos['username'] == $this->loginedUserInfo('username') ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['username']));
+		$payInfos['userInfo'] = $payInfos['payUsername'] == $this->loginedUserInfo('username') ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['payUsername']));
 		$payInfos['moneyInfo'] = $this->_getMoneyInfo($payInfos['username'], true);
 		if (empty($payInfos['userInfo']) || empty($payInfos['moneyInfo']) || $payInfos['moneyInfo']['money'] < $payInfos['money']) {
 			exit('user error');//$this->_messageInfo('支付账号信息有误！', $this->appInfos['pay']['url']);
@@ -280,7 +281,7 @@ class frontgame extends Custom_Controller
 
 		if ($payInfos['payType'] == 'topaymonth') {
 			$payInfos['paymonthInfo'] = $this->_getPaymonth($payInfos);
-			$payInfos['webgameInfo'] = $this->webgameInfos[$payInfos['paymonthInfo']['webgame_code']];
+			$payInfos['webgameInfo'] = $this->webgameInfos[$payInfos['paymonthInfo']['webgame_code']]; 
 			if (empty($payInfos['paymonthInfo']) || $payInfos['paymonthInfo']['money'] != $payInfos['money'] || empty($payInfos['webgameInfo'])) {
 				exit('topaymonth param error');//$this->_messageInfo('支付包月参数错误！', $this->appInfos['pay']['url'] . 'index/paymonth/');
 			}

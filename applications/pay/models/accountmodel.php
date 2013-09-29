@@ -34,6 +34,7 @@ class AccountModel extends CommonModel
 			'server_id' => array('name' => '服务器ID'),
 			'server_role' => array('name' => '游戏角色'),
 			'paymonth_id' => array('name' => '包月服务ID'),
+			'pay_username' => array('name' => '充值账号'),
 			'pay_userid' => array('name' => '充值账号'),
 			'userid' => array('name' => '目标账号'),
 			'username' => array('name' => '目标用户名'),

@@ -8,6 +8,11 @@ function setPayment(paymentStr) //paymentCode, paymentName, description)
 	$("#paymentCode").val(paymentStr.code);
 	$("#paymentRate").val(paymentStr.rate);
 	$("#payTypeSelect").show();
+
+	var baseMoney = $("#baseMoney").val();
+	if (baseMoney > 0) {
+		paymonthMoney(baseMoney);
+	}
 }
 
 function paysubmit()

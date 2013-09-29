@@ -94,6 +94,7 @@ $(document).ready(function(){
 			</div>							
 			<div class="form">
 			<form method="post" autocomplete="off" name="form1" id="form1" action="<?php echo $this->baseUrl; ?>frontpay/change/">
+				<input type="hidden" name="baseMoney" id="baseMoney" value="<?php if(isset($this->paymonthInfo['money'])) {echo $this->paymonthInfo['money'];} ?>" />
 				<input type="hidden" name="paymentCode" id="paymentCode" />
 				<input type="hidden" name="paymentRate" id="paymentRate" />
 				<input type="hidden" name="serverUser" id="serverUser" />
@@ -142,7 +143,7 @@ $(document).ready(function(){
 						<label class="lbl">选择开通时长：</label>
 						<div class="radio_wrap">
 							<?php foreach ($this->webgamePaymonthInfos as $webgamePaymonthInfo) { $checkedMark = $this->paymonthInfo['id'] == $webgamePaymonthInfo['id'] ? ' checked="checked"' : ''; ?>
-							<input type="radio" value="<?php echo $webgamePaymonthInfo['money']; ?>" id="radio_group_1_<?php echo $i; ?>" name="mb_usage" class="rdo rmb_num" <?php echo $checkedMark; ?> onclick="paymonthMoney(this.value);" />
+							<input type="radio" value="<?php echo $webgamePaymonthInfo['money']; ?>" id="radio_group_1_<?php echo $i; ?>" name="mb_usage" class="rdo rmb_num" <?php echo $checkedMark; ?> onclick="$('#paymonthId').val(<?php echo $webgamePaymonthInfo['id']; ?>); $('#baseMoney').val(<?php echo $webgamePaymonthInfo['money']; ?>);paymonthMoney(this.value);" />
 							<label for="radio_group_1_<?php echo $i; ?>"><?php echo $webgamePaymonthInfo['money'] . '元开通' . $webgamePaymonthInfo['month'] . '月'; ?></label>
 							<?php if ($i / 2 == 0) echo '<br />';  $i++; }?>
 						</div>
