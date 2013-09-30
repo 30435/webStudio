@@ -1,6 +1,9 @@
-mysql\bin\mysql.exe -uroot studio_passport < d:\web\www\github\cistructure\document\data\studio_passport.sql
-mysql\bin\mysql.exe -uroot studio_spider < d:\web\www\github\cistructure\document\data\studio_spider.sql
-mysql\bin\mysql.exe -uroot studio_ucserver < d:\web\www\github\cistructure\document\data\studio_ucserver.sql
-mysql\bin\mysql.exe -uroot studio_51jiansh < d:\web\www\github\cistructure\document\data\studio_51jiansh.sql
-
-
+mysql\bin\mysql.exe -uroot studio_bbs < d:\web\www\webStudio\document\data\studio_bbs.sql
+mysql\bin\mysql.exe -uroot studio_game < d:\web\www\webStudio\document\data\studio_game.sql
+mysql\bin\mysql.exe -uroot studio_kidsedu < d:\web\www\webStudio\document\data\studio_kidsedu.sql
+mysql\bin\mysql.exe -uroot studio_movie < d:\web\www\webStudio\document\data\studio_movie.sql
+mysql\bin\mysql.exe -uroot studio_passport < d:\web\www\webStudio\document\data\studio_passport.sql
+mysql\bin\mysql.exe -uroot studio_pay < d:\web\www\webStudio\document\data\studio_pay.sql
+mysql\bin\mysql.exe -uroot studio_spider < d:\web\www\webStudio\document\data\studio_spider.sql
+mysql\bin\mysql.exe -uroot studio_ucserver < d:\web\www\webStudio\document\data\studio_ucserver.sql
+mysql\bin\mysql.exe -uroot studio_webgame < d:\web\www\webStudio\document\data\studio_webgame.sql

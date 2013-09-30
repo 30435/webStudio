@@ -1,32 +1,36 @@
--- phpMyAdmin SQL Dump
--- version 4.0.6
--- http://www.phpmyadmin.net
+-- MySQL dump 10.13  Distrib 5.5.27, for Win32 (x86)
 --
--- 主机: localhost
--- 生成日期: 2013-09-29 07:56:40
--- 服务器版本: 5.6.11
--- PHP 版本: 5.5.1
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: studio_movie
+-- ------------------------------------------------------
+-- Server version	5.5.27
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- 数据库: `studio_movie`
+-- Current Database: `studio_movie`
 --
 
--- --------------------------------------------------------
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_movie` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `studio_movie`;
 
 --
--- 表的结构 `sm_category`
+-- Table structure for table `sm_category`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_category` (
+DROP TABLE IF EXISTS `sm_category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sm_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
@@ -44,15 +48,26 @@ CREATE TABLE IF NOT EXISTS `sm_category` (
   `ishtml` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示 1不显示 0 显示',
   PRIMARY KEY (`id`),
   KEY `catname` (`catname`,`parentid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- 表的结构 `sm_new`
+-- Dumping data for table `sm_category`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_new` (
+LOCK TABLES `sm_category` WRITE;
+/*!40000 ALTER TABLE `sm_category` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sm_category` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sm_new`
+--
+
+DROP TABLE IF EXISTS `sm_new`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sm_new` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '新闻类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -75,15 +90,26 @@ CREATE TABLE IF NOT EXISTS `sm_new` (
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
   KEY `catid` (`catid`,`status`,`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- 表的结构 `sm_picture`
+-- Dumping data for table `sm_new`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_picture` (
+LOCK TABLES `sm_new` WRITE;
+/*!40000 ALTER TABLE `sm_new` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sm_new` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sm_picture`
+--
+
+DROP TABLE IF EXISTS `sm_picture`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sm_picture` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -105,15 +131,26 @@ CREATE TABLE IF NOT EXISTS `sm_picture` (
   KEY `status` (`status`,`listorder`,`id`),
   KEY `listorder` (`catid`,`status`,`listorder`,`id`),
   KEY `catid` (`catid`,`status`,`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- 表的结构 `sm_spage`
+-- Dumping data for table `sm_picture`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_spage` (
+LOCK TABLES `sm_picture` WRITE;
+/*!40000 ALTER TABLE `sm_picture` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sm_picture` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sm_spage`
+--
+
+DROP TABLE IF EXISTS `sm_spage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sm_spage` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '单网页资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -123,8 +160,25 @@ CREATE TABLE IF NOT EXISTS `sm_spage` (
   `inputtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '录入时间',
   `updatetime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `sm_spage`
+--
+
+LOCK TABLES `sm_spage` WRITE;
+/*!40000 ALTER TABLE `sm_spage` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sm_spage` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-09-30  9:55:48
