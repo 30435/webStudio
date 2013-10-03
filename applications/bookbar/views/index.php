@@ -3,11 +3,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1" />
 <![endif]-->
 <link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>bookbar/css/core.packed.css?201301311453">
-
 <link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>bookbar/css/jquery-ui-1.8.16.custom.min.css">
 <link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>bookbar/css/model.packed.css?201302270930">
-
-
 <!--[if IE 6]>
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>bookbar/js/DD_belatedPNG.js"></script>
 <script type="text/javascript"> document.execCommand("BackgroundImageCache", false, true); </script>
@@ -15,111 +12,61 @@
 <script src="http://img.motieimg.com/_resources/js/release/plugin.js?201211010520" type="text/javascript"></script>
 <script src="http://img.motieimg.com/_resources/js/release/Motie.core.packed.js?201309021552" type="text/javascript"></script>
 <script type="text/javascript">
-	$(function(){
-		Mo.init.InitAll();
-		Mo.core.collect();
-	})
+$(function(){
+	Mo.init.InitAll();
+	Mo.core.collect();
+})
 </script>
+<link media="all" href="<?php echo $this->staticUrl; ?>bookbar/css/square.css?201303071915" type="text/css" rel="stylesheet">
+<style type="text/css">
+/* mod chapter- update */
+.mod-chapter-update .hd .tabs2 li, .update-chapter-list td {
+	background: url(http://img.motieimg.com/_resources/css/special/Specialty/sp.png) no-repeat;
+}
+.mod-chapter-update .hd .title-bd { height: 40px; line-height: 40px; }
+.mod-chapter-update .hd .tabs2 { position: absolute; left: 217px; top: 13px; }
+	.mod-chapter-update .hd .tabs2 li { cursor: pointer; float: left; width: 95px; height: 29px; line-height: 29px; text-align: center; margin-right: 10px; background-position: 0 -120px; }
+	.mod-chapter-update .hd .tabs2 li.current { background-position: 0 -150px; }
 
+.update-chapter-list table { width: 100%; table-layout: fixed; }
+	.update-chapter-list th, .update-chapter-list td { padding: 0 15px; color: #666; }
+	.update-chapter-list th { background: #dfdfdf; height: 29px; line-height: 29px; }
+	.update-chapter-list td { height: 40px; line-height: 40px; background-color: #f4f4f4; background-position: left bottom; background-repeat: repeat-x; }
+		.update-chapter-list td div { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+	.update-chapter-list td.col4 { font-family: Arial; color: #666; }
+		.update-chapter-list .book-name { color: #06c; font-size: 14px; margin-right: 5px; }
+		.update-chapter-list .author, .update-chapter-list .cat-name { color: #666; }
+		.update-chapter-list .chapter-name { color: #666; }
+</style>
 
-
-		<link media="all" href="<?php echo $this->staticUrl; ?>bookbar/css/square.css?201303071915" type="text/css" rel="stylesheet">
-		<style type="text/css">
-		/* mod chapter- update */
-		.mod-chapter-update .hd .tabs2 li, .update-chapter-list td {
-			background: url(http://img.motieimg.com/_resources/css/special/Specialty/sp.png) no-repeat;
-		}
-		.mod-chapter-update .hd .title-bd { height: 40px; line-height: 40px; }
-		.mod-chapter-update .hd .tabs2 { position: absolute; left: 217px; top: 13px; }
-			.mod-chapter-update .hd .tabs2 li { cursor: pointer; float: left; width: 95px; height: 29px; line-height: 29px; text-align: center; margin-right: 10px; background-position: 0 -120px; }
-			.mod-chapter-update .hd .tabs2 li.current { background-position: 0 -150px; }
-		
-		.update-chapter-list table { width: 100%; table-layout: fixed; }
-			.update-chapter-list th, .update-chapter-list td { padding: 0 15px; color: #666; }
-			.update-chapter-list th { background: #dfdfdf; height: 29px; line-height: 29px; }
-			.update-chapter-list td { height: 40px; line-height: 40px; background-color: #f4f4f4; background-position: left bottom; background-repeat: repeat-x; }
-				.update-chapter-list td div { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
-			.update-chapter-list td.col4 { font-family: Arial; color: #666; }
-				.update-chapter-list .book-name { color: #06c; font-size: 14px; margin-right: 5px; }
-				.update-chapter-list .author, .update-chapter-list .cat-name { color: #666; }
-				.update-chapter-list .chapter-name { color: #666; }
-		</style>
-		
-		<style type="text/css">
-			.mod-qianshu ul { margin-bottom: -2px; overflow: hidden; }
-				.mod-qianshu li { padding: 10px; background: url(http://img.motieimg.com/_resources/css/img/home-sp.png?2) repeat-x left 94px; }
-					.mod-qianshu li .lpic { padding-right: 10px; }
-						.mod-qianshu li .lpic img { padding: 2px; background: #fff; } 
-					.mod-qianshu li .rtext p.title { padding: 5px 0; line-height: 1.5em; font-size: 14px; font-weight: bold; }
-		</style>
-	<!--[if IE]>
+<style type="text/css">
+	.mod-qianshu ul { margin-bottom: -2px; overflow: hidden; }
+		.mod-qianshu li { padding: 10px; background: url(http://img.motieimg.com/_resources/css/img/home-sp.png?2) repeat-x left 94px; }
+			.mod-qianshu li .lpic { padding-right: 10px; }
+				.mod-qianshu li .lpic img { padding: 2px; background: #fff; } 
+			.mod-qianshu li .rtext p.title { padding: 5px 0; line-height: 1.5em; font-size: 14px; font-weight: bold; }
+</style>
+<!--[if IE]>
 <link href="<?php echo $this->staticUrl; ?>bookbar/css/style-ie.css?201209101757" rel="stylesheet" type="text/css" />
 <![endif]--> 
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F787f56b1cbcc88565530881379078614' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript" src=" http://hm.baidu.com/h.js?787f56b1cbcc88565530881379078614"></script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-25001926-1']);
-  _gaq.push(['_setDomainName', '.motie.com']);
-  _gaq.push(['_addOrganic', 'baidu', 'word']);
-  _gaq.push(['_addOrganic', 'soso', 'w']);
-  _gaq.push(['_addOrganic', '3721', 'name']);
-  _gaq.push(['_addOrganic', 'yodao', 'q']);
-  _gaq.push(['_addOrganic', 'vnet', 'kw']);
-  _gaq.push(['_addOrganic', 'sogou', 'query']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/js/api/bundle.js?version=20130730"></script><script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/js/widget/iframeWidget/iframeWidget.js?version=20130828"></script></head>
-	<body class="page-type-square"><iframe style="display: none;" id="sina_anywhere_iframe"></iframe>
-		<div class="body-bg">
-			<div class="wrap">
-				<!--start header -->
-				
-
-       
-<!-- 1 year -->
+<script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/js/api/bundle.js?version=20130730"></script>
+<script charset="UTF-8" src="http://js.t.sinajs.cn/open/api/js/widget/iframeWidget/iframeWidget.js?version=20130828"></script>
+</head>
+<body class="page-type-square">
+<div class="body-bg">
+	<div class="wrap">
 <div class=" not-login no-level2" id="header">
 	<div class="bd">
 		<h1 class="logo">
-			<a href="/"><img alt="" src="http://img.motieimg.com/_assets/logo-new.jpg"><img width="19" height="16" src="http://img.motieimg.com/_assets/ico-home.png?3" class="ico-home"></a>
+			<a href="/"><img alt="" src="<?php echo $this->staticUrl; ?>bookbar/images/logo-new.jpg"><img width="19" height="16" src="<?php echo $this->staticUrl; ?>bookbar/images/ico-home.png?3" class="ico-home"></a>
 		</h1>
-		<!-- end logo -->
-		
-		<!-- nav level 1-->
 		<span class=" nav-level-1">
 			<a class="n-square" href="/">首页</a><!-- <img src="http://img.motieimg.com/_assets/ico-hot.png" width="24" height="37" class="ico" alt="" /><a href="/jingpin" class="n-classic">精品</a> -->
 			<a class="n-bookall" href="/all">书库</a>
 			<a class="n-bookall" href="/top10">排行</a>
 			<a href="/group/545/">论坛</a>
-			
 		</span>
-		<!-- end level 1 -->
-		
-			
-		
-		
-		
-		
-		
-		
-			<div id="person-status" class="person-status">
-				<div class="person-controal">
-					<a href="/accounts/login">登录</a><a class="last" href="/accounts/register">注册</a>
-				</div>
-			</div>
-				
-		<!-- end person-status -->
+		<div id="person-status" class="person-status"><div class="person-controal"><a href="/accounts/login">登录</a><a class="last" href="/accounts/register">注册</a></div></div>
 		<div id="search-top">
 			<form action="/rest/" method="get">
 				<input type="text" value="" class="search lst is-empty-value ui-autocomplete-input" id="search-global" name="queryString" placeholder="找书、成员、小组、文章" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
@@ -129,9 +76,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 		</div><!-- end search top -->
 	</div>
 </div>
-				<!-- end header -->
-				
-       
+
 <div class="mod channel-change">
 	<div class="bd">
 		<div class="item item1">
@@ -1621,60 +1566,14 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 			
 <div id="footer">
 	<div class="bd">
-		<h1 class="logo">
-			<a href="#"><img src="http://img.motieimg.com/_assets/logo-footer.gif" alt="Motie"></a>
-		</h1><!-- end logo -->
+		<h1 class="logo"><a href="#"><img src="http://img.motieimg.com/_assets/logo-footer.gif" alt="Motie"></a></h1>
 		<div class="sp-20"></div>
 		<div class="lpic clear">
-			<h5>合作伙伴</h5> 
-			
-				
-					<div class="blogroll">
-			<a href="http://www.motie.com/home" target="_blank" boxid="19">磨铁中文网</a>
-			<a href="http://vip.book.sina.com.cn/" target="_blank">新浪原创</a>
-			<a href="http://book.qq.com/" target="_blank">腾讯读书</a>
-			<a href="http://book.163.com/" target="_blank">网易读书</a>
-			<a href="http://vip.book.sohu.com/" target="_blank">搜狐原创小说</a>
-			<a href="http://www.readnovel.com/" target="_blank">小说阅读网</a>
-			<a href="http://www.zongheng.com/" target="_blank">纵横中文网</a>
-			<a href="http://www.mmzh.com/" target="_blank">纵横女生网</a>
-			<a href="http://www.bayueju.com" target="_blank">八月居小说网</a>
-			<a href="http://vip.book.cnxianzai.com" target="_blank">现在网原创</a>
-			<a href="http://www.qefeng.com/" target="_blank">旗峰天下</a>
-			<a href="http://www.shuhai.com/" target="_blank">书海小说网</a>
-			<a href="http://www.xuanyicj.com/portal.php" target="_blank">蔡骏的悬疑世界</a>
-<a href="http://www.hongshu.com/" target="_blank">红薯小说网</a>
-<a href="http://book.360buy.com/" target="_blank">京东图书</a>
-<a href="http://www.qwsy.com/" target="_blank">蔷薇言情小说</a>
-<a href="http://www.huayubooks.com" target="_blank">华语中文网</a>
-<a href="http://www.rain8.com" target="_blank">雨枫轩小说网</a>
-<a href="http://www.3gsc.com.cn" target="_blank">3G书城</a>
-<a href="http://www.gg1994.com/" target="_blank">广购书城</a>
-<a href="http://www.9yue.com/" target="_blank">九月网</a>
-<a href="http://dzh.mop.com/book" target="_blank">猫扑原创</a>
-<a href="http://book.cn.yahoo.com/" target="_blank">雅虎读书</a>
-<a href="http://www.dajianet.com/" target="_blank">大佳网</a>
-<a href="http://book.kongfz.com/" target="_blank">孔夫子图书网</a>
-<a href="http://www.yueloo.com/" target="_blank">岳麓小说网</a>	
-<a href="http://book.hao123.com/" target="_blank">言情小说</a>	
-<a href="http://www.amazon.cn/b?node=116169071" target="_blank">亚马逊中国Kindle</a>	
-<a href="http://www.xhyd.com/" target="_blank">新华阅读网</a>
-<a href="http://www.xianmo.cc/" target="_blank">鲜磨精选短篇</a>
-<a href="http://www.yykanshu.com/" target="_blank">YY看书网</a>	
-<a href="http://www.haozuojia.com/" target="_blank">作家在线</a>	
-<a href="http://www.hongxiu.com/" target="_blank">红袖小说</a>
-<a href="http://book.2345.com" target="_blank">2345小说大全</a>
-<a href="http://www.fmx.cn/" target="_blank">凤鸣轩</a>
-<a href="http://b.faloo.com/" target="_blank">飞卢小说网</a>
-<a href="http://www.lkong.net/" target="_blank">龙的天空</a>
-<a href="http://www.kanshu.com/" target="_blank">看书网小说</a>
-<a target="_blank" href="http://hao.360.cn/">360安全网址导航</a>
-<a target="_blank" href="http://book.114la.com/">免费小说</a>
-<a target="_blank" href="http://book.ks.91.com/">91熊猫看书</a>
-<a target="_blank" href="http://www.tadu.com/">塔读文学</a>
-</div>
-				
-			
+			<h5>合作伙伴</h5> 	
+			<div class="blogroll">
+				<a href="http://www.motie.com/home" target="_blank" boxid="19">磨铁中文网</a>
+				<a href="http://vip.book.sina.com.cn/" target="_blank">新浪原创</a>
+			</div>	
 		</div>
 		<div class="rtext">
 			<div style="height: 70px" class="c1">
@@ -1755,4 +1654,5 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 		})
 	</script>
 
-<div class="fixed-rb" style="opacity: 0; display: none;"><a title="返回顶端" href="javascript:;" class="goTop"></a></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all search-result" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 11; top: 0px; left: 0px; display: none;"></ul><div style="display: none; position: absolute; z-index: 1000;" visible="display" class="namecard"><div style="position:relative"><div class="namecard-arrow"></div><table width="100%"><tbody><tr><td class="pop-tl"></td><td class="pop-border"></td><td class="pop-tr"></td></tr><tr><td class="pop-border"></td><td class="pop-content"><div class="mod-author-info mod"><div style="background: url(http://img.motieimg.com/_assets/ajax-loader.gif) no-repeat 100px center; line-height: 200px; height: 200px;" class="loading-card ac fz-14">加载中..</div><div class="bd"></div></div></td><td class="pop-border"></td></tr><tr><td class="pop-bl"></td><td class="pop-border"></td><td class="pop-br"></td></tr></tbody></table></div></div></body></html>
+<div class="fixed-rb" style="opacity: 0; display: none;"><a title="返回顶端" href="javascript:;" class="goTop"></a></div>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all search-result" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 11; top: 0px; left: 0px; display: none;"></ul><div style="display: none; position: absolute; z-index: 1000;" visible="display" class="namecard"><div style="position:relative"><div class="namecard-arrow"></div><table width="100%"><tbody><tr><td class="pop-tl"></td><td class="pop-border"></td><td class="pop-tr"></td></tr><tr><td class="pop-border"></td><td class="pop-content"><div class="mod-author-info mod"><div style="background: url(http://img.motieimg.com/_assets/ajax-loader.gif) no-repeat 100px center; line-height: 200px; height: 200px;" class="loading-card ac fz-14">加载中..</div><div class="bd"></div></div></td><td class="pop-border"></td></tr><tr><td class="pop-bl"></td><td class="pop-border"></td><td class="pop-br"></td></tr></tbody></table></div></div></body></html>

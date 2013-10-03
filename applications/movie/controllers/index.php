@@ -15,8 +15,8 @@ class Index extends CmsIndex
 		$this->load->view('index', $this->frontController);
 	}
 
-	public function index1()
+	public function festival()
 	{
-		$this->load->view('index1', $this->frontController);
+		$this->load->view('festival', $this->frontController);
 	}
 }
