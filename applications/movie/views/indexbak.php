@@ -90,6 +90,37 @@
 		</div>
 	</div>
 </div>
+<div id="slider">
+	<div id="indexSlide" class="sliCont">
+		<ul>
+            <li style="background: url('http://v.114la.com/img/focus_img/201309/138016778722090.jpg') no-repeat scroll center center rgb(0, 0, 0); display: block;">
+				<a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"><img alt="神盾局特工第1季" src="http://v.114la.com/img/focus_img/201309/138016778722090.jpg"></a>
+				<div class="summary">
+					<i><a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html"></a></i>
+					<h3><a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html">神盾局特工第1季</a></h3>
+					<p>超级英雄，让位人类特工。</p>
+				</div>
+			</li>
+			<?php for ($i = 1; $i < 8; $i++) { ?>
+			<li style="background: url(&quot;http://v.114la.com/img/focus_img/201309/138018061617849.jpg&quot;) no-repeat scroll center center rgb(231, 233, 249); display: none;">
+				<a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"><img alt="神枪狙击" src="http://v.114la.com/img/focus_img/201309/138018061617849.jpg"></a>
+				<div class="summary">
+					<i><a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html"></a></i>
+					<h3><a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html">神枪狙击</a></h3>
+					<p>型男飞虎队,张兆辉谢天华枪王大对决。</p>
+				</div>
+			</li>
+			<?php } ?>
+        </ul>
+		<div class="snum">
+			<a title="神枪狙击" target="_blank" rel="nofollow" href="http://v.114la.com/tv/40758.html" class="current"><img width="58" height="38" alt="神枪狙击" src="http://v.114la.com/img/small_img/201309/137947350043618.jpg"></a>
+			<?php for ($i = 1; $i < 8; $i++) { ?>
+            <a title="神盾局特工第1季" target="_blank" href="http://v.114la.com/tv/52839.html" class=""><img width="58" height="38" alt="神盾局特工第1季" src="http://v.114la.com/img/small_img/201309/138016675660521.jpg"></a>
+			<?php } ?>
+        </div>
+        <div class="inSlide-mouse"><a class="tk-left" href="javascript:;"></a><a class="tk-right" href="javascript:;"></a></div>
+	</div>
+</div>
 <div id="navis">
 	<ul>
 		<li class="active"><a title="首页" href="http://v.114la.com/">首页<i></i></a></li>
@@ -103,6 +134,25 @@
 	</ul>
 </div>
 <div id="dexCol" class="wrapper">
+	<dl class="siteLink">
+		<dt>影视名站<i></i></dt>
+		<dd>
+		    <a rel="nofollow" target="_blnak" href="http://cps.youku.com/redirect.html?id=00000240">优酷网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.iqiyi.com/">爱奇艺</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.letv.com/">乐视网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://tv.sohu.com/?aureole=1171">搜狐视频</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.kankan.com/">迅雷看看</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.pptv.com/">PPTV</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.tudou.com/">土豆网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://v.qq.com/index.html">腾讯视频</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.m1905.com/vod/">电影网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.pps.tv/">PPS网络电视</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.69k.com/?merchant_no=114la">69k影院</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://www.56.com/">56网</a><i>|</i>
+			<a rel="nofollow" target="_blnak" href="http://app.114la.com/zhibo/">电视直播</a>
+			<a rel="nofollow" class="more" target="_blnak" href="http://v.114la.com/website/">更多&gt;&gt;</a>
+		</dd>
+	</dl>
 	<div class="comwrap topare">
 		<div class="comTitle"><h6>卫视热播</h6></div>
 		<ul class="comcaseRow clearfix">
@@ -329,6 +379,37 @@
 				</ul>
 			</div>			
 		</div>
+	</div>
+	<div class="comwrap topare clearfix">
+		<dl class="spitRow fl">
+			<dt><a href="http://v.114la.com/music/0-0-0-0-2.html">MV欣赏</a></dt>
+			<dd><?php for ($i = 1; $i < 30; $i++) { ?><a href="http://v.114la.com/music/0-0-235-0-2.html">港台</a><?php } ?></dd>
+		</dl>
+		<ul class="spitMvList fr clearfix">
+			<?php for ($i = 1; $i < 11; $i++) { ?>
+			<li>
+				<a title="郭燕 - 天空之城 电视剧 《兰陵王》 主题曲" target="_blank" href="">
+					<img alt="" src="http://v.114la.com/static/images/zt0717-01.jpg" style="display: inline;" />
+					<cite>电视剧《兰陵王》主题曲，由林依晨和冯绍峰主演。</cite><em></em>
+				</a>
+				<p>郭燕 - 天空之城 电视剧 《兰陵王》 主题曲</p>
+			</li>
+			<?php } ?>
+		</ul>
+	</div>
+
+	<div class="comwrap topare">
+		<div class="inTitle"><h6>影视专题</h6><a rel="nofollow" target="_blnak" class="more" href="http://www.k559.com/superstar/">更多专题&gt;&gt;</a></div>
+		<ul class="comSumList clearfix">
+			<?php for ($i = 1; $i < 6; $i++) { ?>
+			<li>
+				<a rel="nofollow" target="_blnak" href="http://www.k559.com/superstar/liangchaowei/">
+					<img alt="梁朝伟电影全集" data-original="http://v.114la.com/static/images/zt0717-01.jpg" src="http://v.114la.com/static/images/zt0717-01.jpg">
+					<cite>梁朝伟电影全集</cite>
+				</a>
+			</li>
+			<?php } ?>
+		</ul>
 	</div>
 	<dl class="flink">
 		<dt class="comTitle"><h6>友情链接</h6></dt>
