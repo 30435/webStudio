@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.27, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
 --
 -- Host: localhost    Database: studio_ucserver
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.6.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -300,6 +300,7 @@ CREATE TABLE `su_memberfields` (
 
 LOCK TABLES `su_memberfields` WRITE;
 /*!40000 ALTER TABLE `su_memberfields` DISABLE KEYS */;
+INSERT INTO `su_memberfields` VALUES (1,''),(2,''),(3,''),(4,''),(5,''),(6,''),(7,''),(8,''),(9,'');
 /*!40000 ALTER TABLE `su_memberfields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,7 +327,7 @@ CREATE TABLE `su_members` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -335,6 +336,7 @@ CREATE TABLE `su_members` (
 
 LOCK TABLES `su_members` WRITE;
 /*!40000 ALTER TABLE `su_members` DISABLE KEYS */;
+INSERT INTO `su_members` VALUES (1,'13594205','bfa58fe222573b2e8b0df96e5b274578','','','','127.0.0.1',1381209133,0,0,'d08198',''),(2,'aaaaaa','4620e7c563671b9c6bb5b97a1b1746c6','','','','127.0.0.1',1381209218,0,0,'27faae',''),(3,'13638307','df19e6204123850860694a0e146b44d1','','','','127.0.0.1',1381209251,0,0,'37e378',''),(4,'15538984','ccd558775e536257de10d0ca0554df4d','','','','127.0.0.1',1381214448,0,0,'0e5bd7',''),(5,'16779997','fcde56eff7764aa2209daa6a9ffe5793','','','','127.0.0.1',1381214470,0,0,'6413e3',''),(6,'aaaaaaa','aeb2df31da7c59746c6db715236787c3','','','','127.0.0.1',1381214878,0,0,'e9f91a',''),(7,'18526822','7ddc40ce16a4f234ff0336fa8f08eecb','','','','127.0.0.1',1381214900,0,0,'4a6396',''),(8,'14408553','c7e84436fe0b1edded37cf0beb7c24e6','','','','127.0.0.1',1381215277,0,0,'d0d085',''),(9,'16462301','ac3f3f5ae5de854bc25dd10f5ae5151a','','','','127.0.0.1',1381218941,0,0,'d95e5e','');
 /*!40000 ALTER TABLE `su_members` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -927,4 +929,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-30  9:55:50
+-- Dump completed on 2013-10-08 18:12:14

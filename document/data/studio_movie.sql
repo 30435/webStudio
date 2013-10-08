@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.27, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
 --
 -- Host: localhost    Database: studio_movie
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.6.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -19,7 +19,7 @@
 -- Current Database: `studio_movie`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_movie` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_movie` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 USE `studio_movie`;
 
@@ -181,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-30  9:55:48
+-- Dump completed on 2013-10-08 18:12:12

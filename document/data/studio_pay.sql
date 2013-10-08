@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.27, for Win32 (x86)
+-- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
 --
 -- Host: localhost    Database: studio_pay
 -- ------------------------------------------------------
--- Server version	5.5.27
+-- Server version	5.6.11
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -57,7 +57,7 @@ CREATE TABLE `sp_account` (
   `handpay_manager` tinyint(4) DEFAULT NULL COMMENT '手工支付管理员账号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `orderid` (`orderid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,6 +66,7 @@ CREATE TABLE `sp_account` (
 
 LOCK TABLES `sp_account` WRITE;
 /*!40000 ALTER TABLE `sp_account` DISABLE KEYS */;
+INSERT INTO `sp_account` VALUES (1,'2013100806514','','yeepay','touser','',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,1000.00,1000.00,700.00,1381223055,'20131008',1381223056,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:4:\"1000\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100806514\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"7bc865f9ed933fddd154b403bb5f924a\";}','1',NULL),(2,'2013100826078','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,1.00,1.00,0.70,1381223080,'20131008',1381223082,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:1:\"1\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100826078\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"045ad722c0218fa6980411954aeeb735\";}','1',NULL),(3,'2013100895563','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,10.00,10.00,7.00,1381224699,'20131008',1381224701,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:2:\"10\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100895563\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"6353959ed119b3a304f68f02cbacf2f4\";}','1',NULL),(4,'2013100806856','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',16075186,'aaaaaaa','',0.3,333.00,333.00,233.10,1381225975,'20131008',1381225977,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:3:\"333\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100806856\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"cc133157ecca4ee2dbcd48db7b929e81\";}','1',NULL);
 /*!40000 ALTER TABLE `sp_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,6 +147,7 @@ CREATE TABLE `sp_member_pay` (
 
 LOCK TABLES `sp_member_pay` WRITE;
 /*!40000 ALTER TABLE `sp_member_pay` DISABLE KEYS */;
+INSERT INTO `sp_member_pay` VALUES (10884184,'aaaaaa',642.7,1011,3,1011,707.7,3,1381224701,10,65,1381226142,1381226142,0.00),(16075186,'aaaaaaa',0.1,333,1,333,233.1,1,1381225977,1,233,1381225977,1381225977,0.00);
 /*!40000 ALTER TABLE `sp_member_pay` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +173,7 @@ CREATE TABLE `sp_pay` (
   `pay_time` int(10) NOT NULL COMMENT '支付时间',
   `day` char(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,6 +182,7 @@ CREATE TABLE `sp_pay` (
 
 LOCK TABLES `sp_pay` WRITE;
 /*!40000 ALTER TABLE `sp_pay` DISABLE KEYS */;
+INSERT INTO `sp_pay` VALUES (1,'2013100865180','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223150,'20131008'),(2,'2013100891619','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223158,'20131008'),(3,'2013100893921','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223158,'20131008'),(4,'2013100883440','2013100895563','',0,10884184,'aaaaaa',7,'nova',0,'',1381224701,'20131008'),(5,'2013100871698','2013100895563','aaaaaa',10884184,10884184,'aaaaaa',7,'nova',0,'',1381225247,'20131008'),(6,'2013100877365','2013100895563','aaaaaa',10884184,10884184,'aaaaaa',7,'nova',0,'',1381225250,'20131008'),(7,'2013100882459','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225429,'20131008'),(8,'2013100854187','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225458,'20131008'),(9,'2013100853387','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225658,'20131008'),(10,'2013100880755','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225713,'20131008'),(11,'2013100864152','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225736,'20131008'),(12,'2013100817717','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225773,'20131008'),(13,'2013100862173','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225786,'20131008'),(14,'2013100860751','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225852,'20131008'),(15,'2013100848469','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225865,'20131008'),(16,'2013100802120','2013100806856','aaaaaaa',16075186,16075186,'aaaaaaa',233,'nova',0,'',1381225977,'20131008'),(17,'2013100867284','0','aaaaaaa',16075186,10884184,'aaaaaa',12,'nova',0,'',1381226043,'20131008'),(18,'2013100823821','0','aaaaaaa',16075186,10884184,'aaaaaa',12,'nova',0,'',1381226142,'20131008');
 /*!40000 ALTER TABLE `sp_pay` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,8 +198,8 @@ CREATE TABLE `sp_pay_paymonth` (
   `paymonth_id` smallint(4) NOT NULL COMMENT '支付ID',
   `orderid` char(32) NOT NULL,
   `orderid_account` char(32) NOT NULL,
-  `pay_username` char(20) NOT NULL,
-  `pay_userid` int(8) NOT NULL,
+  `get_username` char(20) NOT NULL,
+  `get_userid` int(8) NOT NULL,
   `userid` int(8) unsigned NOT NULL COMMENT '用户ID',
   `username` char(20) NOT NULL COMMENT '用户名',
   `money` float NOT NULL COMMENT '支付金额',
@@ -287,4 +290,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-30  9:55:49
+-- Dump completed on 2013-10-08 18:12:13

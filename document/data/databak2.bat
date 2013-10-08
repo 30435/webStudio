@@ -1,0 +1,9 @@
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_bbs > e:\www\webStudio\document\data\studio_bbs.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_game > e:\www\webStudio\document\data\studio_game.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_kidsedu > e:\www\webStudio\document\data\studio_kidsedu.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_movie > e:\www\webStudio\document\data\studio_movie.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_passport > e:\www\webStudio\document\data\studio_passport.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_pay > e:\www\webStudio\document\data\studio_pay.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_spider > e:\www\webStudio\document\data\studio_spider.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_ucserver > e:\www\webStudio\document\data\studio_ucserver.sql
+mysql\bin\mysqldump -uroot --default-character-set=utf8 --database studio_webgame > e:\www\webStudio\document\data\studio_webgame.sql
