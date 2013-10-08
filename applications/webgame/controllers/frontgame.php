@@ -260,7 +260,7 @@ class frontgame extends Custom_Controller
 	{
 		$this->load->library('session');
 		$payInfos = $this->session->userdata('payInfos');
-		var_dump($payInfos);//$this->session->unset_userdata('payInfos');
+		$this->session->unset_userdata('payInfos');//var_dump($payInfos);
 
 		if (!in_array($payInfos['payType'], array('topaymonth', 'towebgame'))) {
 			exit('payType error'); // $this->_messageInfo('支付类型有误！', $this->appInfos['pay']['url']);
@@ -272,9 +272,10 @@ class frontgame extends Custom_Controller
 			}
 		}
 
-		$payInfos['getUserInfo'] = $payInfos['username'] == $this->loginedUserInfo('username') ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['username']));
-		$payInfos['userInfo'] = $payInfos['payUsername'] == $this->loginedUserInfo('username') ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['payUsername']));
-		$payInfos['moneyInfo'] = $this->_getMoneyInfo($payInfos['username'], true);
+		$payInfos['getUserInfo'] = $payInfos['username'] == $this->loginedUserInfo['username'] ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['username']));
+		$payInfos['userInfo'] = $payInfos['payUsername'] == $this->loginedUserInfo['username'] ? $this->loginedUserInfo : $this->getUserInfo(array('username =' => $payInfos['payUsername']));
+		$payInfos['moneyInfo'] = $this->_getMoneyInfo($payInfos['payUsername'], true);
+		//var_dump($payInfos['userInfo']); var_dump($payInfos['moneyInfo']); 
 		if (empty($payInfos['userInfo']) || empty($payInfos['moneyInfo']) || $payInfos['moneyInfo']['money'] < $payInfos['money']) {
 			exit('user error');//$this->_messageInfo('支付账号信息有误！', $this->appInfos['pay']['url']);
 		}
@@ -325,9 +326,11 @@ class frontgame extends Custom_Controller
 
 		$data = array(
 			'userid' => $params['userInfo']['userid'],
+			'username' => $params['userInfo']['username'],
+			'get_userid' => $params['getUserInfo']['userid'],
+			'get_username' => $params['getUserInfo']['username'],
 			'orderid' => $params['orderId'],
 			'orderid_account' => isset($params['accountId']) ? $params['accountId'] : '',
-			'username' => $params['userInfo']['username'],
 			'money' => $params['money'],
 			'webgame_code' => $params['webgameInfo']['code'],
 			'server_id' => isset($params['serverInfo']['id']) ? $params['serverInfo']['id'] : 0,
@@ -341,10 +344,12 @@ class frontgame extends Custom_Controller
 		if ($params['payType'] == 'topaymonth') {
 			$data = array(
 				'userid' => $params['userInfo']['userid'],
+				'username' => $params['userInfo']['username'],
+				'get_userid' => $params['getUserInfo']['userid'],
+				'get_username' => $params['getUserInfo']['username'],
 				'paymonth_id' => $params['paymonthInfo']['id'],
 				'orderid' => $params['orderId'],
 				'orderid_account' => isset($params['accountId']) ? $params['accountId'] : '',
-				'username' => $params['userInfo']['username'],
 				'money' => $params['money'],
 				'month' => $params['paymonthInfo']['month'],
 				'webgame_code' => $params['webgameInfo']['code'],
@@ -353,7 +358,7 @@ class frontgame extends Custom_Controller
 			);
 			$this->payModel->addInfo($data, 'pay_paymonth');
 		}
-		
+
 		$moneyInfo = $this->_getMoneyInfo($params['userInfo']['username']);
 		$data = array(
 			'money' => $moneyInfo['money'] - $params['money'],
@@ -361,7 +366,7 @@ class frontgame extends Custom_Controller
 			'pay_times' => $moneyInfo['pay_times'] + 1,
 			'lasttime_pay' => $this->time,
 		);
-		$where = array('username =' => $params['username']);
+		$where = array('username =' => $params['userInfo']['username']);
 		$this->payModel->editInfo($data, $where, 'member_pay');
 		
 		return ;
