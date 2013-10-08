@@ -11,7 +11,7 @@ if ($action == 'login') {
 	}
 	$password = md5($password);
 	
-	$string = "action=login&username={$username}&password={$password}&webgameCode={$webgameCode}";
+	$string = "action=login&username={$username}&password={$password}&code={$webgameCode}";
 	$url = getUrl($string, $interfaceType, $configInfos);
 
 	$resultInfo = getResult($string, $url, $interfaceType, $configInfos);
@@ -29,7 +29,7 @@ if ($action == 'login') {
 		exit('password password2 or seccode is empty<a href="/">登陆</a>=====<a href="register">注册</a>');
 	}
 
-	$string = "action=register&password={$password}&password2={$password2}&captcha={$captcha}";
+	$string = "action=register&password={$password}&password2={$password2}&captcha={$captcha}&code={$webgameCode}&channel={$configInfos['channel']}";
 	$url = getUrl($string, $interfaceType, $configInfos);
 
 	$resultInfo = getResult($string, $url, $interfaceType, $configInfos);

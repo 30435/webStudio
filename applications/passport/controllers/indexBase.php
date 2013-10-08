@@ -74,6 +74,7 @@ class IndexBase extends Custom_Controller
 				$userInfo['regip'] = $this->input->ip_address();
 				$userInfo['regdate'] = $this->time;
 				$userInfo['ucserver_id'] = $ucInfo['userid'];
+				$userInfo['channel_code'] = 'otherplat';
 				$this->memberModel->addInfo($userInfo);
 			}
 
@@ -173,6 +174,7 @@ class IndexBase extends Custom_Controller
 				$userInfo['regip'] = $this->input->ip_address();
 				$userInfo['regdate'] = $this->time;
 				$userInfo['ucserver_id'] = $userid;
+				$userInfo['channel_code'] = 'plat';
 
 				$addUser = $this->memberModel->addInfo($userInfo);
 				if (empty($addUser)) {
@@ -228,7 +230,7 @@ class IndexBase extends Custom_Controller
 	 */
 	public function emailValid()
 	{
-		$email = $this->input->get('email');
+		$email = $this->input->get_post('email');
 
 		$status = uc_user_checkemail($email);
 		$data['emailValid'] = $status;

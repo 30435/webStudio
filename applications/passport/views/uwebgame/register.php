@@ -1,8 +1,84 @@
 <?php echo $this->load->view($this->prefix . '/header'); ?>
-<script language="javascript" type="text/javascript">
-setNav(1);
-selectFast();
-selectNoRealName();
+
+
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+<script src="<?php echo $this->staticUrl; ?>common/formvalidator/themes/baidu/js/theme.js" type="text/javascript" charset="UTF-8"></script>
+<link href="<?php echo $this->staticUrl; ?>common/formvalidator/themes/baidu/style/style.css" type="text/css" />
+<script type="text/javascript">
+$(document).ready(function(){
+	$.formValidator.initConfig({formID:"registerForm",theme:"baidu",submitOnce:true, //debug:true,
+		onError:function(msg,obj,errorlist){
+			$("#errorlist").empty();
+			$.map(errorlist,function(msg){
+				$("#errorlist").append("<li>" + msg + "</li>")
+			});
+			alert(msg);
+		},
+		ajaxPrompt : '有数据正在异步验证，请稍等...'
+	});
+
+
+	$("#password").formValidator({onShow:"请输入密码",onFocus:"密码为6-16个字符",onCorrect:"密码合法"}).inputValidator({min:6,max:16,empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},onError:"密码为6-16个字符,请确认"});
+	$("#password2").formValidator({onShow:"输再次输入密码",onFocus:"至少1个长度",onCorrect:"密码一致"}).inputValidator({min:1,empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},onError:"重复密码不能为空,请确认"}).compareValidator({desID:"password",operateor:"=",onError:"2次密码不一致,请确认"});
+	$("#checkcode").formValidator({onShow:"",onFocus:"验证码至少2个字符,最多10个字符",onCorrect:"验证码有效"}).inputValidator({min:2,max:10,onError:"你输入的验证码非法,请确认"})
+	    .ajaxValidator({
+		url: passportUrl + 'uwebgame/isValidCode?isajax=yes',
+		async: false,
+		cache: false,
+		success : function(data){
+			if (data == 'yes') {
+				return true;
+			} else {
+				return "验证码错误";
+			}
+		}
+	}).defaultPassed();
+	//$(":checkbox[name='protocol']").formValidator({onshow:"请阅读协议",onfocus:"请阅读协议"}).inputValidator({min:1,onerror:"请阅读协议"});
+	
+
+	$("#username").formValidator({onShow:"请输入用户名",onFocus:"用户名至少5个字符,最多20个字符",onCorrect:"该用户名有效"}).inputValidator({min:5,max:20,onError:"你输入的用户名非法,请确认"})
+		.ajaxValidator({
+		dataType : "jsonp",
+		async : false,
+		jsonp:"callback",
+		url : passportUrl + '<?php echo $this->prefix; ?>/getUserid/',
+		success : function(data){
+			var userid = parseInt(data.userid);
+			if (userid == 0) {
+				return true;
+			}
+			return "该用户名已存在，请更换用户名";
+		},
+		buttons: $("#button"),
+		error: function(jqXHR, textStatus, errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);},
+		onError : "该用户名已存在，请更换用户名",
+		onWait : "正在对用户名进行合法性校验，请稍候..."
+	}).defaultPassed();
+
+	$("#email").formValidator({onShow:"请输入邮箱",onFocus:"邮箱6-100个字符",onCorrect:"恭喜你,你输对了",defaultValue:"@"}).inputValidator({min:6,max:100,onError:"你输入的邮箱长度非法,请确认"}).regexValidator({regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$",onError:"你输入的邮箱格式不正确"})
+	.ajaxValidator({
+		dataType : "jsonp",
+		async : false,
+		jsonp:"callback",
+		url : passportUrl + '<?php echo $this->prefix; ?>/emailValid/',
+		success : function(data){
+			var emailValid = parseInt(data.emailValid);
+			if (emailValid == 1) {
+				return true;
+			}
+			return "该邮箱已存在，请更换邮箱";
+		},
+		buttons: $("#button"),
+		error: function(jqXHR, textStatus, errorThrown){alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);},
+		onError : "该用邮箱已存在，请更换邮箱",
+		onWait : "正在对邮箱进行合法性校验，请稍候..."
+	}).defaultPassed();
+
+	$("#truename").formValidator({onShow:"请输入真实姓名，中文格式",onCorrect:"谢谢你的合作，你的姓名正确"}).regexValidator({regExp:"chinese",dataType:"enum",onError:"请填写您的中文姓名"});
+	$("#idcard").formValidator({ajax:true,onShow:"请输入15或18位的身份证",onFocus:"输入15或18位的身份证",onCorrect:"输入正确"}).functionValidator({fun:isCardID});
+});
+
 </script>
 <div class="min-body">
     <div class="min-content back">
@@ -25,101 +101,151 @@ selectNoRealName();
 		</div>
         <div style="position:relative;"></div>
 
+
+
 		<div id="registerWithUsername" style="display:none">
-		<div id="usernamenote" class="comm-error ps-error"><span></span></div>
 		<div class="reg-row">
             <label class="label">自定义帐号：</label>
-            <div class="reg-div">
-                <span id="J_pwd_tip" class="reg-span">自定义帐号由6-20个字符组成，可用数字、字母、下划线</span>
-                <input type="text" name="username" id="username" class="reg-input" onMouseDown="$('#username').css('opacity','1');" onBlur="checkusername(this.value);" />
-				<input type="hidden" id="usernametip" value="no" />
-            </div>
+            <input type="text" name="username" id="username" class="user_input" />
+			<div class="txt_tips"><span id="usernameTip"></span></div>
        </div>
 	   </div>
 
 		<div id="registerWithEmail" style="display: none">
-		<div class="comm-error ps-error" id="emailnote"><span id="emailnote"></span></div>
         <div class="reg-row">
             <label class="label">注册邮箱：</label>
-            <div class="reg-div">
-                <span class="reg-span" id="J_pwd_tip">请输入你的常用邮箱</span>
-                <input type="text" class="reg-input" id="email" name="email" onMouseDown="$('#email').css('opacity','1');" onBlur="checkemail(this.value);"/>
-				<input type="hidden" id="emailtip" value="no" />
-            </div>
+            <input type="text" name="email" id="email" class="user_input" />
+			<div class="txt_tips"><span id="emailTip"></span></div>
         </div>
-        <div class="select-email" id="select_email" style="margin-left: 207px;margin-top: -25px;"></div>
 		</div>
 
-        <div class="comm-error ps-error" id="passwordnote" style="margin-top:-28px;"><span></span></div>
         <div class="reg-row">
             <label class="label">设置密码：</label>
-            <div class="reg-div">
-				<span class="reg-span" id="J_pwd_tip">密码由6-16个字符组成，可用数字、字母下划线</span>
-				<input type="password" class="reg-input" onMouseDown="$('#password').css('opacity','1');" id="password" name="password" onBlur="checkpassword(this.value);" />
-				<input type="hidden" id="passwordtip" value="no" />
-			</div>
+            <input type="text" name="password" id="password" class="user_input" />
+			<div class="txt_tips"><span id="passwordTip"></span></div>
         </div>
-        <!--<div class="reg-row"  id="J_safe_box" style="margin-left: 103px;"><i id="J_safe_level" class="fleft safe-none">&nbsp;&nbsp;</i></div>-->
-        <div class="comm-error ps-error"id="password2note"><span></span></div>
         <div class="reg-row" style="margin-bottom:30px;">
             <label class="label">确认密码：</label>
-            <div class="reg-div">
-				<span class="reg-span">请再次输入密码</span>
-				<input type="password" style="line-height:34px;" onMouseDown="$('#password2').css('opacity','1');" class="reg-input" name="cfmpwd" id="password2" onBlur="checkpassword2(this.value);" />
-				<input type="hidden" id="password2tip" value="no" />
-			</div>
+            <input type="text" name="password2" id="password2" class="user_input" />
+			<div class="txt_tips"><span id="password2Tip"></span></div>
         </div>
 
 		<div id="registerWithRealName" style="display: none">
         <div class="reg-row">
             <label class="label">真实姓名：</label>
-            <div class="reg-div">
-                <input type="text" class="reg-input" maxlength="5" id="truename" name="truename" value=""/>
-            </div>
+            <input type="text" name="truename" id="truename" class="user_input" />
+			<div class="txt_tips"><span id="truenameTip"></span></div>
         </div>
-        <div class="comm-error ps-error" style="margin-left:227px" id="J_error_idnumber" ><span></span></div>
         <div class="reg-row">
             <label class="label">身份证号：</label>
-            <div class="reg-div">
-                <input type="text" class="reg-input" name="idcard" id="idcard" value=""/>
-            </div>
+            <input type="text" name="idcard" id="idcard" class="user_input" />
+			<div class="txt_tips"><span id="idcardTip"></span></div>
         </div>
         <div class="reg-tip"><span>请一定要准确填写自己的身份证号，如果没有，可以向爸爸妈妈借看下！</span></div>
 		</div>
 
-        <div class="comm-error ps-error"id="seccodenote"><span></span></div>
         <div class="rsess-row">
             <label class="label">验证码：</label>
-            <div class="reg-div"><input name=seccode type="text" id="seccode" size="6" maxlength="4" onBlur="checkseccode(this.value);" class="reg-sec"/></div>
-            <div class="reg-img pointer" id="seccode_img_tip">
-				<img style="width:100px;" src="<?php echo $this->baseUrl; ?>admin/index/checkcode" onClick="this.src=this.src+'/'+Math.random()"  id="seccode_img" alt="换一张"/>
-				<a href="javascript:document.getElementById('seccode_img').src='<?php echo $this->baseUrl; ?>admin/index/checkcode'+'/'+Math.random();void(0);" id="J_change_sess" class="gray f12">换一个</a>
-			</div>
+            <input type="text" name="checkcode" id="checkcode" class="user_input" width="10px" />
+			<div class="txt_tips"><span id="checkcodeTip"></span></div>
+
+			
         </div>
+            <div class="reg-img pointer" id="checkcode_img_tip">
+				<img style="width:100px;" src="<?php echo $this->baseUrl; ?>admin/index/checkcode" onClick="this.src=this.src+'/'+Math.random()"  id="checkcode_img" alt="换一张"/>
+				<a href="javascript:document.getElementById('checkcode_img').src='<?php echo $this->baseUrl; ?>admin/index/checkcode'+'/'+Math.random();void(0);" id="J_change_sess" class="gray f12">换一个</a>
+			</div>
 
         <div class="comm-error ps-error" style="margin-left:198px;*margin-left:0px;" id="J_error_agree"><span></span></div>
         <div class="check-row">
-            <div id="J_check_box" class="check"><input type="hidden" id="J_agree" name="agree" value='1' class="reg-check"/></div>
-            <span class="gray che-span">我已阅读并同意《<a href="http://www.61.com/about/service.html" class="fb gray no-underline">淘米网服务条款</a>》</span>
+            <div id="J_check_box" class="check"><input type="checkbox" value="" id="protocol" name="protocol"></div>
+            <span class="gray che-span">我已阅读并同意《<a href="<?php echo $this->categoryInfos[22]['url']; ?>" target="_blank" class="fb gray no-underline">淘米网服务条款</a>》</span>
         </div>
         <div id="J_submit" class="reg-botton pointer"><span class="f16b" onclick="register();">立即注册</span></div>
         </div>
     </form>
     </div>
 </div>
-<div class="foot-img"></div>
-<div class="alter-box" id="J_alter_email" style="width:400px;">
-	<div class="top">
-        <div class="inner" style="float:left;"><span>验证注册邮箱</span></div>
-        <a class="off" href="javascript:void(null);" id="close_btn"></a>
-    </div>
-    <div class="body">
-        <div class="reg-box" style="margin-left:20px;margin-top:0;">
-            <p class="rs-tip">请进入你的邮箱<span id="J_review_email" class="orange"></span>,继续完成注册。<br/>如果发现邮箱不正确，点此<a class="orange no-underline" href="javascript:void(null);" id="J_change_email" >更换邮箱</a></p>
-	        <input type="hidden" id="J_email_url">
-	        <div id="J_app_email_btn" class="a-botton pointer" style="margin-left:110px;margin-top:20px;"><span class="f14">立即进入邮箱</span></div>
-        </div>
-    </div>
-</div>
+<script language="javascript" type="text/javascript">
+function selectFast()
+{
+	$("#haveEmail").val("no");
+	$("#haveUsername").val("no");
+	
+	$("#selectFast").addClass("cur");
+	$("#selectUsername").removeClass("cur");
+	$("#selectEmail").removeClass("cur");
+	$("#registerWithEmail").hide();
+	$("#registerWithUsername").hide();
+}
 
+function selectSelf()
+{
+	$("#haveUsername").val("yes");
+	$("#haveEmail").val("no");
+
+	$("#selectFast").removeClass("cur");
+	$("#selectUsername").addClass("cur");
+	$("#selectEmail").removeClass("cur");		
+	$("#registerWithUsername").show();
+	$("#registerWithEmail").hide();
+}
+
+function selectEmail()
+{
+	$("#haveEmail").val("yes");
+	$("#haveUsername").val("no");
+
+	$("#selectFast").removeClass("cur");
+	$("#selectUsername").removeClass("cur");
+	$("#selectEmail").addClass("cur");	
+	$("#registerWithEmail").show();
+	$("#registerWithUsername").hide();
+}
+
+function selectRealName()
+{	
+	$("#haveRealName").val("yes");
+	$("#selectRealNameBar").hide();
+	$("#selectNoRealNameBar").show();
+	$("#registerWithRealName").show();
+}
+
+function selectNoRealName()
+{
+	$("#haveRealName").val("no");
+	$("#selectRealNameBar").show();
+	$("#selectNoRealNameBar").hide();
+	$("#registerWithRealName").hide();
+}
+
+function register()
+{
+	$("#username").unFormValidator(true); 
+	$("#email").unFormValidator(true); 
+	$("#truename").unFormValidator(true); 
+	$("#idcard").unFormValidator(true); 
+
+	var haveEmail = $("#haveEmail").val();
+	var haveUsername = $("#haveUsername").val();
+	var haveRealName = $("#haveRealName").val();
+	if (haveEmail == 'yes')	{
+		$("#email").unFormValidator(false);
+	}
+	if (haveUsername == 'yes')	{
+		$("#username").unFormValidator(false);
+	}
+	if (haveRealName == 'yes')	{
+		$("#truename").unFormValidator(false);
+		$("#idcard").unFormValidator(false);
+	}
+	$('#registerForm').submit();
+}
+</script>
+<script language="javascript" type="text/javascript">
+setNav(1);
+selectFast();
+selectNoRealName();
+
+</script>
 <?php echo $this->load->view($this->prefix . '/footer'); ?>

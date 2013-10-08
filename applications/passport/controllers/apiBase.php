@@ -79,6 +79,7 @@ abstract class ApiBase extends Custom_Controller
 			$userInfo['regip'] = $this->input->ip_address();
 			$userInfo['regdate'] = $this->time;
 			$userInfo['ucserver_id'] = $userid;
+			$userInfo['channel_code'] = 'official';
 
 			$addUser = $this->memberModel->addInfo($userInfo);
 			if (empty($addUser)) {

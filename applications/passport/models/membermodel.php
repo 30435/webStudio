@@ -18,6 +18,7 @@ class MemberModel extends CommonModel
 			'userid' => array('name' => '用户ID'),
 			'username' => array('name' => '用户账户'),
 			'ucserver_id' => array('name' => 'UCenter ID'),
+			'channel_code' => array('name' => '渠道代码'),
 			'email' => array('name' => '邮箱'),
 			'truename' => array('name' => '真实姓名'),
 			'gender' => array('name' => '性别'),
