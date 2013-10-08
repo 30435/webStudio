@@ -1,0 +1,201 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>支付模块手册</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<style type="text/css">
+html, body { padding:0; margin:0; }
+body { font-size:14px; width:1000px; }
+body, h1, h2, h3 { font-family:"微软雅黑","Lucida Grande","Lucida Sans Unicode",Calibri,Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; }
+b { color:#0000cc; }
+
+#menu { background:#EAEEF3; width:200px; border-right:1px solid #C6C9CE; float:left; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; }
+#menu_title { padding:24px; margin:0; text-align:right; font-size:24px; color:#576780; }
+#menu ul, #menu li { list-style:none; margin:0; padding:0; }
+#menu li a { border:1px solid #EAEEF3; border-right:none; border-left:none; }
+#menu a { font-size:14px; display:block; padding:10px 24px; text-decoration:none; text-align:right; color:#426DC9; }
+#menu .current a, #menu li a:hover { background:#BBCEE9; color:#000; border-color:#8FAAD9; }
+
+#content { margin-left:220px; padding-bottom:24px; margin-right:24px; }
+#content h3 { font-size:24px; color:#576780; border-bottom:1px solid #eee; padding-bottom:8px; margin-top:24px; }
+#content ul, #content li { margin:0; padding:0; list-style:none; color:#ccc; }
+#content li span { color:#000; }
+#content li { line-height:24px; list-style-type:disc; margin-left:30px; }
+#content p { line-height:24px; }
+#content .subp { margin-left:30px; }
+
+#footer { text-align:center; font-size:12px; color:#888; border-top:solid 1px #eee; padding-top:10px; margin-top:24px; }
+</style>
+<script type="text/javascript">
+	var currentItem = 'i1';
+</script>
+</head>
+<body>
+<div id="menu">
+	<h3 id="menu_title">目录</h3>
+	<ul>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">支付相关的概念</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">支付模块-支付管理-支付配置</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">支付模块-支付管理-管理包月</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">支付模块-支付管理-账号充值统计</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">支付模块-支付管理-支付配置</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#e">支付模块-支付报表-充值记录</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#e">支付模块-支付报表-支付记录</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#e">支付模块-支付报表-异常充值</a></li>
+	</ul>
+</div>
+<div id="content">
+	<h3 id="a">平台概述</h3>
+	<p>平台构建思路：</p>
+	<ul>
+		<li><span>尽可能减少平台与游戏之间的耦合度，游戏和平台只通过接口进行有限的交互</span></li>
+		<li><span>平台只关注用户登陆游戏服务器和向游戏服务器支付游戏币的操作</span></li>
+		<li><span>平台不关心用户登陆游戏后的行为</span></li>
+	</ul>
+	<p>平台的基本功能模块：</p>
+	<ul>
+		<li><span>平台是作为一个可以运营多个网游的运营平台</span></li>
+		<li><span>平台具备用户功能模块，可实现用户的注册、登陆和用户管理功能</span></li>
+		<li><span>平台具备游戏管理的功能，可以方便快速地接入若干网游</span></li>
+		<li><span>平台具备CMS管理功能，可以基于栏目录入、管理、展示平台或网游相关的资讯</span></li>
+		<li><span>平台具备用户充值功能，可以通过第三方充值平台（如支付宝）等实现向指定用户充值的功能</span></li>
+		<li><span>平台具备用户向游戏支付游戏币的功能，如可以向诺瓦奇兵、神仙道等平台上运营的游戏支付游戏币</span></li>
+		<li><span>平台具备完整可靠的后台管理功能</span></li>
+	</ul>
+
+	<h3 id="b">平台支持的网页游戏类型</h3>
+	<p>1-自主研发的儿童类网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 平台能够支持多款自主研发的儿童类网页游戏<br>
+		<b>2</b> ： 能够针对网游提供验证用户登陆操作的接口<br>
+		<b>3</b> ： 能够针对网游提供注册新用户操作的接口<br>
+		<b>4</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>2-代理运营第三方的儿童类网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 平台能够支持多款第三方儿童类网页游戏<br>
+		<b>2</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>3-代理运营第三方普通网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 支持多款第三方普通网页游戏，支持同一用户进入同一款网游的不同游戏服务器<br>
+		<b>2</b> ： 能够基于网游游戏方提供的接口，使平台用户直接通过接口登陆至指定的网游服务器<br>
+		<b>3</b> ： 能够基于网游游戏方提供的接口，检查某一平台用户在某一游戏的某一游戏服务器是否创建有游戏角色<br>
+		<b>4</b> ： 能够基于网游游戏方提供的接口，向指定游戏服务器（用户在该服务器上应该已经创建了游戏角色）支付游戏币<br>
+		<b>5</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>备注-这里的儿童类网页游戏与普通网页游戏的区别：</p>
+	<p class="subp">
+		<b>儿童类网页游戏</b> ： 平台提供接口，网游主动调用平台提供的接口的网游，这里称为儿童类网页游戏<br>
+		<b>普通网页游戏</b> ： 游戏方提供接口，平台通过调用这些接口实现游戏的登陆和支付游戏币等操作，这类游戏这里称为普通网游游戏
+	</p>
+
+	<h3 id="c">登陆接口（只对自主研发的儿童类网游有效）</h3>
+	<p>接口地址：</p>
+	<p class="subp"><b>http://passport.t.alyee.com/api</b>，平台为游戏提供的接口地址</p>
+	<p>调用方式：</p>
+	<p class="subp">服务端 <b>GET</b></p>
+
+	<p>需要用到的参数：</p>
+	<ul>
+	    <li><span><b>action</b> － 值为login，指向平台发起账号登陆的请求事件</span></li>
+		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
+		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
+		<li><span><b>code</b> － 平台分配给游戏的唯一标示符，指定账号要进入什么游戏</span></li>
+	</ul>
+	<p>登陆请求URL：</p>
+	<ul>
+		<li><span><b></b> － 基于以上参数action、username、password、code，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的账号aaaaaa，使用密码aaaaaa在游戏上登陆时，游戏方应该向平台发起的请求url是：</span></li>
+		<li><span><b>url</b> － http://passport.nova.com:92/api/?action=login&username=aaaaaa&password=0b4e7a0e5fe84ad35fb5f95b9ceeac79&code=nova</span></li>
+	</ul>
+
+	<p>调用结果是json字符串，如（{"status":true,"code":"10000","msg":["SUCCESSFUL"]}）。可通过json解码为一个数组，数组中各个字段的含义：</p>
+	<ul>
+		<li><span><b>status</b> － 返回状态：true为成功，表示平台通过了用户的登陆验证，false为失败，只有code为10000时，status为true，其他情况status均为false<</span></li>
+		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
+		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
+	</ul>
+
+	<p>返回值中各个状态码的含义</p>
+	<ul>
+		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
+		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
+		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
+		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
+		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
+		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
+		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
+		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
+		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
+		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
+		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
+		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
+		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
+		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
+	</ul>
+
+
+	<h3 id="d">注册接口（只对自主研发的儿童类网游有效）</h3>
+	<p>接口地址：</p>
+	<p class="subp"><b>http://passport.t.alyee.com/api</b>，平台为游戏提供的接口地址</p>
+	<p>调用方式：</p>
+	<p class="subp">服务端 <b>GET</b></p>
+
+	<p>需要用到的参数：</p>
+	<ul>
+	    <li><span><b>action</b> － 值为register，指向平台发起账号注册的请求事件</span></li>
+		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
+		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
+		<li><span><b>password</b> － 注册信息之密码</span></li>
+		<li><span><b>password2</b> － 注册信息之密码确认</span></li>
+		<li><span><b>captcha</b> － 注册信息之验证码</span></li>
+		<li><span><b>code</b> － 平台分配给游戏的唯一标示符</span></li>
+		<li><span><b>channel</b> － 当有多个运营平台时，用来标识运营平台的标识信息，可以统计运营平台上产生的注册用户数等相关信息</span></li>
+	</ul>
+	<p>注册请求URL：</p>
+	<ul>
+		<li><span><b></b> － 基于以上参数action、password、password2、captcha、code、channel，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的用户指定了密码aaaaaa申请称为注册用户，游戏方应该向平台发起的请求url是：</span></li>
+		<li><span><b>url</b> － http://passport.ci.com/api/?action=register&password=aaaaaa&password2=aaaaaa&seccode=test&code=nova&channel=official</span></li>
+	</ul>
+
+	<p>调用结果是json字符串，如（{"status":false,"code":"10009","msg":["REGISTER_INFO_EMPTY"]}）。当status成功时，同时返回注册用户的相关信息，如：{"status":true,"code":"10000","msg":["SUCCESSFUL"],"userInfo":{"userid":"2656318","username":"2656318","avatar":"0","email":"","truename":"","gender":"2","telephone":"","address":"","qq":"","birthday":"0","postcode":"","mobile":"","idcard":"","regip":"127.0.0.1","regdate":"1380189944","loginnum":"0","lastloginip":"0","lastlogintime":"0","is_lock":"0"}}。可通过json解码为一个数组，数组中各个字段的含义：</p>
+	<ul>
+		<li><span><b>status</b> － 返回状态：true为成功，表示成功地注册了一个有效账号，false为失败，即注册失败；只有code为10000时，status为true，其他情况status均为false</span></li>
+		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
+		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
+		<li><span><b>userInfo</b> － 注册成功后，返回的新账号的相关信息</span></li>
+	</ul>
+
+	<p>返回值中各个状态码的含义</p>
+	<ul>
+		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
+		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
+		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
+		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
+		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
+		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
+		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
+		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
+		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
+		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
+		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
+		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
+		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
+		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
+	</ul>
+
+
+	<h3 id="e">支付接口</h3>
+	<p>支付接口通过平台和游戏端共享数据表的方式实现，当平台用户向游戏支付游戏币时，平台向游戏的指定数据表的指定字段里加入相关的游戏币数量。</p>
+	<ul>
+		<li><span><b>相关的数据表和字段</b> － 初步定为nova库的t_account数据表的money字段</span></li>
+		<li><span><b>平台币</b> － 用户在平台上的货币，1平台币=1元人民币</span></li>
+		<li><span><b>平台币与诺瓦游戏币的兑换比率</b> － 这里假设1平台币=10个诺瓦游戏币，即兑换比率为10</span></li>
+		<li><span><b>支付过程</b> － 有平台账号aaaaaa，在平台上向诺瓦游戏发起支付100平台币的操作，通过平台的验证后，平台将会读取t_account数据表，查询表中是否有aaaaaa的记录，如果没有，则在表中增加一条记录，新纪录的accname值为aaaaaa、money的值为1000。如果t_account已经有了aaaaaa的记录，则只更新该记录的money字段信息，即为money字段加上1000个诺瓦游戏币</span></li>
+	</ul>
+
+		
+	<div id="footer"> 最后修改时间：2013-09-26</div>
+</div>
+
+
+</body></html>
