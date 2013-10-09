@@ -23,4 +23,27 @@ define('EXT', '.php'); // The PHP file extension this global constant is depreca
 //define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/')); // Name of the "system folder"
 
 @date_default_timezone_set('Etc/GMT-8');
+
+if (DEFINED('XHPROF_OPEN') && XHPROF_OPEN == 'yes') {
+	$xhprofOn = false;
+	if (mt_rand(1, XHPROF_RAND) == 1) {
+		$xhprofOn = true;
+		xhprof_enable(XHPROF_FLAGS_MEMORY);
+    }
+}
+
 require_once BASEPATH.'core/CodeIgniter.php';
+
+if (DEFINED('XHPROF_OPEN') && XHPROF_OPEN == 'yes' && !empty($xhprofOn)) {
+	$xhprof_data = xhprof_disable();
+
+	include_once BASEPATH_EXT . 'xhprof_lib/utils/xhprof_lib.php';
+	include_once BASEPATH_EXT . 'xhprof_lib/utils/xhprof_runs.php';
+
+	// save raw data for this profiler run using default
+	// implementation of iXHProfRuns.
+	$xhprof_runs = new XHProfRuns_Default();
+
+	// save the run under a namespace "xhprof_foo"
+	$run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
+}
