@@ -25,6 +25,7 @@ wwwroot/static/common/ckeditor/config.js
 wwwroot/config.php
 wwwroot/ucserver/data/
 wwwroot/ucserver/gametest/interface/config.php
+wwwroot/ucserver/gametest/xhprof/config.php
 wwwroot/bbs/data/
 wwwroot/bbs/config/
 wwwroot/bbs/uc_server/data/
