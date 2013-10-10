@@ -45,5 +45,5 @@ if (DEFINED('XHPROF_OPEN') && XHPROF_OPEN == 'yes' && !empty($xhprofOn)) {
 	$xhprof_runs = new XHProfRuns_Default();
 
 	// save the run under a namespace "xhprof_foo"
-	$run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
+	$run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_" . APPCODE);
 }

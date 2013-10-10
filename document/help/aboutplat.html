@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>平台概述手册</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<style type="text/css">
+html, body { padding:0; margin:0; }
+body { font-size:14px; width:1000px; }
+body, h1, h2, h3 { font-family:"微软雅黑","Lucida Grande","Lucida Sans Unicode",Calibri,Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; }
+b { color:#0000cc; }
+
+#menu { background:#EAEEF3; width:200px; border-right:1px solid #C6C9CE; float:left; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; }
+#menu_title { padding:24px; margin:0; text-align:right; font-size:24px; color:#576780; }
+#menu ul, #menu li { list-style:none; margin:0; padding:0; }
+#menu li a { border:1px solid #EAEEF3; border-right:none; border-left:none; }
+#menu a { font-size:14px; display:block; padding:10px 24px; text-decoration:none; text-align:right; color:#426DC9; }
+#menu .current a, #menu li a:hover { background:#BBCEE9; color:#000; border-color:#8FAAD9; }
+
+#content { margin-left:220px; padding-bottom:24px; margin-right:24px; }
+#content h3 { font-size:24px; color:#576780; border-bottom:1px solid #eee; padding-bottom:8px; margin-top:24px; }
+#content ul, #content li { margin:0; padding:0; list-style:none; color:#ccc; }
+#content li span { color:#000; }
+#content li { line-height:24px; list-style-type:disc; margin-left:30px; }
+#content p { line-height:24px; }
+#content .subp { margin-left:30px; }
+
+#footer { text-align:center; font-size:12px; color:#888; border-top:solid 1px #eee; padding-top:10px; margin-top:24px; }
+</style>
+<script type="text/javascript">
+	var currentItem = 'i1';
+</script>
+</head>
+<body>
+<div id="menu">
+	<h3 id="menu_title">目录</h3>
+	<ul>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">平台开发背景和思路</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">平台的功能</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">平台支持的网页游戏类型</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">平台的技术实现及功能模块的划分</a></li>
+	</ul>
+</div>
+<div id="content">
+	<h3 id="a">平台开发背景</h3>
+	<p>公司希望开发一个类似淘米网（<a href="http://game.61.com/" target="_blank">淘米游戏</a>、<a href="http://web.2125.com/" target="_blank">淘米下辖的网游平台</a>)和<a href="http://www.100bt.com/" target="_blank">百田网</a>的网游平台。基于这么一个想法，于8月底展开了平台的开发工作。由于平台目前人员较少，平台没有相应的产品方案，前端的页面设计和页面制作工作也没有展开，也就是说平台技术相关工作不但跳过产品调研、可行性分析、需求分析等环节，而且是在没有前端页面设计的情况下展开的。这种情况下，技术这边的一个主导思路是：<b>山寨一个类淘米游戏的平台。</b></p>
+
+	<p>平台构建思路：</p>
+	<ul>
+	    <li><span>平台的重点是用户模块、充值支付模块、内容管理系统、游戏模块以及用户行为统计和分析</span></li>
+		<li><span>尽可能减少平台与游戏之间的耦合度，游戏和平台只通过接口进行有限的交互</span></li>
+		<li><span>平台只关注用户登陆游戏服务器和向游戏服务器支付游戏币的操作</span></li>
+		<li><span>平台不关心用户登陆游戏后的行为</span></li>
+	</ul>
+
+	<h3 id="b">平台的功能</h3>
+	<p>平台的功能：</p>
+	<ul>
+		<li><span>平台是作为一个可以运营多个网游的运营平台</span></li>
+		<li><span>平台具备用户功能模块，可实现用户的注册、登陆和用户管理功能</span></li>
+		<li><span>平台具备游戏管理的功能，可以方便快速地接入若干网游</span></li>
+		<li><span>平台具备CMS管理功能，可以基于栏目录入、管理、展示平台或网游相关的资讯</span></li>
+		<li><span>平台具备用户充值功能，可以通过第三方充值平台（如支付宝）等实现向指定用户充值的功能</span></li>
+		<li><span>平台具备用户向游戏支付游戏币的功能，如可以向诺瓦奇兵、神仙道等平台上运营的游戏支付游戏币</span></li>
+		<li><span>平台具备完整可靠的后台管理功能</span></li>
+	</ul>
+
+	<h3 id="c">平台支持的网页游戏类型</h3>
+	<p>1-自主研发的儿童类网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 平台能够支持多款自主研发的儿童类网页游戏<br>
+		<b>2</b> ： 能够针对网游提供验证用户登陆操作的接口<br>
+		<b>3</b> ： 能够针对网游提供注册新用户操作的接口<br>
+		<b>4</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>2-代理运营第三方的儿童类网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 平台能够支持多款第三方儿童类网页游戏<br>
+		<b>2</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>3-代理运营第三方普通网页游戏：</p>
+	<p class="subp">
+		<b>1</b> ： 支持多款第三方普通网页游戏，支持同一用户进入同一款网游的不同游戏服务器<br>
+		<b>2</b> ： 能够基于网游游戏方提供的接口，使平台用户直接通过接口登陆至指定的网游服务器<br>
+		<b>3</b> ： 能够基于网游游戏方提供的接口，检查某一平台用户在某一游戏的某一游戏服务器是否创建有游戏角色<br>
+		<b>4</b> ： 能够基于网游游戏方提供的接口，向指定游戏服务器（用户在该服务器上应该已经创建了游戏角色）支付游戏币<br>
+		<b>5</b> ： 能够为网游提供游戏官网
+	</p>
+	<p>备注-这里的儿童类网页游戏与普通网页游戏的区别：</p>
+	<p class="subp">
+		<b>儿童类网页游戏</b> ： 平台提供接口，网游主动调用平台提供的接口的网游，这里称为儿童类网页游戏<br>
+		<b>普通网页游戏</b> ： 游戏方提供接口，平台通过调用这些接口实现游戏的登陆和支付游戏币等操作，这类游戏这里称为普通网游游戏
+	</p>
+
+	<h3 id="d">平台的技术实现及功能模块的划分</h3>
+	<p>平台技术上使用PHP来实现，用到了以下PHP开源项目：</p>
+	<p class="subp">
+		<b>1</b> ： CI框架，即CodeIgniter（version 2.1.4），平台主要功能都是基于CI框架开发的<br>
+		<b>2</b> ： 康盛的论坛产品DISCUZ（version X3.0 UTF-8），几乎所有的网游平台都有论坛，所以这里也部署了一个论坛，暂时不会开放论坛<br>
+		<b>3</b> ： 康盛的UCenter（version 1.6.0 UTF-8），实现单点登录（SSO），是DISCUZ的一个组成部分，这里主要是整合论坛用户和平台用户，也为平台今后的扩展做准备。<br>
+	</p>
+	<p>结合平台功能和技术实现，整个平台由五个主要的功能模块组成：</p>
+	<p class="subp">
+		<b>论坛</b> ： <a href="http://bbs.nova.com:90" target="_blank">论坛（DISCUZ) 192.168.0.116:90  bbs.nova.com</a>，使用开源的DISCUZ实现<br>
+		<b>用户中心</b> ：<a href="http://ucserver.nova.com:98" target="_blank">用户中心（UCENTER)  192.168.0.116:98  uscerver.nova.com</a>，使用UCenter实现，对用户透明，即用户不会也不需要访问到用户中心<br>
+		<b>用户和后台核心模块</b> ： 平台的核心模块，基于CI框架开发的一个应用系统，包括了平台用户和核心的后台管理功能， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。<a href="http://passport.nova.com:92/index.php/admin" target="_blank">后台核心及入口 192.168.0.116:92  passport.nova.com</a><br>
+		<b>网游模块</b> ： 基于CI框架开发的一个应用系统，包括了游戏相关的管理以及内容咨询管理， <a href="http://webgame.nova.com:99" target="_blank">网游平台 192.168.0.116:99  webgame.nova.com</a>；<a href="http://webgame.nova.com:99/index.php/index/index1" target="_blank">网游平台2 192.168.0.116:99  webgame.nova.com</a>。后台管理在“网页游戏”标签下对应的管理操作<br>
+		<b>充值和支付模块</b> ： 基于CI框架开发的一个应用系统，包括了充值和支付的实现和管理，充值订单和支付订单等功能的管理， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。后台管理在后台的“支付模块”标签下对应的管理操作<br>
+	</p>
+
+	<p>网游模块下，根据内容管理系统（CMS）可以为每个游戏生成一个或多个官网</p>
+	<ul>
+		<li><span><a href="http://nova.nova.com:91" target="_blank">诺瓦官网 192.168.0.116:91  nova.nova.com</a></span></li>
+		<li><span><a href="http://nova.nova.com:91/index.php/webgame/nova/index1" target="_blank">诺瓦官网2 192.168.0.116:91  nova.nova.com</a></span></li>
+		<li><span><a href="http://nova.nova.com:91/index.php/webgame/nova/index2" target="_blank">诺瓦官网3 192.168.0.116:91  nova.nova.com</a></span></li>
+		<li><span><a href="http://seer.nova.com:94" target="_blank">赛尔号官网（测试）192.168.0.116:94  seer.nova.com</a></span></li>
+		<li><span><a href="http://seer.nova.com:94/index.php/webgame/seer/index1" target="_blank">赛尔号官网（测试）192.168.0.116:94  seer.nova.com</a></span></li>
+		<li><span><a href="http://shenxd.nova.com:95" target="_blank">神仙道官网（测试）192.168.0.116:95  shenxd.nova.com</a></span></li>
+	</ul>
+	<div id="footer"> 最后修改时间：2013-09-26</div>
+</div>
+</body></html>

@@ -10,8 +10,8 @@ class WebgameCommon
 	 */
 	public function __construct($params)
 	{
-		$this->userid = $params['userInfo']['userid'];
-		$this->username = $params['userInfo']['username'];
+		$this->userid = $params['getUserInfo']['userid'];
+		$this->username = $params['getUserInfo']['username'];
 		if (empty($this->username)) {
 			return false;
 		}
