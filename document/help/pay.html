@@ -33,166 +33,110 @@ b { color:#0000cc; }
 <div id="menu">
 	<h3 id="menu_title">目录</h3>
 	<ul>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">支付相关的概念</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">支付模块-支付管理-支付配置</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">支付模块-支付管理-管理包月</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">支付模块-支付管理-账号充值统计</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">支付模块-支付管理-支付配置</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#e">支付模块-支付报表-充值记录</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#e">支付模块-支付报表-支付记录</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#e">支付模块-支付报表-异常充值</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">充值支付相关的概念</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">支付管理-支付配置</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">支付管理-管理包月</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">支付管理-管理支付方式</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">支付管理-账号充值统计</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#f">支付报表-充值记录</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#g">支付报表-支付记录</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#h">支付报表-异常充值</a></li>
 	</ul>
 </div>
 <div id="content">
-	<h3 id="a">平台概述</h3>
-	<p>平台构建思路：</p>
-	<ul>
-		<li><span>尽可能减少平台与游戏之间的耦合度，游戏和平台只通过接口进行有限的交互</span></li>
-		<li><span>平台只关注用户登陆游戏服务器和向游戏服务器支付游戏币的操作</span></li>
-		<li><span>平台不关心用户登陆游戏后的行为</span></li>
-	</ul>
-	<p>平台的基本功能模块：</p>
-	<ul>
-		<li><span>平台是作为一个可以运营多个网游的运营平台</span></li>
-		<li><span>平台具备用户功能模块，可实现用户的注册、登陆和用户管理功能</span></li>
-		<li><span>平台具备游戏管理的功能，可以方便快速地接入若干网游</span></li>
-		<li><span>平台具备CMS管理功能，可以基于栏目录入、管理、展示平台或网游相关的资讯</span></li>
-		<li><span>平台具备用户充值功能，可以通过第三方充值平台（如支付宝）等实现向指定用户充值的功能</span></li>
-		<li><span>平台具备用户向游戏支付游戏币的功能，如可以向诺瓦奇兵、神仙道等平台上运营的游戏支付游戏币</span></li>
-		<li><span>平台具备完整可靠的后台管理功能</span></li>
-	</ul>
-
-	<h3 id="b">平台支持的网页游戏类型</h3>
-	<p>1-自主研发的儿童类网页游戏：</p>
+	<h3 id="a">充值支付相关的概念</h3>
+	<p>充值和支付是平台的一个重要组成部分，基本功能是：允许用户在平台上通过第三方充值平台（如支付宝等）向平台充入人民币（在平台上对应游戏币，这里暂时定义为知金币，知金币等价于人民币，1块知金币=1元人民币），允许用户以向游戏支付知金币的方式在平台上进行消费。</p>
+	
+	<p>在平台中，充值和支付是两个完全不同的概念：</p>
 	<p class="subp">
-		<b>1</b> ： 平台能够支持多款自主研发的儿童类网页游戏<br>
-		<b>2</b> ： 能够针对网游提供验证用户登陆操作的接口<br>
-		<b>3</b> ： 能够针对网游提供注册新用户操作的接口<br>
-		<b>4</b> ： 能够为网游提供游戏官网
-	</p>
-	<p>2-代理运营第三方的儿童类网页游戏：</p>
-	<p class="subp">
-		<b>1</b> ： 平台能够支持多款第三方儿童类网页游戏<br>
-		<b>2</b> ： 能够为网游提供游戏官网
-	</p>
-	<p>3-代理运营第三方普通网页游戏：</p>
-	<p class="subp">
-		<b>1</b> ： 支持多款第三方普通网页游戏，支持同一用户进入同一款网游的不同游戏服务器<br>
-		<b>2</b> ： 能够基于网游游戏方提供的接口，使平台用户直接通过接口登陆至指定的网游服务器<br>
-		<b>3</b> ： 能够基于网游游戏方提供的接口，检查某一平台用户在某一游戏的某一游戏服务器是否创建有游戏角色<br>
-		<b>4</b> ： 能够基于网游游戏方提供的接口，向指定游戏服务器（用户在该服务器上应该已经创建了游戏角色）支付游戏币<br>
-		<b>5</b> ： 能够为网游提供游戏官网
-	</p>
-	<p>备注-这里的儿童类网页游戏与普通网页游戏的区别：</p>
-	<p class="subp">
-		<b>儿童类网页游戏</b> ： 平台提供接口，网游主动调用平台提供的接口的网游，这里称为儿童类网页游戏<br>
-		<b>普通网页游戏</b> ： 游戏方提供接口，平台通过调用这些接口实现游戏的登陆和支付游戏币等操作，这类游戏这里称为普通网游游戏
+		<b>充值</b> ： 充值是一个平台内知金币增加的行为。可以是通过第三方充值平台（如支付宝）直接向平台充值实现平台知金币的增加；也可以是后台管理员在后台直接给用户充入知金币；或者是通过活动，如充值100元，赠送50元的方式。<br>
+		<b>支付</b> ： 支付操作则是知金币消费掉的一个过程，只有通过向游戏支付知金币这一种方式来消费知金币，如，向游戏诺瓦奇兵支付100块知金币，则意味着平台上的知金币总数减少了100块。<br>
+		<b>知金币充值</b> ： 通过第三方充值平台，向平台充入知金币。<br>
+		<b>游戏包月</b> ： 山寨的淘米网上的一个功能(参考：<a href="http://pay.61.com/service" target="_blank">淘米游戏包月</a>)，是一个消费知金币的过程，暂时不会使用。<br>
+		<b>知金币兑换</b> ： 直接向游戏支付知金币，也是一个消费知金币的过程。<br>
+		<b>费率</b> ： 有些第三方充值平台在完成一笔充值交易后，会抽取一定百分比的金额作为中介费，平台将中介费记到用户身上。如：假定支付宝的费率是30%，用户aaaaaa使用支付宝向平台充入了100元（本来应该得到100块知金币），这时支付宝会抽取30元作为中介费，此时用户从平台得到70块知金币。<br>
 	</p>
 
-	<h3 id="c">登陆接口（只对自主研发的儿童类网游有效）</h3>
-	<p>接口地址：</p>
-	<p class="subp"><b>http://passport.t.alyee.com/api</b>，平台为游戏提供的接口地址</p>
-	<p>调用方式：</p>
-	<p class="subp">服务端 <b>GET</b></p>
+	<h3 id="b">支付管理-支付配置</h3>
+	<p>充值和支付模块的全局配置信息</p>
+	<p class="subp">
+		<b>是否开启支付模块</b> ： 是否开启充值支付模块，值为yes时开启，否则不开启<br>
+		<b>跳转地址</b> ： 设置关闭充值支付模块时的跳转地址，为空时，跳转至游戏首页<br>
+		<b>是否开启包月服务</b> ： 是否开启购买包月服务功能，值为yes时开启，否则不开启<br>
+		<b>是否开启游戏支付</b> ： 是否开启向游戏直接充值支付功能，值为yes时开启，否则不开启
+	</p>
 
-	<p>需要用到的参数：</p>
+	<h3 id="c">支付管理-管理包月</h3>
+	<p>初步山寨的61淘米网上的游戏包月功能，实现在后台管理游戏包月信息，可以增删改游戏包月信息。这个功能仅仅初步实现，如果启用的话，应该要做相当大的调整，暂时保留以备后用。</p>
+	
+	<h3 id="d">支付管理-管理充值方式</h3>
+	<p>管理第三方充值平台信息，需要注意的有：</p>
 	<ul>
-	    <li><span><b>action</b> － 值为login，指向平台发起账号登陆的请求事件</span></li>
-		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
-		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
-		<li><span><b>code</b> － 平台分配给游戏的唯一标示符，指定账号要进入什么游戏</span></li>
+	    <li><span><b>增加充值方式</b> － 增加支付方式需要程序员配合实现，因为要为新的充值方式开发接口文件。</span></li>
+		<li><span><b>充值方式代码</b> － 每个充值方式对应一个唯一的代码，每个代码对应一个接口文件，已经设定，不能修改，如支付宝的代码为alipay，意味着有一个alipay.php接口文件来实现平台与支付宝平台的交互。</span></li>
+		<li><span><b>费率</b> － 充值方式抽取的中介费比率，如 0.4，意味着一笔100元的交易，第三方平台要抽取40元中介费</span></li>
+		<li><span><b>充值方式状态</b> － 前端用户只能从状态为“开启”的充值方式中选择要使用的充值方式</span></li>
 	</ul>
-	<p>登陆请求URL：</p>
-	<ul>
-		<li><span><b></b> － 基于以上参数action、username、password、code，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的账号aaaaaa，使用密码aaaaaa在游戏上登陆时，游戏方应该向平台发起的请求url是：</span></li>
-		<li><span><b>url</b> － http://passport.nova.com:92/api/?action=login&username=aaaaaa&password=0b4e7a0e5fe84ad35fb5f95b9ceeac79&code=nova</span></li>
-	</ul>
-
-	<p>调用结果是json字符串，如（{"status":true,"code":"10000","msg":["SUCCESSFUL"]}）。可通过json解码为一个数组，数组中各个字段的含义：</p>
-	<ul>
-		<li><span><b>status</b> － 返回状态：true为成功，表示平台通过了用户的登陆验证，false为失败，只有code为10000时，status为true，其他情况status均为false<</span></li>
-		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
-		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
-	</ul>
-
-	<p>返回值中各个状态码的含义</p>
-	<ul>
-		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
-		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
-		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
-		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
-		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
-		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
-		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
-		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
-		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
-		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
-		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
-		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
-		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
-		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
-	</ul>
-
-
-	<h3 id="d">注册接口（只对自主研发的儿童类网游有效）</h3>
-	<p>接口地址：</p>
-	<p class="subp"><b>http://passport.t.alyee.com/api</b>，平台为游戏提供的接口地址</p>
-	<p>调用方式：</p>
-	<p class="subp">服务端 <b>GET</b></p>
-
-	<p>需要用到的参数：</p>
-	<ul>
-	    <li><span><b>action</b> － 值为register，指向平台发起账号注册的请求事件</span></li>
-		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
-		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
-		<li><span><b>password</b> － 注册信息之密码</span></li>
-		<li><span><b>password2</b> － 注册信息之密码确认</span></li>
-		<li><span><b>captcha</b> － 注册信息之验证码</span></li>
-		<li><span><b>code</b> － 平台分配给游戏的唯一标示符</span></li>
-		<li><span><b>channel</b> － 当有多个运营平台时，用来标识运营平台的标识信息，可以统计运营平台上产生的注册用户数等相关信息</span></li>
-	</ul>
-	<p>注册请求URL：</p>
-	<ul>
-		<li><span><b></b> － 基于以上参数action、password、password2、captcha、code、channel，使用GET方式向平台发起登陆请求，如诺瓦游戏（code指定为nova）的用户指定了密码aaaaaa申请称为注册用户，游戏方应该向平台发起的请求url是：</span></li>
-		<li><span><b>url</b> － http://passport.ci.com/api/?action=register&password=aaaaaa&password2=aaaaaa&seccode=test&code=nova&channel=official</span></li>
-	</ul>
-
-	<p>调用结果是json字符串，如（{"status":false,"code":"10009","msg":["REGISTER_INFO_EMPTY"]}）。当status成功时，同时返回注册用户的相关信息，如：{"status":true,"code":"10000","msg":["SUCCESSFUL"],"userInfo":{"userid":"2656318","username":"2656318","avatar":"0","email":"","truename":"","gender":"2","telephone":"","address":"","qq":"","birthday":"0","postcode":"","mobile":"","idcard":"","regip":"127.0.0.1","regdate":"1380189944","loginnum":"0","lastloginip":"0","lastlogintime":"0","is_lock":"0"}}。可通过json解码为一个数组，数组中各个字段的含义：</p>
-	<ul>
-		<li><span><b>status</b> － 返回状态：true为成功，表示成功地注册了一个有效账号，false为失败，即注册失败；只有code为10000时，status为true，其他情况status均为false</span></li>
-		<li><span><b>code</b> － 返回的状态码，不同的码值对应不同的意义，每个code对应一个msg</span></li>
-		<li><span><b>msg</b> － 较为直观的状态字符串信息，每个msg对应一个code</span></li>
-		<li><span><b>userInfo</b> － 注册成功后，返回的新账号的相关信息</span></li>
-	</ul>
-
-	<p>返回值中各个状态码的含义</p>
-	<ul>
-		<li><span><b>10000--SUCCESSFUL</b> － 平台通过了请求</span></li>
-		<li><span><b>10001--PARAMS_WRONG</b> － 请求参数有误</span></li>
-		<li><span><b>10002--VERIFICATION_WRONG</b> － 未通过验证</span></li>
-		<li><span><b>10003--LOGIN_INFO_EMPTY</b> － 登录信息为空（账号和密码不能为空）</span></li>
-		<li><span><b>10004--PASSWD_WRONG_TIMES_OVER</b> － 密码错误次数太多，账号被锁定一个小时</span></li>
-		<li><span><b>10005--USERNANE_NOT_EXIST</b> － 账号不存在</span></li>
-		<li><span><b>10006--PASSWD_WRONG</b> － 密码错误</span></li>
-		<li><span><b>10007--EXTRA_WRONG</b> － 额外验证失败（如设置了回答登陆问题，但回答错误）</span></li>
-		<li><span><b>10008--DATABASE_ERROR</b> － 数据库错误</span></li>
-		<li><span><b>10009--REGISTER_INFO_EMPTY</b> － 注册信息为空（注册密码、密码确认、验证码不能为空）</span></li>
-		<li><span><b>10010--REGISTER_PASSWORD_NOEQUAL</b> － 两次输入的密码不一致</span></li>
-		<li><span><b>10011--CAPTCHA_WRONG</b> － 验证码错误</span></li>
-		<li><span><b>10012--EMAIL_WRONG</b> － 邮箱错误（邮箱已存在、邮箱格式错误）</span></li>
-		<li><span><b>11000--EXCEPTION</b> － 未知错误</span></li>
-	</ul>
-
-
-	<h3 id="e">支付接口</h3>
-	<p>支付接口通过平台和游戏端共享数据表的方式实现，当平台用户向游戏支付游戏币时，平台向游戏的指定数据表的指定字段里加入相关的游戏币数量。</p>
-	<ul>
-		<li><span><b>相关的数据表和字段</b> － 初步定为nova库的t_account数据表的money字段</span></li>
-		<li><span><b>平台币</b> － 用户在平台上的货币，1平台币=1元人民币</span></li>
-		<li><span><b>平台币与诺瓦游戏币的兑换比率</b> － 这里假设1平台币=10个诺瓦游戏币，即兑换比率为10</span></li>
-		<li><span><b>支付过程</b> － 有平台账号aaaaaa，在平台上向诺瓦游戏发起支付100平台币的操作，通过平台的验证后，平台将会读取t_account数据表，查询表中是否有aaaaaa的记录，如果没有，则在表中增加一条记录，新纪录的accname值为aaaaaa、money的值为1000。如果t_account已经有了aaaaaa的记录，则只更新该记录的money字段信息，即为money字段加上1000个诺瓦游戏币</span></li>
-	</ul>
-
+	
+	<h3 id="e">支付管理-账号充值统计</h3>
+	<p>pay应用为平台上每个发起过充值或支付操作的用户维护一条记录，用来记录该用户充值和支付信息，如下图所示：</p>
+	<p><img src="images/pay_user.jpg" /></p>
+	<p>表中每一列的含义分别是：</p>
+	<p class="subp">
+		<b>用户名（用户ID）</b> ： 发起充值或支付操作的用户，每个用户对应一条记录<br>
+		<b>余额</b> ： 用户当前可用的知金币数量<br>
+		<b>充值金额和充值次数</b> ： 用户意向充值的总金额数和意向充值总次数，如，用户aaaaaa在平台上发起一个充值1000元的请求，平台会把1000元累计到用户“充值金额”，同时充值次数加1，然后引导用户进入第三方充值平台。<br>
+		<b>有效充值金额和有效充值次数</b> ： 用户有效充值金额的总金额数和有效充值的总次数。有效指的是我们的银行账号在第三方充值平台上真实接收到了用户充入的金额。如，用户aaaaaa在平台上发起一个充值1000元的请求，平台会把1000元累计到用户“充值金额”，同时充值次数加1，然后引导用户进入第三方充值平台。如果第三方平台返回信息说用户成功充值了100元，平台会为用户的有效充值金额增加100元（假设没有费率），同时用户余额增加100，有效充值次数加1<br>
+		<b>最后充值时间</b> ： 最后一次充值的时间<br>
+		<b>支付金额和支付次数</b> ： 用户向游戏支付知金币的总数量，用户向游戏支付知金币的总次数<br>
+		<b>最后支付时间</b> ： 最后一次支付知金币的时间<br>
+		<b>异常金额</b> ： 每个用户应该维护这样一个等量关系：<b>有效充值金额 - （ 余额 + 支付金额） = 0 </b> 等结果不为零时，意味着这个用户的充值或支付发生了异常，应该立刻找程序排查问题。<br>
+	</p>
+		
+	<h3 id="f">支付报表-充值记录</h3>
+	<p>pay应用为平台上每个充值操作维护一条充值订单信息，如下图所示：</p>
+	<p><img src="images/pay_account.jpg" /></p>
+	<p>表中每一列的含义分别是：</p>
+	<p class="subp">
+		<b>订单ID</b> ： MySQL为订单生成的唯一序列号<br>
+		<b>订单号</b> ： 用来唯一标识一条订单的序列号<br>
+		<b>充值方式代码</b> ： 这条订单用户选用的第三方充值平台名称<br>
+		<b>游戏代码</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏时，这里记录充值时指定的游戏代码（这里显示游戏名称）<br>
+		<b>服务器ID</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏的某一游戏服务器时，这里记录充值时指定的服务器ID（这里显示服务器名称）<br>
+		<b>包月服务ID</b> ： 充值操作时，如果指定了购买某一游戏包月，这里记录充值时指定的包月服务ID（这里显示包月的名称）<br>
+		<b>充值用户</b> ： 执行充值操作时的登陆用户名，仅仅记录当时的登陆用户，如图中ID为4的记录意味着，用户aaaaaa（6个a）登陆到了平台，他执行了一个向用aaaaaaa（7个a）充值333元的操作，成功充值后，用户aaaaaaa（7个a）得到了233.1个知金币（扣除费率后）<br>
+		<b>目标用户名</b> ： 本次充值金额要加入到哪个用户的账号余额中<br>
+		<b>手机号</b> ： 暂时没有使用，保留备用<br>
+		<b>充值金额</b> ： 用户执行充值操作时，意向充值金额<br />
+		<b>充值费率</b> ： 充值时，第三方充值平台的费率 <br />
+		<b>有效充值金额</b> ： 第三方平台认定充值的金额数（扣除费率后的值） <br />
+		<b>充值时间</b> ： 充值操作发起的时间 <br />
+		<b>手工充值管理员</b> ： 保留备用 <br />
+		<b>充值状态</b> ： 只用两种：未充值和成功充值，未充值指的是仅在平台上发起了充值操作请求，尚未经第三方充值平台通过；成功充值指的是经过第三方充值平台认定充值有效后的充值操作<br />
+		<b>管理操作</b> ： 保留备用 <br />
+	</p>
+		
+	<h3 id="f">支付报表-异常充值<</h3>
+	<p>当平台接收到第三方充值平台返回的充值操作结果的请求时，如果经验证该请求有异常时，会记录一条异常充值记录，异常充值记录的列跟充值记录相同，只有充值状态的值有所不同，异常充值的状态有三种：</p>
+	<p class="subp">
+		<b>订单ID</b> ： MySQL为订单生成的唯一序列号<br>
+		<b>订单号</b> ： 用来唯一标识一条订单的序列号<br>
+		<b>充值方式代码</b> ： 这条订单用户选用的第三方充值平台名称<br>
+		<b>游戏代码</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏时，这里记录充值时指定的游戏代码（这里显示游戏名称）<br>
+		<b>服务器ID</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏的某一游戏服务器时，这里记录充值时指定的服务器ID（这里显示服务器名称）<br>
+		<b>包月服务ID</b> ： 充值操作时，如果指定了购买某一游戏包月，这里记录充值时指定的包月服务ID（这里显示包月的名称）<br>
+		<b>充值用户</b> ： 执行充值操作时的登陆用户名，仅仅记录当时的登陆用户，如图中ID为4的记录意味着，用户aaaaaa（6个a）登陆到了平台，他执行了一个向用aaaaaaa（7个a）充值333元的操作，成功充值后，用户aaaaaaa（7个a）得到了233.1个知金币（扣除费率后）<br>
+		<b>目标用户名</b> ： 本次充值金额要加入到哪个用户的账号余额中<br>
+		<b>手机号</b> ： 暂时没有使用，保留备用<br>
+		<b>充值金额</b> ： 用户执行充值操作时，意向充值金额<br />
+		<b>充值费率</b> ： 充值时，第三方充值平台的费率 <br />
+		<b>有效充值金额</b> ： 第三方平台认定充值的金额数（扣除费率后的值） <br />
+		<b>充值时间</b> ： 充值操作发起的时间 <br />
+		<b>手工充值管理员</b> ： 保留备用 <br />
+		<b>充值状态</b> ： 只用两种：未充值和成功充值，未充值指的是仅在平台上发起了充值操作请求，尚未经第三方充值平台通过；成功充值指的是经过第三方充值平台认定充值有效后的充值操作<br />
+		<b>管理操作</b> ： 保留备用 <br />
+	</p>
+				
 		
 	<div id="footer"> 最后修改时间：2013-09-26</div>
 </div>

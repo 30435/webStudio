@@ -72,7 +72,7 @@ class AdminController extends Custom_Controller
 
 		$this->_loadModel('passport', 'admin/managerModel');
 		$userInfo = $this->managerModel->getInfo(array('username' => $username));
-		if (empty($userInfo) || $userInfo['id'] != $userid || $userInfo['username'] != $username) {
+		if (empty($userInfo) || empty($userInfo['islock']) || $userInfo['id'] != $userid || $userInfo['username'] != $username) {
 			return false;
 		}
 
@@ -83,7 +83,7 @@ class AdminController extends Custom_Controller
 
 		$this->_loadModel('passport', 'admin/roleModel');
 		$this->roleInfo = $this->roleModel->getInfo(array('id' => $userInfo['roleid']));
-		if (empty($this->roleInfo)) {
+		if (empty($this->roleInfo) || empty($this->roleInfo['status'])) {
 			return false;
 		}
 		

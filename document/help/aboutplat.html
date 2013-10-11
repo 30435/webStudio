@@ -41,11 +41,11 @@ b { color:#0000cc; }
 </div>
 <div id="content">
 	<h3 id="a">平台开发背景</h3>
-	<p>公司希望开发一个类似淘米网（<a href="http://game.61.com/" target="_blank">淘米游戏</a>、<a href="http://web.2125.com/" target="_blank">淘米下辖的网游平台</a>)和<a href="http://www.100bt.com/" target="_blank">百田网</a>的网游平台。基于这么一个想法，于8月底展开了平台的开发工作。由于平台目前人员较少，平台没有相应的产品方案，前端的页面设计和页面制作工作也没有展开，也就是说平台技术相关工作不但跳过产品调研、可行性分析、需求分析等环节，而且是在没有前端页面设计的情况下展开的。这种情况下，技术这边的一个主导思路是：<b>山寨一个类淘米游戏的平台。</b></p>
+	<p>公司希望开发一个类似淘米网（<a href="http://game.61.com/" target="_blank">淘米游戏</a>、<a href="http://web.2125.com/" target="_blank">淘米下辖的网游平台</a>)和<a href="http://www.100bt.com/" target="_blank">百田网</a>的网游平台。基于这么一个想法，于8月底展开了平台的开发工作。由于平台目前人员较少，平台没有相应的产品方案，前端的页面设计和页面制作工作也没有展开，也就是说平台技术相关工作不但跳过产品调研、可行性分析、需求分析等环节，而且是在没有前端页面设计的情况下展开的。这种情况下，技术这边的一个主导思路是：<b>山寨一个类淘米游戏的平台。</b>目前平台的前端页面都是从淘米网上抓取到的。当前公司的前端人员正在设计和制作我们公司自己的页面。只是目前尚未完成。</p>
 
 	<p>平台构建思路：</p>
 	<ul>
-	    <li><span>平台的重点是用户模块、充值支付模块、内容管理系统、游戏模块以及用户行为统计和分析</span></li>
+	    <li><span>平台的重点是后台管理功能、用户模块、充值支付模块、内容管理系统、游戏模块以及用户行为统计和分析</span></li>
 		<li><span>尽可能减少平台与游戏之间的耦合度，游戏和平台只通过接口进行有限的交互</span></li>
 		<li><span>平台只关注用户登陆游戏服务器和向游戏服务器支付游戏币的操作</span></li>
 		<li><span>平台不关心用户登陆游戏后的行为</span></li>
@@ -101,9 +101,10 @@ b { color:#0000cc; }
 	<p class="subp">
 		<b>论坛</b> ： <a href="http://bbs.nova.com:90" target="_blank">论坛（DISCUZ) 192.168.0.116:90  bbs.nova.com</a>，使用开源的DISCUZ实现<br>
 		<b>用户中心</b> ：<a href="http://ucserver.nova.com:98" target="_blank">用户中心（UCENTER)  192.168.0.116:98  uscerver.nova.com</a>，使用UCenter实现，对用户透明，即用户不会也不需要访问到用户中心<br>
-		<b>用户和后台核心模块</b> ： 平台的核心模块，基于CI框架开发的一个应用系统，包括了平台用户和核心的后台管理功能， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。<a href="http://passport.nova.com:92/index.php/admin" target="_blank">后台核心及入口 192.168.0.116:92  passport.nova.com</a><br>
-		<b>网游模块</b> ： 基于CI框架开发的一个应用系统，包括了游戏相关的管理以及内容咨询管理， <a href="http://webgame.nova.com:99" target="_blank">网游平台 192.168.0.116:99  webgame.nova.com</a>；<a href="http://webgame.nova.com:99/index.php/index/index1" target="_blank">网游平台2 192.168.0.116:99  webgame.nova.com</a>。后台管理在“网页游戏”标签下对应的管理操作<br>
-		<b>充值和支付模块</b> ： 基于CI框架开发的一个应用系统，包括了充值和支付的实现和管理，充值订单和支付订单等功能的管理， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。后台管理在后台的“支付模块”标签下对应的管理操作<br>
+		<b>passport应用模块</b> ：用户和后台核心模块，平台的核心模块，基于CI框架开发的一个应用系统，包括了平台用户和核心的后台管理功能， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。<a href="http://passport.nova.com:92/index.php/admin" target="_blank">后台核心及入口 192.168.0.116:92  passport.nova.com</a><br>
+		<b>webgame应用模块</b> ：网游模块，基于CI框架开发的一个应用系统，包括了游戏相关的管理以及内容咨询管理， <a href="http://webgame.nova.com:99" target="_blank">网游平台 192.168.0.116:99  webgame.nova.com</a>；<a href="http://webgame.nova.com:99/index.php/index/index1" target="_blank">网游平台2 192.168.0.116:99  webgame.nova.com</a>。后台管理在“网页游戏”标签下对应的管理操作<br>
+		<b>pay应用模块</b> ：充值和支付模块，基于CI框架开发的一个应用系统，包括了充值和支付的实现和管理，充值订单和支付订单等功能的管理， <a href="http://passport.nova.com:92/index.php/uwebgame/" target="_blank">用户模块 192.168.0.116:92  passport.nova.com</a>。后台管理在后台的“支付模块”标签下对应的管理操作<br>
+		<li><span>这里passport、webgame、pay三个应用模块是基于CI框架实现的，它们是三个独立的CI应用，其中passport是平台的核心应用</span></li>
 	</p>
 
 	<p>网游模块下，根据内容管理系统（CMS）可以为每个游戏生成一个或多个官网</p>
