@@ -40,9 +40,9 @@ abstract class CmsContent extends Custom_AdminController
 	{
 		$categoryInfos = array();
 		foreach ($this->categoryInfos as $key => $category) {
-			if ($category['modelid'] != 1) {
+			//if ($category['modelid'] != 1) {
 				$categoryInfos[$key] = $category;
-			}
+			//}
 		}
 		$tree = new CustomTree($categoryInfos);
 		$strs = "<span class=''><a href='{$this->baseUrl}admin/content/listinfo/?catid=\$id' target='right'>\$catname</a></span>";

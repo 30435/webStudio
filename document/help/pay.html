@@ -39,8 +39,8 @@ b { color:#0000cc; }
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">支付管理-管理支付方式</a></li>
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">支付管理-账号充值统计</a></li>
 		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#f">支付报表-充值记录</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#g">支付报表-支付记录</a></li>
-		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#h">支付报表-异常充值</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#g">支付报表-异常充值</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#h">支付报表-支付记录</a></li>
 	</ul>
 </div>
 <div id="content">
@@ -116,29 +116,32 @@ b { color:#0000cc; }
 		<b>管理操作</b> ： 保留备用 <br />
 	</p>
 		
-	<h3 id="f">支付报表-异常充值<</h3>
+	<h3 id="g">支付报表-异常充值</h3>
 	<p>当平台接收到第三方充值平台返回的充值操作结果的请求时，如果经验证该请求有异常时，会记录一条异常充值记录，异常充值记录的列跟充值记录相同，只有充值状态的值有所不同，异常充值的状态有三种：</p>
 	<p class="subp">
-		<b>订单ID</b> ： MySQL为订单生成的唯一序列号<br>
-		<b>订单号</b> ： 用来唯一标识一条订单的序列号<br>
-		<b>充值方式代码</b> ： 这条订单用户选用的第三方充值平台名称<br>
-		<b>游戏代码</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏时，这里记录充值时指定的游戏代码（这里显示游戏名称）<br>
-		<b>服务器ID</b> ： 充值操作时，如果指定了同时将充入平台的知金币支付到某一游戏的某一游戏服务器时，这里记录充值时指定的服务器ID（这里显示服务器名称）<br>
-		<b>包月服务ID</b> ： 充值操作时，如果指定了购买某一游戏包月，这里记录充值时指定的包月服务ID（这里显示包月的名称）<br>
-		<b>充值用户</b> ： 执行充值操作时的登陆用户名，仅仅记录当时的登陆用户，如图中ID为4的记录意味着，用户aaaaaa（6个a）登陆到了平台，他执行了一个向用aaaaaaa（7个a）充值333元的操作，成功充值后，用户aaaaaaa（7个a）得到了233.1个知金币（扣除费率后）<br>
-		<b>目标用户名</b> ： 本次充值金额要加入到哪个用户的账号余额中<br>
-		<b>手机号</b> ： 暂时没有使用，保留备用<br>
-		<b>充值金额</b> ： 用户执行充值操作时，意向充值金额<br />
-		<b>充值费率</b> ： 充值时，第三方充值平台的费率 <br />
-		<b>有效充值金额</b> ： 第三方平台认定充值的金额数（扣除费率后的值） <br />
-		<b>充值时间</b> ： 充值操作发起的时间 <br />
-		<b>手工充值管理员</b> ： 保留备用 <br />
-		<b>充值状态</b> ： 只用两种：未充值和成功充值，未充值指的是仅在平台上发起了充值操作请求，尚未经第三方充值平台通过；成功充值指的是经过第三方充值平台认定充值有效后的充值操作<br />
-		<b>管理操作</b> ： 保留备用 <br />
+		<b>验证失败</b> ： 第三方充值平台发起的充值结果请求，经平台验证失败的充值记录<br>
+		<b>未知订单</b> ： 平台上不存在第三方充值平台发起的充值结果请求中指定的订单号<br>
+		<b>重复订单</b> ： 平台已处理过第三方充值平台发起的充值结果请求中指定的订单号<br>
 	</p>
 				
-		
-	<div id="footer"> 最后修改时间：2013-09-26</div>
+			
+	<h3 id="h">支付报表-支付记录</h3>
+	<p>pay应用为平台上每个支付操作维护一条支付订单信息，如下图所示：</p>
+	<p><img src="images/pay_pay.jpg" /></p>
+	<p>表中每一列的含义分别是：</p>
+	<p class="subp">
+		<b>支付ID</b> ： MySQL为支付订单生成的唯一序列号<br>
+		<b>订单号</b> ： 用来唯一标识一条支付订单的序列号<br>
+		<b>充值订单号</b> ： 针对那种充值和支付同时进行的情况下，充值订单的订单号。<br>
+		<b>游戏代码</b> ： 支付操作时指定的要支付到哪个游戏中，这里显示游戏名称<br>
+		<b>服务器ID</b> ： 支付操作时指定的要支付到哪个游戏指定服务器中，这里显示服务器名称<br>
+		<b>目标用户名</b> ： 指定哪个用户将在游戏里得到游戏币<br>
+		<b>支付用户名</b> ： 花费知金币的用户名，如用户aaaaaa为用户bbbbbb在诺瓦奇兵上支付了100块知金币，则支付记录的“目标用户名”是bbbbbb，“支付用户名”是aaaaaa<br>
+		<b>支付金额</b> ： 本次支付花费的知金币数量<br>
+		<b>支付时间</b> ： 支付操作发起的时间<br>
+	</p>
+
+	<div id="footer"> 最后修改时间：2013-10-12</div>
 </div>
 
 

@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户和插件模块手册</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<style type="text/css">
+html, body { padding:0; margin:0; }
+body { font-size:14px; width:1000px; }
+body, h1, h2, h3 { font-family:"微软雅黑","Lucida Grande","Lucida Sans Unicode",Calibri,Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; }
+b { color:#0000cc; }
+
+#menu { background:#EAEEF3; width:200px; border-right:1px solid #C6C9CE; float:left; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; }
+#menu_title { padding:24px; margin:0; text-align:right; font-size:24px; color:#576780; }
+#menu ul, #menu li { list-style:none; margin:0; padding:0; }
+#menu li a { border:1px solid #EAEEF3; border-right:none; border-left:none; }
+#menu a { font-size:14px; display:block; padding:10px 24px; text-decoration:none; text-align:right; color:#426DC9; }
+#menu .current a, #menu li a:hover { background:#BBCEE9; color:#000; border-color:#8FAAD9; }
+
+#content { margin-left:220px; padding-bottom:24px; margin-right:24px; }
+#content h3 { font-size:24px; color:#576780; border-bottom:1px solid #eee; padding-bottom:8px; margin-top:24px; }
+#content ul, #content li { margin:0; padding:0; list-style:none; color:#ccc; }
+#content li span { color:#000; }
+#content li { line-height:24px; list-style-type:disc; margin-left:30px; }
+#content p { line-height:24px; }
+#content .subp { margin-left:30px; }
+
+#footer { text-align:center; font-size:12px; color:#888; border-top:solid 1px #eee; padding-top:10px; margin-top:24px; }
+</style>
+<script type="text/javascript">
+	var currentItem = 'i1';
+</script>
+</head>
+<body>
+<div id="menu">
+	<h3 id="menu_title">目录</h3>
+	<ul>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" class="current" id="i1"><a href="#a">用户中心设置-基本设置</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i2"><a href="#b">用户管理-管理用户</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i3"><a href="#c">平台附件管理-管理附件</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i4"><a href="#d">广告管理-管理版位</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i5"><a href="#e">广告管理-管理广告</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i6"><a href="#f">友情链接-管理友链</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i7"><a href="#g">消息管理-管理类型</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#h">消息管理-管理消息</a></li>
+		<li onclick="document.getElementById(currentItem).className = ''; currentItem = this.id; this.className = 'current';" id="i8"><a href="#i">评论管理-管理评论</a></li>
+	</ul>
+</div>
+<div id="content">
+	<h3 id="a">用户中心设置-基本设置</h3>
+	<p>用户模块的全局配置信息</p>
+	<p class="subp">
+		<b>是否开启用户模块</b> ： 是否开启用户模块，值为yes时开启，否则不开启<br>
+		<b>跳转地址</b> ： 设置关闭用户模块时的跳转地址，为空时，跳转至游戏首页<br>
+		<b>是否开启用户注册</b> ： 是否开启用户注册，值为yes时开启，否则不开启<br>
+	</p>
+
+	<h3 id="b">用户管理-管理用户</h3>
+	<p>平台注册用户的列表</p>
+	
+	<h3 id="c">平台附件管理-管理附件</h3>
+	<p>通过平台上传的附件，如图片、flash或文件等资源的管理，功能尚待进一步完善</p>
+
+	<h3 id="d">广告管理-管理版位</h3>
+	<p>平台上广告位的管理</p>
+		
+	<h3 id="e">广告管理-管理广告</h3>
+	<p>平台上广告的管理，每个广告需要指定所属的广告位</p>
+
+	<h3 id="f">友情链接-管理友链</h3>
+	<p>平台上友情链接的管理</p>
+			
+	<h3 id="g">消息管理-管理类型</h3>
+	<p>尚未开发，保留备用</p>
+
+	<h3 id="g">消息管理-管理消息</h3>
+	<p>尚未开发，保留备用</p>
+
+	<h3 id="g">评论管理-管理评论</h3>
+	<p>尚未开发，保留备用</p>
+
+	<div id="footer"> 最后修改时间：2013-10-12</div>
+</div>
+
+
+</body></html>
