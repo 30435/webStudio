@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{background:#fff;}
+#wrap{width:977px;margin:0 auto;}
+.header{height:50px;background:url(../images/navbj.jpg) repeat-x;}
+.nav{width:977px;margin:0 auto;line-height:50px;}
+.nav_r a{width:50px;display:inline-block;text-align:center;}
+.logo_all{background:url(../images/sj_05.jpg) no-repeat right center;}
+
+.all{width:977px;margin:0 auto;}
+.ban{height:570px;border:2px solid #cf0b0b;margin:7px 0;}
+
+
+.nav_nuowa{width:977px;overfolw:hidden;}
+.nwbg{background:url(../images/nav.jpg) no-repeat;height:95px;}
+.ser_bar{float:left;padding:22px 0;width:314px;}
+.ser_bar .n_tag{background:none;border:none;color:#999;float:left;height:17px;line-height:17px;padding:16px 25px 0;width:190px;}
+.ser_bar .s_but{background:url(../images/but.jpg) no-repeat;border:none;cursor:pointer;float:right;height:35px;margin-top:7px;width:74px;}
+.nwbg .nav1{display:inline;float:left;height:32px;margin:34px 0 0 7px;width:367px;}
+.nwbg .nav1 a{background:url(../images/zi01.jpg) no-repeat;display:inline;float:left;height:32px;margin-right:3px;text-indent:-2000px;width:54px;}
+.nwbg.r_btn{float:left;width:252px;}
+.nwbg.r_btn.j1{background:url(../images/icon1.jpg) no-repeat;display:block;height:30px;margin:5px 0 0 67px;width:133px;}
+.nwbg.r_btn.sc{background:url(../images/icon1.jpg) no-repeat 0 -30px;display:block;height:30px;margin:5px 0 0 67px;width:133px;}
+
+
+
+.demon{background:#f2f0f0;border-left:1px solid #d4d4d4;border-right:1px solid #d4d4d4;color:#a11909;overflow:hidden;width:973px;}
+.demon dl{background:url(../images/rr.jpg) no-repeat;display:inline;float:left;height:50px;margin:4px 0 4px 8px;width:315px;}
+.demon dl dt{float:left;height:50px;width:63px;}
+.icon0 img{padding-top:5px;}
+.demon dl dt a{float:left;height:43px;margin:5px 0 0 15px;width:35px;}
+.demon dl dd{float:left;height:50px;width:245px;}
+.demon dl dd p{margin-top:15px;background:url(../images/sj.png) no-repeat left;padding-left:20px;}
+.btm{background:url(../images/yj.jpg) no-repeat;height:5px;overflow:hidden;width:977px;}
+
+
+
+.lt_nuowa{width:975px;height:634px;overflow:hidden;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;}
+.lt_nuowa_up{width:977px;height:5px;margin-top:15px;}
+
+.nuowa_new{margin-left:5px;}
+.lt_nuowa_l{width:299px;height:585px;margin-left:6px;border-left:1px solid #d7d7d7;border-right:1px solid #d7d7d7;text-align:center;padding:0 10px;}
+.hot_nuowa{width:320px;overflow:hidden;}
+.hot_nuowa li{width:117px;height:30px;border:1px solid #e5e5e5;text-align:left;padding-left:25px;line-height:30px;float:left;margin-bottom:10px;}
+.hot_nuowa li.se{margin-left:10px;}
+.hot_nuowa li a{font-weight:600;color:#9f0f0f;background:url(../images/hot.png) no-repeat 70px 7px;width:142px;display:inline-block;}
+
+.wen0{text-align:left;width:296px;border-bottom:1px dashed #d4d4d4;line-height:21px;padding:3px 0;}
+.wen0 span{font-weight:600;color:#9f0f0f;}
+.wen0 p a{color:#9f0f0f;}
+
+.new_nuowa {text-align:left;margin-top:10px;}
+.new_nuowa li{height:22px;line-height:20px;background:url(../images/sj0.png) no-repeat left center;padding-left:10px;}
+.new_nuowa li a{color:#9f0f0f;}
+.new_nuowa li span{float:right;width:39px;height:15px;border:1px solid #d1d1d1;background:#f3f1f1;text-align:center;line-height:14px;}
+.nuowa_xyj{margin-left:7px;}
+
+
+.lt_nuowa0_r_z_up{width:638px;border-bottom:1px dashed #c7c7c7;height:315px;}
+.bot{border-bottom:none;margin-top:10px;}
+.lt_nuowa0_r_z{text-align:center;color:#9f0f0f;line-height:21px;width:310px;height:306px;background:url(../images/pic_tit1.jpg) no-repeat;float:left;margin-right:9px;}
+.lt_nuowa0_r_z h2{font-weight:600;color:#ff6600;}
+.lt_nuowa0_r_z ul{width:280px;border-top:1px dashed #c7c7c7;margin-left:15px;margin-top:5px;padding:4px 0;}
+.lt_nuowa0_r_z ul li{width:270px;text-align:left;line-height:18px;background:url(../images/sj0.png) no-repeat center left;padding-left:10px;}
+.lt_nuowa0_r_z ul li a{color:#9f0f0f;}
+.lt_nuowa0_r_z ul li span{float:right;}
+
+.nuowa_bj{width:977px;height:228px;position:relative;margin-top:15px;background:url(../images/big_img.jpg) no-repeat;}
+.more{width:50px;height:21px;background:url(../images/more.png) no-repeat;position:absolute;left:900px;top:8px;text-align:center;}
+.more a{color:#9f0f0f;}
+.nuowa_bj ul{padding-top:47px;padding-left:10px;}
+.nuowa_bj ul li{width:223px;text-align:center;float:left;padding-left:13px;}
+.nuowa_bj ul li img{margin-bottom:10px;}
+
+.huang{margin-top:12px;}
+.footer p{width:860px;margin:0 auto;margin-top:10px;margin-bottom:35px;text-align:center;}
+

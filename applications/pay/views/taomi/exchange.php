@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . 'header'); ?>
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/jquery.artDialog.js"></script>
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/pay.js"></script>
 <div class="container cf">
@@ -37,4 +37,4 @@
 <script language="javascript">
 	setPayment(<?php echo $this->showPayment; ?>);
 </script>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . 'footer'); ?>

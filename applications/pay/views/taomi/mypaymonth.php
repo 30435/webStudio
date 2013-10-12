@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . 2013/10/12'header'); ?>
 <div class="container cf">
     <div class="main account_main">
 		<?php $this->load->view('mypay_left'); ?>
@@ -19,4 +19,4 @@
         </div>
     </div>
 </div>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . 'footer'); ?>

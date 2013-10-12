@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view($this->prefix . 'header'); ?>
 <div class="container cf">
          <div class="ui_step ui_step_on_1">
    
@@ -38,4 +38,4 @@
 	</div>
 </div>
 </div>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view($this->prefix . 'footer'); ?>

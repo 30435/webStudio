@@ -27,6 +27,8 @@ class Index extends Custom_Controller
 		if (!empty($this->loginedUserInfo)) {
 			$this->moneyInfo = $this->_getMoneyInfo($this->loginedUserInfo['username']);
 		}
+
+		$this->prefix = '';
 	}
 
 	/**
@@ -97,7 +99,7 @@ class Index extends Custom_Controller
 
 		$this->showPayment = json_encode($this->paymentInfos[$paymentCode]);
 
-		$this->load->view('index');
+		$this->load->view($this->prefix . 'index');
 	}
 
 	/**
@@ -106,7 +108,7 @@ class Index extends Custom_Controller
 	 */
 	public function exchange()
 	{
-		$this->load->view('exchange');
+		$this->load->view($this->prefix . 'exchange');
 	}
 
 	/**
@@ -115,7 +117,7 @@ class Index extends Custom_Controller
 	 */
 	public function paymonth()
 	{
-		$this->load->view('paymonth');
+		$this->load->view($this->prefix . 'paymonth');
 	}
 
 	/**
@@ -124,7 +126,7 @@ class Index extends Custom_Controller
 	 */
 	public function mypayinfo()
 	{
-		$this->load->view('mypayinfo');
+		$this->load->view($this->prefix . 'mypayinfo');
 	}
 
 	/**
@@ -150,7 +152,7 @@ class Index extends Custom_Controller
 		$this->pageStr = '<a>' . $result['num'] . '条</a>   <a>第<b>' . $currentPage . '</b>页/总' . ceil($result['num'] / $pageSize) . '页</a>    ';
 		$this->pageStr .= $this->pagination->create_links();
 
-		$this->load->view('mypay');
+		$this->load->view($this->prefix . 'mypay');
 	}
 
 	/**
@@ -176,7 +178,7 @@ class Index extends Custom_Controller
 		$this->pageStr = '<a>' . $result['num'] . '条</a>   <a>第<b>' . $currentPage . '</b>页/总' . ceil($result['num'] / $pageSize) . '页</a>    ';
 		$this->pageStr .= $this->pagination->create_links();
 
-		$this->load->view('myaccount');
+		$this->load->view($this->prefix . 'myaccount');
 	}
 
 	/**
@@ -185,7 +187,7 @@ class Index extends Custom_Controller
 	 */
 	public function mypaymonth()
 	{
-		$this->load->view('mypaymonth');
+		$this->load->view($this->prefix . 'mypaymonth');
 	}
 	
 	/**
