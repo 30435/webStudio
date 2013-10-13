@@ -1,8 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>首页</title>
+<?php echo $this->load->view('header_base'); ?>
 <link rel="stylesheet" type="text/css"  href="<?php echo $this->staticUrl; ?>cfront/css/style.css"/>
 <link rel="stylesheet" type="text/css"  href="<?php echo $this->staticUrl; ?>cfront/css/reset.css"/>
 </head>
@@ -187,12 +183,13 @@
              
               <!--------------------------游戏背景---------------------------------------->
               <div class="nuowa_bj">
-              	<p class="more"><a href="#">更多</a></p>
+              	<p class="more"><a href="<?php echo $this->categoryInfos[16]['url']; ?>">更多</a></p>
                 <ul>
-                	<li><img src="images/pic30.jpg" /><br />1024*768 | 1280*960  </li>
-                    <li><img src="images/pic30.jpg" /><br />1024*768 | 1280*960  </li>
-                    <li><img src="images/pic30.jpg" /><br />1024*768 | 1280*960  </li>
-                    <li><img src="images/pic30.jpg" /><br />1024*768 | 1280*960  </li>
+
+				<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 16), array(array('inputtime', 'desc'))); ?>
+				<?php $i = 1; foreach ($newInfos['infos'] as $newInfo) { ?>
+					<li><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" /></a><br /><a href="<?php echo $newInfo['title']; ?>" target="_blank"><?php echo $newInfo['title']; ?></a></li>
+				<?php if ($i == 5 || $i == 10) echo '<li class="line2"></li>'; $i++; } ?>
                 </ul>
               </div>
               
