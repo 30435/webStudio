@@ -64,6 +64,12 @@ class Member_webgame extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
+		foreach ($infos as $key => $info) {
+			$info['lasttime'] = date('Y-m-d H:i:s', $info['lasttime']);
+			$info['lasttime_login'] = date('Y-m-d H:i:s', $info['lasttime_login']);
+			$info['lasttime_pay'] = date('Y-m-d H:i:s', $info['lasttime_pay']);
+			$infos[$key] = $info;
+		}
 		return $infos;
 	}
 		
@@ -74,9 +80,9 @@ class Member_webgame extends Custom_AdminController
 	 */
 	protected function _order()
 	{
-		//$order = array(array('inputtime', 'desc'));
+		$order = array(array('lasttime', 'desc'));
 		
-		//return $order;
+		return $order;
 	}
 		
 	/**

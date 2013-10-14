@@ -168,6 +168,11 @@ abstract class ApiBase extends Custom_Controller
 		$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 		$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 
+		$params['webgameInfo']['code'] = $infos['code'];
+		$params['serverInfo']['id'] = 0;
+		$params['userInfo'] = $userInfo;
+		$this->_updateWebgameInfo($params);
+
 		$this->returnResult('10000');
 	}
 

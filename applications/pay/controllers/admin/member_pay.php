@@ -53,6 +53,11 @@ class Member_pay extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
+		foreach ($infos as $key => $info) {
+			$info['lasttime_account'] = date('Y-m-d H:i:s', $info['lasttime_account']);
+			$info['lasttime_pay'] = date('Y-m-d H:i:s', $info['lasttime_pay']);
+			$infos[$key] = $info;
+		}
 		return $infos;
 	}
 		
@@ -63,9 +68,9 @@ class Member_pay extends Custom_AdminController
 	 */
 	protected function _order()
 	{
-		//$order = array(array('inputtime', 'desc'));
+		$order = array(array('money', 'desc'));
 		
-		//return $order;
+		return $order;
 	}
 		
 	/**

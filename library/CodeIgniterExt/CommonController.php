@@ -621,6 +621,79 @@ class CommonController extends CI_Controller
 	}
 
 	/**
+	 * Write the user play game info
+	 *
+	 * @return void
+	 */
+	protected function _updateWebgameInfo($params, $isPay = false)
+	{
+		$this->_loadModel('webgame', 'member_webgameModel');
+		$where = array('username' => $params['userInfo']['username'], 'server_id' => $params['serverInfo']['id']);
+		$userInfo = $this->member_webgameModel->getInfo($where);
+
+		$this->_loadModel('webgame', 'recordModel');
+		$recordType = empty($isPay) ? '0' : '1';
+		$activeTime = $this->time - $params['userInfo']['regdate'];
+		$activeDay = ceil($activeTime / 86400);
+		$midTime1 = mktime(0, 0, 0, date('m', $params['userInfo']['regdate']), date('d', $params['userInfo']['regdate']), date('Y', $params['userInfo']['regdate']));
+		$midTime2 = mktime(0, 0, 0, date('m', $this->time), date('d', $this->time), date('Y', $this->time));
+		$activeNatTime = $midTime2 - $midTime1;
+		$activeNatDay = ceil($activeNatTime / 86400) + 1;
+
+		$activeDays = empty($isPay) ? array(3 => 'three', 7 => 'seven', 10 => 'ten') : array(7 => 'seven', 10 => 'ten');
+		$dataExt = array();
+		foreach ($activeDays as $activeDayKey => $activeDayValue) {
+			$memberField = $activeDayValue . '_mark';
+			$memberFieldValue = isset($userInfo[$memberField]) ? $userInfo[$memberField] : 0;
+			if (empty($memberFieldValue) && (($isPay && $activeNatDay >= $activeDayKey) || (!$isPay && $activeNatDay <= $activeDayKey))) {
+				$dataExt[$memberField ] = 1;
+			}
+		}
+
+		$data = array(
+			'webgame_code' => $params['webgameInfo']['code'],
+			'server_id' => isset($params['serverInfo']['id']) ? $params['serverInfo']['id'] : 0,
+			'userid' => $params['userInfo']['userid'],
+			'username' => $params['userInfo']['username'],
+			'inputtime' => $this->time,
+			'day' => date('Ymd', $this->time),
+			'active_time' => $activeTime,
+			'active_day' => $activeDay,
+			'active_nat_time' => $activeNatTime,
+			'active_nat_day' => $activeNatDay,
+			'type' => $recordType,
+		);
+		$data = array_merge($data, $dataExt);
+		$this->recordModel->addInfo($data);
+
+		if ($isPay) {
+			$data = array(
+				'pay_num' => isset($userInfo['pay_num']) ? $userInfo['pay_num'] + 1 : 1,
+				'pay_money' => isset($userInfo['pay_money']) ? $userInfo['pay_money'] + $params['money'] : $params['money'],
+				'lasttime_pay' => $this->time,
+				'lasttime' => $this->time,
+			);
+		} else {
+			$data = array(
+				'play_num' => isset($userInfo['play_num']) ? $userInfo['play_num'] + 1 : 1,
+				'lasttime_login' => $this->time,
+				'lasttime' => $this->time,
+			);
+		}
+		if (empty($userInfo)) {
+			$data['username'] = $params['userInfo']['username'];
+			$data['webgame_code'] = $params['webgameInfo']['code'];
+			$data['server_id'] = isset($params['serverInfo']['id']) ? $params['serverInfo']['id'] : 0;
+			$data['userid'] = $params['userInfo']['userid'];
+			$data['firsttime'] =$data['lasttime'] =  $this->time;
+			$this->member_webgameModel->addInfo($data);
+		} else {
+			$where = array('username' => $params['userInfo']['username'], 'server_id' => $params['serverInfo']['id']);
+			$this->member_webgameModel->editInfo($data, $where);
+		}
+	}
+
+	/**
 	 * Get the logined user money info
 	 *
 	 * @return false | array
