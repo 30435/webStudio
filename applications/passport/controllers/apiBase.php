@@ -37,7 +37,7 @@ abstract class ApiBase extends Custom_Controller
 	 */
 	public function register($infos)
 	{
-		var_dump($_COOKIE);
+		//var_dump($_COOKIE);
 		$password = $infos['password'];
 		$password2 = $infos['password2'];
 		$captcha = $infos['captcha'];

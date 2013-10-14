@@ -106,13 +106,11 @@ $(document).ready(function(){
 
 
 
-
 		<div id="registerWithUsername" style="display:none">
-		<div class="reg-row">
-            <label class="label">自定义帐号：</label>
-            <input type="text" name="username" id="username" class="user_input" />
-			<div class="txt_tips"><span id="usernameTip"></span></div>
-       </div>
+            <div class="reg_row">
+            	<label class="lable">自定义账号：</label><div class="reg_div">
+            <input id="username" type="text"  /><div class="txt_tips"><span id="usernameTip"></span></div>
+     </div>       </div>
 	   </div>
 
 		<div id="registerWithEmail" style="display: none">

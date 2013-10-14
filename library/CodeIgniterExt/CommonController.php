@@ -547,7 +547,7 @@ class CommonController extends CI_Controller
 		}
 	}
 	
-	public function cutstr($string, $length, $dot = ' ...') {
+	public function cutstr($string, $length, $dot = '') {
 		if(strlen($string) <= $length) {
 			return $string;
 		}

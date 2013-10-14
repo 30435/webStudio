@@ -25,9 +25,9 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
         	<ul class="top_links_list">
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<li><a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a>&nbsp;<span>|</span></li>
-				<li><a href="<?php echo $this->baseUrl . $this->prefix; ?>/logout/">安全退出</a>&nbsp;<span>|</span></li>
+				<li><a href="<?php echo $this->appInfos['passport']['url'] . $this->prefix; ?>/logout/">安全退出</a>&nbsp;<span>|</span></li>
 			<? } else { ?>
-				<li><a id="login" href="<?php echo $this->baseUrl . $this->prefix; ?>/login/">登录</a>&nbsp;<span>|</span></li>
+				<li><a id="login" href="<?php echo $this->appInfos['passport']['url'] . $this->prefix; ?>/login/">登录</a>&nbsp;<span>|</span></li>
 			<? } ?>
 				<li><a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>&nbsp;<span>|</span></li>
 				<li><a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a></li>
