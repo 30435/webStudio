@@ -67,7 +67,7 @@
 <body class="page-type-square">
 <div class="body-bg">
 	<div class="wrap">
-		<div class=" not-login no-level2" id="header">
+		<div class="not-login no-level2" id="header">
 			<div class="bd">
 				<h1 class="logo">
 					<a href="/"><img alt="" src="<?php echo $this->staticUrl; ?>bookbar/images/logo-new.jpg"><img width="19" height="16" src="<?php echo $this->staticUrl; ?>bookbar/images/ico-home.png?3" class="ico-home"></a>
