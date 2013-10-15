@@ -14,16 +14,12 @@
    <div class="zx_ban">
    	<div class="zx_ban_con">
     	<div class="zx_ban_con_r">
-        	<p class="zx_p0"><a href="#">查看更多>></a><span>知金动态</span></p>
+        	<p class="zx_p0"><a href="<?php echo $this->categoryInfos[7]['url']; ?>">查看更多>></a><span>知金动态</span></p>
             <ul>
-            	<li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
-                <li><a href="#">赛尔号8月23日盖亚超进化vs黑暗</a></li>
+			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 8); ?>
+			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
+				<li><a href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" ><?php echo $controller->cutstr($newInfo['title'], 30); ?></a></li>
+		    <?php } ?>
             </ul>
         </div>
     </div>

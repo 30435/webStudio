@@ -56,7 +56,7 @@ class CmsIndex extends Custom_Controller
 		$_GET['id'] = $id;
 		$this->_initModel($catid);
 		$this->currentInfo = $this->_getInfoById();
-		$this->load->view($this->templateShowPre . 'show');
+		$this->load->view($this->templateShowPre . 'show', $this->frontController);
 	}
 
 	/**
