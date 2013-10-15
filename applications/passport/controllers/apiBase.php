@@ -43,13 +43,13 @@ abstract class ApiBase extends Custom_Controller
 		$captcha = $infos['captcha'];
 		$email = $infos['email'];
 
-		if (empty($password) || empty($password2) || empty($captcha)) {
+		if (empty($password) || empty($captcha)) {
 			$this->returnResult('10009');
 		}
 
-		if ($password != $password2) {
+		/*if ($password != $password2) {
 			$this->returnResult('10010');
-		}
+		}*/
 
 		$this->load->library('session');
 		$currentCaptcha = $this->session->userdata('frontCaptcha');
@@ -76,6 +76,7 @@ abstract class ApiBase extends Custom_Controller
 			$userInfo['userid'] = $userInfo['username'];
 			$userInfo['password'] = $passwordInfos['password'];
 			$userInfo['encrypt'] = $passwordInfos['encrypt'];
+			$userInfo['email'] = $email;
 			$userInfo['regip'] = $this->input->ip_address();
 			$userInfo['regdate'] = $this->time;
 			$userInfo['ucserver_id'] = $userid;

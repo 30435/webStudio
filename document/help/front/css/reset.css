@@ -56,10 +56,7 @@ a {
 a:visited {
     text-decoration: none;
 }
-a:hover {
-    color: #BA2636;
-    text-decoration: none;
-}
+
 .fl{float:left;}
 .fr{float:right;}
 .clear{clear:both;}

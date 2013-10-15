@@ -20,6 +20,7 @@ class Member_pay extends Custom_AdminController
 	 */
 	public function listinfo()
 	{
+		$this->currentModel->currentDb->query("UPDATE `sp_member_pay` SET `unusual_money` = `valid_money` - `money` - `pay_money`");
         $this->_listinfo();
 	}
 

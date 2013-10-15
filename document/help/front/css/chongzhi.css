@@ -135,3 +135,165 @@ font-size: 14px;font-weight: 600;}
 line-height:39px;margin-left:90px;margin-top: 5px;text-align: center;text-decoration: none;width:113px;}
 .ljzc{color:#fff;}
 .reg_botton a:hover{color:#ff0;}
+
+
+
+/*********************************************父母须知的样式**************/
+.channel {
+    background: url("../images/channel_bg.png") repeat-x scroll 0 top transparent;
+    color: #666666;
+    height: 33px;
+	line-height:22px;
+}
+.channel em {
+    font-size: 14px;
+    margin: 0 8px;
+}
+.xz_wrap{width:964px;margin:0 auto;clear:both;}
+.banner{width:964px;height:123px;margin:0 auto;}
+.zx_main{width:964px;margin:0 auto;}
+.nr_con{width:892px;padding:25px 35px;border-left:1px solid #b91a09;border-right:1px solid #b91a09; }
+.nr_con_p{width:900px;height:55px;border-bottom:1px dotted #b91a09;text-align:center;}
+.nr_con_p h2{font-weight:600;color:#b91a09;font-size:14px;height:26px;}
+.nr_con p{font-size:14px;line-height:24px;color:#6a6b6c;margin:15px 0;}
+.nr_con_img{width:700px;height:400px;margin:0 auto;}
+.frm_jz{font-family:"微软雅黑";font-size:18px;color:#FF9900;}
+.frm_xy{height:100px;padding:7px 0;line-height:24px;text-indent:2em;}
+.gray6{color: #666666;line-height:30px;}
+.f14b {font-size: 14px;font-weight: bold;color:#ff9900;}
+.gray3 { color: #333333;}
+
+
+/*********************************************关于我们的样式**************/
+.gywm_main{width:964px;margin: 8px auto 50px;min-height: 450px;}
+.gywm_main .classify {background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #E2E2E2;width: 180px;}
+.gywm_main .classify ul {background: none repeat scroll 0 0 #F4F4F4;margin: 1px;padding: 10px 0;}
+
+.gywm_main .classify a{width:163px;height:25px;line-height:25px;display:block;font-size:14px;padding-left:15px;margin:1px 0;}
+.gywm_main .classify  a:hover{background:#ccc;color:#000;font-weight:bold;text-decoration:none;}
+.gywm_main .classify .on{background:#ccc;color:#000;font-weight:bold;text-decoration:none;}
+.gywm_main .cont {width:750px;}
+.gywm_main .cont p {margin:5px 0 5px 20px;font-size:14px;line-height:24px;}
+.gywm_main .cont .time{padding-left:10px;margin-top:20px;background:url(dot2.png) 0 9px no-repeat;}
+.gywm_main .cont .pic01{margin:20px 0 20px 20px;}
+
+.gywm_main .cont h3 {
+    background: url("../images/dot.png") no-repeat scroll 0 8px rgba(0, 0, 0, 0);
+    color: #3399FF;
+    padding-left: 20px;
+	font-weight:600;
+	height:24px;
+}
+.gywm_main .cont h4{font-weight:600;height:24px;padding-left: 20px;}
+.gywm_main .cont h3.mtop20{margin-top:20px;}
+
+
+/*********************************************充值中心的样式**************/
+
+.account_main {
+    background: none repeat scroll 0 0 #F4F4F4;
+    padding: 0 0 0 149px;
+}
+.my_main {
+    border: 1px solid #CFCFCF;
+    border-radius: 2px 2px 2px 2px;
+    min-height: 500px;
+    position: relative;
+	width:812px;margin:0 auto;
+}
+
+
+.account_main .main0_nav {
+    border-radius: 2px 0 0 2px;
+    border-right: medium none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 149px;
+}
+
+.account_main .main0_nav li {
+    border-bottom: 1px solid #CFCFCF;
+    border-top: 1px solid #FFFFFF;
+    display: block;
+    position: relative;
+}
+
+.account_main .main0_nav li.li_lv_1 {
+    height: auto !important;
+    min-height: 40px;
+}
+
+.account_main .main0_nav li.cur a, .account_main .main_nav li.cur_v a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../images/bg_account_nav.png") no-repeat scroll 0 0 #FFFFFF;
+    border-color: #999999 -moz-use-text-color #999999 #999999;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px medium 1px 1px;
+    color: #333333;
+    font-weight: bold;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 130px;
+}
+.account_main .main0_nav li:first-child a {
+    border-radius: 2px 0 0 0;
+}
+.account_main .main0_nav li a {
+    background: none repeat scroll 0 0 #F4F4F4;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.account_main .main0_nav li a {
+    font-size: 14px;
+    line-height: 40px;
+}
+.account_main .main_cont {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #CFCFCF;
+    border-radius: 0 2px 2px 2px;
+    min-height: 500px;
+    padding: 0 20px 20px;
+}
+
+.main_title {
+    border-bottom: 1px solid #CFCFCF;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form {
+    margin-bottom: 50px;
+}
+
+.form_list_li {
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 25px;
+    padding-left: 150px;
+    position: relative;
+}
+
+.form_list_li .lbl {
+    display: block;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 140px;
+}
+
+
+

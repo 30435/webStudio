@@ -123,12 +123,12 @@ $(document).ready(function(){
 
         <div class="reg-row">
             <label class="label">设置密码：</label>
-            <input type="text" name="password" id="password" class="user_input" />
+            <input type="password" name="password" id="password" class="user_input" />
 			<div class="txt_tips"><span id="passwordTip"></span></div>
         </div>
         <div class="reg-row" style="margin-bottom:30px;">
             <label class="label">确认密码：</label>
-            <input type="text" name="password2" id="password2" class="user_input" />
+            <input type="password" name="password2" id="password2" class="user_input" />
 			<div class="txt_tips"><span id="password2Tip"></span></div>
         </div>
 

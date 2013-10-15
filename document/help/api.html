@@ -132,6 +132,10 @@ b { color:#0000cc; }
 
 
 	<h3 id="d">注册接口（只对自主研发的儿童类网游有效）</h3>
+	<p>游戏方要用到一个验证码，该验证码由平台生成，生成验证码的url是：<a href="http://passport.nova.com:92/index.php/api/createCaptcha" target="_blank">http://passport.nova.com:92/index.php/api/createCaptcha</a></p>
+	<p>平台还提供了一个基于PHP实现的测试连接，用来模拟游戏方登陆和注册，url是：<a href="http://ucserver.nova.com:98/gametest/interface/?code=nova" target="_blank">http://ucserver.nova.com:98/gametest/interface/?code=nova</a></p>
+	<p class="subp">服务端 <b>GET</b></p>
+
 	<p>接口地址：</p>
 	<p class="subp"><b>http://passport.t.alyee.com/api</b>，平台为游戏提供的接口地址</p>
 	<p>调用方式：</p>
@@ -140,11 +144,10 @@ b { color:#0000cc; }
 	<p>需要用到的参数：</p>
 	<ul>
 	    <li><span><b>action</b> － 值为register，指向平台发起账号注册的请求事件</span></li>
-		<li><span><b>username</b> － 用户在游戏里提供的登陆账号</span></li>
-		<li><span><b>password</b> － 用户在游戏里提供的登陆密码，经过md5加密后传递给平台</span></li>
 		<li><span><b>password</b> － 注册信息之密码</span></li>
-		<li><span><b>password2</b> － 注册信息之密码确认</span></li>
+		<li><span><b>password2</b> － 注册信息之密码确认（经与小晨沟通，决定取消这个参数，由游戏端做密码验证）</span></li>
 		<li><span><b>captcha</b> － 注册信息之验证码</span></li>
+		<li><span><b>email</b> － 可以为空，但如果不为空，平台将会对邮件地址进行验证，不符合邮件格式，或邮箱已经存在，将返回注册失败信息</span></li>
 		<li><span><b>code</b> － 平台分配给游戏的唯一标示符</span></li>
 		<li><span><b>channel</b> － 当有多个运营平台时，用来标识运营平台的标识信息，可以统计运营平台上产生的注册用户数等相关信息</span></li>
 	</ul>
