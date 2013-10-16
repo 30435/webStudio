@@ -1,18 +1,24 @@
 <?php echo $this->load->view('header_cfront'); ?>
 
+<link href="http://static.ci.com/common/calendar/jscal2.css" rel="stylesheet" type="text/css" />
+<link href="http://static.ci.com/common/calendar/border-radius.css" rel="stylesheet" type="text/css" />
+<link href="http://static.ci.com/common/calendar/win2k.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="http://static.ci.com/common/calendar/calendar.js"></script>
+<script type="text/javascript" src="http://static.ci.com/common/calendar/lang/en.js"></script>
+<script type="text/javascript" src="http://static.ci.com/common/script/dialog.js" language="javascript"></script>
+
 <div class="my_main account_main">
 	<?php echo $this->load->view('mypay_left'); ?>
 	<div class="main_cont">
 		<div class="main_title"><p><span>我的充值消费记录</span></p></div>
-        <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
-			<input type="hidden" value="4" id="is_query" name="is_query">
-			<input type="hidden" value="4" id="time_quantum" name="time_quantum">
+        <form method="get" id="searchForm" action="" id="dealDate" style="margin:20px auto;">
 			<div class="search_data cf">
 				<span>查询日期</span>
-				<div class="ui_date"><input type="text" id="start_date" value="2013-08-05" autocomplete="off" name="start_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+				<div class="ui_date"><input type="text" readonly="" value="" id="start_time" name="start_time" autocomplete="off"  class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
 				<span>至</span>
-				<div class="ui_date"><input type="text" id="end_date" value="2013-09-05" autocomplete="off" name="end_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
-				<a class="ui_btn_small" id="searchDeal" href="javascript:"><span>查询</span></a>
+				<div class="ui_date"><input type="text" readonly="" value="" id="end_time" name="end_time" autocomplete="off" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+				<a class="ui_btn_small" id="searchDeal" href="javascript: $('#searchForm').submit(); void(0);"><span>查询</span></a>
 			 </div>
 		</form>
         <div class="ui_table_wrap">
@@ -46,5 +52,26 @@
 		</div>      
 	</div>
 </div>
+<script type="text/javascript">
+Calendar.setup({
+	weekNumbers: true,
+	inputField : "start_time",
+	trigger    : "start_time",
+	dateFormat: "%Y-%m-%d",
+	showTime: false,
+	minuteStep: 1,
+	onSelect   : function() {this.hide();}
+});
+</script>
+<script type="text/javascript">
+Calendar.setup({
+	weekNumbers: true,
+	inputField : "end_time",
+	trigger    : "end_time",
+	dateFormat: "%Y-%m-%d",
+	showTime: false,
+	minuteStep: 1,
+	onSelect   : function() {this.hide();}
+});
+</script>
 <?php echo $this->load->view('footer_cfront'); ?>
-

@@ -1,4 +1,4 @@
-<?php echo $this->load->view('cfront/header'); ?>
+<?php echo $this->load->view('cfront/header_list'); ?>
    <div class="zx_main">
    	<div class="zx_main_t"><img src="<?php echo $this->staticUrl; ?>cfront/images/zx_04.jpg" /></div>
     <!------------内容页面--------------->

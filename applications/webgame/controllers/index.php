@@ -28,4 +28,13 @@ class Index extends CmsIndex
 		$template = isset($this->templatePre) ? $this->templatePre . 'index2' : 'index2';
 		$this->load->view($template, $this->frontController);
 	}
+
+	public function search()
+	{
+		$key = $this->input->post('searchStr');
+		$model = 'newModel';
+		$this->_loadModel('webgame', $model);
+		$this->resultArray = $this->newModel->currentDb->from('sw_new')->select('title, url, updatetime')->like(array('title' => $key))->limit(100)->get()->result_array();
+		$this->load->view($this->templatePre . 'search', $this->frontController);
+	}
 }

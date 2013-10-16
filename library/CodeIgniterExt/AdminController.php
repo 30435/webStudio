@@ -462,23 +462,7 @@ class AdminController extends Custom_Controller
 		
 		return $selectString;
 	}
-	
-	/**
-	 * pagination
-	 * 
-	 * @return void
-	 */
-	protected function _paginationStr($urlStr)
-	{
-		if (@strpos($this->pagination->suffix, $urlStr) === false && $urlStr != '') {
-			$this->pagination->page_query_string=TRUE;
-			$this->pagination->enable_query_strings=TRUE;
-		
-			@$this->pagination->suffix .= strpos($this->pagination->suffix , '?') !== false ? $urlStr : '?' . $urlStr;
-		}
-		@$this->pagination->suffix = trim(trim($this->pagination->suffix), '?');
-	}
-		
+
 	/**
 	 * Show the operation message
 	 *
