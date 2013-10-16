@@ -1,12 +1,8 @@
 <?php echo $this->load->view('header_cfront'); ?>
 <div class="my_main account_main">
-        <div class="main0_nav account_nav">
-	<ul>
-		<li class="li_lv_1 cur"><a href="#"><span>我的充值中心</span></a></li>
-		<li class="li_lv_1"><a href="#"><span>充值明细查询</span></a></li>
-	</ul>
-</div>		<div class="main_cont">
-            <div class="main_title"><p><span>我的充值中心</span></p></div>
+	<?php echo $this->load->view('mypay_left'); ?>
+	<div class="main_cont">
+		<div class="main_title"><p><span>我的充值中心</span></p></div>
             <div class="form">
             <form>
                 <ul class="form_list">

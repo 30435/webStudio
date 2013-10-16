@@ -8,4 +8,9 @@ class Uwebgame extends IndexBase
 		$this->prefix = 'uwebgame';
 		parent::__construct();
 	}
+
+	public function index()
+	{
+		header('Location:' . $this->appInfos['pay']['url'] . 'index/mypayinfo');
+	}
 }
