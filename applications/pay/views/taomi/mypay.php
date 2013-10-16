@@ -3,7 +3,7 @@
     <div class="main account_main">
         <?php $this->load->view('mypay_left'); ?>
         <div class="main_cont">
-            <div class="main_title"><p><span>我的充值消费记录</span></p></div>
+            <div class="main_title"><p><span>我的消费记录</span></p></div>
             <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
                 <input type="hidden" value="4" id="is_query" name="is_query">
                 <input type="hidden" value="4" id="time_quantum" name="time_quantum">

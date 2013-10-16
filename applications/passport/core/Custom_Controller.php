@@ -37,13 +37,18 @@ class Custom_Controller extends CommonController
 	 */
 	public function getUsername()
 	{
-		$where = array('aid_status' => 0);
+		/*$where = array('aid_status' => 0);
 		$userInfo = $this->memberModel->getInfo($where, 'aid_cre');
 
 		$updateWhere = array('id' => $userInfo['id']);
 		$data = array('aid_status' => '1');
 		
-		$this->memberModel->editInfo($data, $updateWhere, 'aid_cre');
+		$this->memberModel->editInfo($data, $updateWhere, 'aid_cre');*/
+
+		$db = $this->memberModel->currentDb;
+		$userInfo = $db->from('sp_aid_cre')->where(array('aid_status' => 0))->limit(1)->get()->row_array();
+		$db->update('sp_aid_cre', array('aid_status' => 1), array('id' => $userInfo['id']));
+		
 		return $userInfo['aid'];
 	}
 }

@@ -143,7 +143,8 @@ class Index extends Custom_Controller
 		$pageSize = empty($paginationInfos['per_page']) ? 15 : $paginationInfos['per_page'];
 
 		$this->_loadModel('pay', 'payModel');
-		$result = $this->payModel->getInfos('', array(), array(), $currentPage, $pageSize);
+		$where = $this->_where(true);
+		$result = $this->payModel->getInfos('', $where, array(), $currentPage, $pageSize);
 		$this->infos = $result['infos'];
 
 		$paginationInfos['base_url'] = $this->baseUrl . 'index/mypay' . '?';
@@ -169,7 +170,8 @@ class Index extends Custom_Controller
 		$pageSize = empty($paginationInfos['per_page']) ? 15 : $paginationInfos['per_page'];
 
 		$this->_loadModel('pay', 'accountModel');
-		$result = $this->accountModel->getInfos('', array(), array(), $currentPage, $pageSize);
+		$where = $this->_where();
+		$result = $this->accountModel->getInfos('', $where, array(), $currentPage, $pageSize);
 		$this->infos = $result['infos'];
 
 		$paginationInfos['base_url'] = $this->baseUrl . 'index/mypay' . '?';
@@ -203,11 +205,34 @@ class Index extends Custom_Controller
 		$config['next_link'] = '&gt;&gt;';
 		$config['prev_link'] = '&lt;&lt;';
 		$config['uri_segment'] = 4;
-		$config['cur_tag_open'] = '<span>';
-		$config['cur_tag_close'] = '</span>';
+		$config['cur_tag_open'] = '&nbsp;<span>&nbsp;';
+		$config['cur_tag_close'] = '&nbsp;</span>&nbsp;';
 		$config['page_query_string'] = TRUE;
 		$config['query_string_segment'] = 'page';
 	
 		return $config;
+	}
+
+	protected function _where($isPay = false)
+	{
+		$this->pagination->page_query_string=TRUE;
+		$this->pagination->enable_query_strings=TRUE;
+		$whereArray = array();
+		$urlStr = '';
+
+		$timeField = $isPay ? 'pay_time' : 'account_time';
+		$startTime = $this->input->get('start_time');
+		$endTime = $this->input->get('end_time');
+		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+		if (!empty($startTime) || !empty($endTime)) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array("{$timeField} >=" => strtotime($startTime)));
+			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array("{$timeField} <=" => strtotime($endTime)));
+
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
+		}
+
+		$this->_paginationStr($urlStr);
+		return $whereArray;
 	}
 }

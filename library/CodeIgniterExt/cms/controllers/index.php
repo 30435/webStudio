@@ -16,7 +16,7 @@ class CmsIndex extends Custom_Controller
 	{
 		$this->_initModel();
 
-		$template = !empty($this->currentCategoryInfo['template']) ? $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
+		$template = !empty($this->currentCategoryInfo['template']) ? $this->templateListPre . $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
 		$this->load->view($template, $this->frontController);
 	}
 	
@@ -56,7 +56,7 @@ class CmsIndex extends Custom_Controller
 		$_GET['id'] = $id;
 		$this->_initModel($catid);
 		$this->currentInfo = $this->_getInfoById();
-		$this->load->view($this->templateShowPre . 'show');
+		$this->load->view($this->templateShowPre . 'show', $this->frontController);
 	}
 
 	/**
