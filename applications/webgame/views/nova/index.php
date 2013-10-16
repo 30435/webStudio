@@ -3,13 +3,22 @@
 <link rel="stylesheet" type="text/css"  href="<?php echo $this->staticUrl; ?>cfront/css/reset.css"/>
 </head>
 <body>
-	
-	<div class="header">
-			<div class="nav">
-            	<div class="logo fl"></div>
-                <p class="nav_r fr"><a href="#" class="logo_all">全部</a> <a href="#">充值</a>|<a href="#">注册</a>|<a href="#">收藏</a>|&nbsp;&nbsp;<a href="#">官方论坛</a></p>
-            </div>
+<div class="header">
+	<div class="nav">
+		<div class="logo fl"><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/logo.png" /></a></div>
+		<p class="nav_r fr">
+		<?php if (!empty($this->loginedUserInfo)) { ?>
+			(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a>|
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">安全退出</a>|
+		<? } else { ?>
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login/">登录</a>|
+			<a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/register/">注册</a>|
+		<? } ?>
+			<a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>&nbsp;|
+			<a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a>
+		</p>
 	</div>
+</div>
     
     <!--------------------------宽度一样的977px---------------------------------------->
     <div class="all">
@@ -20,28 +29,22 @@
                     	<input type="text" value="请输入诺瓦攻略、秘籍" class="n_tag"/><input type="button" value="" class="s_but" />
                     </div>
                     <div class="nav1">
-                    	<a href="#" target="_blank" class="n1">诺瓦首页</a>
-                        <a href="#" target="_blank" class="n1">诺瓦攻略</a>
-                        <a href="#" target="_blank" class="n1">诺瓦米吧</a>
-                        <a href="#" target="_blank" class="n1">诺瓦指南</a>
-                        <a href="#" target="_blank" class="n1">诺瓦新闻</a>
-                        <a href="#" target="_blank" class="n1">诺瓦故事</a>
+					<?php foreach (array(9, 10, 11, 12, 13, 14) as $showCatid) { ?>
+						<a href="<?php echo $this->categoryInfos[$showCatid]['url']; ?>" target="_blank" class="n1"><?php echo $this->categoryInfos[$showCatid]['catname']; ?></a>
+					<?php } ?>
                     </div>
-                    <div class="r_btn">
-                    	<a href="#" target="_blank" class="j1"></a>
-                        <a href="#" target="_blank" class="sc"></a>
-                    </div>
+                    <div class="r_btn"><a href="javascript: void(0);" target="_blank" class="j1"></a><a href="javascript: void(0);" target="_blank" class="sc"></a></div>
                 </div>
-                <div class="demon">
-				<?php foreach (array(9, 10, 11, 12, 13, 14) as $showCatid) { ?>
-                	<dl>
-                    	<dt><a title="<?php echo $this->categoryInfos[$showCatid]['catname']; ?>" target="_blank" href="<?php echo $this->categoryInfos[$showCatid]['url']; ?>" class="icon0"><img src="<?php echo $this->staticUrl; ?>cfront/images/car.png" /></a></dt>
-                        <dd><p><a href="<?php echo $this->categoryInfos[$showCatid]['url']; ?>" target="_blank" class="t0"><b><?php echo $this->categoryInfos[$showCatid]['catname']; ?></b></a></p></dd>
-                    </dl>
-				<?php } ?>
+                <div class="nuowa_bj0">
+              		<p class="more"><a href="<?php echo $this->categoryInfos[16]['url']; ?>" target="_blank">更多</a></p>
+					<ul>
+						<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 6, array('catid' => 10), array(array('inputtime', 'desc'))); ?>
+						<?php foreach ($newInfos['infos'] as $newInfo) { ?>
+							<li><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="113px" height="114px" /></a><?php echo $controller->cutstr($newInfo['title'], 32); ?></li>
+						<?php } ?>
+					</ul>
                 </div>
-                <div class="nuowa_line"><img src="images/yj.jpg" /></div>
-                
+
             </div>
             <!--------------------------热帖和攻略---------------------------------------->
             <p class="lt_nuowa_up"><img src="<?php echo $this->staticUrl; ?>cfront/images/sy.jpg" /></p>
@@ -181,11 +184,8 @@
               </div>
 
               <div class="footer">
-              	<div class="huang"><img src="images/h.png" /></div>
-                <p>小游戏作品版权归原作者享有，如无意之中侵犯了您的版权，请您按照《版权保护投诉指引》来信告知，本网站将应您的要求删除。
-2125温馨提示：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活
-用户协议   |    上传游戏   |    版权保护投诉指引 
-上海淘米网络科技有限公司 Copyright © 2010-2012 2125小游戏 All Rights Reserved.   |   沪ICP备10205640号 文网文[2009]093号 </p>
+              	<div class="huang"><img src="<?php echo $this->staticUrl; ?>cfront/images/h.png" /></div>
+                <p>小游戏作品版权归原作者享有，如无意之中侵犯了您的版权，请您按照《版权保护投诉指引》来信告知，本网站将应您的要求删除。<br />知金温馨提示：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活<br/>京ICP备09081115号-6 京网文[2013]0506-133号 网络文化经营许可证<br />知金伟业教育科技（北京）有限公司 Copyright ? 2008 - 2012 ZhiJin Inc. All Rights Reserved.</p>
               </div>
               
  </div>

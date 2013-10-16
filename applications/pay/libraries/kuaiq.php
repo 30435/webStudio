@@ -13,11 +13,6 @@ class Kuaiq extends PayCommon
     	$this->sentApiUrl = 'https://sandbox.99bill.com/gateway/recvMerchantInfoAction.htm'; // Test api url
     	//$this->sentApiUrl = 'http://pay.ci.com/paytest.php?code=yeepay';
     	
-
-	function kq_ck_null($kq_va,$kq_na){if($kq_va == ""){return $kq_va="";}else{return $kq_va=$kq_na.'='.$kq_va.'&';}}
-
-
-
     	$this->returnParams = array(
     		array('key' => 'merchantAcctId', 'name' => '人民币网关账号', 'value' => ''), // 人民币网关账号，该账号为11位人民币网关商户编号+01,该值与提交时相同。
 			array('key' => 'version', 'name' => '', 'value' => ''),  // 网关版本，固定值：v2.0,该值与提交时相同。
