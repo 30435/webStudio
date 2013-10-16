@@ -1,14 +1,19 @@
+
+       
+
+
+
 <!doctype html>
+
 <!--[if lt IE 7]><html xmlns:wb="http://open.weibo.com/wb" class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]><html xmlns:wb="http://open.weibo.com/wb" class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]><html xmlns:wb="http://open.weibo.com/wb" class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html xmlns:wb="http://open.weibo.com/wb" class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns:wb="http://open.weibo.com/wb" class="no-js" lang="en"> <!--<![endif]-->
 	<head>
-		<title>第一野战军_第一野战军最新章节_磨铁</title>
+		<title>必须犯规的游戏_必须犯规的游戏最新章节_磨铁</title>
 		<meta content="zh-cn" http-equiv="Content-Language">
-		<meta name="keywords"  content="第一野战军,第一野战军最新章节">
-		<meta name="description"  content="第一野战军原创首发于磨铁中文网，阅读第一野战军全文、最新章节，欢迎您到磨铁中文网。">
+		<meta name="keywords"  content="必须犯规的游戏,必须犯规的游戏最新章节">
+		<meta name="description"  content="必须犯规的游戏原创首发于磨铁中文网，阅读必须犯规的游戏全文、最新章节，欢迎您到磨铁中文网。">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- [if lte IE 8]>
 <meta http-equiv="X-UA-Compatible" content="IE=7,chrome=1" />
@@ -51,14 +56,14 @@
 		
 		 
 		<script type="text/javascript">
-			var serverTime = "2013-10-15 22:44:08";
+			var serverTime = "2013-10-16 22:15:18";
 			var awaitPoll = parseInt(0);
 			var BOOK_DETAIL = {
-				author: '许福芦',
-				name: '第一野战军'
+				author: '宁航一V',
+				name: '必须犯规的游戏'
 			}
 			//bookId is globel
-			var bookId = '31115';
+			var bookId = '12383';
 		</script>
 	
 	<!--[if IE]>
@@ -142,7 +147,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 				
 				<div id="main">
 					<h1 class="p-title">
-						<a href="/book/31115">第一野战军</a>
+						<a href="/book/12383">必须犯规的游戏</a>
 					</h1>
 					<div class="clearfix"></div>
 					
@@ -159,10 +164,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 													<a 
 															
 															
-															href="/book/31115/chapter"
+															href="/book/12383/chapter"
 															
 														>
-														<img src="http://img.motieimg.com/book/31115l1.jpg" alt="" width="161" height="225" />
+														<img src="http://img.motieimg.com/book/12383l1.jpg" alt="" width="161" height="225" />
 													</a>
 												
 											</div>
@@ -170,41 +175,45 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 												<ul>
 													
 													<li class="recs" style="width: 100%;">
-														<b class="num" >1</b>
-														<a href="javascript:;" role="support" data-book-id="31115" action-type="pollForBook">推荐票</a>
+														<b class="num" >284</b>
+														<a href="javascript:;" role="support" data-book-id="12383" action-type="pollForBook">推荐票</a>
 													</li>
 													<li class="fans">
-														<a href="/book/31115/follower">书迷：<b class="num">4</b></a>
+														<a href="/book/12383/follower">书迷：<b class="num">2549</b></a>
 													</li>
 													<li class="revs">
-														<a href="/book/31115/review">书评：<b class="num">0</b></a>
+														<a href="/book/12383/review">书评：<b class="num">14</b></a>
 													</li>
 												</ul>
 											</div>
 										</div>
 										<div class="rtext">
 											<ul class="info clear">
-												<li><a href="/all?sort=5">军事</a></li>
-												<li>613075字</li>
+												<li><a href="/all?sort=1">悬疑</a></li>
+												<li>154197字</li>
 												<li>已出版</li>
 												
 												
-												<li>总点击135</li>
-												<li style="margin-right:0;">11人浏览</li>
+												<li>总点击1091876</li>
+												<li style="margin-right:0;">7618人浏览</li>
 											</ul>
 											<div class="desc">
-												<p>解放战争期间，中共为适应大规模作战的需要，将一直以来打游击战的小股部队，改编成比较正规的大规模作战集群，其中经常担任战略级作战任务的，有四大主力（四大野战军）。
-</p><p>第一野战军在彭德怀、王震、杨得志、许光达等虎将的指挥下，在陕西、甘肃、宁夏经历九大战役，最后解放新疆。以牺牲1.8万人的代价，歼敌51万。</p>
+												<p>这是一场考验智慧和勇气的游戏，获胜者将赢得巨大的利益和生存的权利，而违犯游戏规则的人，将接受以死亡为代价的惩罚。
+</p><p>     14个悬疑小说作家被离奇地&ldquo;邀请&rdquo;到一个神秘的场所，诡异莫名、恐怖骇人的事件接二连三地发生在他们身上。身为悬疑推理小说作家的他们也无法解释。死亡的威胁无时无刻不在笼罩着他们。当人数日趋减少的时候，人们终于发现了一个惊人的&ldquo;规律&rdquo;和秘密&hellip;&hellip; &ldquo;死亡游戏&rdquo;已经开始，隐藏在他们身边的&ldquo;主办者&rdquo;是谁？他究竟有何目的？14天之后，剩下的人能够活着出去吗？更加诡异的事件，欲罢不能的游戏！请记住，从翻开《必须犯规的游戏》(作者宁航一)的第一页起，你，就是游戏的参与者！《必须犯规的游戏》告诉你&mdash;&mdash;噩梦，开始了。</p>
 											</div>
 											
 												<div class="tags">
 													标签：
 													
-														<a target="_blank" href="/all?sort=5&tag1=%E5%86%9B%E4%BA%8B">军事</a>
+														<a target="_blank" href="/all?sort=1&tag1=%E6%83%8A%E6%82%9A">惊悚</a>
 													
-														<a target="_blank" href="/all?sort=5&tag1=%E5%8E%86%E5%8F%B2">历史</a>
+														<a target="_blank" href="/all?sort=1&tag1=%E4%BE%A6%E6%8E%A2">侦探</a>
 													
-														<a target="_blank" href="/all?sort=5&tag1=%E6%88%98%E5%8F%B2">战史</a>
+														<a target="_blank" href="/all?sort=1&tag1=%E8%AF%A1%E5%BC%82">诡异</a>
+													
+														<a target="_blank" href="/all?sort=1&tag1=%E6%82%AC%E7%96%91">悬疑</a>
+													
+														<a target="_blank" href="/all?sort=1&tag1=%E6%8E%A8%E7%90%86">推理</a>
 													
 												</div>
 											
@@ -213,7 +222,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 									<!-- end detail -->
 									
 									<div class="ctrl">
-										<ul role="data-feed" data-feed-id="31115" data-feed-type="2">
+										<ul role="data-feed" data-feed-id="12383" data-feed-type="2">
 											<li class="auto">
 												
 													
@@ -245,7 +254,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 											</li>
 											<li class="read">
 												
-													<a href="/book/31115/chapter" class="M-button-b">开始阅读</a>
+													<a href="/book/12383/chapter" class="M-button-b">开始阅读</a>
 												
 												
 											</li>
@@ -261,19 +270,32 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 								  						<a href="javascript:;" id="boosthe" class="btn-boost"></a>
 								  						<ul>
 								  							
+								  								<li><a class="vm" href="/people/990669">风辰帮灬小胖</a>
+								  								<span class="vm">捧场了10枚</span><img class="vm" src="http://img.motieimg.com/_assets/donate/mb.gif"/></li>
+								  							
+								  								<li><a class="vm" href="/people/990669">风辰帮灬小胖</a>
+								  								<span class="vm">捧场了10枚</span><img class="vm" src="http://img.motieimg.com/_assets/donate/mb.gif"/></li>
+								  							
+								  								<li><a class="vm" href="/people/990669">风辰帮灬小胖</a>
+								  								<span class="vm">捧场了11枚</span><img class="vm" src="http://img.motieimg.com/_assets/donate/mb.gif"/></li>
+								  							
 								  						</ul>
+								  						
+									  						<p class="ac">
+									  							<a href="/book/12383/donate/list" class="fb deep-blue">全部捧场记录>></a>
+									  						</p>
 								  						
 								  					</div>
 								  				</td>
 								  				<td>
 								  					<div class="area">
-								  						<h3><span class="fb">最新章节： </span><a href="/book/31115_524089"><img alt="vip" src="http://img.motieimg.com/_assets/vip.gif">尾声：魂系大西北（2）</a><span class="time">10-09 15:08</span></h3>
+								  						<h3><span class="fb">最新章节： </span><a href="/book/12383_260353"><img alt="vip" src="http://img.motieimg.com/_assets/vip.gif">尾声3</a><span class="time">2012-06-28 16:48</span></h3>
 								  						<p class="desc">
-								  							 1950年3月间，是彭德怀为新疆办事最多的一段。他的建议被中央采纳后，中苏两国政府经过谈判，在莫斯科一连签订了三个与新疆有关的协定。第一个是《关于在新疆创办中苏石油股份公司协定》，其次是《关于在新疆创办中苏有色及稀有金属股份公司协定》，另一个是《关于创办中苏民用航空股份公司协定...
+								  							 夏侯申的头缓缓抬起来，目瞪口呆地盯着徐文，他的表情和动作都凝固了。 其他人吃惊的程度也不亚于夏侯申。龙马张口结舌地问道：&ldquo;你说清楚些，是怎么回事？&rdquo; 徐文显然也很诧异，不知道大家为什么在听到他这句话后，都变得紧张起来。他不安地说道：&ldquo;前天晚上，我做了一个噩梦，被吓醒了。本来我没...
 								  						</p>
 								  						<div class="sp-10"></div>
 								  						<div class="btn-area ar">
-								  							<a href="/book/31115/chapter" class="mo-button">章节目录>></a>
+								  							<a href="/book/12383/chapter" class="mo-button">章节目录>></a>
 															
 								  						</div>
 								  					</div>
@@ -313,12 +335,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 									<ul class="mod-tabs">
 										<li  >
 											<h2>
-												<a href="/book/31115/review?showType=time">第一野战军的评论<span class="number"></span></a>
+												<a href="/book/12383/review?showType=time">必须犯规的游戏的评论<span class="number"></span></a>
 											</h2>
 										</li>
 										<li class="current" >
 											<h2>
-												<a href="/book/31115/review?showType=best">精华评论</a>
+												<a href="/book/12383/review?showType=best">精华评论</a>
 											</h2>
 										</li>
 									</ul>
@@ -331,10 +353,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 							</div>
 							<!-- end mod -->
 							
-							<div class="mod mod-respond" role="data-comment" data-feed-id="31115" data-feed-type="2" data-use-template="#bookReply">
+							<div class="mod mod-respond" role="data-comment" data-feed-id="12383" data-feed-type="2" data-use-template="#bookReply">
 									<div class="hd mod-title ">
 										<div class="title-bd ">
-											<h2 class="fl">第一野战军的回应</h2>
+											<h2 class="fl">必须犯规的游戏的回应</h2>
 										</div>
 									</div>
 									
@@ -357,17 +379,44 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 								<div class="bd">
 									<div class="author-info clear">
 										<div class="lpic">
-											<a href="/people/1561941" target="_blank"><img style="width: 50px;" width="50" height="50" src="http://img.motieimg.com/people/1561941s1.jpg" /></a>
+											<a href="/people/151016" target="_blank"><img style="width: 50px;" width="50" height="50" src="http://img.motieimg.com/people/151016s1.jpg" /></a>
 										</div>
 										<div class="rtext">
-											<h5>作者：<a class="blue" href="/people/1561941" target="_blank">许福芦</a></h5>
+											<h5>作者：<a class="blue" href="/people/151016" target="_blank">宁航一V</a></h5>
 											<p>
-												作品 <a href="/people/1561941/book"><span class="blue">1</span></a> 文章   <a href="/people/1561941/article"><span class="blue">0</span></a>  粉丝  <a href="/people/1561941/follower"><span class="blue">1</span></a>
+												作品 <a href="/people/151016/book"><span class="blue">3</span></a> 文章   <a href="/people/151016/article"><span class="blue">0</span></a>  粉丝  <a href="/people/151016/follower"><span class="blue">84</span></a>
 											</p>
 										</div>
 									</div>
 									
 									
+									
+										<div class="others clear">
+											<h5>宁航一V的其它作品：</h5>
+											<ul class="user-list" data-collect-id="52">
+												
+													
+														<li>
+															<a href="/book/12665" data-collect-index="1" target="_blank"><img style="width: 68px;" width="68" height="95" src="http://img.motieimg.com/book/12665l1.jpg" alt="夜话"></a>
+															<p>
+																<a href="/book/12665" data-collect-index="1" target="_blank">夜话</a>
+															</p>
+														</li>
+													
+												
+													
+												
+													
+														<li>
+															<a href="/book/9532" data-collect-index="3" target="_blank"><img style="width: 68px;" width="68" height="95" src="http://img.motieimg.com/book/9532l1.jpg" alt="末日预言"></a>
+															<p>
+																<a href="/book/9532" data-collect-index="3" target="_blank">末日预言</a>
+															</p>
+														</li>
+													
+												
+											</ul>
+										</div>
 									
 								</div>
 							</div>
@@ -401,12 +450,12 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 				 
 					
 						<li class="top">
-							<a href="/book/760" boxid="book_detail_tu1" data-control-type="shelf" class="fb" data-collect-index="1">
-								<img style="padding:0px;" src="http://img.motieimg.com/book/760s2.jpg" width="50" height="70">
+							<a href="/book/31369" boxid="book_detail_tu1" data-control-type="shelf" class="fb" data-collect-index="1">
+								<img style="padding:0px;" src="http://img.motieimg.com/book/31369s1.jpg" width="50" height="70">
 							</a>
 							<span style="position: relative; top: 7px;">
-								<a target="_blank" class="fb" boxid="book_detail_tu1" data-control-type="shelf" href="/book/760" data-collect-index="1">从不靠谱Loli到不靠谱人妻</a>
-								<span class="author">作者：<a target="_blank" href="/people/276" class="deep-blue fz-12">姐姐</a></span>
+								<a target="_blank" class="fb" boxid="book_detail_tu1" data-control-type="shelf" href="/book/31369" data-collect-index="1">爱到流年落华处</a>
+								<span class="author">作者：<a target="_blank" href="/people/603" class="deep-blue fz-12">白双双</a></span>
 							</span>
 						</li>
 					
@@ -577,6 +626,96 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 	</div>
 
 							
+							<!--  -->
+								<div class="mod fans-rank">
+									<div class="hd mod-title">
+										<div class="title-bd">
+											
+											<h2>粉丝榜</h2>
+										</div>
+									</div>
+									<div class="bd">
+										<table>
+											<thead>
+												<tr>
+													<th width="36">排行</th>
+													<th>用户名</th>
+													<th width="80">级别</th>
+												</tr>
+											</thead>
+											<tbody>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/117289"  >薰姨</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/124358"  >胡乱跳舞</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/178919"  >no3water</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/258494"  >喵了个咪哦</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/343593"  >熊萌萌</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/362938"  >江城沧</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/431638"  >过路小米</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/468030"  >tangok</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr >
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/495076"  >evianj</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+													<tr class="last">
+														<td class="ac"></td>
+														<td class="col2"><a href="/people/509575"  >周冰5201314</a></td>
+														<td class="col3">平民</td>
+													</tr>
+												
+												<tr>
+													<td colspan="2">
+													</td>
+													<td class="ar">
+														<a href="/book/12383/bookfollow" class="fans-gray" >[更多]</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
 							
 							
 							
@@ -618,7 +757,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 			<h3><img src="http://img.motieimg.com/_assets/book-boost-title.jpg" class="fl" /></h3>
 			<div class="sp-20"></div>
 			<div class="txtbox-editor">
-				<form action="/book/31115/donate" method="post">
+				<form action="/book/12383/donate" method="post">
 					<table class="for-table" width="100%">
 						<tr>
 							<td class="col1 vm">
@@ -719,10 +858,10 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 		<script type="text/javascript" src="http://img.motieimg.com/_resources/js/app/bookdetail.js?201310141426"></script>
 		<script type="text/javascript">
 			Mo.utils.share($('.mo-ui-share'),{
-				title: '军事好书推荐：《第一野战军》',
-				desc: '记述中国历史规模最大的一场战争 磨铁中文网全本连载',
-				pic: 'http://img.motieimg.com/book/31115l1.jpg',
-				link: 'http://www.motie.com/book/31115'
+				title: '悬疑好书推荐：《必须犯规的游戏》',
+				desc: '一场考验智慧和勇气的游戏 磨铁中文网全本连载',
+				pic: 'http://img.motieimg.com/book/12383l1.jpg',
+				link: 'http://www.motie.com/book/12383'
 			})
 		</script>
 	</body>
