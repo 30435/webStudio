@@ -1,8 +1,16 @@
-<?php echo $this->load->view($this->prefix . 'header'); ?>
-<div class="container cf">
-    <div class="main account_main">
-        <?php $this->load->view('mypay_left'); ?>
-        <div class="main_cont">
+<?php echo $this->load->view('header_cfront'); ?>
+
+<div class="my_main account_main">
+        <div class="main0_nav account_nav">
+	<ul>
+		<li class="li_lv_1"><a href="#"><span>我的充值中心</span></a></li>
+		<li class="li_lv_1 cur"><a href="#"><span>充值明细查询</span></a></li>
+	</ul>
+</div>		
+
+
+
+<div class="main_cont">
             <div class="main_title"><p><span>我的充值消费记录</span></p></div>
             <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
                 <input type="hidden" value="4" id="is_query" name="is_query">
@@ -40,12 +48,10 @@
                             <td width="10%"><?php echo $info['username']; ?></td>
                         </tr>
 					<?php } } ?>
-
                     </tbody>
                 </table>
                 <div style="text-align:center;margin-top:10px;font-size:14px"><?php echo $this->pageStr; ?></div>
             </div>      
         </div>
-    </div>
 </div>
-<?php echo $this->load->view($this->prefix . 'footer'); ?>
+<?php echo $this->load->view('footer_front'); ?>

@@ -16,7 +16,7 @@ class CmsIndex extends Custom_Controller
 	{
 		$this->_initModel();
 
-		$template = !empty($this->currentCategoryInfo['template']) ? $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
+		$template = !empty($this->currentCategoryInfo['template']) ? $this->templateListPre . $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
 		$this->load->view($template, $this->frontController);
 	}
 	

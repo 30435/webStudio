@@ -1,4 +1,4 @@
-<?php echo $this->load->view('header'); ?>
+<?php echo $this->load->view('header_cfront'); ?>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/themes/Default/js/theme.js" type="text/javascript" charset="UTF-8"></script>
@@ -173,4 +173,4 @@ function paymonthMoney(money)
 paymonthMoney(<?php echo $this->paymonthInfo['money'];?>);
 <?php } ?>
 </script>
-<?php echo $this->load->view('footer'); ?>
+<?php echo $this->load->view('footer_cfront'); ?>

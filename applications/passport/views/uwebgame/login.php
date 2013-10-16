@@ -1,4 +1,4 @@
-<?php echo $this->load->view($this->prefix . '/header'); ?>
+<?php echo $this->load->view('header_cfront'); ?>
 <div class="dl_main">
 	<div class="dl_main_l fl"><img src="<?php echo $this->staticUrl; ?>cfront/images/dly.png" /></div>
     <div class="dl_main_r fl">
@@ -13,4 +13,4 @@
 	</form>
     </div>
 </div>
-<?php echo $this->load->view($this->prefix . '/footer'); ?>
+<?php echo $this->load->view('footer_cfront'); ?>

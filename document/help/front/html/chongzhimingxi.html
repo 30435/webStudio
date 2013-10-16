@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>充值明细页面</title>
+<link rel="stylesheet" type="text/css"  href="../css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="../css/chongzhi.css" />
+</head>
+
+<body>
+<div class="header">
+	<div class="top">
+    	<h1 class="logo"><a href="#"><span>诺瓦开发团队</span></a></h1>
+        <div class="top_links">
+        	<ul class="top_links_list">
+            	<li><a href="#">登陆</a>&nbsp;<span>|</span></li>
+                <li><a href="#">意见反馈</a>&nbsp;<span>|</span></li>
+                <li><a href="#">收藏本站</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+    	<ul class="nav_list">
+        	<li class="cur"><a href="#">诺贝充值</a></li>
+            <li class="cur"><a href="#">游戏包月</a></li>
+            <li class="cur"><a href="#">游戏币兑换</a></li>
+            <li class="cur ts" ><a href="#">我的充值</a></li>
+        </ul>
+    </div>
+</div>
+<!----------------------------充值中心页面-->
+
+<div class="my_main account_main">
+        <div class="main0_nav account_nav">
+	<ul>
+		<li class="li_lv_1"><a href="#"><span>我的充值中心</span></a></li>
+		<li class="li_lv_1 cur"><a href="#"><span>充值明细查询</span></a></li>
+	</ul>
+</div>		
+
+
+
+<div class="main_cont">
+            <div class="main_title"><p><span>我的充值消费记录</span></p></div>
+            <form method="post" action="/account/dealsearchprocess" id="dealDate" style="margin:20px auto;">
+                <input type="hidden" value="4" id="is_query" name="is_query">
+                <input type="hidden" value="4" id="time_quantum" name="time_quantum">
+                <div class="search_data cf">
+					<span>查询日期</span>
+					<div class="ui_date"><input type="text" id="start_date" value="2013-08-05" autocomplete="off" name="start_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+					<span>至</span>
+					<div class="ui_date"><input type="text" id="end_date" value="2013-09-05" autocomplete="off" name="end_date" class="txt hasDatepicker"><i class="ico ico_calendar_16"></i></div>
+					<a class="ui_btn_small" id="searchDeal" href="javascript:"><span>查询</span></a>
+                </div>
+            </form>
+            <div class="ui_table_wrap">
+                <table border="1" class="ui_table">
+                    <thead>
+                        <tr>
+                            <th width="20%">日期</th>
+                            <th width="15%">消费米米号</th>
+                            <th width="20%">充值消费（米币）</th>
+                            <th width="25%">明细</th>
+                            <th width="10%">数量</th>
+                            <th width="10%">帐户余额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:05:50</td>
+                            <td width="15%">2013100865180</td>
+                            <td width="20%">0（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:05:58</td>
+                            <td width="15%">2013100891619</td>
+                            <td width="20%">0（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:05:58</td>
+                            <td width="15%">2013100893921</td>
+                            <td width="20%">0（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:31:41</td>
+                            <td width="15%">2013100883440</td>
+                            <td width="20%">7（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:40:47</td>
+                            <td width="15%">2013100871698</td>
+                            <td width="20%">7（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:40:50</td>
+                            <td width="15%">2013100877365</td>
+                            <td width="20%">7（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:43:49</td>
+                            <td width="15%">2013100882459</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:44:18</td>
+                            <td width="15%">2013100854187</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:47:38</td>
+                            <td width="15%">2013100853387</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:48:33</td>
+                            <td width="15%">2013100880755</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:48:56</td>
+                            <td width="15%">2013100864152</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:49:33</td>
+                            <td width="15%">2013100817717</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:49:46</td>
+                            <td width="15%">2013100862173</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:50:52</td>
+                            <td width="15%">2013100860751</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					                        <tr>
+                            <td width="20%">2013-10-08 17:51:05</td>
+                            <td width="15%">2013100848469</td>
+                            <td width="20%">10（米币）</td>
+                            <td width="25%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                            <td width="10%">aaaaaa</td>
+                        </tr>
+					
+                    </tbody>
+                </table>
+                <div style="text-align:center;margin-top:10px;font-size:14px"><a>36条</a>   <a>第<b>1</b>页/总3页</a>    <span>1</span>&nbsp;<a href="#">2</a>&nbsp;<a href="#">3</a>&nbsp;<a href="#">&gt;&gt;</a>&nbsp;</div>
+            </div>      
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!----------------------------!over-->
+<div class="footer">
+	<div class="foot_con">
+    	<div class="foot_logo fl"></div>
+        <div class="foot_tent fl">
+			<p class="nav_foot"><a href="#">关于淘米</a> | <a href="#">联系我们</a> | <a href="#">父母须知</a> | <a href="#">童安全上网</a> | <a href="#">淘米客服</a></p>
+            <p>增值电信业务许可经营证：沪B2-20090070文网文[2009]093号服务热线：021-61130888<br />
+互联网出版许可证新出网证(沪)字023号文网游备字[2011]W-RPG039号<br />
+上海淘米网络科技有限公司 Copyright©2008-2013 TaoMee Inc. All Rights Reserved
+</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

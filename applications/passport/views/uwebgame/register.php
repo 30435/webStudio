@@ -1,4 +1,4 @@
-<?php echo $this->load->view($this->prefix . '/header'); ?>
+<?php echo $this->load->view('header_cfront'); ?>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
 <script src="<?php echo $this->staticUrl; ?>common/formvalidator/themes/baidu/js/theme.js" type="text/javascript" charset="UTF-8"></script>
@@ -247,4 +247,4 @@ selectFast();
 selectNoRealName();
 
 </script>
-<?php echo $this->load->view($this->prefix . '/footer'); ?>
+<?php echo $this->load->view('footer_cfront'); ?>
