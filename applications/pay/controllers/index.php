@@ -203,11 +203,56 @@ class Index extends Custom_Controller
 		$config['next_link'] = '&gt;&gt;';
 		$config['prev_link'] = '&lt;&lt;';
 		$config['uri_segment'] = 4;
-		$config['cur_tag_open'] = '<span>';
-		$config['cur_tag_close'] = '</span>';
+		$config['cur_tag_open'] = '&nbsp;<span>&nbsp;';
+		$config['cur_tag_close'] = '&nbsp;</span>&nbsp;';
 		$config['page_query_string'] = TRUE;
 		$config['query_string_segment'] = 'page';
 	
 		return $config;
+	}
+
+	protected function _where()
+	{
+		$this->pagination->page_query_string=TRUE;
+		$this->pagination->enable_query_strings=TRUE;
+		$whereArray = array();
+		$urlStr = '';
+
+		$startTime = $this->input->get('start_time');
+		$endTime = $this->input->get('end_time');
+		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+		if (!empty($startTime) || !empty($endTime)) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array('inputtime >=' => strtotime($startTime)));
+			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array('inputtime <=' => strtotime($endTime)));
+
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
+		}
+
+		if (empty($this->showCurrent)) {
+			$userid = trim($this->input->get('userid'));
+			if (!empty($userid)) {
+				$whereArray = array_merge($whereArray, array('userid = ' => $userid));
+				$urlStr .= empty($userid) ? '' : '&userid=' . $userid;
+			}
+
+			$roleid = $this->input->get('roleid');
+			if (!empty($roleid)) {
+				$whereArray = array_merge($whereArray, array('roleid = ' => $roleid));
+				$urlStr .= empty($roleid) ? '' : '&roleid=' . $roleid;
+			}
+		} else {
+			$whereArray = array_merge($whereArray, array('userid = ' => $this->userInfo['id']));
+			$urlStr .= '&userid=' . $this->userInfo['id'];
+		}
+		
+		$menuId = $this->input->get('menu_id');
+		if (!empty($menuId)) {
+			$whereArray = array_merge($whereArray, array('menu_id = ' => $menuId));
+			$urlStr .= empty($menuId) ? '' : '&menu_id=' . $menuId;
+		}
+
+		$this->_paginationStr($urlStr);
+		return $whereArray;
 	}
 }

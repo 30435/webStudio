@@ -42,7 +42,7 @@ function loginpassword(password)
 
 function editpassword()
 {
-	var elems = new Array('oldpassword', 'password', 'password2');
+	/*var elems = new Array('oldpassword', 'password', 'password2');
 
 	var validvalue = '';
 	for (var i = 0; i < elems.length; i++) {
@@ -61,7 +61,7 @@ function editpassword()
 			
 	}
 
-	$("#dosubmit").val("yes");
+	$("#dosubmit").val("yes");*/
 	$("#editpasswordform").submit();
 	return true;
 }
