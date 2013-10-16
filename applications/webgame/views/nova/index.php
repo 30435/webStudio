@@ -22,7 +22,7 @@
     
     <!--------------------------宽度一样的977px---------------------------------------->
     <div class="all">
-    	<div class="ban"><iframe id="frm" src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="1010" height="620" frameborder="0" scrolling="no"></iframe></div>
+    	<div class="ban"><iframe id="frm" src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="960" height="620" frameborder="0" scrolling="no"></iframe></div>
 			<div class="nav_nuowa">
             	<div class="nwbg">
                 	<div class="ser_bar">

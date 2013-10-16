@@ -1,7 +1,7 @@
 <!----------------------------!over-->
 <div class="footer">
 	<div class="foot_con">
-    	<div class="foot_logo fl"></div>
+    	<div class="foot_logo fl"><a href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/logo.png" /></a></div>
         <div class="foot_tent fl">
 			<p class="nav_foot">
 			

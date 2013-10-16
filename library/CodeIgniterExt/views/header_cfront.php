@@ -19,7 +19,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 <body>
 <div class="header">
 	<div class="top">
-    	<h1 class="logo"><a href="#"><span>诺瓦开发团队</span></a></h1>
+    	<h1 class="logo"><a href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/logo.png" /></a></h1>
         <div class="top_links">
         	<ul class="top_links_list">
 				<li><a href="<?php echo $this->categoryInfos['8']['bind_domain']; ?>">诺瓦首页</a>&nbsp;<span>|</span></li>
