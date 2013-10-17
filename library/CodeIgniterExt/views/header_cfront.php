@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css"  href="<?php echo $this->staticUrl; ?>cfront/css/reset.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>cfront/css/chongzhi.css" />
 <script type="text/javascript">
-var passportUrl = "<?php echo $this->baseUrl; ?>";
+var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";
 var webgameUrl = "<?php echo $this->appInfos['webgame']['url']; ?>";
 var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 </script>
@@ -31,7 +31,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/register/">注册</a>&nbsp;<span>|</span></li>
 			<? } ?>
 				<li><a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>&nbsp;<span>|</span></li>
-				<li><a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a></li>
+				<li><a href="javascript: addFavorite(); void(null);">收藏本页</a></li>
             </ul>
         </div>
     </div>

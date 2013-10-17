@@ -27,18 +27,20 @@ function addHomePage()
 
 function addFavorite()
 {
-	if('undefined' == typeof(document.body.style.maxHeight)){
-		alert('添加收藏夹失败，请手动添加');
-	}
 	var location = window.location;
-	var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
-	if (document.all) {		
-		window.external.addFavorite(location, '诺瓦奇兵');			
-	} else if (window.sidebar) {
-		window.sidebar.addPanel('诺瓦奇兵',location, "");
-	} else {
-		alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
-	}
+    try {
+        window.external.addFavorite(location, "诺瓦奇兵-童年神器");
+    } catch (e) {
+	    try{
+	        window.external.addToFavoritesBar(location, "诺瓦奇兵-童年神器", "slice");	 
+		} catch(e) {
+            try {
+                window.sidebar.addPanel("诺瓦奇兵-童年神器", location, "");
+            } catch (e) {
+                alert("非常抱歉，你的浏览器目前还不支持此功能！请在浏览器的收藏夹或者书签菜单里进行手动添加。")
+            }
+		}
+     }
 }
 
 function setNav(index,css)
