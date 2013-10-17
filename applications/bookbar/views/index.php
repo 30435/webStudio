@@ -18,50 +18,21 @@
 				</div>
 				<div class="block a2">
 
-				<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 16), array(array('inputtime', 'desc'))); ?>
-				<?php $i = 1; foreach ($newInfos['infos'] as $newInfo) { ?>
-					<li><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="223px" height="136px" /></a><br /><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><?php echo $controller->cutstr($newInfo['title'], 32); ?></a></li>
-				<?php if ($i == 5 || $i == 10) echo '<li class="line2"></li>'; $i++; } ?>
+				<?php $newInfos = $controller->_getFrontInfos('bookbar', 'book', 1, 16, array(), array(), 'id, name, fcover_small, fcover, description', '', $start = 0); ?>
 
-					<div data-collect-id="42" class="c-1">
+				<?php $mark1 = 41; $mark2 = 0; $j = 0; for ($i = 1; $i < 4; $i++) { ?>
+					<div data-collect-id="<?php echo $mark1++; ?>" class="c-<?php echo $i; ?>">
 						<h3 data-collect-index="1" class="font-songti">
-							<a href="/book/30559" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1">歹毒冥婚，女子殉葬：敛骨人笔记</a>
-							<a href="/book/28812" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1">噬魂藤</a>
+							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
 						</h3>
 						<p data-collect-index="2">
-							<a href="/book/7882" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">培养暧昧：裸恋</a> |
-							<a href="/book/12665" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">看了睡不着觉：夜话</a> |
-							<a href="/book/6746" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">吃喝玩乐减肥法</a><br>
-							<a href="/book/12648" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">谁是下一个木乃伊：离歌</a> |
-							<a href="/book/2347" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">转身之前，离开之后</a> |
-							<a href="/book/8336" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">川帮</a> |
-							<a href="/book/6385" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">复仇魔鬼：手工美人</a> |
-							<a href="/book/819" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">情义自古难兼顾：大漠荒颜</a> |
-							<a href="/book/9253" target="_blank" data-control-type="shelf" boxid="tushu_recommend_2">情难独钟</a>
+							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
+							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> <br>
+							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
+							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
 						</p>
 					</div>
-					<div data-collect-id="43" class="c-2">
-						<h3 data-collect-index="1" class="font-songti">
-							<a href="/book/30744" target="_blank" data-control-type="shelf" boxid="tushu_recommend_3">若你我从此孤独终老</a>
-							<a href="/book/1472" target="_blank" data-control-type="shelf" boxid="tushu_recommend_3">致青春：极端优雅的少年</a>
-						</h3>
-						<p data-collect-index="2">
-							<a href="/book/9556" target="_blank" data-control-type="shelf" boxid="tushu_recommend_4">经营之神：优衣库总裁 柳井正全传</a> |
-							<a href="/book/867" target="_blank" data-control-type="shelf" boxid="tushu_recommend_4">两性对话：试婚</a> |
-							<a href="/book/16653" target="_blank" data-control-type="shelf" boxid="tushu_recommend_4">一个鬼故事爱好者的寻鬼之路：我身边的鬼故事</a><br>
-						</p>
-					</div>
-					<div data-collect-id="44" class="c-3">
-						<h3 data-collect-index="1" class="font-songti">
-							<a href="/book/9465" target="_blank" data-control-type="shelf" boxid="tushu_recommend_5">物欲横流：剩女当嫁</a>
-							<a href="/book/68" target="_blank" data-control-type="shelf" boxid="tushu_recommend_5">梅子黄时雨：江南恨</a>
-						</h3>
-						<p data-collect-index="2">
-							<a href="/book/6754" target="_blank" data-control-type="shelf" boxid="tushu_recommend_6">此后，不再爱你</a> |
-							<a href="/book/776" target="_blank" data-control-type="shelf" boxid="tushu_recommend_6">心动千年：鸾，我的前半生，我的后半生3</a> |
-							<a href="/book/9171" target="_blank" data-control-type="shelf" boxid="tushu_recommend_6">地上住孙子，地下住祖宗：地上地下</a><br>
-						</p>
-					</div>
+				<?php } ?>
 				</div>
 				<div class="block a3">
 					<ul class="tabs">
@@ -69,46 +40,22 @@
 						<li data-cid="46">推荐榜</li>
 						<li data-cid="47" class="last">订阅榜</li>
 					</ul>
-					<ul data-collect-id="45" class="list" style="display: block;">
+					<?php $newInfos = $controller->_getFrontInfos('bookbar', 'book', 1, 30, array(), array(), 'id, name, fcover_small, fcover, description, author', '', $start = 0); ?>
+					<?php $mark1 = 44; $j = -1; for ($i = 1; $i < 4; $i++) { ?>
+					<ul data-collect-id="<?php echo $mark1++; ?>" class="list" style="display: block;">
 						<li class="top">
-							<a class="fb pic" data-collect-index="1" target="_blank" href="/book/12383"><img width="50" height="70" src="http://img.motieimg.com/book/12383s1.jpg"></a>
+							<a class="fb pic" data-collect-index="1" target="_blank" href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>"><img width="50" height="70" src="<?php echo $newInfos['infos'][$j]['fcover']; ?>"></a>
 							<span style="position: relative; top: 7px;">
-								<a href="/book/12383" data-collect-index="1" class="fb" target="_blank">必须犯规的游戏</a>
-								<span class="author">作者：<a class="deep-blue fz-12" href="/people/151016" target="_blank">宁航一V</a></span>
+								<a href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" data-collect-index="1" class="fb" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a>
+								<span class="author">作者：<a class="deep-blue fz-12" href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank"><?php echo $newInfos['infos'][$j]['author']; ?></a></span>
 							</span>
 						</li>
-						<?php for ($i = 1; $i < 10; $i++) { ?>					
-						<li><a href="/book/691" data-collect-index="2" target="_blank">黑档案：东北第一黑帮覆灭记</a></li>
+						<?php for ($z = 1; $z < 10; $z++) { $j++; ?>					
+						<li><a href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" data-collect-index="2" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a></li>
 						<?php } ?>
-						<li class="more"><a target="_blank" data-collect-index="11" href="/top10/dianji/tushu/day">·更多</a></li>
+						<li class="more"><a target="_blank" data-collect-index="11" href="javascript: void(0);">·更多</a></li>
 					</ul>
-
-					<ul data-collect-id="46" class="list" style="display: block;">
-						<li class="top">
-							<a class="fb pic" data-collect-index="1" target="_blank" href="/book/12383"><img width="50" height="70" src="http://img.motieimg.com/book/30559s1.jpg"></a>
-							<span style="position: relative; top: 7px;left:5px">
-								<a href="/book/12383" data-collect-index="1" class="fb" target="_blank">敛骨人笔记</a>
-								<span class="author">作者：<a class="deep-blue fz-12" href="/people/151016" target="_blank">唐兜</a></span>
-							</span>
-						</li>
-						<?php for ($i = 1; $i < 10; $i++) { ?>					
-						<li><a href="/book/691" data-collect-index="2" target="_blank">黑档案：东北第一黑帮覆灭记</a></li>
-						<?php } ?>
-						<li class="more"><a target="_blank" data-collect-index="11" href="/top10/dianji/tushu/day">·更多</a></li>
-					</ul>
-					<ul data-collect-id="47" class="list" style="display: block;">
-						<li class="top">
-							<a class="fb pic" data-collect-index="1" target="_blank" href="/book/12383"><img width="50" height="70" src="http://img.motieimg.com/book/691s2.jpg"></a>
-							<span style="position: relative; top: 7px;">
-								<a href="/book/12383" data-collect-index="1" class="fb" target="_blank">黑档案：东北第一黑帮覆灭记</a>
-								<span class="author">作者：<a class="deep-blue fz-12" href="/people/151016" target="_blank">唐兜</a></span>
-							</span>
-						</li>
-						<?php for ($i = 1; $i < 10; $i++) { ?>					
-						<li><a href="/book/691" data-collect-index="2" target="_blank">黑档案：东北第一黑帮覆灭记</a></li>
-						<?php } ?>
-						<li class="more"><a target="_blank" data-collect-index="11" href="/top10/dianji/tushu/day">·更多</a></li>
-					</ul>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

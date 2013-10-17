@@ -39,7 +39,7 @@ $(document).ready(function(){
 			if (userid > 1) {
 				$("#getuserid").val(userid);
 				var serverId = $("#serverId").val();
-				checkServerUser(username, serverId);
+				//checkServerUser(username, serverId);
 				return true;
 			}
 			return "该用户名不存在，请更换用户名";

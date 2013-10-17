@@ -39,7 +39,7 @@ function paysubmit()
 				var dialogError = window.top.art.dialog({time:3, title: '我是对话框', content: '充值信息有误，请重新填写！', lock: true});
 				dialogError.content('充值信息有误，请重新填写！');
 			} else {
-				var dialog = window.top.art.dialog({id: 'payWindow123',title: false, lock: true});
+				var dialog = window.top.art.dialog({id: 'payWindow123',title: false, lock: true, width: 410, height: 250});
 				dialog.content(data);
 			}
 		},

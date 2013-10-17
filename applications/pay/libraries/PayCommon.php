@@ -23,7 +23,7 @@ class PayCommon
     	$buttonStr = $this->getButton($orderInfo);
     	$javascriptStr = 'javascript: confirmPay();void(0);';
     	$returnButton = '<a href="javascript: art.dialog.list[\'payWindow123\'].close();void(0);" class="modification_btn mt15"></a>';
-    	$buttonStr .= "<input type='submit' onclick='javascript: confirmPay();' value='确定' class='affirm_btn' id='confirmPayButton' style='border:none;cursor:pointer;' />{$returnButton}</form>";
+    	$buttonStr .= "<input type='submit' onclick='javascript: confirmPay();' value='确定'  class='aff_btn' id='confirmPayButton' style='border:none;cursor:pointer;' />{$returnButton}</form>";
 
     	return $buttonStr;
     }

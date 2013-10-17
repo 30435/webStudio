@@ -549,3 +549,11 @@ table tr{height:50px;}
     font-weight: bold;
 }
 .ui_table tr{height:30px;}
+
+
+
+
+/**************************充值结果页面*********************/
+.list_re{width:500px;margin:0 auto;padding-top:30px;}
+.list_re li span{width:140px;height:20px;display:inline-block;line-height:30px;text-align:right;}
+.list_re li input{width:200px;height:18px;border:1px solid #CCC;margin-top:10px;}

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+ul li{list-style:none;}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	position: fixed;
+}
+
+.boxy-inner {
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 2px 2px 2px 2px;
+    padding: 0;
+}
+.pop_wrap{width:400px;}
+
+.pop_hd {
+    background: url("../images/repeat_box.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 2px 2px 0 0;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0 10px;
+    position: relative;
+}
+
+.pop_hd h3 {
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 32px;
+    line-height:3px;
+}
+.close {
+    background: url("../images/sprite_global.png") no-repeat scroll -422px -74px rgba(0, 0, 0, 0);
+    display: block;
+    height: 18px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 18px;
+}
+.pop_close span {
+    display: none;
+}
+.pop_bd {
+    padding: 20px 0;
+}
+.pob_info_list {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.pob_info_list li {
+    display: block;
+    line-height: 28px;
+    padding-left: 180px;
+    position: relative;
+}
+
+.pob_info_list li label {
+    display: block;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 170px;
+}
+.pop_btns {
+    text-align: center;
+    width: 100%;
+	padding:0 105px 25px;
+}
+.aff_btn{border:none;cursor:pointer;width:80px;height:30px;background:url(../images/bb.jpg) no-repeat center;}
+.pop_btns form{float:left;width:100px;}
+.ui_btn {
+    background: url("../images/aa.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+	width:80px;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+	float:left;
+}
+.ui_btn span {
+    font-size: 12px;
+    line-height: 28px;
+    padding-right: 20px;
+    position: relative;
+    right: -20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    top: 0;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.close span{display:none;}

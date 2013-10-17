@@ -31,6 +31,10 @@ class Index extends Custom_Controller
 		$this->prefix = '';
 	}
 
+	public function test()
+	{
+		$this->load->view('payResult'); 
+	}
 	/**
 	 * Account to user
 	 *
