@@ -2,8 +2,8 @@ applications/config_application.php
 applications/config_database.php
 applications/config_public.php
 
-applications/*/cache/
-applications/*/config/config.php
+/applications/*/cache/
+/applications/*/config/config.php
 applications/passport/config/config_passport.php
 applications/pay/config/config_pay.php
 applications/webgame/libraries/config
