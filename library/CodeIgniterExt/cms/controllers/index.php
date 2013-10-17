@@ -71,27 +71,6 @@ class CmsIndex extends Custom_Controller
 	}
 
 	/**
-	 * The pagination config infos
-	 *
-	 * @return array config infos
-	 */
-	protected function _paginationConfig()
-	{
-		$config['per_page'] = 15; // Max number of items you want shown per page
-		$config['num_links'] =  5; // Number of "digit" links to show before/after the currently viewed page
-		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
-		$config['next_link'] = '&gt;&gt;';
-		$config['prev_link'] = '&lt;&lt;';
-		$config['uri_segment'] = 4;
-		$config['cur_tag_open'] = '<span>';
-		$config['cur_tag_close'] = '</span>';
-		$config['page_query_string'] = TRUE;
-		$config['query_string_segment'] = 'page';
-	
-		return $config;
-	}
-
-	/**
 	 * Get the where clause
 	 *
 	 * @return array | null

@@ -191,27 +191,6 @@ class Index extends Custom_Controller
 	{
 		$this->load->view($this->prefix . 'mypaymonth');
 	}
-	
-	/**
-	 * The pagination config infos
-	 *
-	 * @return array config infos
-	 */
-	protected function _paginationConfig()
-	{
-		$config['per_page'] = 15; // Max number of items you want shown per page
-		$config['num_links'] =  5; // Number of "digit" links to show before/after the currently viewed page
-		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
-		$config['next_link'] = '&gt;&gt;';
-		$config['prev_link'] = '&lt;&lt;';
-		$config['uri_segment'] = 4;
-		$config['cur_tag_open'] = '&nbsp;<span>&nbsp;';
-		$config['cur_tag_close'] = '&nbsp;</span>&nbsp;';
-		$config['page_query_string'] = TRUE;
-		$config['query_string_segment'] = 'page';
-	
-		return $config;
-	}
 
 	protected function _where($isPay = false)
 	{

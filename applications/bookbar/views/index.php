@@ -4,26 +4,25 @@
 		<div id="Billboard" class="mod">
 			<div class="bd">
 				<div data-collect-id="41" class="block a1">
+				<?php $coverSmallStr = $coverStr = $bookInfoStr = ''; $newInfos = $controller->_getFrontInfos('bookbar', 'book', 1, 4, array(), array(), 'id, name, fcover_small, fcover, description', '', $start = 0); ?>
+				<?php foreach ($newInfos['infos'] as $newInfo) { 
+					$coverSmallStr .= '<li data-collect-index="1" class=""><img width="41" height="57" alt="' . $newInfo['name'] . '" src="' . $newInfo['fcover'] . '"></li>';
+					$coverStr .= '<div class="tabs-content" style="display: none;"><a data-collect-index="1" href="' . $newInfo['fcover'] . '" target="_blank"><img width="200" height="280" alt="' . $newInfo['name'] . '" src="' . $newInfo['fcover'] . '"></a></div>';
+					$bookInfoStr .= '<div class="tabs-content-2" style="display: none;"><h3><a data-collect-index="1" href="' . $newInfo['fcover'] . '" data-control-type="shelf" boxid="slider_classic" target="_blank">' . $newInfo['name'] . '</a></h3><p><a data-collect-index="1" href="' . $newInfo['fcover'] . '" target="_blank">' . $newInfo['fcover'] . '<img alt="打开" src="' . $this->staticUrl . 'bookbar/images/li-6.gif"></a></p></div>';
+				} ?>
 					<div class="tabs">
-						<ul class="list">
-							<?php for ($i = 1; $i < 5; $i++) { ?>
-							<li data-collect-index="1" class=""><img width="41" height="57" alt="大圈" src="http://img.motieimg.com/book/825s3.jpg"></li>
-							<?php } ?>		
-						</ul>
-						<?php for ($i = 1; $i < 5; $i++) { ?>
-						<div class="tabs-content" style="display: none;">
-							<a data-collect-index="1" href="/book/825" target="_blank"><img width="200" height="280" alt="大圈" src="http://img.motieimg.com/book/825l3.jpg"></a>
-						</div>
-						<?php } ?>	
+						<ul class="list"><?php echo $coverSmallStr; ?></ul>
+						<?php echo $coverStr; ?>	
 					</div>
-					<?php for ($i = 1; $i < 5; $i++) { ?>
-					<div class="tabs-content-2" style="display: none;">
-						<h3><a data-collect-index="1" href="/book/825" data-control-type="shelf" boxid="slider_classic" target="_blank">大圈</a></h3>
-						<p><a data-collect-index="1" href="/book/825" target="_blank">中国没有真正意义上的黑社会，但是中国人在这个世界上的地下秩序中却并非毫无发言权！<img alt="打开" src="http://img.motieimg.com/_assets/li-6.gif"></a></p>
-					</div>
-					<?php } ?>
+					<?php echo $bookInfoStr; ?>
 				</div>
 				<div class="block a2">
+
+				<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 16), array(array('inputtime', 'desc'))); ?>
+				<?php $i = 1; foreach ($newInfos['infos'] as $newInfo) { ?>
+					<li><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="223px" height="136px" /></a><br /><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><?php echo $controller->cutstr($newInfo['title'], 32); ?></a></li>
+				<?php if ($i == 5 || $i == 10) echo '<li class="line2"></li>'; $i++; } ?>
+
 					<div data-collect-id="42" class="c-1">
 						<h3 data-collect-index="1" class="font-songti">
 							<a href="/book/30559" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1">歹毒冥婚，女子殉葬：敛骨人笔记</a>

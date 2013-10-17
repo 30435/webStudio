@@ -10,4 +10,4 @@
     <!------------over!!!!--------------->
     <div><img src="<?php echo $this->staticUrl; ?>cfront/images/zx_05.jpg" /></div>
    </div>
-<?php echo $this->load->view('cfront/footer'); ?>
+<?php echo $this->load->view('footer_cfront'); ?>

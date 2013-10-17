@@ -708,6 +708,27 @@ class CommonController extends CI_Controller
 			$this->member_webgameModel->editInfo($data, $where);
 		}
 	}
+	
+	/**
+	 * The pagination config infos
+	 *
+	 * @return array config infos
+	 */
+	protected function _paginationConfig()
+	{
+		$config['per_page'] = 15; // Max number of items you want shown per page
+		$config['num_links'] =  5; // Number of "digit" links to show before/after the currently viewed page
+		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
+		$config['next_link'] = '&gt;&gt;';
+		$config['prev_link'] = '&lt;&lt;';
+		$config['uri_segment'] = 4;
+		$config['cur_tag_open'] = '&nbsp;<span>&nbsp;';
+		$config['cur_tag_close'] = '&nbsp;</span>&nbsp;';
+		$config['page_query_string'] = TRUE;
+		$config['query_string_segment'] = 'page';
+	
+		return $config;
+	}
 
 	/**
 	 * Get the logined user money info
@@ -769,12 +790,22 @@ class CommonController extends CI_Controller
 	 * Get the infos 
 	 *
 	 */
-	public function _getFrontInfos($appCode, $table, $page = 1, $pageSize = 15,  $where = array(), $order = array(),$fields = '*', $keyField = '') //($appCode, $table, $keyField, $page = 1, $pageSize = 15, $where = array(), $order = array())
+	public function _getFrontInfos($appCode, $table, $page = 1, $pageSize = 15,  $where = array(), $order = array(), $fields = '*', $keyField = '', $start = 0, $withPage = false, $urlForward = '') 
 	{
 		$model = $table . 'Model';
 
 		$this->_loadModel($appCode, $model);
-		$infos = $this->$model->getInfos($table, $where, $order, $page, $pageSize, $fields, $keyField);
+		$infos = $this->$model->getInfos($table, $where, $order, $page, $pageSize, $fields, $keyField, $start);
+
+		if ($withPage) {
+			$this->load->library('pagination');
+			$paginationInfos = $this->_paginationConfig();
+			$paginationInfos['base_url'] = $urlForward;
+			$paginationInfos['total_rows'] = $infos['num'];
+			$this->pagination->initialize($paginationInfos);
+			$this->pageStr = '<a>' . $infos['num'] . '条</a>   <a>第<b>' . $page . '</b>页/总' . ceil($infos['num'] / $pageSize) . '页</a>    ';
+			$this->pageStr .= $this->pagination->create_links();
+		}
 		return $infos;
 	}
 }

@@ -82,10 +82,10 @@ abstract class CommonModel extends CI_Model
 	 * @param  int $pageSize the numbers of every page
 	 * @return array the infos
 	 */
-	public function getInfos($table, $where = array(), $order = array(), $page = 1, $pageSize = 15, $fields = '*', $keyField = '')
+	public function getInfos($table, $where = array(), $order = array(), $page = 1, $pageSize = 15, $fields = '*', $keyField = '', $start = 0)
 	{
 		$table = empty($table) ? $this->table : $table;
-		$start = ($page - 1) * $pageSize;
+		$start = empty($start) ? ($page - 1) * $pageSize : $start;
 	
 		if (!empty($where)) {
 			$this->currentDb->where($where);
