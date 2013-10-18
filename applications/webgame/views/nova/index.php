@@ -88,7 +88,7 @@ function searchFunc()
 						</ul>
 					</div>
 					<div class="lt_nuowa0_r_z">
-						<p><a href="<?php echo $this->categoryInfos[13]['url']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit0.jpg" /></a></p>
+						<p><a href="<?php echo $this->categoryInfos[13]['url']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit10.jpg" /></a></p>
 						<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 16, array('catid' => 13), array(array('inputtime', 'desc'))); $newInfos = $newInfos['infos'];?>
 						<p class="nuowa_gl">
 							<h2><a target="_blank" href="<?php echo $newInfos[0]['url']; ?>" title="<?php echo $newInfos[0]['title']; ?>"><?php echo $controller->cutstr($newInfos[0]['title'], 40); ?></a></h2>
@@ -112,7 +112,7 @@ function searchFunc()
 				</div>
 				<div class="lt_nuowa0_r_z_up bot">
 					<div class="lt_nuowa0_r_z">
-						<p><a href="<?php echo $this->categoryInfos[12]['url']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit0.jpg" /></a></p>
+						<p><a href="<?php echo $this->categoryInfos[12]['url']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit11.jpg" /></a></p>
 						<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 16, array('catid' => 12), array(array('inputtime', 'desc'))); $newInfos = $newInfos['infos'];?>
 						<p class="nuowa_gl">
 							<h2><a target="_blank" href="<?php echo $newInfos[0]['url']; ?>" title="<?php echo $newInfos[0]['title']; ?>"><?php echo $controller->cutstr($newInfos[0]['title'], 40); ?></a></h2>
@@ -134,7 +134,7 @@ function searchFunc()
 						</ul>
 					</div>
 					<div class="lt_nuowa0_r_z">
-						<p><a href="<?php echo $this->categoryInfos[17]['url']; ?>" target="_blank"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit0.jpg" /></a></p>
+						<p><a href="<?php echo $this->categoryInfos[17]['url']; ?>" target="_blank"><img src="<?php echo $this->staticUrl; ?>cfront/images/pic_tit12.jpg" /></a></p>
 						<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 16, array('catid' => 17), array(array('inputtime', 'desc'))); $newInfos = $newInfos['infos'];?>
 						<p class="nuowa_gl">
 							<h2><a target="_blank" href="<?php echo $newInfos[0]['url']; ?>" title="<?php echo $newInfos[0]['title']; ?>"><?php echo $controller->cutstr($newInfos[0]['title'], 40); ?></a></h2>

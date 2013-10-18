@@ -38,7 +38,7 @@ $(document).ready(function(){
 			if (userid > 1) {
 				$("#getuserid").val(userid);
 				var serverId = $("#serverId").val();
-				checkServerUser(username, serverId);
+				//checkServerUser(username, serverId);
 				return true;
 			}
 			return "该用户名不存在，请更换用户名";
@@ -137,7 +137,7 @@ $(document).ready(function(){
 					<li class="form_list_li" id="moneyInfo">
 						<label class="lbl">充值诺币数：</label>
 						<div class="txt_wrap">
-							<input type="text" maxlength="15" class="txt txt_num" name="money" id="money" style="width:175px;">
+							<input type="text" maxlength="15" class="txt0 txt_num" name="money" id="money" style="width:175px;">
 							<div class="txt_tips"><span id="moneyTip"></span></div>
 						</div>
 					</li>
@@ -157,6 +157,7 @@ $(document).ready(function(){
         
     </div>
 </div>
+	<div class="clear"></div>
 <script language="javascript">
 $("#money").change( function() {
 	$("#moneyShow").text($("#money").val());
