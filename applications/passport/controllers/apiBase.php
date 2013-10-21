@@ -52,8 +52,8 @@ abstract class ApiBase extends Custom_Controller
 		}*/
 
 		$this->load->library('session');
-		$currentCaptcha = $this->session->userdata('frontCaptcha');
-		if ($captcha != $currentCaptcha) {
+		$currentCaptcha = $this->session->userdata('frontCaptcha');	
+		if (strtolower($captcha) != strtolower($currentCaptcha)) {
 			$this->returnResult('10011');
 		}
 		$this->session->unset_userdata('frontCaptcha');

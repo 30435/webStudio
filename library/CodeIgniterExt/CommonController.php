@@ -59,7 +59,7 @@ class CommonController extends CI_Controller
 		$targetCheckCode = $this->session->userdata($codeVar);
 		$checkCode = $this->input->get_post($codeVar);
 
-		$isValid = $checkCode == $targetCheckCode ? true : false;
+		$isValid = strtolower($checkCode) == strtolower($targetCheckCode) ? true : false;
 		$isAjax = $this->input->get('isajax');
 		if ($isAjax == 'yes') {
 			$resultStr = $isValid ? 'yes' : 'no';

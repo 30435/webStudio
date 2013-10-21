@@ -1,11 +1,12 @@
 function att_show(serverData,file)
 {
-	var serverData = serverData.replace(/<div.*?<\/div>/g,'');
+	var serverData = serverData.replace(/<div.*?<\/div>/g,'');  alert(serverData);
 	var data = serverData.split(',');
 	var id = data[0];
 	var src = data[1];
 	var ext = data[2];
 	var filename = data[3];
+	var serverApi = data[4];
 	if(id == 0) {
 		alert(src)
 		return false;
@@ -15,7 +16,7 @@ function att_show(serverData,file)
 	} else {
 		var img = '<a href="javascript:;" onclick="javascript:att_cancel(this,'+id+',\'upload\')" class="on"><div class="icon"></div><img src="statics/images/ext/'+ext+'.png" width="80" imgid="'+id+'" path="'+src+'" title="'+filename+'"/></a>';
 	}
-	$.get('http://passport.ci.com/attachment/swfupload_json?aid='+id+'&src='+src+'&filename='+filename);
+	$.get(serverApi + '?aid='+id+'&src='+src+'&filename='+filename); //'http://passport.ci.com/attachment/swfupload_json?aid='
 	$('#fsUploadProgress').append('<li><div id="attachment_'+id+'" class="img-wrap"></div></li>');
 	$('#attachment_'+id).html(img);
 	$('#att-status').append('|'+src);

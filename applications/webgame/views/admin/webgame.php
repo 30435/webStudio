@@ -170,7 +170,7 @@ $(function(){
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 		  <input type="text" name="pic_small" id="pic_small" value="<?php if (isset($this->currentInfo['pic_small'])) echo $this->currentInfo['pic_small']; ?>" size="50" class="" />  
-		  <input type="button" class="button" onclick="javascript:flashupload('image_images', '附件上传','pic_small',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
+		  <input type="button" class="button" onclick="javascript:flashupload('<?php echo $this->appInfos['passport']['url'];?>attachment/swfupload?', 'image_images', '附件上传','pic_small',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
 		</td>
       </tr>
 	  <tr>
@@ -178,7 +178,7 @@ $(function(){
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 		  <input type="text" name="pic_middle" id="pic_middle" value="<?php if (isset($this->currentInfo['pic_middle'])) echo $this->currentInfo['pic_middle']; ?>" size="50" class="" />  
-		  <input type="button" class="button" onclick="javascript:flashupload('image_images', '附件上传','pic_middle',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
+		  <input type="button" class="button" onclick="javascript:flashupload('<?php echo $this->appInfos['passport']['url'];?>attachment/swfupload?', 'image_images', '附件上传','pic_middle',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
 		</td>
       </tr>
 	  <tr>
@@ -186,7 +186,7 @@ $(function(){
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 		  <input type="text" name="pic_big" id="pic_big" value="<?php if (isset($this->currentInfo['pic_big'])) echo $this->currentInfo['pic_big']; ?>" size="50" class="" />  
-		  <input type="button" class="button" onclick="javascript:flashupload('image_images', '附件上传','pic_big',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
+		  <input type="button" class="button" onclick="javascript:flashupload('<?php echo $this->appInfos['passport']['url'];?>attachment/swfupload?', 'image_images', '附件上传','pic_big',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
 		</td>
       </tr>
       <tr>

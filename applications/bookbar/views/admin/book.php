@@ -127,7 +127,7 @@ $(function(){
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 		  <input type="text" name="fcover_small" id="fcover_small" value="<?php if (isset($this->currentInfo['fcover_small'])) echo $this->currentInfo['fcover_small']; ?>" size="50" class="" />  
-		  <input type="button" class="button" onclick="javascript:flashupload('image_images', '附件上传','fcover_small',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
+		  <input type="button" class="button" onclick="javascript:flashupload('<?php echo $this->appInfos['passport']['url'];?>attachment/swfupload?', 'image_images', '附件上传','fcover_small',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
 		</td>
       </tr>
 	  <tr>
@@ -135,7 +135,7 @@ $(function(){
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 		  <input type="text" name="fcover" id="fcover" value="<?php if (isset($this->currentInfo['fcover'])) echo $this->currentInfo['fcover']; ?>" size="50" class="" />  
-		  <input type="button" class="button" onclick="javascript:flashupload('image_images', '附件上传','fcover',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
+		  <input type="button" class="button" onclick="javascript:flashupload('<?php echo $this->appInfos['passport']['url'];?>attachment/swfupload?', 'image_images', '附件上传','fcover',submit_images,'1,jpg|jpeg|gif|bmp|png,1,,,0','content','','5afc0afaab383b2983ada373112bad77')"/ value="上传图片">
 		</td>
       </tr>
       <tr>
