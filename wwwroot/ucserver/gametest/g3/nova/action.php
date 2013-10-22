@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $configInfos = require '../config.php';
 
 $action = $_POST['action'];

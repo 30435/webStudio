@@ -1,4 +1,4 @@
-﻿<?php $this->load->view('header_admin') ?>
+<?php $this->load->view('header_admin') ?>
 <div id="closeParentTime" style="display:none"></div>
 <SCRIPT LANGUAGE="JavaScript">
 <!--

@@ -42,13 +42,13 @@ class Base_Controller extends CommonController
 		$this->currentCategoryInfo = isset($this->categoryInfos[$this->catid]) ? $this->categoryInfos[$this->catid] : false;
 		
 		if (empty($this->currentCategoryInfo)) {
-			$this->_messageInfo('À¸Ä¿²»´æÔÚ£¡');
+			$this->_messageInfo('æ ç›®ä¸å­˜åœ¨ï¼');
 		}
 
 		$modelid = isset($this->currentCategoryInfo['modelid']) ? $this->currentCategoryInfo['modelid'] : false;
 		$this->modelInfo = isset($this->modelInfos[$modelid]) ? $this->modelInfos[$modelid] : false;
 		if (empty($this->modelInfo)) {
-			$this->_showMessage('Ä£ÐÍ´íÎó£¡');
+			$this->_showMessage('æ¨¡åž‹é”™è¯¯ï¼');
 		}
 		$this->_initCurrentModel($this->modelInfo['table']);
 	}

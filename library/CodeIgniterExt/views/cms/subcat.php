@@ -1,4 +1,4 @@
-﻿<?php $this->load->view('header_admin') ?>
+<?php $this->load->view('header_admin') ?>
 <link type="text/css" href="<?php echo $this->staticUrl; ?>admin/css/jquery.treeview.css" rel="stylesheet">
 <script src="<?php echo $this->staticUrl; ?>common/script/jquery.cookie.js" type="text/javascript"></script>
 <script src="<?php echo $this->staticUrl; ?>common/script/jquery.treeview.js" type="text/javascript"></script>

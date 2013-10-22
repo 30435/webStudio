@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $action = $_POST['action'];
 if ($action == 'login') {
 	$username = $_POST['username'];

@@ -1,4 +1,4 @@
-﻿<?php $this->load->view('header_admin') ?>
+<?php $this->load->view('header_admin') ?>
 <script type="text/javascript">
 <!--
 	var charset = 'utf-8';

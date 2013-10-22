@@ -38,7 +38,7 @@ class CmsIndex extends Custom_Controller
 			$paginationInfos['base_url'] = strpos($this->urlForward, '?') !== false ? $this->urlForward : $this->urlForward . '?';
 			$paginationInfos['total_rows'] = $result['num'];
 			$this->pagination->initialize($paginationInfos);
-			$this->pageStr = '<a>' . $result['num'] . 'Ìõ</a>   <a>µÚ<b>' . $currentPage . '</b>Ò³/×Ü' . ceil($result['num'] / $pageSize) . 'Ò³</a>    ';
+			$this->pageStr = '<a>' . $result['num'] . 'æ¡</a>   <a>ç¬¬<b>' . $currentPage . '</b>é¡µ/æ€»' . ceil($result['num'] / $pageSize) . 'é¡µ</a>    ';
 			$this->pageStr .= $this->pagination->create_links();
 		}
 

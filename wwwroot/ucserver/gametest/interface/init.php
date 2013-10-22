@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 $webgameCodes = array('nova', 'nobao', 'nobei', 'noha', 'noya');
 $webgameCode = $_GET['code'];
 

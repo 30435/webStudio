@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require './init.php';
 
 $action = $_GET['action'];
