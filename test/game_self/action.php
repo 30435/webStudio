@@ -69,7 +69,7 @@ function getResult($string, $url, $interfaceType, $configInfos)
 		$returnStr = substr($returnStr, 3);
 	}
 	
-	$result = json_decode($returnStr, true); //var_dump($url); var_dump($returnStr); var_dump($result);
+	$result = json_decode($returnStr, true); var_dump($url); var_dump($returnStr); var_dump($result);
 	return $result;
 }
 

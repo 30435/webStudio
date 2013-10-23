@@ -50,3 +50,16 @@ INSERT INTO `studio_passport`.`sp_aid_cre` (`aid`) SELECT `aid` FROM `nova`.`aid
 
 INSERT INTO `studio_passport`.`sp_aid_crebak` (`id`, `aid`, `aid_status`, `email`) 
 SELECT `id`, `aid`, `aid_status`, `email`  FROM `studio_passport`.`sp_aid_cre` WHERE `aid_status` = 0 LIMIT 2000;
+
+
+TRUNCATE `studio_webgame`.`sw_member_webgame`;
+TRUNCATE `studio_webgame`.`sw_record`;
+TRUNCATE `studio_pay`.`sp_member_pay`;
+TRUNCATE `studio_pay`.`sp_account_unusual`;
+TRUNCATE `studio_pay`.`sp_account`;
+TRUNCATE `studio_pay`.`sp_pay`;
+TRUNCATE `studio_ucserver`.`su_memberfields`;
+TRUNCATE `studio_ucserver`.`su_members`;
+TRUNCATE `studio_passport`.`sp_member`;
+
+UPDATE `studio_passport`.`sp_aid_cre` SET `aid_status` = 0;
