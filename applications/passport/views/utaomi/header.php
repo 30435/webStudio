@@ -7,8 +7,8 @@
 <meta name="keywords" content="<?php $this->metaDatas['keywords']; ?>" />
 <meta name="description" content="<?php $this->metaDatas['description']; ?>" />
 <link type="image/ico" rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/style.css" />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/member.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/base.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/account.css" />
 <script type="text/javascript">
 var passportUrl = "<?php echo $this->baseUrl; ?>";
 var webgameUrl = "<?php echo $this->appInfos['webgame']['url']; ?>";
@@ -89,11 +89,14 @@ $(".gonggao-close").click(function() {
 <div class="top-bar">
 	<ul class="in-bar">
 		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>" id="account_index" class="no-underline" hidefocus="true"><span class="spanout-bar">首页</span></a></li>
-        <?php if (empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li><?php } ?>
+    <?php if (empty($this->loginedUserInfo)) { ?>
+		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li>
+		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
+		<li class="bar"><a href="/appeal" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
+	<?php }  else { ?>
         <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
-        <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
-        <?php if (!empty($this->loginedUserInfo)) { ?><li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li><?php } ?>
-        <!--<li class="bar"><a href="/appeal" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
-        <li class="bar"><a href="/classroom" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>-->
+        <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li>
+	<?php } ?>
+        <li class="bar"><a href="/classroom" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>
 	</ul>
 </div>

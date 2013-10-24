@@ -2,4 +2,13 @@
 
 class Index extends Custom_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+	public function index()
+	{
+		header('Location:' . $this->appInfos['passport']['url'] . 'uwebgame/');
+	}
 }
