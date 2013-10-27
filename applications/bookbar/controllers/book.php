@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 require_once BASEPATH_EXT . 'cms/controllers/index.php';
-
-class Index extends CmsIndex
+echo 's';
+class Book extends CmsIndex
 {
 	public function __construct()
 	{
@@ -15,13 +15,18 @@ class Index extends CmsIndex
 		$this->load->view('index', $this->frontController);
 	}
 
-	public function festival()
+	public function chapter()
 	{
-		$this->load->view('festival', $this->frontController);
+		$this->load->view('book_chapter', $this->frontController);
+	}
+	
+	public function content()
+	{
+		$this->load->view('book_content', $this->frontController);
 	}
 
 	public function show()
 	{
-		$this->load->view('show', $this->frontController);
+		$this->load->view('book_show', $this->frontController);
 	}
 }
