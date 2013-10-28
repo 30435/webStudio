@@ -92,7 +92,7 @@ $(".gonggao-close").click(function() {
     <?php if (empty($this->loginedUserInfo)) { ?>
 		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/register" id="account_register" class="no-underline" hidefocus="true"><span class="spanout-bar">申请米米号</span></a></li>
 		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/getpwd" id="account_forget" class="no-underline" hidefocus="true"><span class="spanout-bar">找回密码</span></a></li>
-		<li class="bar"><a href="/appeal" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
+		<li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/apply" id="account_appeal" class="no-underline"hidefocus="true"><span class="spanout-bar">密码申诉</span></a></li>
 	<?php }  else { ?>
         <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
         <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li>
