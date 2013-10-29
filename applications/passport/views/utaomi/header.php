@@ -97,6 +97,6 @@ $(".gonggao-close").click(function() {
         <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/safe" id="account_protect" class="no-underline" hidefocus="true"><span class="spanout-bar">密码保护</span></a></li>
         <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/editpwd" id="account_change" class="no-underline"hidefocus="true"><span class="spanout-bar">修改密码</span></a></li>
 	<?php } ?>
-        <li class="bar"><a href="/classroom" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>
+        <li class="bar"><a href="<?php echo $this->baseUrl . $this->prefix; ?>/sinfo" id="account_classroom" class="no-underline" hidefocus="true"><span class="spanout-bar">安全学堂</span></a></li>
 	</ul>
 </div>

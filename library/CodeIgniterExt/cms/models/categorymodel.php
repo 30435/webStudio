@@ -25,6 +25,7 @@ abstract class CmsCategoryModel extends CommonModel
 			'page_default' => array('key' => 'page_default', 'value' => '标准单网页模板'),
 			'page_aboutus' => array('key' => 'page_aboutus', 'value' => '单网页模板_关于我们'),
 			'page_service' => array('key' => 'page_service', 'value' => '单网页模板_服务条款'),
+			'page_aptitude' => array('key' => 'page_aptitude', 'value' => '单网页模板_资质'),
 			'list' => array('key' => 'list', 'value' => '标准列表页模板'),
 			'list_big' => array('key' => 'list_big', 'value' => '标准大栏目模板'),
 			'list_mid' => array('key' => 'list_mid', 'value' => '标准中栏目模板'),

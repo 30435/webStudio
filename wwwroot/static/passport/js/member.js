@@ -104,6 +104,38 @@ function checkseccode(seccode)
 	});	
 }
 
+function getpwdAccount()
+{
+	var account = $("#account").val();
+	var accountType = $(':input[name="accountType"][checked]').val();
+
+	if (account == '') {
+		$("#accountNote").show().children("span").text("账号信息不能为空！");
+		$("#username").val("no");
+		return false;
+	}
+
+	$.ajax({
+		type: "get",		//使用get方法访问后台  
+		dataType: "jsonp",	//返回json格式的数据  
+		jsonp:"callback",
+		url: passportUrl + 'uwebgame/getAccount/?account=' + account + '&accountType=' + accountType,	//要访问的后台地址  
+		//data:{"opp":"main"},
+		async: false,
+		success: function(html) {
+			var userid = parseInt(html.userid);
+alert(userid);
+			if (userid > 1) {
+				$("#userid").val(userid);
+				$("#form1").submit();
+			} else {
+				$('#accountNote').show().children('span').text("该账户不存在，请指定正确的账号类型和账号");
+				return false;
+			}
+		}
+	});	
+}
+
 function getStrLen(str)
 {
 	var len = 0;
