@@ -6,6 +6,30 @@ $accountType = array(
 	3 => array('field' => 'email', 'name' => 'email'), 
 	4 => array('field' => 'mobile', 'name' => '手机号'), 
 );
+switch ($this->step) {
+	case 3:
+		if (empty($this->userInfo)) {
+			header('Location:' . $this->appInfos['passport']['url'] . 'utaomi/');
+		}
+		$formatEmail = formatEmail($this->userInfo['email']);
+
+		break;
+	case 4:
+		$formatEmail = formatEmail($this->userInfo['email']);
+		break;
+}
+
+function formatEmail($email)
+{
+	$formatEmail = '';
+	$markPos = strpos($email, '@');
+	for ($i = 0; $i < $markPos; $i++) {
+		$char = $i < 2 ? $email{$i} : '*';
+		$formatEmail .= $char;
+	}
+	$formatEmail .= substr($email, $markPos);
+	return $formatEmail;
+}
 ?>
 
 <?php if ($this->step == 1) { ?>
@@ -96,10 +120,10 @@ $accountType = array(
     <div class="min-content back">
         <div class="lit-top"><span class="tip">忘记密码&nbsp;&gt;&nbsp;<span class="gray">验证登录邮箱找回密码</span></span></div>
 		<form id="form3" name="form3" enctype="application/x-www-form-urlencoded" method="post" action="<?php echo $this->baseUrl . 'utaomi/getpwd'; ?>" autocomplete="off">
-		<input type="hidden" value="36207085" name="uid">
+		<input type="hidden" value="<?php echo $this->input->get_post('userid'); ?>" name="userid">
 		<input type="hidden" value="4" name="step">
 		<div class="reg-box">
-			<div class="reg-top"><span class="fleft">你的登录邮箱为&nbsp;&nbsp;<span class="fb">52*****@qq.com</span></span></div>
+			<div class="reg-top"><span class="fleft">你的登录邮箱为&nbsp;&nbsp;<span class="fb"><?php echo $formatEmail; ?></span></span></div>
 			<div id="J_error_verify_email" class="comm-error ps-error"><span></span></div>
 			<div class="reg-row">
 				<label class="label">输入邮箱：</label><div class="reg-div"><input type="text" value="" id="J_email_verify" class="reg-input" name="email"></div> 
@@ -129,7 +153,7 @@ $accountType = array(
            <div style="margin-top: 8px;" class="min-gou-icon"></div>
 	       <div class="reg-email-tip fleft">
 			    <span class="fleft">重设密码邮件已经发送至
-			         <span class="orange fb">52******@qq.com</span>
+			         <span class="orange fb"><?php echo $formatEmail; ?></span>
 			         请按邮件中的指引，重新设置你的密码。如果长时间没有收到邮件，你可以
                      <a href="/forget/findByEmail" class="orange no-underline">重新发送</a>。
                      			    </span>

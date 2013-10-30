@@ -58,7 +58,7 @@ class CommonController extends CI_Controller
 		$this->load->library('session');
 		$targetCheckCode = $this->session->userdata($codeVar);
 		$checkCode = $this->input->get_post($codeVar);
-
+ 
 		$isValid = strtolower($checkCode) == strtolower($targetCheckCode) ? true : false;
 		$isAjax = $this->input->get('isajax');
 		if ($isAjax == 'yes') {
@@ -303,7 +303,7 @@ class CommonController extends CI_Controller
 	 * @param  string $length the length of the string
 	 * @return string random string
 	 */
-	protected function _createRandomstr($length = 6, $chars = '123456789abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ')
+	protected function _createRandomstr($length = 6, $chars = '23456789abcdefghijklmnpqrstuvwxyABCDEFGHJKLMNPQRSTUVWXY')
 	{
 		$hash = '';
 		$max = strlen($chars) - 1;
@@ -323,6 +323,49 @@ class CommonController extends CI_Controller
 		mt_srand((double) microtime() * 1000000);
 		return date('Ymd') . str_pad(mt_rand(1, 99999), 5, '0', STR_PAD_LEFT);
 	}
+
+	/**
+	 * Send message
+	 *
+	 * @param int $mobile
+	 * @param string $message
+	 * @return bool
+	 */
+	protected function _sendMessage($mobile, $message)
+	{
+		if (empty($mobile) || empty($message)) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * send email
+	 */
+	protected function _sendEmail()
+    {
+		$this->load->library('email');
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'smtp.163.com';
+		$config['smtp_user'] = 'hdwcl@163.com';//这里写上你的163邮箱账户
+		$config['smtp_pass'] = '';//这里写上你的163邮箱密码
+		$config['mailtype'] = 'html';
+		$config['validate'] = true;
+		$config['priority'] = 1;
+		$config['crlf'] = "\r\n";
+		$config['smtp_port'] = 25;
+		$config['charset'] = 'utf-8';
+		$config['wordwrap'] = TRUE;
+
+		$this->email->initialize($config);
+		$this->email->from('hdwcl@163.com', 'acan工作室');//发件人
+		$this->email->to('hdwyz@163.com');
+		$this->email->message('哈哈，测试邮件发送');
+		$this->email->send();
+
+		echo $this->email->print_debugger();
+     
+    }
 	
 	/**
 	 * Write cache file

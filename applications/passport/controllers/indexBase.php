@@ -44,7 +44,6 @@ class IndexBase extends Custom_Controller
 
 			$synloginCode = ''; // 同步登陆js代码
 			
-			
 			$this->load->model('timesModel');
 			$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
 			if ($remainMinute > 0) {
@@ -144,13 +143,21 @@ class IndexBase extends Custom_Controller
 		if ($this->form_validation->run() == false) {
 			$this->load->view($this->prefix . '/register');
 		} else {
+			$checkCode = $this->input->get_post('checkcode');
+			$currentCheckCode = $this->session->userdata('checkcode');	
+			//echo $currentCheckCode . '--' . $checkCode; exit();
+			if (strtolower($checkCode) != strtolower($currentCheckCode)) {
+				$this->_messageInfo('验证码错误，请重新注册！', $this->baseUrl . $this->prefix . '/register');
+			}
+			$this->session->unset_userdata('checkcode');
 			$fields = array();
 			$this->input->post('haveUsername') == 'yes' && $fields[] = 'username';
 			$this->input->post('haveEmail') == 'yes' && $fields[] = 'email';
+			$this->input->post('haveMobile') == 'yes' && $fields[] = 'mobile';
 			$this->input->post('haveRealName') == 'yes' && $fields = array_merge($fields, array('truename', 'idcard'));
 
 			foreach ($fields as $field) {
-				$userInfo[$field] = $this->input->post($field);
+				$userInfo[$field] = $this->input->post($field, true);
 			}
 			$userInfo['userid'] = $this->getUsername();
 			if (empty($userInfo['username'])) {
@@ -178,7 +185,7 @@ class IndexBase extends Custom_Controller
 
 				$addUser = $this->memberModel->addInfo($userInfo);
 				if (empty($addUser)) {
-					$this->_messageInfo('注册失败，请重新注册1！' . $userid, $this->applicationInfos[1]['domain']);
+					$this->_messageInfo('注册失败，请重新注册1！' . $userid, $this->baseUrl . $this->prefix . '/register');
 				}
 
 				$where = array('username' => $userInfo['username']);
@@ -260,6 +267,28 @@ class IndexBase extends Custom_Controller
 
 		$status = uc_user_checkemail($email);
 		$data['emailValid'] = $status;
+		echo $this->_jsonp($data);
+		exit();
+	}
+
+	/**
+	 * Check mobile exist
+	 *
+	 * @return void
+	 */
+	public function mobileValid()
+	{
+		$mobile = $this->input->get_post('mobile');
+
+		if (empty($mobile)) {
+			$status = false;
+		} else {
+			$where = array('mobile' => $mobile);
+			$userInfo = $this->memberModel->getInfo($where);
+			$userid = empty($userInfo['userid']) ? 0 : $userInfo['userid'];
+		}
+
+		$data['mobileValid'] = $userid;
 		echo $this->_jsonp($data);
 		exit();
 	}

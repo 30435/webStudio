@@ -59,9 +59,75 @@ class Utaomi extends IndexBase
 		if (!empty($this->loginedUserInfo)) {
 			header('Location:' . $this->appInfos['passport']['url'] . 'uwebgame/');
 		}
-print_r($_POST);
+
 		$step = intval($this->input->get_post('step'));
 		$this->step = empty($step) ? 1 : $step;
+		$userid = intval($this->input->get_post('userid'));
+		$this->userInfo = array();
+		if (!empty($userid)) {
+			$where = array('userid' => $userid); 
+			$this->userInfo = $this->memberModel->getInfo($where);
+		}
+print_r($this->userInfo);
 		$this->load->view($this->prefix . '/getpwd');
+	}
+
+	public function testSendEmail()
+	{
+		$this->_sendEmail();
+	}
+	
+	public function sendMessage()
+	{
+		$mobile = $this->input->get_post('mobile');
+		if (empty($mobile)) {
+			echo $this->_jsonp(array('status' => 0));
+			exit();
+		} 
+
+		$where = array('mobile' => $mobile);
+		$mobileInfo = $this->memberModel->getInfo($where, 'mobile_message');
+
+		$data['message'] = $this->_createRandomstr(4);
+		$data['lasttime'] = $this->time;
+
+		if (empty($mobileInfo)) {
+			$data['mobile'] = $mobile;
+			$this->memberModel->addInfo($data, 'mobile_message');
+			$message = $data['message'];
+		} else {
+			if ($this->time - $mobileInfo['lasttime'] > 300) {
+				$this->memberModel->editInfo($data, $where, 'mobile_message');
+				$message = $data['message'];
+			} else {
+				$message = $mobileInfo['message'];
+			}
+		}
+
+		$sendResult = $this->_sendMessage($mobile, $message);
+
+		echo $this->_jsonp(array('status' => $message));//intval($sendResult)));
+		exit();
+		
+	}
+
+	public function checkMessage()
+	{
+		$mobileMessage = $this->input->get('mobileMessage');
+		$mobile = $this->input->get_post('mobile'); 
+		if (empty($mobile) || empty($mobileMessage)) {
+			echo $this->_jsonp(array('status' => 0));
+			exit();
+		} 
+
+		$where = array('mobile' => $mobile);
+		$mobileInfo = $this->memberModel->getInfo($where, 'mobile_message');
+
+		$targetMessage = isset($mobileInfo['message']) ? $mobileInfo['message'] : '';
+
+		$status = strtolower($mobileMessage) == strtolower($targetMessage);
+		echo $this->_jsonp(array('status' => intval($status)));
+		exit();
+		
 	}
 }
