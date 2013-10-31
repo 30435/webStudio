@@ -39,9 +39,20 @@ class IndexBase extends Custom_Controller
 		if ($this->form_validation->run() == false) {
 			$this->load->view($this->prefix . '/login');
 		} else {
-			$username = $this->input->post('username');
+			$usernameSource = $this->input->post('username');
 			$password = $this->input->post('password');
+			
+			$usernameField = $this->_getField($usernameSource);
 
+			$where = array($usernameField => $usernameSource);
+			$userInfo = $this->memberModel->getInfo($where);
+
+			if ($field != 'username' && empty($userInfo)) {
+				$this->_showMessage('用户不存在dd', $this->baseUrl . $this->prefix . '/login');
+			}
+
+			$username = $userInfo['username'];
+			
 			$synloginCode = ''; // 同步登陆js代码
 			
 			$this->load->model('timesModel');
@@ -49,10 +60,7 @@ class IndexBase extends Custom_Controller
 			if ($remainMinute > 0) {
 				$this->_showMessage('密码错误次数太多，请<b color="red">' . $remainMinute . '</b>分钟后再登录！', $this->baseUrl . $this->prefix . '/login');
 			}
-			
-			$where = array('username' => $username);
-			$userInfo = $this->memberModel->getInfo($where);
-			
+
 			$statusInfos = array('-1' => '用户不存在！', '-2' => '密码不正确！', '-3' => '验证问题回答错误！');
 
 			list($ucInfo['userid'], $ucInfo['username'], $ucInfo['password'], $ucInfo['email']) = uc_user_login($username, $password);
@@ -105,9 +113,30 @@ class IndexBase extends Custom_Controller
 			$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 			$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
 
-			$this->_messageInfo('登录成功！' . $synloginCode, $this->applicationInfos[2]['domain']);
+			$this->_messageInfo('登录成功！' . $synloginCode, $this->appInfos['passport']['url']);
 		}
 	}
+
+	/**
+	 * Get the field of the username
+	 */
+	protected function _getField($usernameSource)
+	{
+		if (strpos($usernameSource, '@') !== false) {
+			return 'email';
+		}
+
+		$strlen = strlen($usernameSource);
+		if ($strlen != 8 && $strlen != 11) {
+			return 'username';
+		}
+
+		$checkStr = preg_replace('/(\d+)/', '', $usernameSource);
+		$field = $strlen == 8 ? 'userid' : 'mobile';
+
+		return $field;
+	}
+
 
 	/**
 	 * User logout
@@ -121,7 +150,7 @@ class IndexBase extends Custom_Controller
 		$this->input->set_cookie(array('name' => '_userid', 'value' => ''));
 		$this->input->set_cookie(array('name' => '_username', 'value' => ''));
 
-		$this->_messageInfo('退出成功！' . $synlogoutstr, $this->baseUrl . $this->prefix);
+		$this->_messageInfo('退出成功！' . $synlogoutstr, $this->baseUrl . $this->prefix . '/login');
 	}
 
 	/**
@@ -203,9 +232,44 @@ class IndexBase extends Custom_Controller
 				$this->input->set_cookie(array('name' => 'encrypt', 'value' => $encrypt, 'expire' => $cookieTime));
 				$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 				$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
-				$this->_messageInfo('恭喜，注册成功！' . $synloginCode, $this->applicationInfos[2]["domain"]);
+				//$this->_messageInfo('恭喜，注册成功！' . $synloginCode, $this->applicationInfos[2]["domain"]);
+
+				$this->webgameInfos = $this->_getWebgameInfos();
+				$this->load->view($this->prefix . '/register_success');
 			}
 		}
+	}
+
+	/**
+	 * Save the account info
+	 */
+	public function saveInfo()
+	{
+		$encrypt = $this->input->cookie(config_item('cookie_prefix') . 'encrypt', true);
+		$encryptKey = $this->_getEncryptKey();
+		//print_r(explode("\t", $this->encrypt->decode($encrypt, $encryptKey)));
+		$encryptInfo = explode("\t", $this->encrypt->decode($encrypt, $encryptKey));
+		$_username = isset($encryptInfo[1]) ? $encryptInfo[1] : '';
+		$_password = isset($encryptInfo[2]) ? $encryptInfo[2] : '';
+
+		if (empty($_username) || empty($_password) || $this->loginedUserInfo['username'] != $_username) {
+			$this->_messageInfo('保存信息失败', $this->baseUrl);
+		}
+		
+		echo '知金账号：' . $_username . "\r\n";
+		echo '密码：' . $_password;
+		$ua = $_SERVER['HTTP_USER_AGENT'];  
+		$filename = '知金账号-' . $_username . '.txt';  
+		$encodedFilename = urlencode($filename);  
+		$encodedFilename = str_replace("+", "%20", $encodedFilename);  
+		header("Content-Type: application/octet-stream");  
+		if (preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT']) ) {  
+			header('Content-Disposition:  attachment; filename="' . $encodedFilename . '"');  
+		} elseif (preg_match("/Firefox/", $_SERVER['HTTP_USER_AGENT'])) {  
+			header('Content-Disposition: attachment; filename*="utf8' .  $filename . '"');  
+		} else {  
+			header('Content-Disposition: attachment; filename="' .  $filename . '"');  
+		}  
 	}
 	
 	/**
@@ -217,11 +281,11 @@ class IndexBase extends Custom_Controller
 	{
 		$username = $this->input->get('username');
 		$username = urldecode(iconv('gbk', 'utf-8', $username));
+		$checkStr = preg_replace('/(\d+)/', '', $username);
 
-		if (empty($username)) {
-			$userid = 0;
+		if (empty($username) || empty($checkStr)) {
+			$userid = 9999;
 		} else {
-
 			$where = array('username' => $username);
 			$userInfo = $this->memberModel->getInfo($where);
 			$userid = empty($userInfo['userid']) ? 0 : $userInfo['userid'];
@@ -340,5 +404,23 @@ class IndexBase extends Custom_Controller
 	public function getpwd()
 	{
 		$this->load->view($this->prefix . '/getpwd');
+	}
+
+	/**
+	 * email config info
+	 */
+	protected function _emailConfigInfo()
+	{
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'smtp.163.com';
+		$config['smtp_user'] = 'hdwcl@163.com';//这里写上你的163邮箱账户
+		$config['smtp_pass'] = '';//这里写上你的163邮箱密码
+		$config['mailtype'] = 'html';
+		$config['validate'] = true;
+		$config['priority'] = 1;
+		$config['crlf'] = "\r\n";
+		$config['smtp_port'] = 25;
+		$config['charset'] = 'utf-8';
+		$config['wordwrap'] = TRUE;
 	}
 }

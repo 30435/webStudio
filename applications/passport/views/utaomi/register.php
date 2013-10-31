@@ -37,8 +37,9 @@ $(document).ready(function(){
 	//$(":checkbox[name='protocol']").formValidator({onshow:"请阅读协议",onfocus:"请阅读协议"}).inputValidator({min:1,onerror:"请阅读协议"});
 	
 
-	$("#username").formValidator({onShow:"请输入用户名",onFocus:"用户名至少5个字符,最多20个字符",onCorrect:"该用户名有效"}).inputValidator({min:5,max:20,onError:"你输入的用户名非法,请确认"})
-		.ajaxValidator({
+	$("#username").formValidator({onShow:"请输入用户名",onFocus:"用户名至少6个字符,最多20个字符",onCorrect:"该用户名有效"}).inputValidator({min:6,max:20,onError:"你输入的用户名非法,请确认"}).regexValidator({regExp:"username",dataType:"enum",onError:"用户名格式不正确"})
+	
+	.ajaxValidator({
 		dataType : "jsonp",
 		async : false,
 		jsonp:"callback",
