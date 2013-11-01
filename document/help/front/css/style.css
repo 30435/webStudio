@@ -10,7 +10,8 @@ body{background:#fff;}
 .logo{width:102px;height:32px;margin-top:8px;}
 
 .all{width:977px;margin:0 auto;}
-.ban{height:628px;border:2px solid #cf0b0b;margin:7px 0;}
+.ban{width:977px;height:646px;background:url(../images/waikuang.png) no-repeat;margin:3px 0;position:relative;}
+.ban .frm{position:absolute;top:4px;left:8px;}
 
 
 .nav_nuowa{width:977px;overfolw:hidden;}
