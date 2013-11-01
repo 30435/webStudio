@@ -8,7 +8,7 @@ function searchFunc()
 </script>
 <!--------------------------宽度一样的977px---------------------------------------->
 <div class="all">
-	<div class="ban"><iframe class="frm"  src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="956" height="646" frameborder="0" scrolling="no"></iframe></div>
+	<div class="ban"><iframe class="frm"  src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="956" height="640" frameborder="0" scrolling="no"></iframe></div>
 		<div class="nav_nuowa">
 			<div class="nuowa_bj0">
 				<p class="more"><a href="<?php echo $this->categoryInfos[16]['url']; ?>" target="_blank">更多</a></p>
