@@ -74,7 +74,7 @@ body{background:#fff;}
 .nuowa_bj ul li{width:223px;text-align:center;float:left;padding-left:13px;}
 .nuowa_bj ul li img{margin-bottom:10px;}
 
-.nuowa_bj0{width:977px;height:228px;position:relative;margin-top:15px;background:url(../images/big_imgjl.jpg) no-repeat;}
+.nuowa_bj0{width:977px;height:228px;position:relative;margin-top:15px;background:url(../images/big_imgjl.png) no-repeat;}
 .more{width:50px;height:21px;background:url(../images/more.png) no-repeat;position:absolute;left:900px;top:8px;text-align:center;}
 .more a{color:#9f0f0f;}
 .nuowa_bj0 ul{padding-top:62px;}
@@ -125,3 +125,8 @@ body{background:#fff;}
 .nr_con_p h2{font-weight:600;color:#b91a09;font-size:14px;height:26px;}
 .nr_con p{font-size:14px;line-height:24px;color:#6a6b6c;margin:20px 0;}
 .nr_con_img{width:700px;height:400px;margin:0 auto;}
+
+
+/********************************sec页面***************/
+.sigert{color:#333333;width:955px;margin:0 auto;height:40px;line-height:40px;text-align:left;border-bottom:1px dotted #ccc;background:#FCC;}
+.sigert{float:left;font-size:14px;line-height:35px;padding-left:20px;}

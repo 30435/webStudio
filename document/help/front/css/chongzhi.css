@@ -116,7 +116,7 @@ font-size: 14px;font-weight: 600;}
 .zc_reg_top span{float:right;}
 .zc_reg_ts{color:#a71707;}
 .reg_row{margin-bottom:10px;overflow:hidden;position:relative;width:560px;}
-.reg_row .lable{float:left;font-size:14px;line-height:45px;text-align:right;width:84px;}
+.reg_row .lable{float:left;font-size:14px;line-height:45px;text-align:right;width:98px;}
 .reg_row .reg_div{background:url(../images/input_img.png) no-repeat;float:left;height:44px;position:relative;width:339px;}
 .reg_div .reg_span{color:#333;font-size:12px;line-height:18px;margin-left:14px;margin-top:15px;position:absolute;}
 .reg_div .zc_reg{background-color:#fff;border:none;font-family:"微软雅黑";font-size:16px;height:34px;line-height:35px;margin-top:6px;position:absolute;opacity:0.6;width:321px;margin-left:10px;}
@@ -557,3 +557,221 @@ table tr{height:50px;}
 .list_re{width:500px;margin:0 auto;padding-top:30px;}
 .list_re li span{width:140px;height:20px;display:inline-block;line-height:30px;text-align:right;}
 .list_re li input{width:200px;height:18px;border:1px solid #CCC;margin-top:10px;}
+
+
+/**************************找回密码***********/
+.zh_mm_con{width:480px;margin:0 auto;padding-top:40px;font-family:"微软雅黑";color:#000;}
+.zh_mm_con_top{font-size: 14px;line-height: 20px;margin-bottom: 30px;margin-left:120px;margin-top: 10px;overflow: auto;font-weight:600;}
+.zh_mm{width:270px;margin-top:40px;line-height:30px;}
+.zh_mm .zh_mm_r{float:left;font-size:14px;width:114px;}
+.zh_mm_radio{float:left;width:156px;}
+.zh_mm_sj{width:450px;margin-top:30px;height:50px;}
+.zh_mm_sj_r{ float:left;font-size: 14px;line-height: 46px;text-align: right;width:114px;}
+.zh_div{float:left;height: 44px;position: relative;width: 335px;background:url(../images/input_img.png) no-repeat;}
+.zh_int{background-color: #FFFFFF;border:none;font-family: "微软雅黑";font-size:16px;height:34px;line-height:35px;
+margin-left: 10px;margin-top: 6px;opacity: 0.5;outline: medium none;position: absolute;width: 320px;}
+.zh_div .zh_span{color:#333333;line-height:18px;margin-left:14px;margin-top:15px;position:absolute;}
+.a_but{display:inline-block;height:39px;line-height:36px;margin-bottom:20px;margin-left:120px;
+ margin-top:25px;text-align:center;text-decoration:none;width:113px;background:url(../images/cz_but.jpg) no-repeat center;}
+ .a_but a{color:#fff;cursor:pointer;}
+
+
+/***************************************************密码申诉*/
+.nw_ss{border-bottom: 1px dotted #CCCCCC;font-size:14px;height:45px;line-height:42px;margin-left:9px;width:949px;text-align:left;}
+.nw_ss p{margin:0;padding:0;margin-right:500px;padding-top:10px;}
+.step-one {background:url(../images/appeal.png) no-repeat;height:39px;margin:30px 37px;width: 899px;}
+.zh_div0{background: url("../images/reg_ses.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);float: left;height: 44px;position: relative;width:132px;}
+
+
+/*****************************************安全学堂***********************************/
+.class-left {
+    float: left;
+    font-size: 14px;
+    height: auto;
+    margin-top: 30px;
+    position: relative;
+    width: 575px;
+}
+.class-right {
+    float: right;
+    font-size: 14px;
+    height: auto;
+    margin-top: 30px;
+    width: 350px;
+}
+.tip-top {
+    font-weight: bold;
+    line-height: 50px;
+}
+.class-ad {
+    border: 1px solid #E0E0E0;
+    height: 450px;
+    margin: 10px 10px 10px 16px;
+    overflow: hidden;
+    width: 535px;
+}
+.ad-foot {
+    height: 30px;
+    margin-left: 169px;
+    text-align: center;
+    width: 225px;
+}
+.opacity {
+    background-color: #000000;
+    height: 44px;
+    left: 19px;
+    opacity: 0.8;
+    position: absolute;
+    top: 465px;
+    width: 532px;
+}
+.ad-foot a {
+    background: url("http://support-res.61.com/account/images/index/ad_bt_off.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 14px;
+    width: 13px;
+}
+.ad-foot .on{
+	background:url('http://support-res.61.com/account/images/index/ad_bt_on.png') no-repeat;
+}
+.opacity .tip-span {
+    color: #FFFFFF;
+    line-height: 44px;
+    margin-left: 30px;
+    position: absolute;
+    z-index: 2;
+}
+.comm-tip {
+    background-color: #F3F3F3;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px 5px 5px 5px;
+    height: 100px;
+    margin-left: 16px;
+    width: 535px;
+}
+.tip-icon {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll 0 -202px rgba(0, 0, 0, 0);
+    display: inline-block;
+    float: left;
+    height: 30px;
+    margin: 10px;
+    width: 30px;
+}
+.tip-title {
+    color: #333333;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 18px;
+    width: 160px;
+	font-family:"微软雅黑";
+}
+.go-botton {
+    background: url("http://support-res.61.com/account/new-account/images/common.png") no-repeat scroll 0 -851px rgba(0, 0, 0, 0);
+    color: #148710;
+    cursor: pointer;
+    display: inline-block;
+    height: 35px;
+    line-height: 32px;
+    margin-left: 212px;
+    text-align: center;
+    width: 95px;
+	font-family:"微软雅黑";
+}
+.classr-min {
+    font-family: "宋体";
+    height: 40px;
+    margin: 10px 10px 0;
+}
+.tip-pro {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll 0 -144px rgba(0, 0, 0, 0);
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+.r-page {
+    float: right;
+    height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 50px;
+	
+}
+.r-page .page {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll -1px -392px rgba(0, 0, 0, 0);
+    color: #9A9A9A;
+    cursor: pointer;
+    float: left;
+    height:20px;
+    margin-right: 5px;
+    text-align: center;
+    width: 18px;
+}
+.page-on {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll -1px -372px rgba(0, 0, 0, 0) !important;
+    color: #FFFFFF !important;
+}
+.classr-min .title-tip {
+    font-weight: bold;
+    line-height: 30px;
+}
+.classr-ul {
+    color: #FD9204;
+    font-family: "宋体";
+    list-style: square outside none;
+    margin-left: 16px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.no-underline {
+    cursor: pointer;
+    text-decoration: none;
+}
+.li-tip {
+    color: #666666;
+    font-size: 12px;
+}
+.li-title {
+    color: #000000;
+    display: block;
+    line-height: 25px;
+}
+.tip-cla {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll 0 -320px rgba(0, 0, 0, 0);
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+.tip-lao {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll 0 -230px rgba(0, 0, 0, 0);
+    float: left;
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+}
+.tip-class {
+    background: url("http://support-res.61.com/account/new-account/images/icon.png") no-repeat scroll 0 -172px rgba(0, 0, 0, 0);
+    float: left;
+    height: 30px;
+    margin: 10px 10px 10px 16px;
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

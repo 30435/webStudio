@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{font-family:"微软雅黑";}
+.zhmima_01{width:950px;height:60px;line-height:60px;background:#F5F5F5;margin:0 auto;}
+.back{padding:20px 0;}
+.zhmima_01 p{padding-left:345px;}
+.zhmima_01 p span{color:#900;}
+.zhmm_02{width:175px;margin:0 auto;margin-top:20px;margin-bottom:20px;}
+.reg-box {height: auto;margin-left: 170px;overflow: hidden;position: relative;}
+.find-all {height: 300px;width: 800px;}
+.reg-img {float: left;height: 32px;margin-right: 20px;}
+.p-reg-on {background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -602px -5px rgba(0, 0, 0, 0);
+}
+.reg-on {cursor: pointer;height: 138px;position: relative;width: 138px;
+}
+
+.reg-on .o-reg-tip {color: #FFFFFF;font-size: 14px;padding-top: 88px;text-align: center;}
+.reg-on .reg-tip-two {color: #FFFFFF;font-size: 14px;margin-top: 7px;text-align: center;}
+
+.q-reg-off {
+    background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -3px -316px rgba(0, 0, 0, 0);
+}
+.e-reg-off {
+    background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -153px -316px rgba(0, 0, 0, 0);
+}
+.k-reg-off {
+    background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -303px -316px rgba(0, 0, 0, 0);
+}
+.s-reg-on {
+    background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -455px -2px rgba(0, 0, 0, 0);
+}
+
+.reg-foot {
+    background: url("http://support-res.61.com/account/new-account/images/verify.png") no-repeat scroll -455px -454px rgba(0, 0, 0, 0);
+    display: none;height: 69px;position: relative;width: 138px;}
+	
+	
+	/********************************************************手机验证密码*************************************************************************/
+.sjzhmm{padding-left:10px;width:940px;height:40px;line-height:40px;margin:0 auto;border-bottom:1px dotted #CCC;}
+.sjzhmm p span{color:#000;}

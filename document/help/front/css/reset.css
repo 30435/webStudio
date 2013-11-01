@@ -5,7 +5,7 @@ html {
     overflow-y: scroll;
 }
 body {
-   
+   background:url(../images/bodybj.png) no-repeat center 51px;
     font: 12px/1.5 宋体,Arial,sans-serif;
     margin: 0;
    padding:0;
