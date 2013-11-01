@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mibao{width:500px;margin:0 auto;margin-top:20px;}
+.mibao p{line-height:30px;}
+.mibao span{margin-top:10px;width:350px;display:inline-block;}
+.mibao span a{width:165px;height:32px;display:inline-block;margin-right:10px;}
+
+
+
+.wt_div{clear: both;margin-bottom: 20px;overflow: hidden;position: relative;width: 680px;}
+.wt_div span{ float: left;font-size: 14px;line-height: 46px;text-align: right;width: 200px;display:inline-block;}
+.wt_div .wt_input{ background-color: #FFFFFF;border: 0 none;font-family: "微软雅黑";font-size: 16px;height: 34px;line-height: 35px;
+margin-left: 10px;margin-top: 6px;opacity: 0.5;outline: medium none;position: absolute;width: 320px;}
+.wt_div{background: url("http://support-res.61.com/account/new-account/images/input_img.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+float: left;height: 44px;position: relative;width: 335px;}
