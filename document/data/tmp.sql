@@ -1,3 +1,22 @@
+
+INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
+('广告管理', 4, 'passport', '', '', '', 0, '1', '1'),
+
+
+INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
+('管理精灵', 90, 'webgame', 'spirit', 'listinfo', '', 0, '1', '1'),
+('添加精灵', 90, 'webgame', 'spirit', 'add', '', 0, '1', '2'),
+('查看精灵', 90, 'webgame', 'spirit', 'view', '', 0, '1', '3'),
+('编辑精灵', 90, 'webgame', 'spirit', 'edit', '', 0, '1', '3'),
+('删除精灵', 90, 'webgame', 'spirit', 'delete', '', 0, '1', '3'),
+
+
+
+
+
+
+
+
 grant all privileges on `nova`.`t_account` to 'plat_duser'@'192.168.0.116' identified by "duserplat";
 
 INSERT INTO `sw_new` (`catid`, `title`, `thumb`, `keywords`, `description`, `listorder`, `status`, `islink`, `username`, `copyfrom`, `position`, `content`, `template`, `inputtime`, `updatetime`, `fbak`, `seo_title`) 

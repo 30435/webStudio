@@ -37,4 +37,12 @@ class Index extends CmsIndex
 		$this->resultArray = $this->newModel->currentDb->from('sw_new')->select('title, url, updatetime')->like(array('title' => $key))->limit(100)->get()->result_array();
 		$this->load->view($this->templatePre . 'search', $this->frontController);
 	}
+
+	public function spirit()
+	{
+		$this->_initCurrentModel('spiritModel');
+		$this->currentInfo = $this->_getInfoById();
+		//var_dump($this->currentInfo);
+		$this->load->view('cfront/show_spirit', $this->frontController);
+	}
 }
