@@ -15,7 +15,6 @@ function searchFunc()
 				<ul>
 					<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 6, array('catid' => 10), array(array('inputtime', 'desc'))); ?>
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>
-						<li><a href="#"><img src="images/001.png" /></a></li>
 						<li><a href="<?php echo $newInfo['thumb']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="115px" height="120px" /></a></li>
 					<?php } ?>
 				</ul>

@@ -37,13 +37,15 @@ class CommonController extends CI_Controller
 	 */
 	public function checkcode($codeVar = 'checkcode')
 	{
+		$codeVar = in_array($codeVar, array('checkcode', 'frontCaptcha')) ? $codeVar : 'checkcode';
 		$this->load->library('session');
 		$checkCode = new CheckCode();
-	
+
 		$checkCodeStr = $checkCode->get_code();
 		$checkCodeInfos = array(
-				$codeVar  => $checkCodeStr,
+			$codeVar  => $checkCodeStr,
 		);
+
 		$this->session->set_userdata($checkCodeInfos);
 		$checkCode->doimage();
 	}
@@ -58,7 +60,8 @@ class CommonController extends CI_Controller
 		$this->load->library('session');
 		$targetCheckCode = $this->session->userdata($codeVar);
 		$checkCode = $this->input->get_post($codeVar);
- 
+		
+		//echo $targetCheckCode . '--' . $checkCode;
 		$isValid = strtolower($checkCode) == strtolower($targetCheckCode) ? true : false;
 		$isAjax = $this->input->get('isajax');
 		if ($isAjax == 'yes') {
