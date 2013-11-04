@@ -8,10 +8,10 @@
     <div class="col-tab">
         <ul class="tabBut cu-li">
             <li id="tab_swf_1" <?php echo $this->tabStatus; ?> onclick="SwapTab('swf','on','',5,1);">上传附件</li>
-            <li id="tab_swf_2" onclick="SwapTab('swf','on','',5,2);">网络文件</li>
+            <!--<li id="tab_swf_2" onclick="SwapTab('swf','on','',5,2);">网络文件</li>
             <li id="tab_swf_3" onclick="SwapTab('swf','on','',5,3);set_iframe('album_list','<?php echo $this->baseUrl; ?>attachment/album_load?args=<?php echo $this->uploadArgs['args']; ?>');">图库</li>
             <li id="tab_swf_4" onclick="SwapTab('swf','on','',5,4);set_iframe('album_dir','<?php echo $this->baseUrl; ?>attachment/album_load?args=<?php echo $this->uploadArgs['args']; ?>');">目录浏览</li>
-            <li id="tab_swf_5" class="on icon" onclick="SwapTab('swf','on','',5,5);">未处理文件</li>
+            <li id="tab_swf_5" class="on icon" onclick="SwapTab('swf','on','',5,5);">未处理文件</li>-->
         </ul>
          <div id="div_swf_1" class="content pad-10 <?php echo $this->divStatus?>">
         	<div>
@@ -66,70 +66,5 @@
 </body>
 <script type="text/javascript">
 document.domain='<?php echo $this->frontDomain; ?>';
-if ($.browser.mozilla) {
-	window.onload=function(){
-	  if (location.href.indexOf("&rand=")<0) {
-			location.href=location.href+"&rand="+Math.random();
-		}
-	}
-}
-function imgWrap(obj){
-	$(obj).hasClass('on') ? $(obj).removeClass("on") : $(obj).addClass("on");
-}
-
-function SwapTab(name,cls_show,cls_hide,cnt,cur) {
-    for(i=1;i<=cnt;i++){
-		if(i==cur){
-			 $('#div_'+name+'_'+i).show();
-			 $('#tab_'+name+'_'+i).addClass(cls_show);
-			 $('#tab_'+name+'_'+i).removeClass(cls_hide);
-		}else{
-			 $('#div_'+name+'_'+i).hide();
-			 $('#tab_'+name+'_'+i).removeClass(cls_show);
-			 $('#tab_'+name+'_'+i).addClass(cls_hide);
-		}
-	}
-}
-
-function addonlinefile(obj) {
-	var strs = $(obj).val() ? '|'+ $(obj).val() :'';
-	$('#att-status').html(strs);
-}
-
-function change_params(){
-	if($('#watermark_enable').attr('checked')) {
-		swfu.addPostParam('watermark_enable', '1');
-	} else {
-		swfu.removePostParam('watermark_enable');
-	}
-}
-function set_iframe(id,src){
-	$("#"+id).attr("src",src); 
-}
-function album_cancel(obj,id,source){
-	var src = $(obj).children("img").attr("path");
-	var filename = $(obj).attr('title');
-	if($(obj).hasClass('on')){
-		$(obj).removeClass("on");
-		var imgstr = $("#att-status").html();
-		var length = $("a[class='on']").children("img").length;
-		var strs = filenames = '';
-		$.get('index.php?m=attachment&c=attachments&a=swfupload_json_del&aid='+id+'&src='+source+'&filename='+filename);
-		for(var i=0;i<length;i++){
-			strs += '|'+$("a[class='on']").children("img").eq(i).attr('path');
-			filenames += '|'+$("a[class='on']").children("img").eq(i).attr('title');
-		}
-		$('#att-status').html(strs);
-		$('#att-status').html(filenames);
-	} else {
-		var num = $('#att-status').html().split('|').length;
-		var file_upload_limit = '1';
-		if(num > file_upload_limit) {alert('不能选择超过'+file_upload_limit+'个附件'); return false;}
-		$(obj).addClass("on");
-		$.get('index.php?m=attachment&c=attachments&a=swfupload_json&aid='+id+'&src='+source+'&filename='+filename);
-		$('#att-status').append('|'+src);
-		$('#att-name').append('|'+filename);
-	}
-}
 </script>
 </html>

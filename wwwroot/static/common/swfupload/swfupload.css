@@ -118,4 +118,4 @@ a.progressCancel:hover {
 .attachment-list .img-wrap a{display:table-cell;vertical-align:middle;text-align:center;*display:block;border:1px solid #eee;width:101px; height:91px;*font-size:67px;}
 .attachment-list .img-wrap a:hover,.attachment-list .img-wrap a.on{border-color:#d0def1; background:#f3f6fa}
 .attachment-list .img-wrap a.off .icon{background: url(images/off.png) no-repeat; height:17px;bottom:5px;*bottom:3px; right:3px; z-index:100; position: absolute; overflow:hidden; width:98px;}
-.attachment-list .img-wrap a.on .icon{background: url(../../images/msg_bg.png) no-repeat left -249px;width:16px; height:18px;bottom:4px;*bottom:2px; right:3px; z-index:100; position: absolute; overflow:hidden}
+.attachment-list .img-wrap a.on .icon{background: url(../../admin/images/msg_bg.png) no-repeat left -249px;width:16px; height:18px;bottom:4px;*bottom:2px; right:3px; z-index:100; position: absolute; overflow:hidden}

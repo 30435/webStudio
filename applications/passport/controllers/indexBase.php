@@ -232,10 +232,12 @@ class IndexBase extends Custom_Controller
 				$this->input->set_cookie(array('name' => 'encrypt', 'value' => $encrypt, 'expire' => $cookieTime));
 				$this->input->set_cookie(array('name' => 'userid', 'value' => $userInfo['userid'], 'expire' => $cookieTime));
 				$this->input->set_cookie(array('name' => 'username', 'value' => $userInfo['username'], 'expire' => $cookieTime));
-				//$this->_messageInfo('恭喜，注册成功！' . $synloginCode, $this->applicationInfos[2]["domain"]);
-
-				$this->webgameInfos = $this->_getWebgameInfos();
-				$this->load->view($this->prefix . '/register_success');
+				if ($this->prefix == 'utaomi') {
+					$this->webgameInfos = $this->_getWebgameInfos();
+					$this->load->view($this->prefix . '/register_success');
+				} else {
+					$this->_messageInfo('恭喜，注册成功！' . $synloginCode, $this->appInfos['passport']['url']);
+				}
 			}
 		}
 	}

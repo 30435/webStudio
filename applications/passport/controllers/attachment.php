@@ -62,7 +62,7 @@ class Attachment extends Custom_Controller
 
 			$uploadedFiles = $this->attachmenttool->uploadedFiles[0];
 			if ($aids[0] && !empty($uploadedFiles)) {
-				echo $aids[0] . ',' . $this->uploadUrl . $uploadedFiles['file_path'].',' . $uploadedFiles['file_ext'] . ',' . $uploadedFiles['file_name'] . 'fuck';
+				echo $aids[0] . ',' . $this->uploadUrl . $uploadedFiles['file_path'].',' . $uploadedFiles['file_ext'] . ',' . $uploadedFiles['file_name'];
 			} else {
 				echo '0,' . $this->attachmenttool->error();
 			}
