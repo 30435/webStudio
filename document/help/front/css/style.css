@@ -130,4 +130,18 @@ body{background:#fff;}
 
 /********************************sec页面***************/
 .sigert{color:#333333;width:955px;margin:0 auto;height:40px;line-height:40px;text-align:left;border-bottom:1px dotted #ccc;background:#FCC;}
-.sigert{float:left;font-size:14px;line-height:35px;padding-left:20px;}
+.sigert{float:left;font-size:14px;line-height:35px;padding-left:20px;color:#900;margin-bottom:10px;}
+.sigert a{color:#900;}
+.sec_tit{color:#900;font-weight:600;font-size:14px;margin:0 auto;width:250px;}
+.sec_deng{width:920px;margin:0 auto;margin-top:20px;}
+.sec_pic{height:200px;background:#060;}
+.sec_deng table{margin-top:20px;}
+.sec_deng table tr{height:30px;}
+.sec_deng table tr td{text-align:left;padding-left:10px;}
+.sec_deng table tr td span{color:#900;font-size:14px;}
+.sec_deng table tr .sec_hb{text-align:center;}
+.sec_tj{margin-top:20px;}
+.sec_tj h2{height:30px;line-height:30px;background:#FF9900;font-size:14px;padding-left:15px;}
+.sec_tj li{float:left;width:115px;height:120px;margin-right:19px;}
+.sec_tj li.ts{margin:0;}
+.sec_ms{line-height:21px;margin-top:20px;}
