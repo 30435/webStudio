@@ -11,6 +11,6 @@ class Uwebgame extends IndexBase
 
 	public function index()
 	{
-		header('Location:' . $this->appInfos['pay']['url'] . 'index/mypayinfo');
+		header('Location:' . $this->categoryInfos[8]['bind_domain']);
 	}
 }

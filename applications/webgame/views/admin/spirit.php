@@ -230,7 +230,7 @@ document.domain='<?php echo $this->frontDomain; ?>';
 		<td>
 		  <div id='content_tip'></div>
 		  <?php
-			$contentAuto= isset($this->currentInfo['content']) ? $this->currentInfo['content'] : $defaultContent;
+			$contentAuto= isset($this->currentInfo['content']) ? $this->currentInfo['content'] : '';
 			echo $this->ckeditor->editor('content', $contentAuto); 
 		  ?>
 		</td>

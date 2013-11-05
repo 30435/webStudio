@@ -1,10 +1,11 @@
 <?php echo $this->load->view($this->prefix . '/header'); ?>
 <?php 
-$accountType = array(
-	1 => array('field' => 'userid', 'name' => '知金号'), 
-	2 => array('field' => 'username', 'name' => '自定义账号'), 
-	3 => array('field' => 'email', 'name' => 'email'), 
-	4 => array('field' => 'mobile', 'name' => '手机号'), 
+print_r($_POST);
+$accountTypes = array(
+	'userid' => array('name' => '知金号'), 
+	'username' => array('name' => '自定义账号'), 
+	'email' => array('name' => 'email'), 
+	'mobile' => array('name' => '手机号'), 
 );
 switch ($this->step) {
 	case 3:
@@ -38,24 +39,19 @@ function formatEmail($email)
         <form name="form1" enctype="application/x-www-form-urlencoded" method="post" action="<?php echo $this->baseUrl . 'utaomi/getpwd'; ?>" id="form1" autocomplete="off">
 		<input type="hidden" name="step" value="2" />
 		<input type="hidden" name="userid" id="userid" value="" />
+		<input type="hidden" name="accountType" id="accountType" value="" />
         <div class="reg-box">
-			<div class="reg-top"><span class="fleft fb">找回帐号的登录密码</span></div>
+			<div class="reg-top"><span class="fleft fb">找回帐号的登录密码（请输入您的知金号、自定义账号、email或手机号）</span></div>
             <div id="J_error_pwd" style="margin-left:118px;" class="comm-error ps-error"><span></span></div>
             <div class="reg-row">
-                <label class="label">请选择账号类型类别：</label>
+                <label class="label"></label>
                 <div class="reg-radio">
-                    <div style="font-size: 14px;margin-top:15px;_margin-top:7px;" class="raido">
-	                    <input type="radio" value="1" checked="checked" id="choose_1" name="accountType"> 知金号 |
-						<input type="radio" value="2" id="choose_2" name="accountType"> 自定义账号  |
-	                    <input type="radio" value="3" id="choose_3" name="accountType"> email |
-						<input type="radio" value="4" id="choose_4" name="accountType"> 手机号
-                    </div>
                     <!--<div style="font-size: 14px;margin-top:10px;_margin-top:7px;" class="radio"><input type="radio" value="1" id="choose_1" name="choose"><span>找回帐号的支付密码</span></div>-->
                 </div>
             </div>
             <div id="accountNote" class="comm-error ps-error" style="display: none;"><span></span></div>
 			<div class="reg-row">
-				<label class="label">帐号：</label>
+				<label class="label">知金号/自定义号/email/手机：</label>
 				<div class="reg-div">
 					<span class="reg-span"></span><input type="text" name="account" id="account" class="reg-input">
 				</div>
@@ -68,7 +64,7 @@ function formatEmail($email)
 <?php } elseif ($this->step == 2) { ?>
 <div class="min-body">
     <div class="min-content back">
-        <div class="min-head"><div class="tip-div"><?php echo $accountType[$this->input->get_post('accountType')]['name']; ?>：<span class="orange f16b"><?php echo $this->input->get_post('account'); ?></span></div></div>
+        <div class="min-head"><div class="tip-div"><?php echo $accountTypes[$this->input->get_post('accountType')]['name']; ?>：<span class="orange f16b"><?php echo $this->input->get_post('account'); ?></span></div></div>
         <p style="text-align:center;margin-top:20px;" class="f14b">请选择找回密码的方式</p>
 		<form name="form2" method="post" action="<?php echo $this->baseUrl . 'utaomi/getpwd'; ?>" id="form2">
 		<input type="hidden" name="userid" value="<?php echo $this->input->get_post('userid'); ?>" />

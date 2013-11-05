@@ -84,12 +84,12 @@ $(document).ready(function(){
         	<li>
             	<a href="javascript: selectFast(); void(0);" class="zc_blx cur"><span class="zc_title"><i class="spself"></i>诺瓦号<i class="new"></i></span><span class="tip">自动分配账号，快速注册</span></a>
             </li>
-        	<li>
+        	<!--<li>
             	<a href="javascript: selectSelf(); void(0);" class="zc_blx cur"><span class="zc_title"><i class="spself"></i>诺瓦号<i class="new"></i></span><span class="tip">自动分配账号，快速注册</span></a>
             </li>
          	<li>
             	<a href="javascript: selectEmail(); void(0);" class="zc_blx cur"><span class="zc_title"><i class="spself yb"></i>邮箱账号<i class="new"></i></span><span class="tip">自动分配账号，快速注册</span></a>
-            </li>
+            </li>-->
         </ul>
     </div>
     <div class="zc_main_r fl">
@@ -160,7 +160,7 @@ $(document).ready(function(){
 
 
             <div class="check_row">
-            	<div class="check"><input type="checkbox" value="" id="protocol" name="protocol"></div><span class="gray">我已阅读并同意《<a href="<?php echo $this->categoryInfos[22]['url']; ?>" target="_blank" class="fbgray">诺瓦传说服务条款</a>》</span>
+            	<div class="check"><input type="checkbox" checked="checked" value="" id="protocol" name="protocol"></div><span class="gray">我已阅读并同意《<a href="<?php echo $this->categoryInfos[22]['url']; ?>" target="_blank" class="fbgray">诺瓦传说服务条款</a>》</span>
             </div>
             <div class="reg_botton"><a href="javascript: register(); void(0);" class="ljzc">立即注册</a></div>
          </div>

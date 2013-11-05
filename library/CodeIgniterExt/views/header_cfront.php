@@ -36,11 +36,9 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
     </div>
     <div class="nav">
     	<ul class="nav_list">
-	        <li class="cur"><a href="<?php echo $this->appInfos['pay']['url']; ?>">诺贝充值</a></li>
-            <li class="cur"><a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypayinfo">我的余额</a></li>
-            <li class="cur"><a href="<?php echo $this->appInfos['pay']['url']; ?>index/myaccount">我的充值</a></li>
-            <li class="cur"><a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay">我的支付</a></li>
-			<li class="cur"><a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/editpwd">修改密码</a></li>
+		<?php foreach (array(2, 4, 19, 20) as $showCatid) { ?>
+			<li class="cur"><a href="<?php echo $this->categoryInfos[$showCatid]['url']; ?>"><?php echo $this->categoryInfos[$showCatid]['catname']; ?></a></li>
+		<?php } ?>		
 		</ul>
     </div>
 </div>

@@ -18,15 +18,15 @@ function lxfEndtime(){
 		var days = Math.floor(hours/24);
 		var CDay= days ;
 		var CHour= hours % 24 + CDay * 24;
-		if (CHour > 0 && CHour < 10) {
+		if (CHour < 10) {
 			CHour = '0' + CHour;
 		}
 		var CMinute= minutes % 60;
-		if (CMinute > 0 && CMinute < 10) {
+		if ( CMinute < 10) {
 			CMinute = '0' + CMinute;
 		}
 		var CSecond= Math.floor(seconds%60);//"%"是取余运算，可以理解为60进一后取余数，然后只要余数。
-		if (CSecond > 0 && CSecond < 10) {
+		if (CSecond < 10) {
 			CSecond = '0' + CSecond;
 		}
 		if(endtime<=nowtime){

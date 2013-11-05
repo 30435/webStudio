@@ -306,18 +306,18 @@ class IndexBase extends Custom_Controller
 	{
 		$account = $this->input->get('account');
 		$account = urldecode(iconv('gbk', 'utf-8', $account));
-		$accountType = intval($this->input->get('accountType'));
-		$fields = array(1 => 'userid', 2 => 'username', 3 => 'email', 4 => 'mobile');
-		$field = isset($fields[$accountType]) ? $fields[$accountType] : false;
 
-		if (empty($account) || empty($field)) {
+		if (empty($account)) {
 			$userid = 0;
 		} else {
-			$where = array($field => $account);
+			$usernameField = $this->_getField($account);
+			$where = array($usernameField => $account);
 			$userInfo = $this->memberModel->getInfo($where);
 			$userid = empty($userInfo['userid']) ? 0 : $userInfo['userid'];
+			$data['accountType'] = $usernameField;
 		}
 		$data['userid'] = $userid;
+		
 		echo $this->_jsonp($data);
 		exit();
 	}
