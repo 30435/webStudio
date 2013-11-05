@@ -24,13 +24,12 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
         	<ul class="top_links_list">
 				<li><a href="<?php echo $this->categoryInfos['8']['bind_domain']; ?>">诺瓦首页</a>&nbsp;<span>|</span></li>
 			<?php if (!empty($this->loginedUserInfo)) { ?>
-				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<li><a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a>&nbsp;<span>|</span></li>
+				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)
 				<li><a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">安全退出</a>&nbsp;<span>|</span></li>
 			<?php } else { ?>
 				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login/">登录</a>&nbsp;<span>|</span></li>
 				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/register/">注册</a>&nbsp;<span>|</span></li>
 			<?php } ?>
-				<li><a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>&nbsp;<span>|</span></li>
 				<li><a href="javascript: addFavorite(); void(null);">收藏本页</a></li>
             </ul>
         </div>

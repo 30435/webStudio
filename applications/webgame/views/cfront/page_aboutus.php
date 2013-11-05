@@ -9,14 +9,13 @@
 <div class="gywm_main">
 	<div class="classify fl">
 		<ul>
-			<li class="on"><a href="#" title="使命与愿景">使命与愿景</a></li>
-			<li><a href="#" title="发展历程">发展历程</a></li>
-			<li><a href="#" title="知金荣誉">知金荣誉</a></li>
-             <li><a href="#" title="联系我们">联系我们</a></li>
+			<li <?php if ($this->currentCategoryInfo['id'] == 2) { echo 'class="on"'; } ?>><a href="<?php echo $this->categoryInfos[2]['url']; ?>" title="<?php echo $this->categoryInfos[2]['catname']; ?>"><?php echo $this->categoryInfos[2]['catname']; ?></a></li>
+			<li <?php if ($this->currentCategoryInfo['id'] == 4) { echo 'class="on"'; } ?>><a href="<?php echo $this->categoryInfos[4]['url']; ?>" title="<?php echo $this->categoryInfos[4]['catname']; ?>"><?php echo $this->categoryInfos[4]['catname']; ?></a></li>
+			<li <?php if ($this->currentCategoryInfo['id'] == 6) { echo 'class="on"'; } ?>><a href="<?php echo $this->categoryInfos[6]['url']; ?>" title="<?php echo $this->categoryInfos[6]['catname']; ?>"><?php echo $this->categoryInfos[6]['catname']; ?></a></li>
 		</ul>
 	</div>
 	<div class="cont fr">
-		<h3>我们的使命</h3><?php $catContent = $controller->currentModel->getInfo(array('catid =' => $this->catid)); echo $catContent['content']; ?>
+		<?php $catContent = $controller->currentModel->getInfo(array('catid =' => $this->catid)); echo $catContent['content']; ?>
 	</div>
 	<div class="clear"></div>
 </div>

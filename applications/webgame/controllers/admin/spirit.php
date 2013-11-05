@@ -80,7 +80,7 @@ class Spirit extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['webgame_code'], $info['status']);
+		//$this->_initInfo($info['webgame_code'], $info['status']);
 		if ($isWrite) {
 			//$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
 			//$info['end_maintain'] = !empty($info['end_maintain']) ? strtotime($info['end_maintain']) : 0;

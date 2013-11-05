@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>倒计时</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="src/jquery.countdown.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<div id="wrap">
+	<div class="cutdown">
+	    <div id="clock">
+     
+
+      <p>
+        <span id="hours" class="hours"></span>
+        
+      </p>
+
+      <p>
+        <span id="minutes"></span>
+        
+      </p>
+
+      <p>
+        <span id="seconds"></span>
+        
+      </p>
+    </div>
+	</div>
+</div>
+</body>
+<script>
+      var currentDate = new Date();
+       var   finished = false;
+      function callback(event) {
+  		  $this = $(this);
+  			switch(event.type) {
+  				case "seconds":
+  				case "minutes":
+  				case "hours":
+  				//case "days":
+  				//case "weeks":
+  				//case "daysLeft":
+  				  $this.find('span#'+event.type).html(event.value);
+  				  if(finished) {
+  				    $this.fadeTo(0, 1);
+  				    finished = false;
+  				  }
+  					break;
+  				case "finished":
+            $this.fadeTo('slow', .5);
+            finished = true;
+  					break;
+  			}
+      }
+      
+  		$('div#clock').countdown(3600*1000*12 + currentDate.valueOf(), callback);
+</script>
+</html>

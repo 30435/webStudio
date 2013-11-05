@@ -32,7 +32,7 @@
 		  <td align="center"><?php echo $info['updatetime']; ?></td>
 		  <td align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
-		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['name'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
+		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['title'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
     		<?php } ?>
           </td>
@@ -84,7 +84,6 @@ $defaultContent =<<<DEFAULTCONTENT
 		<td width="100">魔抗</td>
 		<td width="100">速度</td>
 	</tr>
-	<strong><span></span></strong></td></tr>
 </table>
 <br />
 <table width="920" cellpadding="0" cellspacing="0" bordercolor="#666666" border="1" >
@@ -149,7 +148,6 @@ $defaultContent =<<<DEFAULTCONTENT
 		<td width="50">速度</td>
 		<td width="100">速度</td>
 	</tr>
-	<strong><span></span></strong></td></tr>
 </table>
 DEFAULTCONTENT;
 ?>
@@ -157,6 +155,9 @@ DEFAULTCONTENT;
 .radio-label{ border-top:1px solid #e4e2e2; border-left:1px solid #e4e2e2}
 .radio-label td{ border-right:1px solid #e4e2e2; border-bottom:1px solid #e4e2e2;background:#f6f9fd}
 </style>
+<script language="javascript">
+document.domain='<?php echo $this->frontDomain; ?>';
+</script>
 <script type="text/javascript">
   $(document).ready(function() {
 	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});

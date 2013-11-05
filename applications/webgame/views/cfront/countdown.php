@@ -17,19 +17,27 @@ function lxfEndtime(){
 		var hours = Math.floor(minutes/60);
 		var days = Math.floor(hours/24);
 		var CDay= days ;
-		var CHour= hours % 24;
+		var CHour= hours % 24 + CDay * 24;
+		if (CHour > 0 && CHour < 10) {
+			CHour = '0' + CHour;
+		}
 		var CMinute= minutes % 60;
+		if (CMinute > 0 && CMinute < 10) {
+			CMinute = '0' + CMinute;
+		}
 		var CSecond= Math.floor(seconds%60);//"%"是取余运算，可以理解为60进一后取余数，然后只要余数。
-
+		if (CSecond > 0 && CSecond < 10) {
+			CSecond = '0' + CSecond;
+		}
 		if(endtime<=nowtime){
 			location.reload();//$(this).html("已过期")//如果结束日期小于当前日期就提示过期啦
 		} else {
 			if($(this).attr("lxfday")=="no"){
 				//$(this).html("<i>剩余时间：</i><span>"+CHour+"</span>时<span>"+CMinute+"</span>分<span>"+CSecond+"</span>秒");          //输出没有天数的数据
-				$(this).html('<p><span id="hours">' + CHour + '</span></p><p><span id="minutes" style="padding-left:205px;">' + CMinute + '</span></p><p><span id="seconds"style="padding-left:315px;">' + CSecond + '</span></p>');
+				$(this).html('<p><span id="hours" class="hours">' + CHour + '</span></p><p><span id="minutes">' + CMinute + '</span></p><p><span id="seconds">' + CSecond + '</span></p>');
 			} else {
 				//$(this).html("<i>剩余时间：</i><span>"+days+"</span><em>天</em><span>"+CHour+"</span><em>时</em><span>"+CMinute+"</span><em>分</em><span>"+CSecond+"</span><em>秒</em>");          //输出有天数的数据
-				$(this).html('<p><span id="hours">' + days + '</span></p><p><span id="hours">' + CHour + '</span></p><p><span id="minutes" style="padding-left:205px;">' + CMinute + '</span></p><p><span id="seconds"style="padding-left:315px;">' + CSecond + '</span></p>');
+				$(this).html('<p><span id="hours" class="hours">' + days + '</span></p><p><span id="hours">' + CHour + '</span></p><p><span id="minutes">' + CMinute + '</span></p><p><span id="seconds">' + CSecond + '</span></p>');
 			}
 		}
 	});
@@ -43,9 +51,9 @@ $(function(){
 </script>
 </head>
 <body>
-<div id="wrap" style="position:relative;">
-	<div class="cutdown" style="position:absolute;top:130px;left:130px">
-	    <div lxfday="no" endtime="<?php echo date('m/d/Y H:i:s', $this->currentWebgameInfo['start_maintain']); ?>" class="lxftime" id="clock"><p><span id="hours"></span></p><p><span id="minutes" style="padding-left:205px;"></span></p><p><span id="seconds"style="padding-left:315px;"></span></p></div>
+<div id="wrap">
+	<div class="cutdown">
+	    <div id="clock"><span lxfday="no" endtime="<?php echo date('m/d/Y H:i:s', $this->currentWebgameInfo['start_maintain']); ?>" class="lxftime" ></span></div>
 	</div>
 </div>
 </body>

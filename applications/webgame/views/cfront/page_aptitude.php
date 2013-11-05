@@ -6,5 +6,5 @@
 		<em>&gt;</em><a href="javascript: void(0);"><?php echo $this->currentCategoryInfo['catname']; ?></a>
 	</div>
 </div>
-<div class="banner"><img src="<?php echo $this->currentCategoryInfo['image']; ?>" width="1000px" height="800px" alt="关于知金"></div>
+<div class="banner" style="height:800px;"><img src="<?php echo $this->currentCategoryInfo['image']; ?>" width="1000px" height="800px" alt="关于知金"></div>
 <?php echo $this->load->view('footer_cfront'); ?>
