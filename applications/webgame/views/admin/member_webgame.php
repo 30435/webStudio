@@ -1,16 +1,12 @@
 <?php $this->load->view('header_admin') ?>
 <div class="table-list pad-lr-10">
   <form method="get" action="" name="searchform">
-    <input type="hidden" name="m" value="member">
-    <input type="hidden" name="c" value="member">
-    <input type="hidden" name="a" value="search">
-    <input type="hidden" name="menuid" value="879">
     <table width="100%" cellspacing="0" class="search-form">
       <tbody>
 		<tr>
 		  <td>
 		  <div class="explain-col">
-			操作时间：<input type="text" readonly="" class="date input-text" size="10" value="" id="start_time" name="start_time">&nbsp;
+			注册时间：<input type="text" readonly="" class="date input-text" size="10" value="" id="start_time" name="start_time">&nbsp;
 			<script type="text/javascript">
 				Calendar.setup({
 				weekNumbers: true,
@@ -33,8 +29,7 @@
 				onSelect   : function() {this.hide();}
 				});
 			</script>
-			<select name="userid"><option selected="" value="0">选择游戏</option><?php echo $this->selectWebgameCode; ?></select>							
-			<select name="roleid"><option selected="" value="0">选择游戏服务器</option><?php echo $this->selectServer; ?></select>		
+			查找指定用户：<input type="text" name="username" value="" />			
 			<input type="submit" value="搜索" class="button" name="search">
 	      </div>
 		  </td>
@@ -42,7 +37,7 @@
       </tbody>
     </table>
     <input type="hidden" name="pc_hash" value="oP31Gm">
-	</form>
+  </form>
     <table width="100%" cellspacing="0">
       <thead>
 		<tr>

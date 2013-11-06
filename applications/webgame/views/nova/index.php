@@ -13,7 +13,7 @@ function searchFunc()
 			<div class="nuowa_bj0">
 				<p class="more"><a target="_blank">更多</a></p>
 				<ul>
-					<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 6, array(), array(array('inputtime', 'desc'))); ?>
+					<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 6, array('position' => 'index'), array(array('updatetime', 'desc')), 'id, title, thumb,'); ?>
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 						<li><a href="<?php echo $this->currentWebgameInfo['url_home'] . 'spirit?id=' . $newInfo['id']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="109px" height="143px" /></a></li>
 					<?php } ?>

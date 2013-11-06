@@ -15,9 +15,10 @@
 		  <th><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['id']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['title']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['sort']['name']; ?></th>
+		  <th align="center"><?php echo $this->fieldInfos['position']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['inputtime']['name']; ?></th>
 		  <th align="center"><?php echo $this->fieldInfos['updatetime']['name']; ?></th>
-		  <th align="center"><?php echo $this->fieldInfos['status']['name']; ?></th>
 		  <th class="text-c"><?php echo $this->lang->line('admin_operation'); ?></th>
 		</tr>
       </thead>
@@ -28,9 +29,10 @@
 		  <td align="center"><input name='listorders[<?php echo $info['id']; ?>]' type='text' size='3' value='<?php echo $info['listorder']; ?>' class="input-text-c"></td>
           <td align="center"><?php echo $info['id']; ?></td>
           <td align="center"><?php echo $info['title']; ?></td>
+		  <td align="center"><?php echo $info['sort']; ?></td>
+		  <td align="center"><?php echo $info['position']; ?></td>
 		  <td align="center"><?php echo $info['inputtime']; ?></td>
 		  <td align="center"><?php echo $info['updatetime']; ?></td>
-		  <td align="center"><?php echo $info['status']; ?></td>
           <td class="text-c">
 		  	<?php foreach ($this->operationMenus as $operationMenu) { if (!in_array($operationMenu, array_keys($this->appMenus))) continue; $menu = $this->appMenus[$operationMenu]; $menuUrl = $operationMenu == 'delete' ? 'javascript:confirmurl("' . $menu['url'] . '?id=' . $info['id'] . '", "确认要删除 『 ' . $info['title'] . '』 吗？");' : $menu['url'] . '?id=' . $info['id']; ?>
     		<a href='<?php echo $menuUrl; ?>'><?php echo $menu['name']; ?></a> |
@@ -47,108 +49,97 @@
 <?php } else { 
 $defaultContent =<<<DEFAULTCONTENT
 <table width="920" cellpadding="0" cellspacing="0" bordercolor="#666666" border="1" >
-	<tr><td colspan="7" class="sec_hb"><strong><span>诺瓦王国的的的的的的的的的的的的种族图</span></strong></td></tr>
+	<tr><td colspan="7" class="sec_hb"><strong><span>宠物种族值</span></strong></td></tr>
 	<tr>
 		<td width="200" valign="middle" bgcolor="#FFCC33">宠物名称</td>
 		<td width="100" bgcolor="#FF9900">精力</td>
 		<td width="100" bgcolor="#FF9900">攻击</td>
 		<td width="100" bgcolor="#FF9900">防御</td>
-		<td width="100" bgcolor="#FF9900">魔攻</td>
-		<td width="100" bgcolor="#FF9900">魔抗</td>
+		<td width="100" bgcolor="#FF9900">特攻</td>
+		<td width="100" bgcolor="#FF9900">特防</td>
 		<td width="100" bgcolor="#FF9900">速度</td>
 	</tr>
 	<tr>
-		<td width="200" valign="middle">宠物名称</td>
-		<td width="100">精力</td>
-		<td width="100">攻击</td>
-		<td width="100">防御</td>
-		<td width="100">魔攻</td>
-		<td width="100">魔抗</td>
-		<td width="100">速度</td>
+		<td width="200" valign="middle"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
 	</tr>
 	<tr>
-		<td width="200" valign="middle">宠物名称</td>
-		<td width="100">精力</td>
-		<td width="100">攻击</td>
-		<td width="100">防御</td>
-		<td width="100">魔攻</td>
-		<td width="100">魔抗</td>
-		<td width="100">速度</td>
+		<td width="200" valign="middle"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
 	</tr>
 	<tr>
-		<td width="200" valign="middle">宠物名称</td>
-		<td width="100">精力</td>
-		<td width="100">攻击</td>
-		<td width="100">防御</td>
-		<td width="100">魔攻</td>
-		<td width="100">魔抗</td>
-		<td width="100">速度</td>
+		<td width="200" valign="middle"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+		<td width="100"></td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table width="920" cellpadding="0" cellspacing="0" bordercolor="#666666" border="1" >
+	<tr><td colspan="8" class="sec_hb"><strong><span>技能列表</span></strong></td></tr>
+	<tr>
+		<td width="117" valign="middle" bgcolor="#FFCC33">技能名称</td>
+		<td width="61" bgcolor="#FF9900">学习等级</td>
+		<td width="74" bgcolor="#FF9900">攻击类型</td>
+		<td width="72" bgcolor="#FF9900">威力值</td>
+		<td width="66" bgcolor="#FF9900">pp值</td>
+		<td width="516" bgcolor="#FF9900">描述</td>
+	</tr>
+	<tr>
+		<td valign="middle"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="middle"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="middle"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="middle"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td width="117" valign="middle"></td>
+		<td width="61"></td>
+		<td width="74"></td>
+		<td width="72"></td>
+		<td width="66"></td>
+		<td width="516"></td>
 	</tr>
 </table>
 <br />
-<table width="920" cellpadding="0" cellspacing="0" bordercolor="#666666" border="1" >
-	<tr><td colspan="8" class="sec_hb"><strong><span>诺瓦王国的的的的的的的的的的的的种族图</span></strong></td></tr>
-	<tr>
-		<td width="100" valign="middle" bgcolor="#FFCC33">宠物名称</td>
-		<td width="50" bgcolor="#FF9900">精力</td>
-		<td width="50" bgcolor="#FF9900">攻击</td>
-		<td width="50" bgcolor="#FF9900">防御</td>
-		<td width="50" bgcolor="#FF9900">魔攻</td>
-		<td width="50" bgcolor="#FF9900">魔抗</td>
-		<td width="50" bgcolor="#FF9900">速度</td>
-		<td width="100" bgcolor="#FF9900">速度</td>
-	</tr>
-	<tr>
-		<td width="100" valign="middle">宠物名称</td>
-		<td width="50">精力</td>
-		<td width="50">攻击</td>
-		<td width="50">防御</td>
-		<td width="50">魔攻</td>
-		<td width="50">魔抗</td>
-		<td width="50">速度</td>
-		<td width="100">速度</td>
-	</tr>
-	<tr>
-		<td width="100" valign="middle">宠物名称</td>
-		<td width="50">精力</td>
-		<td width="50">攻击</td>
-		<td width="50">防御</td>
-		<td width="50">魔攻</td>
-		<td width="50">魔抗</td>
-		<td width="50">速度</td>
-		<td width="100">速度</td>
-	</tr>
-	<tr>
-		<td width="100" valign="middle">宠物名称</td>
-		<td width="50">精力</td>
-		<td width="50">攻击</td>
-		<td width="50">防御</td>
-		<td width="50">魔攻</td>
-		<td width="50">魔抗</td>
-		<td width="50">速度</td>
-		<td width="100">速度</td>
-	</tr>
-	<tr>
-		<td width="100" valign="middle">宠物名称</td>
-		<td width="50">精力</td>
-		<td width="50">攻击</td>
-		<td width="50">防御</td>
-		<td width="50">魔攻</td>
-		<td width="50">魔抗</td>
-		<td width="50">速度</td>
-		<td width="100">速度</td>
-	</tr>
-	<tr>
-		<td width="100" valign="middle">宠物名称</td>
-		<td width="50">精力</td>
-		<td width="50">攻击</td>
-		<td width="50">防御</td>
-		<td width="50">魔攻</td>
-		<td width="50">魔抗</td>
-		<td width="50">速度</td>
-		<td width="100">速度</td>
-	</tr>
-</table>
 DEFAULTCONTENT;
 ?>
 <style type="text/css">
@@ -177,6 +168,10 @@ document.domain='<?php echo $this->frontDomain; ?>';
         <th width="120"><?php echo $this->fieldInfos['title']['name']; ?>:</th> 
         <td><input type="text" name="title" class="input-text" id="title" value="<?php if (isset($this->currentInfo['title'])) echo $this->currentInfo['title']; ?>" /></input></td>
       </tr>
+	  <tr>
+		<th width="100"><?php echo $this->fieldInfos['sort']['name']; ?>：</th>
+		<td><select name="sort" id="sort"><?php echo $this->selectSort; ?></select></td>
+	  </tr>
 	  <tr>
         <th><?php echo $this->fieldInfos['thumb']['name']; ?>:</th>
         <td>
@@ -221,16 +216,12 @@ document.domain='<?php echo $this->frontDomain; ?>';
 	    <th width="80"><?php echo $this->fieldInfos['status']['name']; ?>：</th>
 		<td><select name="status" id="status"><?php echo $this->selectServerStatus; ?></select></td>
 	  </tr>
-      <tr>
-        <th><?php echo $this->fieldInfos['description']['name']; ?></th>
-        <td><textarea name="description" rows="2" cols="20" id="description" class="inputtext" style="height:100px;width:500px;"><?php if (isset($this->currentInfo['description'])) echo $this->currentInfo['description']; ?></textarea></td>
-      </tr>
 	  <tr>
 		<th width="80"> <font color="red">*</font><?php echo $this->fieldInfos['content']['name']; ?>:</th>
 		<td>
 		  <div id='content_tip'></div>
 		  <?php
-			$contentAuto= isset($this->currentInfo['content']) ? $this->currentInfo['content'] : '';
+			$contentAuto= isset($this->currentInfo['content']) ? $this->currentInfo['content'] : $defaultContent;
 			echo $this->ckeditor->editor('content', $contentAuto); 
 		  ?>
 		</td>

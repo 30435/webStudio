@@ -64,10 +64,10 @@ class Spirit extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($webgameCode = '', $serverStatus = 0)
+	protected function _initInfo($sort = '', $position = 0)
 	{
-		//$this->selectWebgame = $this->_getSelectElement($this->webgameInfos, 'code', 'name', $webgameCode, true);
-		//$this->selectServerStatus = $this->_getSelectElement($this->fieldInfos['status']['infos'], 'key', 'value', $serverStatus, true);
+		$this->selectSort = $this->_getSelectElement($this->fieldInfos['sort']['infos'], 'key', 'value', $sort, true);
+		$this->selectPosition = $this->_getSelectElement($this->fieldInfos['position']['infos'], 'key', 'value', $position, true);
 	}
 
 	/**
@@ -80,10 +80,10 @@ class Spirit extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		//$this->_initInfo($info['webgame_code'], $info['status']);
+		$this->_initInfo($info['sort'], $info['position']);
 		if ($isWrite) {
-			//$info['start_maintain'] = !empty($info['start_maintain']) ? strtotime($info['start_maintain']) : 0;
-			//$info['end_maintain'] = !empty($info['end_maintain']) ? strtotime($info['end_maintain']) : 0;
+			$info['inputtime'] = empty($this->currentInfo['inputtime']) ? $this->time : $this->currentInfo['inputtime'];
+			$info['updatetime'] = $this->time;
 		}
 		return $info;
 	}
@@ -98,9 +98,11 @@ class Spirit extends Custom_AdminController
 	{
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				//$info['webgame_code'] = !empty($this->webgameInfos[$info['webgame_code']]['name']) ? $this->webgameInfos[$info['webgame_code']]['name'] : $info['webgame_code'];
+				$info['sort'] = !empty($this->fieldInfos['sort']['infos'][$info['sort']]['value']) ? $this->fieldInfos['sort']['infos'][$info['sort']]['value'] : $info['sort'];
 				$info['status'] = !empty($this->fieldInfos['status']['infos'][$info['status']]['value']) ? $this->fieldInfos['status']['infos'][$info['status']]['value'] : $info['status'];
-				//$info['ispay'] = !empty($this->fieldInfos['ispay']['infos'][$info['ispay']]) ? $this->fieldInfos['ispay']['infos'][$info['ispay']] : $info['ispay'];
+				$info['position'] = !empty($this->fieldInfos['position']['infos'][$info['position']]['value']) ? $this->fieldInfos['position']['infos'][$info['position']]['value'] : $info['position'];
+				$info['updatetime'] = date('Y-m-d H:i:s', $info['updatetime']);
+				$info['inputtime'] = date('Y-m-d H:i:s', $info['inputtime']);
 
 				$infos[$key] = $info;
 			}

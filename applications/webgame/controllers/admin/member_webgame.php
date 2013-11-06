@@ -92,6 +92,29 @@ class Member_webgame extends Custom_AdminController
 	 */
 	protected function _where()
 	{
-		//return $whereArray;
+		$this->pagination->page_query_string=TRUE;
+		$this->pagination->enable_query_strings=TRUE;
+		$whereArray = array();
+		$urlStr = '';
+
+		$startTime = $this->input->get('start_time');
+		$endTime = $this->input->get('end_time');
+		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+		if (!empty($startTime) || !empty($endTime)) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array('lasttime >=' => strtotime($startTime)));
+			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array('lasttimez <=' => strtotime($endTime)));
+
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
+		}
+		
+		$username = $this->input->get('username');
+		if (!empty($username)) {
+			$whereArray = array_merge($whereArray, array('username = ' => $username));
+			$urlStr .= empty($username) ? '' : '&username=' . $username;
+		}
+
+		$this->_paginationStr($urlStr);
+		return $whereArray;
 	}
 }

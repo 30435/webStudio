@@ -48,17 +48,17 @@ class IndexBase extends Custom_Controller
 			$userInfo = $this->memberModel->getInfo($where);
 
 			if ($field != 'username' && empty($userInfo)) {
-				$this->_showMessage('用户不存在dd', $this->baseUrl . $this->prefix . '/login');
+				$this->_messageInfo('用户不存在dd', $this->baseUrl . $this->prefix . '/login');
 			}
 
 			$username = $userInfo['username'];
 			
 			$synloginCode = ''; // 同步登陆js代码
-			
+
 			$this->load->model('timesModel');
 			$remainMinute = $this->timesModel->checkLoginTimes(array('username' => $username, 'isadmin' => 0));
 			if ($remainMinute > 0) {
-				$this->_showMessage('密码错误次数太多，请<b color="red">' . $remainMinute . '</b>分钟后再登录！', $this->baseUrl . $this->prefix . '/login');
+				$this->_messageInfo('密码错误次数太多，请<b color="red">' . $remainMinute . '</b>分钟后再登录！', $this->baseUrl . $this->prefix . '/login');
 			}
 
 			$statusInfos = array('-1' => '用户不存在！', '-2' => '密码不正确！', '-3' => '验证问题回答错误！');

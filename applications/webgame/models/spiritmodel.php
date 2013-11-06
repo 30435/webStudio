@@ -4,7 +4,9 @@ class SpiritModel extends CommonModel
 	public function __construct($data = '')
 	{
 		$this->table = 'spirit';
-		parent::__construct($data);		
+		parent::__construct($data);	
+		
+		$this->sortInfos = $this->fieldInfos['fields']['sort']['infos'];
 	}
 				
 	/**
@@ -18,9 +20,23 @@ class SpiritModel extends CommonModel
 			'index' => array('key' => 'index', 'value' => '首页焦点推荐'),
 			'show' => array('key' => 'show', 'value' => '内容页推荐'),
 		);
+		$sortInfos = array(
+			'dark' => array('key' => 'dark', 'value' => '暗'),
+			'ice' => array('key' => 'dark', 'value' => '冰'),
+			'super' => array('key' => 'dark', 'value' => '超能'),
+			'earth' => array('key' => 'earth', 'value' => '地'),
+			'wind' => array('key' => 'wind', 'value' => '风'),
+			'light' => array('key' => 'light', 'value' => '光'),
+			'fire' => array('key' => 'fire', 'value' => '火'),
+			'machine' => array('key' => 'machine', 'value' => '机械'),
+			'dragon' => array('key' => 'dragon', 'value' => '龙'),
+			'wood' => array('key' => 'wood', 'value' => '木'),
+			'water' => array('key' => 'water', 'value' => '水'),
+		);
 		$fieldInfos['fields'] = array(
 			'id' => array('name' => '精灵ID'),
 			'title' => array('name' => '精灵名称'),
+			'sort' => array('name' => '类别', 'infos' => $sortInfos),
 			'thumb' => array('name' => '缩略图'),
 			'pic_effect' => array('name' => '精灵效果图'),
 			'pic_growup' => array('name' => '精灵养成图'),
@@ -35,7 +51,7 @@ class SpiritModel extends CommonModel
 			'updatetime' => array('name' => '更新时间'),
 		);
 		$fieldInfos['fieldList'] = array('id', 'title', 'listorder','position', 'username', 'status', 'updatetime', 'inputtime');
-		$fieldInfos['fieldChanges'] = array('title', 'thumb', 'pic_effect', 'pic_growup', 'pic_ext', 'description', 'listorder', 'content', 'position', 'status');
+		$fieldInfos['fieldChanges'] = array('title', 'sort', 'thumb', 'pic_effect', 'pic_growup', 'pic_ext', 'description', 'listorder', 'content', 'position', 'status');
 		
 		return $fieldInfos;
 	}

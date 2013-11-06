@@ -1,6 +1,44 @@
 <?php $this->load->view('header_admin') ?>
 <?php if ($this->method == 'listinfo') { ?>
 <div class="pad_10">
+  <form method="get" action="" name="searchform">
+    <table width="100%" cellspacing="0" class="search-form">
+      <tbody>
+		<tr>
+		  <td>
+		  <div class="explain-col">
+			注册时间：<input type="text" readonly="" class="date input-text" size="10" value="" id="start_time" name="start_time">&nbsp;
+			<script type="text/javascript">
+				Calendar.setup({
+				weekNumbers: true,
+				inputField : "start_time",
+				trigger    : "start_time",
+				dateFormat: "%Y-%m-%d",
+				showTime: false,
+				minuteStep: 1,
+				onSelect   : function() {this.hide();}
+				});
+			</script>-<input type="text" readonly="" class="date input-text" size="10" value="" id="end_time" name="end_time">&nbsp;
+			<script type="text/javascript">
+				Calendar.setup({
+				weekNumbers: true,
+				inputField : "end_time",
+				trigger    : "end_time",
+				dateFormat: "%Y-%m-%d",
+				showTime: false,
+				minuteStep: 1,
+				onSelect   : function() {this.hide();}
+				});
+			</script>
+			查找指定用户：<input type="text" name="username" value="" />			
+			<input type="submit" value="搜索" class="button" name="search">
+	      </div>
+		  </td>
+	    </tr>
+      </tbody>
+    </table>
+    <input type="hidden" name="pc_hash" value="oP31Gm">
+  </form>
   <div class="table-list">
     <table width="100%" cellspacing="0">
       <thead>

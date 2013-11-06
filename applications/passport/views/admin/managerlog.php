@@ -2,10 +2,6 @@
 <?php if ($this->method == 'listinfo' || $this->method == 'listinfom') { ?>
 <div class="table-list pad-lr-10">
   <form method="get" action="" name="searchform">
-    <input type="hidden" name="m" value="member">
-    <input type="hidden" name="c" value="member">
-    <input type="hidden" name="a" value="search">
-    <input type="hidden" name="menuid" value="879">
     <table width="100%" cellspacing="0" class="search-form">
       <tbody>
 		<tr>
