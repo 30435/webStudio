@@ -101,7 +101,7 @@ $(document).ready(function(){
 			<div class="zc_reg_top">
 				<span id="selectRealNameBar">建议你&nbsp;<i class="zc_reg_ts" onclick="selectRealName()">实名注册</i></span>
 				<span style="display: none;" id="selectNoRealNameBar">您也可以&nbsp;<i class="zc_reg_ts" onclick="selectNoRealName()">不实名注册</i></span>
-				快速注册米米号，开始快乐之旅
+				快速注册诺瓦号，开始快乐之旅
 			</div>
 
 

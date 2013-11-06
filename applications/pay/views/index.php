@@ -72,7 +72,7 @@ $(document).ready(function(){
 			<div class="main_title">
 				<?php if ($this->payType == 'topaymonth') { $unitName = $this->paymonthInfo['name']; } elseif ($this->payType == 'towebgame') { $unitName = $this->webgameInfo['name'] . '-' . $this->webgameInfo['coin_name']; } else { $unitName = '诺币'; } ?>
 				<p><span>你正在使用</span><b id="paymentName"></b><span>充值</span><b><?php echo $unitName; ?></b></p>
-				<div class="ui_mibi"><label>米币帐户余额：</label><b><?php $currentUserMoney = isset($this->moneyInfo['money']) ? $this->moneyInfo['money'] : 0; echo $currentUserMoney; ?><input type="hidden" value="<?php if (isset($this->moneyInfo['money'])) echo $this->moneyInfo['money']; ?>" id="mb_blance_f" name="mb_blance_f"></b><span>米币</span></div>
+				<div class="ui_mibi"><label>诺币帐户余额：</label><b><?php $currentUserMoney = isset($this->moneyInfo['money']) ? $this->moneyInfo['money'] : 0; echo $currentUserMoney; ?><input type="hidden" value="<?php if (isset($this->moneyInfo['money'])) echo $this->moneyInfo['money']; ?>" id="mb_blance_f" name="mb_blance_f"></b><span>米币</span></div>
 				<!--<a class="link_inquiry" id="balancePage" href="<?php echo $this->baseUrl; ?>index/myaccount/" target="_blank">诺币余额查询</a>-->
 			</div>							
 			<div class="form">

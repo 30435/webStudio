@@ -18,7 +18,7 @@
 							<i class="star-gray fleft">&nbsp;&nbsp;</i>
 							<i class="star-gray fleft">&nbsp;&nbsp;</i>
 						</div>
-				        <div style="line-height:30px;" class="clear"><span>在你的细心呵护下，你的米米号暂时处于安全状态</span></div>
+				        <div style="line-height:30px;" class="clear"><span>在你的细心呵护下，你的诺瓦号暂时处于安全状态</span></div>
 			        </div>
 	                <i style="margin-left:165px;" class="fleft face-red">&nbsp;&nbsp;</i>
 				</div>

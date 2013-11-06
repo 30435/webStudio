@@ -26,8 +26,8 @@
 				<thead>
 					<tr>
 						<th width="20%">日期</th>
-						<th width="15%">消费米米号</th>
-						<th width="20%">充值消费（米币）</th>
+						<th width="15%">消费诺瓦号</th>
+						<th width="20%">充值消费（诺币）</th>
 						<th width="25%">明细</th>
 						<th width="10%">数量</th>
 						<th width="10%">帐户余额</th>
@@ -40,7 +40,7 @@
 					<tr>
 						<td width="20%"><?php echo date('Y-m-d H:i:s', $info['account_time']); ?></td>
 						<td width="15%"><?php echo $info['orderid']; ?></td>
-						<td width="20%"><?php echo $info['money']; ?>（米币）</td>
+						<td width="20%"><?php echo $info['money']; ?>（诺币）</td>
 						<td width="25%"><?php echo $info['username']; ?></td>
 						<td width="10%"><?php echo $info['username']; ?></td>
 						<td width="10%"><?php echo $info['username']; ?></td>
