@@ -16,6 +16,9 @@ wangacanacan            迅雷账号
 2294566189              QQ账号
 iamwangcan@sohu.com     人人账号
 
+acantdudio              百度统计平台账号
+iamwangcan@163.com      cnzz统计平台账号
+
 iamwangcan              readthedocs账号
 acanstudio              github账号
 wangcan                 github账号

@@ -296,6 +296,18 @@ class IndexBase extends Custom_Controller
 		echo $this->_jsonp($data);
 		exit();
 	}
+	
+	/**
+	 * Check username exist
+	 *
+	 * @return void
+	 */
+	public function getLoginUser()
+	{
+		$data['username'] = empty($this->loginedUserInfo) ? '' : $this->loginedUserInfo['username'];
+		echo $this->_jsonp($data);
+		exit();
+	}
 
 	/**
 	 * Check username exist

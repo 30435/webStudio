@@ -22,8 +22,8 @@ class SpiritModel extends CommonModel
 		);
 		$sortInfos = array(
 			'dark' => array('key' => 'dark', 'value' => '暗'),
-			'ice' => array('key' => 'dark', 'value' => '冰'),
-			'super' => array('key' => 'dark', 'value' => '超能'),
+			'ice' => array('key' => 'ice', 'value' => '冰'),
+			'super' => array('key' => 'super', 'value' => '超能'),
 			'earth' => array('key' => 'earth', 'value' => '地'),
 			'wind' => array('key' => 'wind', 'value' => '风'),
 			'light' => array('key' => 'light', 'value' => '光'),

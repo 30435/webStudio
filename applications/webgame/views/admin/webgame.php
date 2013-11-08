@@ -205,6 +205,12 @@ $(function(){
         <th><?php echo $this->fieldInfos['description']['name']; ?></th>
         <td><textarea name="description" rows="2" cols="20" id="description" class="inputtext" style="height:100px;width:500px;"><?php if (isset($this->currentInfo['description'])) echo $this->currentInfo['description']; ?></textarea></td>
       </tr>
+	  <tr>
+	    <th><?php echo $this->fieldInfos['holiday']['name']; ?>：</th>
+		<td class="y-bg"><input type="text" class="input-text" name="holiday" value="<?php if (isset($this->currentInfo['holiday'])) echo $this->currentInfo['holiday']; ?>" id="holiday"  size="100"/>
+		<div class="onShow">严格按 2013/10/01-2013/10/07 这种格式填写节假日，月份或天数不足10的前面要补上一个0</div></td>
+		
+	  </tr>
 	  </table>
 	</fieldset>
     <div class="bk15"></div>

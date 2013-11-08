@@ -12,6 +12,7 @@ body{background:#fff;}
 .all{width:977px;margin:0 auto;}
 .ban{width:977px;height:646px;background:url(../images/waikuang.png) no-repeat;margin:3px 0;position:relative;}
 .ban .frm{position:absolute;top:3px;left:7px;}
+.ban img{width:951px;height:620px;padding-left:12px;padding-top:11px;}
 
 
 .nav_nuowa{width:977px;overfolw:hidden;}

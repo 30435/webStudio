@@ -47,9 +47,10 @@ class WebgameModel extends CommonModel
 			'coin_rate' => array('name' => '游戏币兑换比率'),
 			'start_maintain' => array('name' => '维护开始时间'),
 			'end_maintain' => array('name' => '维护结束时间'),
-			'url_maintain' => array('name' => '游戏维护调转地址')
+			'url_maintain' => array('name' => '游戏维护调转地址'),
+			'holiday' => array('name' => '节假日'),
 		);
-		$fieldInfos['fieldChanges'] = array('name', 'code', 'type', 'status', 'url_webgame', 'url_home', 'url_server',  'url_bbs', 'listorder', 'ispay', 'description', 'pic_small', 'pic_middle', 'pic_big', 'coin_name', 'coin_unit', 'coin_rate', 'start_maintain', 'end_maintain', 'url_maintain');
+		$fieldInfos['fieldChanges'] = array('name', 'code', 'type', 'status', 'url_webgame', 'url_home', 'url_server',  'url_bbs', 'listorder', 'ispay', 'description', 'pic_small', 'pic_middle', 'pic_big', 'coin_name', 'coin_unit', 'coin_rate', 'start_maintain', 'end_maintain', 'url_maintain', 'holiday');
 		
 		return $fieldInfos;
 	}

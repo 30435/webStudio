@@ -35,6 +35,29 @@ abstract class CmsPublish extends Custom_AdminController
 	 *
 	 * @return void
 	 */
+	public function webgame()
+	{
+		print_r($this->webgameInfos);
+		$this->load->helper('file');
+		
+		foreach ($this->webgameInfos as $webgameCode => $webgameInfo) {
+			$this->currentWebgameInfo = $webgameInfo;
+			if ($webgameCode == 'nova') {
+				$staticContent = $this->load->view($webgameCode . '/index', $this->frontController, true);
+				$file = BASEPATH_WWWROOT . APPCODE . '/' . $webgameCode . '/index.html';
+				file_exists($file) && @unlink($file);
+				write_file($file, $staticContent);
+			}
+		}
+
+		$this->_showMessage('更新首页成功！', '', '');
+	}
+
+	/**
+	 * Create the index html
+	 *
+	 * @return void
+	 */
 	public function category()
 	{
 		$this->load->helper('file');
