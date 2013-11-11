@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----- base CSS start -----*/
+body{color:#333;}
+.ww{width:990px;}
+/*----- base CSS end -----*/
+
+/*----- Header CSS start -----*/
+.header{width:988px; height:28px; background:url(../images/common/top_bg_01.gif) repeat-x; border:1px solid #e0e3ec;}
+.headerLogin{line-height:28px; float:left; text-align:left;}
+.ipt_text_1{border:1px solid #c2c2c2; line-height:18px; height:18px; background:#FFFFFF;}
+.ipt_btn_1{border:0; width:44px; line-height:22px; height:20px; background:url(../images/common/btn_bg_01.gif) no-repeat;}
+.sel_1{background:#FFFFFF; border:1px solid #c2c2c2; height:20px;}
+.headerSearch{line-height:28px; text-align:left; padding-left:50px;}
+.headerOur{line-height:28px; text-align:right; padding-right:10px; position:relative;}
+.headerOur ul{width:190px; background:#FFFFFF; border:5px solid #CCCCCC; padding:5px; z-index:3; position:absolute; left:-130px; top:20px; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity:0.8; opacity:0.8;}
+.headerOur ul li{width:95px; float:left; text-align:left; line-height:20px;}
+
+.mainNav ul{width:450px; float:left;}
+.mainNav ul li{float:left; width:90px;}
+.mainNav ul li img{margin-top:30px;}
+.topRed{width:100%; height:20px; background:#DA2300; text-align:left; padding-top:10px}
+.topRed img{margin-left:10px}
+/*----- Top CSS end -----*/
+
+/*----- Nav CSS start -----*/
+.topNav{height:35px;}
+.topNav h1{padding:5px 20px 0 20px; height:30px;}
+.topNav ul{margin-left:20px;}
+.topNav ul li{float:left; height:35px; font:15px/35px MicroSoft YaHei; padding:0 25px 0 25px;}
+.topNav p{margin:5px 10px 0 auto;}
+.topNav ul a.on:link, .topNav ul a.on:visited{color:#c74026; text-decoration:none; font-weight:bold;}
+.topNav ul a.on:hover, .topNav ul a.on:active{color:#ff3300; text-decoration:underline; font-weight:bold;}
+/*----- Nav CSS end -----*/
+
+/*----- Footer CSS start -----*/
+.footer{background:#FFFFFF; margin-top:40px; padding:0 0 20px 0; border-top:1px solid #ccc;}
+.footerLink{width:100%; font-weight:bold;}
+.footerCopyright{width:660px; color:#000000;}
+.footerCopyright h1{width:100px;}
+.footerCopyright p{width:560px; text-align:left; line-height:20px;}
+/*----- Footer CSS end -----*/
