@@ -13,8 +13,8 @@ class nova extends Index
 		parent::__construct ();
 
 		$this->currentWebgameInfo = $this->webgameInfos['nova'];
-		$stopWebgame = $this->stopWebgame();
-		$this->currentWebgameInfo['stop_webgame'] = $stopWebgame;
+		//$stopWebgame = $this->stopWebgame();
+		//$this->currentWebgameInfo['stop_webgame'] = $stopWebgame;
 		
 		$this->templatePre = 'nova/';
 	}

@@ -26,7 +26,7 @@ class CommonController extends CI_Controller
 		$this->baseUrl = $this->appInfos[APPCODE]['url'];		
 		$this->load->library('session');
 
-		$this->metaDatas = array('title' => '诺瓦奇兵官网', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
+		$this->metaDatas = array('title' => '诺瓦奇兵游戏官网', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
 		$this->testUsers = array();
 	}
 	

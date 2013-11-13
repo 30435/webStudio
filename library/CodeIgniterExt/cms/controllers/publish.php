@@ -37,7 +37,7 @@ abstract class CmsPublish extends Custom_AdminController
 	 */
 	public function webgame()
 	{
-		print_r($this->webgameInfos);
+		return ;
 		$this->load->helper('file');
 		
 		foreach ($this->webgameInfos as $webgameCode => $webgameInfo) {
