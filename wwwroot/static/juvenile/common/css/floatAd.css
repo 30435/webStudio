@@ -43,7 +43,7 @@
 	right: 5px;
 	width: 16px;
 	height: 16px;
-	background: url("../images/common/floatAdClose.png") no-repeat;
+	background: url("../images/floatAdClose.png") no-repeat;
 	cursor: pointer;
 }
 .floatAd .text .title{
