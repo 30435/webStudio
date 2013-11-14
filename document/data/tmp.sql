@@ -11,7 +11,24 @@ INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `meth
 ('删除精灵', 90, 'webgame', 'spirit', 'delete', '', 0, '1', '3'),
 
 
+INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
+('青少年', 0, 'juvenile', '', '', '', 8, '0', '1');
 
+INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
+('内容管理', 261, 'juvenile', '', '', '', 3, '1', '1');
+
+INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
+('添加栏目', 262, 'juvenile', 'category', 'add', '', 0, '1', '2'),
+('删除栏目', 262, 'juvenile', 'category', 'delete', '', 0, '1', '3'),
+('编辑栏目', 262, 'juvenile', 'category', 'edit', '', 0, '1', '3'),
+('管理栏目', 262, 'juvenile', 'category', 'listinfo', '', 0, '1', '1'),
+('查看栏目', 262, 'juvenile', 'category', 'view', '', 0, '1', '3'),
+('添加内容', 262, 'juvenile', 'content', 'add', '', 0, '1', '2'),
+('管理内容', 262, 'juvenile', 'content', 'catquick', '', 0, '1', '1'),
+('删除内容', 262, 'juvenile', 'content', 'delete', '', 0, '1', '3'),
+('编辑内容', 262, 'juvenile', 'content', 'edit', '', 0, '1', '3'),
+('内容列表', 262, 'juvenile', 'content', 'listinfo', '', 0, '1', '3'),
+('查看内容', 262, 'juvenile', 'content', 'view', '', 0, '1', '3');
 
 
 

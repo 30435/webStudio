@@ -5,6 +5,7 @@ class Index extends CmsIndex
 {
 	public function __construct()
 	{
+		$this->templatePre = $this->templateListPre = $this->templateShowPre = 'juvenile/';
 		parent::__construct();
 
 		$this->loginedUserInfo = $this->_checkUserLogin();
@@ -12,12 +13,20 @@ class Index extends CmsIndex
 
 	public function index()
 	{
-		$this->load->view('index', $this->frontController);
+		$this->load->view($this->templateListPre . 'index', $this->frontController);
 	}
 
 	public function index1()
 	{
 		$this->load->view('index1', $this->frontController);
+	}
+
+	public function category()
+	{
+		$this->_initModel();
+
+		$template = !empty($this->currentCategoryInfo['template']) ? $this->templateListPre . $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
+		$this->load->view($template, $this->frontController);
 	}
 
 	public function show()
