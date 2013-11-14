@@ -1,7 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
+<?php echo $this->load->view('header_base'); ?>
 <link rel="stylesheet" type="text/css" href="http://s.beva.cn/css/common4.css?v=1.1.5" />
 <link rel="stylesheet" type="text/css" href="http://3w.beva.cn/css/home4.css?v=1.0.12" />
 <link rel="stylesheet" type="text/css" href="http://s.beva.cn/css/loginlayer4.css?v=1.0.1" />

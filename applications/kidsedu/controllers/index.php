@@ -5,6 +5,7 @@ class Index extends CmsIndex
 {
 	public function __construct()
 	{
+		$this->templatePre = $this->templateListPre = $this->templateShowPre = 'source/';
 		parent::__construct();
 
 		$this->loginedUserInfo = $this->_checkUserLogin();
@@ -12,7 +13,7 @@ class Index extends CmsIndex
 
 	public function index()
 	{
-		$this->load->view('index', $this->frontController);
+		$this->load->view($this->templatePre . 'index', $this->frontController);
 	}
 
 	public function index1()
