@@ -21,22 +21,23 @@ abstract class CmsCategoryModel extends CommonModel
 	 */
 	protected function _fieldInfos()
 	{
-		$templateInfos = array(
-			'page_default' => array('key' => 'page_default', 'value' => '标准单网页模板'),
-			'page_aboutus' => array('key' => 'page_aboutus', 'value' => '单网页模板_关于我们'),
-			'page_service' => array('key' => 'page_service', 'value' => '单网页模板_服务条款'),
-			'page_aptitude' => array('key' => 'page_aptitude', 'value' => '单网页模板_资质'),
-			'list' => array('key' => 'list', 'value' => '标准列表页模板'),
-			'list_big' => array('key' => 'list_big', 'value' => '标准大栏目模板'),
-			'list_mid' => array('key' => 'list_mid', 'value' => '标准中栏目模板'),
+		$templatePageInfos = array(
+			'default' => array('key' => 'default', 'value' => '标准单网页模板'),
+			'aboutus' => array('key' => 'aboutus', 'value' => '单网页模板_关于我们'),
+			'service' => array('key' => 'service', 'value' => '单网页模板_服务条款'),
+			'aptitude' => array('key' => 'aptitude', 'value' => '单网页模板_资质'),
 		);
-		$urlruleInfos = array(
-			'biglist_php' => array('key' => 'biglist_php', 'value' => '大栏目页动态url规则'),
-			'biglist_html' => array('key' => 'biglist_html', 'value' => '大栏目页静态url规则'),
-			'list_php' => array('key' => 'biglist_php', 'value' => '列表页动态url规则'),
-			'list_html' => array('key' => 'biglist_html', 'value' => '列表页静态url规则'),
-			'show_php' => array('key' => 'biglist_php', 'value' => '内容页动态url规则'),
-			'show_html' => array('key' => 'biglist_html', 'value' => '内容页静态url规则'),
+		$templateBigInfos = array(
+			'list_big' => array('key' => 'list_big', 'value' => '标准大栏目模板'),
+			'list_depart_big' => array('key' => 'list_depart_big', 'value' => '事业部大栏目模板'),
+			'list_school_big' => array('key' => 'list_school_big', 'value' => '视频大栏目模板'),
+		);
+		$templateListInfos = array(
+			'list' => array('key' => 'list', 'value' => '标准列表页模板'),
+			'list_depart' => array('key' => 'list_depart', 'value' => '事业部列表页模板'),
+			'list_school' => array('key' => 'list_school', 'value' => '视频列表页模板'),
+		);
+		$templateShowInfos = array(
 		);
 
 		$fieldInfos['fields'] = array(
@@ -48,7 +49,10 @@ abstract class CmsCategoryModel extends CommonModel
 			'image' => array('name' => '栏目图片'),
 			'description' => array('name' => '描述'),
 			'ishtml' => array('name' => '是否生成静态页', 'infos' => array('0' => '<font class="gray4">不生产</font>', '1' => '<font class="green">生成</font>')),
-			'template' => array('name' => '模板', 'infos' => $templateInfos),
+			'template_page' => array('name' => '单网页页模板', 'infos' => $templatePageInfos),
+			'template_big' => array('name' => '大列表页模板', 'infos' => $templateBigInfos),
+			'template_list' => array('name' => '列表页模板', 'infos' => $templateListInfos),
+			'template_show' => array('name' => '内容页模板', 'infos' => $templateShowInfos),
 			'meta_title' => array('name' => 'META Title（栏目标题）'),
 			'meta_keywords' => array('name' => 'META Keywords（栏目关键词）'),
 			'meta_description' => array('name' => 'META Description（栏目描述）'),
@@ -57,7 +61,7 @@ abstract class CmsCategoryModel extends CommonModel
 			//'urlrule' => array('name' => 'URL规则', 'infos' => $urlruleInfos)
 		);
 		$fieldInfos['fieldChanges'] = array(
-			'catname', 'parentid', 'modelid', 'catdir', 'image', 'description', 'ishtml', 'template', 'meta_title', 'meta_keywords', 
+			'catname', 'parentid', 'modelid', 'catdir', 'image', 'description', 'ishtml', 'template_page', 'template_big', 'template_list', 'template_show', 'meta_title', 'meta_keywords', 
 			'meta_description', 'listorder', 'bind_domain'
 		);
 		

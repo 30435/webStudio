@@ -1,0 +1,462 @@
+/*
+Theme Name: 芝兰玉树官网
+Theme URI: http://www.slanissue.com
+Description: 北京芝兰玉树科技有限公司
+Version: 1.0
+Author: 雷国强
+Author URI: http://www.slanissue.com
+Tags: 芝兰玉树,芝兰玉树科技
+*/
+
+/* Global Styles */
+
+body{font-size:12px; color:#515151; font-family:"宋体","Arial Narrow"; background-color:#FFF;}
+body, pre{margin:0px; padding:0px; border:0px;}
+
+a:link, a:visited {text-decoration:none;color:#015B9A;}
+a.item:link, a.item:visited {text-decoration:none;color:#515153;}
+a.green:link, a.green:visited {text-decoration:none;color:#549503;}
+a.ktitle:link, a.ktitle:visited {text-decoration:none;color:#4C6926;}
+a.ltitle:link, a.ltitle:visited {text-decoration:none;color:#3C3C3C;}
+a:hover, a:active, a.item:hover, a.item:active, a.green:hover, a.green:active, a.stitle:hover, a.stitle:active, a.ktitle:hover, a.ktitle:active{text-decoration:underline; color:#365402;}
+a img{border:none; text-decoration:none;}
+a:link img,a:visited img,a:hover img,a:active img{border:none; text-decoration:none;}
+
+.noul, .nodl, .nodl dt, .nodl dd, .noh1{margin:0px; padding:0px; border:0px;}
+
+.l{float:left;}
+.clear{clear:both;}
+.bbg{border-bottom:1px solid #E9E9EB;}
+
+#homepage{background:url(../images/hpbg.jpg) repeat-x 0px 0px; height:771px;}
+#hptop{height:520px;}
+#hpmenu{height:36px; line-height:36px; width:868px; padding-left:60px; margin:0px auto; background:url(../images/bgs.png) no-repeat 0px 0px;}
+#hpImg{width:924px; height:373px; margin:0px auto;}
+
+#toplogo{width:221px; height:20px; margin:0px auto; padding-top:38px; padding-bottom:18px;}
+#menu{height:36px; line-height:36px; width:960px; margin:0px auto;}
+
+.menuItem{display:block; width:99px; margin-right:21px; height:14px; line-height:14px; background:url(../images/bgs.png) no-repeat 0px -107px; float:left; margin-top:10px;}
+.menuItem:hover, .menuItem:active{text-decoration:none;}
+#hpmenu .menuItem{margin-right:0px;}
+.menuItem span{visibility:hidden;}
+.menuHomepage{background-position:-436px -390px;}
+.menuHomepage:hover, .menuHomepage:active, .menuHomepageSelected, .menuHomepageSelected:hover{background-position:-435px -357px; text-decoration:none;}
+.menuAbout{background-position:0px -107px;}
+.menuAbout:hover,.menuAbout:active,.menuAboutSelected, .menuAboutSelected:hover{background-position:-203px -107px; text-decoration:none;}
+.menuOpinions{background-position:0px -144px;}
+.menuOpinions:hover,.menuOpinions:active,.menuOpinionsSelected, .menuOpinionsSelected:hover{background-position:-203px -144px; text-decoration:none;}
+.menuFootprint{background-position:0px -182px;}
+.menuFootprint:hover,.menuFootprint:active,.menuFootprintSelected, .menuFootprintSelected:hover{background-position:-203px -182px; text-decoration:none;}
+.menuCulture{background-position:1px -222px;}
+.menuCulture:hover,.menuCulture:active,.menuCultureSelected, .menuCultureSelected:hover{background-position:-203px -222px; text-decoration:none;}
+.menuCareers{background-position:0px -264px;}
+.menuCareers:hover,.menuCareers:active,.menuCareersSelected, .menuCareersSelected:hover{background-position:-203px -264px; text-decoration:none;}
+.menuContactus{background-position:0px -311px;}
+.menuContactus:hover,.menuContactus:active,.menuContactusSelected, .menuContactusSelected:hover{background-position:-203px -311px; text-decoration:none;}
+.menuProducts{background-position:-1px -357px;}
+.menuProducts:hover,.menuProducts:active,.menuProductsSelected, .menuProductsSelected:hover{background-position:-203px -357px; text-decoration:none;}
+
+#top .currMenu{width:960px; height:15px; padding:10px 0px 6px; margin:0px auto;}
+#hpMenuBanner{width:924px; height:15px; padding:10px 0px 6px; margin:0px auto;}
+.pageItem{width:210px; height:15px; background:url(../images/bgs.png) no-repeat 0px -450px;}
+.pageNews{background-position:0px -450px;}
+.pageAbout{background-position:0px -404px;}
+.pageZJ{background-position:0px -494px;}
+.pageOpinions{background-position:0px -548px;}
+.pageCulture{background-position:0px -628px;}
+.pageFootprint{background-position:0px -687px;}
+.pageContact{background-position:-450px -264px;}
+.pageCareers{background-position:-450px -144px;}
+.pageProducts{background-position:-450px -310px;}
+
+#hpMenuBanner .pageItem{width:288px; float:left; margin-left:20px; -margin-left:10px;}
+
+#hpMainCon{width:924px; margin:0px auto;}
+
+.hpLeft{width:267px; height:231px; padding:10px 20px; float:left; font-size:14px; line-height:22px; position:relative;}
+
+.hpLeft .moreinfo{position:absolute; bottom:25px; text-align:right; font-size:12px; right:20px;}
+
+#hpSlanDiv, #hpPressDiv{border-right:1px dotted #CAD4D3;}
+
+.time{font-family:Arial; color:#539d31; }
+.date{font-family:Arial; font-weight:bold; padding-right:10px;}
+
+#hpPressDiv dl, #hpOpinionDiv dl{padding-bottom:10px;}
+
+#hpPressDiv dt{padding-left:15px; background:url(../images/bgs.png) no-repeat 0px -582px; font-size:12px;}
+#hpPressDiv dd{padding-left:15px;}
+
+#hpOpinionDiv dt{font-size:12px; font-family:Arial, Verdana;}
+#hpOpinionDiv dd{}
+
+#tail{height:80px; padding-top:80px; line-height:80px; font-size:14px; text-align:center; background:url(../images/tailbg.png) repeat-x 0px 0px; font-family:Arail, Verdana;}
+
+#hpfooter{height:80px; line-height:80px; font-size:14px; text-align:center; font-family:Arail, Verdana;}
+
+#main{width:960px; margin:0px auto;}
+#artiList{width:660px; float:left;}
+#rightCat{width:240px; float:left; padding-top:60px; padding-left:40px;}
+#rightCat dl{padding-bottom:10px;}
+#rightCat dl dt span{color:#D5D5D5;}
+#rightCat dl dt{font-weight:bold; font-size:14px; display:block; height:25px; line-height:25px;}
+#rightCat dl dd{display:block; padding-left:40px; line-height:20px; font-size:14px; font-family:Arial, Verdana;}
+
+dl.arti{padding-top:50px; font-size:14px; line-height:25px; width:660px;}
+dl.arti dt{height:18px; line-height:18px; background:url(../images/bgs.png) no-repeat 0px -585px; padding-left:12px; padding-bottom:10px; border-bottom:1px dotted #C9D4D0;}
+dl.arti dt a, #artiList dl dt a:link, #artiList dl dt a:visited{text-decoration:none;color:#06569D; font-weight:bold;}
+dl.arti dt a:hover, #artiList dl dt a:active{text-decoration:underline;}
+dl.arti dd{padding-top:5px;}
+dl.arti dd p{margin:0px; padding:0px;}
+
+dl.pdArti{font-size:14px; line-height:25px; width:660px;}
+dl.pdArti dt{height:18px; line-height:18px; background:url(../images/bgs.png) no-repeat 0px -585px; padding-left:12px; padding-bottom:10px; border-bottom:1px dotted #C9D4D0;}
+dl.pdArti dt a, #artiList dl dt a:link, #artiList dl dt a:visited{text-decoration:none;color:#06569D; font-weight:bold;}
+dl.pdArti dt a:hover, #artiList dl dt a:active{text-decoration:underline;}
+dl.pdArti dd{padding-top:5px;}
+dl.pdArti dd p{margin:0px; padding:0px;}
+
+#footprint{}
+.conLeft{width:280px; float:left; padding-top:50px;}
+.conRight{width:660px; float:left; padding-left:20px;}
+
+.leftRect{width:267px; height:94px; line-height:47px; background:url(../images/bgs.png) no-repeat 0px -749px;}
+.leftRect a{display:block; height:16px; line-height:16px; padding:15px 40px; text-align:center; font-size:14px; font-weight:bold; font-family:"微软雅黑","宋体",Arial; color:#7D7D7D;}
+.leftRect a span.leftBrace{display:inline-block; width:9px; height:15px; visibility:hidden;}
+.leftRect a.selected span.leftBrace{visibility:visible; background:url(../images/bgs.png) no-repeat -450px -107px; }
+.leftRect a span.rectCon{display:inline-block;width:166px;}
+.leftRect a span.rightBrace{display:inline-block; width:9px; height:15px; visibility:hidden;}
+.leftRect a.selected span.rightBrace{visibility:visible; background:url(../images/bgs.png) no-repeat -450px -66px;}
+
+
+#hrMain{padding-top:40px;}
+#hrMain p.id2{line-height:25px; font-size:14px; text-indent:2em;}
+#emailRect{width:464px; margin:20px auto;}
+#emailRect .email{font-family:Arail,Verdana; font-weight:bold;}
+
+.rectTop{width:464px; height:9px; overflow:hidden; background:url(../images/bgs.png) no-repeat -450px -186px;}
+.rectMain{width:462px; border-left:1px solid #DFDFDF; border-right:1px solid #DFDFDF; background-color:#EDF4FA; text-align:center; line-height:25px; font-size:14px;}
+.rectBot{width:464px; height:9px; overflow:hidden; background:url(../images/bgs.png) no-repeat -450px -227px;}
+
+#joblist{width:611px; background:url(../images/jobbg.png) no-repeat 0px 0px;}
+#joblist table{width:590px; margin:0px auto; padding-top:10px;}
+#joblist table tr{height:34px; line-height:34px;}
+#joblist table tr td{height:34px; line-height:34px; padding-left:15px; font-size:12px; border-bottom:1px solid #DFDFDF;}
+#joblist table tr.jobTitle td{font-size:14px; font-weight:bold; font-family:"微软雅黑","宋体",Arail;}
+
+.contact_content{padding:30px 0px;}
+.contact_content .corpInfo{width:460px;}
+.contact_content .corpInfo p{margin:0px; padding:0px; line-height:25px; font-size:14px; font-family:Arail,Verdana;}
+
+/* article content styles */
+
+.articleHeader{padding-bottom:10px; border-bottom:1px solid #D8DFEA;}
+.articleTitle{font-size:18px; font-weight:bold; text-align:center; color:#000; padding:50px 0px 10px; color:#06569D; margin:0px;}
+.articleInfo{text-align:center; font-size:12px; color:#6A6A6A; height:20px; line-height:20px;}
+.articleInfo span{padding:0px 10px;}
+
+.hrHeader{padding-bottom:10px; padding-top:10px; border-bottom:1px solid #D8DFEA;}
+.hrTitle{font-family:"微软雅黑", "宋体"; font-size:14px; font-weight:bold; color:#06569D;}
+
+.topBanner{height:101px;}
+.topBanner div{width:960px; margin:0px auto;}
+.topBanner div img{width:960px; height:101px;}
+.tbAbout{background-color:#D0E6F4;}
+.tbOpinions{background-color:#C1DFA9;}
+.tbFootprint{background-color:#D0E6F4;}
+.tbCulture{background-color:#F0EEF9;}
+.tbCareers{background-color:#D0E6F4;}
+.tbContactus{background-color:#D0E6F4;}
+.tbProducts{background-color:#F6F5FA;}
+
+#productCon{}
+#productCon .pdInfo{padding:50px 10px 10px 10px;}
+#productCon .pdInfo .pdLeft{float:left; width:204px; height:116px;}
+#productCon .pdInfo .pdLeft img{width:204px; height:116px;}
+#productCon .pdInfo .pdRight{float:left; width:706px; height:116px; padding-left:30px;}
+
+div.apply_job{text-align:center; margin:20px auto;}
+
+#cultureImg img{width:650px; height:220px;}
+
+.hot{display:inline-block; width:16px; height:10px; background:url(../images/hot.gif) no-repeat 0px 0px;}
+.new{display:inline-block; width:22px; height:10px; background:url(../images/new.gif) no-repeat 0px 0px;}
+
+/*
+Theme Name: Twenty Ten
+Description: Used to style the TinyMCE editor.
+*/
+html .mceContentBody {
+	max-width: 640px;
+}
+#artCon{
+	color: #444;
+	font-family: "宋体", Georgia, "Bitstream Charter", serif;
+	line-height: 1.5;
+}
+#artCon p,
+#artCon dl,
+#artCon td,
+#artCon th,
+#artCon ul,
+#artCon ol,
+#artCon blockquote {
+	font-size: 14px;
+}
+#artCon tr th,
+#artCon thead th,
+#artCon label,
+#artCon tr th,
+#artCon thead th {
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+#artCon pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+#artCon code, 
+#artCon code var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+#artCon input,
+#artCon textarea {
+	font-size: 12px;
+	line-height: 18px;
+}
+#artCon hr {
+	background-color: #e7e7e7;
+	border: 0;
+	clear: both;
+	height: 1px;
+	margin-bottom: 18px;
+}
+/* Text elements */
+#artCon p {
+	margin-bottom: 18px;
+}
+#artCon ul {
+	list-style: square;
+	margin: 0 0 18px 1.5em;
+}
+#artCon ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+#artCon ol ol {
+	list-style: upper-alpha;
+}
+#artCon ol ol ol {
+	list-style: lower-roman;
+}
+#artCon ol ol ol ol {
+	list-style: lower-alpha;
+}
+#artCon ul ul,
+#artCon ol ol,
+#artCon ul ol,
+#artCon ol ul {
+	margin-bottom: 0;
+}
+#artCon dl {
+	margin: 0 0 24px 0;
+}
+#artCon dt {
+	font-weight: bold;
+}
+#artCon dd {
+	margin-bottom: 18px;
+}
+#artCon strong {
+	font-weight: bold;
+}
+#artCon cite,
+#artCon em,
+#artCon i {
+	border: none;
+	font-style: italic;
+}
+#artCon big {
+	font-size: 131.25%;
+}
+#artCon ins {
+	background: #ffc;
+	border: none;
+}
+#artCon del {
+	text-decoration: line-through;
+}
+#artCon blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+#artCon blockquote cite,
+#artCon blockquote em,
+#artCon blockquote i {
+	font-style: normal;
+}
+#artCon pre {
+	background: #f7f7f7;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+}
+#artCon abbr,
+#artCon acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+#artCon ins {
+	text-decoration: none;
+}
+#artCon sup,
+#artCon sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+#artCon sup {
+	bottom: 1ex;
+}
+#artCon sub {
+	top: .5ex;
+}
+
+#artCon p,
+#artCon ul,
+#artCon ol,
+#artCon dd,
+#artCon pre,
+#artCon hr {
+	margin-bottom: 5px;
+}
+#artCon ul ul,
+#artCon ol ol,
+#artCon ul ol,
+#artCon ol ul {
+	margin-bottom: 0;
+}
+#artCon pre,
+#artCon kbd,
+#artCon tt,
+#artCon var {
+	font-size: 15px;
+	line-height: 21px;
+}
+#artCon code {
+	font-size: 13px;
+}
+
+#artCon h1,
+#artCon h2,
+#artCon h3,
+#artCon h4,
+#artCon h5,
+#artCon h6 {
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+}
+#artCon h1 {
+	font-size: 2.4em;
+}
+#artCon h2 {
+	font-size: 1.8em;
+}
+#artCon h3 {
+	font-size: 1.4em;
+}
+#artCon h4 {
+	font-size: 1.2em;
+}
+#artCon h5 {
+	font-size: 1em;
+}
+#artCon h6 {
+	font-size: 0.9em;
+}
+#artCon table {
+	border: 1px solid #e7e7e7 !important;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+}
+#artCon tr th,
+#artCon thead th {
+	border: none !important;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+#artCon tr td {
+	border: none !important;
+	border-top: 1px solid #e7e7e7 !important;
+	padding: 6px 24px;
+}
+#artCon img {
+	margin: 0;
+}
+#artCon img.size-auto,
+#artCon img.size-large,
+#artCon img.size-full,
+#artCon img.size-medium {
+	max-width: 100%;
+	height: auto;
+}
+#artCon .alignleft,
+#artCon img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+#artCon .alignright,
+#artCon img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+#artCon .aligncenter,
+#artCon img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#artCon img.alignleft,
+#artCon img.alignright,
+#artCon img.aligncenter {
+	margin-bottom: 12px;
+}
+#artCon .wp-caption {
+	background: #f1f1f1;
+	border: none;
+	-khtml-border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	max-width: 632px !important; /* prevent too-wide images from breaking layout */
+	padding: 4px;
+	text-align: center;
+}
+#artCon .wp-caption img {
+	margin: 5px;
+}
+#artCon .wp-caption p.wp-caption-text {
+	margin: 0 0 4px;
+}
+#artCon .wp-smiley {
+	margin: 0;
+}
+#artCon p{
+	line-height:24px;
+	color: #444;
+}

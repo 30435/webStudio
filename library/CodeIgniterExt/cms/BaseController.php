@@ -45,6 +45,13 @@ class Base_Controller extends CommonController
 			$this->_messageInfo('栏目不存在！');
 		}
 
+		$this->currentSubCategoryInfos = array();
+		foreach ($this->categoryInfos as $key => $category) {
+			if ($category['parentid'] == $this->catid) {
+				$this->currentSubCategoryInfos[$key] = $category;
+			}
+		}
+
 		$modelid = isset($this->currentCategoryInfo['modelid']) ? $this->currentCategoryInfo['modelid'] : false;
 		$this->modelInfo = isset($this->modelInfos[$modelid]) ? $this->modelInfos[$modelid] : false;
 		if (empty($this->modelInfo)) {

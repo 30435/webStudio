@@ -16,7 +16,22 @@ class CmsIndex extends Custom_Controller
 	{
 		$this->_initModel();
 
-		$template = !empty($this->currentCategoryInfo['template']) ? $this->templateListPre . $this->currentCategoryInfo['template'] : $this->templateListPre . 'list';
+		$template = '';
+		if ($this->modelInfo['id'] == 1 && !empty($this->currentCategoryInfo['template_page'])) {
+			$template = $this->currentCategoryInfo['template_page'];
+		}
+		//print_r($this->currentSubCategoryInfos); echo $this->currentCategoryInfo['template_big']; exit();
+		if (empty($temlate) && !empty($this->currentSubCategoryInfos) && !empty($this->currentCategoryInfo['template_big'])) {
+			$template = $this->templateListPre . $this->currentCategoryInfo['template_big'];
+		}
+		
+		if (empty($template)) {
+			$template = !empty($this->currentCategoryInfo['template_list']) ? $this->templateListPre . $this->currentCategoryInfo['template_list'] : $this->templateListPre . 'list';
+		}
+		$this->metaDatas = array('title' => '诺瓦奇兵游戏官网', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
+		$this->metaDatas['title'] = $this->currentCategoryInfo['catname'] . '-' . $this->metaDatas['title'];
+		$this->metadatas['keywords'] = empty($this->currentCategoryInfo['keyword']) ? $this->metaDatas['keywords'] : $this->currentCategoryInfo['keyword'];
+		$this->metadatas['description'] = empty($this->currentCategoryInfo['description']) ? $this->metaDatas['description'] : $this->currentCategoryInfo['keyword'];
 		$this->load->view($template, $this->frontController);
 	}
 	

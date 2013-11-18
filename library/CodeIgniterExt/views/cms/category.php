@@ -115,8 +115,20 @@
     <div id="div_setting_2" class="contentList pad-10 hidden">
       <table width="100%" class="table_form ">
 		<tr>
-          <th width="200"><?php echo $this->fieldInfos['template']['name']; ?>:</th>
-          <td id="page_template"><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>
+          <th width="200"><?php echo $this->fieldInfos['template_page']['name']; ?>:</th>
+          <td id="page_template"><select name="template_page" id="template_page"><?php echo $this->selectTemplatePage; ?></select></td>
+        </tr>
+		<tr>
+          <th width="200"><?php echo $this->fieldInfos['template_big']['name']; ?>:</th>
+          <td id="page_template"><select name="template_big" id="template_big"><?php echo $this->selectTemplateBig; ?></select></td>
+        </tr>
+		<tr>
+          <th width="200"><?php echo $this->fieldInfos['template_list']['name']; ?>:</th>
+          <td id="page_template"><select name="template_list" id="template_list"><?php echo $this->selectTemplateList; ?></select></td>
+        </tr>
+		<tr>
+          <th width="200"><?php echo $this->fieldInfos['template_show']['name']; ?>:</th>
+          <td id="page_template"><select name="template_show" id="template_show"><?php echo $this->selectTemplateShow; ?></select></td>
         </tr>
       </table>
     </div>
