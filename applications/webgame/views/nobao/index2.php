@@ -7,7 +7,7 @@
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords">
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 <link type="image/x-icon" href="<?php echo $this->staticUrl; ?>favico.ico" rel="shortcut icon">
-<link media="screen" rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>nova/css/style.css">
+<link media="screen" rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/nova/css/style.css">
 </head>
 <body>
 <div style="position: absolute;display: none; left:0; top:0;width: 100%;height: 100%; z-index: 900; background: #DFE0E1 ;filter: alpha(opacity=50);opacity: 0.5" class="mask" id="maskDiv"></div>

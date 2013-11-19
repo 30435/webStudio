@@ -9,7 +9,7 @@
 			<?php } else { ?>
 				<div class="profile">
 					<dl>
-	                	<dt><img src="<?php echo $this->staticUrl; ?>webgame/common/images/1.gif" id="avatar_src"></dt>
+	                	<dt><img src="<?php echo $this->staticUrl; ?>tsource/webgame/common/images/1.gif" id="avatar_src"></dt>
 	                    <dd class="tit usercolor" id="username"><?php echo $this->loginedUserInfo['username']; ?></dd>
 	                    <dd class="usercolor" id="userlevel"></dd>
 	                </dl>

@@ -1,6 +1,6 @@
 <div class="foot">
 	<div class="foot-info">
-		<img src="<?php echo $this->staticUrl; ?>passport/images/taomee_logo.gif" alt="淘米">
+		<img src="<?php echo $this->staticUrl; ?>tsource/passport/images/taomee_logo.gif" alt="淘米">
         <div class="info">
 			<p class="mb8">
 			<?php foreach (array(2, 3, 4, 19, 20, 21, 22) as $showCatid) { ?>

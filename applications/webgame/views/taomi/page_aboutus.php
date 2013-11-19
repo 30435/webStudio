@@ -8,13 +8,13 @@
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 <link href="http://www.2125.com/" rel="canonical">
 <link href="<?echo $this->staticUrl; ?>favicon.ico" rel="shortcut icon" type="image/ico">
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>webgame/spage/css/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/webgame/spage/css/style.css" />
 </head>
 <body id="about">
 
 
 	<div class="header"><a href="/" title="淘米" class="logo"></a><!--<p><a href="index.html">简体中文</a>|<a href="en_taomee.html">ENGLISH</a></p>--></div>
-    <div class="banner"><div class="wrap"><img src="<?php echo $this->staticUrl; ?>webgame/spage/images/banner02.jpg" alt="<?php echo $this->metaDatas['title']; ?>" /></div></div>
+    <div class="banner"><div class="wrap"><img src="<?php echo $this->staticUrl; ?>tsource/webgame/spage/images/banner02.jpg" alt="<?php echo $this->metaDatas['title']; ?>" /></div></div>
 	<div class="main">
 		<div class="left classify">
 			<ul>

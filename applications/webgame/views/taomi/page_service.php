@@ -6,13 +6,13 @@
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 <link href="http://www.2125.com/" rel="canonical">
 <link href="<?echo $this->staticUrl; ?>favicon.ico" rel="shortcut icon" type="image/ico">
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/spage/css/base.css"> 
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/spage/css/about.css"> 
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/spage/css/base.css"> 
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/spage/css/about.css"> 
 </head> 
 <body> 
 <div class="topbar_b"> 
     <div class="wrapper_950"> 
-        <a href="<?php echo $this->baseUrl; ?>" title="<?php echo $this->metaDatas['title']; ?>"><img class="left logo" src="<?php echo $this->staticUrl; ?>webgame/spage/images/61_logo_b.gif" /></a> 
+        <a href="<?php echo $this->baseUrl; ?>" title="<?php echo $this->metaDatas['title']; ?>"><img class="left logo" src="<?php echo $this->staticUrl; ?>tsource/webgame/spage/images/61_logo_b.gif" /></a> 
         <div class="right"> 
             <div class="right toplink"></div> 
             <ul class="nav">
@@ -39,7 +39,7 @@
 </div> 
 
 <div class="copyright wrapper_950" style="width:980px;">
-	<div class="left" style="width:160px;"><a href="/" target="_blank" title="<?php echo $this->metaDatas['title']; ?>"><img src="<?php echo $this->staticUrl; ?>passport/images/taomee_logo.gif" alt="淘米" /></a></div>
+	<div class="left" style="width:160px;"><a href="/" target="_blank" title="<?php echo $this->metaDatas['title']; ?>"><img src="<?php echo $this->staticUrl; ?>tsource/passport/images/taomee_logo.gif" alt="淘米" /></a></div>
 	<div class="cont" style="margin-left:175px; margin-right:180px;">
 		<div class="row hgray">
 		<?php foreach (array(2, 3, 4, 19, 20, 21, 22) as $showCatid) { ?>

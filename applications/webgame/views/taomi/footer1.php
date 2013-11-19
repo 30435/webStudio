@@ -15,7 +15,7 @@
     </div>
 </footer>
 </body>
-<script src="<?php echo $this->staticUrl; ?>webgame/common/js/jquery_1.71.js"></script>
-<script src="<?php echo $this->staticUrl; ?>webgame/common/js/game_61/events.js"></script>
-<script src="<?php echo $this->staticUrl; ?>webgame/topbar/topbar/js/topbarEvents.js"></script>
+<script src="<?php echo $this->staticUrl; ?>tsource/webgame/common/js/jquery_1.71.js"></script>
+<script src="<?php echo $this->staticUrl; ?>tsource/webgame/common/js/game_61/events.js"></script>
+<script src="<?php echo $this->staticUrl; ?>tsource/webgame/topbar/topbar/js/topbarEvents.js"></script>
 </html>

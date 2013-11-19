@@ -6,15 +6,15 @@
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 <link href="<?php echo $this->staticUrl; ?>favicon.ico" rel="shortcut icon" type="image/ico">
-<link href="<?php echo $this->staticUrl; ?>webgame/shenxd/styles/page.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?php echo $this->staticUrl; ?>webgame/shenxd/script/picshow.js"></script>
+<link href="<?php echo $this->staticUrl; ?>tsource/webgame/shenxd/styles/page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $this->staticUrl; ?>tsource/webgame/shenxd/script/picshow.js"></script>
 </head>
 <body>
 <div id="header">
     <div class="site_nav">
         <ul class="grid_1007">
             <li class="site_nav_left">
-				<strong class="ganwan_logo"><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>"><img src="<?php echo $this->staticUrl; ?>webgame/shenxd/img/ganwan_logo.png" /></a></strong>
+				<strong class="ganwan_logo"><a href="<?php echo $this->currentWebgameInfo['url_home']; ?>"><img src="<?php echo $this->staticUrl; ?>tsource/webgame/shenxd/img/ganwan_logo.png" /></a></strong>
 				<span class="recommend_game"><span class="red pl10">推荐游戏:</span>
 				<?php foreach ($this->webgameInfos as $webgameCode => $webgameInfo) { ?>
 					<a href="<?php echo $webgameInfo['url_home']; ?>"><?php echo $webgameInfo['name']; ?></a>
@@ -250,6 +250,6 @@
     <p>粤ICP备12058124号-1 | 粤网文[2012]0432-064号 | 深圳市浩天投资有限公司</p>
 </div>
 <!--END 底部结束--> 
-<script type="text/javascript" src="<?php echo $this->staticUrl; ?>webgame/shenxd/script/picshow.js"></script>
+<script type="text/javascript" src="<?php echo $this->staticUrl; ?>tsource/webgame/shenxd/script/picshow.js"></script>
 </body>
 </html>

@@ -7,15 +7,15 @@
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords">
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 <link type="image/x-icon" href="<?php echo $this->staticUrl; ?>favico.ico" rel="shortcut icon">
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>nova/web/css/reset.css">
-<link href="<?php echo $this->staticUrl; ?>nova/web/mgp_popup.css" type="text/css" rel="stylesheet">
-<link href="<?php echo $this->staticUrl; ?>nova/web/mgp_pagenav.css" type="text/css" rel="stylesheet">
-<link href="<?php echo $this->staticUrl; ?>nova/web/mgp_comment.css" type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/nova/web/css/reset.css">
+<link href="<?php echo $this->staticUrl; ?>tsource/nova/web/mgp_popup.css" type="text/css" rel="stylesheet">
+<link href="<?php echo $this->staticUrl; ?>tsource/nova/web/mgp_pagenav.css" type="text/css" rel="stylesheet">
+<link href="<?php echo $this->staticUrl; ?>tsource/nova/web/mgp_comment.css" type="text/css" rel="stylesheet">
 <style type="text/css">
-.bg0{background-image:url("<?php echo $this->staticUrl; ?>nova/web/images/0_0.jpg");background-repeat: no-repeat;height:200px;} 
-.bg1{background-image:url("<?php echo $this->staticUrl; ?>nova/web/images/1_0.jpg");background-repeat: no-repeat;height:200px;} 
-.bg2{background-image:url("<?php echo $this->staticUrl; ?>nova/web/images/2_0.jpg");background-repeat: no-repeat;height:200px;} 
-.bg3{background-image:url("<?php echo $this->staticUrl; ?>nova/web/images/3_0.jpg");background-repeat: no-repeat;height:126px;}
+.bg0{background-image:url("<?php echo $this->staticUrl; ?>tsource/nova/web/images/0_0.jpg");background-repeat: no-repeat;height:200px;} 
+.bg1{background-image:url("<?php echo $this->staticUrl; ?>tsource/nova/web/images/1_0.jpg");background-repeat: no-repeat;height:200px;} 
+.bg2{background-image:url("<?php echo $this->staticUrl; ?>tsource/nova/web/images/2_0.jpg");background-repeat: no-repeat;height:200px;} 
+.bg3{background-image:url("<?php echo $this->staticUrl; ?>tsource/nova/web/images/3_0.jpg");background-repeat: no-repeat;height:126px;}
 .block179_19 {position: absolute; padding-bottom: 0px; padding-left: 0px; width: 65px; padding-right: 0px; height: 20px; top: 144px; padding-top: 0px; left: 534px;}
 .block179_20 {position: absolute; padding-bottom: 0px; padding-left: 0px; width: 54px; padding-right: 0px; height: 20px; top: 147px; padding-top: 0px; left: 621px;}
 .block179_0 {position: absolute; padding-bottom: 0px; padding-left: 0px; width: 348px; padding-right: 0px; height: 327px; top: 134px; padding-top: 0px; left: 327px;}
@@ -88,8 +88,8 @@ body{background-color:#ffffff;}
 		<div id="block179_8" class="block179_8 gen_btn_block"><a hov_suffix="" raw_suffix="" change="0" btnid="468" rel="0" target="_blank" href="<?php echo $this->categoryInfos[16]['url']; ?>" class="gen_link c_t_combo0 "></a></div>
 	    <div id="block179_0" class="block179_0 gen_tab_block">
 		    <div class="tab_container">
-                <ul tab_nav_img="<?php echo $this->staticUrl; ?>nova/web/images/tabnav_pic/14.jpg" class="tab_nav">
-			        <li class="current"><a href="javascript:;" style="background: url('<?php echo $this->staticUrl; ?>nova/web/images/14.jpg') repeat scroll 0px 0px transparent;">焦点推荐</a></li>
+                <ul tab_nav_img="<?php echo $this->staticUrl; ?>tsource/nova/web/images/tabnav_pic/14.jpg" class="tab_nav">
+			        <li class="current"><a href="javascript:;" style="background: url('<?php echo $this->staticUrl; ?>tsource/nova/web/images/14.jpg') repeat scroll 0px 0px transparent;">焦点推荐</a></li>
         		</ul>
 				<div style="" class="tab_con">
 					<style type="text/css">

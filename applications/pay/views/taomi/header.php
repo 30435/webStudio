@@ -6,10 +6,10 @@
 <meta name="keywords" content="<?php $this->metaDatas['keywords']; ?>" />
 <meta name="description" content="<?php $this->metaDatas['description']; ?>" />
 <link type="image/ico" rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>pay/css/pay.css?v=20130514699" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>pay/css/global.css?v=201311014699" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>pay/css/service.css?v=20130814699" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>pay/css/account.css?v=20130814699" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/pay/css/pay.css?v=20130514699" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/pay/css/global.css?v=201311014699" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/pay/css/service.css?v=20130814699" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>tsource/pay/css/account.css?v=20130814699" />
 <script src="<?php echo $this->staticUrl; ?>common/script/jquery-1.8.0.min.js" type="text/javascript" language="javascript"></script>
 <script type="text/javascript">
 var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";

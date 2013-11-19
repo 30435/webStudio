@@ -7,9 +7,9 @@
 <meta name="keywords" content="<?php echo $this->metaDatas['keywords']; ?>" />
 <meta name="description" content="<?php echo $this->metaDatas['description']; ?>" />
 <link rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" type="image/x-icon"  />
-<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/common/css/game_61/style.css">
-<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/common/css/game_61/ie.css?v=201308201823">
-<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/topbar/topbar/style/css/topbarStyle.css?v=20130820062314">
+<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/common/css/game_61/style.css">
+<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/common/css/game_61/ie.css?v=201308201823">
+<link rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/topbar/topbar/style/css/topbarStyle.css?v=20130820062314">
 </head>
 <body>
 <div class="topbar_outer" id="J_topbarNav">

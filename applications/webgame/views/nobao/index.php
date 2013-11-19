@@ -1,7 +1,7 @@
 <?php echo $this->load->view('header_base'); ?>
-<link href="<?php echo $this->staticUrl; ?>webgame/seer2/css/style.css?v=20130826110354" rel="stylesheet">
-<link href="<?php echo $this->staticUrl; ?>webgame/seer2/css/public.css" rel="stylesheet">
-<link href="<?php echo $this->staticUrl; ?>webgame/seer2/css/seer.css" rel="stylesheet">
+<link href="<?php echo $this->staticUrl; ?>tsource/webgame/seer2/css/style.css?v=20130826110354" rel="stylesheet">
+<link href="<?php echo $this->staticUrl; ?>tsource/webgame/seer2/css/public.css" rel="stylesheet">
+<link href="<?php echo $this->staticUrl; ?>tsource/webgame/seer2/css/seer.css" rel="stylesheet">
 <style type="text/css">
 	#flashTextContent {visibility:hidden;padding-top:210px;overflow:hidden;height:100px;}
 	#innerPopIframe{position:absolute;top:0;left:0;width:1px;height:1px;display:none;}	

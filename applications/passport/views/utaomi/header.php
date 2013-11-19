@@ -7,8 +7,8 @@
 <meta name="keywords" content="<?php $this->metaDatas['keywords']; ?>" />
 <meta name="description" content="<?php $this->metaDatas['description']; ?>" />
 <link type="image/ico" rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/base.css" />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>passport/css/account.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/passport/css/base.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/passport/css/account.css" />
 <script type="text/javascript">
 var passportUrl = "<?php echo $this->baseUrl; ?>";
 var webgameUrl = "<?php echo $this->appInfos['webgame']['url']; ?>";
@@ -17,7 +17,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 <script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/jquery-1.8.0.min.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/jquery.cookie.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/common.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>passport/js/member.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/member.js"></script>
 <style>
 	.gonggao-notice{
 		font-weight: bold;
@@ -52,7 +52,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 <div class="top-logo">
     <div class="top">
 		<div class="f14 red gonggao-notice" id="J_notice"><i class='gonggao-icon'></i><span class="gonggao-close">x</span><a class="show-tip" href="/user/showNoticePage">中国雅虎邮箱将停止服务,使用雅虎邮箱的淘米用户请尽快修改，点击查看详情。</a></div>
-        <div class="logo"><a href="<?php echo $this->baseUrl; ?>" hidefocus="true"><img src="<?php echo $this->staticUrl; ?>passport/images/logo.png"alt="图片未能显示"/></a></div>
+        <div class="logo"><a href="<?php echo $this->baseUrl; ?>" hidefocus="true"><img src="<?php echo $this->staticUrl; ?>tsource/passport/images/logo.png"alt="图片未能显示"/></a></div>
         <div class="top-right">
 			<span class="top-link">
 			<?php if (!empty($this->loginedUserInfo)) { ?>

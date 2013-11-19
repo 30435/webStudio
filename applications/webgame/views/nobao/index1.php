@@ -7,15 +7,15 @@
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
 
 <link type="image/ico" rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico" />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/seer/css/style.css?v=201301232028"  />
-<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>webgame/seer/css/seer.css?v=201301232028"/>
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/seer/css/style.css?v=201301232028"  />
+<link type="text/css" rel="stylesheet" href="<?php echo $this->staticUrl; ?>tsource/webgame/seer/css/seer.css?v=201301232028"/>
 </head>
 <body style="background:#fff;">
 <div id="header_3">
 	<div class="top-container">
 		<h1>
 			<a class="logo" target="_blank" href="<?php echo $this->baseUrl; ?>" hidefocus="true" title="<?php echo $this->metaDatas['title']; ?>">
-				<img width="137" height="37" src="<?php echo $this->staticUrl; ?>webgame/topbar/images/2125logo.png"/>
+				<img width="137" height="37" src="<?php echo $this->staticUrl; ?>tsource/webgame/topbar/images/2125logo.png"/>
 			</a>
 		</h1>
 		<span class="divide"></span>

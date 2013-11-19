@@ -1,5 +1,5 @@
 <?php echo $this->load->view('header_cfront'); ?>
-<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>passport/js/member.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/member.js"></script>
 <div class="min-content back">
 	<div class="zc_main_r_con">
 	<form autocomplete="off" id="editpasswordform" name="editpasswordform" method="post" action="<?php echo $this->baseUrl . $this->prefix . '/editpwd/'; ?>" >
