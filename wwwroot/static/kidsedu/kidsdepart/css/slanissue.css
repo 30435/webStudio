@@ -39,17 +39,17 @@ p { color:#666666; }
 .navigation ul li a.nav2 { background:url(../images/nav1.png) no-repeat; background-position:0px -56px; }
 .navigation ul li a.nav3 { background:url(../images/nav1.png) no-repeat; background-position:0px -120px; }
 .navigation ul li a.nav4 { background:url(../images/nav1.png) no-repeat; background-position:0px -176px; }
-.navigation ul li a.nav5 { background:url(../images/nav1.png) no-repeat; background-position:0px -240px; }
-.navigation ul li a.nav6 { background:url(../images/nav1.png) no-repeat; background-position:0px -296px; }
-.navigation ul li a.nav7 { background:url(../images/nav1.png) no-repeat; background-position:0px -360px; }
+.navigation ul li a.nav5 { background:url(../images/nav1.png) no-repeat; background-position:0px -296px; }
+.navigation ul li a.nav6 { background:url(../images/nav1.png) no-repeat; background-position:0px -360px; }
+.navigation ul li a.nav7 { background:url(../images/nav1.png) no-repeat; background-position:0px -240px; }
 
 .navigation ul li a.nav1:hover,.navigation ul li a.nav1_curr,.navigation ul li a.nav1_s{ background-position:-200px 0px; }
 .navigation ul li a.nav2:hover,.navigation ul li a.nav2_curr,.navigation ul li a.nav2_s { background-position:-200px -56px; }
 .navigation ul li a.nav3:hover,.navigation ul li a.nav3_curr,.navigation ul li a.nav3_s { background-position:-200px -120px; }
 .navigation ul li a.nav4:hover,.navigation ul li a.nav4_curr,.navigation ul li a.nav4_s { background-position:-200px -176px; }
-.navigation ul li a.nav5:hover,.navigation ul li a.nav5_curr,.navigation ul li a.nav5_s { background-position:-200px -240px; }
-.navigation ul li a.nav6:hover,.navigation ul li a.nav6_curr,.navigation ul li a.nav6_s { background-position:-200px -296px; }
-.navigation ul li a.nav7:hover,.navigation ul li a.nav7_curr,.navigation ul li a.nav7_s { background-position:-200px -360px; }
+.navigation ul li a.nav5:hover,.navigation ul li a.nav5_curr,.navigation ul li a.nav5_s { background-position:-200px -296px; }
+.navigation ul li a.nav6:hover,.navigation ul li a.nav6_curr,.navigation ul li a.nav6_s { background-position:-200px -360px; }
+.navigation ul li a.nav7:hover,.navigation ul li a.nav7_curr,.navigation ul li a.nav7_s { background-position:-200px -240px; }
 
 
 .navigation ul li .nav-dropmenue { clear:both; display:none; background-color: #025e9d; margin-top:0px; width:151px;  padding-top:12px; text-align:left; position:absolute; top:45px;left:0; z-index:5; }     /*注意！！！！！！！！*/

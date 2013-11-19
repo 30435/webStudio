@@ -108,7 +108,7 @@
         </tr>
 	    <tr>
           <th><?php echo $this->fieldInfos['description']['name']; ?>:</th>
-          <td><textarea name="description" maxlength="255" style="width:300px;height:60px;"><?php if (isset($this->currentInfo['description'])) echo $this->currentInfo['description']; ?></textarea></td>
+          <td><textarea name="description" style="width:300px;height:60px;"><?php if (isset($this->currentInfo['description'])) echo $this->currentInfo['description']; ?></textarea></td>
         </tr>
       </table>
     </div>
