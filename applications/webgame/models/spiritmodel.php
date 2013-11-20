@@ -20,6 +20,10 @@ class SpiritModel extends CommonModel
 			'index' => array('key' => 'index', 'value' => '首页焦点推荐'),
 			'show' => array('key' => 'show', 'value' => '内容页推荐'),
 		);
+		$attributeInfos = array(
+			'rare' => array('key' => 'rare', 'value' => '稀有宠物'),
+			'attrivip' => array('key' => 'attrivip', 'value' => 'VIP宠物'),
+		);
 		$sortInfos = array(
 			'dark' => array('key' => 'dark', 'value' => '暗'),
 			'ice' => array('key' => 'ice', 'value' => '冰'),
@@ -46,12 +50,13 @@ class SpiritModel extends CommonModel
 			'content' => array('name' => '内容'),
 			'username' => array('name' => '管理员帐号'),
 			'position' => array('name' => '推荐位', 'infos' => $positionInfos),
+			'attribute' => array('name' => '宠物属性', 'infos' => $attributeInfos),
 			'status' => array('name' => '状态', 'infos' => array('0' => '<font class="red">不显示</font>', '1' => '<font class="green">显示</font>')),
 			'inputtime' => array('name' => '录入时间'),
 			'updatetime' => array('name' => '更新时间'),
 		);
-		$fieldInfos['fieldList'] = array('id', 'title', 'listorder','position', 'username', 'status', 'updatetime', 'inputtime');
-		$fieldInfos['fieldChanges'] = array('title', 'sort', 'thumb', 'pic_effect', 'pic_growup', 'pic_ext', 'description', 'listorder', 'content', 'position', 'status');
+		$fieldInfos['fieldList'] = array('id', 'title', 'listorder','position', 'username', 'attribute', 'status', 'updatetime', 'inputtime');
+		$fieldInfos['fieldChanges'] = array('title', 'sort', 'thumb', 'pic_effect', 'pic_growup', 'pic_ext', 'description', 'listorder', 'content', 'position', 'attribute', 'status');
 		
 		return $fieldInfos;
 	}

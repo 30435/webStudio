@@ -38,11 +38,44 @@ class Index extends CmsIndex
 		$this->load->view($this->templatePre . 'search', $this->frontController);
 	}
 
+	public function slist()
+	{
+		$this->_initCurrentModel('spiritModel');
+		
+		$this->load->view('cfront/list_spirit', $this->frontController);
+	}
+
 	public function spirit()
 	{
 		$this->_initCurrentModel('spiritModel');
 		$this->currentInfo = $this->_getInfoById();
 		//var_dump($this->currentInfo);
 		$this->load->view('cfront/show_spirit', $this->frontController);
+	}
+
+	public function getSpirit()
+	{
+		$field = $this->input->get_post('field');
+		$value = $this->input->get_post('value');
+		//echo $field . '--' . $value;
+		$where = array();
+		if (in_array($field, array('sort', 'attribute'))) {
+			$where = array($field => $value);
+			$newInfos = $this->_getFrontInfos('webgame', 'spirit', 1, 18, $where, array(array('id', 'desc')), 'id, title, thumb,');
+			$newInfos = $newInfos['infos'];
+		} elseif ($field == 'keyword') {
+			//echo 'iiiiiiiiii';
+			//$value = urldecode(iconv('gbk', 'utf-8', $value)); echo $value; exit();
+			$model = 'spiritModel';
+			$this->_loadModel('webgame', $model);
+			$newInfos = $this->spiritModel->currentDb->from('sw_spirit')->select('title, id, thumb')->like(array('title' => $value))->limit(18)->get()->result_array();
+		} else {
+			$newInfos = array();
+		}
+
+		
+		//$infoStr = json_encode($newInfos['infos']);
+		echo $this->_jsonp($newInfos);
+		exit();
 	}
 }

@@ -64,10 +64,11 @@ class Spirit extends Custom_AdminController
 	 *
 	 * @return void
 	 */
-	protected function _initInfo($sort = '', $position = 0)
+	protected function _initInfo($sort = '', $position = 0, $attribute = '')
 	{
 		$this->selectSort = $this->_getSelectElement($this->fieldInfos['sort']['infos'], 'key', 'value', $sort, true);
 		$this->selectPosition = $this->_getSelectElement($this->fieldInfos['position']['infos'], 'key', 'value', $position, true);
+		$this->selectAttribute = $this->_getSelectElement($this->fieldInfos['attribute']['infos'], 'key', 'value', $attribute, true);
 	}
 
 	/**
@@ -80,7 +81,7 @@ class Spirit extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		$this->_initInfo($info['sort'], $info['position']);
+		$this->_initInfo($info['sort'], $info['position'], $info['attribute']);
 		if ($isWrite) {
 			$info['inputtime'] = empty($this->currentInfo['inputtime']) ? $this->time : $this->currentInfo['inputtime'];
 			$info['updatetime'] = $this->time;

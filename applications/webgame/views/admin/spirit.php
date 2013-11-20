@@ -173,6 +173,10 @@ document.domain='<?php echo $this->frontDomain; ?>';
 		<td><select name="sort" id="sort"><?php echo $this->selectSort; ?></select></td>
 	  </tr>
 	  <tr>
+		<th width="100"><?php echo $this->fieldInfos['attribute']['name']; ?>：</th>
+		<td><select name="attribute" id="attribute"><?php echo $this->selectAttribute; ?></select></td>
+	  </tr>
+	  <tr>
         <th><?php echo $this->fieldInfos['thumb']['name']; ?>:</th>
         <td>
 	      <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
