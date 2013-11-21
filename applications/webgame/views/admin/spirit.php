@@ -1,6 +1,46 @@
 <?php $this->load->view('header_admin') ?>
 <?php if ($this->method == 'listinfo') { ?>
 <div class="table-list pad-lr-10">
+  <form method="get" action="" name="searchform">
+    <table width="100%" cellspacing="0" class="search-form">
+      <tbody>
+		<tr>
+		  <td>
+		  <div class="explain-col">
+			录入时间：<input type="text" readonly="" class="date input-text" size="10" value="" id="start_time" name="start_time">&nbsp;
+			<script type="text/javascript">
+				Calendar.setup({
+				weekNumbers: true,
+				inputField : "start_time",
+				trigger    : "start_time",
+				dateFormat: "%Y-%m-%d",
+				showTime: false,
+				minuteStep: 1,
+				onSelect   : function() {this.hide();}
+				});
+			</script>-<input type="text" readonly="" class="date input-text" size="10" value="" id="end_time" name="end_time">&nbsp;
+			<script type="text/javascript">
+				Calendar.setup({
+				weekNumbers: true,
+				inputField : "end_time",
+				trigger    : "end_time",
+				dateFormat: "%Y-%m-%d",
+				showTime: false,
+				minuteStep: 1,
+				onSelect   : function() {this.hide();}
+				});
+			</script>
+			<select name="sort"><option selected="" value="0">选择类型</option><?php echo $this->selectSort; ?></select>							
+			<select name="attribute"><option selected="" value="0">选择属性</option><?php echo $this->selectAttribute; ?></select>
+			<select name="position"><option selected="" value="0">选择推荐位</option><?php echo $this->selectPosition; ?></select>	
+			<input type="submit" value="搜索" class="button" name="search">
+	      </div>
+		  </td>
+	    </tr>
+      </tbody>
+    </table>
+    <input type="hidden" name="pc_hash" value="oP31Gm">
+  </form>
 	<?php
 		//echo validation_errors();
 		$attributes = array('name' => 'myform', 'id' => 'myform');

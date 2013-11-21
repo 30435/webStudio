@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>知金伟业教育科技（北京）有限公司</title>
+<meta name="keywords" content="知金科技">
+<meta name="description" content="知金科技">
+<base href="http://fc.gogoet.com/" />
+	
+</head>
+
+<body>
+
+
+
+<div class="container">
+            <div class="ban">
+				<div class="swf" style="margin-left:-3px;padding-top:1px;">
+                  <object id="myId" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  width="960" height="620">
+					<param name="movie" value="PreLoader.swf?assetsVer=http://img.gogoet.com/" />
+					<param name="wmode" value="direct" />
+					<!--[if !IE]>-->
+					<object type="application/x-shockwave-flash" wmode="direct" data="PreLoader.swf?assetsVer=http://img.gogoet.com/" width="960" height="620">
+					<!--<![endif]-->
+					<div>
+						<h1>Alternative content</h1>
+						<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+					</div>
+					<!--[if !IE]>-->
+					</object>
+					<!--<![endif]-->
+					</object>
+				</div>
+            </div>
+            <div id="j_notice" class="game_notice" style="display: block;"></div>
+</div>
+<script>
+//获得coolie 的值
+
+function getCookie(name){  
+   return  $.cookie(name); 
+  
+} 
+
+function delCookie(name)//删除cookie
+{
+    $.removeCookie(name);
+}
+
+function addCookie(objName,objValue,objDays){      //添加cookie
+    $.cookie(objName, objValue, { expires: objDays });
+}
+function addHomePage()
+{
+	if('undefined' == typeof(document.body.style.maxHeight)) {
+		alert("设置首页失败，请手动设置！");
+	}
+	if (document.all) {
+		var vrl= "http://www.gogoet.com/"; //window.location;
+		//var obj=$('body').get(0);
+		var obj = document.getElementsByTagName("body")[0];
+		try {
+			obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+		} catch(e) {
+			if (window.netscape) {
+				try {
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+				} catch (e) {
+					alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage',vrl);
+			}
+		}
+	}else{
+		alert("设置首页失败，请手动设置！");
+	}
+}
+
+function add_favorite() 
+{
+	if ('undefined' == typeof(document.body.style.maxHeight)) {
+		alert('添加收藏夹失败，请手动添加');
+	}
+	var location = "http://www.gogoet.com/";
+	var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+	if (document.all) {		
+		window.external.addFavorite(location, '诺瓦奇兵');			
+	} else if (window.sidebar) {
+		window.sidebar.addPanel('诺瓦奇兵',location, "");
+	} else {
+		alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+	}
+}
+</script>
+</body>
+</html>

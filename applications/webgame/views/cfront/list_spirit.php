@@ -36,7 +36,7 @@
 <div class="nw_dq_bd">
     <div class="pet_list">
         <ul id="listSpirit">
-		<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 18, array('position' => 'index'), array(array('id', 'desc')), 'id, title, thumb,'); ?>
+		<?php $sortDefault = $this->input->get_post('sort'); $where = empty($sortDefault) ? array('position' => 'index') : array('sort' => $sortDefault); $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 18, $where, array(array('id', 'desc')), 'id, title, thumb,'); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
             <li>
 			    <a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><img src="<?php echo $newInfo['thumb']; ?>" class="pet-img"/></a>
@@ -93,5 +93,10 @@ function getSpiritInfos(field, value)
 		}
 	});	
 }
+
+<?php if (!empty($sortDefault)) {
+	echo "$('.nw_dq_sx > li > a').removeClass('pet-subtab-on'); $('#" . $sortDefault . "').addClass('pet-subtab-on');";
+}
+?>
 </script>
 <?php echo $this->load->view('footer_cfront'); ?>

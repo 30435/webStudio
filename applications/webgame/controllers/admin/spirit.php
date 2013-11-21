@@ -97,6 +97,10 @@ class Spirit extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
+		$this->selectSort = $this->_getSelectElement($this->fieldInfos['sort']['infos'], 'key', 'value', '');
+		$this->selectPosition = $this->_getSelectElement($this->fieldInfos['position']['infos'], 'key', 'value', '');
+		$this->selectAttribute = $this->_getSelectElement($this->fieldInfos['attribute']['infos'], 'key', 'value', '');
+
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
 				$info['sort'] = !empty($this->fieldInfos['sort']['infos'][$info['sort']]['value']) ? $this->fieldInfos['sort']['infos'][$info['sort']]['value'] : $info['sort'];
@@ -110,5 +114,49 @@ class Spirit extends Custom_AdminController
 		}
 
 		return $infos;
+	}
+	/**
+	 * Get the where clause
+	 *
+	 * @return array | null
+	 */
+	protected function _where()
+	{
+		$this->pagination->page_query_string=TRUE;
+		$this->pagination->enable_query_strings=TRUE;
+		$whereArray = array();
+		$urlStr = '';
+
+		$startTime = $this->input->get('start_time');
+		$endTime = $this->input->get('end_time');
+		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+		if (!empty($startTime) || !empty($endTime)) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array('inputtime >=' => strtotime($startTime)));
+			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array('inputtime <=' => strtotime($endTime)));
+
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
+		}
+
+		$position = $this->input->get('position');
+		if (!empty($position)) {
+			$whereArray = array_merge($whereArray, array('position = ' => $position));
+			$urlStr .= empty($position) ? '' : '&position=' . $position;
+		}
+
+		$sort = $this->input->get('sort');
+		if (!empty($sort)) {
+			$whereArray = array_merge($whereArray, array('sort = ' => $sort));
+			$urlStr .= empty($sort) ? '' : '&sort=' . $sort;
+		}
+
+		$attribute = $this->input->get('attribute');
+		if (!empty($attribute)) {
+			$whereArray = array_merge($whereArray, array('attribute = ' => $attribute));
+			$urlStr .= empty($attribute) ? '' : '&attribute=' . $attribute;
+		}
+
+		$this->_paginationStr($urlStr);
+		return $whereArray;
 	}
 }

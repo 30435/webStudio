@@ -57,24 +57,25 @@ class Index extends CmsIndex
 	{
 		$field = $this->input->get_post('field');
 		$value = $this->input->get_post('value');
-		//echo $field . '--' . $value;
+
 		$where = array();
 		if (in_array($field, array('sort', 'attribute'))) {
 			$where = array($field => $value);
 			$newInfos = $this->_getFrontInfos('webgame', 'spirit', 1, 18, $where, array(array('id', 'desc')), 'id, title, thumb,');
 			$newInfos = $newInfos['infos'];
 		} elseif ($field == 'keyword') {
-			//echo 'iiiiiiiiii';
-			//$value = urldecode(iconv('gbk', 'utf-8', $value)); echo $value; exit();
 			$model = 'spiritModel';
 			$this->_loadModel('webgame', $model);
 			$newInfos = $this->spiritModel->currentDb->from('sw_spirit')->select('title, id, thumb')->like(array('title' => $value))->limit(18)->get()->result_array();
 		} else {
 			$newInfos = array();
 		}
-
 		
-		//$infoStr = json_encode($newInfos['infos']);
+		foreach ($newInfos as $key => $newInfo) {
+			$newInfo['url'] = $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id'];
+			$newInfos[$key] = $newInfo;
+		}
+
 		echo $this->_jsonp($newInfos);
 		exit();
 	}

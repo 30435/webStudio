@@ -33,14 +33,13 @@ if (document.addEventListener) {
 }
 window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
 window.onkeydown = document.onkeydown = keydown;
-   
 </script>
 <!--------------------------宽度一样的977px---------------------------------------->
 <div class="all">
 	<div class="ban"><iframe class="frm" src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="956" height="640" frameborder="0" scrolling="no"></iframe></div>
 		<div class="nav_nuowa">
 			<div class="nuowa_bj0">
-				<p class="more"><a target="_blank">更多</a></p>
+				<p class="more"><a target="_blank" href="<?php echo $this->currentWebgameInfo['url_server']; ?>slist">更多</a></p>
 				<ul>
 					<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 6, array('position' => 'index'), array(array('updatetime', 'desc')), 'id, title, thumb,'); ?>
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>

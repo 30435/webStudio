@@ -6,8 +6,10 @@
 		<div class="sigert">
 			<strong style="color:#900;">您当前的位置：</strong>
 			<a href="<?php echo $this->currentWebgameInfo['url_home']; ?>" target="_self"><?php echo $this->currentWebgameInfo['name']; ?></a>>
-			<a>诺瓦奇兵宠物大全</a>>
-			<?php if (isset($sortInfos[$this->currentInfo['sort']]['value'])) { echo $sortInfos[$this->currentInfo['sort']]['value'] . '<a>系</a>'; } ?>
+			<a href="<?php echo $this->currentWebgameInfo['url_server']; ?>slist">诺瓦奇兵宠物大全</a>>
+			<?php if (isset($sortInfos[$this->currentInfo['sort']]['value'])) { 
+			    echo '<a href="' . $this->currentWebgameInfo['url_server'] . 'slist?sort=' . $sortInfos[$this->currentInfo['sort']]['key'] . '">' . $sortInfos[$this->currentInfo['sort']]['value'] .  '系</a>'; 
+			} ?>
 			
 		</div>  
 		<h1 class="sec_tit"><strong>诺瓦奇兵-<?php echo $this->currentInfo['title']; ?>-属性详解</strong></h1>   
