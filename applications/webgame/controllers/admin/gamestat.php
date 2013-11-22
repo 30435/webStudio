@@ -7,15 +7,15 @@ class Gamestat extends Custom_AdminController
 	{
 		parent::__construct();
 		$this->_initCurrentModel('gamestatModel');
-		$this->currentDb = $this->gamestatModel->_loadDatabase('novalog'); print_r($this->currentModel);
+		$this->currentModel->currentDb = $this->currentModel->_loadDatabase('novalog'); 
 
-		$this->tableInfosFile = $this->appInfos[APPCODE]['path'] . 'cache/tableInfo.php'; echo $this->tableInfosFile;
+		$this->tableInfosFile = $this->appInfos[APPCODE]['path'] . 'cache/tableInfo.php'; //echo $this->tableInfosFile;
 		$this->tableInfos = require $this->tableInfosFile; //print_r($this->tableInfos); exit();
 	}
 
 	public function indexbak()
 	{
-		$tableStructs = $this->currentDb->from('columns')->get()->result_array();
+		$tableStructs = $this->currentModel->currentDb->from('columns')->get()->result_array();
 
 		$tableInfos = array();
 		foreach ($tableStructs as $tableStruct) {
@@ -29,7 +29,7 @@ class Gamestat extends Custom_AdminController
 
 		$data = "<?php\nreturn " . var_export($tableInfos, true) . ";\n?>";
 		$strlen = file_put_contents($this->tableInfosFile, $data);
-		print_r($tableInfos);
+		print_r($tableInfos);exit();
 	}
 
 	/**
@@ -39,8 +39,9 @@ class Gamestat extends Custom_AdminController
 	 */
 	public function index()
 	{
-		$table = $this->input->get_post('table');
-		$table = in_array($table, array_keys($this->tableInfos)) ? $table : 'addnewpet';
+		$this->table = $this->input->get_post('table');
+		$this->table = in_array($this->table, array_keys($this->tableInfos)) ? $this->table : 'nova_behind'; 
+		$this->tableInfo = $this->tableInfos[$this->table];
 		$this->load->library('pagination');
 
 		$page = intval($this->input->get_post('page'));
@@ -48,8 +49,8 @@ class Gamestat extends Custom_AdminController
 		$paginationInfos = $this->_paginationConfig();
 		$pageSize = empty($paginationInfos['per_page']) ? 15 : $paginationInfos['per_page'];
 		$where = $this->_where();
-		$order = $this->_order(); print_r($this->managerModel); exit();
-		$result = $this->managerModel->getInfos($table, $where, $order, $currentPage, $pageSize, $fields);
+		$order = $this->_order(); 
+		$result = $this->currentModel->getInfos($this->table, $where, $order, $currentPage, $pageSize);
 		$this->infos = $this->_formatInfos($result['infos']);
 
 		$paginationInfos['base_url'] = strpos($this->urlForward, '?') !== false ? $this->urlForward : $this->urlForward . '?';
@@ -61,39 +62,52 @@ class Gamestat extends Custom_AdminController
 		$this->load->view($this->template);
 	}
 
-    /**
-	 * View a manager log info
-	 *
-	 * @return void
-	 */
-	public function view()
+	public function analyze()
 	{
-		$this->_view();
+		$_GET['table'] = 'analyze_status';
+		$this->index();
 	}
 
-	/**
-	 * Format an info
-	 *
-	 * @param  array $info
-	 * @param  boolean $isWrite
-	 * @return array
-	 */
-	protected function _formatInfo($info)
+	public function behind()
 	{
-		$this->noPriv = false;
-		if ($this->showCurrent && $info['userid'] != $this->userInfo['id']) {
-			$this->noPriv = true;
-			return $info;
+		$_GET['table'] = 'nova_behind';
+		$this->index();
+	}
+		
+	/**
+	 * Get the where clause
+	 *
+	 * @return array | null
+	 */
+	protected function _where()
+	{
+		$this->pagination->page_query_string=TRUE;
+		$this->pagination->enable_query_strings=TRUE;
+		$whereArray = array();
+		$urlStr = '&table=' . $this->input->get_post('table');
+		
+		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
+		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
+
+		$startTime = $this->input->get('start_time');
+		$endTime = $this->input->get('end_time');
+		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+		if ((!empty($startTime) || !empty($endTime)) && in_array($timeField, array_keys($this->tableInfo['fields']))) {
+			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array($timeField . ' >=' => strtotime($startTime)));
+			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array($timeField . ' <=' => strtotime($endTime)));
+
+			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
 		}
 
-		$this->currentLogType = isset($this->logType[$info['logtype']]) ? $this->logType[$info['logtype']] : '';
-		$this->logDescription = $this->currentLogType . '==' . $info['role_name'] . '--' . $info['username'] . '--' . $info['menu_name'] 
-			. '--' . date('Y-m-d H:i:s', $info['inputtime']) . '--' . $info['ip'];
+		$guid = $this->input->get('guid');
+		if (!empty($guid)) {
+			$whereArray = array_merge($whereArray, array('guid = ' => $guid));
+			$urlStr .= empty($guid) ? '' : '&guid=' . $guid;
+		}
 
-		$info['data'] = unserialize($info['data']);
-		$info['data_old'] = unserialize($info['data_old']);
-
-		return $info;
+		$this->_paginationStr($urlStr);
+		return $whereArray;
 	}
 
     /**
@@ -104,25 +118,17 @@ class Gamestat extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
-		return $infos;
+		$dateFields = array('time', 'insert_date', 'create_time', 'lastin', 'lastout');
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				$info['inputtime'] = date('Y-m-d H:i:s', $info['inputtime']);
-				$info['logtype'] = isset($this->logTypes[$info['logtype']]) ? $this->logTypes[$info['logtype']] : $info['logtype'];
+				foreach ($dateFields as $dateField) {
+					if (isset($info[$dateField])) {
+						$info[$dateField] = date('Y-m-d H:i:s', $info[$dateField]);
+					}
+				}
 				$infos[$key] = $info;
 			}
 		}
-
-		if (empty($this->showCurrent)) {
-			$managerInfos = $this->currentModel->getAllInfos('admin_manager', 'id');
-			$this->selectManager = $this->_getSelectElement($managerInfos, 'id', 'username', '');
-			$roleInfos = $this->currentModel->getAllInfos('admin_role', 'id');
-			$this->selectRole = $this->_getSelectElement($roleInfos, 'id', 'name', '');
-		}
-		$menuInfos = empty($this->showCurrent) ? $this->currentModel->getAllInfos('admin_menu', 'id') : $this->menuInfos;
-		$format = "<option value='\$id' \$selected>\$spacer\$name</option>";
-		$tree = new CustomTree($menuInfos);
-		$this->selectMenu = $tree->getTree(0, $format);
 
 		return $infos;
 	}

@@ -195,7 +195,7 @@ class AdminController extends Custom_Controller
 	 */
 	protected function _paginationConfig()
 	{
-		$config['per_page'] = 15; // Max number of items you want shown per page
+		$config['per_page'] = 20; // Max number of items you want shown per page
 		$config['num_links'] =  5; // Number of "digit" links to show before/after the currently viewed page
 		$config['use_page_numbers'] = TRUE; // Use page number for segment instead of offset
 		$config['next_link'] = '&gt;&gt;';
