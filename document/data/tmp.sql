@@ -1,3 +1,12 @@
+ALTER TABLE  `studio_webgame`.`sw_spirit` ADD  `attribute` VARCHAR( 15 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `sort` ;
+ALTER TABLE  `studio_webgame`.`sw_category` CHANGE  `template`  `template_page` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL ;
+ALTER TABLE  `studio_webgame`.`sw_category` ADD  `template_big` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `template_page` ;
+ALTER TABLE  `studio_webgame`.`sw_category` ADD  `template_list` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `template_big` ;
+ALTER TABLE  `studio_webgame`.`sw_category` ADD  `template_show` VARCHAR( 20 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL AFTER  `template_list` ;
+
+
+
+
 
 INSERT INTO `sp_admin_menu` (`name`, `parentid`, `app_code`, `controller`, `method`, `extparam`, `listorder`, `islog`, `display`) VALUES
 ('广告管理', 4, 'passport', '', '', '', 0, '1', '1'),

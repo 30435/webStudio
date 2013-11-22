@@ -73,6 +73,12 @@ class Gamestat extends Custom_AdminController
 		$_GET['table'] = 'nova_behind';
 		$this->index();
 	}
+
+	public function online()
+	{
+		$_GET['table'] = 'online';
+		$this->index();
+	}
 		
 	/**
 	 * Get the where clause

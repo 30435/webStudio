@@ -22,10 +22,10 @@ abstract class CmsCategoryModel extends CommonModel
 	protected function _fieldInfos()
 	{
 		$templatePageInfos = array(
-			'default' => array('key' => 'default', 'value' => '标准单网页模板'),
-			'aboutus' => array('key' => 'aboutus', 'value' => '单网页模板_关于我们'),
-			'service' => array('key' => 'service', 'value' => '单网页模板_服务条款'),
-			'aptitude' => array('key' => 'aptitude', 'value' => '单网页模板_资质'),
+			'page_default' => array('key' => 'page_default', 'value' => '标准单网页模板'),
+			'page_aboutus' => array('key' => 'page_aboutus', 'value' => '单网页模板_关于我们'),
+			'page_service' => array('key' => 'page_service', 'value' => '单网页模板_服务条款'),
+			'page_aptitude' => array('key' => 'page_aptitude', 'value' => '单网页模板_资质'),
 		);
 		$templateBigInfos = array(
 			'list_big' => array('key' => 'list_big', 'value' => '标准大栏目模板'),
