@@ -11,17 +11,17 @@
 				</div>
 			</div>
 			<div class="rtext">
-				<div class="c1" style="height: 70px">
+				<div class="c1" style="height: 20px">
 					<p>
 						<a href="http://weibo.com/motiezhongwenwang" target="_blank" class="link-sina"><img class="png" src="http://img.motieimg.com/_assets/wb_logo16_a.png" alt="" />官方微博</a>
 						<a href="http://e.weibo.com/qianshuchuban" target="_blank" class="link-qianshu"><img class="png" src="http://img.motieimg.com/_assets/shu1000.gif?201211191543" alt="" height="12" /></a>
 					</p>
-					<p>
+					<!--<p>
 						<a href="http://shuzhan.motie.com" target="_blank" class="link-iphone"><img class="png" src="http://img.motieimg.com/_assets/ico-iphone.png" width="14" height="14" /> 苹果客户端：磨铁书栈</a>
 					</p>
 					<p>
 						<a href="http://motie.cn" target="_blank" style="color: #C7C7C7"><img style="margin: 0 2px 0 2px;vertical-align:-4px;" src="http://img.motieimg.com/_assets/ico-mobile.gif" width="10" height="16" /> 磨铁手机版</a>
-					</p>
+					</p>-->
 				</div>
 				<div class="c2" style="padding-bottom: 10px;">
 					<a href="/about"><b>关于磨铁</b></a>&nbsp;

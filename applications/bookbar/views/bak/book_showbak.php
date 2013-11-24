@@ -69,7 +69,7 @@
 							<li class="follow"><a href="javascript:;" class="followBtn" data-follow-status="5" data-read-status="-1"><span></span>收藏</a></li>
 							<li class="forward"><a href="javascript:;" action-type="forward">转发</a></li>
 							<li class="favorite"><a title="喜欢" action-type="favorite" href="javascript:;"><img src="http://img.motieimg.com/_resources/css/img/field.gif" alt="喜欢" role="status" class="ico-heart-grey"></a></li>
-							<li class="read"><a href="<?php echo $this->baseUrl . 'book/chapter?id=' . $this->currentInfo['id']; ?>" class="M-button-b">开始阅读</a></li>
+							<li class="read"><a href="/book/12383/chapter" class="M-button-b">开始阅读</a></li>
 						</ul>
 					</div>
 					<div class="boost">
@@ -126,6 +126,24 @@
 				</div>
 				<div class="ico"><img src="http://img.motieimg.com/_assets/ico-in-end.gif" alt="已完结"></div>
 			</div>
+
+			<div class="mod mod-book-dynamics">
+				<div class="hd">
+					<a href="javascript:;" style="right: 10px;" id="add-review">写评论</a>
+					<ul class="mod-tabs">
+						<li><h2><a href="/book/12383/review?showType=time">必须犯规的游戏的评论<span class="number"></span></a></h2></li>
+						<li class="current" ><h2><a href="/book/12383/review?showType=best">精华评论</a></h2></li>
+					</ul>
+				</div>
+				<div class="bd">
+					<div style="padding:30px;text-align: center;"><i class="loadIco"></i></div>
+				</div>
+			</div>
+
+			<div class="mod mod-respond" role="data-comment" data-feed-id="12383" data-feed-type="2" data-use-template="#bookReply">
+				<div class="hd mod-title "><div class="title-bd "><h2 class="fl">必须犯规的游戏的回应</h2></div></div>
+				<div class="bd"><div style="padding:30px;text-align: center;"><i class="loadIco"></i></div></div>
+			</div>
 		</div>
 	</div>
 
@@ -159,6 +177,12 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="ad empty-mod mod">
+				<a href="http://www.lefeng.com/?aid=1050554&referer=http://www.motie.com/mid/" target="_blank">
+					<img src="http://img.motieimg.com/img/138043141212386253_261_80.jpg" width="261" height="80" />
+				</a>
+			</div>
 
 			<div class="mod side-list">
 				<div class="hd mod-title"><div class="title-bd"><h2>新书推荐</h2></div></div>
@@ -184,6 +208,60 @@
 						<li><a href="/book/176" data-collect-index="4">太监往事</a></li>	
 					</ul>
 				</div>
+			</div>
+
+			<div class="mod side-list">
+				<div class="hd mod-title"><div class="title-bd"><h2>精品推荐</h2></div></div>
+				<div class="bd">
+					<ul class="list" data-collect-id="119">
+						<li class="top">
+							<a href="/book/31369" boxid="book_detail_tu1" data-control-type="shelf" class="fb" data-collect-index="1">
+								<img style="padding:0px;" src="http://img.motieimg.com/book/31369s1.jpg" width="50" height="70">
+							</a>
+							<span style="position: relative; top: 7px;">
+								<a target="_blank" class="fb" boxid="book_detail_tu1" data-control-type="shelf" href="/book/31369" data-collect-index="1">爱到流年落华处</a>
+								<span class="author">作者：<a target="_blank" href="/people/603" class="deep-blue fz-12">白双双</a></span>
+							</span>
+						</li>
+						<li><a href="/book/382" data-collect-index="2">隐交易</a></li>	
+						<li><a href="/book/124" data-collect-index="3">心理医生的窥视</a></li>	
+						<li><a href="/book/176" data-collect-index="4">太监往事</a></li>	
+						<li><a href="/book/382" data-collect-index="2">隐交易</a></li>	
+						<li><a href="/book/124" data-collect-index="3">心理医生的窥视</a></li>	
+						<li><a href="/book/176" data-collect-index="4">太监往事</a></li>	
+						<li><a href="/book/382" data-collect-index="2">隐交易</a></li>	
+						<li><a href="/book/124" data-collect-index="3">心理医生的窥视</a></li>	
+						<li><a href="/book/176" data-collect-index="4">太监往事</a></li>	
+					</ul>
+				</div>
+			</div>
+
+			<div class="mod fans-rank">
+				<div class="hd mod-title"><div class="title-bd"><h2>粉丝榜</h2></div></div>
+				<div class="bd">
+					<table>
+						<thead>
+							<tr><th width="36">排行</th><th>用户名</th><th width="80">级别</th></tr>
+						</thead>
+						<tbody>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>
+							<tr ><td class="ac"></td><td class="col2"><a href="/people/117289"  >薰姨</a></td><td class="col3">平民</td></tr>							
+							<tr><td colspan="2"></td><td class="ar"><a href="/book/12383/bookfollow" class="fans-gray" >[更多]</a></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="mod empty-mod ac">
+				<a href="javascript:;" id="collect-to-mygroup" title="收藏到小组"><img src="http://img.motieimg.com/_assets/btn-collection.gif" alt="收藏到小组" /></a>
 			</div>
 		</div>	
 	</div>

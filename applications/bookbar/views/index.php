@@ -1,4 +1,15 @@
 <?php echo $this->load->view('header'); ?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>bookbar/css/square.css?201303071915" media="all">
+	<!--[if IE]>
+<link href="<?php echo $this->staticUrl; ?>bookbar/css/style-ie.css?201209101757" rel="stylesheet" type="text/css" />
+<![endif]--> 
+</head>
+<body class="page-type-square">
+<div class="body-bg">
+<div class="wrap">
+<?php echo $this->load->view('header_nav'); ?>
+
 <div id="main">
 	<div style="width: auto;" class="left">
 		<div id="Billboard" class="mod">
@@ -7,8 +18,8 @@
 				<?php $coverSmallStr = $coverStr = $bookInfoStr = ''; $newInfos = $controller->_getFrontInfos('bookbar', 'book', 1, 4, array(), array(), 'id, name, fcover_small, fcover, description', '', $start = 0); ?>
 				<?php foreach ($newInfos['infos'] as $newInfo) { 
 					$coverSmallStr .= '<li data-collect-index="1" class=""><img width="41" height="57" alt="' . $newInfo['name'] . '" src="' . $newInfo['fcover'] . '"></li>';
-					$coverStr .= '<div class="tabs-content" style="display: none;"><a data-collect-index="1" href="' . $newInfo['fcover'] . '" target="_blank"><img width="200" height="280" alt="' . $newInfo['name'] . '" src="' . $newInfo['fcover'] . '"></a></div>';
-					$bookInfoStr .= '<div class="tabs-content-2" style="display: none;"><h3><a data-collect-index="1" href="' . $newInfo['fcover'] . '" data-control-type="shelf" boxid="slider_classic" target="_blank">' . $newInfo['name'] . '</a></h3><p><a data-collect-index="1" href="' . $newInfo['fcover'] . '" target="_blank">' . $newInfo['fcover'] . '<img alt="打开" src="' . $this->staticUrl . 'bookbar/images/li-6.gif"></a></p></div>';
+					$coverStr .= '<div class="tabs-content" style="display: none;"><a data-collect-index="1" href="' . $this->baseUrl . 'book/show?id=' . $newInfo['id'] . '" target="_blank"><img width="200" height="280" alt="' . $newInfo['name'] . '" src="' . $newInfo['fcover'] . '"></a></div>';
+					$bookInfoStr .= '<div class="tabs-content-2" style="display: none;"><h3><a data-collect-index="1" href="' . $this->baseUrl . 'book/show?id=' . $newInfo['id'] . '" data-control-type="shelf" boxid="slider_classic" target="_blank">' . $newInfo['name'] . '</a></h3><p><a data-collect-index="1" href="' . $this->baseUrl . 'book/show?id=' . $newInfo['id'] . '" target="_blank">' . $newInfo['description'] . '<img alt="打开" src="' . $this->staticUrl . 'bookbar/images/li-6.gif"></a></p></div>';
 				} ?>
 					<div class="tabs">
 						<ul class="list"><?php echo $coverSmallStr; ?></ul>
@@ -23,13 +34,13 @@
 				<?php $mark1 = 41; $mark2 = 0; $j = 0; for ($i = 1; $i < 4; $i++) { ?>
 					<div data-collect-id="<?php echo $mark1++; ?>" class="c-<?php echo $i; ?>">
 						<h3 data-collect-index="1" class="font-songti">
-							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
+							<a href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
 						</h3>
 						<p data-collect-index="2">
-							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
-							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> <br>
-							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
-							<a href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
+							<a href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
+							<a href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> <br>
+							<a href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a> |
+							<a href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank" data-control-type="shelf" boxid="tushu_recommend_1"><?php echo $newInfos['infos'][$j]['name']; ?></a>
 						</p>
 					</div>
 				<?php } ?>
@@ -44,14 +55,14 @@
 					<?php $mark1 = 44; $j = -1; for ($i = 1; $i < 4; $i++) { ?>
 					<ul data-collect-id="<?php echo $mark1++; ?>" class="list" style="display: block;">
 						<li class="top">
-							<a class="fb pic" data-collect-index="1" target="_blank" href="<?php $j++; echo $newInfos['infos'][$j]['fcover']; ?>"><img width="50" height="70" src="<?php echo $newInfos['infos'][$j]['fcover']; ?>"></a>
+							<a class="fb pic" data-collect-index="1" target="_blank" href="<?php $j++; echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>"><img width="50" height="70" src="<?php echo $newInfos['infos'][$j]['fcover']; ?>"></a>
 							<span style="position: relative; top: 7px;">
-								<a href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" data-collect-index="1" class="fb" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a>
-								<span class="author">作者：<a class="deep-blue fz-12" href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" target="_blank"><?php echo $newInfos['infos'][$j]['author']; ?></a></span>
+								<a href="<?php echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" data-collect-index="1" class="fb" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a>
+								<span class="author">作者：<a class="deep-blue fz-12" href="<?php echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" target="_blank"><?php echo $newInfos['infos'][$j]['author']; ?></a></span>
 							</span>
 						</li>
 						<?php for ($z = 1; $z < 10; $z++) { $j++; ?>					
-						<li><a href="<?php echo $newInfos['infos'][$j]['fcover']; ?>" data-collect-index="2" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a></li>
+						<li><a href="<?php echo $this->baseUrl . 'book/show?id=' . $newInfos['infos'][$j]['id']; ?>" data-collect-index="2" target="_blank"><?php echo $newInfos['infos'][$j]['name']; ?></a></li>
 						<?php } ?>
 						<li class="more"><a target="_blank" data-collect-index="11" href="javascript: void(0);">·更多</a></li>
 					</ul>
