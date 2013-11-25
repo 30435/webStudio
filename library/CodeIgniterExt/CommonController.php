@@ -445,9 +445,9 @@ class CommonController extends CI_Controller
 			$this->pagination->page_query_string=TRUE;
 			$this->pagination->enable_query_strings=TRUE;
 		
-			@$this->pagination->suffix .= strpos($this->pagination->suffix , '?') !== false ? $urlStr : '?' . $urlStr;
+			@$this->pagination->suffix .= strpos($this->pagination->suffix , '?') !== false || strpos($this->pagination->suffix , '&') !== false ? $urlStr : '?' . $urlStr;
 		}
-		@$this->pagination->suffix = trim(trim($this->pagination->suffix), '?');
+		@$this->pagination->suffix = trim(trim($this->pagination->suffix), '?'); 
 	}
 		
 	/**

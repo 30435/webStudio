@@ -10,7 +10,12 @@ class Gamestat extends Custom_AdminController
 		$this->currentModel->currentDb = $this->currentModel->_loadDatabase('novalog'); 
 
 		$this->tableInfosFile = $this->appInfos[APPCODE]['path'] . 'cache/tableInfo.php'; //echo $this->tableInfosFile;
-		$this->tableInfos = require $this->tableInfosFile; //print_r($this->tableInfos); exit();
+		$this->tableInfos = require $this->tableInfosFile; 
+		$this->orderFields = array(
+			'paradiselevel', 'petnum', 'fulllevelpetnum', 'achievementnum', 'money', 'charlevel', 'seizepetcount', 'restorepetnum', 'askcount', 'praybean', 'openshopnum',  'investnum', 'getrubbishnum', 
+			'friendcount', 'freepetnum', 'recipecookcount', 'eggnum', 'floor', 'composepetnum', 'bosschallengenum', 'blackholenum', 'battlecount', 'exploringcount', 'pethprange', 'petspeedrange', 
+			'petattackrange', 'petdefencerange', 'petspeattrange', 'petspedefrange', 'plat_all_count', 'game_all_count', 'pet_all_count', 'money_all_count', 'item_all_count', 'online_count', 'lastin'
+		);
 	}
 
 	public function indexbak()
@@ -40,7 +45,7 @@ class Gamestat extends Custom_AdminController
 	public function index()
 	{
 		$this->table = $this->input->get_post('table');
-		$this->table = in_array($this->table, array_keys($this->tableInfos)) ? $this->table : 'nova_behind'; 
+		$this->table = in_array($this->table, array_keys($this->tableInfos)) ? $this->table : 'addnewpet'; 
 		$this->tableInfo = $this->tableInfos[$this->table];
 		$this->load->library('pagination');
 
@@ -91,31 +96,91 @@ class Gamestat extends Custom_AdminController
 		$this->pagination->enable_query_strings=TRUE;
 		$whereArray = array();
 		$urlStr = '&table=' . $this->input->get_post('table');
-		
-		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
-		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
+		$this->isRemain = 'no';
+		$this->remainType = '';
+	
+		if ($this->table == 'nova_behind' && $this->input->get_post('isRemain') == 'yes') {
+			$this->isRemain = 'yes';
+			$this->remainType = intval($this->input->get_post('remainType'));
+			$this->remainTime = $this->input->get('remain_time');
+			if (empty($this->remainType) || empty($this->remainType)) {
+				return $whereArray;
+			}
 
-		$startTime = $this->input->get('start_time');
-		$endTime = $this->input->get('end_time');
-		$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
-		if ((!empty($startTime) || !empty($endTime)) && in_array($timeField, array_keys($this->tableInfo['fields']))) {
-			$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array($timeField . ' >=' => strtotime($startTime)));
-			$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array($timeField . ' <=' => strtotime($endTime)));
+			$remainTimeStamp = strtotime($this->remainTime);
+			$remainTimeStamp1 = $remainTimeStamp + 86400;
+			$whereArray = array_merge($whereArray, array('create_time >=' => $remainTimeStamp), array('create_time < ' => $remainTimeStamp1));
+			$whereArray = array_merge($whereArray, array('lastin >=' => $remainTimeStamp + 86400), array('lastin <' => $remainTimeStamp1 + 86400 * $this->remainType));
 
-			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
-			$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
-		}
+			$urlStr .= '&remain_time=' . $this->remainTime . '&remainType=' . $this->remainType . '&isRemain=yes';
+		} else {
+			$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
+			$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
 
-		$guid = $this->input->get('guid');
-		if (!empty($guid)) {
-			$whereArray = array_merge($whereArray, array('guid = ' => $guid));
-			$urlStr .= empty($guid) ? '' : '&guid=' . $guid;
+			$startTime = $this->input->get('start_time');
+			$endTime = $this->input->get('end_time');
+			$endTime = !empty($endTime) ? $endTime . ' 23:59:59' : '';
+			if ((!empty($startTime) || !empty($endTime)) && in_array($timeField, array_keys($this->tableInfo['fields']))) {
+				$whereArray = empty($startTime) ? $whereArray : array_merge($whereArray, array($timeField . ' >=' => strtotime($startTime)));
+				$whereArray = empty($endTime) ? $whereArray : array_merge($whereArray, array($timeField . ' <=' => strtotime($endTime)));
+
+				$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
+				$urlStr .= empty($endTime) ? '' : '&end_time=' . str_replace(' 23:59:59', '', $endTime);
+			}
+
+			$guid = $this->input->get('guid');
+			if (!empty($guid)) {
+				$whereArray = array_merge($whereArray, array('guid = ' => $guid));
+				$urlStr .= empty($guid) ? '' : '&guid=' . $guid;
+			}
 		}
 
 		$this->_paginationStr($urlStr);
 		return $whereArray;
 	}
+		
+	/**
+	 * Get the order clause
+	 * 
+	 * @return array
+	 */
+	protected function _oruder()
+	{
+		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
+		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
 
+		$order = array(array($timeField, 'desc'));
+		
+		return $order;
+	}
+
+	
+	/**
+	 * Base order method
+	 * 
+	 * @return array
+	 */
+	protected function _order()
+	{
+		$order = array();
+		$urlStr = '';
+		$orderField = $this->input->get_post('orderField');
+		if (!empty($orderField)) {
+			$orderType = $this->input->get_post('orderType');
+			$orderType = in_array($orderType, array('desc', 'asc')) ? $orderType : 'desc';
+			$order[] = array($orderField, $orderType);
+			$urlStr .= '&orderField=' . $orderField . '&orderType=' . $orderType;
+		}
+		
+		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
+		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
+
+		$order = array_merge($order, array(array($timeField, 'desc')));
+		
+		$this->_paginationStr($urlStr);
+		return $order;
+	}
+	
     /**
 	 * Format the manager infos 
 	 *
