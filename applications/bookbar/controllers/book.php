@@ -20,20 +20,29 @@ class Book extends CmsIndex
 	public function chapter()
 	{
 		$this->currentInfo = $this->_getInfoById();
-		$chapterFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '.php'; echo $chapterFile;
+		$chapterFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '.php';
 		if (!file_exists($chapterFile)) {
 			exit();
 		}
 
-		$this->chapterInfos = require $chapterFile; print_r($this->chapterInfos);
+		$this->chapterInfos = require $chapterFile; 
 		$this->load->view('book_chapter', $this->frontController);
 	}
 	
 	public function content()
 	{
 		$this->currentInfo = $this->_getInfoById();
-		$this->currentChapter = $this->input->get('chapter');
-		$contentFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '/' . $this->currentChapter . '.txt'; 
+		$chapter = $this->input->get('chapter');
+
+		$chapterFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '.php';
+		if (!file_exists($chapterFile)) {
+			exit();
+		}
+
+		$this->chapterInfos = require $chapterFile;
+		$this->currentChapter = $this->chapterInfos[$chapter]; 
+
+		$contentFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '/' . $chapter . '.txt'; 
 		$this->content = file_get_contents($contentFile);
 
 		$this->load->view('book_content', $this->frontController);

@@ -51,7 +51,7 @@ Motie.addNewClass && $('ul.add-new-class').length && $('ul.add-new-class').each(
 								<ul class="list add-new-class">
 									<?php foreach ($this->chapterInfos as $key => $chapterInfo) { ?>
 									<li class="" createdate="2012-07-05 13:48:38">
-										<a href="/book/12650_263328" ><?php echo $chapterInfo['title']; ?></a>
+										<a href="<?php echo $this->baseUrl . 'book/content?id=' . $this->currentInfo['id'] . '&chapter=' . $key; ?>" ><?php echo $chapterInfo['title']; ?></a>
 										<!--<img alt="vip" src="http://img.motieimg.com/_assets/vip.gif">-->
 										<span class="desc"><?php echo $chapterInfo['date_write']; ?></span>
 									</li>
