@@ -51,8 +51,7 @@
 					&nbsp;字数：1077&nbsp; 浏览：11人
 				</p>
 				<div class="page-content">
-					<pre ondragstart="return false" oncopy="return false;" oncut="return false;" oncontextmenu="return false" class="note" id="html_content_263328">
-					<?php echo $this->content; ?>
+					<pre ondragstart="return false" oncopy="return false;" oncut="return false;" oncontextmenu="return false" class="note" id="html_content_263328"><?php echo $this->content; ?>
 					<img src="/ajax/chapter/12650/263328" class="hidden" /></pre>
 				</div>
 				

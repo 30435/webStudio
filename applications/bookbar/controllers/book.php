@@ -43,7 +43,7 @@ class Book extends CmsIndex
 		$this->currentChapter = $this->chapterInfos[$chapter]; 
 
 		$contentFile = $this->bookPath . 'luxun/' . $this->currentInfo['code'] . '/' . $chapter . '.txt'; 
-		$this->content = file_get_contents($contentFile);
+		$this->content = trim(file_get_contents($contentFile));
 
 		$this->load->view('book_content', $this->frontController);
 	}
