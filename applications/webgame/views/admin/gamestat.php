@@ -121,7 +121,7 @@ function orderField(field)
 		<tr>
 		<?php 
 		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
-			$nameField = empty($nameField) ? $keyField : $nameField . ' ( ' . $keyField . ' ) 点击排序 ';
+			$nameField = empty($nameField) ? $keyField : $nameField . ' ( ' . $keyField . ' )';
 			if (in_array($keyField, $this->orderFields)) {
 				$nameField = '<a href="javascript: orderField(\'' . $keyField . '\');void(0);">' . $nameField . '</a>';
 			}
