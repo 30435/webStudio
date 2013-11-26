@@ -17,7 +17,7 @@
 </script>
 <link href="<?php echo $this->staticUrl; ?>bookbar/css/core.packed.css?201301311453" rel="stylesheet" type="text/css" />
 <link href="<?php echo $this->staticUrl; ?>bookbar/css/jquery-ui-1.8.16.custom.min.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo $this->staticUrl; ?>bookbar/css/model.packed.css?201302270930" rel="stylesheet" type="text/css" 
+<link href="<?php echo $this->staticUrl; ?>bookbar/css/model.packed.css?201302270930" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://img.motieimg.com/_resources/js/release/plugin.js?201211010520"></script>
 <script type="text/javascript" src="http://img.motieimg.com/_resources/js/release/Motie.core.packed.js?201309021552"></script>
 <script type="text/javascript">
