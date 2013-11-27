@@ -40,12 +40,36 @@ window.onkeydown = document.onkeydown = keydown;
 		<div class="nav_nuowa">
 			<div class="nuowa_bj0">
 				<p class="more"><a target="_blank" href="<?php echo $this->currentWebgameInfo['url_server']; ?>slist">更多</a></p>
-				<ul>
-					<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 6, array('position' => 'index'), array(array('updatetime', 'desc')), 'id, title, thumb,'); ?>
+                <div id="scolldiv" name="scolldiv" style="margin:0 auto;padding-top:50px;">
+                	<table width="200" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  
+					<?php $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 12, array('position' => 'index'), array(array('updatetime', 'desc')), 'id, title, thumb,'); ?>
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>
-						<li><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" target="_blank"><img src="<?php echo $newInfo['thumb']; ?>" width="109px" height="130px" /><span><?php echo $newInfo['title']; ?></span></a></li>
+					<td>
+						<table width="123" height="170" border="0" cellpadding="0" cellspacing="0">
+							<tr><td width="103" align="center"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><img class="sycwt" src="<?php echo $newInfo['thumb']; ?>" /></a></td></tr>
+							<tr><td align="center" class="index_colleges_font"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><?php echo $newInfo['title']; ?></a></td></tr>
+						</table>
+					</td>
 					<?php } ?>
-				</ul>
+
+</tr>
+</table>
+
+<script type="text/javascript" src="<?php echo $this->staticUrl; ?>cfront/js/msclass.js"></script>
+<script type="text/javascript" >
+var youqingmarquee = new Marquee("scolldiv");
+youqingmarquee.Direction="left"; //方向
+youqingmarquee.Step=1; 
+youqingmarquee.Width=950; //容器宽高
+youqingmarquee.Height=230;
+youqingmarquee.Timer=30;
+youqingmarquee.ScrollStep=1;
+youqingmarquee.Start();
+</script>
+
+
 			</div>
 		</div>
 	</div>

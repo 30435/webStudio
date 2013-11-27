@@ -16,7 +16,7 @@ body{background:#fff;}
 .ban img{width:951px;height:620px;padding-left:12px;padding-top:11px;}
 
 
-.nav_nuowa{width:977px;overfolw:hidden;}
+.nav_nuowa{width:977px;overfolw:hidden;margin-top:-9px;}
 .nwbg{background:url(../images/nav.jpg) no-repeat;height:95px;}
 .ser_bar{float:left;padding:22px 0;width:314px;}
 .ser_bar .n_tag{background:none;border:none;color:#999;float:left;height:17px;line-height:17px;padding:16px 25px 0;width:190px;}
@@ -83,11 +83,12 @@ body{background:#fff;}
 .nuowa_bj0 ul{padding-top:60px;}
 .nuowa_bj0 ul li{float:left;width:115px;padding-left:20px;margin-left:21px;overflow:hidden;position:relative;text-align:center;color:#9f0f0f;}
 .nuowa_bj0 ul li a img{width:109px;height:130px;display:inline-block;border:1px solid #036;}
-.nuowa_bj0 ul li a span{display:block;margin-top:5px;}
+.nuowa_bj0 ul li a span{display:block;margin-top:5px;color:#8f4701;}
 .nuowa_bj0 ul .hot_l{width:27px;height:29px;display:block;background:url(../images/hotjt.png) no-repeat;position:absolute; margin-left:10px;margin-top: 47px;cursor:pointer;}
 .nuowa_bj0 ul .hot_r{width:27px;height:29px;display:block;background:url(../images/hotjt.png) no-repeat -30px 0;position:absolute; margin-left:937px;margin-top: 47px;cursor:pointer;}
-
-
+.index_colleges_font a{color:#8F4701;padding-top:5px;}
+.nw_td_img{width:109px;height:130px;border:1px solid #900;}
+.sycwt{background:url(../images/chongwu.jpg) no-repeat;width:109px;height:143px;display:block;overflow:hidden;}
 
 
 
