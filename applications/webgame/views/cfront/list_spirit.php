@@ -39,10 +39,9 @@
 		<?php $sortDefault = $this->input->get_post('sort'); $where = empty($sortDefault) ? array('position' => 'index') : array('sort' => $sortDefault); $newInfos = $controller->_getFrontInfos('webgame', 'spirit', 1, 18, $where, array(array('id', 'desc')), 'id, title, thumb,'); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
             <li>
-			    <a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><img src="<?php echo $newInfo['thumb']; ?>" class="pet-img"/></a>
-				<p class="pet_pw"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><?php echo $newInfo['title']; ?></a></p>
-				<p><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" class="pet_but01" title="<?php echo $newInfo['title']; ?>宠物获得"></a><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" class="pet_but02" title="<?php echo $newInfo['title']; ?>宠物升级"></a></p>
-			</li>
+               	<a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><img src="<?php echo $newInfo['thumb']; ?>" class="pet-img"/></a><span><?php echo $newInfo['title']; ?></span>
+                <p><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" class="pet_but01" title="<?php echo $newInfo['title']; ?>获得"></a><a href="#" class="pet_but02" title="<?php echo $newInfo['title']; ?>升级"></a></p>
+            </li>
 		<?php } ?>
         </ul>
     </div>
