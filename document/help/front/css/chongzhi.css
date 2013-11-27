@@ -824,7 +824,7 @@ margin-left: 10px;margin-top: 6px;opacity: 0.5;outline: medium none;position: ab
 
 .nw_dq_bd{height:670px;text-align:left;background:url(../images/sxbj00.jpg) repeat-y;width:977px;margin:0 auto;}
 .pet_list li{width:127px;height:205px;float:left;overflow:hidden;margin:10px 17px;white-space:nowrap;line-height:26px;}
-.pet_list li span{width:127px;display:inline-block;text-align:center;}
+.pet_list li a span{width:127px;display:inline-block;text-align:center;}
 .pet_list li .pet-img{display:block;width:109px;height:130px;padding-top:8px;padding-left:8px;border:1px solid #000;}
 .pet_pw{width:127px;text-align:center;margin-top:10px;}
 .pet_list li .pet_but01,.pet_list li .pet_but02{width:55px;height:26px;display:inline-block;margin-left:6px;margin-top:3px;}
