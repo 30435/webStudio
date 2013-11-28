@@ -48,8 +48,8 @@ window.onkeydown = document.onkeydown = keydown;
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 					<td>
 						<table width="123" height="170" border="0" cellpadding="0" cellspacing="0">
-							<tr><td width="103" align="center"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><img class="sycwt" src="<?php echo $newInfo['thumb']; ?>" /></a></td></tr>
-							<tr><td align="center" class="index_colleges_font"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>"><?php echo $newInfo['title']; ?></a></td></tr>
+							<tr><td width="103" align="center"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" target="_blank"><img class="sycwt" src="<?php echo $newInfo['thumb']; ?>" /></a></td></tr>
+							<tr><td align="center" class="index_colleges_font"><a href="<?php echo $this->currentWebgameInfo['url_server'] . 'spirit?id=' . $newInfo['id']; ?>" target="_blank"><?php echo $newInfo['title']; ?></a></td></tr>
 						</table>
 					</td>
 					<?php } ?>

@@ -5,7 +5,10 @@
 <title><?php echo $this->metaDatas['title']; ?></title>
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
-<link rel="stylesheet" type="text/css"  href="<?php echo $this->staticUrl; ?>cfront/css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>cfront/css/reset.css"/>
+<?php if (isset($this->newHeader)) { ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>cfront/css/style.css"/>
+<?php } ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->staticUrl; ?>cfront/css/chongzhi.css" />
 <script type="text/javascript">
 var passportUrl = "<?php echo $this->appInfos['passport']['url']; ?>";
@@ -17,7 +20,7 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 <script language="javascript" type="text/javascript" src="<?php echo $this->staticUrl; ?>common/script/common.js"></script>
 </head>
 <body>
-<div class="header">
+<div <?php $headerClass = isset($this->newHeader) ? 'class="header0"' : 'class="header"'; echo $headerClass; ?>>
 	<div class="top">
     	<h1 class="logo"><a href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>"><img src="<?php echo $this->staticUrl; ?>cfront/images/logo.png" /></a></h1>
         <div class="top_links">

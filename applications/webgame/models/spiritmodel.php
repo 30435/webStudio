@@ -25,17 +25,17 @@ class SpiritModel extends CommonModel
 			'attrivip' => array('key' => 'attrivip', 'value' => 'VIP宠物'),
 		);
 		$sortInfos = array(
-			'dark' => array('key' => 'dark', 'value' => '暗'),
-			'ice' => array('key' => 'ice', 'value' => '冰'),
-			'super' => array('key' => 'super', 'value' => '超能'),
-			'earth' => array('key' => 'earth', 'value' => '地'),
-			'wind' => array('key' => 'wind', 'value' => '风'),
-			'light' => array('key' => 'light', 'value' => '光'),
-			'fire' => array('key' => 'fire', 'value' => '火'),
-			'machine' => array('key' => 'machine', 'value' => '机械'),
-			'dragon' => array('key' => 'dragon', 'value' => '龙'),
-			'wood' => array('key' => 'wood', 'value' => '木'),
-			'water' => array('key' => 'water', 'value' => '水'),
+			'dark' => array('key' => 'dark', 'value' => '暗', 'img' => 'sx001'),
+			'ice' => array('key' => 'ice', 'value' => '冰', 'img' => 'sx002'),
+			'super' => array('key' => 'super', 'value' => '超能', 'img' => 'sx003'),
+			'earth' => array('key' => 'earth', 'value' => '地', 'img' => 'sx005'),
+			'wind' => array('key' => 'wind', 'value' => '风', 'img' => 'sx007'),
+			'light' => array('key' => 'light', 'value' => '光', 'img' => 'sx008'),
+			'fire' => array('key' => 'fire', 'value' => '火', 'img' => 'sx009'),
+			'machine' => array('key' => 'machine', 'value' => '机械', 'img' => 'sx011'),
+			'dragon' => array('key' => 'dragon', 'value' => '龙', 'img' => 'sx010'),
+			'wood' => array('key' => 'wood', 'value' => '木', 'img' => 'sx012'),
+			'water' => array('key' => 'water', 'value' => '水', 'img' => 'sx013'),
 		);
 		$fieldInfos['fields'] = array(
 			'id' => array('name' => '精灵ID'),
