@@ -58,4 +58,17 @@ class GamestatModel extends CommonModel
 		
 		return $result;
 	}
+
+	/**
+	 * Get the logined user num
+	 */
+	public function getloginNum($time)
+	{
+		$endTime = $time + 86400;
+		$where = 'lastlogintime >= ' . $time . ' AND logtintime < ' . $endTime;
+		$getNums = $this->currentDb->query("SELECT COUNT(DISTINCT(`guid`)) AS `count` FROM `nova_behind` WHERE lastin >= {$time} AND lastin < {$endTime}");
+		$numInfos = $getNums->row_array();
+		$totalNums = $numInfos['count'];
+		return $totalNums;
+	}
 }
