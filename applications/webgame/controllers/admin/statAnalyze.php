@@ -40,8 +40,8 @@ class statAnalyze extends StatCommon
 			//$this->extInfo['currentPlatnum'] = $currentPlatnum;
 			//$this->extInfo['currentGamenum'] = $currentGamenum;
 
-			$infos[++$key] = array('id' => '', 'pet_all_count' => '', 'money_all_count' => '', 'item_all_count' => '', 'insert_date' => '<span style="font-size:18px;color:#009900;">当前页总计</span>', 'plat_count' => $currentPlatnum, 'game_count' => $currentGamenum);
-			$infos[++$key] = array('id' => '', 'pet_all_count' => '', 'money_all_count' => '', 'item_all_count' => '', 'insert_date' => '<span style="font-size:18px;color:#009900;">总计</span>', 'plat_count' => $this->extInfo['platcount'], 'game_count' => $this->extInfo['gamecount']);
+			$infos[++$key] = array('id' => '', 'pet_all_count' => '转化率 (' . ($currentGamenum / $currentPlatnum) . ')', 'money_all_count' => '', 'item_all_count' => '', 'insert_date' => '<span style="font-size:18px;color:#009900;">当前页总计</span>', 'plat_count' => $currentPlatnum, 'game_count' => $currentGamenum);
+			$infos[++$key] = array('id' => '', 'pet_all_count' => '转化率 (' . ($this->extInfo['gamecount'] / $this->extInfo['platcount']) . ')', 'money_all_count' => '', 'item_all_count' => '', 'insert_date' => '<span style="font-size:18px;color:#009900;">总计</span>', 'plat_count' => $this->extInfo['platcount'], 'game_count' => $this->extInfo['gamecount']);
 		}
 
 		return $infos;
