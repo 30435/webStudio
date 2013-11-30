@@ -12,9 +12,9 @@ class StatCommon extends Custom_AdminController
 		$this->tableInfosFile = $this->appInfos[APPCODE]['path'] . 'cache/tableInfo.php'; //echo $this->tableInfosFile;
 		$this->tableInfos = require $this->tableInfosFile; 
 		$this->orderFields = array(
-			'paradiselevel', 'petnum', 'fulllevelpetnum', 'achievementnum', 'money', 'charlevel', 'seizepetcount', 'restorepetnum', 'askcount', 'praybean', 'openshopnum',  'investnum', 'getrubbishnum', 
+			'paradiselevel', 'petnum', 'fulllevelpetnum', 'achievementnum', 'money', 'charlevel', 'seizepetcount', 'restorepetnum', 'askcount', 'praybean', 'openshopnum',  'investnum', 'getrubbishnum', 'praycount',
 			'friendcount', 'freepetnum', 'recipecookcount', 'eggnum', 'floor', 'composepetnum', 'bosschallengenum', 'blackholenum', 'battlecount', 'exploringcount', 'pethprange', 'petspeedrange', 
-			'petattackrange', 'petdefencerange', 'petspeattrange', 'petspedefrange', 'plat_all_count', 'game_all_count', 'pet_all_count', 'money_all_count', 'item_all_count', 'online_count', 'lastin'
+			'petattackrange', 'petdefencerange', 'petspeattrange', 'petspedefrange', 'plat_count', 'game_count', 'pet_all_count', 'money_all_count', 'item_all_count', 'online_count', 'lastin'
 		);
 
 		$this->controllerTables = array(
@@ -57,6 +57,7 @@ class StatCommon extends Custom_AdminController
 
 		$method = $this->table;
 		if (in_array($this->table, array_keys($this->tableInfos)) && method_exists($this, $method)) {
+			
 			$this->$method();
 		} else {
 			$this->baseList();
@@ -64,11 +65,82 @@ class StatCommon extends Custom_AdminController
 	}
 
 	/**
-	 * Get the logined User
+	 * Initial ext operation
 	 */
-	public function getLoginedNums($time)
+	public function initExt()
 	{
+		$this->tableExt = true;
 
+		$isExt = $this->input->get_post('isExt');
+		if (empty($isExt)) {
+			$this->baseList();
+			return false;
+		} else {
+			$this->extTime = $this->input->get_post('extTime');
+			$this->extTime = empty($this->extTime) ? 0 : $this->extTime;
+			if (!empty($this->extTime)) {
+				$this->extTimeStamp = strtotime($this->extTime);
+				$this->extTimeStampEnd = $this->extTimeStamp + 86400;
+				$this->where = "`time` >= {$this->extTimeStamp} AND `time` < {$this->extTimeStampEnd}";
+			} else {
+				$this->extTimeStamp = $this->extTimeStampEnd = 0;
+				$this->where = "1";
+			}
+			return true;
+		}
+	}
+
+	/**
+	 * Get ExtInfo
+	 */
+	public function getExtInfo($field, $extWhere = '')
+	{
+		$loginedNums = $this->getLoginedNums();
+
+		$extTimeStampEnd = $this->extTimeStamp + 86400;
+		$where = "`time` >= {$this->extTimeStamp} AND `time` < {$extTimeStampEnd}";
+		$where .= empty($extWhere) ? '' : $extWhere;
+		
+		$getNums = $this->currentModel->currentDb->query("SELECT SUM(`{$field}`) AS `nums` FROM `{$this->table}` WHERE {$where}");
+		$nums = $getNums->row_array();
+		$rate = $loginedNums > 0 ? $nums['nums'] / $loginedNums : 0;
+
+		$returnArray = array('loginedNums' => $loginedNums, 'nums' => $nums['nums'], 'rate' => $rate);
+		return $returnArray;
+	}
+
+	/**
+	 * Get statistic num
+	 */
+	public function getNums($sql, $returnNum = true)
+	{
+		$getNums = $this->currentModel->currentDb->query($sql);
+		$nums = $getNums->row_array();
+		if ($returnNum) {
+			$nums = $nums['nums'];
+		}
+		return $nums;
+	}
+
+	/**
+	 * Get the login nums
+	 */
+	public function getLoginedNums($time = 0)
+	{
+		$extTimeStamp = empty($time) ? $this->extTimeStamp : $time;
+		$loginedNums = $this->currentModel->getloginNum($extTimeStamp);
+
+		return $loginedNums;
+	}
+
+	public function showExtInfo($extInfos)
+	{
+		$resultStr = '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><div class="pad_10"><div class="common-form"><table width="100%" class="table_form contentWrap">';
+		foreach ($extInfos as $extInfo) {
+			$resultStr .= '<tr><td>' . $extInfo['key'] . '：</td><td>' . $extInfo['value'] . '</td></tr>';
+		}
+		$resultStr .= '</table></div></div>';
+		echo $resultStr;
 	}
 
 	/**
@@ -87,6 +159,7 @@ class StatCommon extends Custom_AdminController
 		$where = $this->_where();
 		$order = $this->_order(); 
 		$result = $this->currentModel->getInfos($this->table, $where, $order, $currentPage, $pageSize);
+		$this->extInfo = isset($result['extInfo']) ? $result['extInfo'] : false;
 		$this->infos = $this->_formatInfos($result['infos']);
 
 		$paginationInfos['base_url'] = strpos($this->urlForward, '?') !== false ? $this->urlForward : $this->urlForward . '?';

@@ -107,11 +107,25 @@ function orderField(field)
 <script type="text/javascript">
 <!--
 document.domain='<?php echo $this->frontDomain; ?>';
-function showLog(url) {
+function showDialog(url)
+{
 	window.top.art.dialog({id:'show'}).close();
-	window.top.art.dialog({title:'操作详情',id:'show',iframe: url,width:'700',height:'500'}, function(){
+	window.top.art.dialog({title:'',id:'show',iframe: url,width:'400',height:'200'}, function(){
 		var d = window.top.art.dialog({id:'show'}).data.iframe;return false;
 	}, function(){window.top.art.dialog({id:'show'}).close()});
+}
+
+function showInfo()
+{
+	var url = "<?php echo $this->currentMenu['url']; ?>"; 
+	var currentTable = $('#currentTable').val();
+	var extType = $('#extType').val();
+	var isExt = $('#isExt').val();
+	var id = $('#id').val();
+	var extTime = $('#extTime').val();
+
+	url = url + '?table=' + currentTable + '&extType=' + extType + '&isExt=' + isExt + '&extTime=' + extTime + '&id=' + id; alert(url);
+	showDialog(url);
 }
 //-->
 </script>

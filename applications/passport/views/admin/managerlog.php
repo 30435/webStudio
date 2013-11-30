@@ -80,9 +80,6 @@
 .radio-label{ border-top:1px solid #e4e2e2; border-left:1px solid #e4e2e2}
 .radio-label td{ border-right:1px solid #e4e2e2; border-bottom:1px solid #e4e2e2;background:#f6f9fd}
 </style>
-<?php if ($this->noPriv) { ?>
-<h1>您没有查看该记录的权限</h1>
-<?php } else { ?>
 <div class="subnav">
 	<h2 class="title-1 line-x f14 fb blue lh28"><?php echo $this->logDescription; ?></h2>
 </div>
@@ -132,7 +129,6 @@
   <?php } ?>
   </div>
 </div>
-<?php } ?>
 <?php } ?>
 <script type="text/javascript">
 <!--
