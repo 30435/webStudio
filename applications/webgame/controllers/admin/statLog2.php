@@ -1,13 +1,15 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require_once __DIR__ . './statCommon.php';
+require_once __DIR__ . '/statCommon.php';
 class StatLog2 extends StatCommon
 {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->table = empty($this->input->get_post('table')) ? $this->controllerTables[$this->controller][0] : $this->input->get_post('table');
+
+		$table = $this->input->get_post('table');
+		$this->table = empty($table) ? $this->controllerTables[$this->controller][0] : $table;
 	}
 
 	public function composepet()
