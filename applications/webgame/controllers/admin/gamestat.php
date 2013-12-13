@@ -199,7 +199,9 @@ class Gamestat extends Custom_AdminController
 		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
 		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
 
-		$order = array_merge($order, array(array($timeField, 'desc')));
+		if ($this->table != 'big_count') {
+			$order = array_merge($order, array(array($timeField, 'desc')));
+		}
 		
 		$this->_paginationStr($urlStr);
 		return $order;
@@ -217,7 +219,7 @@ class Gamestat extends Custom_AdminController
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
 				foreach ($dateFields as $dateField) {
-					if (isset($info[$dateField])) {
+					if (isset($info[$dateField]) && $this->table != 'big_count') {
 						$info[$dateField] = date('Y-m-d H:i:s', $info[$dateField]);
 					}
 				}

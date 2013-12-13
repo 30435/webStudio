@@ -23,22 +23,32 @@ function orderField(field)
 }
 </script>
 <div class="table-list pad-lr-10">
-    <table width="100%" cellspacing="0" class="search-form">
+   
+<?php if (isset($this->showDetail)) { ?>
+	<h3><?php echo $this->currentInfo['insert_date']; ?> 信息汇总</h3>
+    <table width="100%" cellspacing="0">
       <tbody>
-		<tr>
-		<?php
-		if (in_array($this->controller, array('statLog1', 'statLog2', 'statLog3', 'statLog4'))) {
-			foreach ($this->controllerTables[$this->controller] as $keyTable) {
-				$fontStyle = $keyTable == $this->table ? ' style="font-size:18px;color:#009900;"' : '';
-				echo '<td><a ' . $fontStyle . ' href="' . $this->currentMenu['url'] . '?table=' . $keyTable . '">' . $keyTable . '</a></td>';
+		<?php 
+		$i = 0;
+		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
+			if ($keyField == 'id') {
+				continue;
 			}
+			
+			$nameField = empty($nameField) ? $keyField : $nameField;
+			$prefix = $i % 4 == 0 ? '<tr>' : '';
+			echo $prefix . '<th>' . $nameField . '</th>';
+			echo '<td align="center">' . $this->currentInfo[$keyField] . '</td>';
+			$suffix = $i % 4 == 3 ? '</tr>' : '';
+			echo $suffix;
+			$i++;
 		}
+		$tail = $i % 4 != 3 ? '</tr>' : '';
+		echo $tail;
 		?>
-		</tr>
       </tbody>
     </table>
-    
-	
+<?php } else { ?>
     <table width="100%" cellspacing="0" class="search-form">
       <tbody>
 		<tr>
@@ -67,8 +77,7 @@ function orderField(field)
 				minuteStep: 1,
 				onSelect   : function() {this.hide();}
 				});
-			</script>
-			查找指定用户：<input type="text" name="guid" value="" />				
+			</script>			
 			<input type="submit" value="搜索" class="button" name="search">
 	      </div>
 		  </td>
@@ -79,12 +88,12 @@ function orderField(field)
       </tbody>
     </table>
 
-    <table width="100%" cellspacing="0">
+    <table width="100%" cellspacing="0" style="display:none">
       <thead>
 		<tr>
 		<?php 
 		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
-			$nameField = empty($nameField) ? $keyField : $nameField . ' ( ' . $keyField . ' )';
+			$nameField = empty($nameField) ? $keyField : $nameField;
 			if (in_array($keyField, $this->orderFields)) {
 				$nameField = '<a style="color:#009900;" href="javascript: orderField(\'' . $keyField . '\');void(0);">' . $nameField . '</a>';
 			}
@@ -95,13 +104,40 @@ function orderField(field)
       </thead>
       <tbody>
 	  <?php if (is_array($this->infos) && !empty($this->infos)) { foreach ($this->infos as $info) { ?>
-        <tr>
+        <tr><a href="javascript: showInfo(); void(0);">
 		<?php foreach ($this->tableInfo['fields'] as $keyField => $nameField) { echo '<td align="center">' . $info[$keyField] . '</td>'; } ?>
-        </tr>
+        </a></tr>
       <?php } } ?>
       </tbody>
     </table>
+
+
+    <table width="100%" cellspacing="0">
+      <tbody>
+		<?php 
+		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
+			if ($keyField == 'id') {
+				continue;
+			}
+			$nameField = empty($nameField) ? $keyField : $nameField;
+			if (in_array($keyField, $this->orderFields)) {
+				$nameField = '<a href="javascript: orderField(\'' . $keyField . '\');void(0);">' . $nameField . '</a>';
+			}
+			echo '<tr><th>' . $nameField . '</th>';
+
+		    if (is_array($this->infos) && !empty($this->infos)) { 
+				foreach ($this->infos as $info) {
+					$value = $keyField == 'insert_date' ? '<a style="color:#009900;" href="javascript: showDetail(\'' .  $info['id'] . '\');void(0);">' . $info[$keyField] . '</a>' : $info[$keyField];
+					echo '<td align="center">' . $value . '</td>'; 
+				}
+			}
+			echo '</tr>';
+		}
+		?>
+      </tbody>
+    </table>
   <div id="pages"> <?php echo $this->pageStr; ?></div>
+<?php } ?>
 </div>
 
 <script type="text/javascript">
@@ -124,8 +160,19 @@ function showInfo()
 	var id = $('#id').val();
 	var extTime = $('#extTime').val();
 
-	url = url + '?table=' + currentTable + '&extType=' + extType + '&isExt=' + isExt + '&extTime=' + extTime + '&id=' + id; 
+	url = url + '?table=' + currentTable + '&extType=' + extType + '&isExt=' + isExt + '&extTime=' + extTime + '&id=' + id;
 	showDialog(url);
+}
+
+function showDetail(id)
+{
+	var url = "<?php echo $this->currentMenu['url']; ?>"; 
+
+	url = url + '?id=' + id; 
+	window.top.art.dialog({id:'show'}).close();
+	window.top.art.dialog({title:id + ' 信息汇总',id:'show',iframe: url,width:'900',height:'500'}, function(){
+		var d = window.top.art.dialog({id:'show'}).data.iframe;return false;
+	}, function(){window.top.art.dialog({id:'show'}).close()});
 }
 //-->
 </script>

@@ -28,6 +28,35 @@ class StatCommon extends Custom_AdminController
 		$this->tableExt = false;
 	}
 
+	public function createTableInfo()
+	{
+		$link = mysql_connect($this->currentModel->currentDb->hostname, $this->currentModel->currentDb->username, $this->currentModel->currentDb->password); //'nova_log', 'novadb521');
+
+		$tableInfos = array();
+		$sql = "SELECT * FROM `information_schema`.`tables`";
+		$result = mysql_query($sql);
+		while ($row = mysql_fetch_array($result)) {
+			if ($row['TABLE_SCHEMA'] == 'nova_log') {
+				$tableInfos[$row['TABLE_NAME']]['comment'] = $row['TABLE_COMMENT'];
+			}
+		}
+
+		$sql = "SELECT * FROM `information_schema`.`columns`";
+		$result = mysql_query($sql);
+		while ($row = mysql_fetch_array($result)) {
+			if ($row['TABLE_SCHEMA'] == 'nova_log') {
+				$tableInfos[$row['TABLE_NAME']]['fields'][$row['COLUMN_NAME']] = $row['COLUMN_COMMENT'];
+			}
+		}
+
+		$data = "<?php\nreturn " . var_export($tableInfos, true) . ";\n?>";
+
+		$bakSuffix = $this->userInfo['username'] . '-' . date('YmdHis', $this->time);
+		$bakFile = str_replace('tableInfo', 'tableInfo-' . $bakSuffix, $this->tableInfosFile);
+		copy($this->tableInfosFile, $bakFile);
+		$strlen = file_put_contents($this->tableInfosFile, $data);
+	}
+
 	public function indexbak()
 	{
 		$tableStructs = $this->currentModel->currentDb->from('columns')->get()->result_array();
@@ -242,7 +271,7 @@ class StatCommon extends Custom_AdminController
 			$urlStr .= '&orderField=' . $orderField . '&orderType=' . $orderType;
 		}
 		
-		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
+		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time', 'big_count' => 'insert_date', 't_pet_log' => 'insert_date');
 		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
 
 		$order = array_merge($order, array(array($timeField, 'desc')));

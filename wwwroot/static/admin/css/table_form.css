@@ -7,6 +7,7 @@ body fieldset.blue legend{padding:3px 8px;font-weight:700;color:#347add; backgro
 
 .table-list td,.table-list th{padding-left:12px}
 .table-list thead th{ height:30px; background:#eef3f7; border-bottom:1px solid #d5dfe8; font-weight:normal}
+.table-list tbody th{ height:30px; background:#eef3f7; border-bottom:1px solid #d5dfe8; font-weight:normal}
 .table-list tbody td,.table-list .btn{border-bottom: #eee 1px solid; padding-top:5px; padding-bottom:5px}
 div.btn{background:#f6f6f6; padding:6px 12px 0 12px; height:30px;line-height:30px}
 .table-list tr:hover,.table-list table tbody tr:hover{ background:#fbffe4}
