@@ -1,36 +1,32 @@
--- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: studio_ucserver
--- ------------------------------------------------------
--- Server version	5.6.11
+-- 主机: localhost
+-- 生成日期: 2013-12-27 10:34:11
+-- 服务器版本: 5.6.11
+-- PHP 版本: 5.5.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `studio_ucserver`
+-- 数据库: `studio_ucserver`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_ucserver` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
-USE `studio_ucserver`;
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_admins`
+-- 表的结构 `su_admins`
 --
 
-DROP TABLE IF EXISTS `su_admins`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_admins` (
+CREATE TABLE IF NOT EXISTS `su_admins` (
   `uid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `username` char(15) NOT NULL DEFAULT '',
   `allowadminsetting` tinyint(1) NOT NULL DEFAULT '0',
@@ -47,26 +43,15 @@ CREATE TABLE `su_admins` (
   `allowadminlog` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_admins`
+-- 表的结构 `su_applications`
 --
 
-LOCK TABLES `su_admins` WRITE;
-/*!40000 ALTER TABLE `su_admins` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_admins` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_applications`
---
-
-DROP TABLE IF EXISTS `su_applications`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_applications` (
+CREATE TABLE IF NOT EXISTS `su_applications` (
   `appid` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `type` varchar(16) NOT NULL DEFAULT '',
   `name` varchar(20) NOT NULL DEFAULT '',
@@ -83,27 +68,23 @@ CREATE TABLE `su_applications` (
   `tagtemplates` text NOT NULL,
   `allowips` text NOT NULL,
   PRIMARY KEY (`appid`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `su_applications`
+-- 转存表中的数据 `su_applications`
 --
 
-LOCK TABLES `su_applications` WRITE;
-/*!40000 ALTER TABLE `su_applications` DISABLE KEYS */;
-INSERT INTO `su_applications` VALUES (1,'DISCUZX','kids bbs!','http://bbs.kids.com','Lby2Abx741Fdl5qfk3m76f56aciae751n5408ef9Dc3a66EcJbje63rcG5U6WdW8','','','uc.php','utf-8','utf8',1,1,'','<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\r\n<root>\r\n	<item id=\"template\"><![CDATA[<a href=\"{url}\" target=\"_blank\">{subject}</a>]]></item>\r\n	<item id=\"fields\">\r\n		<item id=\"subject\"><![CDATA[标题]]></item>\r\n		<item id=\"uid\"><![CDATA[用户 ID]]></item>\r\n		<item id=\"username\"><![CDATA[发帖者]]></item>\r\n		<item id=\"dateline\"><![CDATA[日期]]></item>\r\n		<item id=\"url\"><![CDATA[主题地址]]></item>\r\n	</item>\r\n</root>',''),(2,'OTHER','ci平台','http://passport.kids.com/api/index','776frojkxvPD2dshIXcw2QwlldZca7ryEwZfw+dFQGRB9X4IcjSa','','','uc.php','','',1,1,'a:1:{s:7:\"apppath\";s:0:\"\";}','<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\r\n<root>\r\n	<item id=\"template\"><![CDATA[]]></item>\r\n</root>','');
-/*!40000 ALTER TABLE `su_applications` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_applications` (`appid`, `type`, `name`, `url`, `authkey`, `ip`, `viewprourl`, `apifilename`, `charset`, `dbcharset`, `synlogin`, `recvnote`, `extra`, `tagtemplates`, `allowips`) VALUES
+(1, 'DISCUZX', 'kids bbs!', 'http://bbs.kids.com', 'Lby2Abx741Fdl5qfk3m76f56aciae751n5408ef9Dc3a66EcJbje63rcG5U6WdW8', '', '', 'uc.php', 'utf-8', 'utf8', 1, 1, '', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="template"><![CDATA[<a href="{url}" target="_blank">{subject}</a>]]></item>\r\n	<item id="fields">\r\n		<item id="subject"><![CDATA[标题]]></item>\r\n		<item id="uid"><![CDATA[用户 ID]]></item>\r\n		<item id="username"><![CDATA[发帖者]]></item>\r\n		<item id="dateline"><![CDATA[日期]]></item>\r\n		<item id="url"><![CDATA[主题地址]]></item>\r\n	</item>\r\n</root>', ''),
+(2, 'OTHER', 'ci平台', 'http://passport.kids.com/api/index', '776frojkxvPD2dshIXcw2QwlldZca7ryEwZfw+dFQGRB9X4IcjSa', '', '', 'uc.php', '', '', 1, 1, 'a:1:{s:7:"apppath";s:0:"";}', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="template"><![CDATA[]]></item>\r\n</root>', '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_badwords`
+-- 表的结构 `su_badwords`
 --
 
-DROP TABLE IF EXISTS `su_badwords`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_badwords` (
+CREATE TABLE IF NOT EXISTS `su_badwords` (
   `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
   `admin` varchar(15) NOT NULL DEFAULT '',
   `find` varchar(255) NOT NULL DEFAULT '',
@@ -111,75 +92,48 @@ CREATE TABLE `su_badwords` (
   `findpattern` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `find` (`find`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_badwords`
+-- 表的结构 `su_domains`
 --
 
-LOCK TABLES `su_badwords` WRITE;
-/*!40000 ALTER TABLE `su_badwords` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_badwords` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_domains`
---
-
-DROP TABLE IF EXISTS `su_domains`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_domains` (
+CREATE TABLE IF NOT EXISTS `su_domains` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `domain` char(40) NOT NULL DEFAULT '',
   `ip` char(15) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_domains`
+-- 表的结构 `su_failedlogins`
 --
 
-LOCK TABLES `su_domains` WRITE;
-/*!40000 ALTER TABLE `su_domains` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_domains` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_failedlogins`
---
-
-DROP TABLE IF EXISTS `su_failedlogins`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_failedlogins` (
+CREATE TABLE IF NOT EXISTS `su_failedlogins` (
   `ip` char(15) NOT NULL DEFAULT '',
   `count` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `lastupdate` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `su_failedlogins`
+-- 转存表中的数据 `su_failedlogins`
 --
 
-LOCK TABLES `su_failedlogins` WRITE;
-/*!40000 ALTER TABLE `su_failedlogins` DISABLE KEYS */;
-INSERT INTO `su_failedlogins` VALUES ('127.0.0.1',4,1380275430);
-/*!40000 ALTER TABLE `su_failedlogins` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_failedlogins` (`ip`, `count`, `lastupdate`) VALUES
+('127.0.0.1', 1, 1382499658);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_feeds`
+-- 表的结构 `su_feeds`
 --
 
-DROP TABLE IF EXISTS `su_feeds`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_feeds` (
+CREATE TABLE IF NOT EXISTS `su_feeds` (
   `feedid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `appid` varchar(30) NOT NULL DEFAULT '',
   `icon` varchar(30) NOT NULL DEFAULT '',
@@ -204,26 +158,15 @@ CREATE TABLE `su_feeds` (
   `target_ids` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`feedid`),
   KEY `uid` (`uid`,`dateline`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_feeds`
+-- 表的结构 `su_friends`
 --
 
-LOCK TABLES `su_feeds` WRITE;
-/*!40000 ALTER TABLE `su_feeds` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_feeds` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_friends`
---
-
-DROP TABLE IF EXISTS `su_friends`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_friends` (
+CREATE TABLE IF NOT EXISTS `su_friends` (
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `friendid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `direction` tinyint(1) NOT NULL DEFAULT '0',
@@ -233,26 +176,15 @@ CREATE TABLE `su_friends` (
   PRIMARY KEY (`version`),
   KEY `uid` (`uid`),
   KEY `friendid` (`friendid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_friends`
+-- 表的结构 `su_mailqueue`
 --
 
-LOCK TABLES `su_friends` WRITE;
-/*!40000 ALTER TABLE `su_friends` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_friends` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_mailqueue`
---
-
-DROP TABLE IF EXISTS `su_mailqueue`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_mailqueue` (
+CREATE TABLE IF NOT EXISTS `su_mailqueue` (
   `mailid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `touid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `tomail` varchar(32) NOT NULL,
@@ -268,50 +200,52 @@ CREATE TABLE `su_mailqueue` (
   PRIMARY KEY (`mailid`),
   KEY `appid` (`appid`),
   KEY `level` (`level`,`failures`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_mailqueue`
+-- 表的结构 `su_memberfields`
 --
 
-LOCK TABLES `su_mailqueue` WRITE;
-/*!40000 ALTER TABLE `su_mailqueue` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_mailqueue` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_memberfields`
---
-
-DROP TABLE IF EXISTS `su_memberfields`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_memberfields` (
+CREATE TABLE IF NOT EXISTS `su_memberfields` (
   `uid` mediumint(8) unsigned NOT NULL,
   `blacklist` text NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `su_memberfields`
+-- 转存表中的数据 `su_memberfields`
 --
 
-LOCK TABLES `su_memberfields` WRITE;
-/*!40000 ALTER TABLE `su_memberfields` DISABLE KEYS */;
-INSERT INTO `su_memberfields` VALUES (1,''),(2,''),(3,''),(4,''),(5,''),(6,''),(7,''),(8,''),(9,''),(10,'');
-/*!40000 ALTER TABLE `su_memberfields` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_memberfields` (`uid`, `blacklist`) VALUES
+(1, ''),
+(1269, ''),
+(1270, ''),
+(1271, ''),
+(1272, ''),
+(1273, ''),
+(1274, ''),
+(1275, ''),
+(1276, ''),
+(1277, ''),
+(1278, ''),
+(1279, ''),
+(1280, ''),
+(1281, ''),
+(1282, ''),
+(1283, ''),
+(1284, ''),
+(1285, ''),
+(1286, '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_members`
+-- 表的结构 `su_members`
 --
 
-DROP TABLE IF EXISTS `su_members`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_members` (
+CREATE TABLE IF NOT EXISTS `su_members` (
   `uid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `username` char(15) NOT NULL DEFAULT '',
   `password` char(32) NOT NULL DEFAULT '',
@@ -327,72 +261,93 @@ CREATE TABLE `su_members` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`),
   KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1287 ;
 
 --
--- Dumping data for table `su_members`
+-- 转存表中的数据 `su_members`
 --
 
-LOCK TABLES `su_members` WRITE;
-/*!40000 ALTER TABLE `su_members` DISABLE KEYS */;
-INSERT INTO `su_members` VALUES (1,'13594205','bfa58fe222573b2e8b0df96e5b274578','','','','127.0.0.1',1381209133,0,0,'d08198',''),(2,'aaaaaa','4620e7c563671b9c6bb5b97a1b1746c6','','','','127.0.0.1',1381209218,0,0,'27faae',''),(3,'13638307','df19e6204123850860694a0e146b44d1','','','','127.0.0.1',1381209251,0,0,'37e378',''),(4,'15538984','ccd558775e536257de10d0ca0554df4d','','','','127.0.0.1',1381214448,0,0,'0e5bd7',''),(5,'16779997','fcde56eff7764aa2209daa6a9ffe5793','','','','127.0.0.1',1381214470,0,0,'6413e3',''),(6,'aaaaaaa','aeb2df31da7c59746c6db715236787c3','','','','127.0.0.1',1381214878,0,0,'e9f91a',''),(7,'18526822','7ddc40ce16a4f234ff0336fa8f08eecb','','','','127.0.0.1',1381214900,0,0,'4a6396',''),(8,'14408553','c7e84436fe0b1edded37cf0beb7c24e6','','','','127.0.0.1',1381215277,0,0,'d0d085',''),(9,'16462301','ac3f3f5ae5de854bc25dd10f5ae5151a','','','','127.0.0.1',1381218941,0,0,'d95e5e',''),(10,'19085843','29f66785876f0354fed21c06bd9c3220','','','','127.0.0.1',1381304884,0,0,'45e119','');
-/*!40000 ALTER TABLE `su_members` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_members` (`uid`, `username`, `password`, `email`, `myid`, `myidkey`, `regip`, `regdate`, `lastloginip`, `lastlogintime`, `salt`, `secques`) VALUES
+(1, 'kidsadmin1', '38e52520c7b3fd8990e142366771e2ed', 'aaaaaa@admin.com', '', '', '127.0.0.1', 1382499684, 0, 0, '212635', ''),
+(2, 'kidsadmin', '3daa74a676f1bd69b8e56ee708570ce1', '', '', '', '', 0, 0, 0, '135552', ''),
+(1240, '80000372', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1241, '80000373', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1242, '80000374', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1243, '80000375', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1244, '80000376', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1245, '80000377', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1246, '80000378', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1247, '80000379', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1248, '80000380', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1249, '80000381', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1250, '80000382', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1251, '80000383', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1252, '80000384', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1253, '80000385', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1254, '80000386', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1255, '80000387', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1256, '80000388', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1257, '80000389', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1258, '80000390', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1259, '80000391', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1260, '80000392', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1261, '80000393', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1262, '80000394', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1263, '80000395', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1264, '80000396', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1265, '80000397', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1266, '80000398', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1267, '80000399', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282544, 0, 0, '0e8c44', ''),
+(1268, '80000400', '31bd1a31fc5b48bc4ccc50871cf06b86', '', '', '', '', 1382282541, 0, 0, '0e8c44', ''),
+(1269, 'cccccc', '3f74eee9087dfafd763c5ac03d667efb', '', '', '', '127.0.0.1', 1382597684, 0, 0, '490eb6', ''),
+(1270, '18110861', '1769247dcc1cbfc43faaa6bb4b3e668a', '', '', '', '127.0.0.1', 1383043076, 0, 0, '4af195', ''),
+(1271, '12455107', '0950822aa827eef4f2940ec101c9d1b5', '', '', '', '127.0.0.1', 1383120780, 0, 0, 'c3953d', ''),
+(1272, '12543609', '38f38c06fc93ba83d40e5f9d831e1a51', '', '', '', '127.0.0.1', 1383121202, 0, 0, '22e5fb', ''),
+(1273, '18962868', '517afe1d9fdbd89a31d3ef613fb0465d', '', '', '', '127.0.0.1', 1383123311, 0, 0, 'f6b526', ''),
+(1274, '17183510', '7d0e9408aba67f0b7426986e5a515ccc', '', '', '', '127.0.0.1', 1383123989, 0, 0, '525ed9', ''),
+(1275, '19028947', '5ac3c0f93f04cdf56c075246fbfac629', '', '', '', '127.0.0.1', 1383207901, 0, 0, 'dde3f0', ''),
+(1276, '13594205', 'e826b2dc557af0bf95cb3b830f267aab', 'aaa@ddd.com', '', '', '127.0.0.1', 1383211577, 0, 0, '9d44c5', ''),
+(1277, '10884184', '4edcf7412bd13c662c1080d36d8c43a3', '', '', '', '127.0.0.1', 1383273858, 0, 0, '2368e6', ''),
+(1278, '13638307', 'd47f19c9030e4c4a517a2675cd45c4f7', '', '', '', '127.0.0.1', 1383535008, 0, 0, '09254e', ''),
+(1279, '15538984', 'a34da7e81a3e697415c5b4631e21116e', '', '', '', '127.0.0.1', 1383536721, 0, 0, '152639', ''),
+(1280, '16779997', 'a0b75b1f18e4b1a3d68173267933cc43', '', '', '', '127.0.0.1', 1383537088, 0, 0, '07e55a', ''),
+(1281, '17283036', 'e8b6338357b7994a3e57b1bde42793c0', '', '', '', '127.0.0.1', 1383537123, 0, 0, '3bae2b', ''),
+(1282, '16075186', 'fe67d762ad6e702bfd3972a7e278a1cd', '', '', '', '127.0.0.1', 1383644855, 0, 0, '80eb63', ''),
+(1283, '18526822', '64efdd29303ce16408d4bb9fab4d5f18', '', '', '', '127.0.0.1', 1383645116, 0, 0, 'c192dd', ''),
+(1284, '14408553', '2d43960c2138b40ab7564e2bda508379', '', '', '', '127.0.0.1', 1383645268, 0, 0, '4d70e7', ''),
+(1285, '16462301', 'e120f218d792faedf4d2b7530937df73', '', '', '', '127.0.0.1', 1383645380, 0, 0, '462b1a', ''),
+(1286, '19085843', '8188651049e41563a310748182d01e2c', '', '', '', '127.0.0.1', 1384321603, 0, 0, '321bbd', '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_mergemembers`
+-- 表的结构 `su_mergemembers`
 --
 
-DROP TABLE IF EXISTS `su_mergemembers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_mergemembers` (
+CREATE TABLE IF NOT EXISTS `su_mergemembers` (
   `appid` smallint(6) unsigned NOT NULL,
   `username` char(15) NOT NULL,
   PRIMARY KEY (`appid`,`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_mergemembers`
+-- 表的结构 `su_newpm`
 --
 
-LOCK TABLES `su_mergemembers` WRITE;
-/*!40000 ALTER TABLE `su_mergemembers` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_mergemembers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_newpm`
---
-
-DROP TABLE IF EXISTS `su_newpm`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_newpm` (
+CREATE TABLE IF NOT EXISTS `su_newpm` (
   `uid` mediumint(8) unsigned NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_newpm`
+-- 表的结构 `su_notelist`
 --
 
-LOCK TABLES `su_newpm` WRITE;
-/*!40000 ALTER TABLE `su_newpm` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_newpm` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_notelist`
---
-
-DROP TABLE IF EXISTS `su_notelist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_notelist` (
+CREATE TABLE IF NOT EXISTS `su_notelist` (
   `noteid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `operation` char(32) NOT NULL,
   `closed` tinyint(4) NOT NULL DEFAULT '0',
@@ -407,51 +362,52 @@ CREATE TABLE `su_notelist` (
   PRIMARY KEY (`noteid`),
   KEY `closed` (`closed`,`pri`,`noteid`),
   KEY `dateline` (`dateline`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
--- Dumping data for table `su_notelist`
+-- 转存表中的数据 `su_notelist`
 --
 
-LOCK TABLES `su_notelist` WRITE;
-/*!40000 ALTER TABLE `su_notelist` DISABLE KEYS */;
-INSERT INTO `su_notelist` VALUES (1,'updateapps',1,0,0,'','<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\r\n<root>\r\n	<item id=\"1\">\r\n		<item id=\"appid\"><![CDATA[1]]></item>\r\n		<item id=\"type\"><![CDATA[DISCUZX]]></item>\r\n		<item id=\"name\"><![CDATA[kids bbs!]]></item>\r\n		<item id=\"url\"><![CDATA[http://bbs.kids.com]]></item>\r\n		<item id=\"ip\"><![CDATA[]]></item>\r\n		<item id=\"charset\"><![CDATA[utf-8]]></item>\r\n		<item id=\"synlogin\"><![CDATA[1]]></item>\r\n		<item id=\"extra\"><![CDATA[]]></item>\r\n	</item>\r\n	<item id=\"UC_API\"><![CDATA[http://ucserver.kids.com]]></item>\r\n</root>',0,0,0,0),(2,'updatepw',1,1,1,'username=aaaaaaaa&password=','',1378362370,0,1,0),(3,'updatepw',1,1,1,'username=aaaaaaaa&password=','',1378362371,0,1,0),(4,'updatepw',1,1,1,'username=bbbbbb&password=','',1378362371,0,1,0),(5,'updateapps',1,1,1,'','<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\r\n<root>\r\n	<item id=\"1\">\r\n		<item id=\"appid\"><![CDATA[1]]></item>\r\n		<item id=\"type\"><![CDATA[DISCUZX]]></item>\r\n		<item id=\"name\"><![CDATA[kids bbs!]]></item>\r\n		<item id=\"url\"><![CDATA[http://bbs.kids.com]]></item>\r\n		<item id=\"ip\"><![CDATA[]]></item>\r\n		<item id=\"viewprourl\"><![CDATA[]]></item>\r\n		<item id=\"apifilename\"><![CDATA[uc.php]]></item>\r\n		<item id=\"charset\"><![CDATA[utf-8]]></item>\r\n		<item id=\"synlogin\"><![CDATA[1]]></item>\r\n		<item id=\"extra\"><![CDATA[]]></item>\r\n		<item id=\"recvnote\"><![CDATA[1]]></item>\r\n	</item>\r\n	<item id=\"2\">\r\n		<item id=\"appid\"><![CDATA[2]]></item>\r\n		<item id=\"type\"><![CDATA[OTHER]]></item>\r\n		<item id=\"name\"><![CDATA[ci平台]]></item>\r\n		<item id=\"url\"><![CDATA[http://passport.kids.com/api/index]]></item>\r\n		<item id=\"ip\"><![CDATA[]]></item>\r\n		<item id=\"viewprourl\"><![CDATA[]]></item>\r\n		<item id=\"apifilename\"><![CDATA[uc.php]]></item>\r\n		<item id=\"charset\"><![CDATA[]]></item>\r\n		<item id=\"synlogin\"><![CDATA[1]]></item>\r\n		<item id=\"extra\">\r\n			<item id=\"apppath\"><![CDATA[]]></item>\r\n		</item>\r\n		<item id=\"recvnote\"><![CDATA[1]]></item>\r\n	</item>\r\n	<item id=\"UC_API\"><![CDATA[http://ucserver.kids.com]]></item>\r\n</root>',1378362488,0,1,0),(6,'updatepw',0,5,0,'username=cccccc&password=','',1378362832,0,0,-5),(7,'updatepw',0,5,0,'username=cccccc&password=','',1378362967,0,0,-5),(8,'updatepw',0,5,0,'username=cccccc&password=','',1378363099,0,0,-5),(9,'updatepw',0,2,0,'username=cccccc&password=','',1378366478,0,0,-2),(10,'updatepw',0,0,0,'username=cccccc&password=','',0,0,0,0);
-/*!40000 ALTER TABLE `su_notelist` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_notelist` (`noteid`, `operation`, `closed`, `totalnum`, `succeednum`, `getdata`, `postdata`, `dateline`, `pri`, `app1`, `app2`) VALUES
+(1, 'updateapps', 1, 0, 0, '', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="1">\r\n		<item id="appid"><![CDATA[1]]></item>\r\n		<item id="type"><![CDATA[DISCUZX]]></item>\r\n		<item id="name"><![CDATA[kids bbs!]]></item>\r\n		<item id="url"><![CDATA[http://bbs.kids.com]]></item>\r\n		<item id="ip"><![CDATA[]]></item>\r\n		<item id="charset"><![CDATA[utf-8]]></item>\r\n		<item id="synlogin"><![CDATA[1]]></item>\r\n		<item id="extra"><![CDATA[]]></item>\r\n	</item>\r\n	<item id="UC_API"><![CDATA[http://ucserver.kids.com]]></item>\r\n</root>', 0, 0, 0, 0),
+(2, 'updatepw', 1, 1, 1, 'username=aaaaaaaa&password=', '', 1378362370, 0, 1, 0),
+(3, 'updatepw', 1, 1, 1, 'username=aaaaaaaa&password=', '', 1378362371, 0, 1, 0),
+(4, 'updatepw', 1, 1, 1, 'username=bbbbbb&password=', '', 1378362371, 0, 1, 0),
+(5, 'updateapps', 1, 1, 1, '', '<?xml version="1.0" encoding="ISO-8859-1"?>\r\n<root>\r\n	<item id="1">\r\n		<item id="appid"><![CDATA[1]]></item>\r\n		<item id="type"><![CDATA[DISCUZX]]></item>\r\n		<item id="name"><![CDATA[kids bbs!]]></item>\r\n		<item id="url"><![CDATA[http://bbs.kids.com]]></item>\r\n		<item id="ip"><![CDATA[]]></item>\r\n		<item id="viewprourl"><![CDATA[]]></item>\r\n		<item id="apifilename"><![CDATA[uc.php]]></item>\r\n		<item id="charset"><![CDATA[utf-8]]></item>\r\n		<item id="synlogin"><![CDATA[1]]></item>\r\n		<item id="extra"><![CDATA[]]></item>\r\n		<item id="recvnote"><![CDATA[1]]></item>\r\n	</item>\r\n	<item id="2">\r\n		<item id="appid"><![CDATA[2]]></item>\r\n		<item id="type"><![CDATA[OTHER]]></item>\r\n		<item id="name"><![CDATA[ci平台]]></item>\r\n		<item id="url"><![CDATA[http://passport.kids.com/api/index]]></item>\r\n		<item id="ip"><![CDATA[]]></item>\r\n		<item id="viewprourl"><![CDATA[]]></item>\r\n		<item id="apifilename"><![CDATA[uc.php]]></item>\r\n		<item id="charset"><![CDATA[]]></item>\r\n		<item id="synlogin"><![CDATA[1]]></item>\r\n		<item id="extra">\r\n			<item id="apppath"><![CDATA[]]></item>\r\n		</item>\r\n		<item id="recvnote"><![CDATA[1]]></item>\r\n	</item>\r\n	<item id="UC_API"><![CDATA[http://ucserver.kids.com]]></item>\r\n</root>', 1378362488, 0, 1, 0),
+(6, 'updatepw', 1, 10, 0, 'username=cccccc&password=', '', 1385344429, 0, -5, -5),
+(7, 'updatepw', 1, 10, 0, 'username=cccccc&password=', '', 1385344998, 0, -5, -5),
+(8, 'updatepw', 0, 10, 0, 'username=cccccc&password=', '', 1385345086, 0, -5, -5),
+(9, 'updatepw', 1, 10, 0, 'username=cccccc&password=', '', 1385345142, 0, -5, -5),
+(10, 'updatepw', 0, 8, 0, 'username=cccccc&password=', '', 1385345179, 0, -3, -5),
+(11, 'updatepw', 0, 4, 0, 'username=aaaaaa&password=', '', 1383124696, 0, 0, -4),
+(12, 'updatepw', 0, 0, 0, 'username=cccccc&password=', '', 0, 0, 0, 0),
+(13, 'updatepw', 0, 0, 0, 'username=aaaaaa&password=', '', 0, 0, 0, 0),
+(14, 'renameuser', 0, 0, 0, 'uid=1&oldusername=aaaaaa&newusername=kidsadmin', '', 0, 0, 0, 0),
+(15, 'updatepw', 0, 0, 0, 'username=aaaaaa&password=', '', 0, 0, 0, 0),
+(16, 'renameuser', 0, 0, 0, 'uid=1&oldusername=kidsadmin&newusername=kidsadmin1', '', 0, 0, 0, 0),
+(17, 'renameuser', 0, 0, 0, 'uid=2&oldusername=bbbbbb&newusername=kidsadmin', '', 0, 0, 0, 0),
+(18, 'updatepw', 0, 0, 0, 'username=bbbbbb&password=', '', 0, 0, 0, 0);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_pm_indexes`
+-- 表的结构 `su_pm_indexes`
 --
 
-DROP TABLE IF EXISTS `su_pm_indexes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_indexes` (
+CREATE TABLE IF NOT EXISTS `su_pm_indexes` (
   `pmid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`pmid`),
   KEY `plid` (`plid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_indexes`
+-- 表的结构 `su_pm_lists`
 --
 
-LOCK TABLES `su_pm_indexes` WRITE;
-/*!40000 ALTER TABLE `su_pm_indexes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_indexes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_lists`
---
-
-DROP TABLE IF EXISTS `su_pm_lists`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_lists` (
+CREATE TABLE IF NOT EXISTS `su_pm_lists` (
   `plid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `pmtype` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -464,26 +420,15 @@ CREATE TABLE `su_pm_lists` (
   KEY `pmtype` (`pmtype`),
   KEY `min_max` (`min_max`),
   KEY `authorid` (`authorid`,`dateline`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_lists`
+-- 表的结构 `su_pm_members`
 --
 
-LOCK TABLES `su_pm_lists` WRITE;
-/*!40000 ALTER TABLE `su_pm_lists` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_lists` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_members`
---
-
-DROP TABLE IF EXISTS `su_pm_members`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_members` (
+CREATE TABLE IF NOT EXISTS `su_pm_members` (
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `isnew` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -495,25 +440,14 @@ CREATE TABLE `su_pm_members` (
   KEY `lastdateline` (`uid`,`lastdateline`),
   KEY `lastupdate` (`uid`,`lastupdate`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_members`
+-- 表的结构 `su_pm_messages_0`
 --
 
-LOCK TABLES `su_pm_members` WRITE;
-/*!40000 ALTER TABLE `su_pm_members` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_members` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_0`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_0`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_0` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_0` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -524,25 +458,14 @@ CREATE TABLE `su_pm_messages_0` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_0`
+-- 表的结构 `su_pm_messages_1`
 --
 
-LOCK TABLES `su_pm_messages_0` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_0` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_0` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_1`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_1`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_1` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_1` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -553,25 +476,14 @@ CREATE TABLE `su_pm_messages_1` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_1`
+-- 表的结构 `su_pm_messages_2`
 --
 
-LOCK TABLES `su_pm_messages_1` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_1` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_1` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_2`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_2`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_2` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_2` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -582,25 +494,14 @@ CREATE TABLE `su_pm_messages_2` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_2`
+-- 表的结构 `su_pm_messages_3`
 --
 
-LOCK TABLES `su_pm_messages_2` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_2` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_2` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_3`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_3`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_3` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_3` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -611,25 +512,14 @@ CREATE TABLE `su_pm_messages_3` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_3`
+-- 表的结构 `su_pm_messages_4`
 --
 
-LOCK TABLES `su_pm_messages_3` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_3` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_3` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_4`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_4`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_4` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_4` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -640,25 +530,14 @@ CREATE TABLE `su_pm_messages_4` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_4`
+-- 表的结构 `su_pm_messages_5`
 --
 
-LOCK TABLES `su_pm_messages_4` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_4` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_4` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_5`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_5`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_5` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_5` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -669,25 +548,14 @@ CREATE TABLE `su_pm_messages_5` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_5`
+-- 表的结构 `su_pm_messages_6`
 --
 
-LOCK TABLES `su_pm_messages_5` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_5` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_5` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_6`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_6`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_6` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_6` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -698,25 +566,14 @@ CREATE TABLE `su_pm_messages_6` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_6`
+-- 表的结构 `su_pm_messages_7`
 --
 
-LOCK TABLES `su_pm_messages_6` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_6` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_6` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_7`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_7`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_7` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_7` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -727,25 +584,14 @@ CREATE TABLE `su_pm_messages_7` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_7`
+-- 表的结构 `su_pm_messages_8`
 --
 
-LOCK TABLES `su_pm_messages_7` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_7` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_7` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_8`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_8`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_8` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_8` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -756,25 +602,14 @@ CREATE TABLE `su_pm_messages_8` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_8`
+-- 表的结构 `su_pm_messages_9`
 --
 
-LOCK TABLES `su_pm_messages_8` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_8` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_8` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_pm_messages_9`
---
-
-DROP TABLE IF EXISTS `su_pm_messages_9`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_pm_messages_9` (
+CREATE TABLE IF NOT EXISTS `su_pm_messages_9` (
   `pmid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `plid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `authorid` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -785,25 +620,14 @@ CREATE TABLE `su_pm_messages_9` (
   KEY `plid` (`plid`,`delstatus`,`dateline`),
   KEY `dateline` (`plid`,`dateline`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_pm_messages_9`
+-- 表的结构 `su_protectedmembers`
 --
 
-LOCK TABLES `su_pm_messages_9` WRITE;
-/*!40000 ALTER TABLE `su_pm_messages_9` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_pm_messages_9` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_protectedmembers`
---
-
-DROP TABLE IF EXISTS `su_protectedmembers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_protectedmembers` (
+CREATE TABLE IF NOT EXISTS `su_protectedmembers` (
   `uid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `username` char(15) NOT NULL DEFAULT '',
   `appid` tinyint(1) unsigned NOT NULL DEFAULT '0',
@@ -811,122 +635,98 @@ CREATE TABLE `su_protectedmembers` (
   `admin` char(15) NOT NULL DEFAULT '0',
   UNIQUE KEY `username` (`username`,`appid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `su_protectedmembers`
+-- 转存表中的数据 `su_protectedmembers`
 --
 
-LOCK TABLES `su_protectedmembers` WRITE;
-/*!40000 ALTER TABLE `su_protectedmembers` DISABLE KEYS */;
-INSERT INTO `su_protectedmembers` VALUES (2,'kidsadmin',0,1377851696,'');
-/*!40000 ALTER TABLE `su_protectedmembers` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_protectedmembers` (`uid`, `username`, `appid`, `dateline`, `admin`) VALUES
+(2, 'kidsadmin', 0, 1377851696, '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_settings`
+-- 表的结构 `su_settings`
 --
 
-DROP TABLE IF EXISTS `su_settings`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_settings` (
+CREATE TABLE IF NOT EXISTS `su_settings` (
   `k` varchar(32) NOT NULL DEFAULT '',
   `v` text NOT NULL,
   PRIMARY KEY (`k`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `su_settings`
+-- 转存表中的数据 `su_settings`
 --
 
-LOCK TABLES `su_settings` WRITE;
-/*!40000 ALTER TABLE `su_settings` DISABLE KEYS */;
-INSERT INTO `su_settings` VALUES ('accessemail',''),('censoremail',''),('censorusername',''),('dateformat','y-n-j'),('doublee','0'),('nextnotetime','0'),('timeoffset','28800'),('privatepmthreadlimit','25'),('chatpmthreadlimit','30'),('chatpmmemberlimit','35'),('pmfloodctrl','15'),('pmcenter','1'),('sendpmseccode','1'),('pmsendregdays','0'),('maildefault','username@21cn.com'),('mailsend','1'),('mailserver','smtp.21cn.com'),('mailport','25'),('mailauth','1'),('mailfrom','UCenter <username@21cn.com>'),('mailauth_username','username@21cn.com'),('mailauth_password','password'),('maildelimiter','0'),('mailusername','1'),('mailsilent','1'),('version','1.6.0');
-/*!40000 ALTER TABLE `su_settings` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `su_settings` (`k`, `v`) VALUES
+('accessemail', ''),
+('censoremail', ''),
+('censorusername', ''),
+('dateformat', 'y-n-j'),
+('doublee', '0'),
+('nextnotetime', '0'),
+('timeoffset', '28800'),
+('privatepmthreadlimit', '25'),
+('chatpmthreadlimit', '30'),
+('chatpmmemberlimit', '35'),
+('pmfloodctrl', '15'),
+('pmcenter', '1'),
+('sendpmseccode', '1'),
+('pmsendregdays', '0'),
+('maildefault', 'username@21cn.com'),
+('mailsend', '1'),
+('mailserver', 'smtp.21cn.com'),
+('mailport', '25'),
+('mailauth', '1'),
+('mailfrom', 'UCenter <username@21cn.com>'),
+('mailauth_username', 'username@21cn.com'),
+('mailauth_password', 'password'),
+('maildelimiter', '0'),
+('mailusername', '1'),
+('mailsilent', '1'),
+('version', '1.6.0');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `su_sqlcache`
+-- 表的结构 `su_sqlcache`
 --
 
-DROP TABLE IF EXISTS `su_sqlcache`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_sqlcache` (
+CREATE TABLE IF NOT EXISTS `su_sqlcache` (
   `sqlid` char(6) NOT NULL DEFAULT '',
   `data` char(100) NOT NULL,
   `expiry` int(10) unsigned NOT NULL,
   PRIMARY KEY (`sqlid`),
   KEY `expiry` (`expiry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_sqlcache`
+-- 表的结构 `su_tags`
 --
 
-LOCK TABLES `su_sqlcache` WRITE;
-/*!40000 ALTER TABLE `su_sqlcache` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_sqlcache` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_tags`
---
-
-DROP TABLE IF EXISTS `su_tags`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_tags` (
+CREATE TABLE IF NOT EXISTS `su_tags` (
   `tagname` char(20) NOT NULL,
   `appid` smallint(6) unsigned NOT NULL DEFAULT '0',
   `data` mediumtext,
   `expiration` int(10) unsigned NOT NULL,
   KEY `tagname` (`tagname`,`appid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `su_tags`
+-- 表的结构 `su_vars`
 --
 
-LOCK TABLES `su_tags` WRITE;
-/*!40000 ALTER TABLE `su_tags` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_tags` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `su_vars`
---
-
-DROP TABLE IF EXISTS `su_vars`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `su_vars` (
+CREATE TABLE IF NOT EXISTS `su_vars` (
   `name` char(32) NOT NULL DEFAULT '',
   `value` char(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`name`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `su_vars`
---
-
-LOCK TABLES `su_vars` WRITE;
-/*!40000 ALTER TABLE `su_vars` DISABLE KEYS */;
-/*!40000 ALTER TABLE `su_vars` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2013-10-10 19:53:15

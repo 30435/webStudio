@@ -1,36 +1,32 @@
--- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: studio_spider
--- ------------------------------------------------------
--- Server version	5.6.11
+-- 主机: localhost
+-- 生成日期: 2013-12-27 10:33:50
+-- 服务器版本: 5.6.11
+-- PHP 版本: 5.5.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `studio_spider`
+-- 数据库: `studio_spider`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_spider` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
-USE `studio_spider`;
+-- --------------------------------------------------------
 
 --
--- Table structure for table `ss_content`
+-- 表的结构 `ss_content`
 --
 
-DROP TABLE IF EXISTS `ss_content`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_content` (
+CREATE TABLE IF NOT EXISTS `ss_content` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `job_id` int(4) NOT NULL,
   `content_key` char(32) NOT NULL,
@@ -58,26 +54,15 @@ CREATE TABLE `ss_content` (
   UNIQUE KEY `content_key` (`content_key`),
   KEY `title` (`title`),
   KEY `gpage` (`job_id`,`status`,`gpage_num`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_content`
+-- 表的结构 `ss_content_result`
 --
 
-LOCK TABLES `ss_content` WRITE;
-/*!40000 ALTER TABLE `ss_content` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_content` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_content_result`
---
-
-DROP TABLE IF EXISTS `ss_content_result`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_content_result` (
+CREATE TABLE IF NOT EXISTS `ss_content_result` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `listpage_num` int(8) NOT NULL,
   `listpage_num_valid` int(8) NOT NULL,
@@ -97,26 +82,15 @@ CREATE TABLE `ss_content_result` (
   `publish_num_valid` int(8) NOT NULL,
   `date` int(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_content_result`
+-- 表的结构 `ss_crule`
 --
 
-LOCK TABLES `ss_content_result` WRITE;
-/*!40000 ALTER TABLE `ss_content_result` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_content_result` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_crule`
---
-
-DROP TABLE IF EXISTS `ss_crule`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_crule` (
+CREATE TABLE IF NOT EXISTS `ss_crule` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `site_id` int(8) NOT NULL DEFAULT '0',
   `name` varchar(100) NOT NULL DEFAULT '',
@@ -128,26 +102,15 @@ CREATE TABLE `ss_crule` (
   `replace_source` varchar(2500) NOT NULL,
   `replace_target` varchar(2500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_crule`
+-- 表的结构 `ss_file`
 --
 
-LOCK TABLES `ss_crule` WRITE;
-/*!40000 ALTER TABLE `ss_crule` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_crule` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_file`
---
-
-DROP TABLE IF EXISTS `ss_file`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_file` (
+CREATE TABLE IF NOT EXISTS `ss_file` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `file_key` char(40) NOT NULL,
   `remote_url` varchar(200) NOT NULL,
@@ -158,26 +121,15 @@ CREATE TABLE `ss_file` (
   `type` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `remote_url` (`remote_url`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_file`
+-- 表的结构 `ss_job`
 --
 
-LOCK TABLES `ss_file` WRITE;
-/*!40000 ALTER TABLE `ss_file` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_file` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_job`
---
-
-DROP TABLE IF EXISTS `ss_job`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_job` (
+CREATE TABLE IF NOT EXISTS `ss_job` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `site_id` varchar(30) NOT NULL DEFAULT '0',
   `crule_id` varchar(20) NOT NULL DEFAULT '0',
@@ -190,26 +142,15 @@ CREATE TABLE `ss_job` (
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_job`
+-- 表的结构 `ss_job_result`
 --
 
-LOCK TABLES `ss_job` WRITE;
-/*!40000 ALTER TABLE `ss_job` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_job` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_job_result`
---
-
-DROP TABLE IF EXISTS `ss_job_result`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_job_result` (
+CREATE TABLE IF NOT EXISTS `ss_job_result` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `job_id` int(4) NOT NULL,
   `listpage_num` int(8) NOT NULL,
@@ -230,26 +171,15 @@ CREATE TABLE `ss_job_result` (
   `publish_num_valid` int(8) NOT NULL,
   `date` int(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_job_result`
+-- 表的结构 `ss_list`
 --
 
-LOCK TABLES `ss_job_result` WRITE;
-/*!40000 ALTER TABLE `ss_job_result` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_job_result` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_list`
---
-
-DROP TABLE IF EXISTS `ss_list`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_list` (
+CREATE TABLE IF NOT EXISTS `ss_list` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `job_id` int(8) NOT NULL,
   `base_file` char(36) NOT NULL,
@@ -258,26 +188,15 @@ CREATE TABLE `ss_list` (
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `glist` (`job_id`,`status`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_list`
+-- 表的结构 `ss_result_total`
 --
 
-LOCK TABLES `ss_list` WRITE;
-/*!40000 ALTER TABLE `ss_list` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_list` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_result_total`
---
-
-DROP TABLE IF EXISTS `ss_result_total`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_result_total` (
+CREATE TABLE IF NOT EXISTS `ss_result_total` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `job_id` int(4) NOT NULL,
   `listpage_num` int(8) NOT NULL,
@@ -298,52 +217,38 @@ CREATE TABLE `ss_result_total` (
   `publish_num_valid` int(8) NOT NULL,
   `date` int(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_result_total`
+-- 表的结构 `ss_site`
 --
 
-LOCK TABLES `ss_result_total` WRITE;
-/*!40000 ALTER TABLE `ss_result_total` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_result_total` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_site`
---
-
-DROP TABLE IF EXISTS `ss_site`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_site` (
+CREATE TABLE IF NOT EXISTS `ss_site` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
   `siteurl` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `ss_site`
+-- 转存表中的数据 `ss_site`
 --
 
-LOCK TABLES `ss_site` WRITE;
-/*!40000 ALTER TABLE `ss_site` DISABLE KEYS */;
-INSERT INTO `ss_site` VALUES (1,'4399网页游戏','http://web.4399.com/'),(2,'淘米游戏','http://game.61.com/'),(3,'淘米平台','http://web.2125.com/');
-/*!40000 ALTER TABLE `ss_site` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `ss_site` (`id`, `name`, `siteurl`) VALUES
+(1, '4399网页游戏', 'http://web.4399.com/'),
+(2, '淘米游戏', 'http://game.61.com/'),
+(3, '淘米平台', 'http://web.2125.com/');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `ss_site_file`
+-- 表的结构 `ss_site_file`
 --
 
-DROP TABLE IF EXISTS `ss_site_file`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_site_file` (
+CREATE TABLE IF NOT EXISTS `ss_site_file` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '资源ID',
   `site_id` smallint(5) unsigned NOT NULL COMMENT '资源所属站点',
   `page_id` smallint(5) unsigned NOT NULL COMMENT '资源所属站点',
@@ -355,53 +260,44 @@ CREATE TABLE `ss_site_file` (
   `downtime` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `urlfull` (`urlfull`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ss_site_file`
+-- 表的结构 `ss_site_page`
 --
 
-LOCK TABLES `ss_site_file` WRITE;
-/*!40000 ALTER TABLE `ss_site_file` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_site_file` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ss_site_page`
---
-
-DROP TABLE IF EXISTS `ss_site_page`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_site_page` (
+CREATE TABLE IF NOT EXISTS `ss_site_page` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '页面ID',
   `site_id` smallint(5) unsigned NOT NULL COMMENT '页面所属站点',
   `name` varchar(30) NOT NULL COMMENT '页面名称',
   `pageurl` varchar(100) NOT NULL COMMENT '页面源地址',
   `baseurl` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `ss_site_page`
+-- 转存表中的数据 `ss_site_page`
 --
 
-LOCK TABLES `ss_site_page` WRITE;
-/*!40000 ALTER TABLE `ss_site_page` DISABLE KEYS */;
-INSERT INTO `ss_site_page` VALUES (1,1,'web4399首页','http://web.4399.com/','http://web.4399.com/'),(2,1,'web3499样式header','http://web.4399.com/css/header.css','http://web.4399.com/'),(3,1,'web4399样式topnavcss','http://web.4399.com/css/topnavcss.css','http://web.4399.com/'),(4,1,'web4399样式loft_new','http://web.4399.com/css/left_new.css','http://web.4399.com/'),(5,1,'web3499样式main_new','http://web.4399.com/css/main_new.css','http://web.4399.com/'),(6,2,'淘米游戏首页','http://game.61.com/','http://game.61.com/'),(7,3,'淘米平台首页','http://web.2125.com/','http://web.2125.com/'),(8,3,'淘米注册页','http://account.61.com/register','http://web.2125.com/');
-/*!40000 ALTER TABLE `ss_site_page` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `ss_site_page` (`id`, `site_id`, `name`, `pageurl`, `baseurl`) VALUES
+(1, 1, 'web4399首页', 'http://web.4399.com/', 'http://web.4399.com/'),
+(2, 1, 'web3499样式header', 'http://web.4399.com/css/header.css', 'http://web.4399.com/'),
+(3, 1, 'web4399样式topnavcss', 'http://web.4399.com/css/topnavcss.css', 'http://web.4399.com/'),
+(4, 1, 'web4399样式loft_new', 'http://web.4399.com/css/left_new.css', 'http://web.4399.com/'),
+(5, 1, 'web3499样式main_new', 'http://web.4399.com/css/main_new.css', 'http://web.4399.com/'),
+(6, 2, '淘米游戏首页', 'http://game.61.com/', 'http://game.61.com/'),
+(7, 3, '淘米平台首页', 'http://web.2125.com/', 'http://web.2125.com/'),
+(8, 3, '淘米注册页', 'http://account.61.com/register', 'http://web.2125.com/');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `ss_site_result`
+-- 表的结构 `ss_site_result`
 --
 
-DROP TABLE IF EXISTS `ss_site_result`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ss_site_result` (
+CREATE TABLE IF NOT EXISTS `ss_site_result` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `site_id` int(4) NOT NULL,
   `listpage_num` int(8) NOT NULL,
@@ -422,25 +318,8 @@ CREATE TABLE `ss_site_result` (
   `publish_num_valid` int(8) NOT NULL,
   `date` int(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `ss_site_result`
---
-
-LOCK TABLES `ss_site_result` WRITE;
-/*!40000 ALTER TABLE `ss_site_result` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ss_site_result` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2013-10-10 19:53:14

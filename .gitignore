@@ -22,5 +22,6 @@ wwwroot/bbs/uc_server/data/
 wwwroot/bbs/uc_client/data/
 wwwroot/uploadfile/
 *.svn
+*.swp
 wwwroot/webgame/*.html
 /applications/movie/config/config.php

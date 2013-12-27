@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-10-16 18:09:40
--- 服务器版本: 5.5.27
--- PHP 版本: 5.4.7
+-- 生成日期: 2013-12-27 10:32:14
+-- 服务器版本: 5.6.11
+-- PHP 版本: 5.5.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -41,14 +41,43 @@ CREATE TABLE IF NOT EXISTS `sb_book` (
   `is_publish` enum('1','0') NOT NULL COMMENT '是否出版，1：出版，0：未出版',
   PRIMARY KEY (`id`),
   UNIQUE KEY `code` (`code`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- 转存表中的数据 `sb_book`
 --
 
 INSERT INTO `sb_book` (`id`, `code`, `name`, `author`, `listorder`, `positions`, `description`, `type`, `fcover_small`, `fcover`, `num_words`, `is_publish`) VALUES
-(1, 'lxnahan', '呐喊', '鲁迅', 0, '0', '', 0, '', '', 0, '1');
+(1, 'lxnahan', '呐喊', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/nahan.jpg', 'http://upload.91zuiai.com/bookbar/lx/nahan.jpg', 0, '1'),
+(2, 'lxpangh', '彷徨', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 0, '1'),
+(3, 'lxgushixb', '故事新编', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(4, 'lxzhaohxs', '朝花夕拾', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(5, 'lxyec', '野草', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 0, '1'),
+(6, 'lxfen', '坟', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(7, 'lxrefeng', '热风', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(8, 'lxhuagj', '华盖集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 0, '1'),
+(9, 'lxzhunfyt', '准风月谈', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(10, 'lxeryj', '而已集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(11, 'lxerxj', '二心集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 0, '1'),
+(12, 'lxnanqbd', '南腔北调集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(13, 'lxqjt', '且介亭杂文', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(14, 'lxhuagjxb', '华盖集续编', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(15, 'lxweizys', '伪自由书', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(16, 'lxhuab', '花边文学', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 0, '1'),
+(17, 'lxqjt2', '且介亭杂文二集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(18, 'lxqjt3', '且介亭杂文末编', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(19, 'lxsanxj', '三闲集', '鲁迅', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(20, 'xifzxs', '西方哲学史', '罗素', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/nahan.jpg', 'http://upload.91zuiai.com/bookbar/lx/nahan.jpg', 0, '1'),
+(21, 'zhonggzxjs', '中国哲学简史', '冯友兰', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 0, '1'),
+(22, 'quanqts', '全球通史', '斯塔夫里阿诺斯', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(23, 'zhexwt', '哲学问题', '罗素', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(24, 'shouyr', '中国文化的守夜人', '王得后', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 0, '1'),
+(25, 'kafk', '卡发卡小说集', '卡夫卡', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(26, 'honglm', '红楼梦', '曹雪芹', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(27, 'gaolt', '高老头', '巴尔扎克', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 'http://upload.91zuiai.com/bookbar/lx/panghuang.jpg', 0, '1'),
+(28, 'leiy', '雷雨', '曹禺', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 'http://upload.91zuiai.com/bookbar/lx/gushixinbian.jpg', 0, '1'),
+(29, 'guwgz', '古文观止', '古人', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 'http://upload.91zuiai.com/bookbar/lx/zhaohuaxishi.jpg', 0, '1'),
+(30, 'zhouy', '周易', '圣人', 0, '0', '', 0, 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 'http://upload.91zuiai.com/bookbar/lx/yecao.jpg', 0, '1');
 
 -- --------------------------------------------------------
 

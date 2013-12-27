@@ -90,7 +90,7 @@ class statDay extends StatCommon
 		} else {
 			$this->showDetail = true; 
 				$this->currentInfo['day_transformation'] = empty($this->currentInfo['register_plat_day_count']) ? 0 : round($this->currentInfo['register_nova_day_count'] / $this->currentInfo['register_plat_day_count'], 3) * 100 . '%';
-				$this->currentInfo['join_battle_count_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['join_battle_count'] / $this->currentInfo['login_nova_count'], 3) * 100 . '%';
+				$this->currentInfo['join_battle_count_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['battle_day_count'] / $this->currentInfo['login_nova_count'], 3);
 			    $this->currentInfo['join_battle_count_no'] = $this->currentInfo['login_nova_count'] - $this->currentInfo['join_battle_count'];
 				$this->currentInfo['join_food_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['join_food'] / $this->currentInfo['login_nova_count'], 3) * 100 . '%';
 				$this->currentInfo['join_rubbish_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['join_rubbish'] / $this->currentInfo['login_nova_count'], 3) * 100 . '%';

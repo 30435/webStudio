@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013-12-27 10:33:10
+-- 生成日期: 2013-12-27 10:32:44
 -- 服务器版本: 5.6.11
 -- PHP 版本: 5.5.1
 
@@ -17,16 +17,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- 数据库: `studio_movie`
+-- 数据库: `studio_juvenile`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_category`
+-- 表的结构 `sj_category`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_category` (
+CREATE TABLE IF NOT EXISTS `sj_category` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '栏目ID',
   `catname` varchar(40) NOT NULL DEFAULT '''''' COMMENT '栏目名称',
   `catdir` varchar(100) NOT NULL COMMENT '栏目所至目录',
@@ -44,15 +44,28 @@ CREATE TABLE IF NOT EXISTS `sm_category` (
   `ishtml` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示 1不显示 0 显示',
   PRIMARY KEY (`id`),
   KEY `catname` (`catname`,`parentid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- 转存表中的数据 `sj_category`
+--
+
+INSERT INTO `sj_category` (`id`, `catname`, `catdir`, `image`, `parentid`, `modelid`, `bind_domain`, `url`, `listorder`, `description`, `template`, `meta_title`, `meta_keywords`, `meta_description`, `ishtml`) VALUES
+(1, '视频', 'vedio', '', 0, 2, '', 'http://juvenile.ci.com/index/category?catid=1', 0, '', 'list_video', '', '', '', 0),
+(2, '杂志动画', 'zzdh', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=2', 0, '', 'list_video', '', '', '', 0),
+(3, '娱乐节目', 'yljm', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=3', 0, '', 'list_video', '', '', '', 0),
+(4, '科技节目', 'kjjm', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=4', 0, '', 'list_video', '', '', '', 0),
+(5, '教育', 'jy', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=5', 0, '', 'list_video', '', '', '', 0),
+(6, '动画片', 'dhp', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=6', 0, '', 'list_video', '', '', '', 0),
+(7, '活动视频', 'hdsp', '', 1, 2, '', 'http://juvenile.ci.com/index/category?catid=7', 0, '', 'list_video', '', '', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_new`
+-- 表的结构 `sj_new`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_new` (
+CREATE TABLE IF NOT EXISTS `sj_new` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '新闻类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -80,10 +93,10 @@ CREATE TABLE IF NOT EXISTS `sm_new` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_picture`
+-- 表的结构 `sj_picture`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_picture` (
+CREATE TABLE IF NOT EXISTS `sj_picture` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '图片类资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',
@@ -110,10 +123,10 @@ CREATE TABLE IF NOT EXISTS `sm_picture` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sm_spage`
+-- 表的结构 `sj_spage`
 --
 
-CREATE TABLE IF NOT EXISTS `sm_spage` (
+CREATE TABLE IF NOT EXISTS `sj_spage` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '单网页资讯ID',
   `catid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '栏目ID',
   `title` varchar(80) NOT NULL DEFAULT '' COMMENT '标题',

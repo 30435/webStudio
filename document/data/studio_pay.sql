@@ -1,36 +1,32 @@
--- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: studio_pay
--- ------------------------------------------------------
--- Server version	5.6.11
+-- 主机: localhost
+-- 生成日期: 2013-12-27 10:33:37
+-- 服务器版本: 5.6.11
+-- PHP 版本: 5.5.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `studio_pay`
+-- 数据库: `studio_pay`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `studio_pay` /*!40100 DEFAULT CHARACTER SET utf8 */;
-
-USE `studio_pay`;
+-- --------------------------------------------------------
 
 --
--- Table structure for table `sp_account`
+-- 表的结构 `sp_account`
 --
 
-DROP TABLE IF EXISTS `sp_account`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_account` (
+CREATE TABLE IF NOT EXISTS `sp_account` (
   `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '充值记录ID',
   `orderid` char(32) NOT NULL COMMENT '订单号',
   `orderid_plat` varchar(64) NOT NULL COMMENT '平台订单号',
@@ -57,27 +53,27 @@ CREATE TABLE `sp_account` (
   `handpay_manager` tinyint(4) DEFAULT NULL COMMENT '手工支付管理员账号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `orderid` (`orderid`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Dumping data for table `sp_account`
+-- 转存表中的数据 `sp_account`
 --
 
-LOCK TABLES `sp_account` WRITE;
-/*!40000 ALTER TABLE `sp_account` DISABLE KEYS */;
-INSERT INTO `sp_account` VALUES (1,'2013100806514','','yeepay','touser','',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,1000.00,1000.00,700.00,1381223055,'20131008',1381223056,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:4:\"1000\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100806514\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"7bc865f9ed933fddd154b403bb5f924a\";}','1',NULL),(2,'2013100826078','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,1.00,1.00,0.70,1381223080,'20131008',1381223082,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:1:\"1\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100826078\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"045ad722c0218fa6980411954aeeb735\";}','1',NULL),(3,'2013100895563','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',10884184,'aaaaaa','',0.3,10.00,10.00,7.00,1381224699,'20131008',1381224701,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:2:\"10\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100895563\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"6353959ed119b3a304f68f02cbacf2f4\";}','1',NULL),(4,'2013100806856','','yeepay','towebgame','nova',0,'',0,10884184,'aaaaaa',16075186,'aaaaaaa','',0.3,333.00,333.00,233.10,1381225975,'20131008',1381225977,'a:12:{s:4:\"code\";s:6:\"yeepay\";s:6:\"r0_Cmd\";s:3:\"Buy\";s:7:\"r1_Code\";s:0:\"\";s:8:\"r2_TrxId\";s:0:\"\";s:6:\"r3_Amt\";s:3:\"333\";s:6:\"r4_Cur\";s:3:\"CNY\";s:6:\"r5_Pid\";s:0:\"\";s:8:\"r6_Order\";s:13:\"2013100806856\";s:6:\"r7_Uid\";s:0:\"\";s:5:\"r8_MP\";s:0:\"\";s:8:\"r9_BType\";s:0:\"\";s:4:\"hmac\";s:32:\"cc133157ecca4ee2dbcd48db7b929e81\";}','1',NULL);
-/*!40000 ALTER TABLE `sp_account` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `sp_account` (`id`, `orderid`, `orderid_plat`, `payment_code`, `type`, `webgame_code`, `server_id`, `server_role`, `paymonth_id`, `pay_userid`, `pay_username`, `userid`, `username`, `mobile`, `payment_rate`, `money`, `money_valid_middle`, `money_valid`, `account_time`, `day`, `account_time_valid`, `account_data`, `status`, `handpay_manager`) VALUES
+(1, '2013102433681', '', 'yeepay', 'touser', '', 0, '', 0, 16033066, 'cccccc', 16033066, 'cccccc', '', 0.3, 6.00, 6.00, 4.20, 1382604442, '20131024', 1382604539, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"6";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013102433681";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"1040ab268307bdd687d023b7e01a1a38";}', '1', NULL),
+(2, '2013103104014', '', 'yeepay', 'touser', '', 0, '', 0, 19028947, '19028947', 19028947, '19028947', '', 0.3, 88.00, 88.00, 61.60, 1383208060, '20131031', 1383208066, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:2:"88";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013103104014";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"13e781c6bfa928743db584b60e18e593";}', '1', NULL),
+(3, '2013110854288', '', 'yeepay', 'touser', '', 0, '', 0, 18962869, 'aaaaaa', 18962869, 'aaaaaa', '', 0.3, 7.00, 7.00, 4.90, 1383900741, '20131108', 1383900792, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:1:"7";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013110854288";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"a4441f93d6194fd6026eea190edbe78a";}', '1', NULL),
+(4, '2013110865555', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 18962869, 'aaaaaa', 18962869, 'aaaaaa', '', 0.3, 100.00, 100.00, 70.00, 1383900902, '20131108', 1383900909, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:3:"100";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013110865555";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"644a449e17488d4eca5b527e8a45ec63";}', '1', NULL),
+(5, '2013110883421', '', 'yeepay', 'towebgame', 'nova', 0, '', 0, 18962869, 'aaaaaa', 18962869, 'aaaaaa', '', 0.3, 1000.00, 1000.00, 700.00, 1383901022, '20131108', 1383901041, 'a:12:{s:4:"code";s:6:"yeepay";s:6:"r0_Cmd";s:3:"Buy";s:7:"r1_Code";s:0:"";s:8:"r2_TrxId";s:0:"";s:6:"r3_Amt";s:4:"1000";s:6:"r4_Cur";s:3:"CNY";s:6:"r5_Pid";s:0:"";s:8:"r6_Order";s:13:"2013110883421";s:6:"r7_Uid";s:0:"";s:5:"r8_MP";s:0:"";s:8:"r9_BType";s:0:"";s:4:"hmac";s:32:"008df4d5d547efcbe5b5a20eac228407";}', '1', NULL),
+(6, '2013111914437', '', 'kuaiq', 'touser', '', 0, '', 0, 0, '', 18962869, 'aaaaaa', '', 0, 444.00, 0.00, 0.00, 1384847034, '20131119', 0, '', '0', NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `sp_account_unusual`
+-- 表的结构 `sp_account_unusual`
 --
 
-DROP TABLE IF EXISTS `sp_account_unusual`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_account_unusual` (
+CREATE TABLE IF NOT EXISTS `sp_account_unusual` (
   `id` int(8) NOT NULL AUTO_INCREMENT COMMENT '充值记录ID',
   `orderid` char(32) NOT NULL COMMENT '订单号',
   `orderid_plat` varchar(64) NOT NULL COMMENT '平台订单号',
@@ -102,26 +98,15 @@ CREATE TABLE `sp_account_unusual` (
   `status` enum('4','3','2') NOT NULL COMMENT '充值状态，2：验证失败，3：未知支付，4：重复支付；',
   `hand_manager` tinyint(4) DEFAULT NULL COMMENT '手工支付管理员账号',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `sp_account_unusual`
+-- 表的结构 `sp_member_pay`
 --
 
-LOCK TABLES `sp_account_unusual` WRITE;
-/*!40000 ALTER TABLE `sp_account_unusual` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sp_account_unusual` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sp_member_pay`
---
-
-DROP TABLE IF EXISTS `sp_member_pay`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_member_pay` (
+CREATE TABLE IF NOT EXISTS `sp_member_pay` (
   `userid` int(8) unsigned NOT NULL COMMENT '用户ID',
   `username` char(32) NOT NULL COMMENT '用户名',
   `money` float unsigned NOT NULL DEFAULT '0' COMMENT '用户余额',
@@ -139,26 +124,23 @@ CREATE TABLE `sp_member_pay` (
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sp_member_pay`
+-- 转存表中的数据 `sp_member_pay`
 --
 
-LOCK TABLES `sp_member_pay` WRITE;
-/*!40000 ALTER TABLE `sp_member_pay` DISABLE KEYS */;
-INSERT INTO `sp_member_pay` VALUES (10884184,'aaaaaa',597.6,1011,3,1011,707.7,3,1381224701,20,110.1,1381373689,1381373689,0.00),(16075186,'aaaaaaa',0.1,333,1,333,233.1,1,1381225977,1,233,1381225977,1381225977,0.00);
-/*!40000 ALTER TABLE `sp_member_pay` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `sp_member_pay` (`userid`, `username`, `money`, `want_money`, `want_times`, `valid_money_middle`, `valid_money`, `valid_times`, `lasttime_account`, `pay_times`, `pay_money`, `lasttime_pay`, `locktime`, `unusual_money`) VALUES
+(16033066, 'cccccc', 2.2, 6, 1, 6, 4.2, 1, 1382604539, 1, 2, 1382604679, 1382604679, '0.00'),
+(19028947, '19028947', 51.6, 88, 1, 88, 61.6, 1, 1383208066, 1, 10, 1383208169, 1383208169, '0.00'),
+(18962869, 'aaaaaa', 0.9, 1551, 4, 1107, 774.9, 3, 1384847034, 3, 774, 1383901041, 1383901041, '0.00');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `sp_pay`
+-- 表的结构 `sp_pay`
 --
 
-DROP TABLE IF EXISTS `sp_pay`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_pay` (
+CREATE TABLE IF NOT EXISTS `sp_pay` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '支付ID',
   `orderid` char(32) NOT NULL,
   `orderid_account` char(32) NOT NULL,
@@ -173,27 +155,84 @@ CREATE TABLE `sp_pay` (
   `pay_time` int(10) NOT NULL COMMENT '支付时间',
   `day` char(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data for table `sp_pay`
+-- 转存表中的数据 `sp_pay`
 --
 
-LOCK TABLES `sp_pay` WRITE;
-/*!40000 ALTER TABLE `sp_pay` DISABLE KEYS */;
-INSERT INTO `sp_pay` VALUES (1,'2013100865180','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223150,'20131008'),(2,'2013100891619','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223158,'20131008'),(3,'2013100893921','2013100826078','',0,10884184,'aaaaaa',0,'nova',0,'',1381223158,'20131008'),(4,'2013100883440','2013100895563','',0,10884184,'aaaaaa',7,'nova',0,'',1381224701,'20131008'),(5,'2013100871698','2013100895563','aaaaaa',10884184,10884184,'aaaaaa',7,'nova',0,'',1381225247,'20131008'),(6,'2013100877365','2013100895563','aaaaaa',10884184,10884184,'aaaaaa',7,'nova',0,'',1381225250,'20131008'),(7,'2013100882459','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225429,'20131008'),(8,'2013100854187','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225458,'20131008'),(9,'2013100853387','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225658,'20131008'),(10,'2013100880755','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225713,'20131008'),(11,'2013100864152','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225736,'20131008'),(12,'2013100817717','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225773,'20131008'),(13,'2013100862173','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225786,'20131008'),(14,'2013100860751','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225852,'20131008'),(15,'2013100848469','0','aaaaaaa',16075186,10884184,'aaaaaa',10,'nova',0,'',1381225865,'20131008'),(16,'2013100802120','2013100806856','aaaaaaa',16075186,16075186,'aaaaaaa',233,'nova',0,'',1381225977,'20131008'),(17,'2013100867284','0','aaaaaaa',16075186,10884184,'aaaaaa',12,'nova',0,'',1381226043,'20131008'),(18,'2013100823821','0','aaaaaaa',16075186,10884184,'aaaaaa',12,'nova',0,'',1381226142,'20131008'),(19,'2013101089920','0','aaaaaa',10884184,10884184,'aaaaaa',10,'nova',0,'',1381369987,'20131010'),(20,'2013101069142','0','aaaaaa',10884184,10884184,'aaaaaa',10,'nova',0,'',1381371238,'20131010'),(21,'2013101003399','0','aaaaaa',10884184,10884184,'aaaaaa',1,'nova',0,'',1381371386,'20131010'),(22,'2013101097557','0','aaaaaa',10884184,10884184,'aaaaaa',2,'nova',0,'',1381371487,'20131010'),(23,'2013101097322','0','aaaaaa',10884184,10884184,'aaaaaa',1.1,'nova',0,'',1381371737,'20131010'),(24,'2013101021520','0','aaaaaaa',16075186,10884184,'aaaaaa',3,'nova',0,'',1381371771,'20131010'),(25,'2013101020782','0','aaaaaaa',16075186,10884184,'aaaaaa',5,'nova',0,'',1381371923,'20131010'),(26,'2013101036293','0','aaaaaa',10884184,10884184,'aaaaaa',2,'nova',0,'',1381371972,'20131010'),(27,'2013101061531','0','aaaaaa',10884184,10884184,'aaaaaa',8,'nova',0,'',1381372021,'20131010'),(28,'2013101001197','0','18526822',18526822,10884184,'aaaaaa',3,'nova',0,'',1381373689,'20131010');
-/*!40000 ALTER TABLE `sp_pay` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `sp_pay` (`id`, `orderid`, `orderid_account`, `get_username`, `get_userid`, `userid`, `username`, `money`, `webgame_code`, `server_id`, `server_role`, `pay_time`, `day`) VALUES
+(1, '2013102428514', '0', 'cccccc', 16033066, 16033066, 'cccccc', 2, 'nova', 0, '', 1382604679, '20131024'),
+(2, '2013103152753', '0', '19028947', 19028947, 19028947, '19028947', 10, 'nova', 0, '', 1383208169, '20131031'),
+(3, '2013110896035', '0', 'aaaaaa', 18962869, 18962869, 'aaaaaa', 4, 'nova', 0, '', 1383900851, '20131108'),
+(4, '2013110871228', '2013110865555', 'aaaaaa', 18962869, 18962869, 'aaaaaa', 70, 'nova', 0, '', 1383900909, '20131108'),
+(5, '2013110828213', '2013110883421', 'aaaaaa', 18962869, 18962869, 'aaaaaa', 700, 'nova', 0, '', 1383901041, '20131108');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `sp_pay_paymonth`
+-- 表的结构 `sp_payment`
 --
 
-DROP TABLE IF EXISTS `sp_pay_paymonth`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_pay_paymonth` (
+CREATE TABLE IF NOT EXISTS `sp_payment` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '支付方式ID',
+  `code` char(10) NOT NULL COMMENT '代码',
+  `name` varchar(20) NOT NULL COMMENT '名称',
+  `description` varchar(1000) NOT NULL COMMENT '描述',
+  `thumb` varchar(100) NOT NULL COMMENT '图标',
+  `listorder` tinyint(3) unsigned NOT NULL COMMENT '排序',
+  `rate` float NOT NULL,
+  `status` enum('1','0') NOT NULL COMMENT '状态，0：暂停使用；1：可正常使用',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+
+--
+-- 转存表中的数据 `sp_payment`
+--
+
+INSERT INTO `sp_payment` (`id`, `code`, `name`, `description`, `thumb`, `listorder`, `rate`, `status`) VALUES
+(1, 'yeepay', '银行卡充值（易宝）', '银行卡支付说明：<br />\n1、您必须开通了网上银行业务；<br />\n2、网上银行开通办法请咨询当地所属银行；<br />\n3、请您关闭所有屏蔽弹出窗口之类的功能，否则在线支付将无法继续，比如：3721、上网助手、google toolbar、alexa toolbar、baidu等；<br />\n4、如果您用信用卡支付，请确认该信用卡的网上交易限额大于等于您的充值金额；<br />\n5、如果有疑问，请联系我们在线客服或拨打客服电话。<br />\n6、<font  style="color:#cc0000">请充值时务必确认好您的充值金额准确无误后再进行充值，避免输错金额导致的失误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font>\n', '1', 100, 0.3, '1'),
+(2, 'alipay', '支付宝', '支付宝支付说明：<br />\n1、您必须开通了网上银行业务；<br />\n2、使用支付宝网银支付，对消费者来说，目前不需要任何的手续费；<br />\n3、请您关闭所有屏蔽弹出窗口之类的功能，否则在线支付将无法继续，比如：3721、上网助手、google toolbar、alexa toolbar、baidu等；<br />\n4、请使用IE，TT，Maxthon浏览器以确保支付宝充值成功。<br />\n5、如果有疑问，请联系我们在线客服或拨打客服电话。<br />\n6、请您每次充值务必到支付页面进行提交，并按照充值流程完成充值，不要单独付款给我们的支付宝账户，避免出现不必要的损失！<br />\n7、<font style="color:#cc0000">请充值时务必确认好您的充值金额准确无误后再进行充值，避免输错金额导致的失误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font>\n', '1', 8, 0, '1'),
+(3, 'ybshenzx', '神州行充值卡', '神州行充值卡说明：<br />\n1、请确认您的充值卡是序列号17位、密码18位，由中国移动发行的全国通用的神州行充值卡，而且是没有使用过的。<br />\n2、请务必使用与您选择的面额相同的神州行卡进行支付，如果选择金额额度不正确会导致卡面金额丢失。<br />\n3、本充值方式还支持江苏、浙江、广东、辽宁、福建的神州行地方卡。支持300和500元面额。<br />\n4、如果有疑问，请联系我们在线客服或拨打客服电话。\n', '1', 97, 0.04, '1'),
+(4, 'ybtele', '电信卡', '电信卡<br />\n电信卡', '0', 10, 0.04, '1'),
+(5, 'myself', '诺币兑换', '', '0', 0, 0, '1'),
+(21, 'kuaiq', '快钱', '', '0', 0, 0, '1');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sp_paymonth`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_paymonth` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '包月ID',
+  `name` varchar(20) NOT NULL COMMENT '名称',
+  `webgame_code` char(10) NOT NULL,
+  `money` int(4) unsigned NOT NULL COMMENT '费用',
+  `month` tinyint(4) NOT NULL COMMENT '单位',
+  `thumb` varchar(100) NOT NULL COMMENT '图标',
+  `listorder` tinyint(3) unsigned NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `webgamemoney` (`webgame_code`,`money`),
+  UNIQUE KEY `webgamemonth` (`webgame_code`,`month`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `sp_paymonth`
+--
+
+INSERT INTO `sp_paymonth` (`id`, `name`, `webgame_code`, `money`, `month`, `thumb`, `listorder`) VALUES
+(1, '诺瓦包月', 'nova', 5, 2, 'http://upload.ci.com/passport2013/0910/20130910144500693.jpg', 233),
+(2, '诺瓦包年', 'seer', 50, 0, 'http://upload.ci.com/passport2013/0910/20130910144532119.jpg', 23),
+(3, '诺币兑换', 'nova', 10, 1, 'http://upload.ci.com/passport2013/0912/20130912172705850.png', 66);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sp_pay_paymonth`
+--
+
+CREATE TABLE IF NOT EXISTS `sp_pay_paymonth` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '支付ID',
   `paymonth_id` smallint(4) NOT NULL COMMENT '支付ID',
   `orderid` char(32) NOT NULL,
@@ -208,86 +247,8 @@ CREATE TABLE `sp_pay_paymonth` (
   `pay_time` int(10) NOT NULL COMMENT '支付时间',
   `day` char(9) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `sp_pay_paymonth`
---
-
-LOCK TABLES `sp_pay_paymonth` WRITE;
-/*!40000 ALTER TABLE `sp_pay_paymonth` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sp_pay_paymonth` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sp_payment`
---
-
-DROP TABLE IF EXISTS `sp_payment`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_payment` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '支付方式ID',
-  `code` char(10) NOT NULL COMMENT '代码',
-  `name` varchar(20) NOT NULL COMMENT '名称',
-  `description` varchar(1000) NOT NULL COMMENT '描述',
-  `thumb` varchar(100) NOT NULL COMMENT '图标',
-  `listorder` tinyint(3) unsigned NOT NULL COMMENT '排序',
-  `rate` float NOT NULL,
-  `status` enum('1','0') NOT NULL COMMENT '状态，0：暂停使用；1：可正常使用',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `sp_payment`
---
-
-LOCK TABLES `sp_payment` WRITE;
-/*!40000 ALTER TABLE `sp_payment` DISABLE KEYS */;
-INSERT INTO `sp_payment` VALUES (1,'yeepay','银行卡充值（易宝）','银行卡支付说明：<br />\n1、您必须开通了网上银行业务；<br />\n2、网上银行开通办法请咨询当地所属银行；<br />\n3、请您关闭所有屏蔽弹出窗口之类的功能，否则在线支付将无法继续，比如：3721、上网助手、google toolbar、alexa toolbar、baidu等；<br />\n4、如果您用信用卡支付，请确认该信用卡的网上交易限额大于等于您的充值金额；<br />\n5、如果有疑问，请联系我们在线客服或拨打客服电话。<br />\n6、<font  style=\"color:#cc0000\">请充值时务必确认好您的充值金额准确无误后再进行充值，避免输错金额导致的失误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font>\n','1',100,0.3,'1'),(2,'alipay','支付宝','支付宝支付说明：<br />\n1、您必须开通了网上银行业务；<br />\n2、使用支付宝网银支付，对消费者来说，目前不需要任何的手续费；<br />\n3、请您关闭所有屏蔽弹出窗口之类的功能，否则在线支付将无法继续，比如：3721、上网助手、google toolbar、alexa toolbar、baidu等；<br />\n4、请使用IE，TT，Maxthon浏览器以确保支付宝充值成功。<br />\n5、如果有疑问，请联系我们在线客服或拨打客服电话。<br />\n6、请您每次充值务必到支付页面进行提交，并按照充值流程完成充值，不要单独付款给我们的支付宝账户，避免出现不必要的损失！<br />\n7、<font style=\"color:#cc0000\">请充值时务必确认好您的充值金额准确无误后再进行充值，避免输错金额导致的失误，如因未仔细确认金额造成的充值问题，我们将一律不予处理此类退款申诉。</font>\n','1',8,0,'1'),(3,'ybshenzx','神州行充值卡','神州行充值卡说明：<br />\n1、请确认您的充值卡是序列号17位、密码18位，由中国移动发行的全国通用的神州行充值卡，而且是没有使用过的。<br />\n2、请务必使用与您选择的面额相同的神州行卡进行支付，如果选择金额额度不正确会导致卡面金额丢失。<br />\n3、本充值方式还支持江苏、浙江、广东、辽宁、福建的神州行地方卡。支持300和500元面额。<br />\n4、如果有疑问，请联系我们在线客服或拨打客服电话。\n','1',97,0.04,'1'),(4,'ybtele','电信卡','电信卡<br />\n电信卡','0',10,0.04,'1'),(5,'myself','诺币兑换','','0',0,0,'1');
-/*!40000 ALTER TABLE `sp_payment` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sp_paymonth`
---
-
-DROP TABLE IF EXISTS `sp_paymonth`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sp_paymonth` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '包月ID',
-  `name` varchar(20) NOT NULL COMMENT '名称',
-  `webgame_code` char(10) NOT NULL,
-  `money` int(4) unsigned NOT NULL COMMENT '费用',
-  `month` tinyint(4) NOT NULL COMMENT '单位',
-  `thumb` varchar(100) NOT NULL COMMENT '图标',
-  `listorder` tinyint(3) unsigned NOT NULL COMMENT '排序',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `webgamemoney` (`webgame_code`,`money`),
-  UNIQUE KEY `webgamemonth` (`webgame_code`,`month`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `sp_paymonth`
---
-
-LOCK TABLES `sp_paymonth` WRITE;
-/*!40000 ALTER TABLE `sp_paymonth` DISABLE KEYS */;
-INSERT INTO `sp_paymonth` VALUES (1,'诺瓦包月','nova',5,2,'http://upload.ci.com/passport2013/0910/20130910144500693.jpg',233),(2,'诺瓦包年','seer',50,0,'http://upload.ci.com/passport2013/0910/20130910144532119.jpg',23),(3,'诺币兑换','nova',10,1,'http://upload.ci.com/passport2013/0912/20130912172705850.png',66);
-/*!40000 ALTER TABLE `sp_paymonth` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2013-10-10 19:53:14
