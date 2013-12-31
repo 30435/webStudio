@@ -271,7 +271,7 @@ class StatCommon extends Custom_AdminController
 			$urlStr .= '&orderField=' . $orderField . '&orderType=' . $orderType;
 		}
 		
-		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time', 'big_count' => 'insert_date', 't_pet_log' => 'insert_date');
+		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time', 'big_count' => 'insert_date', 't_pet_log' => 'insert_date', 'online_hour' => 'insert_date', 'mission_count' => 'insert_date');
 		$timeField = isset($timeFields[$this->table]) ? $timeFields[$this->table] : 'time'; 
 
 		$order = array_merge($order, array(array($timeField, 'desc')));

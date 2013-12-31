@@ -144,7 +144,7 @@ $(function(){
 	  </tr>
       <tr>
         <th><?php echo $this->fieldInfos['ispay']['name']; ?></th>
-        <td><input type="radio" name="ispay" value="0" <?php if (!isset($this->currentInfo['ispay']) || empty($this->currentinfo['ispay'])) echo "checked='checked'"; ?>' /> <?php echo $this->fieldInfos['ispay']['infos']['0']; ?> <label><input type="radio" name="ispay" value="1" <?php if (isset($this->currentInfo['ispay']) || !empty($this->currentinfo['ispay'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['ispay']['infos']['1']; ?></td>
+        <td><input type="radio" name="ispay" value="0" <?php if (!isset($this->currentInfo['ispay']) || empty($this->currentinfo['ispay'])) echo "checked='checked'"; ?> /> <?php echo $this->fieldInfos['ispay']['infos']['0']; ?> <label><input type="radio" name="ispay" value="1" <?php if (isset($this->currentInfo['ispay']) || !empty($this->currentinfo['ispay'])) echo "checked='checked'"; ?>/><?php echo $this->fieldInfos['ispay']['infos']['1']; ?></td>
       </tr>
 	  </table>
 	</fieldset>
