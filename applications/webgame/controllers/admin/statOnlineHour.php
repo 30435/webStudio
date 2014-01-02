@@ -28,9 +28,6 @@ class statOnlineHour extends StatCommon
 		$whereArray = array();
 		$urlStr = '&table=' . $this->input->get_post('table');
 
-		$timeFields = array('analyze_status' => 'insert_date', 'nova_behind' => 'create_time');
-
-
 		$startTime = $this->input->get('start_time');
 		$endTime = $this->input->get('end_time');
 
@@ -40,6 +37,13 @@ class statOnlineHour extends StatCommon
 
 			$urlStr .= empty($startTime) ? '' : '&start_time=' . $startTime;
 			$urlStr .= empty($endTime) ? '' : '&end_time=' . $endTime;
+		}
+
+		$weeks = array(0, 1, 2, 3, 4, 5, 6);
+		$week = $this->input->get_post('week');
+		if ($week > 0 || $week === 0) {
+			$whereArray = array_merge($whereArray, array('day_of_week' => $week));
+			$urlStr .= '&week=' . $week;
 		}
 
 		$this->_paginationStr($urlStr);

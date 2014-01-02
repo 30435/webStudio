@@ -129,6 +129,13 @@ class statDay extends StatCommon
 			$urlStr .= empty($endTime) ? '' : '&end_time=' . $endTime;
 		}
 
+		$weeks = array(0, 1, 2, 3, 4, 5, 6);
+		$week = $this->input->get_post('week');
+		if ($week > 0 || $week === 0) {
+			$whereArray = array_merge($whereArray, array('day_of_week' => $week));
+			$urlStr .= '&week=' . $week;
+		}
+
 		$this->_paginationStr($urlStr);
 		return $whereArray;
 	}
@@ -144,7 +151,7 @@ class statDay extends StatCommon
 		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
 				$info['day_transformation'] = empty($info['register_plat_day_count']) ? 0 : round($info['register_nova_day_count'] / $info['register_plat_day_count'], 3) * 100 . '%';
-				$info['join_battle_count_rate'] = empty($info['login_nova_count']) ? 0 : round($info['join_battle_count'] / $info['login_nova_count'], 3) * 100 . '%';
+				$info['join_battle_count_rate'] = empty($info['login_nova_count']) ? 0 : round($info['battle_day_count'] / $info['login_nova_count'], 3);
 			    $info['join_battle_count_no'] = $info['login_nova_count'] - $info['join_battle_count'];
 				$info['join_food_rate'] = empty($info['login_nova_count']) ? 0 : round($info['join_food'] / $info['login_nova_count'], 3) * 100 . '%';
 				$info['join_rubbish_rate'] = empty($info['login_nova_count']) ? 0 : round($info['join_rubbish'] / $info['login_nova_count'], 3) * 100 . '%';

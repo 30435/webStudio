@@ -78,6 +78,10 @@ function orderField(field)
 				onSelect   : function() {this.hide();}
 				});
 			</script>			
+			周信息：<select name="week" id="week">
+				<option value=''></option>
+				<?php foreach ($this->weekInfos as $weekKey => $weekValue) { echo '<option value="' . $weekKey . '">' . $weekValue . '</option>'; } ?>
+			</select>
 			<input type="submit" value="搜索" class="button" name="search">
 	      </div>
 		  </td>

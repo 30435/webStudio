@@ -53,6 +53,10 @@ function orderField(field)
 				onSelect   : function() {this.hide();}
 				});
 			</script>			
+			周信息：<select name="week" id="week">
+				<option value=''></option>
+				<?php foreach ($this->weekInfos as $weekKey => $weekValue) { echo '<option value="' . $weekKey . '">' . $weekValue . '</option>'; } ?>
+			</select>
 			<input type="submit" value="搜索" class="button" name="search">
 	      </div>
 		  </td>
@@ -91,7 +95,8 @@ function orderField(field)
       <tbody>
 		<?php 
 		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
-			if ($keyField == 'id') {
+			$ignoreFields = array(); for ($i = 0; $i < 7; $i++) { $ignoreFields[] = 'o0' . $i . '_avg'; }
+			if ($keyField == 'id' || in_array($keyField, $ignoreFields)) {
 				continue;
 			}
 			$nameField = empty($nameField) ? $keyField : $nameField;

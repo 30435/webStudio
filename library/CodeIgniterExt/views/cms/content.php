@@ -24,7 +24,7 @@ function closeParent() {
 </SCRIPT>
 <div class="pad-10">
   <div class="content-menu ib-a blue line-x">
-    <a class="add fb" href="javascript:;" onclick=javascript:openwinx("<?php echo $this->appMenus['add']['url'] . '?catid=' . $this->catid; ?>",'')><em><?php echo $this->appMenus['add']['name']; ?></em></a>　
+    <a class="add fb" href="javascript:;" onclick="javascript:openwinx(\"<?php echo $this->appMenus['add']['url'] . '?catid=' . $this->catid; ?>\",'')"><em><?php echo $this->appMenus['add']['name']; ?></em></a>　
     <a href="<?php echo $this->appMenus['listinfo']['url'] . '?catid=' . $this->catid; ?>" class=on><em><?php echo $this->appMenus['listinfo']['name']; ?></em></a>
   </div>
   <div id="searchid" style="">
