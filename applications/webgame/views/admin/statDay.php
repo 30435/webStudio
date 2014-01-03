@@ -131,7 +131,7 @@ function orderField(field)
 
 		    if (is_array($this->infos) && !empty($this->infos)) { 
 				foreach ($this->infos as $info) {
-					$value = $keyField == 'insert_date' ? '<a style="color:#009900;" href="javascript: showDetail(\'' .  $info['id'] . '\');void(0);">' . $info[$keyField] . '</a>' : $info[$keyField];
+					$value = $keyField == 'insert_date' ? '<a style="color:#009900;" href="javascript: showDetail(\'' .  $info['id'] . '\');void(0);">' . $info[$keyField] . '(' . $this->weekInfos[$info['day_of_week']] . ')</a>' : $info[$keyField];
 					echo '<td align="center">' . $value . '</td>'; 
 				}
 			}

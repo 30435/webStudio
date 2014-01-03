@@ -95,7 +95,7 @@ function orderField(field)
       <tbody>
 		<?php 
 		foreach ($this->tableInfo['fields'] as $keyField => $nameField) {
-			$ignoreFields = array(); for ($i = 0; $i < 7; $i++) { $ignoreFields[] = 'o0' . $i . '_avg'; }
+			$ignoreFields[] = 'day_of_week'; for ($i = 0; $i < 7; $i++) { $ignoreFields[] = 'o0' . $i . '_avg'; }
 			if ($keyField == 'id' || in_array($keyField, $ignoreFields)) {
 				continue;
 			}
@@ -107,8 +107,8 @@ function orderField(field)
 
 		    if (is_array($this->infos) && !empty($this->infos)) { 
 				foreach ($this->infos as $info) {
-					//$value = $keyField == 'insert_date' ? '<a style="color:#009900;" href="javascript: showDetail(\'' .  $info['id'] . '\');void(0);">' . $info[$keyField] . '</a>' : $info[$keyField];
-					echo '<td align="center">' . $info[$keyField] . '</td>'; 
+					$value = $keyField == 'insert_date' ? $info[$keyField] . ' (' . $this->weekInfos[$info['day_of_week']] . ')' : $info[$keyField];
+					echo '<td align="center">' . $value . '</td>'; 
 				}
 			}
 			echo '</tr>';
