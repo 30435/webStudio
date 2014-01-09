@@ -19,6 +19,12 @@ class nova extends Index
 		$this->templatePre = 'nova/';
 	}
 
+	public function indexnew()
+	{
+		$template = 'newfront/index';//isset($this->templatePre) ? $this->templatePre . 'index' : 'index';
+		$this->load->view($template, $this->frontController);
+	}
+
 	protected function stopWebgame()
 	{
 		$stopWebgame = false;

@@ -16,7 +16,7 @@ class statDay extends StatCommon
 			'comment' => '总体统计表',
 			'fields' => 
 			array (
-			  'id' => '',
+			  /*'id' => '',
 			  'insert_date' => '插入时间',
 			  'register_platfrom_count' => '注册账号总数',
 			  'register_nova_count' => '创建角色总数',
@@ -79,6 +79,91 @@ class statDay extends StatCommon
 			  'join_restorepet_rate' => '宠物治疗使用率', // ext
 			  'seizepet_count' => '当天捕捉宠物总量',
 			  'seizepet_count_rate' => '玩家平均捕捉数量', // ext
+			   */
+      'id' => '',
+      'insert_date' => '插入时间',
+      'register_platfrom_count' => '注册账号总数',
+      'register_nova_count' => '创建角色总数',
+      'register_plat_day_count' => '当日注册账号数量',
+      'register_nova_day_count' => '当日创建角色数量',
+      'pet_all_count' => '宠物总数',
+      'login_nova_count' => '当日登录帐号数量',
+      'old_login' => '当日老账号登陆数量',
+      'old_bilv' => '当日老账号登陆率',
+      'day_transformation' => '当日转化率',
+      'one_transformation' => '1日留存(百分比)',
+      'two_transformation' => '2日留存(百分比)',
+      'three_transformation' => '3日留存(百分比)',
+      'four_transformation' => '4日留存(百分比)',
+      'five_transformation' => '5日留存(百分比)',
+      'six_transformation' => '6日留存(百分比)',
+      'seven_transformation' => '7日留存(百分比)',
+      'eight_transformation' => '8日留存(百分比)',
+      'day_active' => '当天活跃用户',
+      'week_active' => '周活跃用户',
+      'mouth_active' => '月活跃用户',
+      'back_flow' => '回流用户',
+      'pet_add' => '玩家每天获得宠物数量',
+      'pet_new_add' => '当日新用户获得宠物数量',
+      'battle_day_count' => '当天玩家战斗次数',
+  			  'join_battle_count_rate' => '玩家平均战斗次数', // ext
+			  'join_battle_count_no' => '未进行战斗人数', // ext
+      'join_battle_count' => '当天进行过战斗的人数',
+      'join_new_battle_count' => '当日新用户战斗人数',
+      'battle_bellow_five_day' => '战斗次数5次以下人数',
+      'battle_five_ten_day' => '战斗次数5-10次人数',
+      'battle_up_ten_day' => '战斗次数10次以上人数',
+      'star_one' => '星空探索1次',
+      'star_two' => '星空探索2次',
+      'star_up_three' => '星空探索3次以上',
+      'new_star' => '当日新用户星空探索人数',
+      'blackhole_one' => '黑洞进行1次',
+      'blackhole_two' => '黑洞进行2次',
+      'new_blackhole' => '当日新用户黑洞进行人数',
+      'star_challenge_one' => '星际挑战1次',
+      'star_challenge_up_two' => '星际挑战2次以上',
+      'new_star_challenge' => '当日新用户星级挑战人数',
+      'composepet_count' => '宠物合成次数',
+      'babel_one_ten' => '完成1-10层挑战人数',
+      'babel_ten_twoten' => '完成10-20层挑战人数',
+      'babel_twoten_twofive' => '完成20-25层挑战人数',
+      'egg_one' => '参与1次扭蛋人数',
+      'egg_up_two' => '参与2次以上扭蛋人数',
+      'new_egg' => '当日新用户扭蛋人数',
+      'food_one' => '美食活动参与1次',
+      'food_two' => '美食活动参与2次',
+      'join_food' => '参与美食人数',
+			  'join_food_rate' => '美食活动使用率', // ext
+      'join_new_food' => '当日新用户美食活动人数',
+      'rubbish_one' => '捡垃圾1次',
+      'rubbish_two' => '捡垃圾2次',
+      'rubbish_up_three' => '捡垃圾3次以上',
+      'join_rubbish' => '参与捡垃圾人数',
+			  'join_rubbish_rate' => '捡垃圾使用率', // ext
+      'join_new_rubbish' => '当日新用户捡垃圾人数',
+      'invest_short_one' => '参与1次短线投资',
+      'invest_short_up_two' => '参与2次以上短线投资',
+      'invest_long' => '参与长线投资',
+      'join_invest' => '参与投资人数',
+      'shop_count' => '商店使用次数',
+      'petevolution_count' => '进化宠物总量',
+			  'petevolution_count_rate' => '进化宠物比率', // ext
+      'petlevelup_count' => '当天宠物升级次数',
+      'petlevelup_new_count' => '当日新用户宠物升级次数',
+      'petlevel_avg' => '当天平均宠物提升等级',
+      'petlevel_new_avg' => '当日新用户平均宠物提升等级',
+      'join_praybean' => '参与许愿豆的玩家',
+			  'join_praybean_rate' => '许愿豌豆使用率', // ext
+      'join_new_praybean' => '当日新用户参与许愿豆的数量',
+      'join_new_bilv' => '当日新用户许愿豌豆使用率',
+      'join_question' => '参与答题的人数',
+			  'join_question_rate' => '答题使用率', // ext
+      'join_new_question' => '当日新用户参与答题的人数',
+      'join_restorepet' => '参与宠物治疗人数',
+			  'join_restorepet_rate' => '宠物治疗使用率', // ext
+      'seizepet_count' => '当天捕捉宠物总量',
+			  'seizepet_count_rate' => '玩家平均捕捉数量', // ext
+      'day_of_week' => '周几',				
 			),
 		);
 
@@ -99,6 +184,7 @@ class statDay extends StatCommon
 				$this->currentInfo['join_question_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['join_question'] / $this->currentInfo['login_nova_count'], 3) * 100 . '%';
 				$this->currentInfo['join_restorepet_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['join_restorepet'] / $this->currentInfo['login_nova_count'], 3) * 100 . '%';
 				$this->currentInfo['seizepet_count_rate'] = empty($this->currentInfo['login_nova_count']) ? 0 : round($this->currentInfo['seizepet_count'] / $this->currentInfo['login_nova_count'], 3);
+				$this->currentInfo['join_new_bilv'] = empty($this->currentInfo['join_praybean']) ? 0 : round($this->currentInfo['join_new_praybean'] / $this->currentInfo['join_praybean'], 3) * 100 . '%';
 			$this->load->view($this->template);
 		}
 	}
@@ -131,7 +217,7 @@ class statDay extends StatCommon
 
 		$weeks = array(0, 1, 2, 3, 4, 5, 6);
 		$week = $this->input->get_post('week');
-		if ($week > 0 || $week === 0) {
+		if ($week > 0 || $week === '0') {
 			$whereArray = array_merge($whereArray, array('day_of_week' => $week));
 			$urlStr .= '&week=' . $week;
 		}
@@ -160,6 +246,7 @@ class statDay extends StatCommon
 				$info['join_question_rate'] = empty($info['login_nova_count']) ? 0 : round($info['join_question'] / $info['login_nova_count'], 3) * 100 . '%';
 				$info['join_restorepet_rate'] = empty($info['login_nova_count']) ? 0 : round($info['join_restorepet'] / $info['login_nova_count'], 3) * 100 . '%';
 				$info['seizepet_count_rate'] = empty($info['login_nova_count']) ? 0 : round($info['seizepet_count'] / $info['login_nova_count'], 3);
+				$info['join_new_bilv'] = empty($info['join_praybean']) ? 0 : round($info['join_new_praybean'] / $info['join_praybean'], 3) * 100 . '%';
 
 				$infos[$key] = $info;
 			}

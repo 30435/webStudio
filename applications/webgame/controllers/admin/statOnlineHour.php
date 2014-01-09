@@ -41,7 +41,7 @@ class statOnlineHour extends StatCommon
 
 		$weeks = array(0, 1, 2, 3, 4, 5, 6);
 		$week = $this->input->get_post('week');
-		if ($week > 0 || $week === 0) {
+		if ($week > 0 || $week === '0') {
 			$whereArray = array_merge($whereArray, array('day_of_week' => $week));
 			$urlStr .= '&week=' . $week;
 		}

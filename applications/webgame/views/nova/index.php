@@ -1,4 +1,3 @@
-<?php if ($this->time < $this->currentWebgameInfo['start_maintain']) { $this->load->view('cfront/countdown'); } else { ?>
 <?php echo $this->load->view('cfront/header'); ?>
 <script type="text/javascript">
 function searchFunc()
@@ -76,4 +75,3 @@ youqingmarquee.Start();
 </div>
 
 <?php echo $this->load->view('footer_cfront'); ?>
-<?php } ?>
