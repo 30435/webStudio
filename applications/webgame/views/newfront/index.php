@@ -1,46 +1,17 @@
-<?php echo $this->load->view('header_base'); ?>
-<base 
-<link type='text/css' href='<?php echo $this->staticUrl; ?>newfront/css/style.css' rel='stylesheet'/>
-<script type=text/javascript src="<?php echo $this->staticUrl; ?>newfront/js/jquery-1.7.2.min.js"></script>
-<script type=text/javascript src="<?php echo $this->staticUrl; ?>newfront/js/orion.js"></script>
-<!--[if IE 6]>
-<script src="<?php echo $this->staticUrl; ?>newfront/js/iepng.js" type="text/javascript"></script>
-<script type="text/javascript">
-  EvPNG.fix('*'); //EvPNG.fix('包含透明PNG图片的标签'); 多个标签之间用英文逗号隔开
-</script>
-<![endif]-->
-</head>
-
+<?php echo $this->load->view('newfront/header'); ?>
 <body>
+<div class="index">
 	<!--顶部通知-->
-	<div class="head-top">
-		<div class="top-main">
-			<a class="logo" href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>"><img src="<?php echo $this->staticUrl; ?>newfront/images/bg/top-logo.jpg"></a>
-			<div class="right">
-				<div>
-				<?php if (!empty($this->loginedUserInfo)) { ?>
-					<a class="logoa" href="javascript:void(0)"><?php echo $this->loginedUserInfo['username']; ?></a>
-				<? } else { ?>
-					<a class="logoa" href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/login/">登录官方网站</a>
-				<? } ?>
-					<a class="gifta" href="javascript:void(0)">礼品</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php echo $this->load->view('newfront/inline_header'); ?>
 	<!--内容-->
 	<div class="wrap">
 		<!--top大图-->
 		<div class="top-big"><iframe width="956" scrolling="no" height="640" frameborder="0" src="http://fc.gogoet.com/index.html" class="frm"></iframe></div>
 		<!--参杂内容-->
+		<div class="next-content-top"></div>
 		<div class="next-content">
 			<!--新手教程-->
-			<div class="faq">
-				<a href="javascript:void(0)" title="新手教程"></a>
-				<a href="javascript:void(0)" title="常见问题"></a>
-				<a href="javascript:void(0)" title="账户充值"></a>
-				<a href="javascript:void(0)" title="交易记录查询"></a>
-			</div>
+			<?php echo $this->load->view('newfront/inline_left1'); ?>
 			<!--小轮播-->
 			<div class="slide">
 				<?php 
@@ -72,25 +43,7 @@
 				</div>
 			</div>
 			<!--宠物之星-->
-			<div class="start">
-				<ul>
-					<li>
-						<a class="imga" href="javascript:void(0)"></a>
-						<p><a href="javascript:void(0)">宠物：1000元人民币购买</a></p>
-						<p><a href="javascript:void(0)">主人：晴朗的天空</a></p>
-					</li>
-					<li>
-						<a class="imga" href="javascript:void(0)"></a>
-						<p><a href="javascript:void(0)">宠物：1000元人民币购买</a></p>
-						<p><a href="javascript:void(0)">主人：晴朗的天空</a></p>
-					</li>
-					<li>
-						<a class="imga" href="javascript:void(0)"></a>
-						<p><a href="javascript:void(0)">宠物：1000元人民币购买</a></p>
-						<p><a href="javascript:void(0)">主人：晴朗的天空</a></p>
-					</li>
-				</ul>
-			</div>
+			<?php echo $this->load->view('newfront/inline_left2'); ?>
 			<!--搜索框-->
 			<div class="search-input">
 				<input class="text" type="text">
@@ -194,19 +147,13 @@
 					<div><?php echo $picStr; ?><div><?php echo $titleStr; ?>
 				</ul>
 			</div>
+			<div class="clearf"></div>
 		</div>
+		<div class="next-content-bottom"></div>
 	</div>
 	<!--底部-->
-	<div class="footer">
-		<div class="bg">
-			<p>
-				<a href="javascript:void(0)">关于我们</a> | 
-				<a href="javascript:void(0)">服务条款</a> | <a href="javascript:void(0)">客服中心</a> | 
-				<a href="javascript:void(0)">父母监护</a>			</p>
-			<p class="copyright">COPYRIGHT ·1998-2001 INC. ALL RIGHTS RESERVRED 知金科技  版权所有</p>
-		</div>	
-	</div>
-
+	<?php echo $this->load->view('newfront/inline_footer'); ?>
+</div>
 <script type="text/javascript">
 function searchFunc()
 {

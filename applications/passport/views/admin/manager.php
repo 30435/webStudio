@@ -11,7 +11,7 @@
 		  <th><?php echo $this->fieldInfos['email']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['createtime']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['loginnum']['name']; ?></th>
-		  <th><?php echo $this->fieldInfos['lastip']['name']; ?></th>
+		  <th><?php echo $this->fieldInfos['lastip']['name']; ?></thdata-validation-ajax-ajax="/path/to/validator/script" >
 		  <th><?php echo $this->fieldInfos['lasttime']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['islock']['name']; ?></th>
           <th width="150"><?php echo $this->lang->line('admin_operation'); ?></th>

@@ -49,8 +49,9 @@ class Index extends CmsIndex
 	{
 		$this->_initCurrentModel('spiritModel');
 		$this->currentInfo = $this->_getInfoById();
+		$template = isset($this->templateSpiritPre) ? $this->templateSpiritPre . 'show_spirit' : 'cfront/show_spirit';
 		//var_dump($this->currentInfo);
-		$this->load->view('cfront/show_spirit', $this->frontController);
+		$this->load->view($template, $this->frontController);
 	}
 
 	public function getSpirit()

@@ -25,6 +25,18 @@ class nova extends Index
 		$this->load->view($template, $this->frontController);
 	}
 
+	public function categorynew()
+	{
+		$this->templateListPre = 'newfront/';
+		parent::category();	
+	}
+
+	public function spiritnew()
+	{
+		$this->templateSpiritPre = 'newfront/';
+		parent::spirit();
+	}
+
 	protected function stopWebgame()
 	{
 		$stopWebgame = false;

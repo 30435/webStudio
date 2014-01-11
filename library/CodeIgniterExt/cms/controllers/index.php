@@ -24,7 +24,7 @@ class CmsIndex extends Custom_Controller
 		if (empty($temlate) && !empty($this->currentSubCategoryInfos) && !empty($this->currentCategoryInfo['template_big'])) {
 			$template = $this->templateListPre . $this->currentCategoryInfo['template_big'];
 		}
-		
+
 		if (empty($template)) {
 			$template = !empty($this->currentCategoryInfo['template_list']) ? $this->templateListPre . $this->currentCategoryInfo['template_list'] : $this->templateListPre . 'list';
 		}
