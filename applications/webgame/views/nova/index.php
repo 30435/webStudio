@@ -33,7 +33,6 @@ if (document.addEventListener) {
 window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
 window.onkeydown = document.onkeydown = keydown;
 </script>
-<!--------------------------宽度一样的977px---------------------------------------->
 <div class="all">
 	<div class="ban"><iframe class="frm" src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" width="956" height="640" frameborder="0" scrolling="no"></iframe></div>
 		<div class="nav_nuowa">

@@ -35,7 +35,7 @@ class Index extends CmsIndex
 		$model = 'newModel';
 		$this->_loadModel('webgame', $model);
 		$this->resultArray = $this->newModel->currentDb->from('sw_new')->select('title, url, updatetime')->like(array('title' => $key))->limit(100)->get()->result_array();
-		$this->load->view($this->templatePre . 'search', $this->frontController);
+		$this->load->view('newfront/search', $this->frontController);
 	}
 
 	public function slist()

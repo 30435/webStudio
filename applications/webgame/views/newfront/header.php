@@ -1,5 +1,4 @@
 <?php echo $this->load->view('header_base'); ?>
-<base target="_blank" />
 <link type='text/css' href='<?php echo $this->staticUrl; ?>newfront/css/style.css' rel='stylesheet'/>
 <script type=text/javascript src="<?php echo $this->staticUrl; ?>newfront/js/jquery-1.7.2.min.js"></script>
 <script type=text/javascript src="<?php echo $this->staticUrl; ?>newfront/js/orion.js"></script>

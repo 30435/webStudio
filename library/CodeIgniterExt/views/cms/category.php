@@ -24,6 +24,7 @@
 		  <th ><?php echo $this->fieldInfos['listorder']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['catdir']['name']; ?></th>
 		  <th><?php echo $this->fieldInfos['modelid']['name']; ?></th>
+		  <th>模板</th>
 		  <th><?php echo $this->fieldInfos['ishtml']['name']; ?></th>
           <th width="150"><?php echo $this->lang->line('admin_operation'); ?></th>
         </tr>

@@ -39,6 +39,7 @@ abstract class CmsCategory extends Custom_AdminController
 			<td width='10%' align='center'><input name='listorders[\$id]' type='text' size='3' value='\$listorder' class='input-text-c'></td>
 			<td align='center'>\$catdir</td>
 			<td align='center'>\$modelName</td>
+			<td align='center'>\$template_page | \$template_list | \$template_show</td>
             <td align='center'>\$ishtml</td>
 			<td align=center><a href='\$url' target='_blank'>访问</a>&nbsp;&nbsp;<a href='\$viewUrl'>查看</a>&nbsp;&nbsp;<a href='\$editUrl'>编辑</a>&nbsp;&nbsp;<a href='\$deleteUrl'>删除</a>&nbsp;&nbsp;</td>
 			</tr>";

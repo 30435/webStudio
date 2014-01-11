@@ -29,13 +29,10 @@ abstract class CmsCategoryModel extends CommonModel
 		);
 		$templateBigInfos = array(
 			'list_big' => array('key' => 'list_big', 'value' => '标准大栏目模板'),
-			'list_depart_big' => array('key' => 'list_depart_big', 'value' => '事业部大栏目模板'),
-			'list_school_big' => array('key' => 'list_school_big', 'value' => '视频大栏目模板'),
 		);
 		$templateListInfos = array(
 			'list' => array('key' => 'list', 'value' => '标准列表页模板'),
-			'list_depart' => array('key' => 'list_depart', 'value' => '事业部列表页模板'),
-			'list_school' => array('key' => 'list_school', 'value' => '视频列表页模板'),
+			'list_pic' => array('key' => 'list_pic', 'value' => '图片列表页模板'),
 		);
 		$templateShowInfos = array(
 		);

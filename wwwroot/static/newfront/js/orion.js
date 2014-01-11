@@ -10,7 +10,7 @@ $(function () {
 })
 
 $(document).ready(function(){ 
-$("#top-select").selectCss(); 
+//$("#top-select").selectCss(); 
 }); 
 
 //小轮播
