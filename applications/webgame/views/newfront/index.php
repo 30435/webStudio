@@ -7,6 +7,7 @@
 	<div class="wrap">
 		<!--top大图-->
 		<div class="top-big"><iframe width="956" scrolling="no" height="640" frameborder="0" src="http://fc.gogoet.com/index.html" class="frm"></iframe></div>
+		<div id="novaInfo"></div>
 	</div>
 	<!--底部-->
 	<?php echo $this->load->view('newfront/inline_footer'); ?>

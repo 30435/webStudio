@@ -7,10 +7,11 @@ URL: http://orion.so
 $(function () {
 	Drslider();
 	Drnews();
+	Drtabs(".tab-hd", "active", ".tab-bd");
 })
 
 $(document).ready(function(){ 
-//$("#top-select").selectCss(); 
+$("#top-select").selectCss(); 
 }); 
 
 //小轮播
@@ -43,4 +44,21 @@ function Drnews()
 		al3img.eq(index).addClass('on');
         }); 
 }
+
+//tab切换
+function Drtabs(tabTit, on, tabCon) {
+	$(tabCon).each(function() {
+		$(this).children().eq(0).show();
+	});
+	$(tabTit).each(function() {
+		$(this).children().eq(0).addClass(on);
+	});
+	$(tabTit).children().hover(function() { //鼠标“hover”的效果
+		$(this).addClass(on).siblings().removeClass(on);
+		var index = $(tabTit).children().index(this);
+		$(tabCon).children().eq(index).show().siblings().hide();
+	});
+}
+                
+                
 

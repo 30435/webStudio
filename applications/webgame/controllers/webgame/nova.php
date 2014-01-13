@@ -16,7 +16,7 @@ class nova extends Index
 		//$stopWebgame = $this->stopWebgame();
 		//$this->currentWebgameInfo['stop_webgame'] = $stopWebgame;
 		
-		$this->templatePre = 'newfront/';
+		$this->templatePre = 'nova/';
 	}
 
 	public function indexnew()
