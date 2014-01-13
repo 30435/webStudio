@@ -30,6 +30,19 @@ class nova extends Index
 		$this->templateListPre = 'newfront/';
 		parent::category();	
 	}
+	
+	public function shownew()
+	{
+		$this->templateShowPre = 'newfront/';
+		parent::show();
+	}
+
+	public function slistnew()
+	{
+		$this->_initCurrentModel('spiritModel');
+		
+		$this->load->view('newfront/list_spirit', $this->frontController);
+	}
 
 	public function spiritnew()
 	{
@@ -39,6 +52,8 @@ class nova extends Index
 
 	public function novaInfos()
 	{
-		$this->load->view('newfront/infos', $this->frontController);
+		$newInfos = $this->load->view('newfront/infos', $this->frontController, true);
+		echo $newInfos;
+		exit();
 	}
 }

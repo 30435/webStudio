@@ -19,15 +19,14 @@
 	<!--新闻活动-->
 	<div class="news">
 		<div class="news-top">
-			<a href="javascript:void(0)" title="MORE>"></a>
+			<a href="<?php echo $this->categoryInfos[9]['url']; ?>" title="<?php echo $this->categoryInfos[9]['catname']; ?>" target="_blank"></a>
 		</div>
 		<div class="news-list">
 			<ul>
 			<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 7, array('catid' => 9), array(array('inputtime', 'desc'))); ?>
 			<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 				<li>
-					<a class="red" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"> · [新闻]</a>
-					<a href="<?php echo $newInfo['title']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"><?php echo $controller->cutstr($newInfo['title'], 28); ?></a>
+					<a class="red" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"> · <?php echo $controller->cutstr($newInfo['title'], 34); ?></a>
 				</li>
 			<?php } ?>
 			</ul>
@@ -81,7 +80,7 @@
 	</div>
 	<!--养宠心得 论坛热贴-->
 	<div class="pet-news">
-		<a href="javascript:void(0)" class="pet-more" title="more"></a>
+		<a href="<?php echo $this->categoryInfos[10]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[10]['catname']; ?>"></a>
 		<ul>
 		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 10), array(array('inputtime', 'desc'))); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
@@ -93,7 +92,7 @@
 		</ul>
 	</div>
 	<div class="pet-news luntan">
-		<a href="javascript:void(0)" class="pet-more" title="more"></a>
+		<a href="<?php echo $this->categoryInfos[11]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[11]['catname']; ?>"></a>
 		<ul>
 		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 11), array(array('inputtime', 'desc'))); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
@@ -113,7 +112,7 @@
 
 	<!--最新动漫 宠物杂志-->
 	<div class="pet-news2">
-		<a href="javascript:void(0)" class="pet-more" title="more"></a>
+		<a href="<?php echo $this->categoryInfos[12]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[12]['url']; ?>"></a>
 		<ul>
 			<?php
 			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 12), array(array('inputtime', 'desc')));
@@ -127,7 +126,7 @@
 		</ul>
 	</div>
 	<div class="pet-news3">
-		<a href="javascript:void(0)" class="pet-more" title="more"></a>
+		<a href="<?php echo $this->categoryInfos[13]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[13]['catname']; ?>"></a>
 		<ul>
 			<?php
 			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 13), array(array('inputtime', 'desc')));

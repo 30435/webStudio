@@ -6,7 +6,7 @@
 	<!--内容-->
 	<div class="wrap">
 		<!--top大图-->
-		<div class="top-big"><iframe width="956" scrolling="no" height="640" frameborder="0" src="http://fc.gogoet.com/index.html" class="frm"></iframe></div>
+		<div class="top-big"><iframe width="956" scrolling="no" height="640" frameborder="0" src="<?php echo $this->currentWebgameInfo['url_webgame']; ?>" class="frm"></iframe></div>
 		<div id="novaInfo"></div>
 	</div>
 	<!--底部-->
@@ -58,7 +58,21 @@ function showStatic()
 	}, function(){window.top.art.dialog({id:'show'}).close()});
 }
 
+$(function(){
+    t = setTimeout("showInfos()",2000);
+});
 
+function showInfos()
+{
+	$.ajax({
+		type: "get", 
+		url: '<?php echo $this->categoryInfos[8]['bind_domain']; ?>novaInfos',
+		success: function (data) {
+			$('#novaInfo').html(data);
+		},
+		cache: false
+	});
+}	
 //-->
 </script>
 
