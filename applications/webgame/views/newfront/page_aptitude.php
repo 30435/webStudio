@@ -14,7 +14,7 @@
 		<div class="next-content-top"></div>
 		<div class="next-content">
 			<!--常见问题-->
-			<div><img src="<?php echo $this->currentCategoryInfo['image']; ?>" width="930px" height="800px" alt="关于知金"></div>
+			<div><img src="<?php echo $this->currentCategoryInfo['image']; ?>" width="930px" height="800px" alt="<?php echo $this->currentCategoryInfo['catname']; ?>"></div>
 			<div class="clearf"></div>
 		</div>
 		<div class="next-content-bottom"></div>

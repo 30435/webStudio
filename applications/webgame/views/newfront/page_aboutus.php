@@ -17,10 +17,10 @@
 				<!--公司信息-->
 				<div class="mes">
 					<div class="mt50">
-						<a class="a1 active1" title="关于我们"></a>
-						<a class="a2" href="fwtk.html" title="服务条款"></a><dt></dt>
-						<a class="a3" href="kfzx.html" title="客服中心"></a>
-						<a class="a4" href="fmjk.html" title="父母监控"></a>
+						<a class="a1 <?php if ($this->currentCategoryInfo['id'] == 2) echo 'active1'; ?>" href="<?php echo $this->categoryInfos[2]['url']; ?>" title="<?php echo $this->categoryInfos[2]['catname']; ?>"></a>
+						<a class="a2 <?php if ($this->currentCategoryInfo['id'] == 22) echo 'active2'; ?>" href="<?php echo $this->categoryInfos[22]['url']; ?>" title="<?php echo $this->categoryInfos[22]['catname']; ?>"></a>
+						<a class="a3 <?php if ($this->currentCategoryInfo['id'] == 25) echo 'active3'; ?>" href="<?php echo $this->categoryInfos[25]['url']; ?>" title="<?php echo $this->categoryInfos[25]['catname']; ?>"></a>
+						<a class="a4 <?php if ($this->currentCategoryInfo['id'] == 19) echo 'active4'; ?>" href="<?php echo $this->categoryInfos[19]['url']; ?>" title="<?php echo $this->categoryInfos[19]['catname']; ?>"></a>
 					</div>
 				</div>
 			</div>
