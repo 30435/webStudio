@@ -27,6 +27,7 @@ class nova extends Index
 
 	public function categorynew()
 	{
+		$this->templatePre = 'newfront/';
 		$this->templateListPre = 'newfront/';
 		parent::category();	
 	}

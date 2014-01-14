@@ -48,7 +48,7 @@ window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
 window.onkeydown = document.onkeydown = keydown;
 
 <!--
-document.domain='ci.com';
+	document.domain='<?php echo $this->frontDomain; ?>';
 function showStatic()
 {
 	var url = 'http://www.baidu.com';

@@ -1,20 +1,11 @@
 <div class="content-news">
-	<a href="javascript:void(0)" class="more" title="more"></a>
+	<a href="<?php echo $this->categoryInfos[9]['url']; ?>" class="more" title="<?php echo $this->categoryInfos[9]['catname']; ?>"></a>
 	<ul>
+		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('position' => 'index'), array(array('updatetime', 'desc')), 'id, title, url,'); ?>
+		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 		<li>
-			<a href="javascript:void(0)" title="测试条目1，试试看>">· 测试条目1，试试看</a>
+			<a href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>">· <?php echo $newInfo['title']; ?></a>
 		</li>
-		<li>
-			<a href="javascript:void(0)" title="测试条目1，试试看>">· 测试条目1，试试看</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" title="测试条目1，试试看>">· 测试条目1，试试看</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" title="测试条目1，试试看>">· 测试条目1，试试看</a>
-		</li>
-		<li>
-			<a href="javascript:void(0)" title="测试条目1，试试看>">· 测试条目1，试试看</a>
-		</li>
+		<?php } ?>
 	</ul>
 </div>

@@ -41,8 +41,17 @@
 					<div class="content-mid-mid mb100"><?php echo $this->currentInfo['content']; ?></div>
 					<div class="clearf"></div>
 					<div class="act-bottom">
-						<a class="prev" href="javascript:void(0)">上一篇：很好</a>
-						<a class="next" href="javascript:void(0)">下一篇：不好</a>
+					<?php 
+					$preSql = "SELECT `url`, `title` FROM `studio_webgame`.`sw_new` WHERE `id` < {$this->currentInfo['id']} ORDER BY `id` DESC LIMIT 1";
+					$preQuery = $controller->currentModel->currentDb->query($preSql);
+					$preInfo = $preQuery->row_array(); 
+					
+					$nextSql = "SELECT `url`, `title` FROM `studio_webgame`.`sw_new` WHERE `id` > {$this->currentInfo['id']} LIMIT 1";
+					$nextQuery = $controller->currentModel->currentDb->query($nextSql);
+					$nextInfo = $nextQuery->row_array(); 
+					?>
+						<a class="prev" href="<?php if (isset($preInfo['url'])) { echo $preInfo['url']; } else { echo 'javascript:void();'; } ?>">上一篇：<?php if (isset($preInfo['title'])) { echo $preInfo['title']; } else { echo '无'; } ?></a>
+						<a class="next" href="<?php if (isset($nextInfo['url'])) { echo $nextInfo['url']; } else { echo 'javascript:void();'; } ?>">上一篇：<?php if (isset($nextInfo['title'])) { echo $nextInfo['title']; } else { echo '无'; } ?></a>
 					</div>
 				</div>
 			</div>

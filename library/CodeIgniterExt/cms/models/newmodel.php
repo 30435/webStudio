@@ -38,6 +38,7 @@ abstract class CmsNewModel extends CommonModel
 			'content' => array('name' => '内容'),
 			'editor' => array('name' => '编辑'),
 			'username' => array('name' => '管理员帐号'),
+			'editor' => array('name' => '编辑'),
 			'copyfrom' => array('name' => '来源', 'infos' => $copyfromInfos),
 			'position' => array('name' => '推荐位', 'infos' => $positionInfos),
 			'template' => array('name' => '模板', 'infos' => $templateInfos),
@@ -46,7 +47,7 @@ abstract class CmsNewModel extends CommonModel
 			'updatetime' => array('name' => '更新时间'),
 		);
 		$fieldInfos['fieldList'] = array('id', 'catid', 'title', 'url', 'listorder', 'username', 'updatetime', 'inputtime');
-		$fieldInfos['fieldChanges'] = array('catid', 'title', 'thumb', 'template', 'copyfrom', 'description', 'keywords', 'content', 'template', 'position');
+		$fieldInfos['fieldChanges'] = array('catid', 'title', 'thumb', 'template', 'copyfrom', 'editor', 'description', 'keywords', 'content', 'template', 'position');
 		
 		return $fieldInfos;
 	}

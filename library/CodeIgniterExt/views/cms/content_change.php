@@ -57,6 +57,10 @@ document.domain='<?php echo $this->frontDomain; ?>';
 			<td><select name="copyfrom" id="copyfrom"><?php echo $this->selectCopyfrom; ?></select></td>
 		  </tr>
 		  <tr>
+			<th width="100"><?php echo $this->fieldInfos['editor']['name']; ?>：</th>
+			<td><input type="text" name="editor" id="editor" value="<?php if (isset($this->currentInfo['editor'])) echo $this->currentInfo['editor']; ?>" /></td>
+		  </tr>
+		  <tr>
 			<th width="100"><?php echo $this->fieldInfos['template']['name']; ?>：</th>
 			<td><select name="template" id="template"><?php echo $this->selectTemplate; ?></select></td>
 		  </tr>
