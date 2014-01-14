@@ -12,7 +12,7 @@
 <script type="text/javascript" src="<?php echo $this->staticUrl; ?>common/swfupload/swf2ckeditor.js"></script>
 <script type="text/javascript">
 var catid=<?php echo $this->catid; ?>;
-document.domain='<?php echo $this->frontDomain; ?>';
+//document.domain='<?php echo $this->frontDomain; ?>';
 </script>
 <?php
   //echo validation_errors();

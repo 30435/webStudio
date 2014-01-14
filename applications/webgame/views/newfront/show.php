@@ -35,8 +35,7 @@
 					<div class="title"><a class="title" href="javascript:void(0)"><?php echo $this->currentInfo['title']; ?></a></div>
 					<div class="detail mb30">
 						<a href="javascript:void(0)">时间：<?php echo date('Y年m月d日', $this->currentInfo['updatetime']); ?></a>
-						<a href="javascript:void(0)">作者：<?php echo $this->currentInfo['username']; ?></a>
-						<a href="javascript:void(0)">责任编辑：<?php echo $this->currentInfo['editor']; ?></a>
+						<a href="javascript:void(0)">责任编辑：Summer</a>
 					</div>
 					<div class="content-mid-mid mb100"><?php echo $this->currentInfo['content']; ?></div>
 					<div class="clearf"></div>

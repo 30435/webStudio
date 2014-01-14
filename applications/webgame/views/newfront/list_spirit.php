@@ -117,7 +117,6 @@ function getSpiritInfos(field, value)
 			$.each(data,function(i,n) {
 				infoLists += '<li><a href="' + n.url + '">' + n.title + '</a><a href="' + n.url + '"><img src="' + n.thumb + '" /></a></li>';
 			});
-			alert(infoLists);
 			$("#listSpirit").html(infoLists);
 		}
 	});	

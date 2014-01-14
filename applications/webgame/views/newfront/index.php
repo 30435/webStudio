@@ -48,14 +48,14 @@ window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
 window.onkeydown = document.onkeydown = keydown;
 
 <!--
-	document.domain='<?php echo $this->frontDomain; ?>';
-function showStatic()
+document.domain='<?php echo $this->frontDomain; ?>';
+function showStatic(voteType)
 {
-	var url = 'http://www.baidu.com';
-	window.top.art.dialog({id:'show'}).close();
-	window.top.art.dialog({title:'操作详情',id:'show',iframe: url,width:'700',height:'500'}, function(){
+	var voteElem = $(':input[name="survey-radio"][checked]').val();alert(voteElem);
+	var url = '<?php echo $this->categoryInfos[8]['bind_domain']; ?>voteRecord?voteType=' + voteType + '&voteElem=' + voteElem;
+	window.top.art.dialog({title:'',id:'show',iframe: url,width:'500',height:'300'}, function(){
 		var d = window.top.art.dialog({id:'show'}).data.iframe;return false;
-	}, function(){window.top.art.dialog({id:'show'}).close()});
+	}, function(){window.top.art.dialog({id:'show'})});
 }
 
 $(function(){

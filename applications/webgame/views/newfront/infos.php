@@ -36,7 +36,7 @@
 	<?php echo $this->load->view('newfront/inline_left2'); ?>
 	<!--搜索框-->
 	<div class="search-input">
-		<form name="searchForm" action="<?php echo $this->appInfos['webgame']['url']; ?>index/search" target="_blank" method="POST">
+		<form name="searchForm" action="<?php echo $this->currentWebgameInfo['url_server']; ?>search" target="_blank" method="POST">
 		<input type="text" name="searchStr" value="" class="text"/>
 		<input class="submit" type="submit" value="">
 		</form>
@@ -67,38 +67,35 @@
 	<!--玩家调查-->
 	<div class="user-survey clearf">
 		<p>您最关注官网哪块内容？</p>
-		<form onsubmit="showStatic();return false;">
-			<p><input type="radio" name="survey-radio" value="1" />玩家互动</p>
-			<p><input type="radio" name="survey-radio" value="2" />最新活动</p>
-			<p><input type="radio" name="survey-radio" value="3" />游戏资料</p>
-			<p><input type="radio" name="survey-radio" value="4" />游戏商城</p>
+		<form onsubmit="return false;">
+			<?php foreach ($this->voteElements as $voteKey => $element) { echo '<p><input type="radio" name="survey-radio" value="' . $voteKey . '" />' . $element . '</p>'; } ?>
 			<p>
-				<input class="submit" type="submit" value=""/>
-				<input class="view" type="button" />
+				<input class="submit" onclick="showStatic('vote');" type="submit" value=""/>
+				<input class="view" onclick="showStatic('');" type="button" />
 			</p>
-		</form>			
+		</form>
 	</div>
 	<!--养宠心得 论坛热贴-->
 	<div class="pet-news">
-		<a href="<?php echo $this->categoryInfos[10]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[10]['catname']; ?>"></a>
+		<a href="<?php echo $this->categoryInfos[10]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[10]['catname']; ?>" target="_blank"></a>
 		<ul>
 		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 10), array(array('inputtime', 'desc'))); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 			<li>
 				<a href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"> · <?php echo $controller->cutstr($newInfo['title'], 38); ?></a>
-				<a class="orange fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank">[<?php echo date('Y-m-d', $newInfo['updatetime']); ?>]</a>
+				<a class="orange fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"><?php echo date('Y-m-d', $newInfo['updatetime']); ?></a>
 			</li>
 		<?php } ?>
 		</ul>
 	</div>
 	<div class="pet-news luntan">
-		<a href="<?php echo $this->categoryInfos[11]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[11]['catname']; ?>"></a>
+		<a href="<?php echo $this->categoryInfos[13]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[13]['catname']; ?>" target="_blank"></a>
 		<ul>
-		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 11), array(array('inputtime', 'desc'))); ?>
+		<?php $newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 5, array('catid' => 13), array(array('inputtime', 'desc'))); ?>
 		<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 			<li>
 				<a href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"> · <?php echo $controller->cutstr($newInfo['title'], 38); ?></a>
-				<a class="orange fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank">[<?php echo date('Y-m-d', $newInfo['updatetime']); ?>]</a>
+				<a class="orange fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>" target="_blank"><?php echo date('Y-m-d', $newInfo['updatetime']); ?></a>
 			</li>
 		<?php } ?>
 		</ul>
@@ -106,16 +103,16 @@
 	<div class="clearf"></div>
 	<!--互动社区 客服-->
 	<div class="interactive">
-		<a href="javascript:void(0)" title="互动社区"></a>
+		<a href="<?php echo $this->categoryInfos[13]['url']; ?>" title="<?php echo $this->categoryInfos[13]['catname']; ?>" target="_blank"></a>
 		<a href="javascript:void(0)" title="客服"></a>
 	</div>
 
 	<!--最新动漫 宠物杂志-->
 	<div class="pet-news2">
-		<a href="<?php echo $this->categoryInfos[12]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[12]['url']; ?>"></a>
+		<a href="<?php echo $this->categoryInfos[11]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[11]['url']; ?>" target="_blank"></a>
 		<ul>
 			<?php
-			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 12), array(array('inputtime', 'desc')));
+			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 11), array(array('inputtime', 'desc')));
 			$picStr = $titleStr = ''; $classOn = 'class="on"';
 			foreach ($newInfos['infos'] as $newInfo) { 
 				$picStr .= '<a href="' . $newInfo['url'] . '"><img ' . $classOn . ' src="' . $newInfo['thumb'] . '" target="_blank"></a>'; $classOn = '';
@@ -126,10 +123,10 @@
 		</ul>
 	</div>
 	<div class="pet-news3">
-		<a href="<?php echo $this->categoryInfos[13]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[13]['catname']; ?>"></a>
+		<a href="<?php echo $this->categoryInfos[12]['url']; ?>" class="pet-more" title="<?php echo $this->categoryInfos[12]['catname']; ?>" target="_blank"></a>
 		<ul>
 			<?php
-			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 13), array(array('inputtime', 'desc')));
+			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 12), array(array('inputtime', 'desc')));
 			$picStr = $titleStr = ''; $classOn = 'class="on"';
 			foreach ($newInfos['infos'] as $newInfo) { 
 				$picStr .= '<a href="' . $newInfo['url'] . '"><img ' . $classOn . ' src="' . $newInfo['thumb'] . '" target="_blank"></a>'; $classOn = '';
