@@ -5,7 +5,7 @@ class Index extends CmsIndex
 {
 	public function __construct()
 	{
-		$this->templatePre = $this->templateListPre = $this->templateShowPre = 'cfront/';
+		$this->templatePre = 'cfront/';
 		parent::__construct();
 
 		$this->loginedUserInfo = $this->_checkUserLogin();
@@ -35,21 +35,23 @@ class Index extends CmsIndex
 		$model = 'newModel';
 		$this->_loadModel('webgame', $model);
 		$this->resultArray = $this->newModel->currentDb->from('sw_new')->select('title, url, updatetime')->like(array('title' => $key))->limit(100)->get()->result_array();
-		$this->load->view('newfront/search', $this->frontController);
+		$template = $this->templatePre . 'search';
+		$this->load->view($template, $this->frontController);
 	}
 
 	public function slist()
 	{
 		$this->_initCurrentModel('spiritModel');
 		
-		$this->load->view('cfront/list_spirit', $this->frontController);
+		$template = $this->templatePre . 'list_spirit';
+		$this->load->view($template, $this->frontController);
 	}
 
 	public function spirit()
 	{
 		$this->_initCurrentModel('spiritModel');
 		$this->currentInfo = $this->_getInfoById();
-		$template = isset($this->templateSpiritPre) ? $this->templateSpiritPre . 'show_spirit' : 'cfront/show_spirit';
+		$template = $this->templatePre . 'show_spirit';
 		//var_dump($this->currentInfo);
 		$this->load->view($template, $this->frontController);
 	}

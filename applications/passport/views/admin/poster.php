@@ -2,6 +2,13 @@
 <?php if ($this->method == 'listinfo') { ?>
 <div class="pad_10">
   <div class="table-list">
+	<?php
+		//echo validation_errors();
+		$attributes = array('name' => 'myform', 'id' => 'myform');
+		$hidden = array('forwardUrl' => current_url());
+		
+		echo form_open($this->appMenus['edit']['url'] . '?action=listorder', $attributes, $hidden);
+	?>
     <table width="100%" cellspacing="0">
       <thead>
         <tr>
@@ -38,6 +45,7 @@
         <?php } } ?>
       </tbody>
     </table>
+    <div class="btn"><input type="submit" class="button" name="dosubmit" value="排序" /></div>
   </div>
   <div id="pages"> <?php echo $this->pageStr; ?></div>
 </div>

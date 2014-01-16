@@ -22,34 +22,30 @@ class nova extends Index
 			'3' => '诺瓦热帖',
 			'4' => '诺瓦传说'
 		);
-		
-		$this->templatePre = 'nova/';
 	}
 
 	public function indexnew()
 	{
-		$template = 'newfront/index';//isset($this->templatePre) ? $this->templatePre . 'index' : 'index';
-		$this->load->view($template, $this->frontController);
+		$this->templatePre = 'newfront/';
+		parent::index();
 	}
 
 	public function categorynew()
 	{
 		$this->templatePre = 'newfront/';
-		$this->templateListPre = 'newfront/';
 		parent::category();	
 	}
 	
 	public function shownew()
 	{
-		$this->templateShowPre = 'newfront/';
+		$this->templatePre = 'newfront/';
 		parent::show();
 	}
 
 	public function slistnew()
 	{
-		$this->_initCurrentModel('spiritModel');
-		
-		$this->load->view('newfront/list_spirit', $this->frontController);
+		$this->templatePre = 'newfront/';
+		parent::slist();
 	}
 
 	public function spiritnew()

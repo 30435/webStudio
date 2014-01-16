@@ -41,6 +41,7 @@ class Poster extends Custom_AdminController
 	 */
 	public function edit()
 	{
+		$this->_listorderExt();
 		$this->_edit();
 	}
 
@@ -75,18 +76,8 @@ class Poster extends Custom_AdminController
 	 */
 	protected function _formatInfo($info, $isWrite = false)
 	{
-		/*$this->selectRole = $this->_getSelectElement($this->roleInfos, 'id', 'name', $info['roleid']);
-
-		if ($isWrite) {
-			$info['username'] = !empty($this->currentInfo['username']) ? $this->currentInfo['username'] : $info['username'];
-			$info['createtime'] = $this->time;
-			$password = $this->input->post('password');
-			if (!empty($password)) {
-				$passwordInfo = $this->_getPassword($password);
-				$info['password'] = $passwordInfo['password'];
-				$info['encrypt'] = $passwordInfo['encrypt'];
-			}
-		}*/
+		$this->selectSpaceId = $this->_getSelectElement($this->spaceInfos, 'id', 'name', $info['space_id'], true);
+		$this->selectAdType = $this->_getSelectElement($this->fieldInfos['type']['infos'], 'key', 'value', $info['type'], true);
 
 		return $info;
 	}
@@ -99,15 +90,13 @@ class Poster extends Custom_AdminController
 	 */
 	protected function _formatInfos(array $infos)
 	{
-		/*if (is_array($infos) && !empty($infos)) {
+		if (is_array($infos) && !empty($infos)) {
 			foreach ($infos as $key => $info) {
-				$info['roleid'] = !empty($this->roleInfos[$info['roleid']]['name']) ? $this->roleInfos[$info['roleid']]['name'] : $info['roleid'];
-				$info['islock'] = !empty($this->fieldInfos['islock']['infos'][$info['islock']]) ? $this->fieldInfos['islock']['infos'][$info['islock']] : $info['islock'];
-				$info['createtime'] = date('Y-m-d H:i:s', $info['createtime']);
-				$info['lasttime'] = date('Y-m-d H:i:s', $info['lasttime']);
+				$info['space_id'] = !empty($this->spaceInfos[$info['space_id']]['name']) ? $this->spaceInfos[$info['space_id']]['name'] : $info['space_id'];
+				$info['type'] = !empty($this->fieldInfos['type']['infos'][$info['type']]['value']) ? $this->fieldInfos['type']['infos'][$info['type']]['value'] : $info['type'];
 				$infos[$key] = $info;
 			}
-		}*/
+		}
 		return $infos;
 	}
 }

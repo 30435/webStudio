@@ -17,7 +17,7 @@
 			<!--热门小宠-->
 			<div class="hot-pet mb10">
 				<div class="pet-top">
-					<a href="javascript:void(0)" title="MORE>"></a>
+					<a href="<?php echo $this->currentWebgameInfo['url_server']; ?>slist" title="MORE>"></a>
 				</div>
 				<div class="pet-content pet-content-min">
 					<ul>
@@ -35,13 +35,19 @@
 			<?php echo $this->load->view('newfront/inline_left2'); ?>
 			<!--两张图-->
 			<div class="two-img">
-				<a href="javascript:void(0)"><img src="<?php echo $this->staticUrl; ?>newfront/images/1.png"></a>
-				<a href="javascript:void(0)"><img src="<?php echo $this->staticUrl; ?>newfront/images/2.png"></a>
+			<?php 
+			$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4, array('space_id' => '2'), array(array('listorder', 'desc'))); 
+			$taskStr = ''; 
+			foreach ($posterInfos['infos'] as $posterInfo) { 
+				$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" target="_blank"><img src="' . $posterInfo['pic'] . '"></a>'; 
+			}
+			echo $taskStr;
+			?>
 			</div>
 			<!--搜索框-->
 			<div class="search-input">
-				<input class="text" type="text">
-				<input class="submit" type="submit" value="">
+				<input class="text" type="text" id="keyword">
+				<input class="submit" type="submit" onclick="getSearch()" value="">
 			</div>
 			
 			<div class="clearf"></div>
@@ -49,7 +55,7 @@
 			<div class="all-tab mt10">
 	            <ul class="tab-hd" id="sortList">
 	                <li class"active">
-	                	<a class="tab1" href="javascript:void(0)"></a>
+	                	<a class="tab1" href="<?php echo $this->currentWebgameInfo['url_server']; ?>slist"></a>
 	                	<span>全部</span>
 	                </li>
 	    			<?php foreach ($sortInfos as $sortCode => $sortInfo) { ?>    

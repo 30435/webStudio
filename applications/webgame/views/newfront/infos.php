@@ -1,4 +1,5 @@
 <!--参杂内容-->
+<script type=text/javascript src="<?php echo $this->staticUrl; ?>newfront/js/orion.js"></script>
 <div class="next-content-top"></div>
 <div class="next-content">
 	<!--新手教程-->
@@ -6,7 +7,7 @@
 	<!--小轮播-->
 	<div class="slide">
 		<?php 
-		$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4); 
+		$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4, array('space_id' => '1'), array(array('listorder', 'desc'))); 
 		$bigStr = $smallStr = ''; $classOn = 'class="on"';
 		foreach ($posterInfos['infos'] as $posterInfo) { 
 			$bigStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" target="_blank"><img ' . $classOn . ' src="' . $posterInfo['pic'] . '"></a>'; $classOn = '';
@@ -43,8 +44,14 @@
 	</div>
 	<!--两张图-->
 	<div class="two-img">
-		<a href="javascript:void(0)" target="_blank"><img src="<?php echo $this->staticUrl; ?>newfront/images/1.png"></a>
-		<a href="javascript:void(0)" target="_blank"><img src="<?php echo $this->staticUrl; ?>newfront/images/2.png"></a>
+		<?php 
+		$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4, array('space_id' => '2'), array(array('listorder', 'desc'))); 
+		$taskStr = ''; 
+		foreach ($posterInfos['infos'] as $posterInfo) { 
+			$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" target="_blank"><img src="' . $posterInfo['pic'] . '"></a>'; 
+		}
+		echo $taskStr;
+		?>
 	</div>
 	<!--热门小宠-->
 	<div class="hot-pet">
@@ -70,8 +77,8 @@
 		<form onsubmit="return false;">
 			<?php foreach ($this->voteElements as $voteKey => $element) { echo '<p><input type="radio" name="survey-radio" value="' . $voteKey . '" />' . $element . '</p>'; } ?>
 			<p>
-				<input class="submit" onclick="showStatic('vote');" type="submit" value=""/>
-				<input class="view" onclick="showStatic('');" type="button" />
+				<input class="submit" type="submit" value=""/>
+				<input class="view" type="button" />
 			</p>
 		</form>
 	</div>

@@ -26,9 +26,9 @@
 				<div class="faq-top">
 					<ul>
 						<li>您目前的位置：</li>
-						<li><a href="javascript:void(0)">首页</a><span>|</span></li>
-						<li><a href="javascript:void(0)">常见问题</a><span>|</span></li>
-						<li><a href="javascript:void(0)">内容页面</a></li>
+						<li><a href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>">首页</a><span>|</span></li>
+						<li><a href="<?php echo $this->categoryInfos[$this->currentInfo['catid']]['url']; ?>"><?php echo $this->categoryInfos[$this->currentInfo['catid']]['catname']; ?></a><span>|</span></li>
+						<li><a href="javascript:void(0)"><?php echo $this->currentInfo['title']; ?></a></li>
 					</ul>
 				</div>
 				<div class="content-mid">

@@ -28,15 +28,7 @@
 					<ul>
 						<li>您目前的位置：</li>
 						<li><a href="<?php echo $this->categoryInfos[8]['bind_domain']; ?>">首页</a><span>|</span></li>
-						<?php 
-						$breadStr = ''; 
-						$parentCatid = $this->currentCategoryInfo['id'];
-						do { 
-							$breadStr = '<li><a href="' . $this->categoryInfos[$parentCatid]['url'] . '">' . $this->categoryInfos[$parentCatid]['catname'] . '</a><span>|</span></li>' . $breadStr; 
-							$parentCatid = $this->categoryInfos[$parentCatid]['parentid']; 
-						} while ($parentCatid > 0); 
-						echo rtrim($breadStr, '<span>|</span></li>') . '</li>';
-						?>
+						<li><a href="<?php echo $this->currentCategoryInfo['url']; ?>"><?php echo $this->currentCategoryInfo['catname']; ?></a></li> 
 					</ul>
 				</div>
 								<div class="faq-mid">

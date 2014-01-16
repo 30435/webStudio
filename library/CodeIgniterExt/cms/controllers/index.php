@@ -22,11 +22,11 @@ class CmsIndex extends Custom_Controller
 		}
 		//print_r($this->currentSubCategoryInfos); echo $this->currentCategoryInfo['template_big']; exit();
 		if (empty($temlate) && !empty($this->currentSubCategoryInfos) && !empty($this->currentCategoryInfo['template_big'])) {
-			$template = $this->templateListPre . $this->currentCategoryInfo['template_big'];
+			$template = $this->templatePre . $this->currentCategoryInfo['template_big'];
 		}
 
 		if (empty($template)) {
-			$template = !empty($this->currentCategoryInfo['template_list']) ? $this->templateListPre . $this->currentCategoryInfo['template_list'] : $this->templateListPre . 'list';
+			$template = !empty($this->currentCategoryInfo['template_list']) ? $this->templatePre . $this->currentCategoryInfo['template_list'] : $this->templatePre . 'list';
 		}
 		$this->metaDatas = array('title' => '诺瓦奇兵游戏官网', 'keywords' => 'kids 少儿 事业部 知金', 'description' => '少儿事业部是个少儿的乐园');
 		$this->metaDatas['title'] = $this->currentCategoryInfo['catname'] . '-' . $this->metaDatas['title'];
@@ -71,7 +71,7 @@ class CmsIndex extends Custom_Controller
 		$_GET['id'] = $id;
 		$this->_initModel($catid);
 		$this->currentInfo = $this->_getInfoById();
-		$this->load->view($this->templateShowPre . 'show', $this->frontController);
+		$this->load->view($this->templatePre . 'show', $this->frontController);
 	}
 
 	/**
