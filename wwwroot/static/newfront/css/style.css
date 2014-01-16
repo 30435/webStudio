@@ -138,7 +138,7 @@ hr{clear: both; padding-top: 10px; border: none; border-bottom:1px dashed #ccc;w
 /*底部*/
 .footer{ background: #fff; height:130px; }
 .footer .bg{ margin:0 auto; width:960px; height:120px; background-position: 1px -667px; }
-.footer .bg p{ color: #7b7b7b; text-align: center; font-size: 12px; padding-top: 50px; }
+.footer .bg p{ color: #7b7b7b; text-align: center; font-size: 12px; padding-top: 50px; margin-left: 180px; width: 650px;}
 .footer .bg p a{ color: #7b7b7b; text-decoration: none; }
 .footer .bg p.copyright{ margin-top: 8px; font-family: "Arial"; padding-top: 0px; color: #aaa; }
 

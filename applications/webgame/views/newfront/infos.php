@@ -48,7 +48,7 @@
 		$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4, array('space_id' => '2'), array(array('listorder', 'desc'))); 
 		$taskStr = ''; 
 		foreach ($posterInfos['infos'] as $posterInfo) { 
-			$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" target="_blank"><img src="' . $posterInfo['pic'] . '"></a>'; 
+			$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" ><img src="' . $posterInfo['pic'] . '"></a>'; 
 		}
 		echo $taskStr;
 		?>
@@ -122,7 +122,7 @@
 			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 11), array(array('inputtime', 'desc')));
 			$picStr = $titleStr = ''; $classOn = 'class="on"';
 			foreach ($newInfos['infos'] as $newInfo) { 
-				$picStr .= '<a href="' . $newInfo['url'] . '"><img ' . $classOn . ' src="' . $newInfo['thumb'] . '" target="_blank"></a>'; $classOn = '';
+				$picStr .= '<a href="javascript:void(0)"><img ' . $classOn . ' src="' . $this->staticUrl . 'newfront/images/bottom1.jpg" target="_blank"></a>'; $classOn = '';
 				$titleStr .= '<li> <a href="' . $newInfo['url'] . '" title="' . $newInfo['title'] . '" target="_blank">· ' . $controller->cutstr($newInfo['title'], 32) . '</a></li>';
 			}
 			?>
@@ -136,7 +136,7 @@
 			$newInfos = $controller->_getFrontInfos('webgame', 'new', 1, 4, array('catid' => 12), array(array('inputtime', 'desc')));
 			$picStr = $titleStr = ''; $classOn = 'class="on"';
 			foreach ($newInfos['infos'] as $newInfo) { 
-				$picStr .= '<a href="' . $newInfo['url'] . '"><img ' . $classOn . ' src="' . $newInfo['thumb'] . '" target="_blank"></a>'; $classOn = '';
+				$picStr .= '<a href="javascript:void(0);"><img ' . $classOn . ' src="' . $this->staticUrl . 'newfront/images/bottom2.jpg" target="_blank"></a>'; $classOn = '';
 				$titleStr .= '<li> <a href="' . $newInfo['url'] . '" title="' . $newInfo['title'] . '" target="_blank">· ' . $controller->cutstr($newInfo['title'], 32) . '</a></li>';
 			}
 			?>
