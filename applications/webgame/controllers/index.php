@@ -5,7 +5,7 @@ class Index extends CmsIndex
 {
 	public function __construct()
 	{
-		$this->templatePre = 'cfront/';
+		$this->templatePre = 'newfront/';
 		parent::__construct();
 
 		$this->loginedUserInfo = $this->_checkUserLogin();

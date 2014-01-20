@@ -111,7 +111,7 @@
 	<!--互动社区 客服-->
 	<div class="interactive">
 		<a href="<?php echo $this->categoryInfos[13]['url']; ?>" title="<?php echo $this->categoryInfos[13]['catname']; ?>" target="_blank"></a>
-		<a href="javascript:void(0)" title="客服"></a>
+		<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=97c38294432b2014789ed7270b42465539b04e76a7ccd9ad0c5bb550cb114049" title="客服"></a>
 	</div>
 
 	<!--最新动漫 宠物杂志-->

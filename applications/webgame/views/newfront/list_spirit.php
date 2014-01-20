@@ -39,7 +39,7 @@
 			$posterInfos = $controller->_getFrontInfos('passport', 'poster', 1, 4, array('space_id' => '2'), array(array('listorder', 'desc'))); 
 			$taskStr = ''; 
 			foreach ($posterInfos['infos'] as $posterInfo) { 
-				$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" target="_blank"><img src="' . $posterInfo['pic'] . '"></a>'; 
+				$taskStr .= '<a href="' . $posterInfo['url'] . '" title="' . $posterInfo['name'] . '" ><img src="' . $posterInfo['pic'] . '"></a>'; 
 			}
 			echo $taskStr;
 			?>
