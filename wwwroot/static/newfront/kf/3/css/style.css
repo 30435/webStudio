@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* ===============
+ * 重新定义Html元素
+ * =============== */
+
+
+/*在线客服代码*/
+.rides-cs { background:#0072A8; position: fixed; top: 130px; right: 1px; _position: absolute; z-index: 999; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#E5333333', endColorstr='#E5333333');}
+.rides-cs a { color: #00A0E9;}
+.rides-cs a:hover { color: #ff8100; text-decoration: none;}
+.rides-cs .floatL { width: 36px; float:left; position: relative; z-index:1;}
+.rides-cs .floatL a { font-size:0; text-indent: -999em; display: block;}
+.rides-cs .floatR { width: 130px; float: left; padding: 5px; overflow:hidden;}
+.rides-cs .floatR .cn { background: #F7F7F7; }
+.rides-cs .cn h3 { font-size: 14px; color: #0072A8; font-family:"微软雅黑";font-weight:600; line-height: 24px; padding: 5px}
+.rides-cs .cn ul { padding: 0 0 0 8px;}
+.rides-cs .cn ul li { line-height: 38px; border-bottom: solid 1px #E6E4E4; overflow: hidden;}
+.rides-cs .cn ul li span { color: #777;}
+.rides-cs .cn ul li img { vertical-align: middle;}
+.rides-cs .btnOpen, .rides-cs .btnCtn {  position: relative; z-index:9; top:0; left: 0;  background-image: url(shopnc.png); background-repeat: no-repeat; display:block; width: 20px; height: 146px; padding: 8px;}
+.rides-cs .btnOpen { background-position: -410px 0;}
+.rides-cs .btnCtn { background-position: -450px 0;}
+.rides-cs ul li.top { border-bottom: solid #ACE5F9 1px;}
+.rides-cs ul li.bot { border-bottom: none;}
+
+
