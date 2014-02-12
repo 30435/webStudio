@@ -33,11 +33,11 @@
 				</div>
 								<div class="faq-mid">
 					<ul>
-					<?php $page = intval($this->input->get_post('page')); $page = max(1, $page); $where = array('catid' => $this->catid); $newInfos = $controller->_getFrontInfos('webgame', 'new', $page, 12, $where, array(), 'updatetime, url, title', '', 0, true, $this->currentCategoryInfo['url']); ?>
+					<?php $page = intval($this->input->get_post('page')); $page = max(1, $page); $where = array('catid' => $this->catid); $newInfos = $controller->_getFrontInfos('webgame', 'new', $page, 12, $where, array(array('updatetime', 'desc')), 'updatetime, url, title', '', 0, true, $this->currentCategoryInfo['url']); ?>
 					<?php foreach ($newInfos['infos'] as $newInfo) { ?>
 						<li>
 							<a href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>">· <?php echo $newInfo['title']; ?></a>
-							<a class="data fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>">[<?php echo date('m-d', $newInfo['updatetime']); ?>]</a>
+							<a class="data fr" href="<?php echo $newInfo['url']; ?>" title="<?php echo $newInfo['title']; ?>"><?php echo date('Y-m-d', $newInfo['updatetime']); ?></a>
 						</li>
 					<?php } ?>
 					</ul>

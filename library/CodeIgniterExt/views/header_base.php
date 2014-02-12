@@ -5,3 +5,4 @@
 <title><?php echo $this->metaDatas['title']; ?></title>
 <meta content="<?php echo $this->metaDatas['keywords']; ?>" name="Keywords"> 
 <meta content="<?php echo $this->metaDatas['description']; ?>" name="Description">
+<link rel="shortcut icon" href="<?php echo $this->staticUrl; ?>favicon.ico">
