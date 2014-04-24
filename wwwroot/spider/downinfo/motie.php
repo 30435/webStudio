@@ -7,16 +7,19 @@
 
 return array(
 	'files' => array(
-		'd:/web/www/webStudio/wwwroot/static/bookbar/css/core.packed.css',
-		//-'d:/web/www/webStudio/wwwroot/static/bookbar/css/jquery-ui-1.8.16.custom.min.css',
-		//-'d:/web/www/webStudio/wwwroot/static/bookbar/css/square.css',
-		//-'d:/web/www/webStudio/wwwroot/static/bookbar/css/style-ie.css',
-		//-'d:/web/www/webStudio/wwwroot/static/bookbar/css/model.packed.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/css/core.packed.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/css/jquery-ui-1.8.16.custom.min.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/css/square.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/css/style-ie.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/css/model.packed.css',
 	),
 
+	'urlpre' => 'http://img.motieimg.com/',
+	//'urlpre' => 'http://img.motieimg.com/_resources/css/',
+	//'urlpre' => 'http://img.motieimg.com/_resources/css/model/ui-lightness/',
 	//'urlpre' => 'http://img.motieimg.com/_resources/css/model/',
-	'urlpre' => 'http://img.motieimg.com/_resources/css/core/',
-	'localpre' => 'd:/web/www/webStudio/wwwroot/static/bookbar/images/',
-	'localurl' => 'http://static.ci.com/bookbar/images/',
+	//'urlpre' => 'http://img.motieimg.com/_resources/css/core/',
+	'localpre' => 'e:/www/acanstudio/ciProject/wwwroot/static/bookbar/images/',
+	'localurl' => 'http://static.cinew.com/bookbar/images/',
 );
 

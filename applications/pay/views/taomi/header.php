@@ -27,9 +27,9 @@ var payUrl = "<?php echo $this->baseUrl; ?>";
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				<li>(<span class="uid_account"><?php echo $this->loginedUserInfo['username']; ?></span>)<a class="head_top" title="我的充值中心" href="<?php echo $this->baseUrl; ?>taomi/myaccount"> 我的充值中心 </a><span>|</span></li>
 				<li><a href="<?php echo $this->appInfos['passport']['url']; ?>uwebgame/logout/">安全退出</a><span>|</span></li>
-			<? } else { ?>
+			<?php } else { ?>
 				<li><a id="login" href="<?php echo $this->appInfos['passport']['url']; ?>utaomi/login/">登录</a><span>|</span></li>
-			<? } ?>
+			<?php } ?>
 				<li><a href="/" target="_blank">意见反馈</a><span>|</span></li>
 				<li><a href="javascript: addBookmark(); void(0);"  hidefocus="true" style="cursor:pointer;">收藏本站</a></li>
 			</ul>

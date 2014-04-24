@@ -1,13 +1,13 @@
 <?php 
 return array(
 	'files' => array(
-		'd:/web/www/webStudio/wwwroot/static/movie/css/base.min.css',
-		'd:/web/www/webStudio/wwwroot/static/movie/css/common.css',
-		'd:/web/www/webStudio/wwwroot/static/movie/css/index.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/movie/css/base.min.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/movie/css/common.css',
+		'e:/www/acanstudio/ciProject/wwwroot/static/movie/css/mdb.css',
 	),
 
-	'urlpre' => 'http://image1.jmw.com.cn/login/',
-	'localpre' => 'd:/web/www/webStudio/wwwroot/static/movie/images/',
-	'localurl' => 'http://static.ci.com/movie/images/',
+	'urlpre' => 'http:',
+	'localpre' => 'e:/www/acanstudio/ciProject/wwwroot/static/movie/images/',
+	'localurl' => 'http://static.cinew.com/movie/images/',
 );
 

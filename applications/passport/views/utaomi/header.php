@@ -58,9 +58,9 @@ var payUrl = "<?php echo $this->appInfos['pay']['url']; ?>";
 			<?php if (!empty($this->loginedUserInfo)) { ?>
 				(<span><?php echo $this->loginedUserInfo['username']; ?></span>)<a href="<?php echo $this->appInfos['pay']['url']; ?>index/mypay"> 我的充值中心 </a> |
 				<a href="<?php echo $this->baseUrl . $this->prefix; ?>/logout/">安全退出</a> |
-			<? } else { ?>
+			<?php } else { ?>
 				<a id="login" href="<?php echo $this->baseUrl . $this->prefix; ?>/login/">登录</a>　|　
-			<? } ?>
+			<?php } ?>
 				<a href="<?php echo $this->appInfos['pay']['url']; ?>">充值中心</a>　| 
 				<a href="javascript:void(null);" onclick="addBookmark();">收藏本页</a>
 			</span>
